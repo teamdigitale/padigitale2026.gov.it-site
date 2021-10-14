@@ -15,13 +15,22 @@ const { footerA11y } = labels;
 const useStyle = createUseStyles({
   mainFooter: {
     composes: 'it-footer-main',
-    backgroundColor: '#004080',
+    backgroundColor: '#fff',
   },
   slimFooter: {
     composes: 'it-footer-small-prints py-4',
     backgroundColor: '#01254C',
     '& a': {
       color: '#27D1D6',
+    },
+  },
+  seeMore: {
+    color: '#000',
+    textDecoration: 'none',
+    fontWeight: 'bold',
+    '&:hover': {
+      textDecoration: 'underline',
+      color: '#000'
     },
   },
   footerLogo: {
@@ -62,14 +71,14 @@ const SlimFooter = () => {
               {a11y.label}
             </ExternalLink>
           </li>
-          {/* <li className="list-inline-item mr-0 mr-md-5">
+          <li className="list-inline-item mr-0 mr-md-5">
             <Link
               to={credits.linkTo}
               className="list-item mid-footer-link mx-4 mx-md-0"
             >
               {credits.label}
             </Link>
-          </li> */}
+          </li>
         </ul>
       </div>
     </div>
@@ -81,11 +90,11 @@ const MainFooter = () => {
   return (
     <div className={classes.mainFooter}>
       <div className="container text-center text-md-left">
+        {/* <div className="row">
+          <div className="col-12 d-flex flex-column flex-md-row pt-4 pb-0">Progetto di</div>
+        </div> */}
         <div className="row">
-          <div className="col-12 d-flex flex-column flex-md-row px-5 pt-4 pb-0">Progetto di</div>
-        </div>
-        <div className="row">
-          <div className="col-12 d-flex flex-column flex-md-row px-5 pb-4 pt-3">
+          <div className="col-8 d-flex flex-column flex-md-row pb-4 pt-3">
             <div className="py-2">
               <ExternalLink linkTo={dipartimento.linkTo} ariaLabel={dipartimento.ariaLabel}>
                 <img
@@ -102,12 +111,15 @@ const MainFooter = () => {
             </div>
             <div aria-hidden="true" className={classes.logoSeparator} />
           </div>
+          <div className="col-4 d-flex align-items-center justify-content-end">
+            <a href="#" className={classes.seeMore}>Scopri l'iniziativa</a>
+          </div>
         </div>
-        <div className="row">
+        {/* <div className="row">
           <div className="col-12 d-flex flex-column flex-md-row px-5 pt-0 pb-4">
             <div className="small" dangerouslySetInnerHTML={{ __html: footerA11y }}></div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
