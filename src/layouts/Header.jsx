@@ -23,6 +23,14 @@ const { ariaLabel, headerTitle, headerSubtitle } = labels;
 
 const useStyle = createUseStyles({
   /* Used for problems with nested <a> in the HeaderToggler component */
+  BrandSlimHeader: {
+    composes: 'link-list',
+    borderLeft: 'none',
+  },
+  navMobile: {
+    display: 'flex',
+    flexGrow: '0'
+  },
   navToggler: {
     composes: 'd-lg-none text-primary font-weight-semibold',
     fontSize: '.778em',
@@ -50,20 +58,83 @@ const useStyle = createUseStyles({
   },
 });
 
-const BrandSlimHeader = () => (
-  <>
-    <ExternalLink linkTo={externalLinks.dipartimento.linkTo} ariaLabel={externalLinks.dipartimento.ariaLabel}>
+
+const BrandSlimHeader = () => {
+  const classes = useStyle();
+  return (
+    <ExternalLink
+      linkTo={externalLinks.dipartimento.linkTo}
+      ariaLabel={externalLinks.dipartimento.ariaLabel}
+    >
+      {/* <span className="d-inline d-lg-none d-xl-inline">{externalLinks.dipartimento.label}</span>
+      <span className="d-none d-lg-inline d-xl-none">DTD</span> */}
+      <div class="it-header-slim-wrapper-content">
+        <span className="d-inline d-lg-none d-xl-inline">
+          {externalLinks.dipartimento.label}
+        </span>
+        <span className="d-none d-lg-inline d-xl-none">DTD</span>
+        <div className={classes.navMobile}>
+          <nav>
+            <div class="link-list-wrapper" id="menu1">
+              <ul className={classes.BrandSlimHeader}>
+                <li>
+                  <a class="list-item" href="#">
+                    Link 1
+                  </a>
+                </li>
+                <li>
+                  <a class="list-item" href="#">
+                    Link 2
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </ExternalLink>
+  );
+};
+
+/* const BrandSlimHeader = () => (
+    <ExternalLink
+      linkTo={externalLinks.dipartimento.linkTo}
+      ariaLabel={externalLinks.dipartimento.ariaLabel}
+    >
       <span className="d-inline d-lg-none d-xl-inline">{externalLinks.dipartimento.label}</span>
       <span className="d-none d-lg-inline d-xl-none">DTD</span>
+      <div class="it-header-slim-wrapper-content">
+        <span className="d-inline d-lg-none d-xl-inline">
+          {externalLinks.dipartimento.label}
+        </span>
+        <span className="d-none d-lg-inline d-xl-none">DTD</span>
+        <div class="nav-mobile">
+          <nav>
+            <div class="link-list-wrapper" id="menu1">
+              <ul className={classes.}>
+                <li>
+                  <a class="list-item" href="#">
+                    Link 1
+                  </a>
+                </li>
+                <li>
+                  <a class="list-item" href="#">
+                    Link 2
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
     </ExternalLink>
-  </>
-);
+); */
 
 const SlimHeader = () => {
   const [isOpen, toggleDropdown] = useState(false);
   const classes = useStyle();
   return (
-    <HeaderReactKit type="slim" theme="dark">
+    <HeaderReactKit type="slim" theme="light">
       <HeaderContent>
         <HeaderBrand tag="div">
           <span className="text-primary font-weight-semibold small">
@@ -84,13 +155,17 @@ const SlimHeader = () => {
 const CenterHeader = () => {
   const classes = useStyle();
   return (
-    <HeaderReactKit type="center" theme="dark">
+    <HeaderReactKit type="center" theme="light">
       <HeaderContent>
         <div className="it-brand-wrapper">
           <Link to="/">
             <div className="it-brand-text pr-0">
               <div className="d-flex align-items-center">
-                <img className="icon" src="/assets/repubblica-logo.svg" alt="Logo Repubblica Italiana" />
+                <img
+                  className="icon"
+                  src="/assets/repubblica-logo.svg"
+                  alt="Logo Repubblica Italiana"
+                />
                 <div>
                   <div className="h3 mb-0">{headerTitle}</div>
                   <div className={classes.subtitle}>{headerSubtitle}</div>
@@ -109,8 +184,13 @@ const NavHeader = (props) => {
   const closeMenu = () => setIsOpen(false);
   const toogleMenu = () => setIsOpen(!isOpen);
   return (
-    <HeaderReactKit type="navbar" theme="dark">
-      <HeaderContent expand="lg" megamenu aria-label={ariaLabel.menu} className="px-2">
+    <HeaderReactKit type="navbar" theme="light">
+      <HeaderContent
+        expand="lg"
+        megamenu
+        aria-label={ariaLabel.menu}
+        className="px-2"
+      >
         <button
           onClick={() => setIsOpen(!isOpen)}
           aria-label={ariaLabel.toggleMenu}
@@ -131,7 +211,9 @@ const NavHeader = (props) => {
                   activeClassName="active"
                   onClick={closeMenu}
                 >
-                  <span className="font-weight-semibold">{internalLinks.strategy.label}</span>
+                  <span className="font-weight-semibold">
+                    {internalLinks.strategy.label}
+                  </span>
                 </Link>
               </NavItem>
               <NavItem>
@@ -141,7 +223,9 @@ const NavHeader = (props) => {
                   activeClassName="active"
                   onClick={closeMenu}
                 >
-                  <span className="font-weight-semibold">{internalLinks.enablement.label}</span>
+                  <span className="font-weight-semibold">
+                    {internalLinks.enablement.label}
+                  </span>
                 </Link>
               </NavItem>
               <NavItem>
@@ -151,7 +235,9 @@ const NavHeader = (props) => {
                   activeClassName="active"
                   onClick={closeMenu}
                 >
-                  <span className="font-weight-semibold">{internalLinks.services.label}</span>
+                  <span className="font-weight-semibold">
+                    {internalLinks.services.label}
+                  </span>
                 </Link>
               </NavItem>
             </Nav>

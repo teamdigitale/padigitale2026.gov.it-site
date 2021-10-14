@@ -1,16 +1,16 @@
 internalLinks:
   strategy:
     linkTo: "/#strategy"
-    label: CHANGEME Menu 1
+    label: Le opportunità
     linkTop: "/#mainTop"
   enablement:
     homeLinkTo: "/#comefunziona"
     linkTo: "https://www.youtube.com/CHANGEME"
-    label: CHANGEME Menu 2
+    label: Come funziona
     linkTop: "#mainTop"
   services:
     linkTo: "/#vantaggi"
-    label: CHANGEME Menu 3
+    label: Domande frequenti e contatti
     linkTop: "#mainTop"
   catalogue:
     linkTo: "/#perlapa"
