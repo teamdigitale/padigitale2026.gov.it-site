@@ -1,0 +1,15 @@
+homePage:
+  title: CHANGEME Site name
+  description: CHANGEME Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa
+privacyPage:
+  title: Informativa privacy - CHANGEME Site name
+  description: Informativa sulla gestione dei cookie del CHANGEME Site name
+noteLegaliPage:
+  title: Note legali - CHANGEME Site name
+  description: Informativa sulle note legali del sito CHANGEME
+creditsPage:
+  title: Crediti - CHANGEME Site name
+  description: Elenco degli autori delle risorse visuali utilizzate per il sito CHANGEME
+notFoundPage:
+  title: Pagina non trovata - CHANGEME Site name
+  description: Pagina non trovata

@@ -1,0 +1,23 @@
+name: CI
+
+on: pull_request
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
+      - name: Check all template data was replaced
+        if: ${{ github.repository != 'teamdigitale/gatsby-site' }}
+        run: grep CHANGE[M]E -r . && (echo "Replace all occurrences with values relevant to this site"; exit 1)
+
+      - run: yarn install --frozen-lockfile
+      - run: yarn clean
+      - run: yarn build
+      - run: yarn pa11y
+      - run: yarn html-proofer
+      - run: yarn lint

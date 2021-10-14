@@ -1,0 +1,70 @@
+internalLinks:
+  strategy:
+    linkTo: "/#strategy"
+    label: CHANGEME Menu 1
+    linkTop: "/#mainTop"
+  enablement:
+    homeLinkTo: "/#comefunziona"
+    linkTo: "https://www.youtube.com/CHANGEME"
+    label: CHANGEME Menu 2
+    linkTop: "#mainTop"
+  services:
+    linkTo: "/#vantaggi"
+    label: CHANGEME Menu 3
+    linkTop: "#mainTop"
+  catalogue:
+    linkTo: "/#perlapa"
+    label: Kit di comunicazione 2
+    linkTop: "#mainTop"
+  glossary:
+    linkTo: /glossario/
+    label: Glossario
+  privacy:
+    linkTo: /privacy-policy/
+    label: Privacy policy
+  credits:
+    linkTo: /crediti/
+    label: Crediti
+  noteLegali:
+    label: Note legali
+    linkTo: /note-legali/
+externalLinks:
+  strategyExt:
+    linkSpidExt: "https://www.spid.gov.it/"
+    linkCieExt: "https://www.cartaidentita.interno.gov.it/"
+  pianoTriennale:
+    label: Piano triennale
+    linkTo: https://pianotriennale-ict.italia.it/
+    ariaLabel: "Piano triennale (link esterno)"
+  developers:
+    label: Developers
+    linkTo: https://developers.italia.it/
+    ariaLabel: "Developers Italia (link esterno)"
+  designers:
+    label: Designers
+    linkTo: https://designers.italia.it/
+    ariaLabel: "Designers Italia (link esterno)"
+  forum:
+    label: Forum
+    linkTo: https://forum.italia.it/
+    ariaLabel: "Forum Italia (link esterno)"
+  docs:
+    label: Docs
+    linkTo: https://docs.italia.it/
+    ariaLabel: "Docs Italia (link esterno)"
+  github:
+    label: GitHub
+    linkTo: https://github.com/italia/
+    ariaLabel: "GitHub Italia (link esterno)"
+  dipartimento:
+    label: Dipartimento per la Trasformazione Digitale
+    linkTo: https://innovazione.gov.it/dipartimento/
+    ariaLabel: "Dipartimento per la Trasformazione Digitale (link esterno)"
+  agid:
+    label: AgID
+    linkTo: https://www.agid.gov.it/
+    ariaLabel: "Agenzia per l'Italia Digitale (link esterno)"
+  a11y:
+    label: Dichiarazione di accessibilità
+    linkTo: https://form.agid.gov.it/CHANGEME
+    ariaLabel: "Dichiarazione di accessibilità (link esterno)"

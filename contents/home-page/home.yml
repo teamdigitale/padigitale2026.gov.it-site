@@ -1,0 +1,54 @@
+name: Identità Digitale
+headerTitle: Dipartimento per la trasformazione digitale
+heroStrategy:
+  category: CHANGEME Hero Category
+  title: CHANGEME Hero Title
+  body: CHANGEME Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa
+  ctaAriaLabelSpid: Scopri SPID (link esterno)
+  ctaAriaLabelCie: Scopri CIE (link esterno)
+  altImg: giovane donna guarda lo schermo di un computer
+heroBenefit:
+  category: CHANGEME Hero Category 2
+  title: CHANGEME Hero Title 2
+  body: CHANGEME Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa
+  ctaAriaLabel: Vai al video (Link esterno su Youtube)
+  altImg: anziano su divano con tablet
+heroNews:
+  category: CHANGEME Category features
+  title: CHANGEME Features
+newsPreview:
+  - ariaLabel: Semplice
+    body: CHANGEME Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa
+    title: CHANGEME One
+    icon: it-user
+  - ariaLabel: Veloce
+    body: CHANGEME Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa
+    title: CHANGEME Two
+    icon: it-check-circle
+  - ariaLabel: Sicura
+    body: CHANGEME Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa
+    title: CHANGEME Three
+    icon: it-locked
+heroContribute:
+  category: Come contribuire
+  title: Partecipa al cambiamento, contribuisci a Identità Digitale!
+  body: Condividi informazioni, promuovi incontri sul tema cloud della PA nel tuo territorio e all’interno della tua organizzazione
+contributions:
+  - body: Entra in
+      <a href="https://forum.italia.it/" class="text-decoration-none font-weight-semibold" rel="noreferrer" target="_blank" aria-label="forum Italia (link esterno)">forum.italia.it</a>
+      e condividi le tue opinioni nella sezione <strong>Cloud e data center</strong>
+    icon: it-logo.svg
+    alt: Forum Italia logo
+    title: Forum
+  - body: Unisciti alla community di
+      <a href="https://slack.developers.italia.it/" class="text-decoration-none font-weight-semibold" rel="noreferrer" target="_blank" aria-label="Developers Italia su Slack (link esterno)">Developers Italia su Slack</a>
+      e raggiungi il canale <strong>#cloud</strong>
+    icon: slack-logo.svg
+    alt: Slack logo
+    title: Slack
+  - body: Proponi <em>issue</em>, modifiche e nuovi contenuti nei
+      <a href="https://github.com/italia" class="text-decoration-none font-weight-semibold" rel="noreferrer" target="_blank" aria-label="repository pubblici (link esterno)">repository pubblici</a>
+      che contengono codice e documentazione per lo sviluppo del cloud della PA
+    icon: github-logo.svg
+    alt: GitHub logo
+    title: GitHub
