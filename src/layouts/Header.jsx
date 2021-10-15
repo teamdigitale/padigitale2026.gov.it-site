@@ -8,7 +8,17 @@ import {
   Icon,
   Nav,
   NavItem,
+  HeaderToggler,
   HeaderBrand,
+  LinkListItem,
+  HeaderRightZone,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  LinkList,
+  Row,
+  Col,
+  Button,
   HeaderLinkZone,
 } from 'design-react-kit';
 import { createUseStyles } from 'react-jss';
@@ -35,7 +45,7 @@ const useStyle = createUseStyles({
       display: 'flex',
       alignItems: 'center',
       padding: '0 32px',
-      color: '#0059b3'
+      color: '#0059b3',
     },
     '& li:not(:first-child)': {
       borderLeft: '1px solid rgba(0,89,179,.2)',
@@ -74,24 +84,57 @@ const useStyle = createUseStyles({
       display: 'none',
     },
   },
+  topListLink: {
+    borderLeft: '0',
+  },
+  headerCenterWrapper: {
+    height: 'auto',
+    padding: [16, 0],
+  },
+  offCanvasWrapper: {
+    padding: [13, 24],
+    display: 'flex',
+    alignItems: 'center',
+    marginBottom: 16,
+    borderBottom: '1px solid #0066CC',
+    position: 'relative',
+    '&:before': {
+      content: '',
+      position: 'absolute',
+      left: '24px',
+      bottom: '0',
+      width: '100px',
+      height: '1px',
+      backgroundColor: 'red'
+    }
+  },
+  offCanvasTitle:  {
+    marginLeft: 8,
+    textDecoration: 'none',
+    fontWeight: '700',
+  },
+  activeLink: {
+    backgroundColor: 'rgba(0,102,204,0.06)',
+    borderLeft: '4px solid #0073E6'
+  }
 });
 
-const BrandSlimHeader = () => {
-  const classes = useStyle();
-  return (
-    <ExternalLink
-      linkTo={externalLinks.dipartimento.linkTo}
-      ariaLabel={externalLinks.dipartimento.ariaLabel}
-    >
-      <div class="it-header-slim-wrapper-content">
-        <span className="d-inline d-lg-none d-xl-inline">
-          {externalLinks.dipartimento.label}
-        </span>
-        <span className="d-none d-lg-inline d-xl-none">DTD</span>
-      </div>
-    </ExternalLink>
-  );
-};
+// const BrandSlimHeader = () => {
+//   const classes = useStyle();
+//   return (
+//     <ExternalLink
+//       linkTo={externalLinks.dipartimento.linkTo}
+//       ariaLabel={externalLinks.dipartimento.ariaLabel}
+//     >
+//       <div class="it-header-slim-wrapper-content">
+//         <span className="d-inline d-lg-none d-xl-inline">
+//           {externalLinks.dipartimento.label}
+//         </span>
+//         <span className="d-none d-lg-inline d-xl-none">DTD</span>
+//       </div>
+//     </ExternalLink>
+//   );
+// };
 
 const SlimHeader = () => {
   const [isOpen, toggleDropdown] = useState(false);
@@ -99,42 +142,23 @@ const SlimHeader = () => {
   return (
     <HeaderReactKit type="slim" theme="light">
       <HeaderContent>
-        <HeaderBrand tag="div">
-          <span className="text-primary font-weight-semibold small">
-            <BrandSlimHeader />
-          </span>
+        <HeaderBrand className="font-weight-bold">
+          Dipartimento per la trasformazione digitale
         </HeaderBrand>
-        <div className={classes.navMobile}>
-          <nav>
-            <div class={classes.navListWrapper} id="menu1">
-              <ul className={classes.navList}>
-                <li>
-                  <ExternalLink
-                    className="list-item"
-                    linkTo={externalLinks.italiaDigitale.linkTo}
-                    ariaLabel={externalLinks.italiaDigitale.ariaLabel}
-                  ></ExternalLink>
-                  {externalLinks.italiaDigitale.label}
-                </li>
-                <li>
-                  <ExternalLink
-                    className="list-item"
-                    linkTo={externalLinks.pnrr.linkTo}
-                    ariaLabel={externalLinks.pnrr.ariaLabel}
-                  ></ExternalLink>
-                  {externalLinks.pnrr.label}
-                </li>
-              </ul>
-            </div>
-          </nav>
-          <div class="d-flex align-items-center">
-            <img
-              className="icon"
-              src="/assets/eu-flag.svg"
-              alt="bandiera europa"
-            />
-          </div>
-        </div>
+        <HeaderLinkZone>
+          <HeaderToggler type="button" onClick={function noRefCheck() {}}>
+            <span className="font-weight-bold">
+              Dipartimento per la trasformazione digitale
+            </span>
+            <Icon icon="it-expand" />
+          </HeaderToggler>
+          <Collapse header>
+            <LinkList className={classes.topListLink}>
+              <LinkListItem href="#">Italia digitale 2026</LinkListItem>
+              <LinkListItem href="#">Italia Domani - PNRR</LinkListItem>
+            </LinkList>
+          </Collapse>
+        </HeaderLinkZone>
       </HeaderContent>
     </HeaderReactKit>
   );
@@ -143,12 +167,16 @@ const SlimHeader = () => {
 const CenterHeader = () => {
   const classes = useStyle();
   return (
-    <HeaderReactKit type="center" theme="light">
+    <HeaderReactKit
+      type="center"
+      theme="light"
+      className={classes.headerCenterWrapper}
+    >
       <HeaderContent>
         <div className="it-brand-wrapper">
           <Link to="/">
             <div className="it-brand-text pr-0">
-              <div className="d-flex align-items-center">
+              <div className="d-md-flex align-items-center">
                 <img
                   className="icon"
                   src="/assets/repubblica-logo-blue.svg"
@@ -176,6 +204,7 @@ const NavHeader = (props) => {
   const [isOpen, setIsOpen] = useState(false);
   const closeMenu = () => setIsOpen(false);
   const toogleMenu = () => setIsOpen(!isOpen);
+  const classes = useStyle();
   return (
     <HeaderReactKit type="navbar" theme="light">
       <HeaderContent
@@ -194,13 +223,19 @@ const NavHeader = (props) => {
           <Icon icon="it-burger" />
         </button>
 
-        <HeaderNav isOpen={isOpen} onCloseMenu={toogleMenu}>
+        <HeaderNav theme="" isOpen={isOpen} onCloseMenu={toogleMenu}>
           <div className="menu-wrapper">
             <Nav navbar>
-              <NavItem>
+              <div class={classes.offCanvasWrapper}>
+                <a href="/" tabindex="-1">
+                  <img className="icon" src="/assets/logo-v.svg" alt="Logo" />
+                </a>
+                <a href="/" class={classes.offCanvasTitle}>Prossima PA</a>
+              </div>
+              <NavItem active>
                 <Link
                   to={internalLinks.strategy.linkTo}
-                  className="nav-link"
+                  className={`${classes.activeLink} nav-link`}
                   activeClassName="active"
                   onClick={closeMenu}
                 >
