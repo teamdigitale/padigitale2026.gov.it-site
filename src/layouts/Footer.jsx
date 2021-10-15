@@ -14,7 +14,6 @@ const { footerA11y } = labels;
 
 const useStyle = createUseStyles({
   mainFooter: {
-    composes: 'it-footer-main',
     backgroundColor: '#fff',
   },
   slimFooter: {
@@ -25,16 +24,27 @@ const useStyle = createUseStyles({
     },
   },
   seeMore: {
-    color: '#000',
+    color: '#33485C',
     textDecoration: 'none',
     fontWeight: 'bold',
     '&:hover': {
       textDecoration: 'underline',
-      color: '#000'
+      color: '#33485C'
     },
   },
+  departmentLogo: {
+    marginLeft: '45px',
+    paddingLeft: '45px',
+    borderLeft: '1px solid #E6E9F2'
+  },
   footerLogo: {
-    height: '2.5rem',
+    composes: 'footer-logo',
+    '&+.footer-logo': {
+      marginLeft: '30px'
+    },
+    'img': {
+      height: '2.5rem',
+    }
   },
   logoSeparator: {
     composes: 'mx-2 d-none d-md-block',
@@ -88,24 +98,28 @@ const SlimFooter = () => {
 const MainFooter = () => {
   const classes = useStyle();
   return (
-    <div className={classes.mainFooter}>
+    <div className={`${classes.mainFooter} it-footer-main`}>
       <div className="container text-center text-md-left">
-        {/* <div className="row">
-          <div className="col-12 d-flex flex-column flex-md-row pt-4 pb-0">Progetto di</div>
-        </div> */}
         <div className="row">
           <div className="col-8 d-flex flex-column flex-md-row pb-4 pt-3">
             <div className="py-2">
-              <ExternalLink linkTo={dipartimento.linkTo} ariaLabel={dipartimento.ariaLabel}>
+              <ExternalLink linkTo={dipartimento.linkTo} ariaLabel={dipartimento.ariaLabel} className={classes.footerLogo}>
                 <img
-                  className={`${classes.footerLogo} pr-2`}
-                  src="/assets/repubblica-logo.svg"
+                  src="/assets/eu.png"
                   alt="Logo della Repubblica Italiana"
                 />
+              </ExternalLink>
+              <ExternalLink linkTo={dipartimento.linkTo} ariaLabel={dipartimento.ariaLabel} className={classes.footerLogo}>
                 <img
-                  className={classes.footerLogo}
-                  src="/assets/dtd.svg"
-                  alt="Logo Dipartimento per la trasformazione digitale"
+                  src="/assets/repubblica.png"
+                  alt="Logo della Repubblica Italiana"
+                />
+              </ExternalLink>
+              <ExternalLink linkTo={dipartimento.linkTo} ariaLabel={dipartimento.ariaLabel}>
+                <img
+                  className={classes.departmentLogo}
+                  src="/assets/dipartimento.png"
+                  alt="Logo della Repubblica Italiana"
                 />
               </ExternalLink>
             </div>
