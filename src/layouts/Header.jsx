@@ -23,13 +23,31 @@ const { ariaLabel, headerTitle, headerSubtitle } = labels;
 
 const useStyle = createUseStyles({
   /* Used for problems with nested <a> in the HeaderToggler component */
-  BrandSlimHeader: {
+  navList: {
     composes: 'link-list',
     borderLeft: 'none',
+    display: 'flex',
+    marginBottom: '0',
+    height: '100%',
+    listStyleType: 'none',
+    padding: '0',
+    '& li': {
+      display: 'flex',
+      alignItems: 'center',
+      padding: '0 32px',
+      color: '#0059b3'
+    },
+    '& li:not(:first-child)': {
+      borderLeft: '1px solid rgba(0,89,179,.2)',
+    },
+  },
+  navListWrapper: {
+    height: '100%',
   },
   navMobile: {
     display: 'flex',
-    flexGrow: '0'
+    flexGrow: '0',
+    height: '100%',
   },
   navToggler: {
     composes: 'd-lg-none text-primary font-weight-semibold',
@@ -58,7 +76,6 @@ const useStyle = createUseStyles({
   },
 });
 
-
 const BrandSlimHeader = () => {
   const classes = useStyle();
   return (
@@ -66,69 +83,15 @@ const BrandSlimHeader = () => {
       linkTo={externalLinks.dipartimento.linkTo}
       ariaLabel={externalLinks.dipartimento.ariaLabel}
     >
-      {/* <span className="d-inline d-lg-none d-xl-inline">{externalLinks.dipartimento.label}</span>
-      <span className="d-none d-lg-inline d-xl-none">DTD</span> */}
       <div class="it-header-slim-wrapper-content">
         <span className="d-inline d-lg-none d-xl-inline">
           {externalLinks.dipartimento.label}
         </span>
         <span className="d-none d-lg-inline d-xl-none">DTD</span>
-        <div className={classes.navMobile}>
-          <nav>
-            <div class="link-list-wrapper" id="menu1">
-              <ul className={classes.BrandSlimHeader}>
-                <li>
-                  <a class="list-item" href="#">
-                    Link 1
-                  </a>
-                </li>
-                <li>
-                  <a class="list-item" href="#">
-                    Link 2
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </nav>
-        </div>
       </div>
     </ExternalLink>
   );
 };
-
-/* const BrandSlimHeader = () => (
-    <ExternalLink
-      linkTo={externalLinks.dipartimento.linkTo}
-      ariaLabel={externalLinks.dipartimento.ariaLabel}
-    >
-      <span className="d-inline d-lg-none d-xl-inline">{externalLinks.dipartimento.label}</span>
-      <span className="d-none d-lg-inline d-xl-none">DTD</span>
-      <div class="it-header-slim-wrapper-content">
-        <span className="d-inline d-lg-none d-xl-inline">
-          {externalLinks.dipartimento.label}
-        </span>
-        <span className="d-none d-lg-inline d-xl-none">DTD</span>
-        <div class="nav-mobile">
-          <nav>
-            <div class="link-list-wrapper" id="menu1">
-              <ul className={classes.}>
-                <li>
-                  <a class="list-item" href="#">
-                    Link 1
-                  </a>
-                </li>
-                <li>
-                  <a class="list-item" href="#">
-                    Link 2
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </nav>
-        </div>
-      </div>
-    </ExternalLink>
-); */
 
 const SlimHeader = () => {
   const [isOpen, toggleDropdown] = useState(false);
@@ -141,12 +104,37 @@ const SlimHeader = () => {
             <BrandSlimHeader />
           </span>
         </HeaderBrand>
-        <HeaderLinkZone aria-label={ariaLabel.slimMenu}>
-          <div className={classes.navToggler}></div>
-          <Collapse isOpen={isOpen} header>
-            <div className="link-list-wrapper"></div>
-          </Collapse>
-        </HeaderLinkZone>
+        <div className={classes.navMobile}>
+          <nav>
+            <div class={classes.navListWrapper} id="menu1">
+              <ul className={classes.navList}>
+                <li>
+                  <ExternalLink
+                    className="list-item"
+                    linkTo={externalLinks.italiaDigitale.linkTo}
+                    ariaLabel={externalLinks.italiaDigitale.ariaLabel}
+                  ></ExternalLink>
+                  {externalLinks.italiaDigitale.label}
+                </li>
+                <li>
+                  <ExternalLink
+                    className="list-item"
+                    linkTo={externalLinks.pnrr.linkTo}
+                    ariaLabel={externalLinks.pnrr.ariaLabel}
+                  ></ExternalLink>
+                  {externalLinks.pnrr.label}
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <div class="d-flex align-items-center">
+            <img
+              className="icon"
+              src="/assets/eu-flag.svg"
+              alt="bandiera europa"
+            />
+          </div>
+        </div>
       </HeaderContent>
     </HeaderReactKit>
   );
@@ -163,7 +151,12 @@ const CenterHeader = () => {
               <div className="d-flex align-items-center">
                 <img
                   className="icon"
-                  src="/assets/repubblica-logo.svg"
+                  src="/assets/repubblica-logo-blue.svg"
+                  alt="Logo Repubblica Italiana"
+                />
+                <img
+                  className="icon"
+                  src="/assets/logo-v.svg"
                   alt="Logo Repubblica Italiana"
                 />
                 <div>
