@@ -139,7 +139,7 @@ const MainFooter = () => {
             >
               <img
                 className={classes.logoImg}
-                src="/assets/eu.png"
+                src="/assets/eu-flag.svg"
                 alt="Logo della Repubblica Italiana"
               />
             </ExternalLink>
@@ -150,7 +150,7 @@ const MainFooter = () => {
             >
               <img
                 className={classes.logoImg}
-                src="/assets/repubblica.png"
+                src="/assets/repubblica-logo-colorato.svg"
                 alt="Logo della Repubblica Italiana"
               />
             </ExternalLink>
