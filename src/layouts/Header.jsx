@@ -85,7 +85,7 @@ const useStyle = createUseStyles({
     },
   },
   topListLink: {
-    borderLeft: '0',
+    composes: 'border-0 p-0 mr-0',
   },
   headerCenterWrapper: {
     height: 'auto',
@@ -124,6 +124,11 @@ const useStyle = createUseStyles({
   navbarNav: {
     padding: 0,
   },
+  linkListWrapperCustom: {
+    '& ul li:not(:first-child)': {
+      borderLeft: '1px solid rgba(0,89,179,.2)',
+    }
+  }
 });
 
 // const BrandSlimHeader = () => {
@@ -147,7 +152,7 @@ const SlimHeader = () => {
   const [isOpen, toggleDropdown] = useState(false);
   const classes = useStyle();
   return (
-    <Header type="slim" theme="light">
+    <HeaderReactKit type="slim" theme="light">
       <HeaderContent>
         <HeaderBrand className="font-weight-bold">
           Dipartimento per la trasformazione digitale
@@ -160,14 +165,17 @@ const SlimHeader = () => {
             <Icon icon="it-expand" />
           </HeaderToggler>
           <Collapse header>
+            <div className={classes.linkListWrapperCustom}>
             <LinkList className={classes.topListLink}>
               <LinkListItem href="#">Italia digitale 2026</LinkListItem>
               <LinkListItem href="#">Italia Domani - PNRR</LinkListItem>
             </LinkList>
+            </div>
           </Collapse>
         </HeaderLinkZone>
+        <img class="d-none d-lg-block" src="/assets/eu-flag.svg"></img>
       </HeaderContent>
-    </Header>
+    </HeaderReactKit>
   );
 };
 
@@ -301,7 +309,7 @@ const NavHeader = (props) => {
 
 export const Header = (props) => (
   <header id="mainTop">
-    <Headers>
+    <Headers sticky>
       <SlimHeader theme="" />
       <div className="it-nav-wrapper">
         <CenterHeader />
