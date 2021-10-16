@@ -96,27 +96,34 @@ const useStyle = createUseStyles({
     display: 'flex',
     alignItems: 'center',
     marginBottom: 16,
-    borderBottom: '1px solid #0066CC',
     position: 'relative',
     '&:before': {
-      content: '',
+      content: '""',
       position: 'absolute',
       left: '24px',
       bottom: '0',
-      width: '100px',
+      width: '65px',
       height: '1px',
-      backgroundColor: 'red'
-    }
+      backgroundColor: '#0066CC',
+    },
+    '@media (min-width: 992px)': {
+      display: 'none',
+    },
   },
-  offCanvasTitle:  {
+  offCanvasTitle: {
     marginLeft: 8,
     textDecoration: 'none',
     fontWeight: '700',
   },
   activeLink: {
-    backgroundColor: 'rgba(0,102,204,0.06)',
-    borderLeft: '4px solid #0073E6'
-  }
+    '@media (max-width: 991px)': {
+      backgroundColor: 'rgba(0,102,204,0.06)',
+      borderLeft: '4px solid #0073E6',
+    },
+  },
+  navbarNav: {
+    padding: 0,
+  },
 });
 
 // const BrandSlimHeader = () => {
@@ -140,7 +147,7 @@ const SlimHeader = () => {
   const [isOpen, toggleDropdown] = useState(false);
   const classes = useStyle();
   return (
-    <HeaderReactKit type="slim" theme="light">
+    <Header type="slim" theme="light">
       <HeaderContent>
         <HeaderBrand className="font-weight-bold">
           Dipartimento per la trasformazione digitale
@@ -160,7 +167,7 @@ const SlimHeader = () => {
           </Collapse>
         </HeaderLinkZone>
       </HeaderContent>
-    </HeaderReactKit>
+    </Header>
   );
 };
 
@@ -225,12 +232,14 @@ const NavHeader = (props) => {
 
         <HeaderNav theme="" isOpen={isOpen} onCloseMenu={toogleMenu}>
           <div className="menu-wrapper">
-            <Nav navbar>
-              <div class={classes.offCanvasWrapper}>
-                <a href="/" tabindex="-1">
+            <Nav navbar className={classes.navbarNav}>
+              <div className={classes.offCanvasWrapper}>
+                <a href="/" tabIndex="-1">
                   <img className="icon" src="/assets/logo-v.svg" alt="Logo" />
                 </a>
-                <a href="/" class={classes.offCanvasTitle}>Prossima PA</a>
+                <a href="/" className={classes.offCanvasTitle}>
+                  Prossima PA
+                </a>
               </div>
               <NavItem active>
                 <Link
@@ -293,7 +302,7 @@ const NavHeader = (props) => {
 export const Header = (props) => (
   <header id="mainTop">
     <Headers>
-      <SlimHeader />
+      <SlimHeader theme="" />
       <div className="it-nav-wrapper">
         <CenterHeader />
         <NavHeader showKit={props.showKit} />
