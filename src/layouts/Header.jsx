@@ -188,7 +188,7 @@ const CenterHeader = () => {
       className={classes.headerCenterWrapper}
     >
       <HeaderContent>
-        <div className="it-brand-wrapper">
+        <div className="it-brand-wrapper pl-sm-0">
           <Link to="/">
             <div className="it-brand-text pr-0">
               <div className="d-md-flex align-items-center">
