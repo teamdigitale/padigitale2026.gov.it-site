@@ -11,13 +11,7 @@ import {
   HeaderToggler,
   HeaderBrand,
   LinkListItem,
-  HeaderRightZone,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
   LinkList,
-  Row,
-  Col,
   Button,
   HeaderLinkZone,
 } from 'design-react-kit';
@@ -130,26 +124,10 @@ const useStyle = createUseStyles({
     }
   },
   noShadow: {
-    composes: 'shadow-none'
+    composes: 'shadow-none',
+    top: '30%'
   }
 });
-
-// const BrandSlimHeader = () => {
-//   const classes = useStyle();
-//   return (
-//     <ExternalLink
-//       linkTo={externalLinks.dipartimento.linkTo}
-//       ariaLabel={externalLinks.dipartimento.ariaLabel}
-//     >
-//       <div class="it-header-slim-wrapper-content">
-//         <span className="d-inline d-lg-none d-xl-inline">
-//           {externalLinks.dipartimento.label}
-//         </span>
-//         <span className="d-none d-lg-inline d-xl-none">DTD</span>
-//       </div>
-//     </ExternalLink>
-//   );
-// };
 
 const SlimHeader = () => {
   const [isOpen, toggleDropdown] = useState(false);
@@ -158,20 +136,20 @@ const SlimHeader = () => {
     <HeaderReactKit type="slim" theme="light">
       <HeaderContent>
         <HeaderBrand className="font-weight-bold">
-          Dipartimento per la trasformazione digitale
+        {externalLinks.dipartimento.label}
         </HeaderBrand>
         <HeaderLinkZone>
           <HeaderToggler type="button" onClick={function noRefCheck() {}}>
             <span className="font-weight-bold">
-              Dipartimento per la trasformazione digitale
+            {externalLinks.dipartimento.label}
             </span>
             <Icon icon="it-expand" />
           </HeaderToggler>
           <Collapse header>
             <div className={classes.linkListWrapperCustom}>
             <LinkList className={classes.topListLink}>
-              <LinkListItem href="#">Italia digitale 2026</LinkListItem>
-              <LinkListItem href="#">Italia Domani - PNRR</LinkListItem>
+              <LinkListItem href={externalLinks.italiaDigitale.linkTo}>{externalLinks.italiaDigitale.label}</LinkListItem>
+              <LinkListItem href={externalLinks.pnrr.linkTo}>{externalLinks.pnrr.label}</LinkListItem>
             </LinkList>
             </div>
           </Collapse>
@@ -191,7 +169,7 @@ const CenterHeader = () => {
       className={classes.headerCenterWrapper}
     >
       <HeaderContent>
-        <div className="it-brand-wrapper pl-sm-0">
+        <div className="it-brand-wrapper pl-5 pl-sm-0">
           <Link to="/">
             <div className="it-brand-text pr-0">
               <div className="d-md-flex align-items-center">
@@ -202,10 +180,10 @@ const CenterHeader = () => {
                 />
                 <img
                   className="icon"
-                  src="/assets/logo-v.svg"
+                  src="/assets/site-logo.svg"
                   alt="Logo Repubblica Italiana"
                 />
-                <div>
+                <div className="d-none d-lg-inline-block">
                   <div className="h3 mb-0">{headerTitle}</div>
                   <div className={classes.subtitle}>{headerSubtitle}</div>
                 </div>
@@ -246,11 +224,9 @@ const NavHeader = (props) => {
             <Nav navbar className={classes.navbarNav}>
               <div className={classes.offCanvasWrapper}>
                 <a href="/" tabIndex="-1">
-                  <img className="icon" src="/assets/logo-v.svg" alt="Logo" />
+                  <img className="icon" src="/assets/site-logo.svg" alt="Logo" />
                 </a>
-                <a href="/" className={classes.offCanvasTitle}>
-                  Prossima PA
-                </a>
+                <a href="/" className={classes.offCanvasTitle}>{headerTitle}</a>
               </div>
               <NavItem active>
                 <Link
@@ -278,31 +254,17 @@ const NavHeader = (props) => {
               </NavItem>
               <NavItem>
                 <Link
-                  to={internalLinks.services.linkTo}
+                  to={internalLinks.support.linkTo}
                   className="nav-link"
                   activeClassName="active"
                   onClick={closeMenu}
                 >
                   <span className="font-weight-semibold">
-                    {internalLinks.services.label}
+                    {internalLinks.support.label}
                   </span>
                 </Link>
               </NavItem>
             </Nav>
-            {/* <Nav navbar>
-              <NavItem>
-                <Link
-                  to={internalLinks.catalogue.linkTo}
-                  className="nav-link"
-                  activeClassName="active"
-                  onClick={closeMenu}
-                >
-                  <span className="font-weight-semibold">
-                    {internalLinks.catalogue.label}
-                  </span>
-                </Link>
-              </NavItem>
-            </Nav> */}
           </div>
         </HeaderNav>
       </HeaderContent>

@@ -8,6 +8,10 @@ internalLinks:
     linkTo: 'https://www.youtube.com/CHANGEME'
     label: Come funziona
     linkTop: '#mainTop'
+  support:
+    linkTo: '/#supporto'
+    label: Supporto
+    linkTop: '#mainTop'
   services:
     linkTo: '/#vantaggi'
     label: Domande frequenti e contatti
