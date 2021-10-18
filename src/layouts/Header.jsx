@@ -128,6 +128,9 @@ const useStyle = createUseStyles({
     '& ul li:not(:first-child)': {
       borderLeft: '1px solid rgba(0,89,179,.2)',
     }
+  },
+  noShadow: {
+    composes: 'shadow-none'
   }
 });
 
@@ -221,7 +224,7 @@ const NavHeader = (props) => {
   const toogleMenu = () => setIsOpen(!isOpen);
   const classes = useStyle();
   return (
-    <HeaderReactKit type="navbar" theme="light">
+    <HeaderReactKit type="navbar" theme="light" className={classes.noShadow}>
       <HeaderContent
         expand="lg"
         megamenu
@@ -313,7 +316,7 @@ export const Header = (props) => (
       <SlimHeader theme="" />
       <div className="it-nav-wrapper">
         <CenterHeader />
-        <NavHeader showKit={props.showKit} />
+        <NavHeader showKit={props.showKit}/>
       </div>
     </Headers>
   </header>
