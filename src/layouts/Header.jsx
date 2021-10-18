@@ -309,7 +309,7 @@ const NavHeader = (props) => {
 
 export const Header = (props) => (
   <header id="mainTop">
-    <Headers sticky>
+    <Headers>
       <SlimHeader theme="" />
       <div className="it-nav-wrapper">
         <CenterHeader />
