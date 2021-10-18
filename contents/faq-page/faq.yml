@@ -1,0 +1,36 @@
+sidebar:
+  - sectionTitle: Il contesto
+    sectionId: contesto
+    sectionActive: true
+  - sectionTitle: Gli investimenti
+    sectionId: investimenti
+    sectionActive: false
+  - sectionTitle: I bandi e gli avvisi
+    sectionId: bandi
+    sectionActive: false
+  - sectionTitle: Supporto
+    sectionId: supporto
+    sectionActive: false
+questions:
+  - title: Il contesto
+    description: La strategia di ripresa economica e gli interventi previsti per il rilancio digitale del Paese
+    accordions:
+      - title: Cos'è Next Generation EU?
+        content: Next Generation EU (NGEU) è un piano da €750 miliardi di Euro che ha l'obiettivo di rilanciare l'economia europea dopo la pandemia di COVID-19 e di renderla più verde e digitale.
+        link: '#'
+        ariaLabel: testo aria label
+      - title: Cos'è Italia domani, il Piano nazionale di ripresa e resilienza (PNRR)?
+        content: Next Generation EU (NGEU) è un piano da €750 miliardi di Euro che ha l'obiettivo di rilanciare l'economia europea dopo la pandemia di COVID-19 e di renderla più verde e digitale.
+        link: '#'
+        ariaLabel: testo aria label
+  - title: Gli investimenti
+    description: La strategia di ripresa economica e gli interventi previsti per il rilancio digitale del Paese
+    accordions:
+      - title: Cos'è Next Generation EU?
+        content: Next Generation EU (NGEU) è un piano da €750 miliardi di Euro che ha l'obiettivo di rilanciare l'economia europea dopo la pandemia di COVID-19 e di renderla più verde e digitale.
+        link: '#'
+        ariaLabel: testo aria label
+      - title: Cos'è Italia domani, il Piano nazionale di ripresa e resilienza (PNRR)?
+        content: Next Generation EU (NGEU) è un piano da €750 miliardi di Euro che ha l'obiettivo di rilanciare l'economia europea dopo la pandemia di COVID-19 e di renderla più verde e digitale.
+        link: '#'
+        ariaLabel: testo aria label

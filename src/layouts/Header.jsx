@@ -154,7 +154,7 @@ const SlimHeader = () => {
             </div>
           </Collapse>
         </HeaderLinkZone>
-        <img class="d-none d-lg-block" src="/assets/eu-flag.svg"></img>
+        <img className="d-none d-lg-block" src="/assets/eu-flag.svg"></img>
       </HeaderContent>
     </HeaderReactKit>
   );
