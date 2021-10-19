@@ -18,8 +18,8 @@ const useStyles = createUseStyles({
 
 export const SideNavigation = () => {
   const classes = useStyles();
-  const anchors = content.sidebar.map((anchor) => (
-    <LinkListItem size="medium" className="text-decoration-none">
+  const anchors = content.sidebar.map((anchor, i) => (
+    <LinkListItem key={i} size="medium" className="text-decoration-none">
       <span className={classes.anchorText}>{anchor.sectionTitle}</span>
     </LinkListItem>
   ));

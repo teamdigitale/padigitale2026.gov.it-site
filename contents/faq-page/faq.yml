@@ -17,10 +17,12 @@ questions:
     accordions:
       - title: Cos'è Next Generation EU?
         content: Next Generation EU (NGEU) è un piano da €750 miliardi di Euro che ha l'obiettivo di rilanciare l'economia europea dopo la pandemia di COVID-19 e di renderla più verde e digitale.
+        id: contesto-1
         link: '#'
         ariaLabel: testo aria label
       - title: Cos'è Italia domani, il Piano nazionale di ripresa e resilienza (PNRR)?
         content: Next Generation EU (NGEU) è un piano da €750 miliardi di Euro che ha l'obiettivo di rilanciare l'economia europea dopo la pandemia di COVID-19 e di renderla più verde e digitale.
+        id: contesto-2
         link: '#'
         ariaLabel: testo aria label
   - title: Gli investimenti
@@ -28,9 +30,18 @@ questions:
     accordions:
       - title: Cos'è Next Generation EU?
         content: Next Generation EU (NGEU) è un piano da €750 miliardi di Euro che ha l'obiettivo di rilanciare l'economia europea dopo la pandemia di COVID-19 e di renderla più verde e digitale.
+        id: investimento-1
         link: '#'
         ariaLabel: testo aria label
       - title: Cos'è Italia domani, il Piano nazionale di ripresa e resilienza (PNRR)?
         content: Next Generation EU (NGEU) è un piano da €750 miliardi di Euro che ha l'obiettivo di rilanciare l'economia europea dopo la pandemia di COVID-19 e di renderla più verde e digitale.
+        id: investimento-2
         link: '#'
         ariaLabel: testo aria label
+support: 
+  tag: Supporto
+  title: Non hai trovato le risposte che cerchi? Vuoi inviare suggerimenti o ricevere supporto?
+  cards:
+  - title: Contatti
+    description: Compila il modulo per inviarci i tuoi suggerimenti o per avere chiarimenti sull'iniziativa
+    

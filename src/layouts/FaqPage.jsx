@@ -5,12 +5,13 @@ import {
   Col,
 } from 'design-react-kit';
 import content from '../../contents/home-page/home.yml';
-import {questions} from '../../contents/faq-page/faq.yml';
+import faq from '../../contents/faq-page/faq.yml';
 import { SideNavigation } from './faq/SideNavigation';
 import { QuestionSection } from './faq/QuestionSection';
+import { SupportSection } from './faq/SupportSection';
 
-const faqSection = questions.map((question) => {
-  return <QuestionSection item={question}/>
+const faqSection = faq.questions.map((question, i) => {
+  return <QuestionSection key={i} item={question}/>
 });
 
 export const FaqPage = () => (
@@ -30,5 +31,6 @@ export const FaqPage = () => (
         </Row>
       </Container>
     </div>
+    <SupportSection supportList={faq.support.cards}/>
   </>
 );
