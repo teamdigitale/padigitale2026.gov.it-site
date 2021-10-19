@@ -4,7 +4,12 @@ import PropTypes from 'prop-types';
 
 const useStyles = createUseStyles({
   body: {
-    fontSize: '1.3rem',
+    color: '#33485C',
+    fontSize: '18px',
+    fontFamily: 'Titillium Web',
+    '@media (min-width: 992px)': {
+      maxWidth: '480px',
+    },
   },
 });
 
