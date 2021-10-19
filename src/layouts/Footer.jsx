@@ -160,7 +160,7 @@ const MainFooter = () => {
             >
               <img
                 className={classes.departmentLogo}
-                src="/assets/dipartimento.png"
+                src="/assets/dipartimento.svg"
                 alt="Logo della Repubblica Italiana"
               />
             </ExternalLink>
