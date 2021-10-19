@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    name: 'CHANGEME',
-    hostname: 'CHANGEME.example.org',
-    siteUrl: 'https://CHANGEME/',
+    name: 'ProssimaPA',
+    hostname: 'prossimapa.gov.it',
+    siteUrl: 'https://prossimapa.gov.it/',
   },
   plugins: [
     'gatsby-plugin-sitemap',
@@ -48,7 +48,7 @@ module.exports = {
       options: {
         siteId: 'CHANGEME',
         matomoUrl: `https://ingestion.webanalytics.italia.it/`,
-        siteUrl: 'https://CHANGEME',
+        siteUrl: 'https://prossimapa.gov.it',
         matomoPhpScript: 'matomo.php',
         matomoJsScript: 'matomo.js',
         localScript: '/assets/matomo.js',
