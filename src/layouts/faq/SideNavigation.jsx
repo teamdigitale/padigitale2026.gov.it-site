@@ -19,7 +19,7 @@ const useStyles = createUseStyles({
 export const SideNavigation = () => {
   const classes = useStyles();
   const anchors = content.sidebar.map((anchor, i) => (
-    <LinkListItem key={i} size="medium" className="text-decoration-none">
+    <LinkListItem key={i} size="medium" href={`#` + anchor.sectionId} className="text-decoration-none">
       <span className={classes.anchorText}>{anchor.sectionTitle}</span>
     </LinkListItem>
   ));

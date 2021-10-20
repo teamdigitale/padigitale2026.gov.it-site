@@ -87,9 +87,9 @@ export const SupportSection = (props) => {
           <Row>
             <Col className={classes.layout}>
               <Row>
-                {props.supportList.map((card, i) => {
+                {props.supportList.map(card => {
                   return (
-                    <Col md={4} lg={3} className="mb-3 mb-md-0">
+                    <Col key={card.title} md={4} lg={3} className="mb-3 mb-md-0">
                       <Card teaser noWrapper className={classes.cardWrapper}>
                         <CardBody>
                           <CardTitle tag="h5" className={classes.cardTitle}>
