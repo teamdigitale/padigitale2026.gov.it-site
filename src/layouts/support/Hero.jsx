@@ -3,8 +3,8 @@ import React from 'react';
 import { createUseStyles } from 'react-jss';
 import content from '../../../contents/support-page/support.yml';
 
-const { 
-  mainHero: {title, description} 
+const {
+  mainHero: {title, description}
 } = content;
 const useStyle = createUseStyles({
   supportHero: {

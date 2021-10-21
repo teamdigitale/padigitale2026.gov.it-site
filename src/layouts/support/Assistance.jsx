@@ -16,6 +16,9 @@ const {
 
 
 const useStyle = createUseStyles({
+  heroAssistanceBg: {
+    backgroundColor: '#ffffff',
+  },
   heroTitle: {
     color: '#33485C',
     fontSize: '1.333rem',
@@ -30,7 +33,7 @@ export const Assistance = () => {
   const classes = useStyle();
 
   return (
-    <Hero>
+    <Hero className={classes.heroAssistanceBg}>
       <div className="row align-items-center px-lg-5">
         <div className="col-lg-6 p-0 mt-3 mt-lg-0 pr-lg-5">
           <HeroTitle title={title} className={classes.heroTitle} />
