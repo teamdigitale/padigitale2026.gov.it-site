@@ -14,6 +14,8 @@ const useStyles = createUseStyles({
         boxShadow: [['none'], '!important'],
       },
     },
+    paddingLeft: '10px',
+    paddingRight: '10px',
   },
   bullet: {
     composes: 'swiper-pagination-bullet p-2',
@@ -47,7 +49,7 @@ export const DesktopSwiper = ({ slides }) => {
               lastSlideMessage: "Questa è l'ultima slide",
               paginationBulletMessage: 'Vai alla slide {{index}}',
             }}
-            className="bg-white shadow-lg"
+            className=""
             slidesPerView={1}
             pagination={{
               el: `[data-swiper-id=${paginationId}]`,

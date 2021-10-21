@@ -1,24 +1,55 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
-import {
-  Row,
-  Col,
-  Card,
-  CardBody,
-  CardCategory,
-  CardTitle,
-  CardText,
-  CardSignature,
-  CardReadMore,
-} from 'design-react-kit';
+import { Row, Col, Card, CardBody, CardCategory, CardTitle, CardText, CardReadMore } from 'design-react-kit';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import { DesktopSwiper } from '../DesktopSwiper';
 
 const useStyles = createUseStyles({
-  heroImg: {
-    position: 'absolute',
-    right: '0',
-    top: '0',
+  heroCards: {
+    composes: 'card-bg rounded',
+    '& .card-body': {
+      '& .category-top': {
+        '& a.category': {
+          fontSize: '0.778rem',
+          fontWeight: '600',
+          color: '#33485C',
+        },
+      },
+      '& h5.card-title': {
+        color: '#0066CC',
+        fontSize: '1rem',
+        fontWeight: 'bold',
+        lineHeight: '1.26',
+        minHeight: '2.889rem',
+      },
+      '& .card-text': {
+        color: '#33485C',
+        fontSize: '0.889rem',
+        fontFamily: 'Titillium Web',
+        fontWeight: '400',
+        lineHeight: '1.24',
+        marginBottom: '2.222rem',
+      },
+      '& .source': {
+        color: '#33485C',
+        fontSize: '0.889rem',
+        fontWeight: '600',
+        lineHeight: '1.24',
+        display: 'inline-flex',
+        alignItems: 'center',
+        '& img': {
+          marginLeft: '0.278rem',
+        },
+      },
+    },
+    '&:after': {
+      content: 'none',
+    },
+  },
+  newsUpdateSection: {
+    backgroundColor: '#E5E5E5',
+    padding: '20px 0',
   },
 });
 // const carousel = React.createRef();
@@ -29,15 +60,15 @@ export const HeroCarousel = ({ content }) => {
     <Row key={element.id}>
       {element.slide.map((card) => (
         <Col key={card.id} xs="12" lg="4">
-          <Card>
+          <Card className={classes.heroCards} spacing noWrapper>
             <CardBody>
-              <CardCategory>Category</CardCategory>
-              <CardTitle tag="h5" className="big-heading">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit…
-              </CardTitle>
-              <CardText>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</CardText>
-              <CardSignature>di Federico De Paolis</CardSignature>
-              <CardReadMore text="Leggi di più" iconName="it-arrow-right" />
+              <CardCategory>{card.category}</CardCategory>
+              <CardTitle tag="h5">{card.title}</CardTitle>
+              <CardText>{card.description}</CardText>
+              <div className="source">
+                {card.source}
+                <img src={`/assets/external-link.svg`} alt="" />
+              </div>
             </CardBody>
           </Card>
         </Col>
@@ -47,8 +78,10 @@ export const HeroCarousel = ({ content }) => {
 
   return (
     <>
-      <div className="container">
-        <DesktopSwiper slides={slides} />
+      <div className={classes.newsUpdateSection}>
+        <div className="container">
+          <DesktopSwiper slides={slides} />
+        </div>
       </div>
     </>
   );
