@@ -20,7 +20,7 @@ const {
 const useStyle = createUseStyles({
   faqPreview: {
     backgroundColor: '#F0F6FC',
-    paddingBottom: '100px',
+    paddingBottom: '5.556rem',
   },
   faqCard: {
     composes: 'card rounded',
@@ -29,21 +29,21 @@ const useStyle = createUseStyles({
       '& h5.card-title': {
         color: '#0066CC',
         fontWeight: 'bold',
-        fontSize: '28px',
+        fontSize: '1.556rem',
         lineHeight: '40px',
-        marginBottom: '16px',
+        marginBottom: '0.889rem',
         '@media (min-width: 992px)': {
-          fontSize: '24px',
+          fontSize: '1.333rem',
           lineHeight: '32px',
           fontWeight: 'normal',
-          minHeight: '96px',
-          marginBottom: '40px',
+          minHeight: '5.333rem',
+          marginBottom: '2.222rem',
         },
       },
       '& .card-text': {
         color: '#33485C',
         fontFamily: 'Titillium Web',
-        fontSize: '18px',
+        fontSize: '1rem',
         lineHeight: '28px',
       },
       '&:after': {
@@ -54,9 +54,9 @@ const useStyle = createUseStyles({
   btnWrapper: {
     display: 'flex',
     justifyContent: 'center',
-    marginTop: '30px',
+    marginTop: '1.667rem',
     '@media (min-width: 992px)': {
-      marginTop: '50px',
+      marginTop: '2.778rem',
     },
     '& .btn': {
       textTransform: 'uppercase',
@@ -80,7 +80,7 @@ export const FAQPreview = () => {
   return (
     <>
       <div className={classes.faqPreview}>
-        <div className="container">
+        <div className="container px-3">
           <Row>
             {cards}
           </Row>

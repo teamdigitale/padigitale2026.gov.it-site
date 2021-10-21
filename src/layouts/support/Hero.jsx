@@ -16,19 +16,19 @@ const useStyle = createUseStyles({
       paddingLeft: '0',
       '& .no_toc': {
         color: '#33485C',
-        fontSize: '40px',
+        fontSize: '2.222rem',
         fontWeight: 'bold',
         letterSpacing: '-1.3px',
         '@media (min-width: 992px)': {
-          fontSize: '48px',
+          fontSize: '2.667rem',
         },
       },
       '& .support-hero-description': {
         color: '#33485C',
-        fontSize: '20px',
+        fontSize: '1.111rem',
         fontFamily: 'Titillium Web',
         '@media (min-width: 992px)': {
-          fontSize: '24px',
+          fontSize: '1.333rem',
         },
       },
     },
@@ -41,7 +41,7 @@ export const HeroSupport = () => {
   return (
     <>
       <div className={classes.supportHero}>
-        <div className="container">
+        <div className="container px-3">
           <div className="row">
             <div className="col-12 col-lg-6 offset-lg-1">
               <div className="it-hero-text-wrapper">

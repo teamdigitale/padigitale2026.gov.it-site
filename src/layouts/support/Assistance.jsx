@@ -18,10 +18,10 @@ const {
 const useStyle = createUseStyles({
   heroTitle: {
     color: '#33485C',
-    fontSize: '24px',
+    fontSize: '1.333rem',
     fontWeight: '700',
     '@media (min-width: 992px)': {
-      fontSize: '32px',
+      fontSize: '1.778rem',
     },
   },
 });
