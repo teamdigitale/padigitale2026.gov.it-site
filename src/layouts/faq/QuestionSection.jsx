@@ -1,10 +1,9 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
 import { Accordion, AccordionHeader, AccordionBody } from 'design-react-kit';
 // import { StaticImage } from 'gatsby-plugin-image';
 import { createUseStyles } from 'react-jss';
 import { ExternalLink } from '../../components/ExternalLink';
 // import { questions } from '../../../contents/faq-page/faq.yml';
-import { useEffect } from 'react';
 
 const useStyles = createUseStyles({
   section: {
@@ -23,6 +22,7 @@ const useStyles = createUseStyles({
   accordionWrapper: {
     '& > .collapse-header [data-toggle=collapse]': {
       fontWeight: 'normal',
+      padding: '1rem',
       '&:focus': {
         outline: '0',
       },
@@ -54,7 +54,8 @@ export const QuestionSection = (props) => {
   const classes = useStyles();
   const { title, description, accordions, sectionId } = props.item;
   const { inputText } = props;
-
+  const { filterId } = props;
+  
   const [indexIsOpen, setIndexIsOpen] = useState(-1);
   const [accordionList, setAccordionList] = useState(accordions);
 

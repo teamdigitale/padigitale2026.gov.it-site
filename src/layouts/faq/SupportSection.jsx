@@ -5,6 +5,7 @@ import {
   CardBody,
   CardText,
   CardTitle,
+  Button,
   Row,
   Col,
 } from 'design-react-kit';
@@ -106,6 +107,11 @@ export const SupportSection = (props) => {
               </Row>
             </Col>
           </Row>
+          {props.button && <Row>
+            <Col md={8} lg={6} className={`${classes.layout} mt-5`}>
+              <Button color="primary" href={props.href}>{label}</Button>
+            </Col>
+          </Row>}
         </div>
       </Section>
     </>
