@@ -1,8 +1,18 @@
 import React from 'react';
-import { Carousel } from 'design-react-kit';
-
 import { createUseStyles } from 'react-jss';
+import {
+  Row,
+  Col,
+  Card,
+  CardBody,
+  CardCategory,
+  CardTitle,
+  CardText,
+  CardSignature,
+  CardReadMore,
+} from 'design-react-kit';
 import PropTypes from 'prop-types';
+import { DesktopSwiper } from '../DesktopSwiper';
 
 const useStyles = createUseStyles({
   heroImg: {
@@ -11,132 +21,39 @@ const useStyles = createUseStyles({
     top: '0',
   },
 });
-const carousel = React.createRef();
+// const carousel = React.createRef();
 
-export const HeroCarousel = ({}) => {
+export const HeroCarousel = ({ content }) => {
   const classes = useStyles();
+  const slides = content.map((element) => (
+    <Row key={element.id}>
+      {element.slide.map((card) => (
+        <Col key={card.id} xs="12" lg="4">
+          <Card>
+            <CardBody>
+              <CardCategory>Category</CardCategory>
+              <CardTitle tag="h5" className="big-heading">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit…
+              </CardTitle>
+              <CardText>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</CardText>
+              <CardSignature>di Federico De Paolis</CardSignature>
+              <CardReadMore text="Leggi di più" iconName="it-arrow-right" />
+            </CardBody>
+          </Card>
+        </Col>
+      ))}
+    </Row>
+  ));
+
   return (
     <>
-      <div className="it-carousel-wrapper it-carousel-landscape-abstract-three-cols">
-        <div className="it-carousel-all owl-carousel" ref={carousel}>
-          <div className="it-single-slide-wrapper">
-            <div className="card-wrapper">
-              <div className="card">
-                <div className="card-body">
-                  <div className="category-top">
-                    <a className="category" href="#">
-                      Category
-                    </a>
-                    <span className="data">10/12/2018</span>
-                  </div>
-                  <h5 className="card-title big-heading">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit…
-                  </h5>
-                  <p className="card-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
-                  </p>
-                  <span className="card-signature">di Federico De Paolis</span>
-                  <a className="read-more" href="#">
-                    <span className="text">Leggi di più</span>
-                    <svg className="icon">
-                      <use xlinkHref="/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="it-single-slide-wrapper">
-            <div className="card-wrapper">
-              <div className="card">
-                <div className="card-body">
-                  <div className="category-top">
-                    <a className="category" href="#">
-                      Category
-                    </a>
-                    <span className="data">10/12/2018</span>
-                  </div>
-                  <h5 className="card-title big-heading">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit…
-                  </h5>
-                  <p className="card-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
-                  </p>
-                  <span className="card-signature">di Federico De Paolis</span>
-                  <a className="read-more" href="#">
-                    <span className="text">Leggi di più</span>
-                    <svg className="icon">
-                      <use xlinkHref="/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="it-single-slide-wrapper">
-            <div className="card-wrapper">
-              <div className="card">
-                <div className="card-body">
-                  <div className="category-top">
-                    <a className="category" href="#">
-                      Category
-                    </a>
-                    <span className="data">10/12/2018</span>
-                  </div>
-                  <h5 className="card-title big-heading">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit…
-                  </h5>
-                  <p className="card-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
-                  </p>
-                  <span className="card-signature">di Federico De Paolis</span>
-                  <a className="read-more" href="#">
-                    <span className="text">Leggi di più</span>
-                    <svg className="icon">
-                      <use xlinkHref="/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="it-single-slide-wrapper">
-            <div className="card-wrapper">
-              <div className="card">
-                <div className="card-body">
-                  <div className="category-top">
-                    <a className="category" href="#">
-                      Category
-                    </a>
-                    <span className="data">10/12/2018</span>
-                  </div>
-                  <h5 className="card-title big-heading">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit…
-                  </h5>
-                  <p className="card-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
-                  </p>
-                  <span className="card-signature">di Federico De Paolis</span>
-                  <a className="read-more" href="#">
-                    <span className="text">Leggi di più</span>
-                    <svg className="icon">
-                      <use xlinkHref="/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div className="container">
+        <DesktopSwiper slides={slides} />
       </div>
     </>
   );
+};
+
+HeroCarousel.propTypes = {
+  content: PropTypes.arrayOf(PropTypes.node),
 };
