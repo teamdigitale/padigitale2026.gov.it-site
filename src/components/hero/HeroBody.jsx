@@ -5,10 +5,10 @@ import PropTypes from 'prop-types';
 const useStyles = createUseStyles({
   body: {
     color: '#33485C',
-    fontSize: '18px',
+    fontSize: '1rem',
     fontFamily: 'Titillium Web',
     '@media (min-width: 992px)': {
-      maxWidth: '480px',
+      maxWidth: '26.667rem',
     },
   },
 });

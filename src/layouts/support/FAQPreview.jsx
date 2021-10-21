@@ -30,11 +30,11 @@ const useStyle = createUseStyles({
         color: '#0066CC',
         fontWeight: 'bold',
         fontSize: '1.556rem',
-        lineHeight: '40px',
+        lineHeight: '1.4',
         marginBottom: '0.889rem',
         '@media (min-width: 992px)': {
           fontSize: '1.333rem',
-          lineHeight: '32px',
+          lineHeight: '1.32',
           fontWeight: 'normal',
           minHeight: '5.333rem',
           marginBottom: '2.222rem',
@@ -44,7 +44,7 @@ const useStyle = createUseStyles({
         color: '#33485C',
         fontFamily: 'Titillium Web',
         fontSize: '1rem',
-        lineHeight: '28px',
+        lineHeight: '1.28',
       },
       '&:after': {
         content: 'none',
