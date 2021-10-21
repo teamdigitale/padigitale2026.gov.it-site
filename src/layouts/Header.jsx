@@ -219,7 +219,7 @@ const NavHeader = (props) => {
           <Icon icon="it-burger" />
         </button>
 
-        <HeaderNav theme="" isOpen={isOpen} onCloseMenu={toogleMenu}>
+        <HeaderNav isOpen={isOpen} onCloseMenu={toogleMenu}>
           <div className="menu-wrapper">
             <Nav navbar className={classes.navbarNav}>
               <div className={classes.offCanvasWrapper}>
@@ -275,7 +275,7 @@ const NavHeader = (props) => {
 export const Header = (props) => (
   <header id="mainTop">
     <Headers>
-      <SlimHeader theme="" />
+      <SlimHeader />
       <div className="it-nav-wrapper">
         <CenterHeader />
         <NavHeader showKit={props.showKit}/>
