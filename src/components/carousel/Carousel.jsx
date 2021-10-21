@@ -1,142 +1,92 @@
 import React from 'react';
-import { Carousel } from 'design-react-kit';
-
 import { createUseStyles } from 'react-jss';
+import { Row, Col, Card, CardBody, CardCategory, CardTitle, CardText, CardReadMore } from 'design-react-kit';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import { DesktopSwiper } from '../DesktopSwiper';
 
 const useStyles = createUseStyles({
-  heroImg: {
-    position: 'absolute',
-    right: '0',
-    top: '0',
+  heroCards: {
+    composes: 'card-bg rounded',
+    '& .card-body': {
+      '& .category-top': {
+        '& a.category': {
+          fontSize: '0.778rem',
+          fontWeight: '600',
+          color: '#33485C',
+        },
+      },
+      '& h5.card-title': {
+        color: '#0066CC',
+        fontSize: '1rem',
+        fontWeight: 'bold',
+        lineHeight: '1.26',
+        minHeight: '2.889rem',
+      },
+      '& .card-text': {
+        color: '#33485C',
+        fontSize: '0.889rem',
+        fontFamily: 'Titillium Web',
+        fontWeight: '400',
+        lineHeight: '1.24',
+        marginBottom: '2.222rem',
+      },
+      '& .source': {
+        color: '#33485C',
+        fontSize: '0.889rem',
+        fontWeight: '600',
+        lineHeight: '1.24',
+        display: 'inline-flex',
+        alignItems: 'center',
+        '& img': {
+          marginLeft: '0.278rem',
+        },
+      },
+    },
+    '&:after': {
+      content: 'none',
+    },
+  },
+  newsUpdateSection: {
+    backgroundColor: '#E5E5E5',
+    padding: '20px 0',
   },
 });
-const carousel = React.createRef();
+// const carousel = React.createRef();
 
-export const HeroCarousel = ({}) => {
+export const HeroCarousel = ({ content }) => {
   const classes = useStyles();
+  const slides = content.map((element) => (
+    <Row key={element.id}>
+      {element.slide.map((card) => (
+        <Col key={card.id} xs="12" lg="4">
+          <Card className={classes.heroCards} spacing noWrapper>
+            <CardBody>
+              <CardCategory>{card.category}</CardCategory>
+              <CardTitle tag="h5">{card.title}</CardTitle>
+              <CardText>{card.description}</CardText>
+              <div className="source">
+                {card.source}
+                <img src={`/assets/external-link.svg`} alt="" />
+              </div>
+            </CardBody>
+          </Card>
+        </Col>
+      ))}
+    </Row>
+  ));
+
   return (
     <>
-      <div className="it-carousel-wrapper it-carousel-landscape-abstract-three-cols">
-        <div className="it-carousel-all owl-carousel" ref={carousel}>
-          <div className="it-single-slide-wrapper">
-            <div className="card-wrapper">
-              <div className="card">
-                <div className="card-body">
-                  <div className="category-top">
-                    <a className="category" href="#">
-                      Category
-                    </a>
-                    <span className="data">10/12/2018</span>
-                  </div>
-                  <h5 className="card-title big-heading">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit…
-                  </h5>
-                  <p className="card-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
-                  </p>
-                  <span className="card-signature">di Federico De Paolis</span>
-                  <a className="read-more" href="#">
-                    <span className="text">Leggi di più</span>
-                    <svg className="icon">
-                      <use xlinkHref="/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="it-single-slide-wrapper">
-            <div className="card-wrapper">
-              <div className="card">
-                <div className="card-body">
-                  <div className="category-top">
-                    <a className="category" href="#">
-                      Category
-                    </a>
-                    <span className="data">10/12/2018</span>
-                  </div>
-                  <h5 className="card-title big-heading">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit…
-                  </h5>
-                  <p className="card-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
-                  </p>
-                  <span className="card-signature">di Federico De Paolis</span>
-                  <a className="read-more" href="#">
-                    <span className="text">Leggi di più</span>
-                    <svg className="icon">
-                      <use xlinkHref="/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="it-single-slide-wrapper">
-            <div className="card-wrapper">
-              <div className="card">
-                <div className="card-body">
-                  <div className="category-top">
-                    <a className="category" href="#">
-                      Category
-                    </a>
-                    <span className="data">10/12/2018</span>
-                  </div>
-                  <h5 className="card-title big-heading">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit…
-                  </h5>
-                  <p className="card-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
-                  </p>
-                  <span className="card-signature">di Federico De Paolis</span>
-                  <a className="read-more" href="#">
-                    <span className="text">Leggi di più</span>
-                    <svg className="icon">
-                      <use xlinkHref="/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="it-single-slide-wrapper">
-            <div className="card-wrapper">
-              <div className="card">
-                <div className="card-body">
-                  <div className="category-top">
-                    <a className="category" href="#">
-                      Category
-                    </a>
-                    <span className="data">10/12/2018</span>
-                  </div>
-                  <h5 className="card-title big-heading">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit…
-                  </h5>
-                  <p className="card-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
-                  </p>
-                  <span className="card-signature">di Federico De Paolis</span>
-                  <a className="read-more" href="#">
-                    <span className="text">Leggi di più</span>
-                    <svg className="icon">
-                      <use xlinkHref="/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+      <div className={classes.newsUpdateSection}>
+        <div className="container">
+          <DesktopSwiper slides={slides} />
         </div>
       </div>
     </>
   );
+};
+
+HeroCarousel.propTypes = {
+  content: PropTypes.arrayOf(PropTypes.node),
 };
