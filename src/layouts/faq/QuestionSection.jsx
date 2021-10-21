@@ -9,7 +9,7 @@ const useStyles = createUseStyles({
   section: {
     composes: 'question-section',
     '& + .question-section': {
-      marginTop: '48px',
+      marginTop: '2.666rem',
     },
   },
   sectionTitle: {
@@ -31,33 +31,42 @@ const useStyles = createUseStyles({
         color: '#fff',
       },
     },
-    
+
     '&:hover': {
-      backgroundColor: 'inherit'
-    }
+      backgroundColor: 'inherit',
+    },
   },
   accordionBody: {
     '& .collapse-body': {
-      padding: '30px 48px 48px'
-    }
+      padding: '0.888rem 1.333rem 1.333rem',
+      '@media (min-width: 992px)': {
+        padding: '1.666rem 2.666rem 2.666rem',
+      },
+    },
   },
   linkAccordion: {
-    marginTop: '40px',
+    marginTop: '2.222rem',
     '& a': {
       fontWeight: 'bold',
-      textDecoration: 'none'
-    }
-  }
+      textDecoration: 'none',
+      display: 'flex',
+      alignItems: 'center',
+
+      '& img': {
+        marginLeft: '0.444rem',
+      },
+    },
+  },
 });
 
 export const QuestionSection = (props) => {
   const classes = useStyles();
   const { title, description, accordions, sectionId } = props.item;
   const { inputText } = props;
-  const { filterId } = props;
-  
+
   const [indexIsOpen, setIndexIsOpen] = useState(-1);
   const [accordionList, setAccordionList] = useState(accordions);
+  const [sectionVisible, setSectionVisible] = useState(true);
 
   useEffect(() => {
     if (inputText && inputText.length >= 3) {
@@ -82,47 +91,62 @@ export const QuestionSection = (props) => {
         }
         return acc;
       });
+
+      if (newAccordions.length === 0) {
+        setSectionVisible(false);
+      }
+
       setAccordionList(newAccordions);
     } else {
+      setSectionVisible(true);
       setAccordionList(accordions);
     }
   }, [inputText]);
 
   return (
     <>
-      <section id={sectionId} className={classes.section}>
-        <h3 className={classes.sectionTitle}>{title}</h3>
-        <p>{description}</p>
-        <Accordion background="active">
-          {accordionList.map((accordion, i) => (
-            <div key={accordion.title} className={classes.accordionWrapper}>
-              <AccordionHeader
-                onToggle={() =>
-                  setIndexIsOpen((state) => (state === i ? -1 : i))
-                }
-                active={i === indexIsOpen}
-                className={classes.accordionTitle}
-              >
-                <div
-                  dangerouslySetInnerHTML={{ __html: accordion.title }}
-                ></div>
-              </AccordionHeader>
-              <AccordionBody active={i === indexIsOpen} className={classes.accordionBody} >
-                <div dangerouslySetInnerHTML={{ __html: accordion.content }}></div>
-                <div className={classes.linkAccordion}>
-                  <ExternalLink
-                    linkTo="#"
-                    ariaLabel=""
-                    className=""
-                  >
-                    {accordion.linkLabel}
-                  </ExternalLink>
-                </div>
-              </AccordionBody>
-            </div>
-          ))}
-        </Accordion>
-      </section>
+      {sectionVisible && (
+        <section id={sectionId} className={classes.section}>
+          <h3 className={classes.sectionTitle}>{title}</h3>
+          <p>{description}</p>
+          <Accordion background="active">
+            {accordionList.map((accordion, i) => (
+              <div key={accordion.title} className={classes.accordionWrapper}>
+                <AccordionHeader
+                  onToggle={() =>
+                    setIndexIsOpen((state) => (state === i ? -1 : i))
+                  }
+                  active={i === indexIsOpen}
+                  className={classes.accordionTitle}
+                >
+                  <div
+                    dangerouslySetInnerHTML={{ __html: accordion.title }}
+                  ></div>
+                </AccordionHeader>
+                <AccordionBody
+                  active={i === indexIsOpen}
+                  className={classes.accordionBody}
+                >
+                  <div
+                    dangerouslySetInnerHTML={{ __html: accordion.content }}
+                  ></div>
+                  {accordion.link && (
+                    <div className={classes.linkAccordion}>
+                      <ExternalLink
+                        linkTo={accordion.link}
+                        ariaLabel={accordion.ariaLabel}
+                      >
+                        {accordion.linkLabel}
+                        <img src="/assets/external-icon.svg" alt="" />
+                      </ExternalLink>
+                    </div>
+                  )}
+                </AccordionBody>
+              </div>
+            ))}
+          </Accordion>
+        </section>
+      )}
     </>
   );
 };

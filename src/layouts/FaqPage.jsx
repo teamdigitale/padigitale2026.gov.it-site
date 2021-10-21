@@ -27,12 +27,9 @@ export const FaqPage = () => {
       if (filterId == 'all') {
         setQuestions(faq.questions);
       } else {
-        console.log('else', filterId);
-        console.log('list', questions);
         const filteredQuestions = faq.questions.filter(
           (item) => item.sectionId == filterId
         );
-        console.log('else', filteredQuestions);
 
         setQuestions(filteredQuestions);
       }
@@ -65,10 +62,9 @@ export const FaqPage = () => {
               {questions.map((question, i) => {
                 return (
                   <QuestionSection
-                    key={i}
+                    key={question.title}
                     item={question}
                     inputText={inputValue}
-                    filterId={filterId}
                   />
                 );
               })}

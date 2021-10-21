@@ -11,7 +11,7 @@ const useStyles = createUseStyles({
     '@media (min-width: 992px)': {
       borderRight: '1px solid #d9dadb',
       position: 'sticky',
-      top: '15px'
+      top: '0.833rem'
     },
     '& .sidebar-linklist-wrapper': {
       '& .link-list-wrapper': {
@@ -19,9 +19,9 @@ const useStyles = createUseStyles({
           display: 'flex',
           overflowX: 'auto',
           overflowY: 'hidden',
-          marginRight: '-15px',
-          marginLeft: '-15px',
-          paddingBottom: '15px',
+          marginRight: '-0.833rem',
+          marginLeft: '-0.833rem',
+          paddingBottom: '0.833rem',
           '@media (min-width: 992px)': {
             display: 'block',
             marginRight: '0',
@@ -30,19 +30,19 @@ const useStyles = createUseStyles({
           },
           '& li': {
             '& + li': {
-              marginLeft: '10px',
+              marginLeft: '0.555rem',
               '@media (min-width: 992px)': {
                 marginLeft: '0',
               },
             },
             '&:last-child': {
-              marginRight: '15px',
+              marginRight: '0.833rem',
               '@media (min-width: 992px)': {
                 marginRight: '0',
               },
             },
             '&:first-child': {
-              marginLeft: '15px',
+              marginLeft: '0.833rem',
               '@media (min-width: 992px)': {
                 marginLeft: '0',
               },
@@ -51,8 +51,8 @@ const useStyles = createUseStyles({
               '@media (max-width: 991px)': {
                 display: 'flex',
                 justifyContent: 'center',
-                padding: '2px 10px',
-                borderRadius: '16px',
+                padding: '0.111rem 0.555rem',
+                borderRadius: '0.888rem',
                 whiteSpace: 'nowrap',
                 border: '1px solid #0073E6',
               },
@@ -60,6 +60,7 @@ const useStyles = createUseStyles({
                 marginRight: '0',
                 color: '#0073E6',
                 textDecoration: 'none',
+                fontWeight: '600'
               },
               '&.active': {
                 backgroundColor: '#0066CC',
@@ -70,7 +71,7 @@ const useStyles = createUseStyles({
                 '& span': {
                   color: '#fff',
                   '@media (min-width: 992px)': {
-                    color: '#0073E6',
+                    color: '#33485C',
                   },
                 },
               },

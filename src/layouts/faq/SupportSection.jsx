@@ -19,10 +19,10 @@ const useStyles = createUseStyles({
     composes: 'offset-lg-1',
   },
   tag: {
-    fontSize: '16px',
+    fontSize: '0.888rem',
     color: '#33485C',
     lineHeight: '1.5',
-    marginBottom: '10px',
+    marginBottom: '0.555rem',
     textTransform: 'uppercase',
     textAlign: 'center',
     '@media (min-width: 768px)': {
@@ -30,39 +30,39 @@ const useStyles = createUseStyles({
     },
   },
   sectionTitle: {
-    fontSize: '28px',
+    fontSize: '1.555rem',
     color: '#33485C',
     lineHeight: '1.15',
-    marginBottom: '60px',
+    marginBottom: '3.333rem',
     fontWeight: '700',
     textAlign: 'center',
     '@media (min-width: 768px)': {
-      fontSize: '32px',
+      fontSize: '1.777rem',
       textAlign: 'left',
       lineHeight: '1.25',
-      marginBottom: '48px',
+      marginBottom: '2.666rem',
     },
   },
   cardWrapper: {
     composes: 'rounded',
     boxShadow: '0px 0px 80px rgba(0, 43, 85, 0.1)',
     '@media (min-width: 768px)': {
-      minHeight: '210px',
+      minHeight: '11.666rem',
     },
     '& + .card': {
-      marginTop: '16px'
+      marginTop: '0.888rem',
     },
     '&.card.card-teaser': {
       '& h5.card-title': {
         color: '#0066CC',
-        fontSize: '28px',
+        fontSize: '1.555rem',
         fontWeight: '600',
         letterSpacing: '-0.25px',
         lineHeight: '1.4',
-        marginBottom: '16px',
+        marginBottom: '0.888rem',
       },
       '& .card-text': {
-        fontSize: '16px',
+        fontSize: '0.888rem',
         color: '#33485C',
         lineHeight: '1.5',
       },
@@ -88,9 +88,14 @@ export const SupportSection = (props) => {
           <Row>
             <Col className={classes.layout}>
               <Row>
-                {props.supportList.map(card => {
+                {props.supportList.map((card) => {
                   return (
-                    <Col key={card.title} md={4} lg={3} className="mb-3 mb-md-0">
+                    <Col
+                      key={card.title}
+                      md={4}
+                      lg={3}
+                      className="mb-3 mb-md-0"
+                    >
                       <Card teaser noWrapper className={classes.cardWrapper}>
                         <CardBody>
                           <CardTitle tag="h5" className={classes.cardTitle}>
@@ -107,11 +112,15 @@ export const SupportSection = (props) => {
               </Row>
             </Col>
           </Row>
-          {props.button && <Row>
-            <Col md={8} lg={6} className={`${classes.layout} mt-5`}>
-              <Button color="primary" href={props.href}>{label}</Button>
-            </Col>
-          </Row>}
+          {props.button && (
+            <Row>
+              <Col md={8} lg={6} className={`${classes.layout} mt-5`}>
+                <Button color="primary" href={props.href}>
+                  {buttonLabel}
+                </Button>
+              </Col>
+            </Row>
+          )}
         </div>
       </Section>
     </>
