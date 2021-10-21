@@ -7,6 +7,16 @@ heroStrategy:
   ctaAriaLabelSpid: Scopri SPID (link esterno)
   ctaAriaLabelCie: Scopri CIE (link esterno)
   altImg: giovane donna guarda lo schermo di un computer
+heroDigital:
+  title: Italia digitale 2026
+  body: Il 27% delle risorse totali del PNRR è dedicato alla crescita digitale del Paese. Italia digitale 2026 è la strategia promossa dal <strong>Ministro per l'innovazione tecnologica e la transizione digitale</strong> all’interno del PNRR
+  firstButtonLabel: VAI AL SITO 
+heroPnrr:
+  category: COME FUNZIONA PROSSIMA PA
+  title: Come accedere alle opportunità del PNRR
+  body: Prossima PA è la piattaforma per accedere alle risorse dedicate alla transizione digitale e accompagnare le amministrazioni nel percorso verso Italia digitale 2026
+  firstButtonLabel: SCOPRI DI PIÙ
+  secondButtonLabel: VEDI I BENEFICIARI
 heroBenefit:
   category: CHANGEME Hero Category 2
   title: CHANGEME Hero Title 2
