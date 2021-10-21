@@ -62,7 +62,7 @@ externalLinks:
     ariaLabel: 'GitHub Italia (link esterno)'
   dipartimento:
     label: Dipartimento per la Trasformazione Digitale
-    linkTo: https://innovazione.gov.it/dipartimento/
+    linkTo: https://innovazione.gov.it
     ariaLabel: 'Dipartimento per la Trasformazione Digitale (link esterno)'
   agid:
     label: AgID
@@ -78,5 +78,5 @@ externalLinks:
     ariaLabel: 'Italia digitale 2026'
   pnrr:
     label: Italia domani - PNRR
-    linkTo: '#'
+    linkTo: 'https://italiadomani.gov.it/it/home.html'
     ariaLabel: 'Italia domani - PNRR'
