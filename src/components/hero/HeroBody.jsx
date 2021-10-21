@@ -10,7 +10,7 @@ const useStyles = createUseStyles({
 
 export const HeroBody = ({ html }) => {
   const classes = useStyles();
-  return <div className={classes.body} dangerouslySetInnerHTML={{ __html: html }} />;
+  return <div className={`hero-body ${classes.body}`} dangerouslySetInnerHTML={{ __html: html }} />;
 };
 
 HeroBody.propTypes = {

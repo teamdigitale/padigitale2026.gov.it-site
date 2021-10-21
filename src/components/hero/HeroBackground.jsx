@@ -8,8 +8,10 @@ const useStyles = createUseStyles({
     right: '0',
     top: '0',
     maxHeight: '100%',
-    '@media (max-width: 768px)': {
+    maxWidth: '100%',
+    '@media (max-width: 992px)': {
       position: "relative",
+      margin: "0 auto",
     }
   },
 });
