@@ -109,7 +109,7 @@ export const FaqPage = () => {
           </Row>
         </Container>
       </div>
-      <SupportSection supportList={faq.support.cards} />
+      <SupportSection supportList={faq.support.cards} title={faq.support.title}/>
     </>
   );
 };
