@@ -9,17 +9,19 @@ import { HeroSupport } from './support/Hero';
 import { createUseStyles } from 'react-jss';
 
 const useStyles = createUseStyles({
-  inputWrap: {
-    // backgroundImage: '/static/assets/eu-flag.svg',
+  noResults: {
+    textAlign: 'center',
+    color: '#33485C',
+    margin: '0.833rem 0'
   },
 });
 export const FaqPage = () => {
   const classes = useStyles();
   const [inputValue, setInputValue] = useState();
-  const [filterId, setFilterId] = useState();
+  const [filterId, setFilterId] = useState('all');
   const [questions, setQuestions] = useState(faq.questions);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 992);
-  const [noResults, setNoResults] = useState(false);
+  // const [noResults, setNoResults] = useState(false);
 
   window.addEventListener('resize', () => {
     setIsMobile(window.innerWidth < 992);
@@ -27,45 +29,105 @@ export const FaqPage = () => {
 
   const handleChange = (event) => {
     setInputValue(event.target.value);
-    if (!questions.length) {
-      setQuestions(faq.questions);
-    }
-  };
+    if (event.target.value.length >= 3) {
+      let newQuest = [];
+      faq.questions.forEach((question) => {
+        const regexp = new RegExp(event.target.value, 'i');
 
-  const handleEmptySection = (id) => {
-    if (inputValue && inputValue.length >= 3) {      
-      const filteredQuestions = questions.filter(
-        (question) => question.sectionId != id
-      );
-      console.log(filteredQuestions);
-      
-      setQuestions(filteredQuestions);
+        const filterAccordions = question.accordions.filter((accordion) =>
+          regexp.test(accordion.title)
+        );
+
+        if (filterAccordions.length) {
+          newQuest.push(question);
+        }
+      });
+
+      if (isMobile && filterId != 'all') {
+        let filteredQuestions = [];
+        newQuest.forEach((question) => {
+          if (question.sectionId == filterId) {
+            filteredQuestions.push(question);
+          }
+        });
+        setQuestions(filteredQuestions);
+      } else {
+        setQuestions(newQuest);
+      }
     } else {
-      setQuestions(faq.questions);
+      if (isMobile) {
+        if (filterId !== 'all') {
+          let filteredQuestions = [];
+          faq.questions.forEach((question) => {
+            if (question.sectionId == filterId) {
+              filteredQuestions.push(question);
+            }
+          });
+          setQuestions(filteredQuestions);
+        } else {
+          setQuestions(faq.questions);
+        }
+        
+      } else {
+        setQuestions(faq.questions);
+      }
     }
   };
 
   useEffect(() => {
     if (!isMobile) {
-      setQuestions(faq.questions);
-    }
-  }, []);
-
-  useEffect(() => {
-    if (!isMobile) {
-      setQuestions(faq.questions);
+      if (inputValue && inputValue.length >= 3) {
+        let newQuest = [];
+        faq.questions.forEach((question) => {
+          const regexp = new RegExp(inputValue, 'i');
+          const filterAccordions = question.accordions.filter((accordion) =>
+            regexp.test(accordion.title)
+          );
+          if (filterAccordions.length) {
+            newQuest.push(question);
+          }
+        });
+        setQuestions(newQuest);
+      } else {
+        setQuestions(faq.questions);
+      }
     }
   }, [isMobile]);
 
   useEffect(() => {
     if (filterId) {
       if (filterId == 'all') {
-        setQuestions(faq.questions);
+        if (inputValue) {
+          let newQuest = [];
+          faq.questions.forEach((question) => {
+            const regexp = new RegExp(inputValue, 'i');
+            const filterAccordions = question.accordions.filter((accordion) =>
+              regexp.test(accordion.title)
+            );
+            if (filterAccordions.length) {
+              newQuest.push(question);
+            }
+          });
+          setQuestions(newQuest);
+        } else {
+          setQuestions(faq.questions);
+        }
       } else {
-        const filteredQuestions = faq.questions.filter(
-          (item) => item.sectionId == filterId
+        let filteredQuestions = [];
+        faq.questions.forEach((question) => {
+          if (question.sectionId == filterId) {
+            filteredQuestions.push(question);
+          }
+        });
+        const regexp = new RegExp(inputValue, 'i');
+        const filterAccordions = filteredQuestions[0].accordions.filter(
+          (accordion) => regexp.test(accordion.title)
         );
-        setQuestions(filteredQuestions);
+        if (!filterAccordions.length) {
+          setQuestions(filterAccordions);
+        } else {
+          setQuestions(filteredQuestions);
+        }
       }
     }
   }, [filterId]);
@@ -75,7 +137,7 @@ export const FaqPage = () => {
       <div className="sr-only">
         <h1>{content.name}</h1>
       </div>
-      <HeroSupport />
+      <HeroSupport title={faq.hero.title} subtitle={faq.hero.subtitle} />
       <div className="docs py-4 py-md-5">
         <Container className="px-3">
           <Row>
@@ -100,11 +162,10 @@ export const FaqPage = () => {
                     key={question.title}
                     item={question}
                     inputText={inputValue}
-                    onEmptySection={handleEmptySection}
                   />
                 );
               })}
-              {!questions.length && <p>non ci sono risultati</p>}
+              {!questions.length && <p className={classes.noResults}>{faq.noResults}</p>}
             </Col>
           </Row>
         </Container>
