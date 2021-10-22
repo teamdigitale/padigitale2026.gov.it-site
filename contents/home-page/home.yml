@@ -88,3 +88,12 @@ heroCarouselNews:
         title: Dal 15 aprile partono i bandi di Italia digitale 2026
         description: Nuove opportunità economiche per la PA.  Oltre 6 miliardi di euro a disposizione per partecipare al cambiamento del Paese
         source: 'Fonte: innovazione.gov.it'
+support:
+  tag: Supporto
+  title: Scrivici per chiarimenti o per contribuire con le tue idee al progetto
+  buttonLabel: scopri di più
+  cards:
+    - title: Domande frequenti
+      description: Scopri i dettagli dell’iniziativa e le informazioni chiave sulle opportunità del PNRR
+    - title: Contatti
+      description: Compila il modulo per inviarci i tuoi suggerimenti o per avere chiarimenti sull’iniziativa
