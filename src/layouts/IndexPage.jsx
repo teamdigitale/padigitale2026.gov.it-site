@@ -34,7 +34,7 @@ export const IndexPage = () => (
       <h1>{content.name}</h1>
     </div>
     <MobileHeadTitle />
-    <HeroCarousel content={content.heroCarousel} />
+    <HeroCarousel content={content.heroCarouselNews} />
     <Form />
     <StrategySection />
     <BenefitSection />
