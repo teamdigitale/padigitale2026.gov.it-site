@@ -94,6 +94,7 @@ export const QuestionSection = (props) => {
 
       if (newAccordions.length === 0) {
         setSectionVisible(false);
+        props.onEmptySection(sectionId)
       }
 
       setAccordionList(newAccordions);

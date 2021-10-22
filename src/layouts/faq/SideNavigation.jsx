@@ -5,6 +5,7 @@ import { createUseStyles } from 'react-jss';
 
 import content from '../../../contents/faq-page/faq.yml';
 import { useState } from 'react';
+import { useEffect } from 'react';
 
 const useStyles = createUseStyles({
   wrapper: {
@@ -91,10 +92,18 @@ export const SideNavigation = (props) => {
     setIsMobile(window.innerWidth < 992);
   });
 
+  useEffect(() => {
+    removeActive();
+    const items = document.querySelectorAll(
+      '.sidebar-wrapper .link-list .list-item'
+    );
+    items[0].classList.add('active');
+  }, [isMobile])
+
   function handleClik(evt) {
     evt.preventDefault();
-    const linkTag = evt.target.closest('a');
     removeActive();
+    const linkTag = evt.target.closest('a');
     linkTag.classList.add('active');
 
     if(!isMobile) {
