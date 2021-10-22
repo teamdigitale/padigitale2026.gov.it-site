@@ -28,9 +28,9 @@ const useStyles = createUseStyles({
   },
   heroTitle: {
     color: '#33485C',
-    fontSize: '3rem',
+    fontSize: '2.667rem',
     '@media (max-width: 992px)': {
-      fontSize: '2rem',
+      fontSize: '1.778rem',
     },
   },
   a11yHighContrast: {
@@ -41,15 +41,16 @@ const useStyles = createUseStyles({
     },
   },
   heroImage: {
-    composes: "row align-items-center px-lg-5",
+    composes: 'row align-items-center px-lg-5',
     '& .hero-category': {
       color: '#33485C',
+      fontSize: '0.889rem',
     },
     '& .hero-body': {
       color: '#33485C',
-      fontSize: '1.5rem',
+      fontSize: '1.333rem',
     },
-  }
+  },
 });
 
 export const HeroImage = ({
@@ -70,7 +71,7 @@ export const HeroImage = ({
       <div className={classes.heroImage}>
         <div className="col-lg-6 p-0 mt-3 mt-lg-0 pr-lg-5">
           <div className="text-center text-lg-left">
-            <HeroCategory title={category} className={classes.heroCategory}/>
+            <HeroCategory title={category} className={classes.heroCategory} />
             <HeroTitle title={title} className={classes.heroTitle} />
             <HeroBody html={body} />
           </div>

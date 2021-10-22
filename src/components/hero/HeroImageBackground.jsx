@@ -15,19 +15,17 @@ const useStyles = createUseStyles({
   },
   heroTitle: {
     composes: 'no_doc',
-    fontSize: '2.5rem',
+    fontSize: '2.222rem',
     '@media (max-width: 992px)': {
       display: 'flex',
       justifyContent: 'center',
-      fontSize: '2rem',
+      fontSize: '1.778rem',
       textAlign: 'center',
     },
   },
   contentWrapper: {
     composes: 'it-hero-text-wrapper',
     zIndex: 2,
-    '@media (max-width: 992px)': {
-    },
   },
   heroWrapper: {
     composes: 'it-hero-wrapper',
@@ -60,11 +58,16 @@ const useStyles = createUseStyles({
       },
     },
     '&.bg-blue .btn': {
-        color: '#0066CC',
+      color: '#0066CC',
+    },
+    '& .container .it-hero-text-wrapper': {
+      '@media (min-width: 992px)': {
+        paddingLeft: '100px',
+      },
     },
     '& .container .it-hero-text-wrapper p': {
       fontFamily: 'Titillium Web,Geneva,Tahoma,sans-serif',
-      fontSize: '1.5rem',
+      fontSize: '1.333rem',
       '@media (max-width: 992px)': {
         fontSize: '1.25rem',
       },
@@ -107,7 +110,7 @@ export const HeroImageBackground = ({
   const classes = useStyles();
   return (
     <Hero>
-      <div className={`${classes.heroWrapper} ${overlap ? "overlap" : ""} ${theme}`}>
+      <div className={`${classes.heroWrapper} ${overlap ? 'overlap' : ''} ${theme}`}>
         <div className="container px-3 px-md-0">
           <div className="row">
             <div className="col-12">
@@ -116,17 +119,9 @@ export const HeroImageBackground = ({
                   <HeroTitle title={title} className={classes.heroTitle} />
                   <HeroParagraph text={body} />
                   <div className={classes.buttonContainer}>
-                    <HeroButton
-                      classButton={firstButtonClass}
-                      label={firstButtonLabel}
-                      href={firstButtonHref}
-                    />
+                    <HeroButton classButton={firstButtonClass} label={firstButtonLabel} href={firstButtonHref} />
                     {secondButtonLabel ? (
-                      <HeroButton
-                        classButton={secondButtonClass}
-                        label={secondButtonLabel}
-                        href={secondButtonHref}
-                      />
+                      <HeroButton classButton={secondButtonClass} label={secondButtonLabel} href={secondButtonHref} />
                     ) : (
                       ''
                     )}
