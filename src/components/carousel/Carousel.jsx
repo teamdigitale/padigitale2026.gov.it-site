@@ -57,9 +57,8 @@ const useStyles = createUseStyles({
     },
   },
   heroCarouselTitle: {
-    color: "#fff",
-    fontSize: "1.75rem",
-    marginBottom: "2rem",
+    color: '#fff',
+    fontSize: '1.75rem',
   },
   newsUpdateSection: {
     backgroundColor: '#E5E5E5',
@@ -72,15 +71,6 @@ export const HeroCarousel = ({ content, title }) => {
   const classes = useStyles();
   const slides = content.map((element) => (
     <>
-      {title ? (
-        <Row>
-          <Col xs="12" lg="4">
-            <h3 className={classes.heroCarouselTitle}>{title}</h3>
-          </Col>
-        </Row>
-      ) : (
-        ''
-      )}
       <Row key={element.id}>
         {element.slide.map((card) => (
           <Col key={card.id} xs="12" lg="4">
@@ -105,6 +95,15 @@ export const HeroCarousel = ({ content, title }) => {
     <>
       <div className={classes.newsUpdateSection}>
         <div className="container">
+          {title ? (
+            <Row>
+              <Col xs="12" lg="4">
+                <h3 className={classes.heroCarouselTitle}>{title}</h3>
+              </Col>
+            </Row>
+          ) : (
+            ''
+          )}
           <DesktopSwiper slides={slides} />
         </div>
       </div>

@@ -34,7 +34,7 @@ const useStyles = createUseStyles({
     position: 'relative',
     display: 'flex',
     '&.overlap': {
-      marginBottom: '-8rem',
+      marginBottom: '-7rem',
       paddingBottom: '4rem',
     },
     '@media (max-width: 992px)': {
