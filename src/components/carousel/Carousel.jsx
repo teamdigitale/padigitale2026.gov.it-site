@@ -16,6 +16,10 @@ import { DesktopSwiper } from '../DesktopSwiper';
 
 const useStyles = createUseStyles({
   heroCards: {
+    height: '250px',
+    '@media (min-width: 992px)': {
+      height: 'auto',
+    },
     composes: 'card-bg rounded',
     '& .card-body': {
       '& .category-top': {
@@ -30,7 +34,9 @@ const useStyles = createUseStyles({
         fontSize: '1rem',
         fontWeight: 'bold',
         lineHeight: '1.26',
-        minHeight: '2.889rem',
+        '@media (min-width: 992px)': {
+          minHeight: '2.889rem',
+        },
       },
       '& .card-text': {
         color: '#33485C',
@@ -70,25 +76,20 @@ const useStyles = createUseStyles({
 
 export const HeroCarousel = ({ content, title }) => {
   const classes = useStyles();
+
   const slides = content.map((element) => (
     <>
-      <Row key={element.id}>
-        {element.slide.map((card) => (
-          <Col key={card.id} xs="12" lg="4">
-            <Card className={classes.heroCards} spacing noWrapper>
-              <CardBody>
-                <CardCategory>{card.category}</CardCategory>
-                <CardTitle tag="h5">{card.title}</CardTitle>
-                <CardText>{card.description}</CardText>
-                <div className="source">
-                  {card.source}
-                  <img src={`/assets/external-link.svg`} alt="" />
-                </div>
-              </CardBody>
-            </Card>
-          </Col>
-        ))}
-      </Row>
+      <Card key={element.id} className={classes.heroCards} spacing noWrapper>
+        <CardBody>
+          <CardCategory>{element.category}</CardCategory>
+          <CardTitle tag="h5">{element.title}</CardTitle>
+          <CardText>{element.description}</CardText>
+          <div className="source">
+            {element.source}
+            <img src={`/assets/external-link.svg`} alt="" />
+          </div>
+        </CardBody>
+      </Card>
     </>
   ));
 

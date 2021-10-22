@@ -49,7 +49,12 @@ export const DesktopSwiper = ({ slides }) => {
               paginationBulletMessage: 'Vai alla slide {{index}}',
             }}
             className=""
-            slidesPerView={1}
+            breakpoints={{
+              slidesPerView: 1,
+              992: {
+                slidesPerView: 3,
+              },
+            }}
             pagination={{
               el: `[data-swiper-id=${paginationId}]`,
               clickable: true,
@@ -67,7 +72,11 @@ export const DesktopSwiper = ({ slides }) => {
       </div>
       <div className="mt-4 pb-4 d-flex justify-content-center pt-3">
         {paginationId && (
-          <div data-swiper-id={paginationId} className="swiper-pagination" style={{ bottom: 'unset' }}></div>
+          <div
+            data-swiper-id={paginationId}
+            className="swiper-pagination"
+            style={{ bottom: 'unset' }}
+          ></div>
         )}
       </div>
     </>
