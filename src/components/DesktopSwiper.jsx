@@ -14,7 +14,6 @@ const useStyles = createUseStyles({
         boxShadow: [['none'], '!important'],
       },
     },
-    paddingLeft: '10px',
     paddingRight: '10px',
   },
   bullet: {

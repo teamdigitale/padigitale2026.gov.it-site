@@ -3,9 +3,16 @@ import { Container, Row, Col, Hero } from 'design-react-kit';
 import content from '../../contents/home-page/home.yml';
 import { HeroImageBackground } from '../components/hero/HeroImageBackground';
 import { HeroImage } from '../components/hero/HeroImage';
-import { HeroCarousel } from '../components/carousel/Carousel'
+import { HeroCarousel } from '../components/carousel/Carousel';
+import { SupportSection } from './faq/SupportSection';
 
-const { heroDigital, heroPnrr, heroCarouselNews, heroCarouselNewsTitle } = content;
+const {
+  heroDigital,
+  heroPnrr,
+  heroCarouselNews,
+  heroCarouselNewsTitle,
+  support,
+} = content;
 
 export const HomePage = () => (
   <>
@@ -30,6 +37,7 @@ export const HomePage = () => (
       firstButtonHref="#"
       overlap={true}
     />
-    <HeroCarousel content={heroCarouselNews} title={heroCarouselNewsTitle}/>
+    <HeroCarousel content={heroCarouselNews} title={heroCarouselNewsTitle} />
+    <SupportSection supportList={support.cards} title={support.title} buttonLabel={support.buttonLabel}/>
   </>
 );

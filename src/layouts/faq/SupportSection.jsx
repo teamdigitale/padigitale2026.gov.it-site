@@ -46,6 +46,7 @@ const useStyles = createUseStyles({
   cardWrapper: {
     composes: 'rounded',
     boxShadow: '0px 0px 80px rgba(0, 43, 85, 0.1)',
+    height: '100%',
     '@media (min-width: 768px)': {
       minHeight: '11.666rem',
     },
@@ -72,6 +73,7 @@ const useStyles = createUseStyles({
 
 export const SupportSection = (props) => {
   const classes = useStyles();
+  const { title, supportList, buttonLabel } = props;
   return (
     <>
       <Section color="muted">
@@ -79,16 +81,13 @@ export const SupportSection = (props) => {
           <Row>
             <Col md={8} lg={6} className={classes.layout}>
               <p className={classes.tag}>Supporto</p>
-              <h4 className={classes.sectionTitle}>
-                Non hai trovato le risposte che cerchi? Vuoi inviare
-                suggerimenti o ricevere supporto?
-              </h4>
+              <h4 className={classes.sectionTitle}>{title}</h4>
             </Col>
           </Row>
           <Row>
             <Col className={classes.layout}>
               <Row>
-                {props.supportList.map((card) => {
+                {supportList.map((card) => {
                   return (
                     <Col
                       key={card.title}
@@ -112,7 +111,7 @@ export const SupportSection = (props) => {
               </Row>
             </Col>
           </Row>
-          {props.button && (
+          {props.buttonLabel && (
             <Row>
               <Col md={8} lg={6} className={`${classes.layout} mt-5`}>
                 <Button color="primary" href={props.href}>

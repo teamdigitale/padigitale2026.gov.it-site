@@ -58,7 +58,8 @@ const useStyles = createUseStyles({
   },
   heroCarouselTitle: {
     color: '#fff',
-    fontSize: '1.75rem',
+    fontSize: '1.556rem',
+    whiteSpace: 'nowrap',
   },
   newsUpdateSection: {
     backgroundColor: '#E5E5E5',
