@@ -1,6 +1,15 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
-import { Row, Col, Card, CardBody, CardCategory, CardTitle, CardText, CardReadMore } from 'design-react-kit';
+import {
+  Row,
+  Col,
+  Card,
+  CardBody,
+  CardCategory,
+  CardTitle,
+  CardText,
+  CardReadMore,
+} from 'design-react-kit';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { DesktopSwiper } from '../DesktopSwiper';
@@ -47,6 +56,11 @@ const useStyles = createUseStyles({
       content: 'none',
     },
   },
+  heroCarouselTitle: {
+    color: "#fff",
+    fontSize: "1.75rem",
+    marginBottom: "2rem",
+  },
   newsUpdateSection: {
     backgroundColor: '#E5E5E5',
     padding: '20px 0',
@@ -54,26 +68,37 @@ const useStyles = createUseStyles({
 });
 // const carousel = React.createRef();
 
-export const HeroCarousel = ({ content }) => {
+export const HeroCarousel = ({ content, title }) => {
   const classes = useStyles();
   const slides = content.map((element) => (
-    <Row key={element.id}>
-      {element.slide.map((card) => (
-        <Col key={card.id} xs="12" lg="4">
-          <Card className={classes.heroCards} spacing noWrapper>
-            <CardBody>
-              <CardCategory>{card.category}</CardCategory>
-              <CardTitle tag="h5">{card.title}</CardTitle>
-              <CardText>{card.description}</CardText>
-              <div className="source">
-                {card.source}
-                <img src={`/assets/external-link.svg`} alt="" />
-              </div>
-            </CardBody>
-          </Card>
-        </Col>
-      ))}
-    </Row>
+    <>
+      {title ? (
+        <Row>
+          <Col xs="12" lg="4">
+            <h3 className={classes.heroCarouselTitle}>{title}</h3>
+          </Col>
+        </Row>
+      ) : (
+        ''
+      )}
+      <Row key={element.id}>
+        {element.slide.map((card) => (
+          <Col key={card.id} xs="12" lg="4">
+            <Card className={classes.heroCards} spacing noWrapper>
+              <CardBody>
+                <CardCategory>{card.category}</CardCategory>
+                <CardTitle tag="h5">{card.title}</CardTitle>
+                <CardText>{card.description}</CardText>
+                <div className="source">
+                  {card.source}
+                  <img src={`/assets/external-link.svg`} alt="" />
+                </div>
+              </CardBody>
+            </Card>
+          </Col>
+        ))}
+      </Row>
+    </>
   ));
 
   return (

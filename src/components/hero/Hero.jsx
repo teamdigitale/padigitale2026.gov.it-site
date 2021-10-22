@@ -2,7 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-export const Hero = ({ bgColor = '', xPadding = true, yPaddingXLScreen = true, children }) => {
+export const Hero = ({
+  bgColor = '',
+  xPadding = true,
+  yPaddingXLScreen = true,
+  children,
+}) => {
   const heroClasses = classNames('py-5', {
     'bg-primary': bgColor === 'primary',
     'lightgrey-bg-a2': bgColor === 'light',

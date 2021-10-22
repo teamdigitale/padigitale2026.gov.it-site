@@ -3,8 +3,9 @@ import { Container, Row, Col, Hero } from 'design-react-kit';
 import content from '../../contents/home-page/home.yml';
 import { HeroImageBackground } from '../components/hero/HeroImageBackground';
 import { HeroImage } from '../components/hero/HeroImage';
+import { HeroCarousel } from '../components/carousel/Carousel'
 
-const { heroDigital, heroPnrr } = content;
+const { heroDigital, heroPnrr, heroCarouselNews, heroCarouselNewsTitle } = content;
 
 export const HomePage = () => (
   <>
@@ -27,6 +28,8 @@ export const HomePage = () => (
       firstButtonLabel={heroDigital.firstButtonLabel}
       firstButtonClass="btn-light"
       firstButtonHref="#"
+      overlap={true}
     />
+    <HeroCarousel content={heroCarouselNews} title={heroCarouselNewsTitle}/>
   </>
 );

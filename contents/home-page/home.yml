@@ -62,7 +62,8 @@ contributions:
     icon: github-logo.svg
     alt: GitHub logo
     title: GitHub
-    heroCarousel:
+heroCarouselNewsTitle: Notizie e aggiornamenti
+heroCarouselNews:
   - id: 1
     slide:
       - id: 1
