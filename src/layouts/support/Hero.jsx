@@ -1,11 +1,8 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
 import { createUseStyles } from 'react-jss';
-import content from '../../../contents/support-page/support.yml';
+import PropTypes from 'prop-types';
 
-const {
-  mainHero: {title, description}
-} = content;
 const useStyle = createUseStyles({
   supportHero: {
     composes: 'it-hero-wrapper',
@@ -35,7 +32,7 @@ const useStyle = createUseStyles({
   },
 });
 
-export const HeroSupport = () => {
+export const HeroSupport = ({title, subtitle}) => {
   const classes = useStyle();
 
   return (
@@ -48,7 +45,7 @@ export const HeroSupport = () => {
                 <h1 className="no_toc">{title}</h1>
                 <p
                   className="support-hero-description"
-                  dangerouslySetInnerHTML={{ __html: description }}
+                  dangerouslySetInnerHTML={{ __html: subtitle }}
                 />
               </div>
             </div>
@@ -57,4 +54,9 @@ export const HeroSupport = () => {
       </div>
     </>
   );
+};
+
+HeroSupport.propTypes = {
+  title: PropTypes.string,
+  subtitle: PropTypes.string,
 };

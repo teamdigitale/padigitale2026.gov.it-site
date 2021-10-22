@@ -121,13 +121,27 @@ const useStyle = createUseStyles({
   linkListWrapperCustom: {
     '& ul li:not(:first-child)': {
       borderLeft: '1px solid rgba(0,89,179,.2)',
-    }
+    },
   },
   noShadow: {
     composes: 'shadow-none',
-    top: '30%'
-  }
+    top: '30%',
+  },
 });
+
+const BrandSlimHeader = () => (
+  <>
+    <ExternalLink
+      linkTo={externalLinks.dipartimento.linkTo}
+      ariaLabel={externalLinks.dipartimento.ariaLabel}
+    >
+      <span className="d-inline d-lg-none d-xl-inline">
+        {externalLinks.dipartimento.label}
+      </span>
+      <span className="d-none d-lg-inline d-xl-none">DTD</span>
+    </ExternalLink>
+  </>
+);
 
 const SlimHeader = () => {
   const [isOpen, toggleDropdown] = useState(false);
@@ -136,25 +150,29 @@ const SlimHeader = () => {
     <HeaderReactKit type="slim" theme="light">
       <HeaderContent>
         <HeaderBrand className="font-weight-bold">
-        {externalLinks.dipartimento.label}
+          {externalLinks.dipartimento.label}
         </HeaderBrand>
         <HeaderLinkZone>
           <HeaderToggler type="button" onClick={function noRefCheck() {}}>
             <span className="font-weight-bold">
-            {externalLinks.dipartimento.label}
+              {externalLinks.dipartimento.label}
             </span>
             <Icon icon="it-expand" />
           </HeaderToggler>
           <Collapse header>
             <div className={classes.linkListWrapperCustom}>
-            <LinkList className={classes.topListLink}>
-              <LinkListItem href={externalLinks.italiaDigitale.linkTo}>{externalLinks.italiaDigitale.label}</LinkListItem>
-              <LinkListItem href={externalLinks.pnrr.linkTo}>{externalLinks.pnrr.label}</LinkListItem>
-            </LinkList>
+              <LinkList className={classes.topListLink}>
+                <LinkListItem href={externalLinks.italiaDigitale.linkTo}>
+                  {externalLinks.italiaDigitale.label}
+                </LinkListItem>
+                <LinkListItem href={externalLinks.pnrr.linkTo}>
+                  {externalLinks.pnrr.label}
+                </LinkListItem>
+              </LinkList>
             </div>
           </Collapse>
         </HeaderLinkZone>
-        <img className="d-none d-lg-block" src="/assets/eu-flag.svg"></img>
+        <img class="d-none d-lg-block" src="/assets/eu-flag.svg"></img>
       </HeaderContent>
     </HeaderReactKit>
   );
@@ -224,9 +242,15 @@ const NavHeader = (props) => {
             <Nav navbar className={classes.navbarNav}>
               <div className={classes.offCanvasWrapper}>
                 <a href="/" tabIndex="-1">
-                  <img className="icon" src="/assets/site-logo.svg" alt="Logo" />
+                  <img
+                    className="icon"
+                    src="/assets/site-logo.svg"
+                    alt="Logo"
+                  />
                 </a>
-                <a href="/" className={classes.offCanvasTitle}>{headerTitle}</a>
+                <a href="/" className={classes.offCanvasTitle}>
+                  {headerTitle}
+                </a>
               </div>
               <NavItem active>
                 <Link
@@ -278,7 +302,7 @@ export const Header = (props) => (
       <SlimHeader />
       <div className="it-nav-wrapper">
         <CenterHeader />
-        <NavHeader showKit={props.showKit}/>
+        <NavHeader showKit={props.showKit} />
       </div>
     </Headers>
   </header>
