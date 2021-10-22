@@ -15,6 +15,7 @@ const { footerA11y } = labels;
 const useStyle = createUseStyles({
   mainFooter: {
     backgroundColor: '#fff',
+    filter: 'drop-shadow(0px 4px 80px rgba(0, 43, 85, 0.1))',
   },
   mainWrapper: {
     padding: [50, 0],
@@ -69,15 +70,15 @@ const useStyle = createUseStyles({
     composes: 'list-inline-item',
     display: 'block',
     '&+.list-inline-item': {
-      marginTop: '30px'
+      marginTop: '30px',
     },
     '@media (min-width: 768px)': {
       display: 'inline-block',
       '&+.list-inline-item': {
-        marginTop: '0'
+        marginTop: '0',
       },
     },
-  }
+  },
 });
 
 const SlimFooter = () => {
