@@ -30,6 +30,10 @@ const useStyles = createUseStyles({
         backgroundColor: '#0066CC',
         color: '#fff',
       },
+      '& mark': {
+        backgroundColor: '#e3e8f4',
+        padding: '0 2px'
+      }
     },
 
     '&:hover': {
@@ -66,7 +70,7 @@ export const QuestionSection = (props) => {
 
   const [indexIsOpen, setIndexIsOpen] = useState(-1);
   const [accordionList, setAccordionList] = useState(accordions);
-  const [sectionVisible, setSectionVisible] = useState(true);
+  // const [sectionVisible, setSectionVisible] = useState(true);
 
   useEffect(() => {
     if (inputText && inputText.length >= 3) {
@@ -78,12 +82,12 @@ export const QuestionSection = (props) => {
         const regex = acc.title.match(regexp);
         if (regex?.length) {
           let text = acc.title.replace(
-            /(<mark class="highlight">|<\/mark>)/gim,
+            /(<mark>|<\/mark>)/gim,
             ''
           );
           const newText = text.replace(
             regex,
-            '<mark class="highlight">$&</mark>'
+            '<mark>$&</mark>'
           );
           text = newText;
           const obj = { ...acc, title: text };
@@ -92,21 +96,15 @@ export const QuestionSection = (props) => {
         return acc;
       });
 
-      if (newAccordions.length === 0) {
-        setSectionVisible(false);
-        props.onEmptySection(sectionId)
-      }
-
       setAccordionList(newAccordions);
     } else {
-      setSectionVisible(true);
       setAccordionList(accordions);
     }
   }, [inputText]);
 
   return (
     <>
-      {sectionVisible && (
+      {/* {sectionVisible && ( */}
         <section id={sectionId} className={classes.section}>
           <h3 className={classes.sectionTitle}>{title}</h3>
           <p>{description}</p>
@@ -147,7 +145,7 @@ export const QuestionSection = (props) => {
             ))}
           </Accordion>
         </section>
-      )}
+      {/* )} */}
     </>
   );
 };

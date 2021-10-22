@@ -1,43 +1,43 @@
 import React from 'react';
+import { Container, Row, Col, Hero } from 'design-react-kit';
 import content from '../../contents/home-page/home.yml';
-import { NewsPreviewSection } from './home/NewsPreviewSection';
-import { StrategySection } from './home/StrategySection';
+import { HeroImageBackground } from '../components/hero/HeroImageBackground';
+import { HeroImage } from '../components/hero/HeroImage';
 import { HeroCarousel } from '../components/carousel/Carousel';
-import { BenefitSection } from './home/BenefitSection';
-import { Form } from './home/Form';
-import { createUseStyles } from 'react-jss';
-import labels from '../../contents/labels.yml';
+import { SupportSection } from './faq/SupportSection';
 
-const { ariaLabel, headerTitle, headerSubtitle } = labels;
-
-const useStyle = createUseStyles({
-  mobileHeadText: {
-    fontSize: '20px',
-    lineHeight: '1.2',
-    color: '#06c'
-  }
-});
-
-const MobileHeadTitle = () => {
-  const classes = useStyle();
-  return (
-    <div className="d-lg-none container">
-      <h1 className={classes.mobileHeadText}>{headerTitle}</h1>
-      <div className={classes.mobileHeadText}>{headerSubtitle}</div>
-    </div>
-  );
-};
+const {
+  heroDigital,
+  heroPnrr,
+  heroCarouselNews,
+  heroCarouselNewsTitle,
+  support,
+} = content;
 
 export const IndexPage = () => (
   <>
-    <div className="sr-only">
-      <h1>{content.name}</h1>
-    </div>
-    <MobileHeadTitle />
-    <HeroCarousel content={content.heroCarouselNews} />
-    <Form />
-    <StrategySection />
-    <BenefitSection />
-    <NewsPreviewSection />
+    <HeroImage
+      category={heroPnrr.category}
+      title={heroPnrr.title}
+      body={heroPnrr.body}
+      firstButtonLabel={heroPnrr.firstButtonLabel}
+      imageUrl="/assets/placeholder.svg"
+      imageAlt="placeholder"
+      firstButtonHref="#"
+      secondButtonLabel={heroPnrr.secondButtonLabel}
+      secondButtonHref="#"
+    />
+    <HeroImageBackground
+      title={heroDigital.title}
+      body={heroDigital.body}
+      theme="bg-blue"
+      image="italy-blue.png"
+      firstButtonLabel={heroDigital.firstButtonLabel}
+      firstButtonClass="btn-light"
+      firstButtonHref="#"
+      overlap={true}
+    />
+    <HeroCarousel content={heroCarouselNews} title={heroCarouselNewsTitle} />
+    <SupportSection supportList={support.cards} title={support.title} buttonLabel={support.buttonLabel}/>
   </>
 );

@@ -1,3 +1,6 @@
+hero:
+  title: Domande frequenti
+  subtitle: Esplora le risposte alle domande più frequenti o fai una ricerca per parola chiave
 sidebar:
   - sectionTitle: Il contesto
     sectionId: contesto
@@ -61,6 +64,7 @@ questions:
         content: Next Generation EU (NGEU) è un piano da €750 miliardi di Euro che ha l'obiettivo di rilanciare l'economia europea dopo la pandemia di COVID-19 e di renderla più verde e digitale.
       - title: Come posso ricevere aggiornamenti? 
         content: Next Generation EU (NGEU) è un piano da €750 miliardi di Euro che ha l'obiettivo di rilanciare l'economia europea dopo la pandemia di COVID-19 e di renderla più verde e digitale.
+noResults: Nessun risultato trovato
 support:
   tag: Supporto
   title: Non hai trovato le risposte che cerchi? Vuoi inviare suggerimenti o ricevere supporto?
