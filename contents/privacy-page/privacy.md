@@ -1,7 +1,7 @@
 # Privacy policy
 
-[CHANGEME.example.org](https://CHANGEME.example.org/){class="text-decoration-none font-weight-semibold"} è gestito dalla Presidenza del Consiglio dei Ministri - Dipartimento per la Trasformazione Digitale.
-A norma degli articoli 13 e 14 del Regolamento UE 2016/679 (GDPR) vogliamo fornirti un'informativa semplice e chiara su come trattiamo i dati personali che ci fornisci direttamente o di cui comunque potremo venire in possesso tramite contatto con il sito web CHANGEME.example.org.
+[prossimapa.gov.it](https://prossimapa.gov.it/){class="text-decoration-none font-weight-semibold"} è gestito dalla Presidenza del Consiglio dei Ministri - Dipartimento per la Trasformazione Digitale.
+A norma degli articoli 13 e 14 del Regolamento UE 2016/679 (GDPR) vogliamo fornirti un'informativa semplice e chiara su come trattiamo i dati personali che ci fornisci direttamente o di cui comunque potremo venire in possesso tramite contatto con il sito web prossimapa.gov.it.
 
 **Titolare del trattamento**  
 Titolare del Trattamento è la Presidenza del Consiglio dei Ministri - Dipartimento per la Trasformazione Digitale, con sede in Largo Pietro di Brazzà 86, 00186 Roma contattabile ai seguenti recapiti:
@@ -38,11 +38,11 @@ Ti ricordiamo che hai sempre diritto di:
 Per maggiori informazioni o esercitare i tuoi diritti contatta il Titolare agli indirizzi sopra indicati. Se invece ritieni che il trattamento dei dati personali a te riferiti avvenga in violazione di quanto previsto dal GDPR, hai anche diritto di proporre reclamo, ai sensi dell’art. 77 del GDPR, al Garante per la protezione dei dati personali.
 
 **Cookie**  
-CHANGEME.example.org utilizza esclusivamente cookie per garantire il corretto funzionamento delle procedure e migliorare l'esperienza d'uso dei propri visitatori, il cui utilizzo non è strumentale alla raccolta di dati personali identificativi dell'utente.  
+prossimapa.gov.it utilizza esclusivamente cookie per garantire il corretto funzionamento delle procedure e migliorare l'esperienza d'uso dei propri visitatori, il cui utilizzo non è strumentale alla raccolta di dati personali identificativi dell'utente.  
 I cookie sono piccoli file di testo che possono essere utilizzati dai siti web per rendere più efficiente l'esperienza per l'utente.  
 La legge afferma che possiamo memorizzare i cookie sul tuo dispositivo se sono strettamente necessari per il funzionamento del sito. Per tutti gli altri tipi di cookie è necessario il tuo permesso.  
 Questa pagina fornisce informazioni dettagliate sull'uso dei cookie, su come sono utilizzati dal sito e su come gestirli, in attuazione dell’art. 122 del decreto legislativo 30 giugno 2003, n. 196.  
-In particolare, CHANGEME.example.org si avvale di cookie analitici utilizzati per raccogliere informazioni, in forma aggregata, sul numero degli utenti e su come gli stessi visitano il sito. I dati sono raccolti all’unico fine di elaborare informazioni statistiche sull’uso del sito e per verificare il corretto funzionamento dello stesso. Utilizziamo:
+In particolare, prossimapa.gov.it si avvale di cookie analitici utilizzati per raccogliere informazioni, in forma aggregata, sul numero degli utenti e su come gli stessi visitano il sito. I dati sono raccolti all’unico fine di elaborare informazioni statistiche sull’uso del sito e per verificare il corretto funzionamento dello stesso. Utilizziamo:
 
 - Il servizio Google Analytics, la cui policy può essere visionata a questo link [a questo link](https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage){class="text-decoration-none font-weight-semibold", rel='noreferrer', target='\_blank', aria-label='https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage (link esterno)'}.
   Al fine di rispettare la privacy degli utenti, il servizio è utilizzato con la modalità “anonymizeIp” che consente di mascherare gli indirizzi IP degli utenti che navigano sul sito (maggiori informazioni sulla funzionalità [a questo link](https://support.google.com/analytics/answer/2763052?hl=it){class="text-decoration-none font-weight-semibold", rel='noreferrer', target='\_blank', aria-label='https://support.google.com/analytics/answer/2763052?hl=it (link esterno)'}) e non ne permettiamo la condivisione. Si può comunque effettuare l’opt-out visitando il sito web [https://tools.google.com/dlpage/gaoptout?hl=en](https://tools.google.com/dlpage/gaoptout?hl=en){class="text-decoration-none font-weight-semibold", rel='noreferrer', target='\_blank', aria-label='https://tools.google.com/dlpage/gaoptout?hl=en (link esterno)'}.
