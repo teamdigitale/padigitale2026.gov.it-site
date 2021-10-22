@@ -41,7 +41,8 @@ const useStyles = createUseStyles({
     },
   },
   heroImage: {
-    composes: 'row align-items-center px-lg-5',
+    composes: 'row align-items-center',
+    paddingLeft: '100px',
     '& .hero-category': {
       color: '#33485C',
       fontSize: '0.889rem',
