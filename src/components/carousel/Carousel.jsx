@@ -8,7 +8,6 @@ import {
   CardCategory,
   CardTitle,
   CardText,
-  CardReadMore,
 } from 'design-react-kit';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -16,12 +15,18 @@ import { DesktopSwiper } from '../DesktopSwiper';
 
 const useStyles = createUseStyles({
   heroCards: {
+    composes: 'card-bg rounded',
     height: '250px',
     '@media (min-width: 992px)': {
       height: 'auto',
     },
-    composes: 'card-bg rounded',
+    '&.card.card-bg': {
+      '@media (max-width: 992px)': {
+        marginLeft: '0',
+      },
+    },
     '& .card-body': {
+      boxShadow: '0px 0px 20px rgb(0 43 85 / 4%);',
       '& .category-top': {
         '& a.category': {
           fontSize: '0.778rem',
@@ -58,7 +63,7 @@ const useStyles = createUseStyles({
         },
       },
     },
-    '&:after': {
+    '&.card:after': {
       content: 'none',
     },
   },
@@ -68,8 +73,28 @@ const useStyles = createUseStyles({
     whiteSpace: 'nowrap',
   },
   newsUpdateSection: {
-    backgroundColor: '#E5E5E5',
-    padding: '20px 0',
+    backgroundColor: '#fff',
+    padding: '1.111rem 0',
+    '& .swiper': {
+      margin: '0 -1.111rem',
+      '@media (max-width: 992px)': {
+        margin: '0',
+      },
+    },
+    '& .swiper-wrapper': {
+      padding: '0 1.667rem 1.667rem',
+      margin: '0 -1.667rem -1.667rem',
+      '@media (max-width: 992px)': {
+        margin: '0 -1.667rem -1.667rem',
+      },
+    },
+    '& .swiper-slider': {
+      padding: '1.111rem',
+    },
+    '& .swiper-pagination.swiper-pagination-bullets .swiper-pagination-bullet':
+      {
+        margin: '0 0.889rem',
+      },
   },
 });
 // const carousel = React.createRef();
@@ -111,8 +136,4 @@ export const HeroCarousel = ({ content, title }) => {
       </div>
     </>
   );
-};
-
-HeroCarousel.propTypes = {
-  content: PropTypes.arrayOf(PropTypes.node),
 };
