@@ -1,7 +1,7 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
 import PropTypes from 'prop-types';
-import { Hero } from 'design-react-kit';
+import { Row, Col, Hero } from 'design-react-kit';
 import { HeroTitle } from './HeroTitle';
 import { HeroBackground } from './HeroBackground';
 import { HeroButton } from './HeroButton';
@@ -24,11 +24,11 @@ const useStyles = createUseStyles({
     },
   },
   contentWrapper: {
-    composes: 'it-hero-text-wrapper',
+    composes: 'it-hero-text-wrapper bg-blue',
     zIndex: 2,
   },
   heroWrapper: {
-    composes: 'it-hero-wrapper',
+    composes: 'it-hero-wrapper bg-blue',
     position: 'relative',
     display: 'flex',
     '&.overlap': {
@@ -97,7 +97,6 @@ const useStyles = createUseStyles({
 export const HeroImageBackground = ({
   title,
   body,
-  theme,
   image,
   firstButtonLabel,
   firstButtonClass,
@@ -110,11 +109,11 @@ export const HeroImageBackground = ({
   const classes = useStyles();
   return (
     <Hero>
-      <div className={`${classes.heroWrapper} ${overlap ? 'overlap' : ''} ${theme}`}>
+      <div className={`${classes.heroWrapper} ${overlap ? 'overlap' : ''}`}>
         <div className="container px-3 px-md-0">
-          <div className="row">
-            <div className="col-12">
-              <div className={`${classes.contentWrapper} ${theme}`}>
+          <Row>
+            <Col xs="12">
+              <div className={`${classes.contentWrapper}`}>
                 <div>
                   <HeroTitle title={title} className={classes.heroTitle} />
                   <HeroParagraph text={body} />
@@ -128,8 +127,8 @@ export const HeroImageBackground = ({
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
+            </Col>
+          </Row>
         </div>
         <HeroBackground image={image} />
       </div>

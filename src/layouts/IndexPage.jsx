@@ -30,7 +30,6 @@ export const IndexPage = () => (
     <HeroImageBackground
       title={heroDigital.title}
       body={heroDigital.body}
-      theme="bg-blue"
       image="italy-blue.png"
       firstButtonLabel={heroDigital.firstButtonLabel}
       firstButtonClass="btn-light"
