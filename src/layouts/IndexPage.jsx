@@ -5,10 +5,12 @@ import { HeroImageBackground } from '../components/hero/HeroImageBackground';
 import { HeroImage } from '../components/hero/HeroImage';
 import { HeroCarousel } from '../components/carousel/Carousel';
 import { SupportSection } from './faq/SupportSection';
+import { OpportunitySection } from './home/OpportunitySection';
 
 const {
   heroDigital,
   heroPnrr,
+  opportunity,
   heroCarouselNews,
   heroCarouselNewsTitle,
   support,
@@ -16,6 +18,7 @@ const {
 
 export const IndexPage = () => (
   <>
+    <OpportunitySection title={opportunity.title} list={opportunity.cards}/>
     <HeroImage
       category={heroPnrr.category}
       title={heroPnrr.title}
