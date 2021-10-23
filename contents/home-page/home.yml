@@ -63,31 +63,6 @@ contributions:
     alt: GitHub logo
     title: GitHub
 heroCarouselNewsTitle: Notizie e aggiornamenti
-# heroCarouselNews:
-#   - id: 1
-#     slide:
-#       - id: 1
-#         category: Novità
-#         title: Dal 15 aprile partono i bandi di Italia digitale 2026
-#         description: Nuove opportunità economiche per la PA.  Oltre 6 miliardi di euro a disposizione per partecipare al cambiamento del Paese
-#         source: 'Fonte: innovazione.gov.it'
-#       - id: 2
-#         category: Approfondimento
-#         title: Come candidarsi per partecipare ai bandi di Italia digitale 2026
-#         description: Video tutorial e infografiche per comprendere meglio come accedere alle risorse e rendicontare l’avanzamento dei progetti
-#         source: 'Fonte: Medium'
-#       - id: 3
-#         category: Articolo
-#         title: Al via il ciclo di incontri dedicato alla PA
-#         description: Una serie di appuntamenti online per aiutare le amministrazioni in questa decisiva fase per lo sviluppo digitale del Paese
-#         source: 'Fonte: innovazione.gov.it'
-#   - id: 2
-#     slide:
-#       - id: 4
-#         category: Novità
-#         title: Dal 15 aprile partono i bandi di Italia digitale 2026
-#         description: Nuove opportunità economiche per la PA.  Oltre 6 miliardi di euro a disposizione per partecipare al cambiamento del Paese
-#         source: 'Fonte: innovazione.gov.it'
 heroCarouselNews:
   - id: 1
     category: Novità
@@ -118,3 +93,23 @@ support:
       description: Scopri i dettagli dell’iniziativa e le informazioni chiave sulle opportunità del PNRR
     - title: Contatti
       description: Compila il modulo per inviarci i tuoi suggerimenti o per avere chiarimenti sull’iniziativa
+heroMain:
+  category: 'le opportunità del pnrr'
+  title: 'Gli investimenti per la transizione digitale della PA'
+  body: 'Il PNRR offre al Paese una straordinaria occasione di rilancio: grazie alla strategia Italia digitale 2026, le pubbliche amministrazioni diventano le protagoniste di questo cambiamento, attraverso un percorso in 3 fasi'
+homeCarousel:
+  - id: 1
+    title: 'Autunno 2021, conoscere'
+    description: '<strong>Informazioni e aggiornamenti</strong> per accompagnare le amministrazioni verso le opportunità di Italia digitale 2026. Le PA hanno accesso agli strumenti necessari per <strong>prepararsi alla pubblicazione degli avvisi</strong> , prevista per la primavera del 2022'
+    image: 'home-carousel-1.png'
+    button: 'scopri di più'
+  - id: 2
+    title: 'Autunno 2021, conoscere'
+    description: '<strong>Informazioni e aggiornamenti</strong> per accompagnare le amministrazioni verso le opportunità di Italia digitale 2026. Le PA hanno accesso agli strumenti necessari per <strong>prepararsi alla pubblicazione degli avvisi</strong> , prevista per la primavera del 2022'
+    image: 'home-carousel-2.png'
+    button: 'scopri di più'
+  - id: 3
+    title: 'Autunno 2021, conoscere'
+    description: '<strong>Informazioni e aggiornamenti</strong> per accompagnare le amministrazioni verso le opportunità di Italia digitale 2026. Le PA hanno accesso agli strumenti necessari per <strong>prepararsi alla pubblicazione degli avvisi</strong> , prevista per la primavera del 2022'
+    image: 'home-carousel-3.png'
+    button: 'scopri di più'

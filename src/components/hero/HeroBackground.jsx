@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { createUseStyles } from 'react-jss';
+import classNames from 'classnames';
 
 const useStyles = createUseStyles({
   heroImg: {
@@ -10,15 +11,17 @@ const useStyles = createUseStyles({
     maxHeight: '100%',
     maxWidth: '100%',
     '@media (max-width: 992px)': {
-      position: "relative",
-      margin: "0 auto",
-    }
+      position: 'relative',
+      margin: '0 auto',
+    },
+    '&.full': {
+      width: '100%',
+    },
   },
 });
 
 export const HeroBackground = ({ image, className }) => {
   const classes = useStyles();
-  return (
-    <img src={`/assets/${image}`} alt="italy" className={classes.heroImg} />
-  );
+  const heroBgClasses = classNames(classes.heroImg, className);
+  return <img src={`/assets/${image}`} alt="italy" className={heroBgClasses} />;
 };

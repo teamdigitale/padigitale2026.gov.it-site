@@ -1,6 +1,6 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
-import { Row, Col, Card, CardBody, CardCategory, CardTitle, CardText } from 'design-react-kit';
+import { Row, Col, Card, CardBody, CardTitle, CardText, Button } from 'design-react-kit';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { DesktopSwiper } from '../DesktopSwiper';
@@ -9,8 +9,10 @@ const useStyles = createUseStyles({
   heroCards: {
     composes: 'card-bg rounded',
     height: '250px',
+    backgroundColor: '#ffffff',
     '@media (min-width: 992px)': {
       height: 'auto',
+      flexDirection: 'row',
     },
     '&.card.card-bg': {
       '@media (max-width: 992px)': {
@@ -19,6 +21,11 @@ const useStyles = createUseStyles({
     },
     '& .card-body': {
       boxShadow: '0px 0px 20px rgb(0 43 85 / 4%);',
+      padding: '2.667rem',
+      order: '1',
+      '@media (min-width: 992px)': {
+        order: '0',
+      },
       '& .category-top': {
         '& a.category': {
           fontSize: '0.778rem',
@@ -27,21 +34,22 @@ const useStyles = createUseStyles({
         },
       },
       '& h5.card-title': {
-        color: '#0066CC',
+        color: '#33485C',
         fontSize: '1rem',
         fontWeight: 'bold',
-        lineHeight: '1.26',
+        lineHeight: '1.4',
+        marginBottom: '0.889rem',
         '@media (min-width: 992px)': {
-          minHeight: '2.889rem',
+          fontSize: '1.556rem',
         },
       },
       '& .card-text': {
         color: '#33485C',
-        fontSize: '0.889rem',
+        fontSize: '1rem',
         fontFamily: 'Titillium Web',
         fontWeight: '400',
-        lineHeight: '1.24',
-        marginBottom: '2.222rem',
+        lineHeight: '1.28',
+        marginBottom: '3.778rem',
       },
       '& .source': {
         color: '#33485C',
@@ -83,28 +91,30 @@ const useStyles = createUseStyles({
     '& .swiper-slider': {
       padding: '1.111rem',
     },
-    '& .swiper-pagination.swiper-pagination-bullets .swiper-pagination-bullet': {
-      margin: '0 0.889rem',
-    },
+    '& .swiper-pagination.swiper-pagination-bullets .swiper-pagination-bullet':
+      {
+        margin: '0 0.889rem',
+      },
+  },
+  noHidden: {
+    overflow: 'unset',
   },
 });
-// const carousel = React.createRef();
 
-export const HeroCarousel = ({ content, title }) => {
+export const HomeCarousel = ({ content, title }) => {
   const classes = useStyles();
 
   const slides = content.map((element) => (
     <>
       <Card key={element.id} className={classes.heroCards} spacing noWrapper>
         <CardBody>
-          <CardCategory>{element.category}</CardCategory>
           <CardTitle tag="h5">{element.title}</CardTitle>
-          <CardText>{element.description}</CardText>
-          <div className="source">
-            {element.source}
-            <img src={`/assets/external-link.svg`} alt="" />
-          </div>
+          <CardText dangerouslySetInnerHTML={{ __html: element.description }} />
+          <Button color="primary" className="text-uppercase">
+            {element.button}
+          </Button>
         </CardBody>
+        <img src={`/assets/${element.image}`} alt="" />
       </Card>
     </>
   ));
@@ -122,18 +132,29 @@ export const HeroCarousel = ({ content, title }) => {
           ) : (
             ''
           )}
-          <DesktopSwiper
-            slides={slides}
-            breakpoints={{
-              slidesPerView: 1,
-              992: {
-                slidesPerView: 3,
-              },
-            }}
-            pagination="true"
-          />
+          <Row>
+            <Col xs="12" lg="10" className="offset-lg-1">
+              <DesktopSwiper
+                slides={slides}
+                breakpoints={{
+                  slidesPerView: 1,
+                  pagination: true,
+
+                  992: {
+                    pagination: false,
+                  },
+                }}
+                className={classes.noHidden}
+              />
+            </Col>
+          </Row>
         </div>
       </div>
     </>
   );
+};
+
+HomeCarousel.propTypes = {
+  content: PropTypes.any,
+  title: PropTypes.any,
 };

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import SwiperCore, { Pagination, A11y } from 'swiper';
+import { Controller } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css/bundle';
 import { createUseStyles } from 'react-jss';
@@ -20,7 +21,7 @@ const useStyles = createUseStyles({
   },
 });
 
-export const DesktopSwiper = ({ slides }) => {
+export const DesktopSwiper = ({ slides, breakpoints, pagination, className }) => {
   const classes = useStyles();
   const [paginationId, setPaginationId] = useState(null);
 
@@ -28,6 +29,7 @@ export const DesktopSwiper = ({ slides }) => {
   useEffect(() => {
     setPaginationId(`swiper-pagination-${Math.floor(Math.random() * 10000)}`);
   }, []);
+  console.log(breakpoints);
 
   return (
     <>
@@ -42,13 +44,8 @@ export const DesktopSwiper = ({ slides }) => {
               lastSlideMessage: "Questa è l'ultima slide",
               paginationBulletMessage: 'Vai alla slide {{index}}',
             }}
-            className=""
-            breakpoints={{
-              slidesPerView: 1,
-              992: {
-                slidesPerView: 3,
-              },
-            }}
+            className={className}
+            breakpoints={breakpoints}
             pagination={{
               el: `[data-swiper-id=${paginationId}]`,
               clickable: true,
@@ -64,19 +61,20 @@ export const DesktopSwiper = ({ slides }) => {
           </Swiper>
         </div>
       </div>
-      <div className="mt-4 pb-4 d-flex justify-content-center pt-3">
-        {paginationId && (
-          <div
-            data-swiper-id={paginationId}
-            className="swiper-pagination"
-            style={{ bottom: 'unset' }}
-          ></div>
-        )}
-      </div>
+      {pagination && (
+        <div className="mt-4 pb-4 d-flex justify-content-center pt-3">
+          {paginationId && (
+            <div data-swiper-id={paginationId} className="swiper-pagination" style={{ bottom: 'unset' }}></div>
+          )}
+        </div>
+      )}
     </>
   );
 };
 
 DesktopSwiper.propTypes = {
   slides: PropTypes.arrayOf(PropTypes.node).isRequired,
+  breakpoints: PropTypes.any,
+  pagination: PropTypes.bool,
+  className: PropTypes.any,
 };

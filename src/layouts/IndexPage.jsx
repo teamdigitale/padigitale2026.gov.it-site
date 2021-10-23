@@ -2,20 +2,24 @@ import React from 'react';
 import { Container, Row, Col, Hero } from 'design-react-kit';
 import content from '../../contents/home-page/home.yml';
 import { HeroImageBackground } from '../components/hero/HeroImageBackground';
+import { HeroImageBackgroundFull } from '../components/hero/HeroImageBackgroundFull';
 import { HeroImage } from '../components/hero/HeroImage';
 import { HeroCarousel } from '../components/carousel/Carousel';
+import { HomeCarousel } from '../components/carousel/HomeCarousel';
 import { SupportSection } from './faq/SupportSection';
 
-const {
-  heroDigital,
-  heroPnrr,
-  heroCarouselNews,
-  heroCarouselNewsTitle,
-  support,
-} = content;
+const { heroMain, heroDigital, heroPnrr, heroCarouselNews, homeCarousel, heroCarouselNewsTitle, support } = content;
 
 export const IndexPage = () => (
   <>
+    <HeroImageBackgroundFull
+      category={heroMain.category}
+      title={heroMain.title}
+      body={heroMain.body}
+      image="hero-home.png"
+      overlap={true}
+    />
+    <HomeCarousel content={homeCarousel} />
     <HeroImage
       category={heroPnrr.category}
       title={heroPnrr.title}
@@ -37,6 +41,6 @@ export const IndexPage = () => (
       overlap={true}
     />
     <HeroCarousel content={heroCarouselNews} title={heroCarouselNewsTitle} />
-    <SupportSection supportList={support.cards} title={support.title} buttonLabel={support.buttonLabel}/>
+    <SupportSection supportList={support.cards} title={support.title} buttonLabel={support.buttonLabel} />
   </>
 );
