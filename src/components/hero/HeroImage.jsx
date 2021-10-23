@@ -43,7 +43,7 @@ const useStyles = createUseStyles({
   heroImage: {
     composes: 'row align-items-center',
     '@media (min-width: 992px)': {
-      paddingLeft: '100px',
+      //paddingLeft: '100px',
     },
     '& .hero-category': {
       color: '#33485C',
@@ -72,7 +72,7 @@ export const HeroImage = ({
   return (
     <Hero>
       <div className={classes.heroImage}>
-        <div className="col-lg-6 p-0 mt-3 mt-lg-0 pr-lg-5">
+        <div className="col-lg-6 offset-lg-1 p-0 mt-3 mt-lg-0 pr-lg-5">
           <div className="text-center text-lg-left">
             <HeroCategory title={category} className={classes.heroCategory} />
             <HeroTitle title={title} className={classes.heroTitle} />
@@ -99,7 +99,7 @@ export const HeroImage = ({
             )}
           </HeroCtaContainer>
         </div>
-        <HeroGraphic className="col-lg-6 d-flex justify-content-sm-center">
+        <HeroGraphic className="col-lg-5 d-flex justify-content-sm-center">
           <img src={imageUrl} alt={imageAlt} aria-label={imageAlt} />
         </HeroGraphic>
       </div>
