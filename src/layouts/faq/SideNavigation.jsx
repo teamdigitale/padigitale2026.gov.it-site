@@ -86,11 +86,14 @@ const useStyles = createUseStyles({
 
 export const SideNavigation = (props) => {
   const classes = useStyles();
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 992);
+  const [isMobile, setIsMobile] = useState();
 
-  window.addEventListener('resize', () => {
-    setIsMobile(window.innerWidth < 992);
-  });
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 992)
+    window.addEventListener('resize', () => {
+      setIsMobile(window.innerWidth < 992);
+    });
+  }, [])
 
   useEffect(() => {
     removeActive();

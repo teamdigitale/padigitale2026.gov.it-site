@@ -13,8 +13,7 @@ import {
 import content from '../../../contents/support-page/support.yml';
 
 const {
-  faqPreviewCards,
-  faqPreviewBtn: btn,
+  faqSection
 } = content;
 
 const useStyle = createUseStyles({
@@ -66,7 +65,7 @@ const useStyle = createUseStyles({
 
 export const FAQPreview = () => {
   const classes = useStyle();
-  const cards = faqPreviewCards.map((card) => (
+  const cards = faqSection.faqPreviewCards.map((card) => (
     <Col key={card.id} xs="12" lg="4">
       <Card className={classes.faqCard}>
         <CardBody>
@@ -85,7 +84,7 @@ export const FAQPreview = () => {
             {cards}
           </Row>
           <div className={classes.btnWrapper}>
-            <Button color="primary">{btn}</Button>
+            <Button color="primary" href={faqSection.buttonLink}>{faqSection.buttonLabel}</Button>
           </div>
         </div>
       </div>
