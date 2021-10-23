@@ -9,16 +9,10 @@ SwiperCore.use([Pagination, A11y]);
 
 const useStyles = createUseStyles({
   swiperSlide: {
-    '@global': {
-      div: {
-        boxShadow: [['none'], '!important'],
-      },
-    },
-    paddingRight: '10px',
+    padding: '0 1.111rem 1.111rem',
   },
   bullet: {
     composes: 'swiper-pagination-bullet p-2',
-    margin: '0px 20px',
   },
   activeBullet: {
     composes: 'swiper-pagination-bullet-active',

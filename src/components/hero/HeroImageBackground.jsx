@@ -25,6 +25,7 @@ const useStyles = createUseStyles({
   },
   contentWrapper: {
     composes: 'it-hero-text-wrapper bg-blue',
+    paddingLeft: '0 !important',
     zIndex: 2,
   },
   heroWrapper: {
@@ -62,7 +63,7 @@ const useStyles = createUseStyles({
     },
     '& .container .it-hero-text-wrapper': {
       '@media (min-width: 992px)': {
-        paddingLeft: '100px',
+        // paddingLeft: '100px',
       },
     },
     '& .container .it-hero-text-wrapper p': {
@@ -112,7 +113,7 @@ export const HeroImageBackground = ({
       <div className={`${classes.heroWrapper} ${overlap ? 'overlap' : ''}`}>
         <div className="container px-3 px-md-0">
           <Row>
-            <Col xs="12">
+            <Col xs="12" lg="11" className="offset-lg-1">
               <div className={`${classes.contentWrapper}`}>
                 <div>
                   <HeroTitle title={title} className={classes.heroTitle} />
