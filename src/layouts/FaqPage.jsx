@@ -20,12 +20,15 @@ export const FaqPage = () => {
   const [inputValue, setInputValue] = useState();
   const [filterId, setFilterId] = useState('all');
   const [questions, setQuestions] = useState(faq.questions);
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 992);
+  const [isMobile, setIsMobile] = useState();
   // const [noResults, setNoResults] = useState(false);
 
-  window.addEventListener('resize', () => {
-    setIsMobile(window.innerWidth < 992);
-  });
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 992)
+    window.addEventListener('resize', () => {
+      setIsMobile(window.innerWidth < 992);
+    });
+  }, [])
 
   const handleChange = (event) => {
     setInputValue(event.target.value);
