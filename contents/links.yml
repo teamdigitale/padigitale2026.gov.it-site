@@ -9,7 +9,7 @@ internalLinks:
     label: Come funziona
     linkTop: '#mainTop'
   support:
-    linkTo: '/#supporto'
+    linkTo: '/supporto'
     label: Supporto
     linkTop: '#mainTop'
   services:
