@@ -199,7 +199,7 @@ const CenterHeader = () => {
                 <img
                   className="icon"
                   src="/assets/site-logo.svg"
-                  alt="Logo Repubblica Italiana"
+                  alt="Logo prossima PA"
                 />
                 <div className="d-none d-lg-inline-block">
                   <div className="h3 mb-0">{headerTitle}</div>
