@@ -1,6 +1,9 @@
 heroOpportunity:
   title: Le opportunità del PNRR
   body: 'Il PNRR offre al Paese una <strong>straordinaria occasione di rilancio:</strong> grazie alla strategia <strong>Italia digitale 2026</strong> le PA diventano protagoniste di questo cambiamento'
+modalButton:
+  label: Vuoi ricevere aggiornamenti sugli investimenti per la digitalizzazione della PA? 
+  buttonLabel: RICEVI AGGIORNAMENTI
 selectBeneficiaries: 
   - value: 'pa-centrali'
     label: 'PA Centrali'
