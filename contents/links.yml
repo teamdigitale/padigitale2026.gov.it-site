@@ -1,6 +1,6 @@
 internalLinks:
   strategy:
-    linkTo: '/#strategy'
+    linkTo: '/opportunita'
     label: Le opportunità
     linkTop: '/#mainTop'
   enablement:
