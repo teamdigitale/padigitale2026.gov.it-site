@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import { Row, Col, Hero } from 'design-react-kit';
 import { HeroTitle } from './HeroTitle';
 import { HeroBackground } from './HeroBackground';
-import { HeroButton } from './HeroButton';
 import { HeroParagraph } from './HeroParagraph';
 import { HeroCategory } from './HeroCategory';
 

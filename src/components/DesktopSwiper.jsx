@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import SwiperCore, { Navigation, Pagination, A11y } from 'swiper';
-import { Controller } from 'swiper';
 import { Icon } from 'design-react-kit';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css/bundle';

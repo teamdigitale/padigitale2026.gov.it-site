@@ -1,5 +1,4 @@
 import React from 'react';
-import { Container, Row, Col, Hero } from 'design-react-kit';
 import content from '../../contents/home-page/home.yml';
 import { HeroImageBackground } from '../components/hero/HeroImageBackground';
 import { HeroImageBackgroundFull } from '../components/hero/HeroImageBackgroundFull';
