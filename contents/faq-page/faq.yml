@@ -1,0 +1,73 @@
+hero:
+  title: Domande frequenti
+  subtitle: Esplora le risposte alle domande più frequenti o fai una ricerca per parola chiave
+sidebar:
+  - sectionTitle: Il contesto
+    sectionId: contesto
+    sectionActive: true
+  - sectionTitle: Gli investimenti
+    sectionId: investimenti
+    sectionActive: false
+  - sectionTitle: I bandi e gli avvisi
+    sectionId: bandi
+    sectionActive: false
+  - sectionTitle: Supporto
+    sectionId: supporto
+    sectionActive: false
+questions:
+  - title: Il contesto
+    description: La strategia di ripresa economica e gli interventi previsti per il rilancio digitale del Paese
+    sectionId: contesto
+    accordions:
+      - title: Cos'è Next Generation EU?
+        content: <strong>Next Generation EU (NGEU)</strong> è un piano da €750 miliardi di Euro che ha l'obiettivo di rilanciare l'economia europea dopo la pandemia di COVID-19 e di renderla più verde e digitale.
+        linkLabel: Vai al sito Next Generation EU dell'Unione Europea
+        link: '#'
+        ariaLabel: testo aria label
+      - title: Cos'è Italia domani, il Piano nazionale di ripresa e resilienza (PNRR)?
+        content: Next Generation EU (NGEU) è un piano da €750 miliardi di Euro che ha l'obiettivo di rilanciare l'economia europea dopo la pandemia di COVID-19 e di renderla più verde e digitale.
+      - title: Cos'è Italia digitale 2026?
+        content: Next Generation EU (NGEU) è un piano da €750 miliardi di Euro che ha l'obiettivo di rilanciare l'economia europea dopo la pandemia di COVID-19 e di renderla più verde e digitale.
+      - title: Quali sono gli obiettivi di Italia digitale 2026?
+        content: Next Generation EU (NGEU) è un piano da €750 miliardi di Euro che ha l'obiettivo di rilanciare l'economia europea dopo la pandemia di COVID-19 e di renderla più verde e digitale.
+      - title: Cos'è "Verso PA digitale 2026"?
+        content: Next Generation EU (NGEU) è un piano da €750 miliardi di Euro che ha l'obiettivo di rilanciare l'economia europea dopo la pandemia di COVID-19 e di renderla più verde e digitale.
+  - title: Gli investimenti
+    description: Gli investimenti di Italia digitale 2026 previsti dal Piano Nazionale di Ripresa e Resilienza (PNRR)
+    sectionId: investimenti
+    accordions:
+      - title: Quali sono gli investimenti di Italia digitale 2026?
+        content: Next Generation EU (NGEU) è un piano da €750 miliardi di Euro che ha l'obiettivo di rilanciare l'economia europea dopo la pandemia di COVID-19 e di renderla più verde e digitale.
+      - title: Dove posso trovare informazioni su tutti gli investimenti di Italia domani, il Piano nazionale di ripresa e resilienza?
+        content: Next Generation EU (NGEU) è un piano da €750 miliardi di Euro che ha l'obiettivo di rilanciare l'economia europea dopo la pandemia di COVID-19 e di renderla più verde e digitale.
+      - title: A chi sono rivolti i fondi di Italia digitale 2026?
+        content: Next Generation EU (NGEU) è un piano da €750 miliardi di Euro che ha l'obiettivo di rilanciare l'economia europea dopo la pandemia di COVID-19 e di renderla più verde e digitale.
+  - title: I bandi e gli avvisi
+    description: I bandi e gli avvisi degli investimenti di Italia digitale 2026 e tutte le indicazioni necessarie per scoprire le opportunità e candidarsi
+    sectionId: bandi
+    accordions:
+      - title: Come posso scoprire le opportunità per la mia PA?
+        content: Next Generation EU (NGEU) è un piano da €750 miliardi di Euro che ha l'obiettivo di rilanciare l'economia europea dopo la pandemia di COVID-19 e di renderla più verde e digitale.
+      - title: Quando saranno pubblicati i bandi?
+        content: Next Generation EU (NGEU) è un piano da €750 miliardi di Euro che ha l'obiettivo di rilanciare l'economia europea dopo la pandemia di COVID-19 e di renderla più verde e digitale.
+      - title: Come posso candidare la mia Amministrazione per un bando?
+        content: Next Generation EU (NGEU) è un piano da €750 miliardi di Euro che ha l'obiettivo di rilanciare l'economia europea dopo la pandemia di COVID-19 e di renderla più verde e digitale.
+      - title: Come funziona la rendicontazione delle risorse?
+        content: Next Generation EU (NGEU) è un piano da €750 miliardi di Euro che ha l'obiettivo di rilanciare l'economia europea dopo la pandemia di COVID-19 e di renderla più verde e digitale.
+      - title: Quali sono i soggetti coinvolti e che ruolo hanno?
+        content: Next Generation EU (NGEU) è un piano da €750 miliardi di Euro che ha l'obiettivo di rilanciare l'economia europea dopo la pandemia di COVID-19 e di renderla più verde e digitale.
+  - title: Supporto
+    description: Le indicazioni pratiche per ricevere chiarimenti e aggiornamenti
+    sectionId: supporto
+    accordions:
+      - title: È possibile richiedere supporto?  
+        content: Next Generation EU (NGEU) è un piano da €750 miliardi di Euro che ha l'obiettivo di rilanciare l'economia europea dopo la pandemia di COVID-19 e di renderla più verde e digitale.
+      - title: Come posso ricevere aggiornamenti? 
+        content: Next Generation EU (NGEU) è un piano da €750 miliardi di Euro che ha l'obiettivo di rilanciare l'economia europea dopo la pandemia di COVID-19 e di renderla più verde e digitale.
+noResults: Nessun risultato trovato
+support:
+  tag: Supporto
+  title: Non hai trovato le risposte che cerchi? Vuoi inviare suggerimenti o ricevere supporto?
+  cards:
+    - title: Contatti
+      description: Compila il modulo per inviarci i tuoi suggerimenti o per avere chiarimenti sull'iniziativa

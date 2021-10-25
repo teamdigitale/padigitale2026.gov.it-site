@@ -9,8 +9,12 @@ internalLinks:
     label: Come funziona
     linkTop: '#mainTop'
   support:
-    linkTo: '/#supporto'
+    linkTo: '/supporto'
     label: Supporto
+    linkTop: '#mainTop'
+  updates:
+    linkTo: '/updates'
+    label: Ricevi aggiornamenti
     linkTop: '#mainTop'
   services:
     linkTo: '/#vantaggi'

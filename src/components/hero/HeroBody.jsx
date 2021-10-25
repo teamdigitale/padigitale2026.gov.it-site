@@ -4,13 +4,18 @@ import PropTypes from 'prop-types';
 
 const useStyles = createUseStyles({
   body: {
-    fontSize: '1.3rem',
+    color: '#33485C',
+    fontSize: '1rem',
+    fontFamily: 'Titillium Web',
+    '@media (min-width: 992px)': {
+      maxWidth: '26.667rem',
+    },
   },
 });
 
 export const HeroBody = ({ html }) => {
   const classes = useStyles();
-  return <div className={classes.body} dangerouslySetInnerHTML={{ __html: html }} />;
+  return <div className={`hero-body ${classes.body}`} dangerouslySetInnerHTML={{ __html: html }} />;
 };
 
 HeroBody.propTypes = {

@@ -1,0 +1,26 @@
+mainHero:
+  title: Hai bisogno di chiarimenti o supporto?
+  description: Consulta le <strong>le domande frequenti</strong> o <strong>compila il modulo</strong> per ricevere una risposta via email
+faqSection:
+  buttonLink: '/faq'
+  buttonLabel: Vai alle domande frequenti
+  faqPreviewCards:
+    - id: 1
+      title: Cos'è Next Generation EU?
+      text: <strong>Next Generation EU (NGEU)</strong> è un piano da €750 miliardi di Euro che ha l’obiettivo di rilanciare l’economia europea...
+    - id: 2
+      title: Cos’è Italia domani, il Piano nazionale di ripresa e resilienza (PNRR)?
+      text: '<strong>Next Generation EU (NGEU)</strong> è un piano da
+        €750 miliardi di Euro che ha l’obiettivo di rilanciare
+        l’economia europea...'
+    - id: 3
+      title: A chi sono rivolti i fondi di Italia digitale 2026?
+      text: '<strong>Next Generation EU (NGEU)</strong> è un piano da
+        €750 miliardi di Euro che ha l’obiettivo di rilanciare
+        l’economia europea...'
+
+heroAssistance:
+  title: Richiedi assistenza
+  body: 'Se non hai trovato le informazioni che cercavi fra le domande frequenti, <strong>compila il modulo dedicato</strong>: ti risponderemo al più presto'
+  altImg: immagine placeholder
+  btnText: compila il modulo

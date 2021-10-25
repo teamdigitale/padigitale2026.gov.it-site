@@ -11,7 +11,7 @@ const useStyles = createUseStyles({
 
 export const HeroCategory = ({ title }) => {
   const classes = useStyles();
-  return <h2 className={classes.category}>{title}</h2>;
+  return <h2 className={`hero-category ${classes.category}`}>{title}</h2>;
 };
 
 HeroCategory.propTypes = {
