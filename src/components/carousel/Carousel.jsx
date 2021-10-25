@@ -130,7 +130,7 @@ export const HeroCarousel = ({ content, title }) => {
                 slidesPerView: 3,
               },
             }}
-            pagination="true"
+            pagination
           />
         </div>
       </div>

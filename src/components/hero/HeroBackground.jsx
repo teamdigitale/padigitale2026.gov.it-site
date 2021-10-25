@@ -16,6 +16,11 @@ const useStyles = createUseStyles({
     },
     '&.full': {
       width: '100%',
+      '@media (max-width: 992px)': {
+        position: 'absolute',
+        right: '0',
+        top: '0',
+      },
     },
   },
 });

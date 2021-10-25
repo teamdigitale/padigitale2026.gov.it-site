@@ -8,10 +8,8 @@ import { DesktopSwiper } from '../DesktopSwiper';
 const useStyles = createUseStyles({
   heroCards: {
     composes: 'card-bg rounded',
-    height: '250px',
     backgroundColor: '#ffffff',
     '@media (min-width: 992px)': {
-      height: 'auto',
       flexDirection: 'row',
     },
     '&.card.card-bg': {
@@ -23,8 +21,10 @@ const useStyles = createUseStyles({
       boxShadow: '0px 0px 20px rgb(0 43 85 / 4%);',
       padding: '2.667rem',
       order: '1',
+      textAlign: 'center',
       '@media (min-width: 992px)': {
         order: '0',
+        textAlign: 'left',
       },
       '& .category-top': {
         '& a.category': {
@@ -34,22 +34,25 @@ const useStyles = createUseStyles({
         },
       },
       '& h5.card-title': {
-        color: '#33485C',
-        fontSize: '1rem',
+        color: '#0066CC',
+        fontSize: '1.75rem',
         fontWeight: 'bold',
-        lineHeight: '1.4',
+        lineHeight: '1.43',
         marginBottom: '0.889rem',
         '@media (min-width: 992px)': {
-          fontSize: '1.556rem',
+          color: '#33485C',
         },
       },
       '& .card-text': {
         color: '#33485C',
-        fontSize: '1rem',
+        fontSize: '1.125rem',
         fontFamily: 'Titillium Web',
         fontWeight: '400',
         lineHeight: '1.28',
-        marginBottom: '3.778rem',
+        marginBottom: '7.25rem',
+        '@media (min-width: 992px)': {
+          marginBottom: '3.778rem',
+        },
       },
       '& .source': {
         color: '#33485C',
@@ -67,6 +70,17 @@ const useStyles = createUseStyles({
       content: 'none',
     },
   },
+  heroCardImg: {
+    maxHeight: '160px',
+    borderTopRightRadius: '4px',
+    borderTopLeftRadius: '4px',
+    '@media (min-width: 992px)': {
+      maxHeight: '100%',
+      borderTopRightRadius: '4px',
+      borderBottomRightRadius: '4px',
+      borderTopLeftRadius: '0',
+    },
+  },
   heroCarouselTitle: {
     color: '#fff',
     fontSize: '1.556rem',
@@ -75,6 +89,7 @@ const useStyles = createUseStyles({
   newsUpdateSection: {
     backgroundColor: '#fff',
     padding: '1.111rem 0',
+    overflow: 'hidden',
     '& .swiper': {
       margin: '0 -1.111rem',
       '@media (max-width: 992px)': {
@@ -97,7 +112,7 @@ const useStyles = createUseStyles({
       },
   },
   noHidden: {
-    overflow: 'unset',
+    overflow: 'visible',
   },
 });
 
@@ -114,7 +129,7 @@ export const HomeCarousel = ({ content, title }) => {
             {element.button}
           </Button>
         </CardBody>
-        <img src={`/assets/${element.image}`} alt="" />
+        <img className={classes.heroCardImg} src={`/assets/${element.image}`} alt="" />
       </Card>
     </>
   ));
@@ -138,13 +153,9 @@ export const HomeCarousel = ({ content, title }) => {
                 slides={slides}
                 breakpoints={{
                   slidesPerView: 1,
-                  pagination: true,
-
-                  992: {
-                    pagination: false,
-                  },
                 }}
                 className={classes.noHidden}
+                mobilePagination
               />
             </Col>
           </Row>

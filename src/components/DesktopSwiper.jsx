@@ -21,7 +21,7 @@ const useStyles = createUseStyles({
   },
 });
 
-export const DesktopSwiper = ({ slides, breakpoints, pagination, className }) => {
+export const DesktopSwiper = ({ slides, breakpoints, pagination, mobilePagination, className }) => {
   const classes = useStyles();
   const [paginationId, setPaginationId] = useState(null);
 
@@ -52,6 +52,7 @@ export const DesktopSwiper = ({ slides, breakpoints, pagination, className }) =>
               bulletClass: classes.bullet,
               bulletActiveClass: classes.activeBullet,
             }}
+            createElements
           >
             {slides.map((slide, k) => (
               <SwiperSlide className={classes.swiperSlide} key={k}>
@@ -68,6 +69,13 @@ export const DesktopSwiper = ({ slides, breakpoints, pagination, className }) =>
           )}
         </div>
       )}
+      {mobilePagination && (
+        <div className="mt-4 pb-4 d-flex justify-content-center pt-3 d-lg-none">
+          {paginationId && (
+            <div data-swiper-id={paginationId} className="swiper-pagination" style={{ bottom: 'unset' }}></div>
+          )}
+        </div>
+      )}
     </>
   );
 };
@@ -76,5 +84,6 @@ DesktopSwiper.propTypes = {
   slides: PropTypes.arrayOf(PropTypes.node).isRequired,
   breakpoints: PropTypes.any,
   pagination: PropTypes.bool,
+  mobilePagination: PropTypes.bool,
   className: PropTypes.any,
 };

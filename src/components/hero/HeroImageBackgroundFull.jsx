@@ -37,6 +37,9 @@ const useStyles = createUseStyles({
     '&.overlap': {
       marginBottom: '-7rem',
       paddingBottom: '4rem',
+      '@media (min-width: 992px)': {
+        marginBottom: '-14rem',
+      },
     },
     '@media (max-width: 992px)': {
       flexDirection: 'column',
