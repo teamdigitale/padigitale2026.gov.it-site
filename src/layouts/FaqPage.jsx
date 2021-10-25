@@ -12,7 +12,7 @@ const useStyles = createUseStyles({
   noResults: {
     textAlign: 'center',
     color: '#33485C',
-    margin: '0.833rem 0'
+    margin: '0.833rem 0',
   },
 });
 export const FaqPage = () => {
@@ -24,24 +24,18 @@ export const FaqPage = () => {
   // const [noResults, setNoResults] = useState(false);
 
   useEffect(() => {
-    setIsMobile(window.innerWidth < 992)
+    setIsMobile(window.innerWidth < 992);
     window.addEventListener('resize', () => {
       setIsMobile(window.innerWidth < 992);
     });
-  }, [])
+  }, []);
 
   const handleChange = (event) => {
     setInputValue(event.target.value);
     if (event.target.value.length >= 3) {
       let newQuest = [];
       faq.questions.forEach((question) => {
-        const regexp = new RegExp(event.target.value, 'i');
-
-        const filterAccordions = question.accordions.filter((accordion) =>
-          regexp.test(accordion.title)
-        );
-
-        if (filterAccordions.length) {
+        if (getAccordionsFiltered(question).length) {
           newQuest.push(question);
         }
       });
@@ -70,23 +64,28 @@ export const FaqPage = () => {
         } else {
           setQuestions(faq.questions);
         }
-        
       } else {
         setQuestions(faq.questions);
       }
     }
   };
 
+  function getAccordionsFiltered(question) {
+    const regexp = new RegExp(event.target.value, 'i');
+
+    const filterAccordions = question.accordions.filter((accordion) =>
+      regexp.test(accordion.title)
+    );
+
+    return filterAccordions
+  }
+
   useEffect(() => {
     if (!isMobile) {
       if (inputValue && inputValue.length >= 3) {
         let newQuest = [];
         faq.questions.forEach((question) => {
-          const regexp = new RegExp(inputValue, 'i');
-          const filterAccordions = question.accordions.filter((accordion) =>
-            regexp.test(accordion.title)
-          );
-          if (filterAccordions.length) {
+          if (getAccordionsFiltered(question).length) {
             newQuest.push(question);
           }
         });
@@ -103,11 +102,7 @@ export const FaqPage = () => {
         if (inputValue) {
           let newQuest = [];
           faq.questions.forEach((question) => {
-            const regexp = new RegExp(inputValue, 'i');
-            const filterAccordions = question.accordions.filter((accordion) =>
-              regexp.test(accordion.title)
-            );
-            if (filterAccordions.length) {
+            if (getAccordionsFiltered(question).length) {
               newQuest.push(question);
             }
           });
@@ -168,12 +163,17 @@ export const FaqPage = () => {
                   />
                 );
               })}
-              {!questions.length && <p className={classes.noResults}>{faq.noResults}</p>}
+              {!questions.length && (
+                <p className={classes.noResults}>{faq.noResults}</p>
+              )}
             </Col>
           </Row>
         </Container>
       </div>
-      <SupportSection supportList={faq.support.cards} title={faq.support.title}/>
+      <SupportSection
+        supportList={faq.support.cards}
+        title={faq.support.title}
+      />
     </>
   );
 };

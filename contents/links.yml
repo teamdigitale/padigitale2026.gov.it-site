@@ -12,6 +12,10 @@ internalLinks:
     linkTo: '/supporto'
     label: Supporto
     linkTop: '#mainTop'
+  updates:
+    linkTo: '/updates'
+    label: Ricevi aggiornamenti
+    linkTop: '#mainTop'
   services:
     linkTo: '/#vantaggi'
     label: Domande frequenti e contatti

@@ -7,8 +7,9 @@ import { HeroImage } from '../components/hero/HeroImage';
 import { HeroCarousel } from '../components/carousel/Carousel';
 import { HomeCarousel } from '../components/carousel/HomeCarousel';
 import { SupportSection } from './faq/SupportSection';
+import { OpportunitySection } from './home/OpportunitySection';
 
-const { heroMain, heroDigital, heroPnrr, heroCarouselNews, homeCarousel, heroCarouselNewsTitle, support } = content;
+const { heroMain, heroDigital, heroPnrr, opportunity, heroCarouselNews, homeCarousel, heroCarouselNewsTitle, support } = content;
 
 export const IndexPage = () => (
   <>
@@ -20,6 +21,7 @@ export const IndexPage = () => (
       overlap={true}
     />
     <HomeCarousel content={homeCarousel} />
+    <OpportunitySection title={opportunity.title} list={opportunity.cards} />
     <HeroImage
       category={heroPnrr.category}
       title={heroPnrr.title}

@@ -117,6 +117,11 @@ const useStyle = createUseStyles({
   },
   navbarNav: {
     padding: 0,
+    '@media (max-width: 991px)': {
+      '& + .navbar-nav .nav-item': {
+        borderTop: '1px solid #E6E9F2',
+      },
+    },
   },
   linkListWrapperCustom: {
     '& ul li:not(:first-child)': {
@@ -126,6 +131,14 @@ const useStyle = createUseStyles({
   noShadow: {
     composes: 'shadow-none',
     top: '30%',
+  },
+  menuWrapper: {
+    composes: 'menu-wrapper',
+    '@media (max-width: 991px)': {
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'space-between',
+    },
   },
 });
 
@@ -199,7 +212,7 @@ const CenterHeader = () => {
                 <img
                   className="icon"
                   src="/assets/site-logo.svg"
-                  alt="Logo Repubblica Italiana"
+                  alt="Logo prossima PA"
                 />
                 <div className="d-none d-lg-inline-block">
                   <div className="h3 mb-0">{headerTitle}</div>
@@ -238,7 +251,7 @@ const NavHeader = (props) => {
         </button>
 
         <HeaderNav isOpen={isOpen} onCloseMenu={toogleMenu}>
-          <div className="menu-wrapper">
+          <div className={classes.menuWrapper}>
             <Nav navbar className={classes.navbarNav}>
               <div className={classes.offCanvasWrapper}>
                 <a href="/" tabIndex="-1">
@@ -285,6 +298,20 @@ const NavHeader = (props) => {
                 >
                   <span className="font-weight-semibold">
                     {internalLinks.support.label}
+                  </span>
+                </Link>
+              </NavItem>
+            </Nav>
+            <Nav navbar className={classes.navbarNav}>
+              <NavItem active>
+                <Link
+                  to={internalLinks.updates.linkTo}
+                  className="nav-link"
+                  activeClassName="active"
+                  onClick={closeMenu}
+                >
+                  <span className="font-weight-semibold">
+                    {internalLinks.updates.label}
                   </span>
                 </Link>
               </NavItem>

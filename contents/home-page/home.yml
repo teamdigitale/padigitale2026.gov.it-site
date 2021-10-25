@@ -63,6 +63,60 @@ contributions:
     alt: GitHub logo
     title: GitHub
 heroCarouselNewsTitle: Notizie e aggiornamenti
+# heroCarouselNews:
+#   - id: 1
+#     slide:
+#       - id: 1
+#         category: Novità
+#         title: Dal 15 aprile partono i bandi di Italia digitale 2026
+#         description: Nuove opportunità economiche per la PA.  Oltre 6 miliardi di euro a disposizione per partecipare al cambiamento del Paese
+#         source: 'Fonte: innovazione.gov.it'
+#       - id: 2
+#         category: Approfondimento
+#         title: Come candidarsi per partecipare ai bandi di Italia digitale 2026
+#         description: Video tutorial e infografiche per comprendere meglio come accedere alle risorse e rendicontare l’avanzamento dei progetti
+#         source: 'Fonte: Medium'
+#       - id: 3
+#         category: Articolo
+#         title: Al via il ciclo di incontri dedicato alla PA
+#         description: Una serie di appuntamenti online per aiutare le amministrazioni in questa decisiva fase per lo sviluppo digitale del Paese
+#         source: 'Fonte: innovazione.gov.it'
+#   - id: 2
+#     slide:
+#       - id: 4
+#         category: Novità
+#         title: Dal 15 aprile partono i bandi di Italia digitale 2026
+#         description: Nuove opportunità economiche per la PA.  Oltre 6 miliardi di euro a disposizione per partecipare al cambiamento del Paese
+#         source: 'Fonte: innovazione.gov.it'
+opportunity: 
+  title: Le opportunità
+  cards: 
+    - number: 1.1
+      title: Infrastrutture digitali
+    - number: 1.2
+      title: Abilitazione e facilitazione migrazione al Cloud
+    - number: 1.3.1
+      title: Piattaforma Digitale Nazionale Dati
+    - number: 1.3.2
+      title: Esperienza dei servizi pubblici
+    - number: 1.4.1
+      title: Accessibilità
+    - number: 1.4.3
+      title: Adozione PagoPA e app IO
+    - number: 1.4.4
+      title: Adozione identità digitale
+    - number: 1.4.5
+      title: Digitalizzazione degli avvisi pubblici
+    - number: 1.4.6
+      title: MaaS
+    - number: 1.5
+      title: Cybersecurity
+    - number: 1.6
+      title: Digitalizzazione grandi amministrazioni centrali
+    - number: 1.7.1
+      title: Centri di facilitazione digitale
+    - number: 1.7.2
+      title: Servizio civile digitale
 heroCarouselNews:
   - id: 1
     category: Novità
