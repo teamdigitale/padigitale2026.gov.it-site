@@ -1,6 +1,6 @@
 import React from 'react';
-import { Container, Row, Col, Hero } from 'design-react-kit';
 import content from '../../contents/home-page/home.yml';
+import { BeneficiariesSection } from './opportunity/BeneficiariesSection';
 import { SupportSection } from './faq/SupportSection';
 
 const {
@@ -9,6 +9,7 @@ const {
 
 export const OpportunityPage = () => (
   <>
+    <BeneficiariesSection />
     <SupportSection supportList={support.cards} title={support.title} buttonLabel={support.buttonLabel}/>
   </>
 );
