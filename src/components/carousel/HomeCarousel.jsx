@@ -108,10 +108,9 @@ const useStyles = createUseStyles({
     '& .swiper-slider': {
       padding: '1.111rem',
     },
-    '& .swiper-pagination.swiper-pagination-bullets .swiper-pagination-bullet':
-      {
-        margin: '0 0.889rem',
-      },
+    '& .swiper-pagination.swiper-pagination-bullets .swiper-pagination-bullet': {
+      margin: '0 0.889rem',
+    },
   },
   noHidden: {
     overflow: 'visible',

@@ -111,7 +111,7 @@ const useStyles = createUseStyles({
 
 export const HeroImageBackgroundFull = ({ category, title, body, image, imageMobile, overlap }) => {
   const classes = useStyles();
-  const [isDesktop, setDesktop] = useState(window.innerWidth > 992);
+  const [isDesktop, setDesktop] = useState(true);
 
   const updateMedia = () => {
     setDesktop(window.innerWidth > 1450);
