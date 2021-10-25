@@ -1,3 +1,14 @@
+selectBeneficiaries: 
+  - value: 'pa-centrali'
+    label: 'PA Centrali'
+  - value: 'comuni'
+    label: 'Comuni'
+  - value: 'province'
+    label: 'Province'
+  - value: 'regioni'
+    label: 'Regioni'
+  - value: 'enti-regionali'
+    label: 'Enti regionali'
 beneficiaries: 
   - number: 1.1
     title: Infrastrutture digitali
