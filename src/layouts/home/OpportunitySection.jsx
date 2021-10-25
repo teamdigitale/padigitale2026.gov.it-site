@@ -7,15 +7,14 @@ const useStyle = createUseStyles({
     '&.section-muted': {
       padding: '2.667rem 0.833rem',
       '@media (min-width: 768px)': {
-        padding: '2.667rem 2.222rem'
+        padding: '2.667rem 2.222rem',
       },
       '@media (min-width: 992px)': {
-        padding: '4rem 4.444rem'
+        padding: '4rem 4.444rem',
       },
       '@media (min-width: 1200px)': {
-        padding: '4rem 6.222rem'
+        padding: '4rem 6.222rem',
       },
-      
     },
   },
   title: {
@@ -61,26 +60,27 @@ const useStyle = createUseStyles({
 export const OpportunitySection = (props) => {
   const classes = useStyle();
   const { title, list } = props;
-  console.log(list);
 
   return (
     <Section color="muted" className={classes.section}>
-      <h4 className={classes.title}>{title}</h4>
-      <Row className={classes.row}>
-        {list.map((item) => {
-          return (
-            <Col md="6" lg="3" key={item.title} className="px-md-3">
-              <Card spacing className={classes.cardWrapper}>
-                <CardBody>
-                  <CardTitle tag="h5">
-                    <span>{item.number}</span> {item.title}
-                  </CardTitle>
-                </CardBody>
-              </Card>
-            </Col>
-          );
-        })}
-      </Row>
+      <div className="container">
+        <h4 className={classes.title}>{title}</h4>
+        <Row className={classes.row}>
+          {list.map((item) => {
+            return (
+              <Col md="6" lg="3" key={item.title} className="px-md-3">
+                <Card spacing className={classes.cardWrapper}>
+                  <CardBody>
+                    <CardTitle tag="h5">
+                      <span>{item.number}</span> {item.title}
+                    </CardTitle>
+                  </CardBody>
+                </Card>
+              </Col>
+            );
+          })}
+        </Row>
+      </div>
     </Section>
   );
 };
