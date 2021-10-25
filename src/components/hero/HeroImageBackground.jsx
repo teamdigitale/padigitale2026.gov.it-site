@@ -24,12 +24,12 @@ const useStyles = createUseStyles({
     },
   },
   contentWrapper: {
-    composes: 'it-hero-text-wrapper bg-blue',
+    composes: 'it-hero-text-wrapper',
     paddingLeft: '0 !important',
     zIndex: 2,
   },
   heroWrapper: {
-    composes: 'it-hero-wrapper bg-blue',
+    composes: 'it-hero-wrapper',
     position: 'relative',
     display: 'flex',
     '&.overlap': {
@@ -98,6 +98,7 @@ const useStyles = createUseStyles({
 export const HeroImageBackground = ({
   title,
   body,
+  theme,
   image,
   firstButtonLabel,
   firstButtonClass,
@@ -110,11 +111,11 @@ export const HeroImageBackground = ({
   const classes = useStyles();
   return (
     <Hero>
-      <div className={`${classes.heroWrapper} ${overlap ? 'overlap' : ''}`}>
+      <div className={`${classes.heroWrapper} ${overlap ? 'overlap' : ''} ${theme}`}>
         <div className="container px-3 px-md-0">
           <Row>
             <Col xs="12" lg="11" className="offset-lg-1">
-              <div className={`${classes.contentWrapper}`}>
+              <div className={`${classes.contentWrapper} ${theme}`}>
                 <div>
                   <HeroTitle title={title} className={classes.heroTitle} />
                   <HeroParagraph text={body} />
