@@ -1,13 +1,10 @@
 import React from 'react';
-import { Container, Row, Col, Hero } from 'design-react-kit';
 import content from '../../contents/home-page/home.yml';
+import { BeneficiariesSection } from './opportunity/BeneficiariesSection';
 import { SupportSection } from './faq/SupportSection';
 import { HeroImageBackground } from '../components/hero/HeroImageBackground';
 
-const {
-  heroDigital,
-  support,
-} = content;
+const { heroDigital, support } = content;
 
 export const OpportunityPage = () => (
   <>
@@ -17,6 +14,7 @@ export const OpportunityPage = () => (
       image="opportunity-hero.png"
       theme="bg-white"
     />
+    <BeneficiariesSection />
     <SupportSection
       supportList={support.cards}
       title={support.title}
