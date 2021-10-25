@@ -7,10 +7,10 @@ const useStyle = createUseStyles({
     '&.section-muted': {
       padding: '2.667rem 0.833rem',
       '@media (min-width: 768px)': {
-        padding: '2.667rem 2.222rem',
+        padding: '2.667rem 0',
       },
       '@media (min-width: 992px)': {
-        padding: '4rem 4.444rem',
+        padding: '4rem 0',
       },
       '@media (min-width: 1200px)': {
         padding: '4rem 6.222rem',
