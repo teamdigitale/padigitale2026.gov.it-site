@@ -18,6 +18,7 @@ export const IndexPage = () => (
       title={heroMain.title}
       body={heroMain.body}
       image="hero-home.png"
+      imageMobile="hero-home-mobile.png"
       overlap={true}
     />
     <HomeCarousel content={homeCarousel} />

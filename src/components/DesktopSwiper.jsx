@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import SwiperCore, { Pagination, A11y } from 'swiper';
+import SwiperCore, { Navigation, Pagination, A11y } from 'swiper';
 import { Controller } from 'swiper';
+import { Icon } from 'design-react-kit';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css/bundle';
 import { createUseStyles } from 'react-jss';
@@ -19,23 +20,32 @@ const useStyles = createUseStyles({
     composes: 'swiper-pagination-bullet-active',
     backgroundColor: '#0066CC',
   },
+  navigationBtn: {
+    '&.swiper-button-disabled': {
+      opacity: '0.2',
+    },
+  },
 });
 
-export const DesktopSwiper = ({ slides, breakpoints, pagination, mobilePagination, className }) => {
+export const DesktopSwiper = ({ slides, breakpoints, pagination, mobilePagination, desktopNavigation, className }) => {
   const classes = useStyles();
   const [paginationId, setPaginationId] = useState(null);
+  const [nextBtnId, setnextBtnId] = useState(null);
+  const [prevBtnId, setprevBtnId] = useState(null);
 
   // The pagination controller doesn't work with SSR, so we need to render it at runtime
   useEffect(() => {
     setPaginationId(`swiper-pagination-${Math.floor(Math.random() * 10000)}`);
+    setnextBtnId(`next-navigation-${Math.floor(Math.random() * 10000)}`);
+    setprevBtnId(`prev-navigation-${Math.floor(Math.random() * 10000)}`);
   }, []);
-  console.log(breakpoints);
 
   return (
     <>
       <div className="row mt-4">
         <div className="col-12">
           <Swiper
+            modules={[Navigation]}
             a11y={{
               enabled: true,
               prevSlideMessage: 'Slide precedente',
@@ -52,7 +62,11 @@ export const DesktopSwiper = ({ slides, breakpoints, pagination, mobilePaginatio
               bulletClass: classes.bullet,
               bulletActiveClass: classes.activeBullet,
             }}
-            createElements
+            navigation={{
+              prevEl: `[data-prev-navigation-id=${prevBtnId}]`,
+              nextEl: `[data-next-navigation-id=${nextBtnId}]`,
+              hiddenClass: classes.disabledNavBtn,
+            }}
           >
             {slides.map((slide, k) => (
               <SwiperSlide className={classes.swiperSlide} key={k}>
@@ -76,6 +90,24 @@ export const DesktopSwiper = ({ slides, breakpoints, pagination, mobilePaginatio
           )}
         </div>
       )}
+      {desktopNavigation && (
+        <div className="d-none justify-content-center pt-3 d-lg-flex">
+          <Icon
+            data-prev-navigation-id={prevBtnId}
+            className={classes.navigationBtn}
+            color="primary"
+            icon="it-arrow-left-circle"
+            size="lg"
+          />
+          <Icon
+            data-next-navigation-id={nextBtnId}
+            className={classes.navigationBtn}
+            color="primary"
+            icon="it-arrow-right-circle"
+            size="lg"
+          />
+        </div>
+      )}
     </>
   );
 };
@@ -85,5 +117,6 @@ DesktopSwiper.propTypes = {
   breakpoints: PropTypes.any,
   pagination: PropTypes.bool,
   mobilePagination: PropTypes.bool,
+  desktopNavigation: PropTypes.bool,
   className: PropTypes.any,
 };

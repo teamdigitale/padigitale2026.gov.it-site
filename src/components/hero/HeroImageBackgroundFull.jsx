@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { createUseStyles } from 'react-jss';
 import PropTypes from 'prop-types';
 import { Row, Col, Hero } from 'design-react-kit';
@@ -110,8 +110,19 @@ const useStyles = createUseStyles({
   },
 });
 
-export const HeroImageBackgroundFull = ({ category, title, body, image, overlap }) => {
+export const HeroImageBackgroundFull = ({ category, title, body, image, imageMobile, overlap }) => {
   const classes = useStyles();
+  const [isDesktop, setDesktop] = useState(window.innerWidth > 992);
+
+  const updateMedia = () => {
+    setDesktop(window.innerWidth > 1450);
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', updateMedia);
+    return () => window.removeEventListener('resize', updateMedia);
+  });
+
   return (
     <Hero>
       <div className={`${classes.heroWrapper} ${overlap ? 'overlap' : ''}`}>
@@ -123,22 +134,27 @@ export const HeroImageBackgroundFull = ({ category, title, body, image, overlap 
                   <HeroCategory title={category} />
                   <HeroTitle title={title} className={classes.heroTitle} />
                   <HeroParagraph text={body} />
-                  {/* <div className={classes.buttonContainer}>
-                    <HeroButton classButton={firstButtonClass} label={firstButtonLabel} href={firstButtonHref} />
-                    {secondButtonLabel ? (
-                      <HeroButton classButton={secondButtonClass} label={secondButtonLabel} href={secondButtonHref} />
-                    ) : (
-                      ''
-                    )}
-                  </div> */}
                 </div>
               </div>
             </Col>
           </Row>
         </div>
-        <HeroBackground image={image} className="full" />
+        {isDesktop ? (
+          <HeroBackground image={image} className="full" />
+        ) : (
+          <HeroBackground image={imageMobile} className="full" />
+        )}
         <div className={classes.bgMask}></div>
       </div>
     </Hero>
   );
+};
+
+HeroImageBackgroundFull.propTypes = {
+  category: PropTypes.any,
+  title: PropTypes.any,
+  body: PropTypes.any,
+  image: PropTypes.any,
+  imageMobile: PropTypes.any,
+  overlap: PropTypes.bool,
 };

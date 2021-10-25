@@ -86,10 +86,13 @@ const useStyles = createUseStyles({
     fontSize: '1.556rem',
     whiteSpace: 'nowrap',
   },
-  newsUpdateSection: {
+  investmentCarouselSection: {
     backgroundColor: '#fff',
-    padding: '1.111rem 0',
+    padding: '3.125rem 0 4.5rem 0',
     overflow: 'hidden',
+    '@media (min-width: 992px)': {
+      padding: '2.222rem 0 3.889rem 0',
+    },
     '& .swiper': {
       margin: '0 -1.111rem',
       '@media (max-width: 992px)': {
@@ -136,7 +139,7 @@ export const HomeCarousel = ({ content, title }) => {
 
   return (
     <>
-      <div className={classes.newsUpdateSection}>
+      <div className={classes.investmentCarouselSection}>
         <div className="container">
           {title ? (
             <Row>
@@ -156,6 +159,7 @@ export const HomeCarousel = ({ content, title }) => {
                 }}
                 className={classes.noHidden}
                 mobilePagination
+                desktopNavigation
               />
             </Col>
           </Row>
