@@ -1,6 +1,5 @@
-import React, { Fragment, useState } from 'react';
+import React from 'react';
 import { Button, Collapse, Card, CardBody } from 'design-react-kit';
-// import { StaticImage } from 'gatsby-plugin-image';
 import { ExternalLink } from './ExternalLink';
 import { createUseStyles } from 'react-jss';
 
@@ -56,25 +55,67 @@ const useStyles = createUseStyles({
   cardHeaderValue: {
     fontSize: '3.111rem',
     lineHeight: '1.15',
+    textAlign: 'right',
     '& span': {
       display: 'block',
       fontSize: '0.889rem',
     },
   },
   collapseAccordion: {
-    '& .card' : {
+    '& .card': {
       '&:after': {
         content: 'unset',
       },
     },
     '& .card-body': {
       padding: '0.444rem 2.222rem 1.778rem',
-    }
+      display: 'flex',
+      flexDirection: 'column',
+    },
+    '& .stalls': {
+      fontSize: '0.778rem',
+      lineHeight: '1.4',
+      letterSpacing: '0.5px',
+      textTransform: 'uppercase',
+      '& span': {
+        fontWeight: '600',
+        textTransform: 'lowercase',
+      },
+    },
+    '& .access': {
+      fontSize: '0.778rem',
+      lineHeight: '1.4',
+      letterSpacing: '0.5px',
+      textTransform: 'uppercase',
+      '& a': {
+        fontSize: '1rem',
+        fontWeight: '600',
+        color: '#0066CC',
+        textTransform: 'capitalize',
+        textDecoration: 'none',
+      },
+    },
+  },
+  linkAccordion: {
+    marginTop: '2.222rem',
+    textAlign: 'right',
+    '& a': {
+      textDecoration: 'none',
+      display: 'inline-flex',
+      alignItems: 'center',
+      fontSize: '0.778rem',
+      '& img': {
+        marginLeft: '0.444rem',
+      },
+    },
   },
   button: {
     backgroundColor: '#DAE3EC',
     borderTopLeftRadius: '0',
     borderBottomLeftRadius: '0',
+    '&[aria-expanded="true"]': {
+      backgroundColor: '#0066CC',
+    },
   },
 });
 
@@ -92,15 +133,11 @@ export const AccordionButtonFull = (props) => {
     moreInfoLabel,
     moreInfoLink,
   } = props.data;
-  const [collapse, setCollapse] = useState(false);
-  // const toggle = evt => {
-  //   console.log(evt);
-    
-  //   setCollapse(!collapse);
-  // };
+
   const eventHandler = () => {
-    props.handleToggle(props.id)
-  }
+    props.handleToggle(props.id);
+  };
+
   return (
     <>
       <div className={classes.collapseWrapper}>
@@ -113,10 +150,8 @@ export const AccordionButtonFull = (props) => {
               <div className={classes.cardTags}>
                 <p class="tag-title">Beneficiari</p>
                 <div className="tag-wrapper">
-                  {tags.map(tag => {
-                    return (
-                      <div className="tag">{tag.value}</div>
-                    )
+                  {tags.map((tag) => {
+                    return <div className="tag">{tag.label}</div>;
                   })}
                 </div>
               </div>
@@ -125,20 +160,25 @@ export const AccordionButtonFull = (props) => {
               {money} <span>milioni di euro</span>
             </div>
           </div>
-          <Collapse isOpen={props.id === props.active} className={classes.collapseAccordion}>
+          <Collapse
+            isOpen={props.id === props.active}
+            className={classes.collapseAccordion}
+          >
             <Card>
               <CardBody>
                 <p>{description}</p>
-                <p>
+                <p className="stalls">
                   Platea beneficiaria: <span>{stalls}</span>
                 </p>
-                <p>
+                <p className="access">
                   Modalità di accesso: <a href={accessLink}>{accessLabel}</a>
                 </p>
-                <ExternalLink linkTo={moreInfoLink} ariaLabel="aria label">
-                  {moreInfoLabel}
-                  <img src="/assets/external-icon.svg" alt="" />
-                </ExternalLink>
+                <div className={classes.linkAccordion}>
+                  <ExternalLink linkTo={moreInfoLink} ariaLabel="aria label">
+                    {moreInfoLabel}
+                    <img src="/assets/external-icon.svg" alt="" />
+                  </ExternalLink>
+                </div>
               </CardBody>
             </Card>
           </Collapse>
@@ -146,10 +186,14 @@ export const AccordionButtonFull = (props) => {
 
         <Button
           onClick={eventHandler}
-          aria-expanded={collapse}
+          aria-expanded={props.id === props.active}
           className={classes.button}
         >
-          >
+          {props.id === props.active ? (
+            <img src="/assets/chevron-up-white.svg" alt="" />
+          ) : (
+            <img src="/assets/chevron-down.svg" alt="" />
+          )}
         </Button>
       </div>
     </>

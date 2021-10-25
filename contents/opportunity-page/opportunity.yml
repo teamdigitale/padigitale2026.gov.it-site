@@ -1,4 +1,6 @@
 selectBeneficiaries: 
+  - value: tutti
+    label: Tutti
   - value: 'pa-centrali'
     label: 'PA Centrali'
   - value: 'comuni'
@@ -14,7 +16,8 @@ beneficiaries:
     title: Infrastrutture digitali
     money: 900
     tags: 
-      - value: PA Centrali
+      - value: pa-centrali
+        label: PA Centrali
     description: Garantire che i sistemi, i dataset e le applicazioni della PA siano ospitati in data center altamente affidabili e con elevati standard di qualità per sicurezza, prestazioni, scalabilità, interoperabilità europea ed efficienza energetica.
     stalls: '280 enti'
     accessLabel: Presentazione Progetto
@@ -25,9 +28,12 @@ beneficiaries:
     title: Abilitazione e facilitazione migrazione al Cloud
     money: 1
     tags:
-      - value: ASL/AO
-      - value: Comuni
-      - value: Scuole
+      - label: ASL/AO
+        value: asl/ao
+      - label: 'comuni'
+        value: 'Comuni'
+      - label: Scuole
+        value: scuole
     description: Garantire che i sistemi, i dataset e le applicazioni della PA siano ospitati in data center altamente affidabili e con elevati standard di qualità per sicurezza, prestazioni, scalabilità, interoperabilità europea ed efficienza energetica.
     stalls: '280 enti'
     accessLabel: Presentazione Progetto
@@ -38,11 +44,16 @@ beneficiaries:
     title: Piattaforma Digitale Nazionale Dati
     money: 556
     tags:
-      - value: PA Centrali
-      - value: ASL/AO
-      - value: Comuni
-      - value: Regioni
-      - value: Università
+      - value: pa-centrali
+        label: PA Centrali
+      - value: asl/ao
+        label: ASL/AO
+      - value: comuni
+        label: Comuni
+      - value: regioni
+        label: Regioni
+      - value: universita
+        label: Università
     description: Garantire che i sistemi, i dataset e le applicazioni della PA siano ospitati in data center altamente affidabili e con elevati standard di qualità per sicurezza, prestazioni, scalabilità, interoperabilità europea ed efficienza energetica.
     stalls: '280 enti'
     accessLabel: Presentazione Progetto
@@ -53,12 +64,18 @@ beneficiaries:
     title: Sportello Digitale Unico
     money: 90
     tags:
-      - value: PA Centrali
-      - value: ASL/AO
-      - value: Comuni
-      - value: Scuole
-      - value: Regioni
-      - value: Altro
+      - value: pa-centrali
+        label: PA Centrali
+      - value: asl/ao
+        label: ASL/AO
+      - value: comuni
+        label: Comuni
+      - value: scuole
+        label: Scuole
+      - value: regioni
+        label: Regioni
+      - value: altro
+        label: Altro
     description: Garantire che i sistemi, i dataset e le applicazioni della PA siano ospitati in data center altamente affidabili e con elevati standard di qualità per sicurezza, prestazioni, scalabilità, interoperabilità europea ed efficienza energetica.
     stalls: '280 enti'
     accessLabel: Presentazione Progetto
@@ -69,8 +86,10 @@ beneficiaries:
     title: Esperienza dei servizi pubblici
     money: 613
     tags:
-      - value: Comuni
-      - value: Scuole
+      - value: comuni
+        label: Comuni
+      - value: scuole
+        label: Scuole
     description: Garantire che i sistemi, i dataset e le applicazioni della PA siano ospitati in data center altamente affidabili e con elevati standard di qualità per sicurezza, prestazioni, scalabilità, interoperabilità europea ed efficienza energetica.
     stalls: '280 enti'
     accessLabel: Presentazione Progetto
