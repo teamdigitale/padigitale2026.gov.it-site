@@ -1,12 +1,12 @@
-import React, { Fragment, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Input, Row, Col } from 'design-react-kit';
+import { createUseStyles } from 'react-jss';
 import content from '../../contents/home-page/home.yml';
 import faq from '../../contents/faq-page/faq.yml';
 import { SideNavigation } from './faq/SideNavigation';
 import { QuestionSection } from './faq/QuestionSection';
 import { SupportSection } from './faq/SupportSection';
 import { HeroSupport } from './support/Hero';
-import { createUseStyles } from 'react-jss';
 
 const useStyles = createUseStyles({
   noResults: {
@@ -33,17 +33,17 @@ export const FaqPage = () => {
   const handleChange = (event) => {
     setInputValue(event.target.value);
     if (event.target.value.length >= 3) {
-      let newQuest = [];
+      const newQuest = [];
       faq.questions.forEach((question) => {
         if (getAccordionsFiltered(question).length) {
           newQuest.push(question);
         }
       });
 
-      if (isMobile && filterId != 'all') {
-        let filteredQuestions = [];
+      if (isMobile && filterId !== 'all') {
+        const filteredQuestions = [];
         newQuest.forEach((question) => {
-          if (question.sectionId == filterId) {
+          if (question.sectionId === filterId) {
             filteredQuestions.push(question);
           }
         });
@@ -54,9 +54,9 @@ export const FaqPage = () => {
     } else {
       if (isMobile) {
         if (filterId !== 'all') {
-          let filteredQuestions = [];
+          const filteredQuestions = [];
           faq.questions.forEach((question) => {
-            if (question.sectionId == filterId) {
+            if (question.sectionId === filterId) {
               filteredQuestions.push(question);
             }
           });
@@ -73,17 +73,13 @@ export const FaqPage = () => {
   function getAccordionsFiltered(question) {
     const regexp = new RegExp(event.target.value, 'i');
 
-    const filterAccordions = question.accordions.filter((accordion) =>
-      regexp.test(accordion.title)
-    );
-
-    return filterAccordions
+    return question.accordions.filter((accordion) => regexp.test(accordion.title));
   }
 
   useEffect(() => {
     if (!isMobile) {
       if (inputValue && inputValue.length >= 3) {
-        let newQuest = [];
+        const newQuest = [];
         faq.questions.forEach((question) => {
           if (getAccordionsFiltered(question).length) {
             newQuest.push(question);
@@ -98,9 +94,9 @@ export const FaqPage = () => {
 
   useEffect(() => {
     if (filterId) {
-      if (filterId == 'all') {
+      if (filterId === 'all') {
         if (inputValue) {
-          let newQuest = [];
+          const newQuest = [];
           faq.questions.forEach((question) => {
             if (getAccordionsFiltered(question).length) {
               newQuest.push(question);
@@ -111,9 +107,9 @@ export const FaqPage = () => {
           setQuestions(faq.questions);
         }
       } else {
-        let filteredQuestions = [];
+        const filteredQuestions = [];
         faq.questions.forEach((question) => {
-          if (question.sectionId == filterId) {
+          if (question.sectionId === filterId) {
             filteredQuestions.push(question);
           }
         });
@@ -154,7 +150,7 @@ export const FaqPage = () => {
               <SideNavigation getFilter={setFilterId} />
             </Col>
             <Col lg={9} className="px-lg-3">
-              {questions.map((question, i) => {
+              {questions.map((question) => {
                 return (
                   <QuestionSection
                     key={question.title}

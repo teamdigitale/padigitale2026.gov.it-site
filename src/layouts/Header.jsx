@@ -12,15 +12,12 @@ import {
   HeaderBrand,
   LinkListItem,
   LinkList,
-  Button,
   HeaderLinkZone,
 } from 'design-react-kit';
 import { createUseStyles } from 'react-jss';
 import links from '../../contents/links.yml';
 import labels from '../../contents/labels.yml';
-import content from '../../contents/home-page/home.yml';
 import { HeaderNav } from '../components/HeaderNav';
-import { ExternalLink } from '../components/ExternalLink';
 
 const { internalLinks, externalLinks } = links;
 const { ariaLabel, headerTitle, headerSubtitle } = labels;
@@ -142,22 +139,7 @@ const useStyle = createUseStyles({
   },
 });
 
-const BrandSlimHeader = () => (
-  <>
-    <ExternalLink
-      linkTo={externalLinks.dipartimento.linkTo}
-      ariaLabel={externalLinks.dipartimento.ariaLabel}
-    >
-      <span className="d-inline d-lg-none d-xl-inline">
-        {externalLinks.dipartimento.label}
-      </span>
-      <span className="d-none d-lg-inline d-xl-none">DTD</span>
-    </ExternalLink>
-  </>
-);
-
 const SlimHeader = () => {
-  const [isOpen, toggleDropdown] = useState(false);
   const classes = useStyle();
   return (
     <HeaderReactKit type="slim" theme="light">
@@ -227,7 +209,7 @@ const CenterHeader = () => {
   );
 };
 
-const NavHeader = (props) => {
+const NavHeader = () => {
   const [isOpen, setIsOpen] = useState(false);
   const closeMenu = () => setIsOpen(false);
   const toogleMenu = () => setIsOpen(!isOpen);
