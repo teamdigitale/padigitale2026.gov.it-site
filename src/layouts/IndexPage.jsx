@@ -1,5 +1,14 @@
 import React from 'react';
-import content from '../../contents/home-page/home.yml';
+import {
+  heroMain,
+  heroDigital,
+  heroPnrr,
+  opportunity,
+  heroCarouselNews,
+  homeCarousel,
+  heroCarouselNewsTitle,
+  support,
+} from '../../contents/home-page/home.yml';
 import { HeroImageBackground } from '../components/hero/HeroImageBackground';
 import { HeroImageBackgroundFull } from '../components/hero/HeroImageBackgroundFull';
 import { HeroImage } from '../components/hero/HeroImage';
@@ -7,8 +16,6 @@ import { HeroCarousel } from '../components/carousel/Carousel';
 import { HomeCarousel } from '../components/carousel/HomeCarousel';
 import { SupportSection } from './faq/SupportSection';
 import { OpportunitySection } from './home/OpportunitySection';
-
-const { heroMain, heroDigital, heroPnrr, opportunity, heroCarouselNews, homeCarousel, heroCarouselNewsTitle, support } = content;
 
 export const IndexPage = () => (
   <>
