@@ -1,8 +1,6 @@
 selectBeneficiaries: 
   - value: tutti
     label: Tutti
-  - value: 'pa-centrali'
-    label: 'PA Centrali'
   - value: 'comuni'
     label: 'Comuni'
   - value: 'province'
@@ -11,6 +9,26 @@ selectBeneficiaries:
     label: 'Regioni'
   - value: 'enti-regionali'
     label: 'Enti regionali'
+  - value: 'asl-ao'
+    label: 'ASL/AO'
+  - value: 'altre-pa-locali'
+    label: 'Altre PA locali'
+  - value: 'scuole'
+    label: 'Scuole'
+  - value: 'universita'
+    label: 'Università'
+  - value: 'enti-diritto'
+    label: 'Enti per il diritto allo studio, agenzie, consorzi'
+  - value: 'istituti-formazione'
+    label: 'Istituti di alta formazione musicale e coreutica'
+  - value: 'enti-ricerca-pubblica'
+    label: 'Enti di ricera pubblica'
+  - value: 'consorzi-ricerca'
+    label: 'Consorzi interuniversitari di ricerca'
+  - value: 'enti-sevizio-civile'
+    label: 'Enti iscritti all’albo del servizio civile'
+  - value: 'pa-centrali'
+    label: 'PA Centrali'
 beneficiaries: 
   - number: 1.1
     title: Infrastrutture digitali

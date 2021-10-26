@@ -118,7 +118,7 @@ export const BeneficiariesSection = () => {
 
   return (
     <>
-      <div className="container mt-5">
+      <div className="container mt-5 px-3">
         <div className={classes.selectWrapper}>
           <label htmlFor="beneficiaries">Beneficiari</label>
           <Select
