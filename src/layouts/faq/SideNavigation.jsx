@@ -3,16 +3,16 @@ import { Sidebar, LinkListItem, LinkList } from 'design-react-kit';
 // import { StaticImage } from 'gatsby-plugin-image';
 import { createUseStyles } from 'react-jss';
 
-import content from '../../../contents/faq-page/faq.yml';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import content from '../../../contents/faq-page/faq.yml';
 
 const useStyles = createUseStyles({
   wrapper: {
     '@media (min-width: 992px)': {
       borderRight: '1px solid #d9dadb',
       position: 'sticky',
-      top: '0.833rem'
+      top: '0.833rem',
     },
     '& .sidebar-linklist-wrapper': {
       '& .link-list-wrapper': {
@@ -61,7 +61,7 @@ const useStyles = createUseStyles({
                 marginRight: '0',
                 color: '#0073E6',
                 textDecoration: 'none',
-                fontWeight: '600'
+                fontWeight: '600',
               },
               '&.active': {
                 backgroundColor: '#0066CC',
@@ -89,19 +89,17 @@ export const SideNavigation = (props) => {
   const [isMobile, setIsMobile] = useState();
 
   useEffect(() => {
-    setIsMobile(window.innerWidth < 992)
+    setIsMobile(window.innerWidth < 992);
     window.addEventListener('resize', () => {
       setIsMobile(window.innerWidth < 992);
     });
-  }, [])
+  }, []);
 
   useEffect(() => {
     removeActive();
-    const items = document.querySelectorAll(
-      '.sidebar-wrapper .link-list .list-item'
-    );
+    const items = document.querySelectorAll('.sidebar-wrapper .link-list .list-item');
     items[0].classList.add('active');
-  }, [isMobile])
+  }, [isMobile]);
 
   function handleClik(evt) {
     evt.preventDefault();
@@ -109,21 +107,19 @@ export const SideNavigation = (props) => {
     const linkTag = evt.target.closest('a');
     linkTag.classList.add('active');
 
-    if(!isMobile) {
+    if (!isMobile) {
       document.querySelector(linkTag.getAttribute('href')).scrollIntoView({
         behavior: 'smooth',
       });
     }
-    
+
     if (isMobile) {
       props.getFilter(linkTag.getAttribute('data-id'));
     }
   }
 
   function removeActive() {
-    const items = document.querySelectorAll(
-      '.sidebar-wrapper .link-list .list-item'
-    );
+    const items = document.querySelectorAll('.sidebar-wrapper .link-list .list-item');
 
     items.forEach((item) => {
       item.classList.remove('active');
@@ -145,7 +141,7 @@ export const SideNavigation = (props) => {
           </LinkListItem>
         )}
 
-        {content.sidebar.map((anchor, i) => (
+        {content.sidebar.map((anchor) => (
           <>
             {anchor.sectionActive ? (
               <LinkListItem

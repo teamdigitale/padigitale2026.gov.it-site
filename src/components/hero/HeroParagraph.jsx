@@ -7,7 +7,7 @@ const useStyles = createUseStyles({
     fontFamily: 'Titillium Web,Geneva,Tahoma,sans-serif',
     '@media (max-width: 992px)': {
       textAlign: 'center',
-    }
+    },
   },
 });
 

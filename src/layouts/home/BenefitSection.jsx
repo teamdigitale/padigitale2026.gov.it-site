@@ -6,7 +6,6 @@ import { HeroBody } from '../../components/hero/HeroBody';
 import { HeroCtaContainer } from '../../components/hero/HeroCtaContainer';
 import { HeroGraphic } from '../../components/hero/HeroGraphic';
 import { Hero } from '../../components/hero/Hero';
-import { Cta } from '../../components/hero/Cta';
 import content from '../../../contents/home-page/home.yml';
 import links from '../../../contents/links.yml';
 import labels from '../../../contents/labels.yml';
@@ -25,11 +24,7 @@ export const BenefitSection = () => (
   <Hero bgColor="light">
     <div id="comefunziona" className="row align-items-center px-lg-5">
       <HeroGraphic className="col-lg-6 p-0">
-        <StaticImage
-          src="../../images/section02.jpg"
-          alt={altImg}
-          aria-label={altImg}
-        />
+        <StaticImage src="../../images/section02.jpg" alt={altImg} aria-label={altImg} />
       </HeroGraphic>
       <div className="col-lg-6 p-0 pl-lg-5">
         <div className="text-center text-lg-left mt-3 mt-lg-0 pl-lg-3">

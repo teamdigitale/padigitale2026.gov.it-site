@@ -75,27 +75,18 @@ export const SupportSection = (props) => {
           <Row>
             <Col className={classes.layout}>
               <Row>
-                {supportList.map((card) => {
-                  return (
-                    <Col
-                      key={card.title}
-                      md={4}
-                      lg={3}
-                      className="mb-3 mb-md-0"
-                    >
-                      <Card teaser noWrapper className={classes.cardWrapper}>
-                        <CardBody>
-                          <CardTitle tag="h5" className={classes.cardTitle}>
-                            {card.title}
-                          </CardTitle>
-                          <CardText className={classes.cardText}>
-                            {card.description}
-                          </CardText>
-                        </CardBody>
-                      </Card>
-                    </Col>
-                  );
-                })}
+                {supportList.map((card) => (
+                  <Col key={card.title} md={4} lg={3} className="mb-3 mb-md-0">
+                    <Card teaser noWrapper className={classes.cardWrapper}>
+                      <CardBody>
+                        <CardTitle tag="h5" className={classes.cardTitle}>
+                          {card.title}
+                        </CardTitle>
+                        <CardText className={classes.cardText}>{card.description}</CardText>
+                      </CardBody>
+                    </Card>
+                  </Col>
+                ))}
               </Row>
             </Col>
           </Row>

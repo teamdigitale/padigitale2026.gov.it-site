@@ -66,11 +66,7 @@ export const DesktopSwiper = ({ slides }) => {
       </div>
       <div className="mt-4 pb-4 d-flex justify-content-center pt-3">
         {paginationId && (
-          <div
-            data-swiper-id={paginationId}
-            className="swiper-pagination"
-            style={{ bottom: 'unset' }}
-          ></div>
+          <div data-swiper-id={paginationId} className="swiper-pagination" style={{ bottom: 'unset' }}></div>
         )}
       </div>
     </>

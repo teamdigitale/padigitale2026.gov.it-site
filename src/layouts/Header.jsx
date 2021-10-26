@@ -144,14 +144,10 @@ const SlimHeader = () => {
   return (
     <HeaderReactKit type="slim" theme="light">
       <HeaderContent>
-        <HeaderBrand className="font-weight-bold">
-          {externalLinks.dipartimento.label}
-        </HeaderBrand>
+        <HeaderBrand className="font-weight-bold">{externalLinks.dipartimento.label}</HeaderBrand>
         <HeaderLinkZone>
           <HeaderToggler type="button" onClick={function noRefCheck() {}}>
-            <span className="font-weight-bold">
-              {externalLinks.dipartimento.label}
-            </span>
+            <span className="font-weight-bold">{externalLinks.dipartimento.label}</span>
             <Icon icon="it-expand" />
           </HeaderToggler>
           <Collapse header>
@@ -160,9 +156,7 @@ const SlimHeader = () => {
                 <LinkListItem href={externalLinks.italiaDigitale.linkTo}>
                   {externalLinks.italiaDigitale.label}
                 </LinkListItem>
-                <LinkListItem href={externalLinks.pnrr.linkTo}>
-                  {externalLinks.pnrr.label}
-                </LinkListItem>
+                <LinkListItem href={externalLinks.pnrr.linkTo}>{externalLinks.pnrr.label}</LinkListItem>
               </LinkList>
             </div>
           </Collapse>
@@ -176,26 +170,14 @@ const SlimHeader = () => {
 const CenterHeader = () => {
   const classes = useStyle();
   return (
-    <HeaderReactKit
-      type="center"
-      theme="light"
-      className={classes.headerCenterWrapper}
-    >
+    <HeaderReactKit type="center" theme="light" className={classes.headerCenterWrapper}>
       <HeaderContent>
         <div className="it-brand-wrapper pl-5 pl-sm-0">
           <Link to="/">
             <div className="it-brand-text pr-0">
               <div className="d-md-flex align-items-center">
-                <img
-                  className="icon"
-                  src="/assets/repubblica-logo-blue.svg"
-                  alt="Logo Repubblica Italiana"
-                />
-                <img
-                  className="icon"
-                  src="/assets/site-logo.svg"
-                  alt="Logo prossima PA"
-                />
+                <img className="icon" src="/assets/repubblica-logo-blue.svg" alt="Logo Repubblica Italiana" />
+                <img className="icon" src="/assets/site-logo.svg" alt="Logo prossima PA" />
                 <div className="d-none d-lg-inline-block">
                   <div className="h3 mb-0">{headerTitle}</div>
                   <div className={classes.subtitle}>{headerSubtitle}</div>
@@ -216,12 +198,7 @@ const NavHeader = () => {
   const classes = useStyle();
   return (
     <HeaderReactKit type="navbar" theme="light" className={classes.noShadow}>
-      <HeaderContent
-        expand="lg"
-        megamenu
-        aria-label={ariaLabel.menu}
-        className="px-2"
-      >
+      <HeaderContent expand="lg" megamenu aria-label={ariaLabel.menu} className="px-2">
         <button
           onClick={() => setIsOpen(!isOpen)}
           aria-label={ariaLabel.toggleMenu}
@@ -237,11 +214,7 @@ const NavHeader = () => {
             <Nav navbar className={classes.navbarNav}>
               <div className={classes.offCanvasWrapper}>
                 <a href="/" tabIndex="-1">
-                  <img
-                    className="icon"
-                    src="/assets/site-logo.svg"
-                    alt="Logo"
-                  />
+                  <img className="icon" src="/assets/site-logo.svg" alt="Logo" />
                 </a>
                 <a href="/" className={classes.offCanvasTitle}>
                   {headerTitle}
@@ -254,9 +227,7 @@ const NavHeader = () => {
                   activeClassName="active"
                   onClick={closeMenu}
                 >
-                  <span className="font-weight-semibold">
-                    {internalLinks.strategy.label}
-                  </span>
+                  <span className="font-weight-semibold">{internalLinks.strategy.label}</span>
                 </Link>
               </NavItem>
               <NavItem>
@@ -266,9 +237,7 @@ const NavHeader = () => {
                   activeClassName="active"
                   onClick={closeMenu}
                 >
-                  <span className="font-weight-semibold">
-                    {internalLinks.enablement.label}
-                  </span>
+                  <span className="font-weight-semibold">{internalLinks.enablement.label}</span>
                 </Link>
               </NavItem>
               <NavItem>
@@ -278,9 +247,7 @@ const NavHeader = () => {
                   activeClassName="active"
                   onClick={closeMenu}
                 >
-                  <span className="font-weight-semibold">
-                    {internalLinks.support.label}
-                  </span>
+                  <span className="font-weight-semibold">{internalLinks.support.label}</span>
                 </Link>
               </NavItem>
             </Nav>
@@ -292,9 +259,7 @@ const NavHeader = () => {
                   activeClassName="active"
                   onClick={closeMenu}
                 >
-                  <span className="font-weight-semibold">
-                    {internalLinks.updates.label}
-                  </span>
+                  <span className="font-weight-semibold">{internalLinks.updates.label}</span>
                 </Link>
               </NavItem>
             </Nav>
