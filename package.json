@@ -10,7 +10,8 @@
     "clean": "gatsby clean",
     "develop": "gatsby develop",
     "deploy": "gh-pages -u 'Deploy Bot <no-reply@teamdigitale.governo.it>' -d public",
-    "lint": "eslint src --ext .js",
+    "lint": "eslint src --ext .js,.jsx",
+    "lint-autofix": "eslint src --ext .js,.jsx --fix",
     "html-proofer": "docker-compose up --build",
     "pa11y": "sh pa11y.sh",
     "serve": "gatsby serve"

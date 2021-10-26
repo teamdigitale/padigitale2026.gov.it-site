@@ -1,18 +1,6 @@
-import React, { Fragment, useState } from 'react';
-import {
-  Section,
-  Card,
-  CardBody,
-  CardText,
-  CardTitle,
-  Button,
-  Row,
-  Col,
-} from 'design-react-kit';
-// import { StaticImage } from 'gatsby-plugin-image';
+import React from 'react';
+import { Section, Card, CardBody, CardText, CardTitle, Button, Row, Col } from 'design-react-kit';
 import { createUseStyles } from 'react-jss';
-
-import { questions } from '../../../contents/faq-page/faq.yml';
 
 const useStyles = createUseStyles({
   layout: {
