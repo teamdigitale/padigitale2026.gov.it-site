@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { createUseStyles } from 'react-jss';
 import classNames from 'classnames';
 
@@ -31,7 +30,7 @@ export const HeroBackground = ({ image, className }) => {
   return <img src={`/assets/${image}`} alt="italy" className={heroBgClasses} />;
 };
 
-HeroBackground.propTypes = {
-  image: PropTypes.any,
-  className: PropTypes.any,
-};
+// HeroBackground.propTypes = {
+//   image: PropTypes.any,
+//   className: PropTypes.any,
+// };
