@@ -30,3 +30,8 @@ export const HeroBackground = ({ image, className }) => {
   const heroBgClasses = classNames(classes.heroImg, className);
   return <img src={`/assets/${image}`} alt="italy" className={heroBgClasses} />;
 };
+
+HeroBackground.propTypes = {
+  image: PropTypes.any,
+  className: PropTypes.any,
+};

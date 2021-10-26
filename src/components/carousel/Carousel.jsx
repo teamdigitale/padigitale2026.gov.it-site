@@ -2,7 +2,6 @@ import React from 'react';
 import { createUseStyles } from 'react-jss';
 import { Row, Col, Card, CardBody, CardCategory, CardTitle, CardText } from 'design-react-kit';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
 import { DesktopSwiper } from '../DesktopSwiper';
 
 const useStyles = createUseStyles({
@@ -136,4 +135,9 @@ export const HeroCarousel = ({ content, title }) => {
       </div>
     </>
   );
+};
+
+HeroCarousel.propTypes = {
+  content: PropTypes.any,
+  title: PropTypes.any,
 };
