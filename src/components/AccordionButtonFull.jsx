@@ -233,10 +233,10 @@ export const AccordionButtonFull = (props) => {
               {money} <span>milioni di euro</span>
             </div>
             <div className={classes.cardTags}>
-              <p class="tag-title">Beneficiari</p>
+              <p className="tag-title">Beneficiari</p>
               <div className="tag-wrapper">
                 {tags.map((tag) => {
-                  return <div className="tag">{tag.label}</div>;
+                  return <div key={tag.label} className="tag">{tag.label}</div>;
                 })}
               </div>
             </div>
