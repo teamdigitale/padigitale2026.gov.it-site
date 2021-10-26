@@ -223,12 +223,9 @@ export const AccordionButtonFull = (props) => {
       <div className={classes.collapseWrapper}>
         <div className={classes.cardWrapper}>
           <div className={classes.cardHeader}>
-            {/* <div className={classes.cardHeaderInfo}> */}
             <p className={classes.cardTitle}>
               <span>{number}</span> {title}
             </p>
-
-            {/* </div> */}
             <div className={classes.cardHeaderValue}>
               {money} <span>milioni di euro</span>
             </div>
