@@ -1,6 +1,5 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
-import PropTypes from 'prop-types';
 import { Row, Col, Hero } from 'design-react-kit';
 import { HeroTitle } from './HeroTitle';
 import { HeroBackground } from './HeroBackground';

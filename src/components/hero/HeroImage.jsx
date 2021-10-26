@@ -1,5 +1,4 @@
 import React from 'react';
-import { StaticImage } from 'gatsby-plugin-image';
 import { createUseStyles } from 'react-jss';
 
 import { HeroCategory } from '../../components/hero/HeroCategory';
@@ -42,9 +41,7 @@ const useStyles = createUseStyles({
   },
   heroImage: {
     composes: 'row align-items-center',
-    '@media (min-width: 992px)': {
-      //paddingLeft: '100px',
-    },
+    '@media (min-width: 992px)': {},
     '& .hero-category': {
       color: '#33485C',
       fontSize: '0.889rem',
