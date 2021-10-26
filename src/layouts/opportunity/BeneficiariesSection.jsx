@@ -26,14 +26,14 @@ const useStyles = createUseStyles({
       '&.is-open': {
         '& [class$="-control"]': {
           borderBottomLeftRadius: '0',
-          borderBottomRightRadius: '0'
-        }
+          borderBottomRightRadius: '0',
+        },
       },
       '&.not-all': {
         '& [class$="-control"]': {
           backgroundColor: '#0066CC',
-        }
-      }
+        },
+      },
     },
     '& [class$="-control"]': {
       backgroundColor: '#5D6F81',
@@ -66,8 +66,8 @@ const useStyles = createUseStyles({
         backgroundColor: '#fff',
         color: '#0066CC',
         fontSize: '0.889rem',
-        lineHeight: '1.5'
-      }
+        lineHeight: '1.5',
+      },
     },
   },
 });
@@ -77,7 +77,7 @@ const customStyles = {
     ...provided,
     fontWeight: state.isSelected ? 'bold' : 'normal',
   }),
-}
+};
 
 export const BeneficiariesSection = () => {
   const classes = useStyles();
@@ -110,7 +110,7 @@ export const BeneficiariesSection = () => {
         setAccordions(filteredList);
         setFilterIsAll(false);
       } else {
-        setFilterIsAll(true)
+        setFilterIsAll(true);
         setAccordions(beneficiaries);
       }
     }
@@ -131,18 +131,23 @@ export const BeneficiariesSection = () => {
             onMenuClose={handleClose}
             options={selectBeneficiaries}
             placeholder={false}
-            className={isOpen == true ? 'is-open' : '', filterIsAll == true ? '' : 'not-all'}
+            className={
+              (isOpen == true ? 'is-open' : '',
+              filterIsAll == true ? '' : 'not-all')
+            }
             aria-label="Scegli una opzione"
           />
         </div>
         {accordions.map((item, i) => {
           return (
-            <AccordionButtonFull
-              data={item}
-              handleToggle={setActiveAccordion}
-              id={i}
-              active={indexOpen}
-            />
+            <React.Fragment key={item.title}>
+              <AccordionButtonFull
+                data={item}
+                handleToggle={setActiveAccordion}
+                id={i}
+                active={indexOpen}
+              />
+            </React.Fragment>
           );
         })}
       </div>

@@ -38,7 +38,7 @@ const useStyles = createUseStyles({
     lineHeight: '1.25',
     fontWeight: 'bold',
     alignSelf: 'flex-start',
-    maxWidth: 'calc(100% - 48px)',
+    maxWidth: 'calc(100% - 3.5rem)',
     '& span': {
       fontWeight: 'normal',
     },
@@ -51,7 +51,7 @@ const useStyles = createUseStyles({
   cardTags: {
     '@media (min-width: 992px)': {
       display: 'flex',
-      alignItems: 'center',
+      alignItems: 'baseline',
       flexBasis: '100%',
       marginTop: '-1.111rem',
     },
@@ -68,7 +68,8 @@ const useStyles = createUseStyles({
       flexWrap: 'wrap',
       justifyContent: 'center',
       '@media (min-width: 992px)': {
-        justifyContent: 'flex-start'
+        justifyContent: 'flex-start',
+        maxWidth: '70%'
       },
     },
     '& .tag': {
@@ -77,8 +78,14 @@ const useStyles = createUseStyles({
       border: '1px solid #E6E9F2',
       fontSize: '0.778rem',
       fontWeight: '600',
-      '& + .tag': {
-        marginLeft: '0.444rem',
+      marginBottom: '0.444rem',
+      maxWidth: '8.889rem',
+      textOverflow: 'ellipsis',
+      whiteSpace: 'nowrap',
+      overflow: 'hidden',
+      marginRight: '0.444rem',
+      '&::last-child': {
+        marginRight: '0'
       },
     },
   },
@@ -174,6 +181,7 @@ const useStyles = createUseStyles({
     padding: '0.444rem',
     position: 'absolute',
     right: '0',
+    boxShadow: 'none',
     '&[aria-expanded="true"]': {
       backgroundColor: '#0066CC',
     },
