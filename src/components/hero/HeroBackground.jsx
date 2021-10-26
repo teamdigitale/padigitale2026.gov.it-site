@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { createUseStyles } from 'react-jss';
 
 const useStyles = createUseStyles({
@@ -10,15 +9,13 @@ const useStyles = createUseStyles({
     maxHeight: '100%',
     maxWidth: '100%',
     '@media (max-width: 992px)': {
-      position: "relative",
-      margin: "0 auto",
-    }
+      position: 'relative',
+      margin: '0 auto',
+    },
   },
 });
 
-export const HeroBackground = ({ image, className }) => {
+export const HeroBackground = ({ image }) => {
   const classes = useStyles();
-  return (
-    <img src={`/assets/${image}`} alt="italy" className={classes.heroImg} />
-  );
+  return <img src={`/assets/${image}`} alt="italy" className={classes.heroImg} />;
 };
