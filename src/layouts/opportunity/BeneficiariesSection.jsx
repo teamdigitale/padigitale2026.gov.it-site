@@ -39,7 +39,7 @@ const useStyles = createUseStyles({
       backgroundColor: '#5D6F81',
       maxHeight: '48px',
       border: '0',
-      padding: '10px 24px',
+      padding: '0.555rem 1.333rem',
       '& [class$="-singleValue"]': {
         color: '#fff',
         fontWeight: 'bold',
@@ -50,7 +50,7 @@ const useStyles = createUseStyles({
       '& [class$="-indicatorContainer"]': {
         padding: '0',
       },
-      '& .css-tj5bde-Svg': {
+      '& [class$="-Svg"]': {
         color: '#fff',
       },
       '& [class$="-ValueContainer"]': {
