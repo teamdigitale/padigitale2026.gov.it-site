@@ -36,6 +36,7 @@ const useStyles = createUseStyles({
       },
     },
     '& [class$="-control"]': {
+      cursor: 'pointer',
       backgroundColor: '#5D6F81',
       maxHeight: '48px',
       border: '0',
@@ -50,7 +51,7 @@ const useStyles = createUseStyles({
       '& [class$="-indicatorContainer"]': {
         padding: '0',
       },
-      '& [class$="-Svg"]': {
+      '& svg': {
         color: '#fff',
       },
       '& [class$="-ValueContainer"]': {
@@ -63,10 +64,14 @@ const useStyles = createUseStyles({
       borderTopRightRadius: '0',
       boxShadow: '0 2px 20px 0 rgb(0 0 0 / 10%)',
       '& [class$="-option"]': {
+        cursor: 'pointer',
         backgroundColor: '#fff',
         color: '#0066CC',
         fontSize: '0.889rem',
         lineHeight: '1.5',
+        '&:hover': {
+          fontWeight: 'bold'
+        }
       },
     },
   },
