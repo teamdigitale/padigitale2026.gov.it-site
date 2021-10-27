@@ -182,15 +182,28 @@ const useStyles = createUseStyles({
     position: 'absolute',
     right: '0',
     boxShadow: 'none',
+    backgroundImage: 'url(/assets/chevron-down.svg)',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
+    '&:hover, &:focus': {
+      backgroundColor: '#0066CC',
+      backgroundImage: 'url(/assets/chevron-down-white.svg)',
+    },
     '&[aria-expanded="true"]': {
       backgroundColor: '#0066CC',
+      backgroundImage: 'url(/assets/chevron-up-white.svg)',
+      '&:hover, &:focus': {
+        backgroundImage: 'url(/assets/chevron-up-white.svg)',
+      },
     },
     '@media (max-width: 991px)': {
       maxHeight: '95px',
       height: '100%',
+      minWidth: '2.667rem'
     },
     '@media (min-width: 992px)': {
       position: 'static',
+      minWidth: '5.333rem',
       padding: '0.667rem 1.333rem',
       borderTopLeftRadius: '0',
       borderBottomLeftRadius: '0',
@@ -267,11 +280,11 @@ export const AccordionButtonFull = (props) => {
           aria-expanded={props.id === props.active}
           className={classes.button}
         >
-          {props.id === props.active ? (
+          {/* {props.id === props.active ? (
             <img src="/assets/chevron-up-white.svg" alt="" />
           ) : (
             <img src="/assets/chevron-down.svg" alt="" />
-          )}
+          )} */}
         </Button>
       </div>
     </>
