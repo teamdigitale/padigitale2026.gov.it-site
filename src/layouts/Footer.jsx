@@ -2,15 +2,12 @@ import React from 'react';
 import { Link } from 'gatsby';
 import { createUseStyles } from 'react-jss';
 import links from '../../contents/links.yml';
-import labels from '../../contents/labels.yml';
 import { ExternalLink } from '../components/ExternalLink';
 
 const {
   internalLinks: { privacy, credits, noteLegali },
-  externalLinks: { dipartimento, agid, a11y },
+  externalLinks: { dipartimento, a11y },
 } = links;
-
-const { footerA11y } = labels;
 
 const useStyle = createUseStyles({
   mainFooter: {
@@ -88,18 +85,12 @@ const SlimFooter = () => {
       <div className="container">
         <ul className="list-inline link-list mb-0 text-center text-md-left">
           <li className={`${classes.listItem} mr-0 mr-md-5`}>
-            <Link
-              to={noteLegali.linkTo}
-              className="list-item mid-footer-link mx-4 mx-md-0"
-            >
+            <Link to={noteLegali.linkTo} className="list-item mid-footer-link mx-4 mx-md-0">
               {noteLegali.label}
             </Link>
           </li>
           <li className={`${classes.listItem} mr-0 mr-md-5`}>
-            <Link
-              to={privacy.linkTo}
-              className="list-item mid-footer-link mx-4 mx-md-0"
-            >
+            <Link to={privacy.linkTo} className="list-item mid-footer-link mx-4 mx-md-0">
               {privacy.label}
             </Link>
           </li>
@@ -113,10 +104,7 @@ const SlimFooter = () => {
             </ExternalLink>
           </li>
           <li className={`${classes.listItem} mr-0 mr-md-5`}>
-            <Link
-              to={credits.linkTo}
-              className="list-item mid-footer-link mx-4 mx-md-0"
-            >
+            <Link to={credits.linkTo} className="list-item mid-footer-link mx-4 mx-md-0">
               {credits.label}
             </Link>
           </li>
@@ -138,11 +126,7 @@ const MainFooter = () => {
               ariaLabel={dipartimento.ariaLabel}
               className={classes.footerLogo}
             >
-              <img
-                className={classes.logoImg}
-                src="/assets/eu-flag.svg"
-                alt="Logo della Repubblica Italiana"
-              />
+              <img className={classes.logoImg} src="/assets/eu-flag.svg" alt="Logo della Repubblica Italiana" />
             </ExternalLink>
             <ExternalLink
               linkTo={dipartimento.linkTo}
@@ -155,10 +139,7 @@ const MainFooter = () => {
                 alt="Logo della Repubblica Italiana"
               />
             </ExternalLink>
-            <ExternalLink
-              linkTo={dipartimento.linkTo}
-              ariaLabel={dipartimento.ariaLabel}
-            >
+            <ExternalLink linkTo={dipartimento.linkTo} ariaLabel={dipartimento.ariaLabel}>
               <img
                 className={classes.departmentLogo}
                 src="/assets/dipartimento.svg"
@@ -168,7 +149,7 @@ const MainFooter = () => {
           </div>
           <div className="info">
             <a href="#" className={classes.seeMore}>
-              Scopri l'iniziativa
+              Scopri l&apos;iniziativa
             </a>
           </div>
         </div>
