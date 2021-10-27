@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { createUseStyles } from 'react-jss';
 import { Row, Col, Card, CardBody, CardTitle, CardText, Button } from 'design-react-kit';
 import PropTypes from 'prop-types';
@@ -70,9 +70,11 @@ const useStyles = createUseStyles({
     },
   },
   heroCardImg: {
-    maxHeight: '160px',
+    maxHeight: '15rem',
+    minHeight: '10rem',
     borderTopRightRadius: '4px',
     borderTopLeftRadius: '4px',
+    objectFit: 'cover',
     '@media (min-width: 992px)': {
       maxHeight: '100%',
       borderTopRightRadius: '4px',
@@ -119,6 +121,14 @@ const useStyles = createUseStyles({
 
 export const HomeCarousel = ({ content, title }) => {
   const classes = useStyles();
+  const [isMobile, setIsMobile] = useState();
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 992);
+    window.addEventListener('resize', () => {
+      setIsMobile(window.innerWidth < 992);
+    });
+  }, []);
 
   const slides = content.map((element) => (
     <>
@@ -130,7 +140,11 @@ export const HomeCarousel = ({ content, title }) => {
             {element.button}
           </Button>
         </CardBody>
-        <img className={classes.heroCardImg} src={`/assets/${element.image}`} alt="" />
+        {isMobile ? (
+          <img className={classes.heroCardImg} src={`/assets/${element.imageMobile}`} alt="" />
+        ) : (
+          <img className={classes.heroCardImg} src={`/assets/${element.image}`} alt="" />
+        )}
       </Card>
     </>
   ));

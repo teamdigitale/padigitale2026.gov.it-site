@@ -106,16 +106,14 @@ const useStyles = createUseStyles({
 
 export const HeroImageBackgroundFull = ({ category, title, body, image, imageMobile, overlap }) => {
   const classes = useStyles();
-  const [isDesktop, setDesktop] = useState(true);
-
-  const updateMedia = () => {
-    setDesktop(window.innerWidth > 1450);
-  };
+  const [isMobile, setIsMobile] = useState();
 
   useEffect(() => {
-    window.addEventListener('resize', updateMedia);
-    return () => window.removeEventListener('resize', updateMedia);
-  });
+    setIsMobile(window.innerWidth < 992);
+    window.addEventListener('resize', () => {
+      setIsMobile(window.innerWidth < 992);
+    });
+  }, []);
 
   return (
     <Hero>
@@ -133,10 +131,10 @@ export const HeroImageBackgroundFull = ({ category, title, body, image, imageMob
             </Col>
           </Row>
         </div>
-        {isDesktop ? (
-          <HeroBackground image={image} className="full" />
-        ) : (
+        {isMobile ? (
           <HeroBackground image={imageMobile} className="full" />
+        ) : (
+          <HeroBackground image={image} className="full" />
         )}
         <div className={classes.bgMask}></div>
       </div>
