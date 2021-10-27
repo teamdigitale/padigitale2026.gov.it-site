@@ -65,11 +65,6 @@ const useStyles = createUseStyles({
     '&.bg-blue .btn': {
       color: '#0066CC',
     },
-    '& .container .it-hero-text-wrapper': {
-      '@media (min-width: 992px)': {
-        // paddingLeft: '100px',
-      },
-    },
     '& .container .it-hero-text-wrapper p': {
       fontFamily: 'Titillium Web,Geneva,Tahoma,sans-serif',
       fontSize: '1.333rem',
