@@ -147,3 +147,26 @@ support:
       description: Scopri i dettagli dell’iniziativa e le informazioni chiave sulle opportunità del PNRR
     - title: Contatti
       description: Compila il modulo per inviarci i tuoi suggerimenti o per avere chiarimenti sull’iniziativa
+heroMain:
+  category: 'le opportunità del pnrr'
+  title: 'Gli investimenti per la transizione digitale della PA'
+  body: 'Il PNRR offre al Paese una straordinaria occasione di rilancio: grazie alla strategia Italia digitale 2026, le pubbliche amministrazioni diventano le protagoniste di questo cambiamento, attraverso un percorso in 3 fasi'
+homeCarousel:
+  - id: 1
+    title: 'Autunno 2021, conoscere'
+    description: '<strong>Informazioni e aggiornamenti</strong> per accompagnare le amministrazioni verso le opportunità di Italia digitale 2026. Le PA hanno accesso agli strumenti necessari per <strong>prepararsi alla pubblicazione degli avvisi</strong> , prevista per la primavera del 2022'
+    image: 'home-carousel-1.png'
+    imageMobile: 'home-carousel-mobile-1.png'
+    button: 'scopri di più'
+  - id: 2
+    title: 'Autunno 2021, conoscere'
+    description: '<strong>Informazioni e aggiornamenti</strong> per accompagnare le amministrazioni verso le opportunità di Italia digitale 2026. Le PA hanno accesso agli strumenti necessari per <strong>prepararsi alla pubblicazione degli avvisi</strong> , prevista per la primavera del 2022'
+    image: 'home-carousel-2.png'
+    imageMobile: 'home-carousel-mobile-2.png'
+    button: 'scopri di più'
+  - id: 3
+    title: 'Autunno 2021, conoscere'
+    description: '<strong>Informazioni e aggiornamenti</strong> per accompagnare le amministrazioni verso le opportunità di Italia digitale 2026. Le PA hanno accesso agli strumenti necessari per <strong>prepararsi alla pubblicazione degli avvisi</strong> , prevista per la primavera del 2022'
+    image: 'home-carousel-3.png'
+    imageMobile: 'home-carousel-mobile-3.png'
+    button: 'scopri di più'

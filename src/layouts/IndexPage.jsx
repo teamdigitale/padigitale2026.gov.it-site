@@ -1,15 +1,33 @@
 import React from 'react';
-import content from '../../contents/home-page/home.yml';
+import {
+  heroMain,
+  heroDigital,
+  heroPnrr,
+  opportunity,
+  heroCarouselNews,
+  homeCarousel,
+  heroCarouselNewsTitle,
+  support,
+} from '../../contents/home-page/home.yml';
 import { HeroImageBackground } from '../components/hero/HeroImageBackground';
+import { HeroImageBackgroundFull } from '../components/hero/HeroImageBackgroundFull';
 import { HeroImage } from '../components/hero/HeroImage';
 import { HeroCarousel } from '../components/carousel/Carousel';
+import { HomeCarousel } from '../components/carousel/HomeCarousel';
 import { SupportSection } from './faq/SupportSection';
 import { OpportunitySection } from './home/OpportunitySection';
 
-const { heroDigital, heroPnrr, opportunity, heroCarouselNews, heroCarouselNewsTitle, support } = content;
-
 export const IndexPage = () => (
   <>
+    <HeroImageBackgroundFull
+      category={heroMain.category}
+      title={heroMain.title}
+      body={heroMain.body}
+      image="hero-home.png"
+      imageMobile="hero-home-mobile.png"
+      overlap={true}
+    />
+    <HomeCarousel content={homeCarousel} />
     <OpportunitySection title={opportunity.title} list={opportunity.cards} />
     <HeroImage
       category={heroPnrr.category}
