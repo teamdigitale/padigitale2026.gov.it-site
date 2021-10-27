@@ -1,5 +1,18 @@
 title: Come funziona - Prossima PA
 name: Come Funziona
+beneficiaries:
+  category: I Beneficiari
+  title: La digitalizzazione a misura di territorio
+  items: 
+    - img: '/assets/icone-beneficiari/comuni.svg'
+      linkLabel: 'Comuni'
+      filterId: 'comuni'
+    - img: '/assets/icone-beneficiari/province.svg'
+      linkLabel: 'Province'
+      filterId: 'province'
+    - img: '/assets/icone-beneficiari/province-autonome.svg'
+      linkLabel: 'Province autonome'
+      filterId: 'province-autonome'
 involved:
   category: Gli attori coinvolti
   title: I soggetti istituzionali che concorrono alla realizzazione della strategia Italia digitale 2026

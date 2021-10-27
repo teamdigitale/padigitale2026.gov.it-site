@@ -7,9 +7,11 @@ const {
   support,
 } = content;
 
-export const OpportunityPage = () => (
+export const OpportunityPage = (props) => {
+  return (
   <>
-    <BeneficiariesSection />
+    <BeneficiariesSection externalFilter={props.filter}/>
     <SupportSection supportList={support.cards} title={support.title} buttonLabel={support.buttonLabel}/>
   </>
-);
+  );
+};

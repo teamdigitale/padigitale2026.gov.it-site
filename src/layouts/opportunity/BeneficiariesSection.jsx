@@ -81,7 +81,9 @@ const customStyles = {
   }),
 };
 
-export const BeneficiariesSection = () => {
+export const BeneficiariesSection = (props) => {
+  console.log(props.externalFilter);
+  
   const classes = useStyles();
   const [accordions, setAccordions] = useState(beneficiaries);
   const [indexOpen, setIndexOpen] = useState(-1);
@@ -95,6 +97,12 @@ export const BeneficiariesSection = () => {
   const setActiveAccordion = (i) => {
     indexOpen === i ? setIndexOpen(-1) : setIndexOpen(i);
   };
+
+  // useEffect(() => {
+  //   if(props.externalFilter !== null) {
+  //     setSelectValue(props.externalFilter);
+  //   }
+  // }, []);
 
   useEffect(() => {
     if (selectValue != null) {
