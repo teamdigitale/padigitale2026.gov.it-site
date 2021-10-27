@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 
-
 export const HeroTitle = ({ linkTo = null, title, className = '', Tag = 'h3' }) => (
   <Tag className="h2 mb-4">
     {linkTo ? (

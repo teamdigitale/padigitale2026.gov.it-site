@@ -1,35 +1,17 @@
 import React from 'react';
 import { Card, CardBody, Icon } from 'design-react-kit';
-import { createUseStyles } from 'react-jss';
 import { MobileSwiper } from '../../components/MobileSwiper';
 import { Hero } from '../../components/hero/Hero';
 import content from '../../../contents/home-page/home.yml';
-import labels from '../../../contents/labels.yml';
-import { ExternalLink } from '../../components/ExternalLink';
 import { HeroCategory } from '../../components/hero/HeroCategory';
 import { HeroTitle } from '../../components/hero/HeroTitle';
-import { HeroBody } from '../../components/hero/HeroBody';
 
 const {
   heroNews: { category, title },
   newsPreview,
 } = content;
 
-const { ariaLabel } = labels;
-
-const useStyle = createUseStyles({
-  category: {
-    fontSize: '0.875rem',
-  },
-  '@media (min-width: 992px)': {
-    category: {
-      fontSize: '0.78rem',
-    },
-  },
-});
-
 export const NewsPreviewSection = () => {
-  const classes = useStyle();
   const slides = newsPreview.map((news) => (
     <Card key={news.title} teaser noWrapper className="shadow-lg">
       <CardBody className="h-100 d-flex flex-column py-5">

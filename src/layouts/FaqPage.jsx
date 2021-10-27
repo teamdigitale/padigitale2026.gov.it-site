@@ -114,9 +114,7 @@ export const FaqPage = () => {
           }
         });
         const regexp = new RegExp(inputValue, 'i');
-        const filterAccordions = filteredQuestions[0].accordions.filter(
-          (accordion) => regexp.test(accordion.title)
-        );
+        const filterAccordions = filteredQuestions[0].accordions.filter((accordion) => regexp.test(accordion.title));
         if (!filterAccordions.length) {
           setQuestions(filterAccordions);
         } else {
@@ -150,26 +148,15 @@ export const FaqPage = () => {
               <SideNavigation getFilter={setFilterId} />
             </Col>
             <Col lg={9} className="px-lg-3">
-              {questions.map((question) => {
-                return (
-                  <QuestionSection
-                    key={question.title}
-                    item={question}
-                    inputText={inputValue}
-                  />
-                );
-              })}
-              {!questions.length && (
-                <p className={classes.noResults}>{faq.noResults}</p>
-              )}
+              {questions.map((question) => (
+                <QuestionSection key={question.title} item={question} inputText={inputValue} />
+              ))}
+              {!questions.length && <p className={classes.noResults}>{faq.noResults}</p>}
             </Col>
           </Row>
         </Container>
       </div>
-      <SupportSection
-        supportList={faq.support.cards}
-        title={faq.support.title}
-      />
+      <SupportSection supportList={faq.support.cards} title={faq.support.title} />
     </>
   );
 };

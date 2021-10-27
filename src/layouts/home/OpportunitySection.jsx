@@ -66,19 +66,17 @@ export const OpportunitySection = (props) => {
       <div className="container">
         <h4 className={classes.title}>{title}</h4>
         <Row className={classes.row}>
-          {list.map((item) => {
-            return (
-              <Col md="6" lg="3" key={item.title} className="px-md-3">
-                <Card spacing className={classes.cardWrapper}>
-                  <CardBody>
-                    <CardTitle tag="h5">
-                      <span>{item.number}</span> {item.title}
-                    </CardTitle>
-                  </CardBody>
-                </Card>
-              </Col>
-            );
-          })}
+          {list.map((item) => (
+            <Col md="6" lg="3" key={item.title} className="px-md-3">
+              <Card spacing className={classes.cardWrapper}>
+                <CardBody>
+                  <CardTitle tag="h5">
+                    <span>{item.number}</span> {item.title}
+                  </CardTitle>
+                </CardBody>
+              </Card>
+            </Col>
+          ))}
         </Row>
       </div>
     </Section>
