@@ -280,11 +280,6 @@ export const AccordionButtonFull = (props) => {
           aria-expanded={props.id === props.active}
           className={classes.button}
         >
-          {/* {props.id === props.active ? (
-            <img src="/assets/chevron-up-white.svg" alt="" />
-          ) : (
-            <img src="/assets/chevron-down.svg" alt="" />
-          )} */}
         </Button>
       </div>
     </>
