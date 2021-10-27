@@ -131,10 +131,7 @@ export const BeneficiariesSection = () => {
             onMenuClose={handleClose}
             options={selectBeneficiaries}
             placeholder={false}
-            className={
-              (isOpen == true ? 'is-open' : '',
-              filterIsAll == true ? '' : 'not-all')
-            }
+            className={(isOpen ? 'is-open' : '', filterIsAll ? '' : 'not-all')}
             aria-label="Scegli una opzione"
           />
         </div>
