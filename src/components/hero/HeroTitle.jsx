@@ -9,7 +9,7 @@ export const HeroTitle = ({ linkTo = null, title, className = '', Tag = 'h3' }) 
         {title}
       </Link>
     ) : (
-      <span className={className}>{title}</span>
+      <span className={`${className}`}>{title}</span>
     )}
   </Tag>
 );

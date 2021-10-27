@@ -1,16 +1,20 @@
 internalLinks:
   strategy:
-    linkTo: '/#strategy'
+    linkTo: '/opportunita'
     label: Le opportunità
     linkTop: '/#mainTop'
   enablement:
-    homeLinkTo: '/#comefunziona'
+    homeLinkTo: '/come-funziona'
     linkTo: 'https://www.youtube.com/CHANGEME'
     label: Come funziona
     linkTop: '#mainTop'
   support:
-    linkTo: '/#supporto'
+    linkTo: '/supporto'
     label: Supporto
+    linkTop: '#mainTop'
+  updates:
+    linkTo: '/updates'
+    label: Ricevi aggiornamenti
     linkTop: '#mainTop'
   services:
     linkTo: '/#vantaggi'

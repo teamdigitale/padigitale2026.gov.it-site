@@ -1,0 +1,245 @@
+selectBeneficiaries:
+  - value: tutti
+    label: Tutti
+  - value: 'comuni'
+    label: 'Comuni'
+  - value: 'province'
+    label: 'Province'
+  - value: 'regioni'
+    label: 'Regioni'
+  - value: 'enti-regionali'
+    label: 'Enti regionali'
+  - value: 'asl-ao'
+    label: 'ASL/AO'
+  - value: 'altre-pa-locali'
+    label: 'Altre PA locali'
+  - value: 'scuole'
+    label: 'Scuole'
+  - value: 'universita'
+    label: 'Università'
+  - value: 'enti-diritto'
+    label: 'Enti per il diritto allo studio, agenzie, consorzi'
+  - value: 'istituti-formazione'
+    label: 'Istituti di alta formazione musicale e coreutica'
+  - value: 'enti-ricerca-pubblica'
+    label: 'Enti di ricera pubblica'
+  - value: 'consorzi-ricerca'
+    label: 'Consorzi interuniversitari di ricerca'
+  - value: 'enti-sevizio-civile'
+    label: 'Enti iscritti all’albo del servizio civile'
+  - value: 'pa-centrali'
+    label: 'PA Centrali'
+beneficiaries:
+  - number: 1.1
+    title: Infrastrutture digitali
+    money: 900
+    tags:
+      - value: pa-centrali
+        label: PA Centrali
+    description: Garantire che i sistemi, i dataset e le applicazioni della PA siano ospitati in data center altamente affidabili e con elevati standard di qualità per sicurezza, prestazioni, scalabilità, interoperabilità europea ed efficienza energetica.
+    stalls: '280 enti'
+    accessLabel: Presentazione Progetto
+    accessLink: '#'
+    moreInfoLabel: 'Leggi di più su Italia Domani'
+    moreInfoLink: '#'
+  - number: 1.2
+    title: Abilitazione e facilitazione migrazione al Cloud
+    money: 1
+    tags:
+      - label: ASL/AO
+        value: asl/ao
+      - label: 'comuni'
+        value: 'Comuni'
+      - label: Scuole
+        value: scuole
+    description: Garantire che i sistemi, i dataset e le applicazioni della PA siano ospitati in data center altamente affidabili e con elevati standard di qualità per sicurezza, prestazioni, scalabilità, interoperabilità europea ed efficienza energetica.
+    stalls: '280 enti'
+    accessLabel: Presentazione Progetto
+    accessLink: '#'
+    moreInfoLabel: 'Leggi di più su Italia Domani'
+    moreInfoLink: '#'
+  - number: 1.3.1
+    title: Piattaforma Digitale Nazionale Dati
+    money: 556
+    tags:
+      - value: pa-centrali
+        label: PA Centrali
+      - value: asl/ao
+        label: ASL/AO
+      - value: comuni
+        label: Comuni
+      - value: regioni
+        label: Regioni
+      - value: universita
+        label: Università
+    description: Garantire che i sistemi, i dataset e le applicazioni della PA siano ospitati in data center altamente affidabili e con elevati standard di qualità per sicurezza, prestazioni, scalabilità, interoperabilità europea ed efficienza energetica.
+    stalls: '280 enti'
+    accessLabel: Presentazione Progetto
+    accessLink: '#'
+    moreInfoLabel: 'Leggi di più su Italia Domani'
+    moreInfoLink: '#'
+  - number: 1.3.2
+    title: Sportello Digitale Unico
+    money: 90
+    tags:
+      - value: pa-centrali
+        label: PA Centrali
+      - value: asl/ao
+        label: ASL/AO
+      - value: comuni
+        label: Comuni
+      - value: scuole
+        label: Scuole
+      - value: regioni
+        label: Regioni
+      - value: 'enti-diritto'
+        label: 'Enti per il diritto allo studio, agenzie, consorzi'
+    description: Garantire che i sistemi, i dataset e le applicazioni della PA siano ospitati in data center altamente affidabili e con elevati standard di qualità per sicurezza, prestazioni, scalabilità, interoperabilità europea ed efficienza energetica.
+    stalls: '280 enti'
+    accessLabel: Presentazione Progetto
+    accessLink: '#'
+    moreInfoLabel: 'Leggi di più su Italia Domani'
+    moreInfoLink: '#'
+  - number: 1.4.1
+    title: Esperienza dei servizi pubblici
+    money: 613
+    tags:
+      - value: comuni
+        label: Comuni
+      - value: scuole
+        label: Scuole
+    description: Garantire che i sistemi, i dataset e le applicazioni della PA siano ospitati in data center altamente affidabili e con elevati standard di qualità per sicurezza, prestazioni, scalabilità, interoperabilità europea ed efficienza energetica.
+    stalls: '280 enti'
+    accessLabel: Presentazione Progetto
+    accessLink: '#'
+    moreInfoLabel: 'Leggi di più su Italia Domani'
+    moreInfoLink: '#'
+  - number: 1.4.2
+    title: Accessibilità
+    money: 80
+    tags:
+      - value: comuni
+        label: Comuni
+      - value: regioni
+        label: Regioni
+    description: Garantire che i sistemi, i dataset e le applicazioni della PA siano ospitati in data center altamente affidabili e con elevati standard di qualità per sicurezza, prestazioni, scalabilità, interoperabilità europea ed efficienza energetica.
+    stalls: '280 enti'
+    accessLabel: Presentazione Progetto
+    accessLink: '#'
+    moreInfoLabel: 'Leggi di più su Italia Domani'
+    moreInfoLink: '#'
+  - number: 1.4.3
+    title: Adozione PagoPA e app IO
+    money: 750
+    tags:
+      - value: pa-centrali
+        label: Pa Centrali
+      - value: asl-ao
+        label: ASL/AO
+      - value: comuni
+        label: Comuni
+      - value: scuole
+        label: Scuole
+      - value: regioni
+        label: Regioni
+    description: Garantire che i sistemi, i dataset e le applicazioni della PA siano ospitati in data center altamente affidabili e con elevati standard di qualità per sicurezza, prestazioni, scalabilità, interoperabilità europea ed efficienza energetica.
+    stalls: '280 enti'
+    accessLabel: Presentazione Progetto
+    accessLink: '#'
+    moreInfoLabel: 'Leggi di più su Italia Domani'
+    moreInfoLink: '#'
+  - number: 1.4.4
+    title: Adozione identità digitale
+    money: 285
+    tags:
+      - value: pa-centrali
+        label: Pa Centrali
+      - value: asl-ao
+        label: ASL/AO
+      - value: comuni
+        label: Comuni
+      - value: scuole
+        label: Scuole
+      - value: regioni
+        label: Regioni
+    description: Garantire che i sistemi, i dataset e le applicazioni della PA siano ospitati in data center altamente affidabili e con elevati standard di qualità per sicurezza, prestazioni, scalabilità, interoperabilità europea ed efficienza energetica.
+    stalls: '280 enti'
+    accessLabel: Presentazione Progetto
+    accessLink: '#'
+    moreInfoLabel: 'Leggi di più su Italia Domani'
+    moreInfoLink: '#'
+  - number: 1.4.5
+    title: Digitalizzazione degli avvisi pubblici
+    money: 245
+    tags:
+      - value: pa-centrali
+        label: Pa Centrali
+      - value: comuni
+        label: Comuni
+    description: Garantire che i sistemi, i dataset e le applicazioni della PA siano ospitati in data center altamente affidabili e con elevati standard di qualità per sicurezza, prestazioni, scalabilità, interoperabilità europea ed efficienza energetica.
+    stalls: '280 enti'
+    accessLabel: Presentazione Progetto
+    accessLink: '#'
+    moreInfoLabel: 'Leggi di più su Italia Domani'
+    moreInfoLink: '#'
+  - number: 1.4.6
+    title: MaaS
+    money: 40
+    tags:
+      - value: comuni
+        label: Comuni
+    description: Garantire che i sistemi, i dataset e le applicazioni della PA siano ospitati in data center altamente affidabili e con elevati standard di qualità per sicurezza, prestazioni, scalabilità, interoperabilità europea ed efficienza energetica.
+    stalls: '280 enti'
+    accessLabel: Presentazione Progetto
+    accessLink: '#'
+    moreInfoLabel: 'Leggi di più su Italia Domani'
+    moreInfoLink: '#'
+  - number: 1.5
+    title: Cybersecurity
+    money: 40
+    tags:
+      - value: pa-centrali
+        label: PA Centrali
+    description: Garantire che i sistemi, i dataset e le applicazioni della PA siano ospitati in data center altamente affidabili e con elevati standard di qualità per sicurezza, prestazioni, scalabilità, interoperabilità europea ed efficienza energetica.
+    stalls: '280 enti'
+    accessLabel: Presentazione Progetto
+    accessLink: '#'
+    moreInfoLabel: 'Leggi di più su Italia Domani'
+    moreInfoLink: '#'
+  - number: 1.6
+    title: Digitalizzazione grandi amministrazioni centrali
+    money: 611,2
+    tags:
+      - value: pa-centrali
+        label: PA Centrali
+    description: Garantire che i sistemi, i dataset e le applicazioni della PA siano ospitati in data center altamente affidabili e con elevati standard di qualità per sicurezza, prestazioni, scalabilità, interoperabilità europea ed efficienza energetica.
+    stalls: '280 enti'
+    accessLabel: Presentazione Progetto
+    accessLink: '#'
+    moreInfoLabel: 'Leggi di più su Italia Domani'
+    moreInfoLink: '#'
+  - number: 1.7.1
+    title: Centri di facilitazione digitale
+    money: 135
+    tags:
+      - value: regioni
+        label: Regioni
+    description: Garantire che i sistemi, i dataset e le applicazioni della PA siano ospitati in data center altamente affidabili e con elevati standard di qualità per sicurezza, prestazioni, scalabilità, interoperabilità europea ed efficienza energetica.
+    stalls: '280 enti'
+    accessLabel: Presentazione Progetto
+    accessLink: '#'
+    moreInfoLabel: 'Leggi di più su Italia Domani'
+    moreInfoLink: '#'
+  - number: 1.7.2
+    title: Servizio civile digitale
+    money: 60
+    tags:
+      - value: regioni
+        label: Regioni
+    description: Garantire che i sistemi, i dataset e le applicazioni della PA siano ospitati in data center altamente affidabili e con elevati standard di qualità per sicurezza, prestazioni, scalabilità, interoperabilità europea ed efficienza energetica.
+    stalls: '280 enti'
+    accessLabel: Presentazione Progetto
+    accessLink: '#'
+    moreInfoLabel: 'Leggi di più su Italia Domani'
+    moreInfoLink: '#'
+  

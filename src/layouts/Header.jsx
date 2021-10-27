@@ -12,15 +12,12 @@ import {
   HeaderBrand,
   LinkListItem,
   LinkList,
-  Button,
   HeaderLinkZone,
 } from 'design-react-kit';
 import { createUseStyles } from 'react-jss';
 import links from '../../contents/links.yml';
 import labels from '../../contents/labels.yml';
-import content from '../../contents/home-page/home.yml';
 import { HeaderNav } from '../components/HeaderNav';
-import { ExternalLink } from '../components/ExternalLink';
 
 const { internalLinks, externalLinks } = links;
 const { ariaLabel, headerTitle, headerSubtitle } = labels;
@@ -117,44 +114,54 @@ const useStyle = createUseStyles({
   },
   navbarNav: {
     padding: 0,
+    '@media (max-width: 991px)': {
+      '& + .navbar-nav .nav-item': {
+        borderTop: '1px solid #E6E9F2',
+      },
+    },
   },
   linkListWrapperCustom: {
     '& ul li:not(:first-child)': {
       borderLeft: '1px solid rgba(0,89,179,.2)',
-    }
+    },
   },
   noShadow: {
     composes: 'shadow-none',
-    top: '30%'
-  }
+    top: '30%',
+  },
+  menuWrapper: {
+    composes: 'menu-wrapper',
+    '@media (max-width: 991px)': {
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'space-between',
+    },
+  },
 });
 
 const SlimHeader = () => {
-  const [isOpen, toggleDropdown] = useState(false);
   const classes = useStyle();
   return (
     <HeaderReactKit type="slim" theme="light">
       <HeaderContent>
-        <HeaderBrand className="font-weight-bold">
-        {externalLinks.dipartimento.label}
-        </HeaderBrand>
+        <HeaderBrand className="font-weight-bold">{externalLinks.dipartimento.label}</HeaderBrand>
         <HeaderLinkZone>
           <HeaderToggler type="button" onClick={function noRefCheck() {}}>
-            <span className="font-weight-bold">
-            {externalLinks.dipartimento.label}
-            </span>
+            <span className="font-weight-bold">{externalLinks.dipartimento.label}</span>
             <Icon icon="it-expand" />
           </HeaderToggler>
           <Collapse header>
             <div className={classes.linkListWrapperCustom}>
-            <LinkList className={classes.topListLink}>
-              <LinkListItem href={externalLinks.italiaDigitale.linkTo}>{externalLinks.italiaDigitale.label}</LinkListItem>
-              <LinkListItem href={externalLinks.pnrr.linkTo}>{externalLinks.pnrr.label}</LinkListItem>
-            </LinkList>
+              <LinkList className={classes.topListLink}>
+                <LinkListItem href={externalLinks.italiaDigitale.linkTo}>
+                  {externalLinks.italiaDigitale.label}
+                </LinkListItem>
+                <LinkListItem href={externalLinks.pnrr.linkTo}>{externalLinks.pnrr.label}</LinkListItem>
+              </LinkList>
             </div>
           </Collapse>
         </HeaderLinkZone>
-        <img class="d-none d-lg-block" src="/assets/eu-flag.svg"></img>
+        <img className="d-none d-lg-block" src="/assets/eu-flag.svg"></img>
       </HeaderContent>
     </HeaderReactKit>
   );
@@ -163,26 +170,14 @@ const SlimHeader = () => {
 const CenterHeader = () => {
   const classes = useStyle();
   return (
-    <HeaderReactKit
-      type="center"
-      theme="light"
-      className={classes.headerCenterWrapper}
-    >
+    <HeaderReactKit type="center" theme="light" className={classes.headerCenterWrapper}>
       <HeaderContent>
         <div className="it-brand-wrapper pl-5 pl-sm-0">
           <Link to="/">
             <div className="it-brand-text pr-0">
               <div className="d-md-flex align-items-center">
-                <img
-                  className="icon"
-                  src="/assets/repubblica-logo-blue.svg"
-                  alt="Logo Repubblica Italiana"
-                />
-                <img
-                  className="icon"
-                  src="/assets/site-logo.svg"
-                  alt="Logo Repubblica Italiana"
-                />
+                <img className="icon" src="/assets/repubblica-logo-blue.svg" alt="Logo Repubblica Italiana" />
+                <img className="icon" src="/assets/site-logo.svg" alt="Logo prossima PA" />
                 <div className="d-none d-lg-inline-block">
                   <div className="h3 mb-0">{headerTitle}</div>
                   <div className={classes.subtitle}>{headerSubtitle}</div>
@@ -196,19 +191,14 @@ const CenterHeader = () => {
   );
 };
 
-const NavHeader = (props) => {
+const NavHeader = () => {
   const [isOpen, setIsOpen] = useState(false);
   const closeMenu = () => setIsOpen(false);
   const toogleMenu = () => setIsOpen(!isOpen);
   const classes = useStyle();
   return (
     <HeaderReactKit type="navbar" theme="light" className={classes.noShadow}>
-      <HeaderContent
-        expand="lg"
-        megamenu
-        aria-label={ariaLabel.menu}
-        className="px-2"
-      >
+      <HeaderContent expand="lg" megamenu aria-label={ariaLabel.menu} className="px-2">
         <button
           onClick={() => setIsOpen(!isOpen)}
           aria-label={ariaLabel.toggleMenu}
@@ -220,13 +210,15 @@ const NavHeader = (props) => {
         </button>
 
         <HeaderNav isOpen={isOpen} onCloseMenu={toogleMenu}>
-          <div className="menu-wrapper">
+          <div className={classes.menuWrapper}>
             <Nav navbar className={classes.navbarNav}>
               <div className={classes.offCanvasWrapper}>
                 <a href="/" tabIndex="-1">
                   <img className="icon" src="/assets/site-logo.svg" alt="Logo" />
                 </a>
-                <a href="/" className={classes.offCanvasTitle}>{headerTitle}</a>
+                <a href="/" className={classes.offCanvasTitle}>
+                  {headerTitle}
+                </a>
               </div>
               <NavItem active>
                 <Link
@@ -235,9 +227,7 @@ const NavHeader = (props) => {
                   activeClassName="active"
                   onClick={closeMenu}
                 >
-                  <span className="font-weight-semibold">
-                    {internalLinks.strategy.label}
-                  </span>
+                  <span className="font-weight-semibold">{internalLinks.strategy.label}</span>
                 </Link>
               </NavItem>
               <NavItem>
@@ -247,9 +237,7 @@ const NavHeader = (props) => {
                   activeClassName="active"
                   onClick={closeMenu}
                 >
-                  <span className="font-weight-semibold">
-                    {internalLinks.enablement.label}
-                  </span>
+                  <span className="font-weight-semibold">{internalLinks.enablement.label}</span>
                 </Link>
               </NavItem>
               <NavItem>
@@ -259,9 +247,19 @@ const NavHeader = (props) => {
                   activeClassName="active"
                   onClick={closeMenu}
                 >
-                  <span className="font-weight-semibold">
-                    {internalLinks.support.label}
-                  </span>
+                  <span className="font-weight-semibold">{internalLinks.support.label}</span>
+                </Link>
+              </NavItem>
+            </Nav>
+            <Nav navbar className={classes.navbarNav}>
+              <NavItem active>
+                <Link
+                  to={internalLinks.updates.linkTo}
+                  className="nav-link"
+                  activeClassName="active"
+                  onClick={closeMenu}
+                >
+                  <span className="font-weight-semibold">{internalLinks.updates.label}</span>
                 </Link>
               </NavItem>
             </Nav>
@@ -278,7 +276,7 @@ export const Header = (props) => (
       <SlimHeader />
       <div className="it-nav-wrapper">
         <CenterHeader />
-        <NavHeader showKit={props.showKit}/>
+        <NavHeader showKit={props.showKit} />
       </div>
     </Headers>
   </header>
