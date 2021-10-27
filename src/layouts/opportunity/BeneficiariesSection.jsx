@@ -131,25 +131,20 @@ export const BeneficiariesSection = () => {
             onMenuClose={handleClose}
             options={selectBeneficiaries}
             placeholder={false}
-            className={
-              (isOpen == true ? 'is-open' : '',
-              filterIsAll == true ? '' : 'not-all')
-            }
+            className={(isOpen ? 'is-open' : '', filterIsAll ? '' : 'not-all')}
             aria-label="Scegli una opzione"
           />
         </div>
-        {accordions.map((item, i) => {
-          return (
-            <React.Fragment key={item.title}>
-              <AccordionButtonFull
-                data={item}
-                handleToggle={setActiveAccordion}
-                id={i}
-                active={indexOpen}
-              />
-            </React.Fragment>
-          );
-        })}
+        {accordions.map((item, i) => (
+          <React.Fragment key={item.title}>
+            <AccordionButtonFull
+              data={item}
+              handleToggle={setActiveAccordion}
+              id={i}
+              active={indexOpen}
+            />
+          </React.Fragment>
+        ))}
       </div>
     </>
   );
