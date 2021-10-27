@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { AccordionButtonFull } from '../../components/AccordionButtonFull';
 import { createUseStyles } from 'react-jss';
-import {
-  beneficiaries,
-  selectBeneficiaries,
-} from '../../../contents/opportunity-page/opportunity.yml';
 import Select from 'react-select';
+import { AccordionButtonFull } from '../../components/AccordionButtonFull';
+import { beneficiaries, selectBeneficiaries } from '../../../contents/opportunity-page/opportunity.yml';
 
 const useStyles = createUseStyles({
   selectWrapper: {
@@ -96,12 +93,10 @@ export const BeneficiariesSection = () => {
 
   useEffect(() => {
     if (selectValue != null) {
-      if (selectValue.value != 'tutti') {
-        let filteredList = [];
+      if (selectValue.value !== 'tutti') {
+        const filteredList = [];
         for (let index = 0; index < beneficiaries.length; index++) {
-          const element = beneficiaries[index].tags.filter(
-            (tag) => tag.value == selectValue.value
-          );
+          const element = beneficiaries[index].tags.filter((tag) => tag.value === selectValue.value);
           if (element.length) {
             filteredList.push(beneficiaries[index]);
           }

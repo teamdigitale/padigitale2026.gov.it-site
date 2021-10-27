@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Collapse, Card, CardBody } from 'design-react-kit';
-import { ExternalLink } from './ExternalLink';
 import { createUseStyles } from 'react-jss';
+import { ExternalLink } from './ExternalLink';
 
 const useStyles = createUseStyles({
   collapseWrapper: {
@@ -12,7 +12,7 @@ const useStyles = createUseStyles({
     '&.card.card-bg': {
       marginBottom: '1.778rem',
       marginLeft: '0',
-      marginRight: '0'
+      marginRight: '0',
     },
     '&:after': {
       content: 'unset',
@@ -69,7 +69,7 @@ const useStyles = createUseStyles({
       justifyContent: 'center',
       '@media (min-width: 992px)': {
         justifyContent: 'flex-start',
-        maxWidth: '70%'
+        maxWidth: '70%',
       },
     },
     '& .tag': {
@@ -85,7 +85,7 @@ const useStyles = createUseStyles({
       overflow: 'hidden',
       marginRight: '0.444rem',
       '&::last-child': {
-        marginRight: '0'
+        marginRight: '0',
       },
     },
   },
@@ -106,7 +106,7 @@ const useStyles = createUseStyles({
   },
   collapseAccordion: {
     '& .card-wrapper': {
-      paddingBottom: '0'
+      paddingBottom: '0',
     },
     '& .card': {
       '&:after': {
@@ -144,7 +144,7 @@ const useStyles = createUseStyles({
       marginBottom: '1rem',
       '& span': {
         flexShrink: '0',
-        marginRight: '0.313rem'
+        marginRight: '0.313rem',
       },
       '& a': {
         fontSize: '1.125rem',
@@ -199,7 +199,7 @@ const useStyles = createUseStyles({
     '@media (max-width: 991px)': {
       maxHeight: '95px',
       height: '100%',
-      minWidth: '2.667rem'
+      minWidth: '2.667rem',
     },
     '@media (min-width: 992px)': {
       position: 'static',
