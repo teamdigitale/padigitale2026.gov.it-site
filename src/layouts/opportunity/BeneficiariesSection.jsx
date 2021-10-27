@@ -138,18 +138,16 @@ export const BeneficiariesSection = () => {
             aria-label="Scegli una opzione"
           />
         </div>
-        {accordions.map((item, i) => {
-          return (
-            <React.Fragment key={item.title}>
-              <AccordionButtonFull
-                data={item}
-                handleToggle={setActiveAccordion}
-                id={i}
-                active={indexOpen}
-              />
-            </React.Fragment>
-          );
-        })}
+        {accordions.map((item, i) => (
+          <React.Fragment key={item.title}>
+            <AccordionButtonFull
+              data={item}
+              handleToggle={setActiveAccordion}
+              id={i}
+              active={indexOpen}
+            />
+          </React.Fragment>
+        ))}
       </div>
     </>
   );
