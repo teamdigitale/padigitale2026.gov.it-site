@@ -73,7 +73,7 @@ export const Beneficiaries = (props) => {
       <Container
         tag="section"
         aria-labelledby="involved-actors-title"
-        className="px-3"
+        className="px-3 pt-5"
       >
         <Row>
           <Col className="offset-lg-1">

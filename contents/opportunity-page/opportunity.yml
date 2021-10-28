@@ -5,14 +5,16 @@ selectBeneficiaries:
     label: 'Comuni'
   - value: 'province'
     label: 'Province'
+  - value: 'province-autonome'
+    label: 'Province Autonome'
   - value: 'regioni'
     label: 'Regioni'
   - value: 'enti-regionali'
     label: 'Enti regionali'
   - value: 'asl-ao'
-    label: 'ASL/AO'
+    label: 'Azienda Sanitaria Locale/Azienda Ospedaliera'
   - value: 'altre-pa-locali'
-    label: 'Altre PA locali'
+    label: 'Altre Pubbliche Amministrazioni locali'
   - value: 'scuole'
     label: 'Scuole'
   - value: 'universita'
@@ -28,7 +30,7 @@ selectBeneficiaries:
   - value: 'enti-sevizio-civile'
     label: 'Enti iscritti all’albo del servizio civile'
   - value: 'pa-centrali'
-    label: 'PA Centrali'
+    label: 'Pubbliche Amministrazioni centrali'
 beneficiaries:
   - number: 1.1
     title: Infrastrutture digitali

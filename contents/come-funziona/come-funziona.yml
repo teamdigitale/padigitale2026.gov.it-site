@@ -37,6 +37,18 @@ beneficiaries:
     - img: '/assets/icone-beneficiari/regioni.svg'
       linkLabel: 'Enti regionali'
       filterId: 'enti-regionali'
+    - img: '/assets/icone-beneficiari/ricerca-pubblica.svg'
+      linkLabel: 'Enti di ricerca pubblica'
+      filterId: 'enti-ricerca-pubblica'
+    - img: '/assets/icone-beneficiari/pa-centrali.svg'
+      linkLabel: 'Enti iscritti agli albi del servizio civile'
+      filterId: 'enti-albi-civili'
+    - img: '/assets/icone-beneficiari/pa-centrali.svg'
+      linkLabel: 'Altre Pubbliche Amministrazioni locali'
+      filterId: 'altre-pa-locali'
+    - img: '/assets/icone-beneficiari/ricerca-pubblica.svg'
+      linkLabel: 'Consorzi interuniversitari di ricerca'
+      filterId: 'consorzi-interuniversitari'
 involved:
   category: Gli attori coinvolti
   title: I soggetti istituzionali che concorrono alla realizzazione della strategia Italia digitale 2026

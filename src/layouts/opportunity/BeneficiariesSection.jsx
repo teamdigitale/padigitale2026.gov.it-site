@@ -82,14 +82,11 @@ const customStyles = {
 };
 
 export const BeneficiariesSection = (props) => {
-  console.log('inizio', props.externalFilter);
-
-  
   const classes = useStyles();
   const [accordions, setAccordions] = useState(beneficiaries);
   const [indexOpen, setIndexOpen] = useState(-1);
   const [selectValue, setSelectValue] = useState(null);
-  const [initialSelectValue, setInitialSelectValue] = useState(selectBeneficiaries[0]);  
+  const [initialSelectValue, setInitialSelectValue] = useState({});  
   const [isOpen, setIsOpen] = useState(false);
   const [filterIsAll, setFilterIsAll] = useState(true);
   const handleChange = (selectedOption) => setSelectValue(selectedOption);
@@ -101,10 +98,8 @@ export const BeneficiariesSection = (props) => {
   };
 
   useEffect(() => {
-    
-    if(props.externalFilter !== null) {
+    if(props.externalFilter) {
       const activeFilter = selectBeneficiaries.filter(item => item.value === props.externalFilter.value);
-      console.log('quello che dovrebbe', activeFilter[0]);
       setInitialSelectValue(activeFilter[0]);
       setSelectValue(props.externalFilter);
     }
@@ -135,7 +130,8 @@ export const BeneficiariesSection = (props) => {
       <div className="container mt-5 px-3">
         <div className={classes.selectWrapper}>
           <label htmlFor="beneficiaries">Beneficiari</label>
-          <Select
+          {initialSelectValue.value}
+          {initialSelectValue && <Select
             styles={customStyles}
             isSearchable={false}
             defaultValue={initialSelectValue}
@@ -147,7 +143,7 @@ export const BeneficiariesSection = (props) => {
             placeholder={false}
             className={(isOpen ? 'is-open' : '', filterIsAll ? '' : 'not-all')}
             aria-label="Scegli una opzione"
-          />
+          />}
         </div>
         {accordions.map((item, i) => (
           <React.Fragment key={item.title}>

@@ -7,7 +7,7 @@ const useStyles = createUseStyles({
   collapseWrapper: {
     composes: 'card card-bg rounded',
     display: 'flex',
-    flexDirection: 'row',
+    flexDirection: 'row-reverse',
     position: 'relative',
     '&.card.card-bg': {
       marginBottom: '1.778rem',
@@ -234,6 +234,11 @@ export const AccordionButtonFull = (props) => {
   return (
     <>
       <div className={classes.collapseWrapper}>
+        <Button
+          onClick={eventHandler}
+          aria-expanded={props.id === props.active}
+          className={classes.button}
+        ></Button>
         <div className={classes.cardWrapper}>
           <div className={classes.cardHeader}>
             <p className={classes.cardTitle}>
@@ -245,9 +250,23 @@ export const AccordionButtonFull = (props) => {
             <div className={classes.cardTags}>
               <p className="tag-title">Beneficiari</p>
               <div className="tag-wrapper">
-                {tags.map((tag) => {
-                  return <div key={tag.label} className="tag">{tag.label}</div>;
-                })}
+                {tags.length > 5 &&
+                  tags.slice(0, 5).map((tag) => {
+                    return (
+                      <div key={tag.label} className="tag">
+                        {tag.label}
+                      </div>
+                    );
+                  })}
+                {tags.length > 5 && <div className="tag">Altro</div>}
+                {tags.length <= 5 &&
+                  tags.map((tag) => {
+                    return (
+                      <div key={tag.label} className="tag">
+                        {tag.label}
+                      </div>
+                    );
+                  })}
               </div>
             </div>
           </div>
@@ -262,7 +281,8 @@ export const AccordionButtonFull = (props) => {
                   Platea beneficiaria: <span>{stalls}</span>
                 </p>
                 <div className="access">
-                  <span>Modalità di accesso:</span> <a href={accessLink}>{accessLabel}</a>
+                  <span>Modalità di accesso:</span>{' '}
+                  <a href={accessLink}>{accessLabel}</a>
                 </div>
                 <div className={classes.linkAccordion}>
                   <ExternalLink linkTo={moreInfoLink} ariaLabel="aria label">
@@ -274,13 +294,6 @@ export const AccordionButtonFull = (props) => {
             </Card>
           </Collapse>
         </div>
-
-        <Button
-          onClick={eventHandler}
-          aria-expanded={props.id === props.active}
-          className={classes.button}
-        >
-        </Button>
       </div>
     </>
   );

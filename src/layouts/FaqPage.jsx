@@ -21,7 +21,6 @@ export const FaqPage = () => {
   const [filterId, setFilterId] = useState('all');
   const [questions, setQuestions] = useState(faq.questions);
   const [isMobile, setIsMobile] = useState();
-  // const [noResults, setNoResults] = useState(false);
 
   useEffect(() => {
     setIsMobile(window.innerWidth < 992);
