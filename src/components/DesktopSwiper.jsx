@@ -24,9 +24,32 @@ const useStyles = createUseStyles({
       opacity: '0.2',
     },
   },
+  sidePrevButton: {
+    composes: 'd-none justify-content-center pt-3 d-lg-flex',
+    position: 'absolute',
+    left: '0',
+    top: '50%',
+    transform: 'translateY(-50%)'
+  },
+  sideNextButton: {
+    composes: 'd-none justify-content-center pt-3 d-lg-flex',
+    position: 'absolute',
+    right: '0',
+    top: '50%',
+    transform: 'translateY(-50%)'
+  },
 });
 
-export const DesktopSwiper = ({ slides, breakpoints, pagination, mobilePagination, desktopNavigation, className }) => {
+export const DesktopSwiper = ({
+  slides,
+  breakpoints,
+  pagination,
+  mobilePagination,
+  desktopNavigation,
+  sideDesktopNavigation,
+  mobileNavigation,
+  className
+}) => {
   const classes = useStyles();
   const [paginationId, setPaginationId] = useState(null);
   const [nextBtnId, setnextBtnId] = useState(null);
@@ -75,6 +98,28 @@ export const DesktopSwiper = ({ slides, breakpoints, pagination, mobilePaginatio
           </Swiper>
         </div>
       </div>
+      {sideDesktopNavigation && (
+        <div className={classes.sidePrevButton}>
+          <Icon
+            data-prev-navigation-id={prevBtnId}
+            className={classes.navigationBtn}
+            color="primary"
+            icon="it-arrow-left-circle"
+            size="lg"
+          />
+        </div>
+      )}
+      {sideDesktopNavigation && (
+        <div className={classes.sideNextButton}>
+          <Icon
+            data-next-navigation-id={nextBtnId}
+            className={classes.navigationBtn}
+            color="primary"
+            icon="it-arrow-right-circle"
+            size="lg"
+          />
+        </div>
+      )}
       {pagination && (
         <div className="mt-4 pb-4 d-flex justify-content-center pt-3">
           {paginationId && (
@@ -107,6 +152,24 @@ export const DesktopSwiper = ({ slides, breakpoints, pagination, mobilePaginatio
           />
         </div>
       )}
+      {mobileNavigation && (
+        <div className="d-flex justify-content-center pt-3 d-lg-none">
+          <Icon
+            data-prev-navigation-id={prevBtnId}
+            className={classes.navigationBtn}
+            color="primary"
+            icon="it-arrow-left-circle"
+            size="lg"
+          />
+          <Icon
+            data-next-navigation-id={nextBtnId}
+            className={classes.navigationBtn}
+            color="primary"
+            icon="it-arrow-right-circle"
+            size="lg"
+          />
+        </div>
+      )}
     </>
   );
 };
@@ -117,5 +180,7 @@ DesktopSwiper.propTypes = {
   pagination: PropTypes.bool,
   mobilePagination: PropTypes.bool,
   desktopNavigation: PropTypes.bool,
+  mobileNavigation: PropTypes.bool,
+  sideDesktopNavigation: PropTypes.bool,
   className: PropTypes.any,
 };

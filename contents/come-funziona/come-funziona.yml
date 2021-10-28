@@ -25,3 +25,28 @@ involved:
     - id: 7
       image: '/assets/mef-logo.svg'
       text: Il <strong>Ministero dell’Economia e delle Finanze</strong> è responsabile del <strong>monitoraggio</strong> dell’<strong>attuazione</strong> degli investimenti e delle riforme del PNRR
+modalitaAccesso:
+  title: Due modalità di accesso ai fondi del PNRR in relazione alla platea di benficiari
+  description: La strada verso Italia digitale 2026 è appena cominciata. Su Prossima PA sono <strong>resi disponibili tutti i materiali, le informazioni e gli strumenti</strong> per aiutare le amministrazioni a percorrerla. In questo percorso sono state <strong>pensate diverse modalità di accesso ai fondi del PNRR</strong> gestiti dal Dipartimento per la trasformazione digitale. A seconda della tipologia di misura e di PA, sarà possibile <strong>accedere alle risorse o attraverso dei pacchetti standard o attraverso la presentazione di progetti.</strong>
+pacchettiCarousel:
+  title: Pacchetti standard
+  subtitle: Per le misure con una <strong>platea ampia di beneficiari</strong> (oltre 1.000 PA), è stata pensata una modalità di accesso per <strong>pacchetti standard</strong>. Un percorso <strong>semplificato</strong> e <strong>guidato</strong> che va dalla richiesta dei finanziamenti all’erogazione dei fondi
+  cards:
+    - id: 0
+      title: 'Autunno 2021, conoscere'
+      description: '<strong>Informazioni e aggiornamenti</strong> per accompagnare le amministrazioni verso le opportunità di Italia digitale 2026. Le PA hanno accesso agli strumenti necessari per <strong>prepararsi alla pubblicazione degli avvisi</strong> , prevista per la primavera del 2022'
+      image: 'home-carousel-1.png'
+      imageMobile: 'home-carousel-mobile-1.png'
+      button: 'scopri di più'
+    - id: 1
+      title: 'Autunno 2021, conoscere'
+      description: '<strong>Informazioni e aggiornamenti</strong> per accompagnare le amministrazioni verso le opportunità di Italia digitale 2026. Le PA hanno accesso agli strumenti necessari per <strong>prepararsi alla pubblicazione degli avvisi</strong> , prevista per la primavera del 2022'
+      image: 'home-carousel-2.png'
+      imageMobile: 'home-carousel-mobile-2.png'
+      button: 'scopri di più'
+    - id: 2
+      title: 'Autunno 2021, conoscere'
+      description: '<strong>Informazioni e aggiornamenti</strong> per accompagnare le amministrazioni verso le opportunità di Italia digitale 2026. Le PA hanno accesso agli strumenti necessari per <strong>prepararsi alla pubblicazione degli avvisi</strong> , prevista per la primavera del 2022'
+      image: 'home-carousel-3.png'
+      imageMobile: 'home-carousel-mobile-3.png'
+      button: 'scopri di più'
