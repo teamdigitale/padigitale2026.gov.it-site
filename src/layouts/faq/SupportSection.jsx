@@ -1,18 +1,6 @@
-import React, { Fragment, useState } from 'react';
-import {
-  Section,
-  Card,
-  CardBody,
-  CardText,
-  CardTitle,
-  Button,
-  Row,
-  Col,
-} from 'design-react-kit';
-// import { StaticImage } from 'gatsby-plugin-image';
+import React from 'react';
+import { Section, Card, CardBody, CardText, CardTitle, Button, Row, Col } from 'design-react-kit';
 import { createUseStyles } from 'react-jss';
-
-import { questions } from '../../../contents/faq-page/faq.yml';
 
 const useStyles = createUseStyles({
   layout: {
@@ -87,27 +75,18 @@ export const SupportSection = (props) => {
           <Row>
             <Col className={classes.layout}>
               <Row>
-                {supportList.map((card) => {
-                  return (
-                    <Col
-                      key={card.title}
-                      md={4}
-                      lg={3}
-                      className="mb-3 mb-md-0"
-                    >
-                      <Card teaser noWrapper className={classes.cardWrapper}>
-                        <CardBody>
-                          <CardTitle tag="h5" className={classes.cardTitle}>
-                            {card.title}
-                          </CardTitle>
-                          <CardText className={classes.cardText}>
-                            {card.description}
-                          </CardText>
-                        </CardBody>
-                      </Card>
-                    </Col>
-                  );
-                })}
+                {supportList.map((card) => (
+                  <Col key={card.title} md={4} lg={3} className="mb-3 mb-md-0">
+                    <Card teaser noWrapper className={classes.cardWrapper}>
+                      <CardBody>
+                        <CardTitle tag="h5" className={classes.cardTitle}>
+                          {card.title}
+                        </CardTitle>
+                        <CardText className={classes.cardText}>{card.description}</CardText>
+                      </CardBody>
+                    </Card>
+                  </Col>
+                ))}
               </Row>
             </Col>
           </Row>

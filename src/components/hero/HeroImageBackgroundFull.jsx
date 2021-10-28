@@ -1,16 +1,18 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { createUseStyles } from 'react-jss';
+import PropTypes from 'prop-types';
 import { Row, Col, Hero } from 'design-react-kit';
 import { HeroTitle } from './HeroTitle';
 import { HeroBackground } from './HeroBackground';
-import { HeroButton } from './HeroButton';
 import { HeroParagraph } from './HeroParagraph';
+import { HeroCategory } from './HeroCategory';
 
 const useStyles = createUseStyles({
   heroImg: {
     position: 'absolute',
     right: '0',
     top: '0',
+    zIndex: '0',
   },
   heroTitle: {
     composes: 'no_doc',
@@ -23,17 +25,20 @@ const useStyles = createUseStyles({
     },
   },
   contentWrapper: {
-    composes: 'it-hero-text-wrapper',
+    composes: 'it-hero-text-wrapper bg-blue',
     paddingLeft: '0 !important',
     zIndex: 2,
   },
   heroWrapper: {
-    composes: 'it-hero-wrapper',
+    composes: 'it-hero-wrapper bg-blue',
     position: 'relative',
     display: 'flex',
     '&.overlap': {
       marginBottom: '-7rem',
       paddingBottom: '4rem',
+      '@media (min-width: 992px)': {
+        marginBottom: '-14rem',
+      },
     },
     '@media (max-width: 992px)': {
       flexDirection: 'column',
@@ -59,11 +64,6 @@ const useStyles = createUseStyles({
     },
     '&.bg-blue .btn': {
       color: '#0066CC',
-    },
-    '& .container .it-hero-text-wrapper': {
-      '@media (min-width: 992px)': {
-        // paddingLeft: '100px',
-      },
     },
     '& .container .it-hero-text-wrapper p': {
       fontFamily: 'Titillium Web,Geneva,Tahoma,sans-serif',
@@ -92,47 +92,61 @@ const useStyles = createUseStyles({
       },
     },
   },
+  bgMask: {
+    height: '100%',
+    width: '100%',
+    backgroundColor: '#0066CC',
+    position: 'absolute',
+    left: '0',
+    top: '0',
+    zIndex: '1',
+    opacity: '0.85',
+  },
 });
 
-export const HeroImageBackground = ({
-  title,
-  body,
-  theme,
-  image,
-  firstButtonLabel,
-  firstButtonClass,
-  firstButtonHref,
-  secondButtonLabel,
-  secondButtonClass,
-  secondButtonHref,
-  overlap,
-}) => {
+export const HeroImageBackgroundFull = ({ category, title, body, image, imageMobile, overlap }) => {
   const classes = useStyles();
+  const [isMobile, setIsMobile] = useState();
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 992);
+    window.addEventListener('resize', () => {
+      setIsMobile(window.innerWidth < 992);
+    });
+  }, []);
+
   return (
     <Hero>
-      <div className={`${classes.heroWrapper} ${overlap ? 'overlap' : ''} ${theme}`}>
+      <div className={`${classes.heroWrapper} ${overlap ? 'overlap' : ''}`}>
         <div className="container px-3 px-md-0">
           <Row>
             <Col xs="12" lg="11" className="offset-lg-1">
-              <div className={`${classes.contentWrapper} ${theme}`}>
+              <div className={`${classes.contentWrapper}`}>
                 <div>
+                  <HeroCategory title={category} />
                   <HeroTitle title={title} className={classes.heroTitle} />
                   <HeroParagraph text={body} />
-                  <div className={classes.buttonContainer}>
-                    <HeroButton classButton={firstButtonClass} label={firstButtonLabel} href={firstButtonHref} />
-                    {secondButtonLabel ? (
-                      <HeroButton classButton={secondButtonClass} label={secondButtonLabel} href={secondButtonHref} />
-                    ) : (
-                      ''
-                    )}
-                  </div>
                 </div>
               </div>
             </Col>
           </Row>
         </div>
-        <HeroBackground image={image} />
+        {isMobile ? (
+          <HeroBackground image={imageMobile} className="full" />
+        ) : (
+          <HeroBackground image={image} className="full" />
+        )}
+        <div className={classes.bgMask}></div>
       </div>
     </Hero>
   );
+};
+
+HeroImageBackgroundFull.propTypes = {
+  category: PropTypes.any,
+  title: PropTypes.any,
+  body: PropTypes.any,
+  image: PropTypes.any,
+  imageMobile: PropTypes.any,
+  overlap: PropTypes.bool,
 };

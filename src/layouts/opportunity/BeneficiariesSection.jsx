@@ -1,69 +1,150 @@
-import React, { Fragment, useState, useEffect } from 'react';
-import { Button, Collapse, Card, CardBody } from 'design-react-kit';
-// import { StaticImage } from 'gatsby-plugin-image';
-import { AccordionButtonFull } from '../../components/AccordionButtonFull';
+import React, { useState, useEffect } from 'react';
 import { createUseStyles } from 'react-jss';
-import { beneficiaries } from '../../../contents/opportunity-page/opportunity.yml';
-import Select from 'react-select'
-import classNames from 'classnames';
+import Select from 'react-select';
+import { AccordionButtonFull } from '../../components/AccordionButtonFull';
+import { beneficiaries, selectBeneficiaries } from '../../../contents/opportunity-page/opportunity.yml';
 
 const useStyles = createUseStyles({
   selectWrapper: {
-    composes: "bootstrap-select-wrapper"
-  }
+    composes: 'bootstrap-select-wrapper',
+    marginBottom: '2.667rem',
+    '& > label': {
+      position: 'unset',
+      transform: 'unset',
+      lineHeight: '1.4',
+      fontSize: '0.778rem',
+      marginBottom: '0.444rem',
+      display: 'inline-block',
+      textTransform: 'uppercase',
+      fontWeight: 'normal',
+    },
+    '& [class$="-container"]': {
+      maxWidth: '410px',
+      '&.is-open': {
+        '& [class$="-control"]': {
+          borderBottomLeftRadius: '0',
+          borderBottomRightRadius: '0',
+        },
+      },
+      '&.not-all': {
+        '& [class$="-control"]': {
+          backgroundColor: '#0066CC',
+        },
+      },
+    },
+    '& [class$="-control"]': {
+      cursor: 'pointer',
+      backgroundColor: '#5D6F81',
+      maxHeight: '48px',
+      border: '0',
+      padding: '0.555rem 1.333rem',
+      '& [class$="-singleValue"]': {
+        color: '#fff',
+        fontWeight: 'bold',
+      },
+      '& [class$="-indicatorSeparator"]': {
+        display: 'none',
+      },
+      '& [class$="-indicatorContainer"]': {
+        padding: '0',
+      },
+      '& svg': {
+        color: '#fff',
+      },
+      '& [class$="-ValueContainer"]': {
+        padding: '0',
+      },
+    },
+    '& [class$="-menu"]': {
+      marginTop: '0',
+      borderTopLeftRadius: '0',
+      borderTopRightRadius: '0',
+      boxShadow: '0 2px 20px 0 rgb(0 0 0 / 10%)',
+      '& [class$="-option"]': {
+        cursor: 'pointer',
+        backgroundColor: '#fff',
+        color: '#0066CC',
+        fontSize: '0.889rem',
+        lineHeight: '1.5',
+        '&:hover': {
+          fontWeight: 'bold'
+        }
+      },
+    },
+  },
 });
 
-const defaultOptions = [
-  { value: 'pa-centrali', label: 'PA Centrali' },
-  { value: 'comuni', label: 'Comuni' },
-  { value: 'province', label: 'Province' },
-  { value: 'regioni', label: 'Regioni' },
-  { value: 'enti-regionali', label: 'Enti regionali' },
-];
+const customStyles = {
+  option: (provided, state) => ({
+    ...provided,
+    fontWeight: state.isSelected ? 'bold' : 'normal',
+  }),
+};
 
 export const BeneficiariesSection = () => {
   const classes = useStyles();
+  const [accordions, setAccordions] = useState(beneficiaries);
   const [indexOpen, setIndexOpen] = useState(-1);
   const [selectValue, setSelectValue] = useState(null);
+  const [isOpen, setIsOpen] = useState(false);
+  const [filterIsAll, setFilterIsAll] = useState(true);
   const handleChange = (selectedOption) => setSelectValue(selectedOption);
+  const handleOpen = () => setIsOpen(true);
+  const handleClose = () => setIsOpen(false);
 
   const setActiveAccordion = (i) => {
-    if (indexOpen === i) {
-      setIndexOpen(-1);
-    } else {
-      setIndexOpen(i);
-    }
+    indexOpen === i ? setIndexOpen(-1) : setIndexOpen(i);
   };
 
   useEffect(() => {
-    console.log(beneficiaries);
-    
+    if (selectValue != null) {
+      if (selectValue.value !== 'tutti') {
+        const filteredList = [];
+        for (let index = 0; index < beneficiaries.length; index++) {
+          const element = beneficiaries[index].tags.filter((tag) => tag.value === selectValue.value);
+          if (element.length) {
+            filteredList.push(beneficiaries[index]);
+          }
+        }
+
+        setAccordions(filteredList);
+        setFilterIsAll(false);
+      } else {
+        setFilterIsAll(true);
+        setAccordions(beneficiaries);
+      }
+    }
   }, [selectValue]);
 
   return (
     <>
-      <div className="container mt-5">
-        <div className={classNames.selectWrapper}>
-          <label htmlFor="selectExampleClassic">Etichetta di esempio</label>
+      <div className="container mt-5 px-3">
+        <div className={classes.selectWrapper}>
+          <label htmlFor="beneficiaries">Beneficiari</label>
           <Select
-            menuIsOpen={true}
-            id="selectExampleClassic"
+            styles={customStyles}
+            isSearchable={false}
+            defaultValue={selectBeneficiaries[0]}
+            id="beneficiaries"
             onChange={handleChange}
-            options={defaultOptions}
-            placeholder="Scegli una opzione"
+            onMenuOpen={handleOpen}
+            onMenuClose={handleClose}
+            options={selectBeneficiaries}
+            placeholder={false}
+            className={(isOpen ? 'is-open' : '', filterIsAll ? '' : 'not-all')}
             aria-label="Scegli una opzione"
           />
         </div>
-        {beneficiaries.map((item, i) => {
-          return (
+        {accordions.map((item, i) => (
+          <React.Fragment key={item.title}>
             <AccordionButtonFull
               data={item}
               handleToggle={setActiveAccordion}
               id={i}
               active={indexOpen}
             />
-          );
-        })}
+          </React.Fragment>
+        ))}
       </div>
     </>
   );

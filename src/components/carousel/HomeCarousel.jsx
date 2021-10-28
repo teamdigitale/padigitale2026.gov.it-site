@@ -1,15 +1,15 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { createUseStyles } from 'react-jss';
-import { Row, Col, Card, CardBody, CardCategory, CardTitle, CardText } from 'design-react-kit';
+import { Row, Col, Card, CardBody, CardTitle, CardText, Button } from 'design-react-kit';
 import PropTypes from 'prop-types';
 import { DesktopSwiper } from '../DesktopSwiper';
 
 const useStyles = createUseStyles({
   heroCards: {
     composes: 'card-bg rounded',
-    height: '250px',
+    backgroundColor: '#ffffff',
     '@media (min-width: 992px)': {
-      height: 'auto',
+      flexDirection: 'row',
     },
     '&.card.card-bg': {
       '@media (max-width: 992px)': {
@@ -18,6 +18,13 @@ const useStyles = createUseStyles({
     },
     '& .card-body': {
       boxShadow: '0px 0px 20px rgb(0 43 85 / 4%);',
+      padding: '2.667rem',
+      order: '1',
+      textAlign: 'center',
+      '@media (min-width: 992px)': {
+        order: '0',
+        textAlign: 'left',
+      },
       '& .category-top': {
         '& a.category': {
           fontSize: '0.778rem',
@@ -27,20 +34,24 @@ const useStyles = createUseStyles({
       },
       '& h5.card-title': {
         color: '#0066CC',
-        fontSize: '1rem',
+        fontSize: '1.75rem',
         fontWeight: 'bold',
-        lineHeight: '1.26',
+        lineHeight: '1.43',
+        marginBottom: '0.889rem',
         '@media (min-width: 992px)': {
-          minHeight: '2.889rem',
+          color: '#33485C',
         },
       },
       '& .card-text': {
         color: '#33485C',
-        fontSize: '0.889rem',
+        fontSize: '1.125rem',
         fontFamily: 'Titillium Web',
         fontWeight: '400',
-        lineHeight: '1.24',
-        marginBottom: '2.222rem',
+        lineHeight: '1.28',
+        marginBottom: '7.25rem',
+        '@media (min-width: 992px)': {
+          marginBottom: '3.778rem',
+        },
       },
       '& .source': {
         color: '#33485C',
@@ -58,14 +69,31 @@ const useStyles = createUseStyles({
       content: 'none',
     },
   },
+  heroCardImg: {
+    maxHeight: '15rem',
+    minHeight: '10rem',
+    borderTopRightRadius: '4px',
+    borderTopLeftRadius: '4px',
+    objectFit: 'cover',
+    '@media (min-width: 992px)': {
+      maxHeight: '100%',
+      borderTopRightRadius: '4px',
+      borderBottomRightRadius: '4px',
+      borderTopLeftRadius: '0',
+    },
+  },
   heroCarouselTitle: {
     color: '#fff',
     fontSize: '1.556rem',
     whiteSpace: 'nowrap',
   },
-  newsUpdateSection: {
+  investmentCarouselSection: {
     backgroundColor: '#fff',
-    padding: '1.111rem 0',
+    padding: '3.125rem 0 4.5rem 0',
+    overflow: 'hidden',
+    '@media (min-width: 992px)': {
+      padding: '2.222rem 0 3.889rem 0',
+    },
     '& .swiper': {
       margin: '0 -1.111rem',
       '@media (max-width: 992px)': {
@@ -86,31 +114,44 @@ const useStyles = createUseStyles({
       margin: '0 0.889rem',
     },
   },
+  noHidden: {
+    overflow: 'visible',
+  },
 });
-// const carousel = React.createRef();
 
-export const HeroCarousel = ({ content, title }) => {
+export const HomeCarousel = ({ content, title }) => {
   const classes = useStyles();
+  const [isMobile, setIsMobile] = useState();
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 992);
+    window.addEventListener('resize', () => {
+      setIsMobile(window.innerWidth < 992);
+    });
+  }, []);
 
   const slides = content.map((element) => (
     <>
       <Card key={element.id} className={classes.heroCards} spacing noWrapper>
         <CardBody>
-          <CardCategory>{element.category}</CardCategory>
           <CardTitle tag="h5">{element.title}</CardTitle>
-          <CardText>{element.description}</CardText>
-          <div className="source">
-            {element.source}
-            <img src={`/assets/external-link.svg`} alt="" />
-          </div>
+          <CardText dangerouslySetInnerHTML={{ __html: element.description }} />
+          <Button color="primary" className="text-uppercase">
+            {element.button}
+          </Button>
         </CardBody>
+        {isMobile ? (
+          <img className={classes.heroCardImg} src={`/assets/${element.imageMobile}`} alt="" />
+        ) : (
+          <img className={classes.heroCardImg} src={`/assets/${element.image}`} alt="" />
+        )}
       </Card>
     </>
   ));
 
   return (
     <>
-      <div className={classes.newsUpdateSection}>
+      <div className={classes.investmentCarouselSection}>
         <div className="container">
           {title ? (
             <Row>
@@ -121,23 +162,26 @@ export const HeroCarousel = ({ content, title }) => {
           ) : (
             ''
           )}
-          <DesktopSwiper
-            slides={slides}
-            breakpoints={{
-              slidesPerView: 1,
-              992: {
-                slidesPerView: 3,
-              },
-            }}
-            pagination
-          />
+          <Row>
+            <Col xs="12" lg="10" className="offset-lg-1">
+              <DesktopSwiper
+                slides={slides}
+                breakpoints={{
+                  slidesPerView: 1,
+                }}
+                className={classes.noHidden}
+                mobilePagination
+                desktopNavigation
+              />
+            </Col>
+          </Row>
         </div>
       </div>
     </>
   );
 };
 
-HeroCarousel.propTypes = {
+HomeCarousel.propTypes = {
   content: PropTypes.any,
   title: PropTypes.any,
 };

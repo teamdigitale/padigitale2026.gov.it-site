@@ -1,21 +1,21 @@
 import React from 'react';
+import { createUseStyles } from 'react-jss';
 import content from '../../contents/home-page/home.yml';
+import { HeroCarousel } from '../components/carousel/Carousel';
+import labels from '../../contents/labels.yml';
 import { NewsPreviewSection } from './home/NewsPreviewSection';
 import { StrategySection } from './home/StrategySection';
-import { HeroCarousel } from '../components/carousel/Carousel';
 import { BenefitSection } from './home/BenefitSection';
 import { Form } from './home/Form';
-import { createUseStyles } from 'react-jss';
-import labels from '../../contents/labels.yml';
 
-const { ariaLabel, headerTitle, headerSubtitle } = labels;
+const { headerTitle, headerSubtitle } = labels;
 
 const useStyle = createUseStyles({
   mobileHeadText: {
     fontSize: '20px',
     lineHeight: '1.2',
-    color: '#06c'
-  }
+    color: '#06c',
+  },
 });
 
 const MobileHeadTitle = () => {

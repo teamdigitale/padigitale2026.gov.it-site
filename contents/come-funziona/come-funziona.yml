@@ -1,0 +1,27 @@
+title: Come funziona - Prossima PA
+name: Come Funziona
+involved:
+  category: Gli attori coinvolti
+  title: I soggetti istituzionali che concorrono alla realizzazione della strategia Italia digitale 2026
+  cards:
+    - id: 1
+      image: '/assets/eu-flag.svg'
+      text: Unione Europea, lorem ipsum sinc amet sed etiam lorem ipsum sinc amet sed etiam lorem ipsum sinc amet sed etiam lorem ipsum sinc amet sed etiam
+    - id: 2
+      image: '/assets/dipartment-logo.svg'
+      text: Il <strong>Dipartimento per la trasformazione digitale</strong>, guidato dal Ministro per l’innovazione tecnologica e la transizione digitale, è responsabile dell’<strong>attuazione degli investimenti di Italia digitale 2026</strong>
+    - id: 3
+      image: '/assets/mitd-logo.svg'
+      text: Il <strong>Ministro per l’innovazione tecnologica e la transizione digitale</strong>, all’interno degli interventi previsti dal PNRR, ha <strong>promosso la strategia Italia digitale 2026</strong>
+    - id: 4
+      image: '/assets/agid-logo-blue.svg'
+      text: L’<strong>Agenzia per l’Italia digitale</strong> ha il compito di garantire la <strong>realizzazione degli obiettivi dell’Agenda digitale italiana</strong>. È vigilata dal Ministro per l’innovazione tecnologica e la transizione digitale
+    - id: 5
+      image: '/assets/consip-logo.svg'
+      text: <strong>Consip</strong> è la <strong>centrale acquisti della Pubblica Amministrazione</strong>. È una società per azioni partecipata al 100% dal Ministero dell'Economia e delle Finanze
+    - id: 6
+      image: '/assets/pagopa-logo.svg'
+      text: <strong>PagoPA S.p.a</strong> si occupa di <strong>diffondere infrastrutture e servizi pubblici digitali</strong> attraverso lo sviluppo di progetti innovativi. È una società interamente partecipata dal Ministero dell’economia e delle finanze ed è vigilata dal Ministro per l’innovazione tecnologica e la transizione digitale
+    - id: 7
+      image: '/assets/mef-logo.svg'
+      text: Il <strong>Ministero dell’Economia e delle Finanze</strong> è responsabile del <strong>monitoraggio</strong> dell’<strong>attuazione</strong> degli investimenti e delle riforme del PNRR
