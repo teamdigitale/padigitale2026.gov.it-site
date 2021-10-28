@@ -14,23 +14,42 @@ const useStyles = createUseStyles({
       fontSize: '1.333rem',
       fontWeight: '700',
       color: '#0066CC',
+      maxWidth: '60%',
     },
     '& .btn': {
       padding: '0.444rem 0.889rem',
       whiteSpace: 'nowrap',
-    }
+    },
+    '@media (max-width: 991px)': {
+      flexDirection: 'column',
+      padding: '0.889rem 1.333rem',
+      '& p': {
+        maxWidth: '100%',
+      }
+    },
   },
 });
 
-export const ModalUpdatesButton = ({ label, buttonLabel }) => {
+export const ModalUpdatesButton = ({
+  label,
+  buttonLabel,
+  initialState,
+  handleToggle,
+}) => {
   const classes = useStyles();
+  const eventHandler = () => {
+    handleToggle();
+  };
+
   return (
     <Container>
       <Row>
         <Col lg={12}>
           <div className={classes.modalButtonContainer}>
             <p className={classes.text}>{label}</p>
-            <Button color="primary" onClick={() => toggleModal(!isOpen)}>{buttonLabel}</Button>
+            <Button color="primary" onClick={eventHandler}>
+              {buttonLabel}
+            </Button>
           </div>
         </Col>
       </Row>
