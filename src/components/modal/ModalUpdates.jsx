@@ -20,6 +20,10 @@ const useStyles = createUseStyles({
   modalUpdatesContainer: {
     '&.modal-dialog': {
       maxWidth: '90%',
+      '@media (max-width: 991px)': {
+        maxWidth: '100%',
+        margin: '0',
+      }
     },
     '&.modal-dialog .modal-content .modal-header': {
       padding: '0',
@@ -31,15 +35,26 @@ const useStyles = createUseStyles({
     },
     '& .modal-content': {
       padding: '4.444rem 5.556rem',
+      '@media (max-width: 991px)': {
+        padding: '3.778rem 0.833rem 4.444rem'
+      }
     },
     '&.modal-dialog .modal-content .modal-header .modal-title': {
       fontSize: '1.333rem',
       fontWeight: '700',
       color: '#0066CC',
       maxWidth: '70%',
+      '@media (max-width: 991px)': {
+        maxWidth: '100%',
+      }
     },
   },
   close: {
+    '@media (max-width: 991px)': {
+      position: 'absolute',
+      top: '0.556rem',
+      right: '-0.5rem',
+    },
     '&.btn': {
       background: 'none',
       boxShadow: 'none',
@@ -104,6 +119,9 @@ const useStyles = createUseStyles({
     },
     '& input[type="radio"].is-invalid:not(:checked)+label::before': {
       borderColor: '#F83E5A',
+    },
+    '& .form-group': {
+      margin: '0',
     },
     '& .form-group input[type="text"]': {
       paddingLeft: '1.333rem',
@@ -421,7 +439,6 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                     maxlength={textareaMaxLength}
                   ></textarea>
                   <label
-                    onClick={textareaFocusHandler}
                     className={textareaState == 'active' ? 'active' : ''}
                     for="exampleFormControlTextarea1"
                   >
@@ -437,7 +454,7 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
           <Row className="mt-5">
             <Col xs={12}>
               <fieldset>
-                <legend>Radio</legend>
+              <label className={classes.selectLabel}>DICHIARO</label>
                 <FormGroup check>
                   <input
                     className={errors.radio1 ? 'is-invalid' : ''}

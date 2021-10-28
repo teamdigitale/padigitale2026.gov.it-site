@@ -38,6 +38,7 @@ export const OpportunityPage = () => {
         supportList={support.cards}
         title={support.title}
         buttonLabel={support.buttonLabel}
+        handleToggle={toggleModal}
       />
       <ModalUpdates initialState={isOpen} handleToggle={toggleModal} />
     </>
