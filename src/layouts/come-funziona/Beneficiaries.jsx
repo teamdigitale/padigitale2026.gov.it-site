@@ -32,16 +32,35 @@ const useStyle = createUseStyles({
   },
   linkItem: {
     display: 'flex',
-    alignItems: 'center',
+    alignItems: 'flex-end',
     textDecoration: 'none',
+    position: 'relative',
+    marginBottom: '3rem',
+    '@media (min-width: 992px)': {
+      marginBottom: '3.667rem',
+    },
     '& img': {
       marginRight: '1.555rem',
     },
     '& span': {
-      fontSize: '1.333rem',
+      fontSize: '1.25rem',
       fontWeight: '600',
       lineHeight: '1',
+      marginBottom: '0.444rem',
+      '@media (min-width: 768px)': {
+        fontSize: '1.111rem',
+      },
     },
+    '&:after': {
+      content: '""',
+      position: 'absolute',
+      bottom: '0',
+      left: '50%',
+      transform: 'translateX(-50%)',
+      width: 'calc(100% + 30px)',
+      height: '2px',
+      backgroundColor: '#EAF4FE'
+    }
   },
 });
 
@@ -71,7 +90,7 @@ export const Beneficiaries = (props) => {
                 return (
                   <React.Fragment key={item.filterId}>
                     <Col md="6" lg="4">
-                      <Link to="/opportunita" state={{filter: item.filterId}} className={classes.linkItem}>
+                      <Link to="/opportunita" state={{filter: {value: item.filterId, label: item.linkLabel}}} className={classes.linkItem}>
                         <img src={item.img} alt="" />
                         <span>{item.linkLabel}</span>
                       </Link>

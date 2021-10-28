@@ -82,12 +82,14 @@ const customStyles = {
 };
 
 export const BeneficiariesSection = (props) => {
-  console.log(props.externalFilter);
+  console.log('inizio', props.externalFilter);
+
   
   const classes = useStyles();
   const [accordions, setAccordions] = useState(beneficiaries);
   const [indexOpen, setIndexOpen] = useState(-1);
   const [selectValue, setSelectValue] = useState(null);
+  const [initialSelectValue, setInitialSelectValue] = useState(selectBeneficiaries[0]);  
   const [isOpen, setIsOpen] = useState(false);
   const [filterIsAll, setFilterIsAll] = useState(true);
   const handleChange = (selectedOption) => setSelectValue(selectedOption);
@@ -98,11 +100,15 @@ export const BeneficiariesSection = (props) => {
     indexOpen === i ? setIndexOpen(-1) : setIndexOpen(i);
   };
 
-  // useEffect(() => {
-  //   if(props.externalFilter !== null) {
-  //     setSelectValue(props.externalFilter);
-  //   }
-  // }, []);
+  useEffect(() => {
+    
+    if(props.externalFilter !== null) {
+      const activeFilter = selectBeneficiaries.filter(item => item.value === props.externalFilter.value);
+      console.log('quello che dovrebbe', activeFilter[0]);
+      setInitialSelectValue(activeFilter[0]);
+      setSelectValue(props.externalFilter);
+    }
+  }, [props.externalFilter]);
 
   useEffect(() => {
     if (selectValue != null) {
@@ -132,7 +138,7 @@ export const BeneficiariesSection = (props) => {
           <Select
             styles={customStyles}
             isSearchable={false}
-            defaultValue={selectBeneficiaries[0]}
+            defaultValue={initialSelectValue}
             id="beneficiaries"
             onChange={handleChange}
             onMenuOpen={handleOpen}
