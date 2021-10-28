@@ -15,6 +15,7 @@ import {
   Label,
 } from 'design-react-kit';
 import Select from 'react-select';
+import content from '../../../contents/opportunity-page/opportunity.yml';
 
 const useStyles = createUseStyles({
   modalUpdatesContainer: {
@@ -23,7 +24,7 @@ const useStyles = createUseStyles({
       '@media (max-width: 991px)': {
         maxWidth: '100%',
         margin: '0',
-      }
+      },
     },
     '&.modal-dialog .modal-content .modal-header': {
       padding: '0',
@@ -36,8 +37,8 @@ const useStyles = createUseStyles({
     '& .modal-content': {
       padding: '4.444rem 5.556rem',
       '@media (max-width: 991px)': {
-        padding: '3.778rem 0.833rem 4.444rem'
-      }
+        padding: '3.778rem 0.833rem 4.444rem',
+      },
     },
     '&.modal-dialog .modal-content .modal-header .modal-title': {
       fontSize: '1.333rem',
@@ -46,7 +47,7 @@ const useStyles = createUseStyles({
       maxWidth: '70%',
       '@media (max-width: 991px)': {
         maxWidth: '100%',
-      }
+      },
     },
   },
   close: {
@@ -88,6 +89,7 @@ const useStyles = createUseStyles({
       border: 'none',
       borderBottom: '2px solid #5c6f82',
       borderRadius: '0',
+      boxShadow: 'none',
     },
     '& [class$="-ValueContainer"]': {
       paddingLeft: '1.333rem',
@@ -96,6 +98,23 @@ const useStyles = createUseStyles({
     },
     '& [class$="-indicatorSeparator"]': {
       display: 'none',
+    },
+    '& [class$="-menu"]': {
+      margin: '0',
+      border: 'none',
+      boxShadow: '0px 0px 80px rgba(0, 43, 85, 0.1)',
+      borderTopLeftRadius: '0',
+      borderTopRightRadius: '0',
+      borderBottomLeftRadius: '4px',
+      borderBottomRightRadius: '4px',
+    },
+    '& [class$="-MenuList"]': {
+      padding: '0',
+
+      '& [class$="-option"]': {
+        fontSize: '0.889rem',
+        color: '#0066CC',
+      },
     },
     '& [class$="-indicatorContainer"] svg': {
       fill: '#33485C',
@@ -158,6 +177,7 @@ const useStyles = createUseStyles({
     fontSize: '0.778rem',
     color: '#F83E5A',
     padding: '0 0.444rem',
+    fontWeight: '400',
   },
   selectLabel: {
     fontSize: '0.778rem',
@@ -218,11 +238,32 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
     }
   };
 
-  const representOptions = [
-    { value: 'public-administration', label: 'Pubblica amministrazione' },
-    { value: 'fornitore-it', label: 'Fornitore IT' },
-    { value: 'other', label: 'Altro' },
-  ];
+  const {
+    selectRepresent,
+    modalTitle,
+    modalSubtitle,
+    updatesLabel,
+    updatesInfo,
+    mandatoryAdvise,
+    requiredLabel,
+    emailValidationLabel,
+    emailLabel,
+    representLabel,
+    selectPlaceholder,
+    enteValidationLabel,
+    denomitationEnteLabel,
+    inQuantoLabel,
+    directContactLabel,
+    directContactInfo,
+    addMessageLabel,
+    messageSelectLabel,
+    messageLabel,
+    radioGroupLabel,
+    comunicationRadio,
+    privacyRadio,
+    mandatoryRadioLabel,
+    sendButtonLabel,
+  } = content.modal;
 
   return (
     <Modal
@@ -232,10 +273,7 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
       className={classes.modalUpdatesContainer}
     >
       <div id="updates-modal" class="modal-header">
-        <h5 class="modal-title">
-          Vuoi ricevere aggiornamenti sugli investimenti per la digitalizzazione
-          della PA?
-        </h5>
+        <h5 class="modal-title">{modalTitle}</h5>
         <Button
           type="button"
           className={classes.close}
@@ -250,10 +288,10 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
           />
         </Button>
       </div>
-      <p className={classes.modalSubtitle}>
-        Ricevi <strong>tutte le novità</strong> che riguardano{' '}
-        <strong>la tua amministrazione</strong> lasciando i tuoi contatti
-      </p>
+      <p
+        className={classes.modalSubtitle}
+        dangerouslySetInnerHTML={{ __html: modalSubtitle }}
+      ></p>
       <ModalBody className={classes.modalBody}>
         <form onSubmit={handleSubmit(onSubmit, onError)} id="updates-form">
           <Row>
@@ -263,20 +301,17 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
           </Row>
           <Row className="mt-3">
             <Col xs={12}>
-              <span className={classes.modalLabel}>AGGIORNAMENTI</span>
+              <span className={classes.modalLabel}>{updatesLabel}</span>
             </Col>
           </Row>
           <Row className="mt-2">
             <Col xs={12}>
-              <p>
-                Ricevi <strong>materiali e informazioni</strong> sulle novità e
-                gli avvisi di Italia digitale 2026
-              </p>
+              <p dangerouslySetInnerHTML={{ __html: updatesInfo }}></p>
             </Col>
           </Row>
           <Row className="mt-5">
             <Col xs={12}>
-              <p>I campi con * sono obbligatori</p>
+              <p dangerouslySetInnerHTML={{ __html: mandatoryAdvise }}></p>
             </Col>
           </Row>
           <Row className="mt-5">
@@ -285,18 +320,17 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                 name="email"
                 control={control}
                 rules={{
-                  required: 'questo campo è richiesto',
+                  required: requiredLabel,
                   pattern: {
                     value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                    message: 'inserisci un indirizzo email valido',
+                    message: emailValidationLabel,
                   },
                 }}
                 render={({ field }) => (
                   <Input
-                    /* valid={isEmailValid} */
                     invalid={errors.email}
                     infoText={errors.email && errors.email.message}
-                    label="EMAIL*"
+                    label={emailLabel}
                     type="text"
                     {...field}
                   />
@@ -306,7 +340,7 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
           </Row>
           <Row className="mt-5">
             <Col xs={12} lg={6}>
-              <label className={classes.selectLabel}>RAPPRESENTO*</label>
+              <label className={classes.selectLabel}>{representLabel}</label>
               <Controller
                 control={control}
                 name="represent"
@@ -316,9 +350,9 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                     value={value}
                     id="represent-select"
                     onChange={(onChange, selectHandler)}
-                    options={representOptions}
-                    placeholder="Scegli una voce dall’elenco"
-                    aria-label="Scegli una voce dall’elenco"
+                    options={selectRepresent}
+                    placeholder={selectPlaceholder}
+                    aria-label={selectPlaceholder}
                     className={`${errors.represent && 'select is-invalid'}`}
                   />
                 )}
@@ -326,7 +360,7 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
             </Col>
           </Row>
           <span className={classes.errorLabel}>
-            {errors.represent ? 'questo campo è richiesto' : ''}
+            {errors.represent ? requiredLabel : ''}
           </span>
           <div
             className={`${classes.enteContainer} ${enteState ? '' : 'hidden'}`}
@@ -339,19 +373,18 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                   rules={{
                     required: {
                       value: enteState,
-                      message: 'questo campo è richiesto',
+                      message: requiredLabel,
                     },
                     pattern: {
                       value: /^[a-zA-Z ]*$/i,
-                      message:
-                        'Per favore inserisci una denominazione ente valida.',
+                      message: enteValidationLabel,
                     },
                   }}
                   render={({ field }) => (
                     <Input
                       invalid={errors.ente}
                       infoText={errors.ente && errors.ente.message}
-                      label="DENOMINAZIONE ENTE*"
+                      label={denomitationEnteLabel}
                       type="text"
                       {...field}
                     />
@@ -359,16 +392,16 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                 />
               </Col>
             </Row>
-            <Row className="mt-4">
+            <Row className="mt-5">
               <Col xs={12} lg={6}>
-                <label className={classes.selectLabel}>IN QUANTO*</label>
+                <label className={classes.selectLabel}>{inQuantoLabel}</label>
                 <Controller
                   control={control}
                   name="enteSelect"
                   rules={{
                     required: {
                       value: enteState,
-                      message: 'questo campo è richiesto',
+                      message: requiredLabel,
                     },
                   }}
                   render={({ field: { onChange, value } }) => (
@@ -376,9 +409,9 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                       value={value}
                       id="enteSelect"
                       onChange={onChange}
-                      options={representOptions}
-                      placeholder="Scegli una voce dall’elenco"
-                      aria-label="Scegli una voce dall’elenco"
+                      options={selectRepresent}
+                      placeholder={selectPlaceholder}
+                      aria-label={selectPlaceholder}
                       className={`${errors.represent && 'select is-invalid'}`}
                     />
                   )}
@@ -386,7 +419,7 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
               </Col>
             </Row>
             <span className={classes.errorLabel}>
-              {errors.enteSelect ? 'questo campo è richiesto' : ''}
+              {errors.enteSelect ? requiredLabel : ''}
             </span>
           </div>
           <Row className="mt-5">
@@ -394,36 +427,32 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
               <img src="assets/icon-chat.svg" alt="icon chat" />
             </Col>
           </Row>
-          <Row className="mt-2">
+          <Row className="mt-3">
             <Col xs={12}>
-              <span className={classes.modalLabel}>CONTATTO DIRETTO</span>
+              <span className={classes.modalLabel}>{directContactLabel}</span>
             </Col>
           </Row>
           <Row className="mt-2">
             <Col xs={12}>
-              <p>
-                Un <strong>Team dedicato</strong> è a tua disposizione per
-                ricevere chiarimenti sugli investimenti o approfondire alcuni
-                temi
-              </p>
+              <p dangerouslySetInnerHTML={{ __html: directContactInfo }}></p>
             </Col>
           </Row>
           <Row className="mt-5">
             <Col xs={12}>
               <h3 className={classes.modalTitleSecondary}>
-                Voglio aggiungere un messagio
+                {addMessageLabel}
               </h3>
             </Col>
           </Row>
           <Row className="mt-5">
             <Col xs={12} lg={6}>
-              <label className={classes.selectLabel}>ARGOMENTO MESSAGGIO</label>
+              <label className={classes.selectLabel}>{messageSelectLabel}</label>
               <Select
-                id="selectExampleClassic"
+                id="message-select"
                 onChange={handleChange}
-                options={representOptions}
-                placeholder="Scegli una opzione"
-                aria-label="Scegli una opzione"
+                options={selectRepresent}
+                placeholder={selectPlaceholder}
+                aria-label={selectPlaceholder}
               />
             </Col>
           </Row>
@@ -442,10 +471,10 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                     className={textareaState == 'active' ? 'active' : ''}
                     for="exampleFormControlTextarea1"
                   >
-                    Esempio di area di testo
+                    {messageLabel}
                   </label>
                   <span className={classes.maxLengthLabel}>
-                    Massimo <span id="max-length-number">160</span> caratteri
+                    Massimo <span id="max-length-number">{textareaMaxLength}</span> caratteri
                   </span>
                 </div>
               </div>
@@ -454,7 +483,7 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
           <Row className="mt-5">
             <Col xs={12}>
               <fieldset>
-              <label className={classes.selectLabel}>DICHIARO</label>
+                <label className={classes.selectLabel}>{radioGroupLabel}</label>
                 <FormGroup check>
                   <input
                     className={errors.radio1 ? 'is-invalid' : ''}
@@ -464,7 +493,7 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                     {...register('radio1', { required: true })}
                   />
                   <Label check htmlFor="radio1">
-                    Acconsento a essere contattato per comunicazioni specifiche*
+                    {comunicationRadio}
                   </Label>
                 </FormGroup>
                 <FormGroup check>
@@ -475,13 +504,11 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                     id="radio2"
                     {...register('radio2', { required: true })}
                   />
-                  <Label check htmlFor="radio2">
-                    Ho letto e compreso <a href="#">l’informativa privacy *</a>
-                  </Label>
+                  <Label check htmlFor="radio2" dangerouslySetInnerHTML={{ __html: privacyRadio }}/>
                 </FormGroup>
                 <span className={classes.errorLabel}>
                   {errors.radio1 || errors.radio2
-                    ? 'Seleziona entrambe le voci per proseguire'
+                    ? mandatoryRadioLabel
                     : ''}
                 </span>
               </fieldset>
@@ -491,7 +518,7 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
       </ModalBody>
       <ModalFooter className="justify-content-start px-0">
         <Button color="primary" type="submit" form="updates-form">
-          Salva modifiche
+          {sendButtonLabel}
         </Button>
       </ModalFooter>
     </Modal>
