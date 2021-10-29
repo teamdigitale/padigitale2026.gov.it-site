@@ -60,6 +60,9 @@ const useStyles = createUseStyles({
     '&.nav-tabs': {
       '& .nav-link': {
         flexBasis: '70%',
+        '@media (min-width: 992px)': {
+          flexBasis: 'auto',
+        },
       },
     },
   },
