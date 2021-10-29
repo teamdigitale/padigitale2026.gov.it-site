@@ -276,6 +276,7 @@ modal:
   messageLabel: TESTO MESSAGGIO
   radioGroupLabel: DICHIARO
   comunicationRadio: Acconsento a essere contattato per comunicazioni specifiche*
-  privacyRadio: Ho letto e compreso <a href="#">l’informativa privacy *</a>
+  privacyRadio: Ho letto e compreso
+  privacyRadioLinkLabel: l’informativa privacy
   mandatoryRadioLabel: Seleziona entrambe le voci per proseguire
   sendButtonLabel: INVIA

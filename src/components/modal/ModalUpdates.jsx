@@ -114,6 +114,7 @@ const useStyles = createUseStyles({
       '& [class$="-option"]': {
         fontSize: '0.889rem',
         color: '#0066CC',
+        background: '#fff',
       },
     },
     '& [class$="-indicatorContainer"] svg': {
@@ -261,6 +262,7 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
     radioGroupLabel,
     comunicationRadio,
     privacyRadio,
+    privacyRadioLinkLabel,
     mandatoryRadioLabel,
     sendButtonLabel,
   } = content.modal;
@@ -332,6 +334,7 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                     infoText={errors.email && errors.email.message}
                     label={emailLabel}
                     type="text"
+                    id="email"
                     {...field}
                   />
                 )}
@@ -387,6 +390,7 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                       label={denomitationEnteLabel}
                       type="text"
                       {...field}
+                      id="ente"
                     />
                   )}
                 />
@@ -466,10 +470,11 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                     onInput={textareaInputHandler}
                     rows="3"
                     maxlength={textareaMaxLength}
+                    id="message"
                   ></textarea>
                   <label
                     className={textareaState == 'active' ? 'active' : ''}
-                    for="exampleFormControlTextarea1"
+                    for="message"
                   >
                     {messageLabel}
                   </label>
@@ -504,7 +509,7 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                     id="radio2"
                     {...register('radio2', { required: true })}
                   />
-                  <Label check htmlFor="radio2" dangerouslySetInnerHTML={{ __html: privacyRadio }}/>
+                  <Label check htmlFor="radio2">{privacyRadio} <a href="#">{privacyRadioLinkLabel}</a> *</Label>
                 </FormGroup>
                 <span className={classes.errorLabel}>
                   {errors.radio1 || errors.radio2
@@ -516,7 +521,7 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
           </Row>
         </form>
       </ModalBody>
-      <ModalFooter className="justify-content-start px-0">
+      <ModalFooter className="justify-content-center justify-content-md-start px-0">
         <Button color="primary" type="submit" form="updates-form">
           {sendButtonLabel}
         </Button>
