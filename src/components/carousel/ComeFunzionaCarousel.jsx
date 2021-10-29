@@ -77,7 +77,7 @@ const useStyles = createUseStyles({
   },
 });
 
-export const ComeFunzionaCarousel = ({ content, title, subtitle, paragraph }) => {
+export const ComeFunzionaCarousel = ({ content, title, subtitle }) => {
   const classes = useStyles();
 
   const slides = content.map((element) => (
@@ -90,19 +90,6 @@ export const ComeFunzionaCarousel = ({ content, title, subtitle, paragraph }) =>
     <>
       <div className={classes.howCarouselSection}>
         <div className="container px-3">
-          {paragraph ? (
-            <Row>
-              <Col xs="12" lg="7" className="offset-lg-1">
-                <h2 className={classes.paragraphTitle}>{paragraph.title}</h2>
-                <p
-                  className={classes.paragraphDescription}
-                  dangerouslySetInnerHTML={{ __html: paragraph.description }}
-                />
-              </Col>
-            </Row>
-          ) : (
-            ''
-          )}
           {title ? (
             <Row>
               <Col xs="12" lg="4" className="offset-lg-1">
@@ -143,5 +130,4 @@ ComeFunzionaCarousel.propTypes = {
   content: PropTypes.any,
   title: PropTypes.any,
   subtitle: PropTypes.any,
-  paragraph: PropTypes.any,
 };
