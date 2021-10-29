@@ -14,6 +14,9 @@ const useStyles = createUseStyles({
     color: '#33485C',
     margin: '0.833rem 0',
   },
+  inputWrap : {
+    backgroundImage: 'url("../assets/icon-search.svg")'
+  }
 });
 export const FaqPage = () => {
   const classes = useStyles();
@@ -21,7 +24,6 @@ export const FaqPage = () => {
   const [filterId, setFilterId] = useState('all');
   const [questions, setQuestions] = useState(faq.questions);
   const [isMobile, setIsMobile] = useState();
-  // const [noResults, setNoResults] = useState(false);
 
   useEffect(() => {
     setIsMobile(window.innerWidth < 992);
@@ -35,7 +37,7 @@ export const FaqPage = () => {
     if (event.target.value.length >= 3) {
       const newQuest = [];
       faq.questions.forEach((question) => {
-        if (getAccordionsFiltered(question).length) {
+        if (getAccordionsFiltered(question, event.target.value).length) {
           newQuest.push(question);
         }
       });
@@ -70,8 +72,8 @@ export const FaqPage = () => {
     }
   };
 
-  function getAccordionsFiltered(question) {
-    const regexp = new RegExp(event.target.value, 'i');
+  function getAccordionsFiltered(question, input) {
+    const regexp = new RegExp(input, 'i');
 
     return question.accordions.filter((accordion) => regexp.test(accordion.title));
   }
@@ -80,11 +82,12 @@ export const FaqPage = () => {
     if (!isMobile) {
       if (inputValue && inputValue.length >= 3) {
         const newQuest = [];
-        faq.questions.forEach((question) => {
-          if (getAccordionsFiltered(question).length) {
+        faq.questions.forEach((question) => { 
+          if (getAccordionsFiltered(question, inputValue).length) {
             newQuest.push(question);
           }
         });
+        
         setQuestions(newQuest);
       } else {
         setQuestions(faq.questions);
@@ -98,7 +101,7 @@ export const FaqPage = () => {
         if (inputValue) {
           const newQuest = [];
           faq.questions.forEach((question) => {
-            if (getAccordionsFiltered(question).length) {
+            if (getAccordionsFiltered(question, inputValue).length) {
               newQuest.push(question);
             }
           });

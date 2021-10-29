@@ -20,7 +20,7 @@ questions:
     sectionId: contesto
     accordions:
       - title: Cos'è Next Generation EU?
-        content: <strong>Next Generation EU (NGEU)</strong> è un piano da €750 miliardi di Euro che ha l'obiettivo di rilanciare l'economia europea dopo la pandemia di COVID-19 e di renderla più verde e digitale.
+        content: <strong>Next Generation EU (NGEU)</strong> è un piano da €750 miliardi di Euro che ha l'obiettivo di rilanciare l'economia europea dopo la pandemia di COVID-19 e di renderla più verde e digitale generale.
         linkLabel: Vai al sito Next Generation EU dell'Unione Europea
         link: '#'
         ariaLabel: testo aria label
@@ -37,7 +37,7 @@ questions:
     sectionId: investimenti
     accordions:
       - title: Quali sono gli investimenti di Italia digitale 2026?
-        content: Next Generation EU (NGEU) è un piano da €750 miliardi di Euro che ha l'obiettivo di rilanciare l'economia europea dopo la pandemia di COVID-19 e di renderla più verde e digitale.
+        content: testo due
       - title: Dove posso trovare informazioni su tutti gli investimenti di Italia domani, il Piano nazionale di ripresa e resilienza?
         content: Next Generation EU (NGEU) è un piano da €750 miliardi di Euro che ha l'obiettivo di rilanciare l'economia europea dopo la pandemia di COVID-19 e di renderla più verde e digitale.
       - title: A chi sono rivolti i fondi di Italia digitale 2026?
@@ -61,7 +61,7 @@ questions:
     sectionId: supporto
     accordions:
       - title: È possibile richiedere supporto?  
-        content: Next Generation EU (NGEU) è un piano da €750 miliardi di Euro che ha l'obiettivo di rilanciare l'economia europea dopo la pandemia di COVID-19 e di renderla più verde e digitale.
+        content: Proviamo il filtro è un piano da €750 miliardi di Euro che ha l'obiettivo di rilanciare l'economia europea dopo la pandemia di COVID-19 e di renderla più verde e digitale.
       - title: Come posso ricevere aggiornamenti? 
         content: Next Generation EU (NGEU) è un piano da €750 miliardi di Euro che ha l'obiettivo di rilanciare l'economia europea dopo la pandemia di COVID-19 e di renderla più verde e digitale.
 noResults: Nessun risultato trovato
