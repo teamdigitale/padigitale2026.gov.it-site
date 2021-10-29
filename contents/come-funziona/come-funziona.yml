@@ -26,27 +26,301 @@ involved:
       image: '/assets/mef-logo.svg'
       text: Il <strong>Ministero dell’Economia e delle Finanze</strong> è responsabile del <strong>monitoraggio</strong> dell’<strong>attuazione</strong> degli investimenti e delle riforme del PNRR
 modalitaAccesso:
-  title: Due modalità di accesso ai fondi del PNRR in relazione alla platea di benficiari
-  description: La strada verso Italia digitale 2026 è appena cominciata. Su Prossima PA sono <strong>resi disponibili tutti i materiali, le informazioni e gli strumenti</strong> per aiutare le amministrazioni a percorrerla. In questo percorso sono state <strong>pensate diverse modalità di accesso ai fondi del PNRR</strong> gestiti dal Dipartimento per la trasformazione digitale. A seconda della tipologia di misura e di PA, sarà possibile <strong>accedere alle risorse o attraverso dei pacchetti standard o attraverso la presentazione di progetti.</strong>
+  # title: Due modalità di accesso ai fondi del PNRR in relazione alla platea di benficiari
+  # description: La strada verso Italia digitale 2026 è appena cominciata. Su Prossima PA sono <strong>resi disponibili tutti i materiali, le informazioni e gli strumenti</strong> per aiutare le amministrazioni a percorrerla. In questo percorso sono state <strong>pensate diverse modalità di accesso ai fondi del PNRR</strong> gestiti dal Dipartimento per la trasformazione digitale. A seconda della tipologia di misura e di PA, sarà possibile <strong>accedere alle risorse o attraverso dei pacchetti standard o attraverso la presentazione di progetti.</strong>
+  description: Sono previste <strong>due modalità di accesso ai fondi del PNRR</strong> gestiti dal Dipartimento per la trasformazione digitale. A seconda della tipologia di misura e di PA, sarà possibile <strong>accedere alle risorse o attraverso delle soluzioni standard</strong> o <strong>attraverso la presentazione di progetti.</strong>
 pacchettiCarousel:
   title: Pacchetti standard
   subtitle: Per le misure con una <strong>platea ampia di beneficiari</strong> (oltre 1.000 PA), è stata pensata una modalità di accesso per <strong>pacchetti standard</strong>. Un percorso <strong>semplificato</strong> e <strong>guidato</strong> che va dalla richiesta dei finanziamenti all’erogazione dei fondi
   cards:
     - id: 0
-      title: 'Autunno 2021, conoscere'
-      description: '<strong>Informazioni e aggiornamenti</strong> per accompagnare le amministrazioni verso le opportunità di Italia digitale 2026. Le PA hanno accesso agli strumenti necessari per <strong>prepararsi alla pubblicazione degli avvisi</strong> , prevista per la primavera del 2022'
-      image: 'home-carousel-1.png'
-      imageMobile: 'home-carousel-mobile-1.png'
+      tabs:
+        - id: 0
+          name: Richiesta Fondi
+          image: first-tab.svg
+          imageActive: first-tab-active.svg
+          content:
+            title: Soluzioni a misura di PA
+            description: Semplificare la richiesta di finanziamenti e ridurre gli oneri amministrativi per tutta la PA
+            first:
+              title: soluzioni standard
+              image: box.svg
+              description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti. 
+            second:
+              title: soluzioni standard
+              image: multibox.svg
+              description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti. 
+        - id: 1
+          name: Realizzazione delle iniziative
+          image: second-tab.svg
+          imageActive: second-tab-active.svg
+          content:
+            title: Un portale dedicato e un team di supporto sul territorio
+            description: L’importanza di accompagnare le amministrazioni con competenze e strumenti
+            first:
+              title: soluzioni standard
+              image: box.svg
+              description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti. 
+            second:
+              title: soluzioni standard
+              image: multibox.svg
+              description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti. 
+        - id: 2
+          name: Erogazione dei fondi
+          image: third-tab.svg
+          imageActive: third-tab-active.svg
+          content:
+            title: L’importanza dei risultati
+            description: Semplificazione dei processi per l’erogazione dei fondi
+            first:
+              title: soluzioni standard
+              image: box.svg
+              description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti.
+            second:
+              title: soluzioni standard
+              image: multibox.svg
+              description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti. 
       button: 'scopri di più'
     - id: 1
-      title: 'Autunno 2021, conoscere'
-      description: '<strong>Informazioni e aggiornamenti</strong> per accompagnare le amministrazioni verso le opportunità di Italia digitale 2026. Le PA hanno accesso agli strumenti necessari per <strong>prepararsi alla pubblicazione degli avvisi</strong> , prevista per la primavera del 2022'
-      image: 'home-carousel-2.png'
-      imageMobile: 'home-carousel-mobile-2.png'
-      button: 'scopri di più'
+      tabs:
+        - id: 0
+          name: Richiesta Fondi
+          image: first-tab.svg
+          imageActive: first-tab-active.svg
+          content:
+            title: Soluzioni a misura di PA
+            description: Semplificare la richiesta di finanziamenti e ridurre gli oneri amministrativi per tutta la PA
+            first:
+              title: soluzioni standard
+              image: box.svg
+              description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti.
+            second:
+              title: soluzioni standard
+              image: multibox.svg
+              description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti. 
+        - id: 1
+          name: Realizzazione delle iniziative
+          image: second-tab.svg
+          imageActive: second-tab-active.svg
+          content:
+            title: Un portale dedicato e un team di supporto sul territorio
+            description: L’importanza di accompagnare le amministrazioni con competenze e strumenti
+            first:
+              title: soluzioni standard
+              image: box.svg
+              description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti.
+            second:
+              title: soluzioni standard
+              image: multibox.svg
+              description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti. 
+        - id: 2
+          name: Erogazione dei fondi
+          image: third-tab.svg
+          imageActive: third-tab-active.svg
+          content:
+            title: L’importanza dei risultati
+            description: Semplificazione dei processi per l’erogazione dei fondi
+            first:
+              title: soluzioni standard
+              image: box.svg
+              description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti.
+            second:
+              title: soluzioni standard
+              image: multibox.svg
+              description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti. 
     - id: 2
-      title: 'Autunno 2021, conoscere'
-      description: '<strong>Informazioni e aggiornamenti</strong> per accompagnare le amministrazioni verso le opportunità di Italia digitale 2026. Le PA hanno accesso agli strumenti necessari per <strong>prepararsi alla pubblicazione degli avvisi</strong> , prevista per la primavera del 2022'
-      image: 'home-carousel-3.png'
-      imageMobile: 'home-carousel-mobile-3.png'
+      tabs:
+        - id: 0
+          name: Richiesta Fondi
+          image: first-tab.svg
+          imageActive: first-tab-active.svg
+          content:
+            title: Soluzioni a misura di PA
+            description: Semplificare la richiesta di finanziamenti e ridurre gli oneri amministrativi per tutta la PA
+            imageMobile: home-carousel-mobile-1.png
+            first:
+              title: soluzioni standard
+              image: box.svg
+              description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti.
+            second:
+              title: soluzioni standard
+              image: multibox.svg
+              description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti. 
+        - id: 1
+          name: Realizzazione delle iniziative
+          image: second-tab.svg
+          imageActive: second-tab-active.svg
+          content:
+            title: Un portale dedicato e un team di supporto sul territorio
+            description: L’importanza di accompagnare le amministrazioni con competenze e strumenti
+            first:
+              title: soluzioni standard
+              image: box.svg
+              description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti.
+            second:
+              title: soluzioni standard
+              image: multibox.svg
+              description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti. 
+        - id: 2
+          name: Erogazione dei fondi
+          image: third-tab.svg
+          imageActive: third-tab-active.svg
+          content:
+            title: L’importanza dei risultati
+            description: Semplificazione dei processi per l’erogazione dei fondi
+            first:
+              title: soluzioni standard
+              image: box.svg
+              description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti.
+            second:
+              title: soluzioni standard
+              image: multibox.svg
+              description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti. 
+presentazioneCarousel:
+  title: Presentazione Progetti
+  subtitle: Per le misure con <strong>una platea ristretta di beneficiari</strong> (fino a  1.000 PA), è stata prevista una modalità di accesso che prevede la <strong>presentazione di progetti</strong>, sempre ispirata ai principi della <strong>semplicità</strong> e della <strong>riduzione degli oneri amministrativi.</strong>
+  cards:
+    - id: 0
+      tabs:
+        - id: 0
+          name: Richiesta Fondi
+          image: first-tab.svg
+          imageActive: first-tab-active.svg
+          content:
+            title: Soluzioni a misura di PA
+            description: Semplificare la richiesta di finanziamenti e ridurre gli oneri amministrativi per tutta la PA
+            first:
+              title: soluzioni standard
+              image: box.svg
+              description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti. 
+            second:
+              title: soluzioni standard
+              image: multibox.svg
+              description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti. 
+        - id: 1
+          name: Realizzazione delle iniziative
+          image: second-tab.svg
+          imageActive: second-tab-active.svg
+          content:
+            title: Un portale dedicato e un team di supporto sul territorio
+            description: L’importanza di accompagnare le amministrazioni con competenze e strumenti
+            first:
+              title: soluzioni standard
+              image: box.svg
+              description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti. 
+            second:
+              title: soluzioni standard
+              image: multibox.svg
+              description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti. 
+        - id: 2
+          name: Erogazione dei fondi
+          image: third-tab.svg
+          imageActive: third-tab-active.svg
+          content:
+            title: L’importanza dei risultati
+            description: Semplificazione dei processi per l’erogazione dei fondi
+            first:
+              title: soluzioni standard
+              image: box.svg
+              description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti.
+            second:
+              title: soluzioni standard
+              image: multibox.svg
+              description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti. 
       button: 'scopri di più'
+    - id: 1
+      tabs:
+        - id: 0
+          name: Richiesta Fondi
+          image: first-tab.svg
+          imageActive: first-tab-active.svg
+          content:
+            title: Soluzioni a misura di PA
+            description: Semplificare la richiesta di finanziamenti e ridurre gli oneri amministrativi per tutta la PA
+            first:
+              title: soluzioni standard
+              image: box.svg
+              description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti.
+            second:
+              title: soluzioni standard
+              image: multibox.svg
+              description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti. 
+        - id: 1
+          name: Realizzazione delle iniziative
+          image: second-tab.svg
+          imageActive: second-tab-active.svg
+          content:
+            title: Un portale dedicato e un team di supporto sul territorio
+            description: L’importanza di accompagnare le amministrazioni con competenze e strumenti
+            first:
+              title: soluzioni standard
+              image: box.svg
+              description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti.
+            second:
+              title: soluzioni standard
+              image: multibox.svg
+              description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti. 
+        - id: 2
+          name: Erogazione dei fondi
+          image: third-tab.svg
+          imageActive: third-tab-active.svg
+          content:
+            title: L’importanza dei risultati
+            description: Semplificazione dei processi per l’erogazione dei fondi
+            first:
+              title: soluzioni standard
+              image: box.svg
+              description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti.
+            second:
+              title: soluzioni standard
+              image: multibox.svg
+              description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti. 
+    - id: 2
+      tabs:
+        - id: 0
+          name: Richiesta Fondi
+          image: first-tab.svg
+          imageActive: first-tab-active.svg
+          content:
+            title: Soluzioni a misura di PA
+            description: Semplificare la richiesta di finanziamenti e ridurre gli oneri amministrativi per tutta la PA
+            imageMobile: home-carousel-mobile-1.png
+            first:
+              title: soluzioni standard
+              image: box.svg
+              description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti.
+            second:
+              title: soluzioni standard
+              image: multibox.svg
+              description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti. 
+        - id: 1
+          name: Realizzazione delle iniziative
+          image: second-tab.svg
+          imageActive: second-tab-active.svg
+          content:
+            title: Un portale dedicato e un team di supporto sul territorio
+            description: L’importanza di accompagnare le amministrazioni con competenze e strumenti
+            first:
+              title: soluzioni standard
+              image: box.svg
+              description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti.
+            second:
+              title: soluzioni standard
+              image: multibox.svg
+              description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti. 
+        - id: 2
+          name: Erogazione dei fondi
+          image: third-tab.svg
+          imageActive: third-tab-active.svg
+          content:
+            title: L’importanza dei risultati
+            description: Semplificazione dei processi per l’erogazione dei fondi
+            first:
+              title: soluzioni standard
+              image: box.svg
+              description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti.
+            second:
+              title: soluzioni standard
+              image: multibox.svg
+              description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti. 
+
