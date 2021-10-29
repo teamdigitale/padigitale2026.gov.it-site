@@ -86,7 +86,7 @@ export const BeneficiariesSection = (props) => {
   const [accordions, setAccordions] = useState(beneficiaries);
   const [indexOpen, setIndexOpen] = useState(-1);
   const [selectValue, setSelectValue] = useState(null);
-  const [initialSelectValue, setInitialSelectValue] = useState({});  
+  const [initialSelectValue, setInitialSelectValue] = useState(selectBeneficiaries[0]);  
   const [isOpen, setIsOpen] = useState(false);
   const [filterIsAll, setFilterIsAll] = useState(true);
   const handleChange = (selectedOption) => setSelectValue(selectedOption);
@@ -98,9 +98,8 @@ export const BeneficiariesSection = (props) => {
   };
 
   useEffect(() => {
-    if(props.externalFilter) {
-      const activeFilter = selectBeneficiaries.filter(item => item.value === props.externalFilter.value);
-      setInitialSelectValue(activeFilter[0]);
+    if(props.externalFilter) {      
+      setInitialSelectValue(props.externalFilter);
       setSelectValue(props.externalFilter);
     }
   }, [props.externalFilter]);
@@ -130,11 +129,10 @@ export const BeneficiariesSection = (props) => {
       <div className="container mt-5 px-3">
         <div className={classes.selectWrapper}>
           <label htmlFor="beneficiaries">Beneficiari</label>
-          {initialSelectValue.value}
-          {initialSelectValue && <Select
+          <Select
             styles={customStyles}
             isSearchable={false}
-            defaultValue={initialSelectValue}
+            value={selectValue || initialSelectValue}
             id="beneficiaries"
             onChange={handleChange}
             onMenuOpen={handleOpen}
@@ -143,7 +141,7 @@ export const BeneficiariesSection = (props) => {
             placeholder={false}
             className={(isOpen ? 'is-open' : '', filterIsAll ? '' : 'not-all')}
             aria-label="Scegli una opzione"
-          />}
+          />
         </div>
         {accordions.map((item, i) => (
           <React.Fragment key={item.title}>
