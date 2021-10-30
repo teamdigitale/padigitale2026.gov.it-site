@@ -25,3 +25,16 @@ involved:
     - id: 7
       image: '/assets/mef-logo.svg'
       text: Il <strong>Ministero dell’Economia e delle Finanze</strong> è responsabile del <strong>monitoraggio</strong> dell’<strong>attuazione</strong> degli investimenti e delle riforme del PNRR
+timeline:
+  cards:
+    - id: 1
+      active: false
+    - id: 2
+      active: false
+    - id: 3
+      active: true
+    - id: 4
+      active: false
+    - id: 5
+      active: false
+
