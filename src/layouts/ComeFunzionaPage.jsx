@@ -17,9 +17,9 @@ export const ComeFunzionaPage = () => (
       subtitle={content.pacchettiCarousel.subtitle}
     />
     <ComeFunzionaCarousel
-      content={content.pacchettiCarousel.cards}
-      title={content.pacchettiCarousel.title}
-      subtitle={content.pacchettiCarousel.subtitle}
+      content={content.presentazioneCarousel.cards}
+      title={content.presentazioneCarousel.title}
+      subtitle={content.presentazioneCarousel.subtitle}
     />
     <Involved title={content.involved.title} category={content.involved.category} cards={content.involved.cards} />
   </>
