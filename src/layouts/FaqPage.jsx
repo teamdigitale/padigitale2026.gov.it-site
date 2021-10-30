@@ -7,6 +7,7 @@ import { SideNavigation } from './faq/SideNavigation';
 import { QuestionSection } from './faq/QuestionSection';
 import { SupportSection } from './faq/SupportSection';
 import { HeroSupport } from './support/Hero';
+import { Helmet } from 'react-helmet';
 
 const useStyles = createUseStyles({
   noResults: {
@@ -73,7 +74,9 @@ export const FaqPage = () => {
   function getAccordionsFiltered(question) {
     const regexp = new RegExp(event.target.value, 'i');
 
-    return question.accordions.filter((accordion) => regexp.test(accordion.title));
+    return question.accordions.filter((accordion) =>
+      regexp.test(accordion.title)
+    );
   }
 
   useEffect(() => {
@@ -114,7 +117,9 @@ export const FaqPage = () => {
           }
         });
         const regexp = new RegExp(inputValue, 'i');
-        const filterAccordions = filteredQuestions[0].accordions.filter((accordion) => regexp.test(accordion.title));
+        const filterAccordions = filteredQuestions[0].accordions.filter(
+          (accordion) => regexp.test(accordion.title)
+        );
         if (!filterAccordions.length) {
           setQuestions(filterAccordions);
         } else {
@@ -126,6 +131,9 @@ export const FaqPage = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Faq - Prossima PA</title>
+      </Helmet>
       <div className="sr-only">
         <h1>{content.name}</h1>
       </div>
@@ -149,14 +157,23 @@ export const FaqPage = () => {
             </Col>
             <Col lg={9} className="px-lg-3">
               {questions.map((question) => (
-                <QuestionSection key={question.title} item={question} inputText={inputValue} />
+                <QuestionSection
+                  key={question.title}
+                  item={question}
+                  inputText={inputValue}
+                />
               ))}
-              {!questions.length && <p className={classes.noResults}>{faq.noResults}</p>}
+              {!questions.length && (
+                <p className={classes.noResults}>{faq.noResults}</p>
+              )}
             </Col>
           </Row>
         </Container>
       </div>
-      <SupportSection supportList={faq.support.cards} title={faq.support.title} />
+      <SupportSection
+        supportList={faq.support.cards}
+        title={faq.support.title}
+      />
     </>
   );
 };

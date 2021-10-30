@@ -16,9 +16,13 @@ import { HeroCarousel } from '../components/carousel/Carousel';
 import { HomeCarousel } from '../components/carousel/HomeCarousel';
 import { SupportSection } from './faq/SupportSection';
 import { OpportunitySection } from './home/OpportunitySection';
+import { Helmet } from 'react-helmet';
 
 export const IndexPage = () => (
   <>
+    <Helmet>
+      <title>Home - Prossima PA</title>
+    </Helmet>
     <HeroImageBackgroundFull
       category={heroMain.category}
       title={heroMain.title}
@@ -33,11 +37,13 @@ export const IndexPage = () => (
       category={heroPnrr.category}
       title={heroPnrr.title}
       body={heroPnrr.body}
-      firstButtonLabel={heroPnrr.firstButtonLabel}
       imageUrl="/assets/placeholder.svg"
       imageAlt="placeholder"
       firstButtonHref="#"
+      firstButtonLabel={heroPnrr.firstButtonLabel}
+      firstButtonAriaLabel={heroPnrr.firstButtonAriaLabel}
       secondButtonLabel={heroPnrr.secondButtonLabel}
+      secondButtonAriaLabel={heroPnrr.secondButtonAriaLabel}
       secondButtonHref="#"
     />
     <HeroImageBackground
@@ -45,11 +51,16 @@ export const IndexPage = () => (
       body={heroDigital.body}
       image="italy-blue.png"
       firstButtonLabel={heroDigital.firstButtonLabel}
+      firstButtonAriaLabel={heroDigital.firstButtonAriaLabel}
       firstButtonClass="btn-light"
       firstButtonHref="#"
       overlap={true}
     />
     <HeroCarousel content={heroCarouselNews} title={heroCarouselNewsTitle} />
-    <SupportSection supportList={support.cards} title={support.title} buttonLabel={support.buttonLabel} />
+    <SupportSection
+      supportList={support.cards}
+      title={support.title}
+      buttonLabel={support.buttonLabel}
+    />
   </>
 );

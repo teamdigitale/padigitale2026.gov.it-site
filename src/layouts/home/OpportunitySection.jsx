@@ -65,9 +65,9 @@ export const OpportunitySection = (props) => {
     <Section color="muted" className={classes.section}>
       <div className="container">
         <h4 className={classes.title}>{title}</h4>
-        <Row className={classes.row}>
+        <Row className={classes.row} role="list">
           {list.map((item) => (
-            <Col md="6" lg="3" key={item.title} className="px-md-3">
+            <Col md="6" lg="3" key={item.title} className="px-md-3" role="listitem">
               <Card spacing className={classes.cardWrapper}>
                 <CardBody>
                   <CardTitle tag="h5">

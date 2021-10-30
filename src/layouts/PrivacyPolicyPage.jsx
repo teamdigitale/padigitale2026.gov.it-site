@@ -6,12 +6,15 @@ import { Breadcrumb } from '../components/Breadcrumb';
 import content from '../../contents/privacy-page/privacy.yml';
 import seo from '../../contents/seo.yml';
 import { SEO } from '../components/SEO';
+import { Helmet } from 'react-helmet';
 
 const { title: seoTitle, description: seoDescription } = seo.privacyPage;
 
 const query = graphql`
   query {
-    textChunk: markdownRemark(fields: { slug: { eq: "privacy-page/privacy" } }) {
+    textChunk: markdownRemark(
+      fields: { slug: { eq: "privacy-page/privacy" } }
+    ) {
       html
     }
   }
@@ -23,6 +26,9 @@ export const PrivacyPolicyPage = () => {
   } = useStaticQuery(query);
   return (
     <>
+      <Helmet>
+        <title>Privacy - Prossima PA</title>
+      </Helmet>
       <SEO title={seoTitle} description={seoDescription} />
       <Breadcrumb currentPage={content.breadcrumb} />
       <Hero yPaddingXLScreen={false}>

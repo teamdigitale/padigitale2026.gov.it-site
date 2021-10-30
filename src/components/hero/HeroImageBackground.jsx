@@ -99,6 +99,7 @@ export const HeroImageBackground = ({
   body,
   image,
   firstButtonLabel,
+  firstButtonAriaLabel,
   firstButtonClass,
   firstButtonHref,
   secondButtonLabel,
@@ -118,9 +119,20 @@ export const HeroImageBackground = ({
                   <HeroTitle title={title} className={classes.heroTitle} />
                   <HeroParagraph text={body} />
                   <div className={classes.buttonContainer}>
-                    <HeroButton classButton={firstButtonClass} label={firstButtonLabel} href={firstButtonHref} />
+                    <HeroButton
+                      classButton={firstButtonClass}
+                      label={firstButtonLabel}
+                      href={firstButtonHref}
+                      ariaLabel={firstButtonAriaLabel}
+                      target="_blank"
+                      rel="noreferrer"
+                    />
                     {secondButtonLabel ? (
-                      <HeroButton classButton={secondButtonClass} label={secondButtonLabel} href={secondButtonHref} />
+                      <HeroButton
+                        classButton={secondButtonClass}
+                        label={secondButtonLabel}
+                        href={secondButtonHref}
+                      />
                     ) : (
                       ''
                     )}
