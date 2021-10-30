@@ -97,7 +97,6 @@ const useStyles = createUseStyles({
 export const SideNavigation = (props) => {
   const classes = useStyles();
   const [isMobile, setIsMobile] = useState();
-  const [filteredList, setFilteredList] = useState();
 
   const { activeList, searchValue} = props;
   useEffect(() => {
