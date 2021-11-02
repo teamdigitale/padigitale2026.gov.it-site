@@ -61,7 +61,7 @@ const useStyles = createUseStyles({
 
 export const SupportSection = (props) => {
   const classes = useStyles();
-  const { title, supportList, buttonLabel } = props;
+  const { title, supportList, buttonLabel, handleToggle } = props;
   return (
     <>
       <Section color="muted">
@@ -77,7 +77,7 @@ export const SupportSection = (props) => {
               <Row>
                 {supportList.map((card) => (
                   <Col key={card.title} md={4} lg={3} className="mb-3 mb-md-0">
-                    <Card teaser noWrapper className={classes.cardWrapper}>
+                    <Card teaser noWrapper className={classes.cardWrapper} onClick={card.title == "Contatti" ? handleToggle : null}>
                       <CardBody>
                         <CardTitle tag="h5" className={classes.cardTitle}>
                           {card.title}

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import '@fontsource/titillium-web/latin.css';
 import '@fontsource/lora/latin.css';
@@ -8,6 +8,7 @@ import { SEO } from '../components/SEO';
 import labels from '../../contents/labels.yml';
 import { Header } from './Header';
 import { Footer } from './Footer';
+import { ModalUpdates } from '../components/modal/ModalUpdates';
 
 const { goToMainContent, goToFooter } = labels;
 
@@ -36,6 +37,15 @@ const useStyles = createUseStyles({
 
 export const Layout = ({ children }) => {
   useStyles();
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  /* if (children.props) {
+    children.props.toggleModal = () => {
+      setModalIsOpen(!modalIsOpen);
+    };
+  } */
+  const toggleModal = () => {
+    setModalIsOpen(!modalIsOpen);
+  };
   return (
     <>
       <SEO />
@@ -45,9 +55,10 @@ export const Layout = ({ children }) => {
       <a className="sr-only sr-only-focusable" href="#footer">
         {goToFooter}
       </a>
-      <Header />
+      <Header toggleModal={toggleModal} />
       <main className="text-info text-break" id="content">
         {children}
+        <ModalUpdates initialState={modalIsOpen} handleToggle={toggleModal} />
       </main>
       <Footer />
     </>

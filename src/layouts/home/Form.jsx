@@ -8,7 +8,9 @@ const URL_SUBMIT = 'https://google.com';
 const objToQueryString = (obj) => {
   const keyValuePairs = [];
   Object.keys(obj).map((x) => {
-    keyValuePairs.push(encodeURIComponent(x) + '=' + encodeURIComponent(obj[x]));
+    keyValuePairs.push(
+      encodeURIComponent(x) + '=' + encodeURIComponent(obj[x])
+    );
   });
   return keyValuePairs.join('&');
 };
@@ -29,10 +31,19 @@ export const Form = () => {
   const [isEmailValid, setIsEmailValid] = useState(false);
 
   useEffect(() => {
-    setIsFirstnameValid(firstname || firstname?.length === 0 || errors.firstname);
+    setIsFirstnameValid(
+      firstname || firstname?.length === 0 || errors.firstname
+    );
     setIsLastnameValid(lastname || lastname?.length === 0 || errors.lastname);
     setIsEmailValid(email || email?.length === 0 || errors.email);
-  }, [errors.firstname, firstname, lastname, email, errors.lastname, errors.email]);
+  }, [
+    errors.firstname,
+    firstname,
+    lastname,
+    email,
+    errors.lastname,
+    errors.email,
+  ]);
 
   const onSubmit = async (data) => {
     console.log(data);
@@ -40,15 +51,28 @@ export const Form = () => {
       method: 'GET',
     };
     const queryString = objToQueryString(data);
-    const response = await fetch(`${URL_SUBMIT}?${queryString}`, requestOptions);
+    const response = await fetch(
+      `${URL_SUBMIT}?${queryString}`,
+      requestOptions
+    );
     const res = response.status;
     console.log(res);
   };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <input type="hidden" name="list" value="1" {...register('list', { required: true })} />
-      <input type="hidden" name="group" value="6" {...register('group', { required: true })} />
+      <input
+        type="hidden"
+        name="list"
+        value="1"
+        {...register('list', { required: true })}
+      />
+      <input
+        type="hidden"
+        name="group"
+        value="6"
+        {...register('group', { required: true })}
+      />
       <div className="m-5 p-3">
         <div className="form-row">
           <div className="form-group col-md-6">
@@ -129,7 +153,11 @@ export const Form = () => {
         </div>
         <div className="form-row">
           <div className="form-group col text-center">
-            <button type="button" onClick={() => reset()} className="btn btn-outline-primary">
+            <button
+              type="button"
+              onClick={() => reset()}
+              className="btn btn-outline-primary"
+            >
               Annulla
             </button>{' '}
             <button type="submit" className="btn btn-primary">
