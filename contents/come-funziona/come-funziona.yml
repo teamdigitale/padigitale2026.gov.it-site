@@ -1,27 +1,27 @@
 title: Come funziona - Prossima PA
 name: Come Funziona
 involved:
-  category: Gli attori coinvolti
+  category: ATTORI COINVOLTI
   title: I soggetti istituzionali che concorrono alla realizzazione della strategia Italia digitale 2026
   cards:
     - id: 1
       image: '/assets/eu-flag.svg'
-      text: Unione Europea, lorem ipsum sinc amet sed etiam lorem ipsum sinc amet sed etiam lorem ipsum sinc amet sed etiam lorem ipsum sinc amet sed etiam
+      text: L’Unione Europea è la promotrice e finanziatrice di Next Generation UE, il piano straordinario per rilanciare l’economia europea dopo la pandemia di COVID-19, in cui rientra Italia domani, il Piano nazionale di ripresa e resilienza del Governo italiano.
     - id: 2
       image: '/assets/dipartment-logo.svg'
-      text: Il <strong>Dipartimento per la trasformazione digitale</strong>, guidato dal Ministro per l’innovazione tecnologica e la transizione digitale, è responsabile dell’<strong>attuazione degli investimenti di Italia digitale 2026</strong>
+      text: ll Ministero dell’Economia e delle Finanze controllerà il progresso nell’attuazione di riforme e investimenti del PNRR ed è il punto di contatto con la Commissione Europea del Governo italiano.
     - id: 3
       image: '/assets/mitd-logo.svg'
-      text: Il <strong>Ministro per l’innovazione tecnologica e la transizione digitale</strong>, all’interno degli interventi previsti dal PNRR, ha <strong>promosso la strategia Italia digitale 2026</strong>
+      text: Il Ministro per l’innovazione tecnologica e transizione digitale, all’interno di Italia domani, ha promosso Italia digitale 2026, il piano d’investimenti per la digitalizzazione del paese.
     - id: 4
       image: '/assets/agid-logo-blue.svg'
-      text: L’<strong>Agenzia per l’Italia digitale</strong> ha il compito di garantire la <strong>realizzazione degli obiettivi dell’Agenda digitale italiana</strong>. È vigilata dal Ministro per l’innovazione tecnologica e la transizione digitale
+      text: Il Dipartimento per la trasformazione digitale della Presidenza del Consiglio dei Ministri è responsabile per l’attuazione degli investimenti di Italia digitale 2026. Per mezzo del Transformation Office assiste le PA nel processo di digitalizzazione.
     - id: 5
       image: '/assets/consip-logo.svg'
-      text: <strong>Consip</strong> è la <strong>centrale acquisti della Pubblica Amministrazione</strong>. È una società per azioni partecipata al 100% dal Ministero dell'Economia e delle Finanze
+      text: Consip è la centrale acquisti della Pubblica Amministrazione. Per il PNRR mette a disposizione strumenti per agevolare la realizzazione degli interventi, semplificando il processo di acquisto delle PA attraverso contratti quadro o piattaforme per la negoziazione.
     - id: 6
       image: '/assets/pagopa-logo.svg'
-      text: <strong>PagoPA S.p.a</strong> si occupa di <strong>diffondere infrastrutture e servizi pubblici digitali</strong> attraverso lo sviluppo di progetti innovativi. È una società interamente partecipata dal Ministero dell’economia e delle finanze ed è vigilata dal Ministro per l’innovazione tecnologica e la transizione digitale
+      text: PagoPA S.p.a è la società pubblica nata per realizzare e gestire infrastrutture che assicurino lo sviluppo e la diffusione dei servizi pubblici digitali. In quanto ente delegato, è responsabile per l’attuazione di misure nell’ambito della digitalizzazione dei servizi e piattaforme.
     - id: 7
       image: '/assets/mef-logo.svg'
       text: Il <strong>Ministero dell’Economia e delle Finanze</strong> è responsabile del <strong>monitoraggio</strong> dell’<strong>attuazione</strong> degli investimenti e delle riforme del PNRR
