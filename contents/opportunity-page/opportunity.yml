@@ -5,6 +5,8 @@ selectBeneficiaries:
     label: 'Comuni'
   - value: 'province'
     label: 'Province'
+  - value: 'province-autonome'
+    label: 'Province autonome'
   - value: 'regioni'
     label: 'Regioni'
   - value: 'enti-regionali'
@@ -126,7 +128,7 @@ beneficiaries:
         label: Regioni
       - value: province-autonome
         label: Provincie autonome
-      - value: altre-pal
+      - value: altre-pa-locali
         label: Altre PAL
     description: "Migliorare l'accessibilità dei servizi pubblici digitali attraverso la diffusione di strumenti e strategie condivise: da test di usabilità ad attività di comunicazione e disseminazione passando per lo sviluppo di kit dedicati e altro."
     stalls: '54 enti'
@@ -148,15 +150,15 @@ beneficiaries:
         label: Scuole
       - value: enti-regionali
         label: Enti Regionali
-      - value: università
+      - value: universita
         label: Università
       - value: enti-diritto
         label: Enti diritto allo studio, agenzie e consorzi
       - value: istituti-formazione
         label: Istituti alta formazione musicale e coreutica
-      - value: enti-ricerca
+      - value: enti-ricerca-pubblica
         label: Enti di ricerca pubblica
-      - value: consorzi
+      - value: consorzi-ricerca
         label: Consorzi interuniversitari di ricerca
     description: Accelerare l'adozione di PagoPa, l'applicazione digitale per i pagamenti tra cittadini e pubbliche amministrazione, e di app IO quale principale punto di contatto tra cittadini e amministrazione
     stalls: '17,500 enti'
@@ -180,7 +182,7 @@ beneficiaries:
         label: Regioni
       - value: province
         label: Province
-      - value: altre-pal
+      - value: altre-pa-locali
         label: Altre PAL
     description: Favorire l'adozione dell’identità digitale (Sistema Pubblico di Identità Digitale, SPID e Carta d'Identità Elettronica, CIE) e dell'Anagrafe nazionale della popolazione residente (ANPR)
     stalls: '10,300 enti'
@@ -256,7 +258,7 @@ beneficiaries:
     title: Servizio civile digitale
     money: '60 <span>milioni di euro<span>'
     tags:
-      - value: Enti iscritti all'albo del servizio civile
+      - value: enti-servizio-civile
         label: Enti iscritti all'albo del servizio civile
     description: Sviluppare l'iniziativa “Servizio civile digitale”, finalizzata, tra le altre cose, alla formazione di circa 9.700 volontari e al coinvolgimento di 1 milione di cittadini beneficiari di attività di facilitazione digitale e di educazione digitale.
     stalls: '100 enti'
