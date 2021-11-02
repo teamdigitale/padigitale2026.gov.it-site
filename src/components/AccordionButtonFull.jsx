@@ -79,10 +79,6 @@ const useStyles = createUseStyles({
       fontSize: '0.778rem',
       fontWeight: '600',
       marginBottom: '0.444rem',
-      maxWidth: '8.889rem',
-      textOverflow: 'ellipsis',
-      whiteSpace: 'nowrap',
-      overflow: 'hidden',
       marginRight: '0.444rem',
       '&::last-child': {
         marginRight: '0',
@@ -248,17 +244,7 @@ export const AccordionButtonFull = (props) => {
             <div className={classes.cardTags}>
               <p className="tag-title">Beneficiari</p>
               <div className="tag-wrapper">
-                {tags.length > 5 &&
-                  tags.slice(0, 5).map((tag) => {
-                    return (
-                      <div key={tag.label} className="tag">
-                        {tag.label}
-                      </div>
-                    );
-                  })}
-                {tags.length > 5 && <div className="tag">Altro</div>}
-                {tags.length <= 5 &&
-                  tags.map((tag) => {
+                {tags.map((tag) => {
                     return (
                       <div key={tag.label} className="tag">
                         {tag.label}

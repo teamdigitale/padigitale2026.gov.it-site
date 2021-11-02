@@ -8,7 +8,7 @@ selectBeneficiaries:
   - value: tutti
     label: Tutti
   - value: 'pa-centrali'
-    label: 'PA Centrali'
+    label: 'Pubbliche Amministrazioni Centrali'
   - value: 'comuni'
     label: 'Comuni'
   - value: 'province'
@@ -19,8 +19,10 @@ selectBeneficiaries:
     label: 'Regioni'
   - value: 'enti-regionali'
     label: 'Enti regionali'
-  - value: 'asl-ao'
-    label: 'Azienda Sanitaria Locale/Azienda Ospedaliera'
+  - value: 'asl'
+    label: 'Aziende Sanitarie Locali'
+  - value: 'aziende-ospedaliere'
+    label: 'Aziende Ospedaliere'
   - value: 'altre-pa-locali'
     label: 'Altre Pubbliche Amministrazioni locali'
   - value: 'scuole'
@@ -37,8 +39,6 @@ selectBeneficiaries:
     label: 'Consorzi interuniversitari di ricerca'
   - value: 'enti-servizio-civile'
     label: 'Enti iscritti all’albo del servizio civile'
-  - value: 'pa-centrali'
-    label: 'Pubbliche Amministrazioni centrali'
 beneficiaries:
   - number: 1.1
     title: Infrastrutture digitali
@@ -46,8 +46,8 @@ beneficiaries:
     tags:
       - value: pa-centrali
         label: PA Centrali
-      - label: ASL/AO
-        value: asl/ao
+      - label: Aziende Sanitarie Locali
+        value: asl
     description: Garantire che i sistemi, i dataset e le applicazioni della PA siano ospitati in data center altamente affidabili e con elevati standard di qualità per sicurezza, prestazioni, scalabilità, interoperabilità europea ed efficienza energetica. La misura prevede la creazione di un'infrastruttura cloud sul territorio nazionale all'avanguardia denominata "Polo Strategico Nazionale”.
     stalls: '280 enti'
     accessLabel: Presentazione Progetto
@@ -58,8 +58,8 @@ beneficiaries:
     title: Abilitazione e facilitazione migrazione al Cloud
     money: '1 <span>miliardo di euro<span>'
     tags:
-      - label: ASL/AO
-        value: asl/ao
+      - label: Aziende Sanitarie Locali
+        value: asl
       - label: 'comuni'
         value: 'Comuni'
       - label: Scuole
@@ -76,8 +76,8 @@ beneficiaries:
     tags:
       - value: pa-centrali
         label: PA Centrali
-      - value: asl/ao
-        label: ASL/AO
+      - value: asl
+        label: Aziende Sanitarie Locali
       - value: comuni
         label: Comuni
       - value: regioni
@@ -96,8 +96,8 @@ beneficiaries:
     tags:
       - value: pa-centrali
         label: PA Centrali
-      - value: asl/ao
-        label: ASL/AO
+      - value: asl
+        label: Aziende Sanitarie Locali
       - value: comuni
         label: Comuni
       - value: scuole
@@ -150,8 +150,8 @@ beneficiaries:
     tags:
       - value: pa-centrali
         label: Pa Centrali
-      - value: asl-ao
-        label: ASL/AO
+      - value: asl
+        label: Aziende Sanitarie Locali
       - value: comuni
         label: Comuni
       - value: scuole
@@ -180,8 +180,8 @@ beneficiaries:
     tags:
       - value: pa-centrali
         label: Pa Centrali
-      - value: asl-ao
-        label: ASL/AO
+      - value: asl
+        label: Aziende Sanitarie Locali
       - value: comuni
         label: Comuni
       - value: scuole

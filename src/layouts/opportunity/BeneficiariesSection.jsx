@@ -100,7 +100,10 @@ export const BeneficiariesSection = (props) => {
   useEffect(() => {
     if(props.externalFilter) {      
       setInitialSelectValue(props.externalFilter);
-      setSelectValue(props.externalFilter);
+      setSelectValue(props.externalFilter);      
+      document.querySelector('#filter-beneficiaries').scrollIntoView({
+        behavior: 'smooth',
+      });
     }
   }, [props.externalFilter]);
 
@@ -126,7 +129,7 @@ export const BeneficiariesSection = (props) => {
 
   return (
     <>
-      <div className="container mt-5 px-3">
+      <div className="container mt-5 px-3" id="filter-beneficiaries">
         <div className={classes.selectWrapper}>
           <label htmlFor="beneficiaries">Beneficiari</label>
           <Select
