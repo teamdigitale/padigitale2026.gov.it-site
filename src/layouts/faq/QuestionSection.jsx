@@ -95,7 +95,6 @@ export const QuestionSection = (props) => {
     <>
       <section id={sectionId} className={classes.section}>
         <h3 className={classes.sectionTitle}>{title}</h3>
-        {/* <p>{description}</p> */}
         <Accordion background="active">
           {accordionList.map((accordion, i) => (
             <div key={accordion.title} className={classes.accordionWrapper}>
