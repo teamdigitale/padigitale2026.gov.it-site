@@ -1,6 +1,12 @@
-selectBeneficiaries:
-  - value: tutti
-    label: Tutti
+heroOpportunity:
+  title: Le opportunità del PNRR
+  body: 'Il PNRR offre al Paese una <strong>straordinaria occasione di rilancio:</strong> grazie alla strategia <strong>Italia digitale 2026</strong> le PA diventano protagoniste di questo cambiamento'
+modalButton:
+  label: Vuoi ricevere aggiornamenti sugli investimenti per la digitalizzazione della PA? 
+  buttonLabel: RICEVI AGGIORNAMENTI
+selectBeneficiaries: 
+  - value: 'pa-centrali'
+    label: 'PA Centrali'
   - value: 'comuni'
     label: 'Comuni'
   - value: 'province'
@@ -242,4 +248,35 @@ beneficiaries:
     accessLink: '#'
     moreInfoLabel: 'Leggi di più su Italia Domani'
     moreInfoLink: '#'
-  
+modal:
+  selectRepresent:
+    - value: public-administration
+      label: Pubblica amministrazione
+    - value: fornitore-it
+      label: Fornitore IT
+    - value: other
+      label: Altro
+  modalTitle: Vuoi ricevere aggiornamenti sugli investimenti per la digitalizzazione della PA?
+  modalSubtitle: Ricevi <strong>tutte le novità</strong> che riguardano <strong>la tua amministrazione</strong> <br> lasciando i tuoi contatti
+  updatesLabel: AGGIORNAMENTI
+  updatesInfo: Ricevi <strong>materiali e informazioni</strong> sulle novità e gli avvisi di <br> Italia digitale 2026
+  mandatoryAdvise: I campi con * sono obbligatori
+  requiredLabel: Questo campo è richiesto
+  emailLabel: EMAIL*
+  emailValidationLabel: Per favore inserisci una denominazione ente valida.
+  representLabel: RAPPRESENTO*
+  selectPlaceholder: Scegli una voce dall’elenco
+  enteValidationLabel: Per favore inserisci una denominazione ente valida.
+  denomitationEnteLabel: DENOMINAZIONE ENTE*
+  inQuantoLabel: IN QUANTO*
+  directContactLabel: CONTATTO DIRETTO
+  directContactInfo: Un <strong>Team dedicato</strong> è a tua disposizione per ricevere chiarimenti sugli investimenti o approfondire alcuni temi
+  addMessageLabel: Voglio aggiungere un messaggio
+  messageSelectLabel: ARGOMENTO MESSAGGIO
+  messageLabel: TESTO MESSAGGIO
+  radioGroupLabel: DICHIARO
+  comunicationRadio: Acconsento a essere contattato per comunicazioni specifiche*
+  privacyRadio: Ho letto e compreso
+  privacyRadioLinkLabel: l’informativa privacy
+  mandatoryRadioLabel: Seleziona entrambe le voci per proseguire
+  sendButtonLabel: INVIA
