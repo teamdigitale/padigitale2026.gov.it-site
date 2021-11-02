@@ -27,7 +27,7 @@ selectBeneficiaries:
     label: 'Enti di ricera pubblica'
   - value: 'consorzi-ricerca'
     label: 'Consorzi interuniversitari di ricerca'
-  - value: 'enti-sevizio-civile'
+  - value: 'enti-servizio-civile'
     label: 'Enti iscritti all’albo del servizio civile'
   - value: 'pa-centrali'
     label: 'PA Centrali'
