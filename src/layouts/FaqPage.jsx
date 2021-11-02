@@ -78,17 +78,8 @@ export const FaqPage = () => {
 
   useEffect(() => {
     if (!isMobile) {
-      console.log(inputValue);
       setInputValue('');
       setQuestions(faq.questions);
-      console.log('dopo set', inputValue);
-      
-      // if (inputValue && inputValue.length >= 3) {
-
-      //   setQuestions(getNewQuestions(inputValue));
-      // } else {
-      //   setQuestions(faq.questions);
-      // }
     }
   }, [isMobile]);
 
