@@ -296,7 +296,6 @@ const NavHeader = ({ toggleModal }) => {
             <Nav navbar className={classes.navbarNav}>
               <NavItem active>
                 <button
-                  /* to={internalLinks.updates.linkTo} */
                   className="nav-link"
                   activeClassName="active"
                   onClick={() => {
