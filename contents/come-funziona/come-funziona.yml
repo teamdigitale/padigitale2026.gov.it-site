@@ -24,7 +24,7 @@ beneficiaries:
       filterId: 'scuole'
     - img: '/assets/icone-beneficiari/scuole.svg'
       linkLabel: 'Istituti di alta formazione musicale e coreutica'
-      filterId: 'formazione-musicale-e-coreutica'
+      filterId: 'istituti-formazione'
     - img: '/assets/icone-beneficiari/asl.svg'
       linkLabel: 'Azienda Sanitaria Locale/Azienda Ospedaliera'
       filterId: 'asl-ao'
@@ -42,13 +42,13 @@ beneficiaries:
       filterId: 'enti-ricerca-pubblica'
     - img: '/assets/icone-beneficiari/pa-centrali.svg'
       linkLabel: 'Enti iscritti agli albi del servizio civile'
-      filterId: 'enti-albi-civili'
+      filterId: 'enti-servizio-civile'
     - img: '/assets/icone-beneficiari/pa-centrali.svg'
       linkLabel: 'Altre Pubbliche Amministrazioni locali'
       filterId: 'altre-pa-locali'
     - img: '/assets/icone-beneficiari/ricerca-pubblica.svg'
       linkLabel: 'Consorzi interuniversitari di ricerca'
-      filterId: 'consorzi-interuniversitari'
+      filterId: 'consorzi-ricerca'
 involved:
   category: Gli attori coinvolti
   title: I soggetti istituzionali che concorrono alla realizzazione della strategia Italia digitale 2026
