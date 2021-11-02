@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { createUseStyles } from 'react-jss';
 import Select from 'react-select';
+import { Section } from 'design-react-kit';
 import { AccordionButtonFull } from '../../components/AccordionButtonFull';
-import { beneficiaries, selectBeneficiaries } from '../../../contents/opportunity-page/opportunity.yml';
+import {
+  beneficiaries,
+  selectBeneficiaries,
+} from '../../../contents/opportunity-page/opportunity.yml';
 
 const useStyles = createUseStyles({
   selectWrapper: {
@@ -67,8 +71,8 @@ const useStyles = createUseStyles({
         fontSize: '0.889rem',
         lineHeight: '1.5',
         '&:hover': {
-          fontWeight: 'bold'
-        }
+          fontWeight: 'bold',
+        },
       },
     },
   },
@@ -101,7 +105,9 @@ export const BeneficiariesSection = () => {
       if (selectValue.value !== 'tutti') {
         const filteredList = [];
         for (let index = 0; index < beneficiaries.length; index++) {
-          const element = beneficiaries[index].tags.filter((tag) => tag.value === selectValue.value);
+          const element = beneficiaries[index].tags.filter(
+            (tag) => tag.value === selectValue.value
+          );
           if (element.length) {
             filteredList.push(beneficiaries[index]);
           }
@@ -118,34 +124,43 @@ export const BeneficiariesSection = () => {
 
   return (
     <>
-      <div className="container mt-5 px-3">
-        <div className={classes.selectWrapper}>
-          <label htmlFor="beneficiaries">Beneficiari</label>
-          <Select
-            styles={customStyles}
-            isSearchable={false}
-            defaultValue={selectBeneficiaries[0]}
-            id="beneficiaries"
-            onChange={handleChange}
-            onMenuOpen={handleOpen}
-            onMenuClose={handleClose}
-            options={selectBeneficiaries}
-            placeholder={false}
-            className={(isOpen ? 'is-open' : '', filterIsAll ? '' : 'not-all')}
-            aria-label="Scegli una opzione"
-          />
-        </div>
-        {accordions.map((item, i) => (
-          <React.Fragment key={item.title}>
-            <AccordionButtonFull
-              data={item}
-              handleToggle={setActiveAccordion}
-              id={i}
-              active={indexOpen}
+      <Section aria-labelledby="lista-opportunita-hader">
+        <h3 className="sr-only" id="lista-opportunita-hader">
+          Elenco opportunità
+        </h3>
+        <div className="container mt-5 px-3">
+          <div className={classes.selectWrapper}>
+            <label htmlFor="beneficiaries">Beneficiari</label>
+            <Select
+              styles={customStyles}
+              isSearchable={false}
+              defaultValue={selectBeneficiaries[0]}
+              id="beneficiaries"
+              onChange={handleChange}
+              onMenuOpen={handleOpen}
+              onMenuClose={handleClose}
+              options={selectBeneficiaries}
+              placeholder={false}
+              className={
+                (isOpen ? 'is-open' : '', filterIsAll ? '' : 'not-all')
+              }
+              aria-label="Scegli una opzione"
             />
-          </React.Fragment>
-        ))}
-      </div>
+          </div>
+          <div role="list">
+            {accordions.map((item, i) => (
+              <React.Fragment key={item.title}>
+                <AccordionButtonFull
+                  data={item}
+                  handleToggle={setActiveAccordion}
+                  id={i}
+                  active={indexOpen}
+                />
+              </React.Fragment>
+            ))}
+          </div>
+        </div>
+      </Section>
     </>
   );
 };

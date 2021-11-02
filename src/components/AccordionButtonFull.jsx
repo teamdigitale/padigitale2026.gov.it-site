@@ -233,12 +233,12 @@ export const AccordionButtonFull = (props) => {
 
   return (
     <>
-      <div className={classes.collapseWrapper}>
+      <div className={classes.collapseWrapper} role="listitem">
         <div className={classes.cardWrapper}>
           <div className={classes.cardHeader}>
-            <p className={classes.cardTitle}>
+            <h4 className={classes.cardTitle}>
               <span>{number}</span> {title}
-            </p>
+            </h4>
             <div className={classes.cardHeaderValue}>
               {money} <span>milioni di euro</span>
             </div>
@@ -265,7 +265,7 @@ export const AccordionButtonFull = (props) => {
                   <span>Modalità di accesso:</span> <a href={accessLink}>{accessLabel}</a>
                 </div>
                 <div className={classes.linkAccordion}>
-                  <ExternalLink linkTo={moreInfoLink} ariaLabel="aria label">
+                  <ExternalLink linkTo={moreInfoLink} ariaLabel={`${moreInfoLabel}, ${title}, (Collegamento esterno - Apre su nuova scheda)`}>
                     {moreInfoLabel}
                     <img src="/assets/external-icon.svg" alt="" />
                   </ExternalLink>

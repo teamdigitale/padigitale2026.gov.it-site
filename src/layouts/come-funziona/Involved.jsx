@@ -69,7 +69,7 @@ export const Involved = (props) => {
   const { category, title, cards } = props;
 
   const actorsCards = cards.map((card) => (
-    <Col key={card.id} xs="12" lg="5" className="offset-lg-1">
+    <Col key={card.id} xs="12" lg="5" className="offset-lg-1" role="listitem">
       <Card className={classes.actorsCard} noWrapper>
         <div className={classes.actorsCardImageWrapper}>
           <img className={classes.actorsCardImage} src={card.image} alt="" />
@@ -93,7 +93,7 @@ export const Involved = (props) => {
               </h2>
             </Col>
           </Row>
-          <Row>{actorsCards}</Row>
+          <Row role="list">{actorsCards}</Row>
         </Container>
       </div>
     </>

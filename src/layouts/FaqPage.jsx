@@ -54,17 +54,9 @@ export const FaqPage = () => {
       }
     } else {
       if (isMobile) {
-        if (filterId !== 'all') {
-          const filteredQuestions = [];
-          faq.questions.forEach((question) => {
-            if (question.sectionId === filterId) {
-              filteredQuestions.push(question);
-            }
-          });
-          setQuestions(filteredQuestions);
-        } else {
-          setQuestions(faq.questions);
-        }
+        filterId !== 'all'
+          ? setQuestions(getQuestionsMobile(faq.questions))
+          : setQuestions(faq.questions);
       } else {
         setQuestions(faq.questions);
       }
@@ -81,17 +73,17 @@ export const FaqPage = () => {
 
   useEffect(() => {
     if (!isMobile) {
-      if (inputValue && inputValue.length >= 3) {
-        const newQuest = [];
-        faq.questions.forEach((question) => {
-          if (getAccordionsFiltered(question).length) {
-            newQuest.push(question);
-          }
-        });
-        setQuestions(newQuest);
-      } else {
-        setQuestions(faq.questions);
-      }
+      console.log(inputValue);
+      setInputValue('');
+      setQuestions(faq.questions);
+      console.log('dopo set', inputValue);
+
+      // if (inputValue && inputValue.length >= 3) {
+
+      //   setQuestions(getNewQuestions(inputValue));
+      // } else {
+      //   setQuestions(faq.questions);
+      // }
     }
   }, [isMobile]);
 
@@ -110,17 +102,12 @@ export const FaqPage = () => {
           setQuestions(faq.questions);
         }
       } else {
-        const filteredQuestions = [];
-        faq.questions.forEach((question) => {
-          if (question.sectionId === filterId) {
-            filteredQuestions.push(question);
-          }
-        });
-        const regexp = new RegExp(inputValue, 'i');
-        const filterAccordions = filteredQuestions[0].accordions.filter(
-          (accordion) => regexp.test(accordion.title)
-        );
-        if (!filterAccordions.length) {
+        if (
+          !getAccordionsFiltered(
+            getQuestionsMobile(faq.questions)[0],
+            inputValue
+          ).length
+        ) {
           setQuestions(filterAccordions);
         } else {
           setQuestions(filteredQuestions);
@@ -139,7 +126,10 @@ export const FaqPage = () => {
       </div>
       <HeroSupport title={faq.hero.title} subtitle={faq.hero.subtitle} />
       <div className="docs py-4 py-md-5">
-        <Container className="px-3">
+        <Container className="px-3" aria-labelledby="question-section">
+          <h3 id="question-section" className="sr-only">
+            Sezione domande frequenti
+          </h3>
           <Row>
             <Col lg={9} className="offset-lg-3 px-lg-3">
               <Input
@@ -153,7 +143,11 @@ export const FaqPage = () => {
           </Row>
           <Row>
             <Col lg={3}>
-              <SideNavigation getFilter={setFilterId} />
+              <SideNavigation
+                getFilter={setFilterId}
+                activeList={questions}
+                searchValue={inputValue}
+              />
             </Col>
             <Col lg={9} className="px-lg-3">
               {questions.map((question) => (
