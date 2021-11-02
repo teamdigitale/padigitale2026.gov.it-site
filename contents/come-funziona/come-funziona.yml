@@ -48,7 +48,7 @@ pacchettiCarousel:
               description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti. 
             second:
               title: Soluzioni multimisura
-              image: multibox.svg
+              image: multi-box.svg
               description: Per semplificare l’accesso ai fondi del PNRR le amministrazioni potranno - <strong>con un’unica candidatura</strong> - accedere a soluzioni multimisura, che includono, per esempio, sia finanziamenti per la migrazione al cloud che per il miglioramento dei siti web. 
         - id: 1
           name: Realizzazione delle iniziative
@@ -96,7 +96,7 @@ pacchettiCarousel:
               description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti.
             second:
               title: soluzioni standard
-              image: multibox.svg
+              image: multi-box.svg
               description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti. 
         - id: 1
           name: Realizzazione delle iniziative
@@ -126,7 +126,7 @@ pacchettiCarousel:
               description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti.
             second:
               title: soluzioni standard
-              image: multibox.svg
+              image: multi-box.svg
               description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti. 
     - id: 2
       tabs:
@@ -144,7 +144,7 @@ pacchettiCarousel:
               description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti.
             second:
               title: soluzioni standard
-              image: multibox.svg
+              image: multi-box.svg
               description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti. 
         - id: 1
           name: Realizzazione delle iniziative
@@ -243,7 +243,7 @@ presentazioneCarousel:
               description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti.
             second:
               title: soluzioni standard
-              image: multibox.svg
+              image: multi-box.svg
               description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti. 
         - id: 1
           name: Realizzazione delle iniziative
@@ -258,7 +258,7 @@ presentazioneCarousel:
               description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti.
             second:
               title: soluzioni standard
-              image: multibox.svg
+              image: multi-box.svg
               description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti. 
         - id: 2
           name: Erogazione dei fondi
@@ -273,7 +273,7 @@ presentazioneCarousel:
               description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti.
             second:
               title: soluzioni standard
-              image: multibox.svg
+              image: multi-box.svg
               description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti. 
     - id: 2
       tabs:
@@ -291,7 +291,7 @@ presentazioneCarousel:
               description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti.
             second:
               title: soluzioni standard
-              image: multibox.svg
+              image: multi-box.svg
               description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti. 
         - id: 1
           name: Realizzazione delle iniziative
@@ -306,7 +306,7 @@ presentazioneCarousel:
               description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti.
             second:
               title: soluzioni standard
-              image: multibox.svg
+              image: multi-box.svg
               description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti. 
         - id: 2
           name: Erogazione dei fondi
@@ -321,6 +321,6 @@ presentazioneCarousel:
               description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti.
             second:
               title: soluzioni standard
-              image: multibox.svg
+              image: multi-box.svg
               description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti. 
 
