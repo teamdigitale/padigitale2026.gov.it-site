@@ -32,9 +32,7 @@ const useStyles = createUseStyles({
       margin: '0 0.889rem',
     },
   },
-  timelineTitle: {
-    
-  },
+  timelineTitle: {},
   noHidden: {
     overflow: 'visible',
   },
@@ -81,7 +79,7 @@ export const Timeline = ({ content, title }) => {
           <img src={`/assets/flag.svg`} alt="" />
         </div>
       )}
-      <div>aaaaaaaaaaa</div>
+      <div>card {element.id}</div>
     </>
   ));
 
