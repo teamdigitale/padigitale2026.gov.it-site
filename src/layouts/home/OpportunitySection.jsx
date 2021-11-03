@@ -54,9 +54,10 @@ const useStyle = createUseStyles({
     },
     '& .card-body': {
       padding: '1.333rem 0.889rem',
-      '& h5.card-title': {
+      '& h4.card-title': {
         color: '#0066CC',
         marginBottom: '0',
+        fontSize: '1rem',
         '& span': {
           fontWeight: 'normal',
         },
@@ -73,12 +74,12 @@ export const OpportunitySection = (props) => {
     <Section color="muted" className={classes.section}>
       <div className="container">
         <h4 className={classes.title}>{title}</h4>
-        <Row className={classes.row}>
+        <Row className={classes.row} role="list">
           {list.map((item) => (
-            <Col md="6" lg="3" key={item.title} className="px-md-3">
+            <Col md="6" lg="3" key={item.title} className="px-md-3" role="listitem">
               <Card spacing className={classes.cardWrapper}>
                 <CardBody>
-                  <CardTitle tag="h5">
+                  <CardTitle tag="h4">
                     <span>{item.number}</span> {item.title}
                   </CardTitle>
                 </CardBody>

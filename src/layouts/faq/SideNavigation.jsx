@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sidebar, LinkListItem, LinkList } from 'design-react-kit';
+import { Sidebar, LinkListItem, LinkList, Nav } from 'design-react-kit';
 // import { StaticImage } from 'gatsby-plugin-image';
 import { createUseStyles } from 'react-jss';
 
@@ -175,7 +175,9 @@ export const SideNavigation = (props) => {
   }
 
   function removeActive() {
-    const items = document.querySelectorAll('.sidebar-wrapper .link-list .list-item');
+    const items = document.querySelectorAll(
+      '.sidebar-wrapper .link-list .list-item'
+    );
 
     items.forEach((item) => {
       item.classList.remove('active');
@@ -192,48 +194,53 @@ export const SideNavigation = (props) => {
 
   return (
     <Sidebar className={`${classes.wrapper} p-0`}>
-      <LinkList>
-        {isMobile && (
-          <LinkListItem
-            size="medium"
-            className="text-decoration-none"
-            data-id="all"
-            onClick={(evt) => handleClik(evt)}
-            active={isMobile}
-          >
-            <span>Tutte</span>
-          </LinkListItem>
-        )}
+      <nav aria-labelledby="table-of-contents">
+        <h2 id="table-of-contents" className="sr-only">
+          Indice dei contenuti
+        </h2>
+        <LinkList>
+          {isMobile && (
+            <LinkListItem
+              size="medium"
+              className="text-decoration-none"
+              data-id="all"
+              onClick={(evt) => handleClik(evt)}
+              active={isMobile}
+            >
+              <span>Tutte</span>
+            </LinkListItem>
+          )}
 
-        {content.sidebar.map((anchor) => (
-          <>
-            {anchor.sectionActive ? (
-              <LinkListItem
-                key={anchor.sectionId}
-                size="medium"
-                href={`#` + anchor.sectionId}
-                data-id={anchor.sectionId}
-                className="text-decoration-none"
-                onClick={(evt) => handleClik(evt)}
-                active={!isMobile}
-              >
-                <span>{anchor.sectionTitle}</span>
-              </LinkListItem>
-            ) : (
-              <LinkListItem
-                key={anchor.sectionId}
-                size="medium"
-                href={`#` + anchor.sectionId}
-                data-id={anchor.sectionId}
-                className="text-decoration-none"
-                onClick={(evt) => handleClik(evt)}
-              >
-                <span>{anchor.sectionTitle}</span>
-              </LinkListItem>
-            )}
-          </>
-        ))}
-      </LinkList>
+          {content.sidebar.map((anchor) => (
+            <>
+              {anchor.sectionActive ? (
+                <LinkListItem
+                  key={anchor.sectionId}
+                  size="medium"
+                  href={`#` + anchor.sectionId}
+                  data-id={anchor.sectionId}
+                  className="text-decoration-none"
+                  onClick={(evt) => handleClik(evt)}
+                  active={!isMobile}
+                >
+                  <span>{anchor.sectionTitle}</span>
+                </LinkListItem>
+              ) : (
+                <LinkListItem
+                  key={anchor.sectionId}
+                  size="medium"
+                  href={`#` + anchor.sectionId}
+                  data-id={anchor.sectionId}
+                  className="text-decoration-none"
+                  onClick={(evt) => handleClik(evt)}
+                >
+                  <span>{anchor.sectionTitle}</span>
+                </LinkListItem>
+              )}
+            </>
+          ))}
+        </LinkList>
+      </nav>
     </Sidebar>
   );
 };

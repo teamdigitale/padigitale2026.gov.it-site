@@ -7,6 +7,10 @@ import { SideNavigation } from './faq/SideNavigation';
 import { QuestionSection } from './faq/QuestionSection';
 import { SupportSection } from './faq/SupportSection';
 import { HeroSupport } from './support/Hero';
+import { SEO } from '../components/SEO';
+import seo from '../../contents/seo.yml';
+
+const { title: seoTitle, description: seoDescription } = seo.faqPage;
 
 const useStyles = createUseStyles({
   noResults: {
@@ -42,7 +46,9 @@ export const FaqPage = () => {
       }
     } else {
       if (isMobile) {
-        filterId !== 'all' ? setQuestions(getQuestionsMobile(faq.questions)) : setQuestions(faq.questions);
+        filterId !== 'all'
+          ? setQuestions(getQuestionsMobile(faq.questions))
+          : setQuestions(faq.questions);
       } else {
         setQuestions(faq.questions);
       }
@@ -90,7 +96,12 @@ export const FaqPage = () => {
           ? setQuestions(getNewQuestions(inputValue))
           : setQuestions(faq.questions);
       } else {
-        if (!getAccordionsFiltered(getQuestionsMobile(faq.questions)[0], inputValue).length) {
+        if (
+          !getAccordionsFiltered(
+            getQuestionsMobile(faq.questions)[0],
+            inputValue
+          ).length
+        ) {
           setQuestions(filterAccordions);
         } else {
           setQuestions(getQuestionsMobile(faq.questions));
@@ -101,12 +112,16 @@ export const FaqPage = () => {
 
   return (
     <>
+      <SEO title={seoTitle} description={seoDescription} />
       <div className="sr-only">
         <h1>{content.name}</h1>
       </div>
       <HeroSupport title={faq.hero.title} subtitle={faq.hero.subtitle} />
       <div className="docs py-4 py-md-5">
-        <Container className="px-3">
+        <Container className="px-3" aria-labelledby="question-section">
+          <h3 id="question-section" className="sr-only">
+            Sezione domande frequenti
+          </h3>
           <Row>
             <Col lg={9} className="offset-lg-3 px-lg-3">
               <Input
@@ -121,7 +136,11 @@ export const FaqPage = () => {
           </Row>
           <Row>
             <Col lg={3}>
-              <SideNavigation getFilter={setFilterId} activeList={questions} searchValue={inputValue}/>
+              <SideNavigation
+                getFilter={setFilterId}
+                activeList={questions}
+                searchValue={inputValue}
+              />
             </Col>
             <Col lg={9} className="px-lg-3">
               {questions.map((question) => (

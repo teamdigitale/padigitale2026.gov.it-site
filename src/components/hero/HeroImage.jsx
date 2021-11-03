@@ -59,8 +59,10 @@ export const HeroImage = ({
   body,
   firstButtonHref,
   firstButtonLabel,
+  firstButtonAriaLabel,
   secondButtonHref,
   secondButtonLabel,
+  secondButtonAriaLabel,
   imageUrl,
   imageAlt,
 }) => {
@@ -78,7 +80,7 @@ export const HeroImage = ({
           <HeroCtaContainer>
             <ExternalLink
               linkTo={firstButtonHref}
-              ariaLabel={firstButtonLabel}
+              ariaLabel={firstButtonAriaLabel}
               className="btn text-uppercase mx-4 ml-lg-0 my-2 btn-primary"
             >
               {firstButtonLabel}
@@ -86,7 +88,7 @@ export const HeroImage = ({
             {secondButtonLabel ? (
               <ExternalLink
                 linkTo={secondButtonHref}
-                ariaLabel={secondButtonLabel}
+                ariaLabel={secondButtonAriaLabel}
                 className="btn text-uppercase mx-4 ml-lg-0 my-2 btn-outline-primary"
               >
                 {secondButtonLabel}
