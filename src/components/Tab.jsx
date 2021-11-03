@@ -100,6 +100,7 @@ const useStyles = createUseStyles({
     composes: 'nav nav-tabs',
     '&.nav-tabs': {
       '& .nav-link': {
+        cursor: 'pointer',
         flexBasis: '70%',
         '@media (min-width: 992px)': {
           flexBasis: 'auto',
@@ -108,8 +109,10 @@ const useStyles = createUseStyles({
     },
   },
   navigationBtn: {
+    cursor: 'pointer',
     '&.tab-button-disabled': {
       opacity: '0.2',
+      cursor: 'unset'
     },
   },
   sidePrevButton: {
@@ -128,7 +131,7 @@ const useStyles = createUseStyles({
   },
 });
 
-export const Tab = ({ tabContent, sideDesktopNavigation, mobileNavigation, title, subtitle }) => {
+export const Tab = ({ tabContent, sideDesktopNavigation, mobileNavigation, title, subtitle, sectionId }) => {
   const classes = useStyles();
   const [tabActive, setTabActive] = useState(0);
   const [nextBtnId, setnextBtnId] = useState(null);
@@ -177,7 +180,7 @@ export const Tab = ({ tabContent, sideDesktopNavigation, mobileNavigation, title
         <Container className="px-3 position-relative">
           {title ? (
             <Row>
-              <Col xs="12" lg="4" className="offset-lg-1">
+              <Col xs="12" lg="4" className="offset-lg-1" id={sectionId}>
                 <h3 className={classes.howTabsTitle}>{title}</h3>
               </Col>
             </Row>

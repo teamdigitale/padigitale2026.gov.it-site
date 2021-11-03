@@ -85,7 +85,7 @@ export const Beneficiaries = (props) => {
         <Row>
           <Col className="offset-lg-1">
             <Row>
-              <Col xs="12" lg="5">
+              <Col xs="12" lg="5" id="beneficiari">
                 <p className={classes.category}>{category}</p>
                 <h2 className={classes.title} id="involved-actors-title">
                   {title}

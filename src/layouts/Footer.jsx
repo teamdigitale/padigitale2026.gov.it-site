@@ -5,11 +5,7 @@ import links from '../../contents/links.yml';
 import { ExternalLink } from '../components/ExternalLink';
 
 const {
-<<<<<<< HEAD
-  internalLinks: { privacy, credits, noteLegali },
-=======
   internalLinks: { privacy, noteLegali },
->>>>>>> 8251285b04233018fb1590f5c6fb1d66f3d52230
   externalLinks: { dipartimento, a11y, eu, repubblica },
 } = links;
 

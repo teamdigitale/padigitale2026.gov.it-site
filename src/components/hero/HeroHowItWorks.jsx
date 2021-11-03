@@ -146,11 +146,25 @@ const useStyles = createUseStyles({
   },
   listItem: {
     composes: 'list-item',
+    padding: '0',
+    border: '0',
+    textAlign: 'left',
+    backgroundColor: 'transparent',
+    color: '#0066CC',
+    fontWeight: '600',
+    marginBottom: '1rem'
   },
 });
 
 export const HeroHowItWorks = ({ title, body, image, list }) => {
   const classes = useStyles();
+
+  const scrollIntoView = (id) => {
+    document.querySelector('#' + id).scrollIntoView({
+      behavior: 'smooth',
+    });
+  }
+
   return (
     <Hero>
       <div className={`${classes.heroWrapper} bg-white`}>
@@ -175,9 +189,9 @@ export const HeroHowItWorks = ({ title, body, image, list }) => {
                             <div className={classes.listItemsWrapper}>
                               {items.map((item) => {
                                 return (
-                                  <span className={classes.listItem}>
+                                  <button onClick={() => scrollIntoView(item.anchor)} className={classes.listItem}>
                                     {item.item}
-                                  </span>
+                                  </button>
                                 );
                               })}
                             </div>
