@@ -136,7 +136,7 @@ export const HomeCarousel = ({ content, title }) => {
         <CardBody>
           <CardTitle tag="h5">{element.title}</CardTitle>
           <CardText dangerouslySetInnerHTML={{ __html: element.description }} />
-          <Button color="primary" className="text-uppercase">
+          <Button color="primary" className="text-uppercase" aria-lebel={element.buttonAriaLabel}>
             {element.button}
           </Button>
         </CardBody>

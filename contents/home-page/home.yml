@@ -11,12 +11,15 @@ heroDigital:
   title: Italia digitale 2026
   body: Il 27% delle risorse totali del PNRR è dedicato alla crescita digitale del Paese. Italia digitale 2026 è la strategia promossa dal <strong>Ministro per l'innovazione tecnologica e la transizione digitale</strong> all’interno del PNRR
   firstButtonLabel: VAI AL SITO
+  firstButtonAriaLabel: VAI AL SITO Italia digitale 2026 (Collegamento esterno - Apre su nuova scheda)
 heroPnrr:
   category: COME FUNZIONA PROSSIMA PA
   title: Come accedere alle opportunità del PNRR
   body: <strong>Prossima PA</strong> è la piattaforma per accedere alle risorse dedicate alla <strong>transizione digitale</strong> e accompagnare le amministrazioni nel percorso verso Italia digitale 2026
   firstButtonLabel: SCOPRI DI PIÙ
+  firstButtonAriaLabel: Scopri di più su come accedere alle opportunità del PNRR
   secondButtonLabel: VEDI I BENEFICIARI
+  secondButtonAriaLabel: vedi i beneficiari
 heroBenefit:
   category: CHANGEME Hero Category 2
   title: CHANGEME Hero Title 2
@@ -158,15 +161,18 @@ homeCarousel:
     image: 'home-carousel-1.png'
     imageMobile: 'home-carousel-mobile-1.png'
     button: 'scopri di più'
+    buttonAriaLabel: 'Scopri di più su domande frequenti e contatti'
   - id: 2
     title: Fase 2, partecipare agli avvisi
     description: <strong>I primi avvisi del PNRR dedicati alla transizione digitale della PA</strong> sono online. Dalla <strong>primavera del 2022</strong>, attraverso un’<strong>area riservata</strong>, le amministrazioni possono beneficiare di un <strong>percorso guidato</strong> per aderire alle misure e richiedere i finanziamenti dedicati.
     image: 'home-carousel-2.png'
     imageMobile: 'home-carousel-mobile-2.png'
     button: 'scopri di più'
+    buttonAriaLabel: 'Scopri di più su domande frequenti e contatti'
   - id: 3
     title: Fase 3, diventare protagonista
     description: 'Dall’<strong>estate del 2022</strong> le amministrazioni possono <strong>avviare i primi progetti</strong>: un team dedicato fornisce alle PA assistenza tecnica e accompagnamento nell’implementazione delle iniziative; un sistema di rendicontazione online organizzato per obiettivi semplifica il percorso delle amministrazioni.'
     image: 'home-carousel-3.png'
     imageMobile: 'home-carousel-mobile-3.png'
     button: 'scopri di più'
+    buttonAriaLabel: 'Scopri di più su domande frequenti e contatti'

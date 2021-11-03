@@ -6,7 +6,7 @@ import { ExternalLink } from '../components/ExternalLink';
 
 const {
   internalLinks: { privacy, credits, noteLegali },
-  externalLinks: { dipartimento, a11y },
+  externalLinks: { dipartimento, a11y, eu, repubblica },
 } = links;
 
 const useStyle = createUseStyles({
@@ -82,15 +82,24 @@ const SlimFooter = () => {
   const classes = useStyle();
   return (
     <div className={classes.slimFooter}>
-      <div className="container">
+      <section className="container" aria-labelledby="linkutili-header">
+        <h3 id="linkutili-header" class="sr-only">
+          Link Utili
+        </h3>
         <ul className="list-inline link-list mb-0 text-center text-md-left">
           <li className={`${classes.listItem} mr-0 mr-md-5`}>
-            <Link to={noteLegali.linkTo} className="list-item mid-footer-link mx-4 mx-md-0">
+            <Link
+              to={noteLegali.linkTo}
+              className="list-item mid-footer-link mx-4 mx-md-0"
+            >
               {noteLegali.label}
             </Link>
           </li>
           <li className={`${classes.listItem} mr-0 mr-md-5`}>
-            <Link to={privacy.linkTo} className="list-item mid-footer-link mx-4 mx-md-0">
+            <Link
+              to={privacy.linkTo}
+              className="list-item mid-footer-link mx-4 mx-md-0"
+            >
               {privacy.label}
             </Link>
           </li>
@@ -104,12 +113,15 @@ const SlimFooter = () => {
             </ExternalLink>
           </li>
           <li className={`${classes.listItem} mr-0 mr-md-5`}>
-            <Link to={credits.linkTo} className="list-item mid-footer-link mx-4 mx-md-0">
+            <Link
+              to={credits.linkTo}
+              className="list-item mid-footer-link mx-4 mx-md-0"
+            >
               {credits.label}
             </Link>
           </li>
         </ul>
-      </div>
+      </section>
     </div>
   );
 };
@@ -122,28 +134,35 @@ const MainFooter = () => {
         <div className={classes.mainWrapper}>
           <div className="logos">
             <ExternalLink
-              linkTo={dipartimento.linkTo}
-              ariaLabel={dipartimento.ariaLabel}
+              linkTo={eu.linkTo}
+              ariaLabel={eu.ariaLabel}
               className={classes.footerLogo}
             >
-              <img className={classes.logoImg} src="/assets/eu-flag.svg" alt="Logo della Repubblica Italiana" />
+              <img
+                className={classes.logoImg}
+                src="/assets/eu-flag.svg"
+                alt="Unione Europea"
+              />
             </ExternalLink>
             <ExternalLink
-              linkTo={dipartimento.linkTo}
-              ariaLabel={dipartimento.ariaLabel}
+              linkTo={repubblica.linkTo}
+              ariaLabel={repubblica.ariaLabel}
               className={classes.footerLogo}
             >
               <img
                 className={classes.logoImg}
                 src="/assets/repubblica-logo-colorato.svg"
-                alt="Logo della Repubblica Italiana"
+                alt="Governo Italiano"
               />
             </ExternalLink>
-            <ExternalLink linkTo={dipartimento.linkTo} ariaLabel={dipartimento.ariaLabel}>
+            <ExternalLink
+              linkTo={dipartimento.linkTo}
+              ariaLabel={dipartimento.ariaLabel}
+            >
               <img
                 className={classes.departmentLogo}
                 src="/assets/dipartimento.svg"
-                alt="Logo della Repubblica Italiana"
+                alt="Dipartimento per la trasformazione digitale"
               />
             </ExternalLink>
           </div>
