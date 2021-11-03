@@ -146,20 +146,28 @@ export const Tab = ({ tabContent, sideDesktopNavigation, mobileNavigation, title
       firstUpdate.current = false;
       return;
     }
-    const prevBtn = document.querySelector('[data-prev-navigation-id=' + prevBtnId + ']');
-    const nextBtn = document.querySelector('[data-next-navigation-id=' + nextBtnId + ']');
+    const prevBtn = document.querySelectorAll('[data-prev-navigation-id=' + prevBtnId + ']');
+    const nextBtn = document.querySelectorAll('[data-next-navigation-id=' + nextBtnId + ']');
     const disabledClass = 'tab-button-disabled';
 
     if (tabActive === 0) {
-      prevBtn.classList.add(disabledClass);
+      prevBtn.forEach((element) => {
+        element.classList.add(disabledClass);
+      });
     } else {
-      prevBtn.classList.remove(disabledClass);
+      prevBtn.forEach((element) => {
+        element.classList.remove(disabledClass);
+      });
     }
 
     if (tabActive === tabContent.tabs.length - 1) {
-      nextBtn.classList.add(disabledClass);
+      nextBtn.forEach((element) => {
+        element.classList.add(disabledClass);
+      });
     } else {
-      nextBtn.classList.remove(disabledClass);
+      nextBtn.forEach((element) => {
+        element.classList.remove(disabledClass);
+      });
     }
   }, [nextBtnId, prevBtnId, tabActive, tabContent.tabs.length]);
 
