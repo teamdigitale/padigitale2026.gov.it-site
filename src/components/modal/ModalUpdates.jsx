@@ -146,6 +146,11 @@ const useStyles = createUseStyles({
     '& .form-group input[type="text"]': {
       paddingLeft: '1.333rem',
       fontSize: '0.889rem',
+      '&:focus': {
+        border: '2px solid #f90',
+        boxShadow: '0 0 0 2px #f90',
+        outline: '0',
+      },
     },
     '& .form-group input[type="text"].is-invalid': {
       borderBottom: 'solid 2px #F83E5A',
@@ -192,6 +197,11 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
   const [selectValue, setSelectValue] = useState(null);
   const [textareaState, setTextareaState] = useState('not-active');
   const [enteState, setEnteState] = useState(false);
+
+  React.useEffect(() => {
+    const selectArr = document.querySelectorAll('input');
+    console.log(selectArr);
+  }, []);
 
   const {
     register,
@@ -356,7 +366,7 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                     options={selectRepresent}
                     placeholder={selectPlaceholder}
                     aria-label={selectPlaceholder}
-                    className={`${errors.represent && 'select is-invalid'}`}
+                    className={`select ${errors.represent && ' is-invalid'}`}
                   />
                 )}
               />
@@ -443,14 +453,14 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
           </Row>
           <Row className="mt-5">
             <Col xs={12}>
-              <h3 className={classes.modalTitleSecondary}>
-                {addMessageLabel}
-              </h3>
+              <h3 className={classes.modalTitleSecondary}>{addMessageLabel}</h3>
             </Col>
           </Row>
           <Row className="mt-5">
             <Col xs={12} lg={6}>
-              <label className={classes.selectLabel}>{messageSelectLabel}</label>
+              <label className={classes.selectLabel}>
+                {messageSelectLabel}
+              </label>
               <Select
                 id="message-select"
                 onChange={handleChange}
@@ -479,7 +489,9 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                     {messageLabel}
                   </label>
                   <span className={classes.maxLengthLabel}>
-                    Massimo <span id="max-length-number">{textareaMaxLength}</span> caratteri
+                    Massimo{' '}
+                    <span id="max-length-number">{textareaMaxLength}</span>{' '}
+                    caratteri
                   </span>
                 </div>
               </div>
@@ -509,12 +521,12 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                     id="radio2"
                     {...register('radio2', { required: true })}
                   />
-                  <Label check htmlFor="radio2">{privacyRadio} <a href="#">{privacyRadioLinkLabel}</a> *</Label>
+                  <Label check htmlFor="radio2">
+                    {privacyRadio} <a href="#">{privacyRadioLinkLabel}</a> *
+                  </Label>
                 </FormGroup>
                 <span className={classes.errorLabel}>
-                  {errors.radio1 || errors.radio2
-                    ? mandatoryRadioLabel
-                    : ''}
+                  {errors.radio1 || errors.radio2 ? mandatoryRadioLabel : ''}
                 </span>
               </fieldset>
             </Col>
