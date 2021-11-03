@@ -2,6 +2,7 @@ import React from 'react';
 import { support } from '../../contents/home-page/home.yml';
 import content from '../../contents/come-funziona/come-funziona.yml';
 import { SEO } from '../components/SEO';
+import { Timeline } from '../components/carousel/Timeline';
 import { Involved } from './come-funziona/Involved';
 import { Beneficiaries } from './come-funziona/Beneficiaries';
 import { SupportSection } from './faq/SupportSection';
@@ -21,6 +22,7 @@ export const ComeFunzionaPage = () => (
       image="come-funziona-hero.svg"
       list={content.hero.list}
     />
+     <Timeline content={content.timeline} title="Il calendario" />
     <Beneficiaries item={content.beneficiaries} />
     <Involved
       title={content.involved.title}

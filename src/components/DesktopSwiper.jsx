@@ -26,7 +26,7 @@ const useStyles = createUseStyles({
   },
 });
 
-export const DesktopSwiper = ({ slides, breakpoints, pagination, mobilePagination, desktopNavigation, className }) => {
+export const DesktopSwiper = ({ slides, breakpoints, pagination, mobilePagination, desktopNavigation, navigation, className }) => {
   const classes = useStyles();
   const [paginationId, setPaginationId] = useState(null);
   const [nextBtnId, setnextBtnId] = useState(null);
@@ -107,6 +107,24 @@ export const DesktopSwiper = ({ slides, breakpoints, pagination, mobilePaginatio
           />
         </div>
       )}
+      {navigation && (
+        <div className="justify-content-center pt-3 d-flex">
+          <Icon
+            data-prev-navigation-id={prevBtnId}
+            className={classes.navigationBtn}
+            color="primary"
+            icon="it-arrow-left-circle"
+            size="lg"
+          />
+          <Icon
+            data-next-navigation-id={nextBtnId}
+            className={classes.navigationBtn}
+            color="primary"
+            icon="it-arrow-right-circle"
+            size="lg"
+          />
+        </div>
+      )}
     </>
   );
 };
@@ -117,5 +135,6 @@ DesktopSwiper.propTypes = {
   pagination: PropTypes.bool,
   mobilePagination: PropTypes.bool,
   desktopNavigation: PropTypes.bool,
+  navigation: PropTypes.bool,
   className: PropTypes.any,
 };
