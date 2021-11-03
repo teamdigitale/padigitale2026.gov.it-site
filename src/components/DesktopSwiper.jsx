@@ -24,6 +24,20 @@ const useStyles = createUseStyles({
       opacity: '0.2',
     },
   },
+  sidePrevButton: {
+    composes: 'd-none justify-content-center pt-3 d-lg-flex',
+    position: 'absolute',
+    left: '0',
+    top: '50%',
+    transform: 'translateY(-50%)'
+  },
+  sideNextButton: {
+    composes: 'd-none justify-content-center pt-3 d-lg-flex',
+    position: 'absolute',
+    right: '0',
+    top: '50%',
+    transform: 'translateY(-50%)'
+  },
 });
 
 export const DesktopSwiper = ({ slides, breakpoints, pagination, mobilePagination, desktopNavigation, navigation, className }) => {
