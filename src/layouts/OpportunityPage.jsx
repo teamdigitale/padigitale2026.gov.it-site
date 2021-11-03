@@ -6,8 +6,6 @@ import { SupportSection } from './faq/SupportSection';
 import { HeroImageBackground } from '../components/hero/HeroImageBackground';
 import { ModalUpdatesButton } from '../components/modal/ModalUpdatesButton';
 import { ModalUpdates } from '../components/modal/ModalUpdates';
-import { Helmet } from 'react-helmet';
-
 
 const { heroDigital, support } = content;
 const { heroOpportunity, modalButton } = opportunityContent;
@@ -19,9 +17,7 @@ export const OpportunityPage = (props) => {
   };
   return (
     <>
-    <Helmet>
-      <title>Opportunità - Prossima PA</title>
-    </Helmet>
+      <SEO title="Opportunità - Prossima PA" />
       <HeroImageBackground
         title={heroOpportunity.title}
         body={heroOpportunity.body}
@@ -33,7 +29,7 @@ export const OpportunityPage = (props) => {
         buttonLabel={modalButton.buttonLabel}
         handleToggle={toggleModal}
       />
-      <BeneficiariesSection externalFilter={props.filter}/>
+      <BeneficiariesSection externalFilter={props.filter} />
       <ModalUpdatesButton
         label={modalButton.label}
         buttonLabel={modalButton.buttonLabel}

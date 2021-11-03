@@ -128,6 +128,11 @@ const useStyles = createUseStyles({
     '& .select.is-invalid [class$="-control"]': {
       borderColor: '#F83E5A',
     },
+    '& .select.focused': {
+      borderColor: '#f90',
+      boxShadow: '0 0 0 2px #f90',
+      outline: '0',
+    },
     '& .form-check': {
       borderBottom: '1px solid #e6e6e6',
       padding: '1.111rem 0.444rem',
@@ -198,10 +203,22 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
   const [textareaState, setTextareaState] = useState('not-active');
   const [enteState, setEnteState] = useState(false);
 
-  React.useEffect(() => {
-    const selectArr = document.querySelectorAll('input');
-    console.log(selectArr);
-  }, []);
+  const setFocusStyleOnSelect = () => {
+    console.log('opened');
+    const selectInputArr = document.querySelectorAll('.modal .select input');
+    selectInputArr.forEach(input => {
+      const selectFocusHandler = () => {
+        const currentSelect = input.closest(".select");
+        currentSelect.classList.add("focused");
+      };
+      const selectFocusOutHandler = () => {
+        const currentSelect = input.closest(".select");
+        currentSelect.classList.remove("focused");
+      };
+      input.addEventListener("focus", selectFocusHandler);
+      input.addEventListener("focusout", selectFocusOutHandler);
+    });
+  };
 
   const {
     register,
@@ -283,6 +300,7 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
       toggle={handleToggle}
       labelledBy="updates-modal"
       className={classes.modalUpdatesContainer}
+      onOpened={setFocusStyleOnSelect}
     >
       <div id="updates-modal" class="modal-header">
         <h5 class="modal-title">{modalTitle}</h5>
@@ -426,7 +444,7 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                       options={selectRepresent}
                       placeholder={selectPlaceholder}
                       aria-label={selectPlaceholder}
-                      className={`${errors.represent && 'select is-invalid'}`}
+                      className={`select ${errors.represent && ' is-invalid'}`}
                     />
                   )}
                 />
@@ -467,6 +485,7 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                 options={selectRepresent}
                 placeholder={selectPlaceholder}
                 aria-label={selectPlaceholder}
+                className='select'
               />
             </Col>
           </Row>

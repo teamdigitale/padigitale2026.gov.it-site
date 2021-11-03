@@ -3,7 +3,6 @@ import content from '../../contents/support-page/support.yml';
 import { HeroSupport } from './support/Hero';
 import { FAQPreview } from './support/FAQPreview';
 import { Assistance } from './support/Assistance';
-import { Helmet } from 'react-helmet';
 
 const {
   mainHero: { title, description },
@@ -11,9 +10,7 @@ const {
 
 export const SupportPage = () => (
   <>
-    <Helmet>
-      <title>Supporto - Prossima PA</title>
-    </Helmet>
+    <SEO title="Supporto - Prossima PA" />
     <HeroSupport title={title} subtitle={description} />
     <FAQPreview />
     <Assistance />

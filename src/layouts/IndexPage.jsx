@@ -16,13 +16,10 @@ import { HeroCarousel } from '../components/carousel/Carousel';
 import { HomeCarousel } from '../components/carousel/HomeCarousel';
 import { SupportSection } from './faq/SupportSection';
 import { OpportunitySection } from './home/OpportunitySection';
-import { Helmet } from 'react-helmet';
 
 export const IndexPage = () => (
   <>
-    <Helmet>
-      <title>Home - Prossima PA</title>
-    </Helmet>
+    <SEO title="Home - Prossima PA"/>
     <HeroImageBackgroundFull
       category={heroMain.category}
       title={heroMain.title}

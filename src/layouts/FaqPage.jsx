@@ -7,7 +7,6 @@ import { SideNavigation } from './faq/SideNavigation';
 import { QuestionSection } from './faq/QuestionSection';
 import { SupportSection } from './faq/SupportSection';
 import { HeroSupport } from './support/Hero';
-import { Helmet } from 'react-helmet';
 
 const useStyles = createUseStyles({
   noResults: {
@@ -43,7 +42,9 @@ export const FaqPage = () => {
       }
     } else {
       if (isMobile) {
-        filterId !== 'all' ? setQuestions(getQuestionsMobile(faq.questions)) : setQuestions(faq.questions);
+        filterId !== 'all'
+          ? setQuestions(getQuestionsMobile(faq.questions))
+          : setQuestions(faq.questions);
       } else {
         setQuestions(faq.questions);
       }
@@ -91,7 +92,12 @@ export const FaqPage = () => {
           ? setQuestions(getNewQuestions(inputValue))
           : setQuestions(faq.questions);
       } else {
-        if (!getAccordionsFiltered(getQuestionsMobile(faq.questions)[0], inputValue).length) {
+        if (
+          !getAccordionsFiltered(
+            getQuestionsMobile(faq.questions)[0],
+            inputValue
+          ).length
+        ) {
           setQuestions(filterAccordions);
         } else {
           setQuestions(getQuestionsMobile(faq.questions));
@@ -102,9 +108,7 @@ export const FaqPage = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Faq - Prossima PA</title>
-      </Helmet>
+      <SEO title="Faq - Prossima PA"/>
       <div className="sr-only">
         <h1>{content.name}</h1>
       </div>
@@ -128,7 +132,11 @@ export const FaqPage = () => {
           </Row>
           <Row>
             <Col lg={3}>
-              <SideNavigation getFilter={setFilterId} activeList={questions} searchValue={inputValue}/>
+              <SideNavigation
+                getFilter={setFilterId}
+                activeList={questions}
+                searchValue={inputValue}
+              />
             </Col>
             <Col lg={9} className="px-lg-3">
               {questions.map((question) => (
