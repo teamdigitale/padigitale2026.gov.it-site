@@ -27,6 +27,7 @@ export const OpportunityPage = () => {
         label={modalButton.label}
         buttonLabel={modalButton.buttonLabel}
         handleToggle={toggleModal}
+        hasTitle={true}
       />
       <BeneficiariesSection />
       <ModalUpdatesButton

@@ -44,7 +44,7 @@ const useStyles = createUseStyles({
       display: 'block',
       textAlign: 'center',
     },
-  }
+  },
 });
 
 export const ModalUpdatesButton = ({
@@ -52,6 +52,7 @@ export const ModalUpdatesButton = ({
   buttonLabel,
   initialState,
   handleToggle,
+  hasTitle,
 }) => {
   const classes = useStyles();
   const eventHandler = () => {
@@ -60,21 +61,26 @@ export const ModalUpdatesButton = ({
 
   return (
     <>
-      <Container>
-        <Row className="align-items-center mb-4">
-          <Col sm={12} lg={3}>
-            <h3 className={classes.buttonTitle}>Le misure</h3>
-          </Col>
-          <Col sm={12} lg={9}>
-            <span className={classes.buttonInfo}>
-              M1C1{' '}
-              <strong>
-                DIGITALIZZAZIONE, INNOVAZIONE E SICUREZZA NELLA PA
-              </strong>
-            </span>
-          </Col>
-        </Row>
-      </Container>
+      {hasTitle ? (
+        <Container>
+          <Row className="align-items-center mb-4">
+            <Col sm={12} lg={3}>
+              <h3 className={classes.buttonTitle}>Le misure</h3>
+            </Col>
+            <Col sm={12} lg={9}>
+              <span className={classes.buttonInfo}>
+                M1C1{' '}
+                <strong>
+                  DIGITALIZZAZIONE, INNOVAZIONE E SICUREZZA NELLA PA
+                </strong>
+              </span>
+            </Col>
+          </Row>
+        </Container>
+      ) : (
+        ''
+      )}
+
       <Container>
         <Row>
           <Col lg={12}>
