@@ -1,5 +1,20 @@
 title: Come funziona - Prossima PA
 name: Come Funziona
+hero: 
+  title: 'La transizione digitale: semplice e a misura di PA'
+  body: Sono previste due modalità di accesso ai fondi del PNRR gestiti dal Dipartimento per la trasformazione digitale. A seconda della tipologia di misura e di PA, sarà possibile accedere alle risorse o attraverso delle soluzioni standard o attraverso la presentazione di progetti.
+  list:
+    - listItems:
+      title: MODALITÀ DI ACCESSO
+      items:
+        - item: Soluzioni standard
+        - item: Presentazione progetti
+    - listItems:
+      title: APPROFONDISCI
+      items: 
+        - item: Il calendario
+        - item: I beneficiari
+        - item: Gli attori coinvolti
 beneficiaries:
   category: I Beneficiari
   title: La digitalizzazione a misura di territorio
@@ -56,324 +71,47 @@ involved:
   title: I soggetti istituzionali che concorrono alla realizzazione della strategia Italia digitale 2026
   cards:
     - id: 1
-      image: '/assets/eu-flag.svg'
-      text: L’Unione Europea è la promotrice e finanziatrice di Next Generation UE, il piano straordinario per rilanciare l’economia europea dopo la pandemia di COVID-19, in cui rientra Italia domani, il Piano nazionale di ripresa e resilienza del Governo italiano.
+      image: '/assets/mitd-logo.svg'
+      text: <strong>Il Ministro per l’innovazione tecnologica e transizione digitale</strong>, all’interno di Italia domani, <strong>ha promosso Italia digitale 2026</strong>, il piano d’investimenti per la digitalizzazione del paese.
     - id: 2
       image: '/assets/dipartment-logo.svg'
-      text: ll Ministero dell’Economia e delle Finanze controllerà il progresso nell’attuazione di riforme e investimenti del PNRR ed è il punto di contatto con la Commissione Europea del Governo italiano.
+      text: Il <strong>Dipartimento per la trasformazione digitale</strong> della Presidenza del Consiglio dei Ministri è <strong>responsabile per l’attuazione degli investimenti di Italia digitale 2026</strong>. Per mezzo del Transformation Office assiste le PA nel processo di digitalizzazione.
     - id: 3
-      image: '/assets/mitd-logo.svg'
-      text: Il Ministro per l’innovazione tecnologica e transizione digitale, all’interno di Italia domani, ha promosso Italia digitale 2026, il piano d’investimenti per la digitalizzazione del paese.
-    - id: 4
       image: '/assets/agid-logo-blue.svg'
-      text: Il Dipartimento per la trasformazione digitale della Presidenza del Consiglio dei Ministri è responsabile per l’attuazione degli investimenti di Italia digitale 2026. Per mezzo del Transformation Office assiste le PA nel processo di digitalizzazione.
+      text: L’<strong>Agenzia per l'Italia digitale</strong> è l’agenzia tecnica che ha il compito di <strong>garantire la realizzazione degli obiettivi dell’Agenda digitale italiana</strong>. In quanto ente delegato, è responsabile per l’attuazione di misure nell’ambito dell’accesso ai servizi pubblici digitali.
+    - id: 4
+      image: '/assets/pagopa-logo.svg'
+      text: <strong>PagoPA S.p.a</strong> è la società pubblica nata per realizzare e gestire infrastrutture che assicurino lo sviluppo e la diffusione dei servizi pubblici digitali. In quanto ente delegato, è <strong>responsabile per l’attuazione di misure nell’ambito della digitalizzazione dei servizi e piattaforme.</strong>
     - id: 5
       image: '/assets/consip-logo.svg'
-      text: Consip è la centrale acquisti della Pubblica Amministrazione. Per il PNRR mette a disposizione strumenti per agevolare la realizzazione degli interventi, semplificando il processo di acquisto delle PA attraverso contratti quadro o piattaforme per la negoziazione.
-    - id: 6
-      image: '/assets/pagopa-logo.svg'
-      text: PagoPA S.p.a è la società pubblica nata per realizzare e gestire infrastrutture che assicurino lo sviluppo e la diffusione dei servizi pubblici digitali. In quanto ente delegato, è responsabile per l’attuazione di misure nell’ambito della digitalizzazione dei servizi e piattaforme.
-    - id: 7
-      image: '/assets/mef-logo.svg'
-      text: Il <strong>Ministero dell’Economia e delle Finanze</strong> è responsabile del <strong>monitoraggio</strong> dell’<strong>attuazione</strong> degli investimenti e delle riforme del PNRR
-modalitaAccesso:
-  # title: Due modalità di accesso ai fondi del PNRR in relazione alla platea di benficiari
-  # description: La strada verso Italia digitale 2026 è appena cominciata. Su Prossima PA sono <strong>resi disponibili tutti i materiali, le informazioni e gli strumenti</strong> per aiutare le amministrazioni a percorrerla. In questo percorso sono state <strong>pensate diverse modalità di accesso ai fondi del PNRR</strong> gestiti dal Dipartimento per la trasformazione digitale. A seconda della tipologia di misura e di PA, sarà possibile <strong>accedere alle risorse o attraverso dei pacchetti standard o attraverso la presentazione di progetti.</strong>
-  description: Sono previste <strong>due modalità di accesso ai fondi del PNRR</strong> gestiti dal Dipartimento per la trasformazione digitale. A seconda della tipologia di misura e di PA, sarà possibile <strong>accedere alle risorse o attraverso delle soluzioni standard</strong> o <strong>attraverso la presentazione di progetti.</strong>
-pacchettiCarousel:
-  title: Soluzioni standard
-  subtitle: Per le misure con una platea ampia di beneficiari (oltre 1.000 PA), è prevista una modalità di accesso per soluzioni standard. Un percorso semplificato e guidato che va dalla richiesta dei finanziamenti all’erogazione dei fondi.
+      text: <strong>Consip</strong> è la centrale acquisti della Pubblica Amministrazione. Per il PNRR <strong>mette a disposizione strumenti per agevolare la realizzazione degli interventi</strong>, semplificando il processo di acquisto delle PA attraverso contratti quadro o piattaforme per la negoziazione.
+timeline:
   cards:
-    - id: 0
-      tabs:
-        - id: 0
-          name: Richiesta dei fondi
-          image: first-tab.svg
-          imageActive: first-tab-active.svg
-          content:
-            title: Soluzioni a misura di PA
-            description: Semplificare la richiesta di finanziamenti e ridurre gli oneri amministrativi per tutta la PA
-            first:
-              title: soluzioni standard
-              image: box.svg
-              description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti. 
-            second:
-              title: Soluzioni multimisura
-              image: multi-box.svg
-              description: Per semplificare l’accesso ai fondi del PNRR le amministrazioni potranno - <strong>con un’unica candidatura</strong> - accedere a soluzioni multimisura, che includono, per esempio, sia finanziamenti per la migrazione al cloud che per il miglioramento dei siti web. 
-        - id: 1
-          name: Realizzazione delle iniziative
-          image: second-tab.svg
-          imageActive: second-tab-active.svg
-          content:
-            title: Un portale dedicato e un team di supporto sul territorio
-            description: L’importanza di accompagnare le amministrazioni con competenze e strumenti
-            first:
-              title: Un portale dedicato
-              image: computer.svg
-              description: "“Prossima PA” <strong>accompagnerà gli Enti con risorse e informazioni</strong> lungo tutto il percorso di attuazione delle misure previste dal PNRR: dalla prima fase informativa, che precede l’avvio degli avvisi, al momento dell’accesso ai fondi e fino all’implementazione stessa delle iniziative. I <strong>fornitori saranno scelti dalla PA</strong> anche avvalendosi di fornitori certificati attraverso strumenti Consip."
-            second:
-              title: Un team sul territorio
-              image: ItaliaPin.svg
-              description: "Per sostenere la transizione digitale dei singoli Enti, nasce un team dedicato: il <strong>Transformation Office</strong>. Questa struttura, che sarà anche dislocata sul territorio con referenti locali, è parte del Dipartimento per la trasformazione digitale, e farà da ponte con amministrazioni locali e fornitori IT della PA, con <strong>assistenza informativa e tecnica.</strong>"
-        - id: 2
-          name: Erogazione dei fondi
-          image: third-tab.svg
-          imageActive: third-tab-active.svg
-          content:
-            title: L’importanza dei risultati
-            description: Semplificazione dei processi per l’erogazione dei fondi
-            first:
-              title: 100% online
-              image: computer-2.svg
-              description: Attraverso “Prossima PA” le amministrazioni potranno <strong>accedere ad un’area riservata</strong>, per seguire la gestione amministrativa delle singole iniziative finanziate attraverso l’azione del Dipartimento per la trasformazione digitale. Con l’avvio degli avvisi avranno infatti la possibilità non solo di fare <strong>richiesta per i fondi</strong>, ma anche di <strong>produrre i dati relativi all’avanzamento delle iniziative, ricevere comunicazioni dedicate</strong> e <strong>inviare documentazioni ufficiali per l’erogazione delle risorse.</strong>
-            second:
-              title: Erogazioni per obiettivi
-              image: obiettivi.svg
-              description: Per semplificare l’erogazione delle risorse, i contributi saranno riconosciuti alle amministrazioni sulla base del <strong>raggiungimento di specifici obiettivi predefiniti</strong>. Il processo di rendicontazione sarà quindi alleggerito, e <strong>non sarà necessario rendicontare le singole spese effettuate per ottenere i fondi.</strong>
-      button: 'scopri di più'
     - id: 1
-      tabs:
-        - id: 0
-          name: Richiesta Fondi
-          image: first-tab.svg
-          imageActive: first-tab-active.svg
-          content:
-            title: Soluzioni a misura di PA
-            description: Semplificare la richiesta di finanziamenti e ridurre gli oneri amministrativi per tutta la PA
-            first:
-              title: soluzioni standard
-              image: box.svg
-              description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti.
-            second:
-              title: soluzioni standard
-              image: multi-box.svg
-              description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti. 
-        - id: 1
-          name: Realizzazione delle iniziative
-          image: second-tab.svg
-          imageActive: second-tab-active.svg
-          content:
-            title: Un portale dedicato e un team di supporto sul territorio
-            description: L’importanza di accompagnare le amministrazioni con competenze e strumenti
-            first:
-              title: soluzioni standard
-              image: computer.svg
-              description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti.
-            second:
-              title: soluzioni standard
-              image: ItaliaPin.svg
-              description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti. 
-        - id: 2
-          name: Erogazione dei fondi
-          image: third-tab.svg
-          imageActive: third-tab-active.svg
-          content:
-            title: L’importanza dei risultati
-            description: Semplificazione dei processi per l’erogazione dei fondi
-            first:
-              title: soluzioni standard
-              image: computer-2.svg
-              description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti.
-            second:
-              title: soluzioni standard
-              image: multi-box.svg
-              description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti. 
+      active: false
+      time: Autunno 2021
+      title: Conoscere le opportunità
+      text: Le PA hanno accesso alle risorse necessarie per prepararsi ad aderire agli avvisi, la cui pubblicazione è prevista per la primavera del 2022. 
     - id: 2
-      tabs:
-        - id: 0
-          name: Richiesta Fondi
-          image: first-tab.svg
-          imageActive: first-tab-active.svg
-          content:
-            title: Soluzioni a misura di PA
-            description: Semplificare la richiesta di finanziamenti e ridurre gli oneri amministrativi per tutta la PA
-            imageMobile: home-carousel-mobile-1.png
-            first:
-              title: soluzioni standard
-              image: box.svg
-              description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti.
-            second:
-              title: soluzioni standard
-              image: multi-box.svg
-              description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti. 
-        - id: 1
-          name: Realizzazione delle iniziative
-          image: second-tab.svg
-          imageActive: second-tab-active.svg
-          content:
-            title: Un portale dedicato e un team di supporto sul territorio
-            description: L’importanza di accompagnare le amministrazioni con competenze e strumenti
-            first:
-              title: soluzioni standard
-              image: computer.svg
-              description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti.
-            second:
-              title: soluzioni standard
-              image: ItaliaPin.svg
-              description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti. 
-        - id: 2
-          name: Erogazione dei fondi
-          image: third-tab.svg
-          imageActive: third-tab-active.svg
-          content:
-            title: L’importanza dei risultati
-            description: Semplificazione dei processi per l’erogazione dei fondi
-            first:
-              title: soluzioni standard
-              image: computer-2.svg
-              description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti.
-            second:
-              title: soluzioni standard
-              image: obiettivi.svg
-              description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti. 
-presentazioneCarousel:
-  title: Presentazione progetti
-  subtitle: Per le misure con una platea ristretta di beneficiari (fino a 1.000 PA), è stata prevista una modalità di accesso che prevede la presentazione di progetti, sempre ispirata ai principi della semplicità e della riduzione degli oneri amministrativi 
-  cards:
-    - id: 0
-      tabs:
-        - id: 0
-          name: Richiesta Fondi
-          image: first-tab.svg
-          imageActive: first-tab-active.svg
-          content:
-            title: Presentazione dei progetti
-            description: La possibilità di candidare la propria PA e un iter di selezione trasparente
-            first:
-              title: Presentazione di progetti
-              image: Progetti.svg
-              description: Con la pubblicazione degli avvisi, le amministrazioni potranno candidarsi per avere accesso alle risorse del PNRR attraverso un <strong>percorso guidato per la presentazione di progetti</strong>. Alla conclusione della fase di selezione, saranno individuate le amministrazioni ammesse a finanziamento.
-            second:
-              title: Tempi rapidi
-              image: tempi.svg
-              description: Dei <strong>criteri di valutazione automatici</strong> consentiranno una valutazione dei progetti più rapida. L’intento è quello di <strong>accostare ad un’analisi oggettiva delle proposte</strong>, delle <strong>modalità di candidatura che facilitino tempi rapidi e certezza procedurale.</strong>
-        - id: 1
-          name: Realizzazione delle iniziative
-          image: second-tab.svg
-          imageActive: second-tab-active.svg
-          content:
-            title: Un portale dedicato e un team di supporto sul territorio
-            description: L’importanza di accompagnare le amministrazioni con competenze e strumenti
-            first:
-              title: Un portale dedicato
-              image: computer.svg
-              description: "“Prossima PA” <strong>accompagnerà gli Enti con risorse e strumenti</strong> lungo tutto il percorso di attuazione delle misure previste dal PNRR: dalla prima fase informativa, che precede l’avvio degli avvisi, al momento dell’accesso ai fondi e fino all’implementazione stessa dei progetti. I fornitori saranno <strong>scelti dalla PA</strong> anche avvalendosi di fornitori certificati attraverso strumenti Consip."
-            second:
-              title: Un team sul territorio
-              image: ItaliaPin.svg
-              description: Attraverso “Prossima PA” le amministrazioni potranno <strong>accedere ad un’area riservata</strong>, per seguire la gestione amministrativa delle singole iniziative finanziate attraverso l’azione del Dipartimento per la trasformazione digitale. Con l’avvio degli avvisi avranno infatti la possibilità non solo di fare <strong>richiesta per i fondi</strong>, ma anche di <strong>produrre i dati relativi all’avanzamento dei progetti, ricevere comunicazioni dedicate e inviare documentazioni ufficiali per l’erogazione delle risorse</strong>
-        - id: 2
-          name: Erogazione dei fondi
-          image: third-tab.svg
-          imageActive: third-tab-active.svg
-          content:
-            title: Rendicontazione per spesa
-            description: Una procedura semplificata per ricevere i fondi in maniera rapida
-            first:
-              title: Spese riconosciute
-              image: obiettivi.svg
-              description: "Le amministrazioni dovranno <strong>implementare</strong>, con il proprio personale o attraverso l’acquisto di servizi e forniture, <strong>il progetto in tutte le sue componenti</strong> effettuando le spese previste per la realizzazione delle attività: impegno delle risorse, svolgimento delle procedure di gara per l’acquisizione di lavori/servizi/forniture a seconda della tipologia di progetto, esecuzione dei pagamenti ai fornitori."
-            second:
-              title: Rendicontazione ed erogazione dei fondi
-              image: Erogazione.svg
-              description: L’erogazione dei contributi seguirà alcuni <strong>step che possono prevedere un’anticipazione e delle tranches, fino al saldo, erogate “a rimborso”</strong>. In questo caso sarà necessario presentare tutta la documentazione che giustifica l’esecuzione della singola spesa. Anche in questo caso si prevedono procedure semplici per il trasferimento dei fondi e il costante supporto all’amministrazione destinataria delle risorse per assicurare uno spedito ed efficace trasferimento dei fondi.
-      button: 'scopri di più'
-    - id: 1
-      tabs:
-        - id: 0
-          name: Richiesta Fondi
-          image: first-tab.svg
-          imageActive: first-tab-active.svg
-          content:
-            title: Soluzioni a misura di PA
-            description: Semplificare la richiesta di finanziamenti e ridurre gli oneri amministrativi per tutta la PA
-            first:
-              title: soluzioni standard
-              image: box.svg
-              description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti.
-            second:
-              title: soluzioni standard
-              image: multi-box.svg
-              description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti. 
-        - id: 1
-          name: Realizzazione delle iniziative
-          image: second-tab.svg
-          imageActive: second-tab-active.svg
-          content:
-            title: Un portale dedicato e un team di supporto sul territorio
-            description: L’importanza di accompagnare le amministrazioni con competenze e strumenti
-            first:
-              title: soluzioni standard
-              image: box.svg
-              description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti.
-            second:
-              title: soluzioni standard
-              image: multi-box.svg
-              description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti. 
-        - id: 2
-          name: Erogazione dei fondi
-          image: third-tab.svg
-          imageActive: third-tab-active.svg
-          content:
-            title: L’importanza dei risultati
-            description: Semplificazione dei processi per l’erogazione dei fondi
-            first:
-              title: soluzioni standard
-              image: box.svg
-              description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti.
-            second:
-              title: soluzioni standard
-              image: multi-box.svg
-              description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti. 
-    - id: 2
-      tabs:
-        - id: 0
-          name: Richiesta Fondi
-          image: first-tab.svg
-          imageActive: first-tab-active.svg
-          content:
-            title: Soluzioni a misura di PA
-            description: Semplificare la richiesta di finanziamenti e ridurre gli oneri amministrativi per tutta la PA
-            imageMobile: home-carousel-mobile-1.png
-            first:
-              title: soluzioni standard
-              image: box.svg
-              description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti.
-            second:
-              title: soluzioni standard
-              image: multi-box.svg
-              description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti. 
-        - id: 1
-          name: Realizzazione delle iniziative
-          image: second-tab.svg
-          imageActive: second-tab-active.svg
-          content:
-            title: Un portale dedicato e un team di supporto sul territorio
-            description: L’importanza di accompagnare le amministrazioni con competenze e strumenti
-            first:
-              title: soluzioni standard
-              image: box.svg
-              description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti.
-            second:
-              title: soluzioni standard
-              image: multi-box.svg
-              description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti. 
-        - id: 2
-          name: Erogazione dei fondi
-          image: third-tab.svg
-          imageActive: third-tab-active.svg
-          content:
-            title: L’importanza dei risultati
-            description: Semplificazione dei processi per l’erogazione dei fondi
-            first:
-              title: soluzioni standard
-              image: box.svg
-              description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti.
-            second:
-              title: soluzioni standard
-              image: multi-box.svg
-              description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti. 
+      active: false
+      time: Primavera 2022
+      title: Partecipare agli avvisi
+      text: "<strong>I primi avvisi del PNRR dedicati alla transizione digitale della PA sono online:</strong> un’area riservata ne facilita l’adesione attraverso un percorso guidato."
+    - id: 3
+      active: true
+      time: Autunno 2022
+      title: Realizzare i progetti
+      text: "Le amministrazioni possono <strong>avviare i progetti:</strong> un team dedicato accompagna le PA. La rendicontazione degli interventi implementati è totalmente online."
+    - id: 4
+      active: false
+      time: Primavera 2022
+      title: Realizzare i progetti
+      text: Le PA hanno accesso alle risorse necessarie per prepararsi ad aderire agli avvisi, la cui pubblicazione è prevista per la primavera del 2022. 
+    - id: 5
+      active: false
+      time: Autunno 2023
+      title: Realizzare i progetti
+      text: Le PA hanno accesso alle risorse necessarie per prepararsi ad aderire agli avvisi, la cui pubblicazione è prevista per la primavera del 2022. 
 pacchettiTabs:
   title: Soluzioni standard
   subtitle: Per le misure con una platea ampia di beneficiari (oltre 1.000 PA), è prevista una modalità di accesso per soluzioni standard. Un percorso semplificato e guidato che va dalla richiesta dei finanziamenti all’erogazione dei fondi.
@@ -472,3 +210,4 @@ presentazioneTabs:
           title: Rendicontazione ed erogazione dei fondi
           image: Erogazione.svg
           description: L’erogazione dei contributi seguirà alcuni <strong>step che possono prevedere un’anticipazione e delle tranches, fino al saldo, erogate “a rimborso”</strong>. In questo caso sarà necessario presentare tutta la documentazione che giustifica l’esecuzione della singola spesa. Anche in questo caso si prevedono procedure semplici per il trasferimento dei fondi e il costante supporto all’amministrazione destinataria delle risorse per assicurare uno spedito ed efficace trasferimento dei fondi.
+
