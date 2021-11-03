@@ -1,11 +1,10 @@
 internalLinks:
-  strategy:
+  opportunity:
     linkTo: '/opportunita'
     label: Le opportunità
     linkTop: '/#mainTop'
-  enablement:
-    homeLinkTo: '/come-funziona'
-    linkTo: 'https://www.youtube.com/CHANGEME'
+  howitworks:
+    linkTo: '/come-funziona'
     label: Come funziona
     linkTop: '#mainTop'
   support:
@@ -80,8 +79,8 @@ externalLinks:
     ariaLabel: "Agenzia per l'Italia Digitale (link esterno)"
   a11y:
     label: Dichiarazione di accessibilità
-    linkTo: https://form.agid.gov.it/CHANGEME
-    ariaLabel: 'Dichiarazione di accessibilità (Collegamento esterno - Apre su nuova scheda)'
+    linkTo: https://form.agid.gov.it/prossimapa.gov.it
+    ariaLabel: 'Dichiarazione di accessibilità (link esterno)'
   italiaDigitale:
     label: Italia digitale 2026
     linkTo: 'https://innovazione.gov.it/dipartimento/focus/italia-digitale-2026/'
