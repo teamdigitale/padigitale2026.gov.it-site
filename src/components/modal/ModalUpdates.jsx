@@ -323,124 +323,67 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
         dangerouslySetInnerHTML={{ __html: modalSubtitle }}
       ></p>
       <ModalBody className={classes.modalBody}>
-        <form onSubmit={handleSubmit(onSubmit, onError)} id="updates-form">
-          <Row>
-            <Col xs={12}>
-              <img src="assets/icon-updates.svg" alt="icon updates" />
-            </Col>
-          </Row>
-          <Row className="mt-3">
-            <Col xs={12}>
-              <span className={classes.modalLabel}>{updatesLabel}</span>
-            </Col>
-          </Row>
-          <Row className="mt-2">
-            <Col xs={12}>
-              <p dangerouslySetInnerHTML={{ __html: updatesInfo }}></p>
-            </Col>
-          </Row>
-          <Row className="mt-5">
-            <Col xs={12}>
-              <p dangerouslySetInnerHTML={{ __html: mandatoryAdvise }}></p>
-            </Col>
-          </Row>
-          <Row className="mt-5">
-            <Col xs={12}>
-              <Controller
-                name="email"
-                control={control}
-                rules={{
-                  required: requiredLabel,
-                  pattern: {
-                    value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                    message: emailValidationLabel,
-                  },
-                }}
-                render={({ field }) => (
-                  <Input
-                    invalid={errors.email}
-                    infoText={errors.email && errors.email.message}
-                    label={emailLabel}
-                    type="text"
-                    id="email"
-                    {...field}
-                  />
-                )}
-              />
-            </Col>
-          </Row>
-          <Row className="mt-5">
-            <Col xs={12} lg={6}>
-              <label className={classes.selectLabel}>{representLabel}</label>
-              <Controller
-                control={control}
-                name="represent"
-                rules={{ required: true }}
-                render={({ field: { onChange, value } }) => (
-                  <Select
-                    value={value}
-                    id="represent-select"
-                    onChange={(onChange, selectHandler)}
-                    options={selectRepresent}
-                    placeholder={selectPlaceholder}
-                    aria-label={selectPlaceholder}
-                    className={`select ${errors.represent && ' is-invalid'}`}
-                  />
-                )}
-              />
-            </Col>
-          </Row>
-          <span className={classes.errorLabel}>
-            {errors.represent ? requiredLabel : ''}
-          </span>
-          <div
-            className={`${classes.enteContainer} ${enteState ? '' : 'hidden'}`}
-          >
+        <form onSubmit={handleSubmit(onSubmit, onError)} id="updates-form" aria-describedby="mandatory-label">
+          <fieldset>
+            <Row>
+              <Col xs={12}>
+                <img src="assets/icon-updates.svg" alt="" />
+              </Col>
+            </Row>
+            <Row className="mt-3">
+              <Col xs={12}>
+                <legend className={classes.modalLabel}>{updatesLabel}</legend>
+              </Col>
+            </Row>
+            <Row className="mt-2">
+              <Col xs={12}>
+                <p dangerouslySetInnerHTML={{ __html: updatesInfo }}></p>
+              </Col>
+            </Row>
+            <Row className="mt-5">
+              <Col xs={12}>
+                <p id="mandatory-label" dangerouslySetInnerHTML={{ __html: mandatoryAdvise }}></p>
+              </Col>
+            </Row>
             <Row className="mt-5">
               <Col xs={12}>
                 <Controller
-                  name="ente"
+                  name="email"
                   control={control}
                   rules={{
-                    required: {
-                      value: enteState,
-                      message: requiredLabel,
-                    },
+                    required: requiredLabel,
                     pattern: {
-                      value: /^[a-zA-Z ]*$/i,
-                      message: enteValidationLabel,
+                      value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                      message: emailValidationLabel,
                     },
                   }}
                   render={({ field }) => (
                     <Input
-                      invalid={errors.ente}
-                      infoText={errors.ente && errors.ente.message}
-                      label={denomitationEnteLabel}
+                      invalid={errors.email}
+                      infoText={errors.email && errors.email.message}
+                      label={emailLabel}
                       type="text"
+                      id="email"
                       {...field}
-                      id="ente"
                     />
                   )}
                 />
               </Col>
             </Row>
+            </fieldset>
+            <fieldset>
             <Row className="mt-5">
               <Col xs={12} lg={6}>
-                <label className={classes.selectLabel}>{inQuantoLabel}</label>
+                <legend className={classes.selectLabel}>{representLabel}</legend>
                 <Controller
                   control={control}
-                  name="enteSelect"
-                  rules={{
-                    required: {
-                      value: enteState,
-                      message: requiredLabel,
-                    },
-                  }}
+                  name="represent"
+                  rules={{ required: true }}
                   render={({ field: { onChange, value } }) => (
                     <Select
                       value={value}
-                      id="enteSelect"
-                      onChange={onChange}
+                      id="represent-select"
+                      onChange={(onChange, selectHandler)}
                       options={selectRepresent}
                       placeholder={selectPlaceholder}
                       aria-label={selectPlaceholder}
@@ -451,75 +394,145 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
               </Col>
             </Row>
             <span className={classes.errorLabel}>
-              {errors.enteSelect ? requiredLabel : ''}
+              {errors.represent ? requiredLabel : ''}
             </span>
-          </div>
-          <Row className="mt-5">
-            <Col xs={12}>
-              <img src="assets/icon-chat.svg" alt="icon chat" />
-            </Col>
-          </Row>
-          <Row className="mt-3">
-            <Col xs={12}>
-              <span className={classes.modalLabel}>{directContactLabel}</span>
-            </Col>
-          </Row>
-          <Row className="mt-2">
-            <Col xs={12}>
-              <p dangerouslySetInnerHTML={{ __html: directContactInfo }}></p>
-            </Col>
-          </Row>
-          <Row className="mt-5">
-            <Col xs={12}>
-              <h3 className={classes.modalTitleSecondary}>{addMessageLabel}</h3>
-            </Col>
-          </Row>
-          <Row className="mt-5">
-            <Col xs={12} lg={6}>
-              <label className={classes.selectLabel}>
-                {messageSelectLabel}
-              </label>
-              <Select
-                id="message-select"
-                onChange={handleChange}
-                options={selectRepresent}
-                placeholder={selectPlaceholder}
-                aria-label={selectPlaceholder}
-                className='select'
-              />
-            </Col>
-          </Row>
-          <Row className="mt-5">
-            <Col xs={12}>
-              <div>
-                <div className="form-group">
-                  <textarea
-                    onFocus={textareaFocusHandler}
-                    onBlur={textareaFocusOutHandler}
-                    onInput={textareaInputHandler}
-                    rows="3"
-                    maxlength={textareaMaxLength}
-                    id="message"
-                  ></textarea>
-                  <label
-                    className={textareaState == 'active' ? 'active' : ''}
-                    for="message"
-                  >
-                    {messageLabel}
-                  </label>
-                  <span className={classes.maxLengthLabel}>
-                    Massimo{' '}
-                    <span id="max-length-number">{textareaMaxLength}</span>{' '}
-                    caratteri
-                  </span>
+            <div
+              className={`${classes.enteContainer} ${
+                enteState ? '' : 'hidden'
+              }`}
+            >
+              <Row className="mt-5">
+                <Col xs={12}>
+                  <Controller
+                    name="ente"
+                    control={control}
+                    rules={{
+                      required: {
+                        value: enteState,
+                        message: requiredLabel,
+                      },
+                      pattern: {
+                        value: /^[a-zA-Z ]*$/i,
+                        message: enteValidationLabel,
+                      },
+                    }}
+                    render={({ field }) => (
+                      <Input
+                        invalid={errors.ente}
+                        infoText={errors.ente && errors.ente.message}
+                        label={denomitationEnteLabel}
+                        type="text"
+                        {...field}
+                        id="ente"
+                      />
+                    )}
+                  />
+                </Col>
+              </Row>
+              <Row className="mt-5">
+                <Col xs={12} lg={6}>
+                  <label className={classes.selectLabel}>{inQuantoLabel}</label>
+                  <Controller
+                    control={control}
+                    name="enteSelect"
+                    rules={{
+                      required: {
+                        value: enteState,
+                        message: requiredLabel,
+                      },
+                    }}
+                    render={({ field: { onChange, value } }) => (
+                      <Select
+                        value={value}
+                        id="enteSelect"
+                        onChange={onChange}
+                        options={selectRepresent}
+                        placeholder={selectPlaceholder}
+                        aria-label={selectPlaceholder}
+                        className={`${errors.represent && 'select is-invalid'}`}
+                      />
+                    )}
+                  />
+                </Col>
+              </Row>
+              <span className={classes.errorLabel}>
+                {errors.enteSelect ? requiredLabel : ''}
+              </span>
+            </div>
+          </fieldset>
+          <fieldset>
+            <Row className="mt-5">
+              <Col xs={12}>
+                <img src="assets/icon-chat.svg" alt="" />
+              </Col>
+            </Row>
+            <Row className="mt-3">
+              <Col xs={12}>
+                <legend className={classes.modalLabel}>
+                  {directContactLabel}
+                </legend>
+              </Col>
+            </Row>
+            <Row className="mt-2">
+              <Col xs={12}>
+                <p dangerouslySetInnerHTML={{ __html: directContactInfo }}></p>
+              </Col>
+            </Row>
+            <Row className="mt-5">
+              <Col xs={12}>
+                <h3 className={classes.modalTitleSecondary}>
+                  {addMessageLabel}
+                </h3>
+              </Col>
+            </Row>
+            <Row className="mt-5">
+              <Col xs={12} lg={6}>
+                <label className={classes.selectLabel}>
+                  {messageSelectLabel}
+                </label>
+                <Select
+                  id="message-select"
+                  onChange={handleChange}
+                  options={selectRepresent}
+                  placeholder={selectPlaceholder}
+                  aria-label={selectPlaceholder}
+                />
+              </Col>
+            </Row>
+            <Row className="mt-5">
+              <Col xs={12}>
+                <div>
+                  <div className="form-group">
+                    <textarea
+                      onFocus={textareaFocusHandler}
+                      onBlur={textareaFocusOutHandler}
+                      onInput={textareaInputHandler}
+                      rows="3"
+                      maxlength={textareaMaxLength}
+                      id="message"
+                    ></textarea>
+                    <label
+                      className={textareaState == 'active' ? 'active' : ''}
+                      for="message"
+                    >
+                      {messageLabel}
+                    </label>
+                    <span className={classes.maxLengthLabel}>
+                      Massimo{' '}
+                      <span id="max-length-number">{textareaMaxLength}</span>{' '}
+                      caratteri
+                    </span>
+                  </div>
                 </div>
-              </div>
-            </Col>
-          </Row>
+              </Col>
+            </Row>
+          </fieldset>
           <Row className="mt-5">
             <Col xs={12}>
               <fieldset>
-                <label className={classes.selectLabel}>{radioGroupLabel}</label>
+                <legend className={classes.selectLabel}>
+                  {radioGroupLabel}
+                </legend>
                 <FormGroup check>
                   <input
                     className={errors.radio1 ? 'is-invalid' : ''}
