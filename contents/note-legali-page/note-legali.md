@@ -1,6 +1,6 @@
 # Note legali
 
-La Presidenza del Consiglio dei Ministri - Dipartimento per la Trasformazione Digitale, con sede in Largo Pietro di Brazzà 86, 00186 Roma, ha realizzato questo sito con lo scopo di CHANGEME.
+La Presidenza del Consiglio dei Ministri - Dipartimento per la Trasformazione Digitale, con sede in Largo Pietro di Brazzà 86, 00186 Roma, ha realizzato questo sito con prossimapa.gov.it con lo scopo di fornire alle amministrazioni informazioni relativamente alle misure del PNRR dedicati alla transizione digitale, permettergli di richiedere i fondi, rendicontare l’avanzamento dei progetti e ricevere assistenza.
 
 **Licenza dei contenuti**  
 In applicazione del principio open by default ai sensi dell’articolo 52 del decreto legislativo 7 marzo 2005, n. 82 (CAD) e salvo dove diversamente specificato (compresi i contenuti incorporati di terzi), i dati, i documenti e le informazioni pubblicati sul sito sono rilasciati con licenza [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/legalcode.it){class="text-decoration-none font-weight-semibold", rel='noreferrer', target='\_blank', aria-label='https://creativecommons.org/licenses/by/4.0/legalcode.it (link esterno)'} Gli utenti sono quindi liberi di condividere (riprodurre, distribuire, comunicare al pubblico, esporre in pubblico, rappresentare, eseguire e recitare questo materiale con qualsiasi mezzo e formato) e modificare (trasformare il materiale e utilizzarlo per opere derivate) per qualsiasi fine, anche commerciale con il solo onere di attribuzione, senza apporre restrizioni aggiuntive.
@@ -37,4 +37,4 @@ In ogni caso, ove il social media lo permetta, saranno rimossi dallo staff tutti
 
 Per chi dovesse violare ripetutamente queste condizioni, quelle contenute nelle policy degli strumenti adottati o comunque mette a rischio la sicurezza dei sistemi, il Dipartimento si riserva il diritto di usare il ban o il blocco (quando possibile dopo un primo avvertimento) per impedire ulteriori interventi, e di segnalare l’utente ai responsabili della piattaforma ed eventualmente alle forze dell’ordine.
 
-<p class="text-right"><em>ultimo aggiornamento: 15/07/2021</em></p>
+<p class="text-right"><em>ultimo aggiornamento: 08/11/2021</em></p>

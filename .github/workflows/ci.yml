@@ -13,7 +13,7 @@ jobs:
 
       - name: Check all template data was replaced
         if: ${{ github.repository != 'teamdigitale/gatsby-site' }}
-        run: grep CHANGE[M]E -r . && (echo "Replace all occurrences with values relevant to this site"; exit 1)
+        run: grep CHANGE[M]E -r . && (echo "Replace all occurrences with values relevant to this site"; exit 1) || exit 0
 
       - run: yarn install --frozen-lockfile
       - run: yarn clean

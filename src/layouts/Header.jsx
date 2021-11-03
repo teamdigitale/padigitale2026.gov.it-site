@@ -294,26 +294,22 @@ const NavHeader = ({ toggleModal }) => {
               </div>
               <NavItem active>
                 <Link
-                  to={internalLinks.strategy.linkTo}
+                  to={internalLinks.opportunity.linkTo}
                   className={`${classes.activeLink} nav-link`}
                   activeClassName="active"
                   onClick={closeMenu}
                 >
-                  <span className="font-weight-semibold">
-                    {internalLinks.strategy.label}
-                  </span>
+                  <span className="font-weight-semibold">{internalLinks.opportunity.label}</span>
                 </Link>
               </NavItem>
               <NavItem>
                 <Link
-                  to={internalLinks.enablement.homeLinkTo}
+                  to={internalLinks.howitworks.linkTo}
                   className="nav-link"
                   activeClassName="active"
                   onClick={closeMenu}
                 >
-                  <span className="font-weight-semibold">
-                    {internalLinks.enablement.label}
-                  </span>
+                  <span className="font-weight-semibold">{internalLinks.howitworks.label}</span>
                 </Link>
               </NavItem>
               <NavItem>

@@ -5,7 +5,7 @@ import links from '../../contents/links.yml';
 import { ExternalLink } from '../components/ExternalLink';
 
 const {
-  internalLinks: { privacy, credits, noteLegali },
+  internalLinks: { privacy, noteLegali },
   externalLinks: { dipartimento, a11y, eu, repubblica },
 } = links;
 
@@ -111,14 +111,6 @@ const SlimFooter = () => {
             >
               {a11y.label}
             </ExternalLink>
-          </li>
-          <li className={`${classes.listItem} mr-0 mr-md-5`}>
-            <Link
-              to={credits.linkTo}
-              className="list-item mid-footer-link mx-4 mx-md-0"
-            >
-              {credits.label}
-            </Link>
           </li>
         </ul>
       </section>

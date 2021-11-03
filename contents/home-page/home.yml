@@ -1,12 +1,5 @@
 name: Identità Digitale
 headerTitle: Dipartimento per la trasformazione digitale
-heroStrategy:
-  category: CHANGEME Hero Category
-  title: CHANGEME Hero Title
-  body: CHANGEME Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa
-  ctaAriaLabelSpid: Scopri SPID (link esterno)
-  ctaAriaLabelCie: Scopri CIE (link esterno)
-  altImg: giovane donna guarda lo schermo di un computer
 heroDigital:
   title: Italia digitale 2026
   body: Il 27% delle risorse totali del PNRR è dedicato alla crescita digitale del Paese. Italia digitale 2026 è la strategia promossa dal <strong>Ministro per l'innovazione tecnologica e la transizione digitale</strong> all’interno del PNRR
@@ -19,29 +12,6 @@ heroPnrr:
   firstButtonLabel: SCOPRI DI PIÙ
   firstButtonAriaLabel: Scopri di più su come accedere alle opportunità del PNRR
   secondButtonLabel: VEDI I BENEFICIARI
-  secondButtonAriaLabel: vedi i beneficiari
-heroBenefit:
-  category: CHANGEME Hero Category 2
-  title: CHANGEME Hero Title 2
-  body: CHANGEME Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa
-  ctaAriaLabel: Vai al video (Link esterno su Youtube)
-  altImg: anziano su divano con tablet
-heroNews:
-  category: CHANGEME Category features
-  title: CHANGEME Features
-newsPreview:
-  - ariaLabel: Semplice
-    body: CHANGEME Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa
-    title: CHANGEME One
-    icon: it-user
-  - ariaLabel: Veloce
-    body: CHANGEME Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa
-    title: CHANGEME Two
-    icon: it-check-circle
-  - ariaLabel: Sicura
-    body: CHANGEME Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa
-    title: CHANGEME Three
-    icon: it-locked
 heroContribute:
   category: Come contribuire
   title: Partecipa al cambiamento, contribuisci a Identità Digitale!
@@ -66,31 +36,6 @@ contributions:
     alt: GitHub logo
     title: GitHub
 heroCarouselNewsTitle: Notizie e aggiornamenti
-# heroCarouselNews:
-#   - id: 1
-#     slide:
-#       - id: 1
-#         category: Novità
-#         title: Dal 15 aprile partono i bandi di Italia digitale 2026
-#         description: Nuove opportunità economiche per la PA.  Oltre 6 miliardi di euro a disposizione per partecipare al cambiamento del Paese
-#         source: 'Fonte: innovazione.gov.it'
-#       - id: 2
-#         category: Approfondimento
-#         title: Come candidarsi per partecipare ai bandi di Italia digitale 2026
-#         description: Video tutorial e infografiche per comprendere meglio come accedere alle risorse e rendicontare l’avanzamento dei progetti
-#         source: 'Fonte: Medium'
-#       - id: 3
-#         category: Articolo
-#         title: Al via il ciclo di incontri dedicato alla PA
-#         description: Una serie di appuntamenti online per aiutare le amministrazioni in questa decisiva fase per lo sviluppo digitale del Paese
-#         source: 'Fonte: innovazione.gov.it'
-#   - id: 2
-#     slide:
-#       - id: 4
-#         category: Novità
-#         title: Dal 15 aprile partono i bandi di Italia digitale 2026
-#         description: Nuove opportunità economiche per la PA.  Oltre 6 miliardi di euro a disposizione per partecipare al cambiamento del Paese
-#         source: 'Fonte: innovazione.gov.it'
 opportunity: 
   title: Le opportunità
   cards: 
