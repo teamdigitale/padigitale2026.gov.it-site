@@ -128,7 +128,7 @@ const useStyle = createUseStyles({
       padding: '0.722rem 1.333rem',
       '&:hover': {
         textDecoration: 'underline',
-      }
+      },
     },
   },
   linkListWrapperCustom: {
