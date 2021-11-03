@@ -42,10 +42,11 @@ const useStyle = createUseStyles({
         '& .card-text': {
           fontFamily: 'Titillium Web',
           fontSize: '1rem',
-          lineHeight: '1.24',
+          lineHeight: '1.5rem',
           fontWeight: '400',
           '@media (min-width: 992px)': {
             fontSize: '0.889rem',
+            lineHeight: '1.333rem',
           },
         },
       },
@@ -69,7 +70,7 @@ export const Involved = (props) => {
   const { category, title, cards } = props;
 
   const actorsCards = cards.map((card) => (
-    <Col key={card.id} xs="12" lg="5" className="offset-lg-1" role="listitem">
+    <Col key={card.id} xs="12" lg="4" className="offset-lg-1" role="listitem">
       <Card className={classes.actorsCard} noWrapper>
         <div className={classes.actorsCardImageWrapper}>
           <img className={classes.actorsCardImage} src={card.image} alt="" />
