@@ -110,18 +110,32 @@ export const HeroImageBackground = ({
   const classes = useStyles();
   return (
     <Hero>
-      <div className={`${classes.heroWrapper} ${overlap ? 'overlap' : ''} ${theme}`}>
+      <div
+        className={`${classes.heroWrapper} ${
+          overlap ? 'overlap' : ''
+        } ${theme}`}
+      >
         <div className="container px-3 px-md-0">
           <Row>
             <Col xs="12" lg="11" className="offset-lg-1">
-              <div className={`${classes.contentWrapper} ${theme}`}>
+              <div
+                className={`${classes.contentWrapper} ${theme}`}
+              >
                 <div>
                   <HeroTitle title={title} className={classes.heroTitle} />
                   <HeroParagraph text={body} />
                   <div className={classes.buttonContainer}>
-                    <HeroButton classButton={firstButtonClass} label={firstButtonLabel} href={firstButtonHref} />
+                    <HeroButton
+                      classButton={firstButtonClass}
+                      label={firstButtonLabel}
+                      href={firstButtonHref}
+                    />
                     {secondButtonLabel ? (
-                      <HeroButton classButton={secondButtonClass} label={secondButtonLabel} href={secondButtonHref} />
+                      <HeroButton
+                        classButton={secondButtonClass}
+                        label={secondButtonLabel}
+                        href={secondButtonHref}
+                      />
                     ) : (
                       ''
                     )}
