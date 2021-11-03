@@ -46,7 +46,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-matomo',
       options: {
-        siteId: 'CHANGEME',
+        siteId: 'R9pxNNv0Xm',
         matomoUrl: `https://ingestion.webanalytics.italia.it/`,
         siteUrl: 'https://prossimapa.gov.it',
         matomoPhpScript: 'matomo.php',
