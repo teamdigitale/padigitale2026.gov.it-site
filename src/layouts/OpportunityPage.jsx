@@ -10,7 +10,7 @@ import { ModalUpdates } from '../components/modal/ModalUpdates';
 const { heroDigital, support } = content;
 const { heroOpportunity, modalButton } = opportunityContent;
 
-export const OpportunityPage = () => {
+export const OpportunityPage = (props) => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleModal = () => {
     setIsOpen(!isOpen);
@@ -29,7 +29,7 @@ export const OpportunityPage = () => {
         handleToggle={toggleModal}
         hasTitle={true}
       />
-      <BeneficiariesSection />
+      <BeneficiariesSection externalFilter={props.filter}/>
       <ModalUpdatesButton
         label={modalButton.label}
         buttonLabel={modalButton.buttonLabel}
