@@ -1,5 +1,20 @@
 title: Come funziona - Prossima PA
 name: Come Funziona
+hero: 
+  title: 'La transizione digitale: semplice e a misura di PA'
+  body: Sono previste due modalità di accesso ai fondi del PNRR gestiti dal Dipartimento per la trasformazione digitale. A seconda della tipologia di misura e di PA, sarà possibile accedere alle risorse o attraverso delle soluzioni standard o attraverso la presentazione di progetti.
+  list:
+    - listItems:
+      title: MODALITÀ DI ACCESSO
+      items:
+        - item: Soluzioni standard
+        - item: Presentazione progetti
+    - listItems:
+      title: APPROFONDISCI
+      items: 
+        - item: Il calendario
+        - item: I beneficiari
+        - item: Gli attori coinvolti
 involved:
   category: ATTORI COINVOLTI
   title: I soggetti istituzionali che concorrono alla realizzazione della strategia Italia digitale 2026
