@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { createUseStyles } from 'react-jss';
 import { Row, Col } from 'design-react-kit';
 import PropTypes from 'prop-types';
@@ -79,6 +79,15 @@ const useStyles = createUseStyles({
 
 export const ComeFunzionaCarousel = ({ content, title, subtitle }) => {
   const classes = useStyles();
+
+  useEffect(() => {
+    const carousel = document.querySelector('.swiper');
+
+    carousel.swiper.on('slideChange', () => {
+      const tabs = document.querySelector('[class ^= howTabs]');
+      console.log(tabs);
+    });
+  }, []);
 
   const slides = content.map((element) => (
     <React.Fragment key={element.id}>
