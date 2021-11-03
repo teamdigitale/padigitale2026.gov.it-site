@@ -71,23 +71,44 @@ involved:
   title: I soggetti istituzionali che concorrono alla realizzazione della strategia Italia digitale 2026
   cards:
     - id: 1
-      image: '/assets/eu-flag.svg'
-      text: L’Unione Europea è la promotrice e finanziatrice di Next Generation UE, il piano straordinario per rilanciare l’economia europea dopo la pandemia di COVID-19, in cui rientra Italia domani, il Piano nazionale di ripresa e resilienza del Governo italiano.
+      image: '/assets/mitd-logo.svg'
+      text: <strong>Il Ministro per l’innovazione tecnologica e transizione digitale</strong>, all’interno di Italia domani, <strong>ha promosso Italia digitale 2026</strong>, il piano d’investimenti per la digitalizzazione del paese.
     - id: 2
       image: '/assets/dipartment-logo.svg'
-      text: ll Ministero dell’Economia e delle Finanze controllerà il progresso nell’attuazione di riforme e investimenti del PNRR ed è il punto di contatto con la Commissione Europea del Governo italiano.
+      text: Il <strong>Dipartimento per la trasformazione digitale</strong> della Presidenza del Consiglio dei Ministri è <strong>responsabile per l’attuazione degli investimenti di Italia digitale 2026</strong>. Per mezzo del Transformation Office assiste le PA nel processo di digitalizzazione.
     - id: 3
-      image: '/assets/mitd-logo.svg'
-      text: Il Ministro per l’innovazione tecnologica e transizione digitale, all’interno di Italia domani, ha promosso Italia digitale 2026, il piano d’investimenti per la digitalizzazione del paese.
-    - id: 4
       image: '/assets/agid-logo-blue.svg'
-      text: Il Dipartimento per la trasformazione digitale della Presidenza del Consiglio dei Ministri è responsabile per l’attuazione degli investimenti di Italia digitale 2026. Per mezzo del Transformation Office assiste le PA nel processo di digitalizzazione.
+      text: L’<strong>Agenzia per l'Italia digitale</strong> è l’agenzia tecnica che ha il compito di <strong>garantire la realizzazione degli obiettivi dell’Agenda digitale italiana</strong>. In quanto ente delegato, è responsabile per l’attuazione di misure nell’ambito dell’accesso ai servizi pubblici digitali.
+    - id: 4
+      image: '/assets/pagopa-logo.svg'
+      text: <strong>PagoPA S.p.a</strong> è la società pubblica nata per realizzare e gestire infrastrutture che assicurino lo sviluppo e la diffusione dei servizi pubblici digitali. In quanto ente delegato, è <strong>responsabile per l’attuazione di misure nell’ambito della digitalizzazione dei servizi e piattaforme.</strong>
     - id: 5
       image: '/assets/consip-logo.svg'
-      text: L’Agenzia per l'Italia digitale è l’agenzia tecnica che ha il compito di garantire la realizzazione degli obiettivi dell’Agenda digitale italiana. In quanto ente delegato, è responsabile per l’attuazione di misure nell’ambito dell’accesso ai servizi pubblici digitali.
-    - id: 6
-      image: '/assets/pagopa-logo.svg'
-      text: PagoPA S.p.a è la società pubblica nata per realizzare e gestire infrastrutture che assicurino lo sviluppo e la diffusione dei servizi pubblici digitali. In quanto ente delegato, è responsabile per l’attuazione di misure nell’ambito della digitalizzazione dei servizi e piattaforme.
-    - id: 7
-      image: '/assets/mef-logo.svg'
-      text: Consip è la centrale acquisti della Pubblica Amministrazione. Per il PNRR mette a disposizione strumenti per agevolare la realizzazione degli interventi, semplificando il processo di acquisto delle PA attraverso contratti quadro o piattaforme per la negoziazione.
+      text: <strong>Consip</strong> è la centrale acquisti della Pubblica Amministrazione. Per il PNRR <strong>mette a disposizione strumenti per agevolare la realizzazione degli interventi</strong>, semplificando il processo di acquisto delle PA attraverso contratti quadro o piattaforme per la negoziazione.
+timeline:
+  cards:
+    - id: 1
+      active: false
+      time: Autunno 2021
+      title: Conoscere le opportunità
+      text: Le PA hanno accesso alle risorse necessarie per prepararsi ad aderire agli avvisi, la cui pubblicazione è prevista per la primavera del 2022. 
+    - id: 2
+      active: false
+      time: Primavera 2022
+      title: Partecipare agli avvisi
+      text: "<strong>I primi avvisi del PNRR dedicati alla transizione digitale della PA sono online:</strong> un’area riservata ne facilita l’adesione attraverso un percorso guidato."
+    - id: 3
+      active: true
+      time: Autunno 2022
+      title: Realizzare i progetti
+      text: "Le amministrazioni possono <strong>avviare i progetti:</strong> un team dedicato accompagna le PA. La rendicontazione degli interventi implementati è totalmente online."
+    - id: 4
+      active: false
+      time: Primavera 2022
+      title: Realizzare i progetti
+      text: Le PA hanno accesso alle risorse necessarie per prepararsi ad aderire agli avvisi, la cui pubblicazione è prevista per la primavera del 2022. 
+    - id: 5
+      active: false
+      time: Autunno 2023
+      title: Realizzare i progetti
+      text: Le PA hanno accesso alle risorse necessarie per prepararsi ad aderire agli avvisi, la cui pubblicazione è prevista per la primavera del 2022. 
