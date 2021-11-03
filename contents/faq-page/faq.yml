@@ -5,14 +5,17 @@ sidebar:
   - sectionTitle: Generali
     sectionId: generali
     sectionActive: true
-  - sectionTitle: Gli investimenti
+  - sectionTitle: Investimenti del PNRR
     sectionId: investimenti
     sectionActive: false
-  - sectionTitle: I bandi e gli avvisi
-    sectionId: bandi
+  - sectionTitle: Richiesta dei fondi
+    sectionId: richiesta-fondi
     sectionActive: false
-  - sectionTitle: Supporto
-    sectionId: supporto
+  - sectionTitle: Realizzazione dei progetti
+    sectionId: realizzazione
+    sectionActive: false
+  - sectionTitle: Erogazione delle risorse
+    sectionId: erogazione
     sectionActive: false
 questions:
   - title: Generali
@@ -96,7 +99,7 @@ questions:
         ariaLabel: testo aria label
   - title: Erogazione delle risorse
     description: Le indicazioni pratiche per ricevere chiarimenti e aggiornamenti
-    sectionId: supporto
+    sectionId: erogazione
     accordions:
       - title: Come saranno erogate le risorse degli avvisi a soluzioni standard?
         content: Per semplificare l’erogazione delle risorse, i contributi saranno riconosciuti alle amministrazioni sulla base del raggiungimento di specifici obiettivi predefiniti. Il processo di rendicontazione sarà quindi alleggerito, e non sarà necessario rendicontare le singole spese effettuate per ottenere i fondi.

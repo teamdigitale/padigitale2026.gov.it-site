@@ -94,7 +94,7 @@ export const SupportSection = (props) => {
           {props.buttonLabel && (
             <Row>
               <Col md={8} lg={6} className={`${classes.layout} mt-5`}>
-                <Button color="primary" href={props.href}>
+                <Button color="primary text-uppercase" href={props.href}>
                   {buttonLabel}
                 </Button>
               </Col>

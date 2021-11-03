@@ -42,7 +42,7 @@ export const ModalUpdatesButton = ({
   };
 
   return (
-    <Container>
+    <Container className="px-3">
       <Row>
         <Col lg={12}>
           <div className={classes.modalButtonContainer}>

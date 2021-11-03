@@ -12,7 +12,7 @@ import { Helmet } from 'react-helmet';
 const { heroDigital, support } = content;
 const { heroOpportunity, modalButton } = opportunityContent;
 
-export const OpportunityPage = () => {
+export const OpportunityPage = (props) => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleModal = () => {
     setIsOpen(!isOpen);
@@ -33,7 +33,7 @@ export const OpportunityPage = () => {
         buttonLabel={modalButton.buttonLabel}
         handleToggle={toggleModal}
       />
-      <BeneficiariesSection />
+      <BeneficiariesSection externalFilter={props.filter}/>
       <ModalUpdatesButton
         label={modalButton.label}
         buttonLabel={modalButton.buttonLabel}
