@@ -1,8 +1,11 @@
 import React from 'react';
+import { support } from '../../contents/home-page/home.yml';
 import content from '../../contents/come-funziona/come-funziona.yml';
 import { SEO } from '../components/SEO';
 import { ComeFunzionaCarousel } from '../components/carousel/ComeFunzionaCarousel';
 import { Involved } from './come-funziona/Involved';
+import { Beneficiaries } from './come-funziona/Beneficiaries';
+import { SupportSection } from './faq/SupportSection';
 
 export const ComeFunzionaPage = () => (
   <>
@@ -21,6 +24,8 @@ export const ComeFunzionaPage = () => (
       title={content.presentazioneCarousel.title}
       subtitle={content.presentazioneCarousel.subtitle}
     />
+    <Beneficiaries item={content.beneficiaries} />
     <Involved title={content.involved.title} category={content.involved.category} cards={content.involved.cards} />
+    <SupportSection supportList={support.cards} title={support.title} buttonLabel={support.buttonLabel} />
   </>
 );
