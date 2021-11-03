@@ -229,7 +229,7 @@ export const AccordionButtonFull = (props) => {
 
   return (
     <>
-      <div className={classes.collapseWrapper}>
+      <div className={classes.collapseWrapper} role="listitem">
         <Button
           onClick={eventHandler}
           aria-expanded={props.id === props.active}
@@ -237,9 +237,9 @@ export const AccordionButtonFull = (props) => {
         ></Button>
         <div className={classes.cardWrapper}>
           <div className={classes.cardHeader}>
-            <p className={classes.cardTitle}>
+            <h4 className={classes.cardTitle}>
               <span>{number}</span> {title}
-            </p>
+            </h4>
             <div className={classes.cardHeaderValue} dangerouslySetInnerHTML={{ __html: money }} />
             <div className={classes.cardTags}>
               <p className="tag-title">Beneficiari</p>
@@ -269,7 +269,7 @@ export const AccordionButtonFull = (props) => {
                   <a href={accessLink}>{accessLabel}</a>
                 </div>
                 <div className={classes.linkAccordion}>
-                  <ExternalLink linkTo={moreInfoLink} ariaLabel="aria label">
+                  <ExternalLink linkTo={moreInfoLink} ariaLabel={`${moreInfoLabel}, ${title}, (Collegamento esterno - Apre su nuova scheda)`}>
                     {moreInfoLabel}
                     <img src="/assets/external-icon.svg" alt="" />
                   </ExternalLink>

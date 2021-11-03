@@ -6,13 +6,16 @@ import { SEO } from '../components/SEO';
 import { Tab } from '../components/Tab';
 import { Timeline } from '../components/carousel/Timeline';
 import { HeroHowItWorks } from '../components/hero/HeroHowItWorks';
+import seo from '../../contents/seo.yml';
 import { Involved } from './come-funziona/Involved';
 import { Beneficiaries } from './come-funziona/Beneficiaries';
 import { SupportSection } from './faq/SupportSection';
 
+const { title: seoTitle, description: seoDescription } = seo.comeFunzionaPage;
+
 export const ComeFunzionaPage = () => (
   <>
-    <SEO title={content.title} />
+    <SEO title={seoTitle} description={seoDescription} />
     <div className="sr-only">
       <h1>{content.name}</h1>
     </div>
