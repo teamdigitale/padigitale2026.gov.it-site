@@ -7,6 +7,9 @@ import { HeroImageBackground } from '../components/hero/HeroImageBackground';
 import { ModalUpdatesButton } from '../components/modal/ModalUpdatesButton';
 import { ModalUpdates } from '../components/modal/ModalUpdates';
 import { SEO } from '../components/SEO';
+import seo from '../../contents/seo.yml';
+
+const {title: seoTitle, description: seoDescription} = seo.opportunityPage;
 
 const { heroDigital, support } = content;
 const { heroOpportunity, modalButton } = opportunityContent;
@@ -18,7 +21,7 @@ export const OpportunityPage = (props) => {
   };
   return (
     <>
-      <SEO title="Opportunità - Prossima PA" />
+      <SEO title={seoTitle} description={seoDescription}/>
       <HeroImageBackground
         title={heroOpportunity.title}
         body={heroOpportunity.body}

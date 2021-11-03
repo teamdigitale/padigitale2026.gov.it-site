@@ -8,6 +8,9 @@ import { QuestionSection } from './faq/QuestionSection';
 import { SupportSection } from './faq/SupportSection';
 import { HeroSupport } from './support/Hero';
 import { SEO } from '../components/SEO';
+import seo from '../../contents/seo.yml';
+
+const { title: seoTitle, description: seoDescription } = seo.faqPage;
 
 const useStyles = createUseStyles({
   noResults: {
@@ -109,7 +112,7 @@ export const FaqPage = () => {
 
   return (
     <>
-      <SEO title="Faq - Prossima PA"/>
+      <SEO title={seoTitle} description={seoDescription} />
       <div className="sr-only">
         <h1>{content.name}</h1>
       </div>

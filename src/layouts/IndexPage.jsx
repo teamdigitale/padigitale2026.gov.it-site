@@ -17,10 +17,13 @@ import { HomeCarousel } from '../components/carousel/HomeCarousel';
 import { SupportSection } from './faq/SupportSection';
 import { OpportunitySection } from './home/OpportunitySection';
 import { SEO } from '../components/SEO';
+import seo from '../../contents/seo.yml';
+
+const { title: seoTitle, description: seoDescription } = seo.homePage;
 
 export const IndexPage = () => (
   <>
-    <SEO title="Home - Prossima PA"/>
+    <SEO title={seoTitle} description={seoDescription} />
     <HeroImageBackgroundFull
       category={heroMain.category}
       title={heroMain.title}

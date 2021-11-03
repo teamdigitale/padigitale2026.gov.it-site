@@ -19,7 +19,7 @@ export const NotFoundPage = () => {
   const classes = useStyles();
   return (
     <>
-      <SEO title="Pagina non trovata - Prossima PA" description={seoDescription} />
+      <SEO title={seoTitle} description={seoDescription} />
       <h1 className="sr-only">{content.title}</h1>
       <Hero>
         <div className="text-center text-primary">

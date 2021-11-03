@@ -25,7 +25,7 @@ export const NoteLegaliPage = () => {
   } = useStaticQuery(query);
   return (
     <>
-      <SEO title="Note legali - Prossima PA" description={seoDescription} />
+      <SEO title={seoTitle} description={seoDescription} />
       <Breadcrumb currentPage={content.breadcrumb} />
       <Hero yPaddingXLScreen={false}>
         <TextChunk html={textChunk} />
