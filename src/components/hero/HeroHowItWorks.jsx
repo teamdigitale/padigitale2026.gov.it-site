@@ -27,11 +27,6 @@ const useStyles = createUseStyles({
     composes: 'it-hero-wrapper',
     position: 'relative',
     display: 'flex',
-    '& .container': {
-      '@media (min-width: 992px)': {
-        maxWidth: '100%',
-      },
-    },
     '&.it-hero-wrapper .it-hero-text-wrapper': {
       '@media (min-width: 992px)': {
         padding: '5.333rem 0 3.889rem',
@@ -159,7 +154,7 @@ export const HeroHowItWorks = ({ title, body, image, list }) => {
   return (
     <Hero>
       <div className={`${classes.heroWrapper} bg-white`}>
-        <Container className="pl-3 pr-0 mr-lg-0 ml-lg-5">
+        <Container className="pl-3 pr-0">
           <Row>
             <Col xs="12" lg="11" className="offset-lg-1 px-0">
               <div
