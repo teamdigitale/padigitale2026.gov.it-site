@@ -19,18 +19,6 @@ export const ComeFunzionaPage = () => (
     <div className="sr-only">
       <h1>{content.name}</h1>
     </div>
-    {/* <ComeFunzionaCarousel
-      content={content.pacchettiCarousel.cards}
-      paragraph={content.modalitaAccesso}
-      title={content.pacchettiCarousel.title}
-      subtitle={content.pacchettiCarousel.subtitle}
-    />
-    <ComeFunzionaCarousel
-      content={content.presentazioneCarousel.cards}
-      title={content.presentazioneCarousel.title}
-      subtitle={content.presentazioneCarousel.subtitle}
-    /> */}
-
     <HeroHowItWorks
       title={content.hero.title}
       body={content.hero.body}
