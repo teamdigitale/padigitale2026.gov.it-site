@@ -126,7 +126,7 @@ const useStyle = createUseStyles({
       padding: '0.722rem 1.333rem',
       '&:hover': {
         textDecoration: 'underline',
-      }
+      },
     },
   },
   linkListWrapperCustom: {
@@ -296,7 +296,6 @@ const NavHeader = ({ toggleModal }) => {
             <Nav navbar className={classes.navbarNav}>
               <NavItem active>
                 <button
-                  /* to={internalLinks.updates.linkTo} */
                   className="nav-link"
                   activeClassName="active"
                   onClick={() => {

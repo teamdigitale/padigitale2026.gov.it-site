@@ -14,14 +14,16 @@ const useStyles = createUseStyles({
     color: '#33485C',
     margin: '0.833rem 0',
   },
+  inputWrap: {
+    backgroundImage: 'url("../assets/icon-search.svg")',
+  },
 });
 export const FaqPage = () => {
   const classes = useStyles();
-  const [inputValue, setInputValue] = useState();
+  const [inputValue, setInputValue] = useState('');
   const [filterId, setFilterId] = useState('all');
   const [questions, setQuestions] = useState(faq.questions);
   const [isMobile, setIsMobile] = useState();
-  // const [noResults, setNoResults] = useState(false);
 
   useEffect(() => {
     setIsMobile(window.innerWidth < 992);
@@ -33,92 +35,65 @@ export const FaqPage = () => {
   const handleChange = (event) => {
     setInputValue(event.target.value);
     if (event.target.value.length >= 3) {
-      const newQuest = [];
-      faq.questions.forEach((question) => {
-        if (getAccordionsFiltered(question).length) {
-          newQuest.push(question);
-        }
-      });
-
       if (isMobile && filterId !== 'all') {
-        const filteredQuestions = [];
-        newQuest.forEach((question) => {
-          if (question.sectionId === filterId) {
-            filteredQuestions.push(question);
-          }
-        });
-        setQuestions(filteredQuestions);
+        setQuestions(getQuestionsMobile(getNewQuestions(event.target.value)));
       } else {
-        setQuestions(newQuest);
+        setQuestions(getNewQuestions(event.target.value));
       }
     } else {
       if (isMobile) {
-        if (filterId !== 'all') {
-          const filteredQuestions = [];
-          faq.questions.forEach((question) => {
-            if (question.sectionId === filterId) {
-              filteredQuestions.push(question);
-            }
-          });
-          setQuestions(filteredQuestions);
-        } else {
-          setQuestions(faq.questions);
-        }
+        filterId !== 'all' ? setQuestions(getQuestionsMobile(faq.questions)) : setQuestions(faq.questions);
       } else {
         setQuestions(faq.questions);
       }
     }
   };
 
-  function getAccordionsFiltered(question) {
-    const regexp = new RegExp(event.target.value, 'i');
+  function getAccordionsFiltered(question, input) {
+    const regexp = new RegExp(input, 'i');
+    return question.accordions.filter((accordion) =>
+      regexp.test(accordion.title)
+    );
+  }
 
-    return question.accordions.filter((accordion) => regexp.test(accordion.title));
+  function getNewQuestions(inputValue) {
+    const newQuest = [];
+    faq.questions.forEach((question) => {
+      if (getAccordionsFiltered(question, inputValue).length) {
+        newQuest.push(question);
+      }
+    });
+    return newQuest;
+  }
+
+  function getQuestionsMobile(items) {
+    const filteredQuestions = [];
+    items.forEach((question) => {
+      if (question.sectionId === filterId) {
+        filteredQuestions.push(question);
+      }
+    });
+    return filteredQuestions;
   }
 
   useEffect(() => {
     if (!isMobile) {
-      if (inputValue && inputValue.length >= 3) {
-        const newQuest = [];
-        faq.questions.forEach((question) => {
-          if (getAccordionsFiltered(question).length) {
-            newQuest.push(question);
-          }
-        });
-        setQuestions(newQuest);
-      } else {
-        setQuestions(faq.questions);
-      }
+      setInputValue('');
+      setQuestions(faq.questions);
     }
   }, [isMobile]);
 
   useEffect(() => {
     if (filterId) {
       if (filterId === 'all') {
-        if (inputValue) {
-          const newQuest = [];
-          faq.questions.forEach((question) => {
-            if (getAccordionsFiltered(question).length) {
-              newQuest.push(question);
-            }
-          });
-          setQuestions(newQuest);
-        } else {
-          setQuestions(faq.questions);
-        }
+        inputValue
+          ? setQuestions(getNewQuestions(inputValue))
+          : setQuestions(faq.questions);
       } else {
-        const filteredQuestions = [];
-        faq.questions.forEach((question) => {
-          if (question.sectionId === filterId) {
-            filteredQuestions.push(question);
-          }
-        });
-        const regexp = new RegExp(inputValue, 'i');
-        const filterAccordions = filteredQuestions[0].accordions.filter((accordion) => regexp.test(accordion.title));
-        if (!filterAccordions.length) {
+        if (!getAccordionsFiltered(getQuestionsMobile(faq.questions)[0], inputValue).length) {
           setQuestions(filterAccordions);
         } else {
-          setQuestions(filteredQuestions);
+          setQuestions(getQuestionsMobile(faq.questions));
         }
       }
     }
@@ -139,24 +114,34 @@ export const FaqPage = () => {
                 type="text"
                 label="Cerca nelle domande frequenti"
                 id="faq-search"
+                value={inputValue}
                 onChange={handleChange}
               />
             </Col>
           </Row>
           <Row>
             <Col lg={3}>
-              <SideNavigation getFilter={setFilterId} />
+              <SideNavigation getFilter={setFilterId} activeList={questions} searchValue={inputValue}/>
             </Col>
             <Col lg={9} className="px-lg-3">
               {questions.map((question) => (
-                <QuestionSection key={question.title} item={question} inputText={inputValue} />
+                <QuestionSection
+                  key={question.title}
+                  item={question}
+                  inputText={inputValue}
+                />
               ))}
-              {!questions.length && <p className={classes.noResults}>{faq.noResults}</p>}
+              {!questions.length && (
+                <p className={classes.noResults}>{faq.noResults}</p>
+              )}
             </Col>
           </Row>
         </Container>
       </div>
-      <SupportSection supportList={faq.support.cards} title={faq.support.title} />
+      <SupportSection
+        supportList={faq.support.cards}
+        title={faq.support.title}
+      />
     </>
   );
 };
