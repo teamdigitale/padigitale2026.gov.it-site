@@ -81,11 +81,12 @@ const customStyles = {
   }),
 };
 
-export const BeneficiariesSection = () => {
+export const BeneficiariesSection = (props) => {
   const classes = useStyles();
   const [accordions, setAccordions] = useState(beneficiaries);
   const [indexOpen, setIndexOpen] = useState(-1);
   const [selectValue, setSelectValue] = useState(null);
+  const [initialSelectValue, setInitialSelectValue] = useState(selectBeneficiaries[0]);  
   const [isOpen, setIsOpen] = useState(false);
   const [filterIsAll, setFilterIsAll] = useState(true);
   const handleChange = (selectedOption) => setSelectValue(selectedOption);
@@ -95,6 +96,16 @@ export const BeneficiariesSection = () => {
   const setActiveAccordion = (i) => {
     indexOpen === i ? setIndexOpen(-1) : setIndexOpen(i);
   };
+
+  useEffect(() => {
+    if(props.externalFilter) {      
+      setInitialSelectValue(props.externalFilter);
+      setSelectValue(props.externalFilter);      
+      document.querySelector('#filter-beneficiaries').scrollIntoView({
+        behavior: 'smooth',
+      });
+    }
+  }, [props.externalFilter]);
 
   useEffect(() => {
     if (selectValue != null) {
@@ -118,13 +129,13 @@ export const BeneficiariesSection = () => {
 
   return (
     <>
-      <div className="container mt-5 px-3">
+      <div className="container mt-5 px-3" id="filter-beneficiaries">
         <div className={classes.selectWrapper}>
           <label htmlFor="beneficiaries">Beneficiari</label>
           <Select
             styles={customStyles}
             isSearchable={false}
-            defaultValue={selectBeneficiaries[0]}
+            value={selectValue || initialSelectValue}
             id="beneficiaries"
             onChange={handleChange}
             onMenuOpen={handleOpen}
