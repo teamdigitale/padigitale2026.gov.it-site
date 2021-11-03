@@ -16,6 +16,7 @@ import { HeroCarousel } from '../components/carousel/Carousel';
 import { HomeCarousel } from '../components/carousel/HomeCarousel';
 import { SupportSection } from './faq/SupportSection';
 import { OpportunitySection } from './home/OpportunitySection';
+import { SEO } from '../components/SEO';
 
 export const IndexPage = () => (
   <>

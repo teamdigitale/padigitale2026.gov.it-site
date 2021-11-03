@@ -6,6 +6,7 @@ import { SupportSection } from './faq/SupportSection';
 import { HeroImageBackground } from '../components/hero/HeroImageBackground';
 import { ModalUpdatesButton } from '../components/modal/ModalUpdatesButton';
 import { ModalUpdates } from '../components/modal/ModalUpdates';
+import { SEO } from '../components/SEO';
 
 const { heroDigital, support } = content;
 const { heroOpportunity, modalButton } = opportunityContent;
