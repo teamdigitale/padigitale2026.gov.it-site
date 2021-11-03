@@ -56,12 +56,22 @@ const useStyles = createUseStyles({
                 borderRadius: '0.888rem',
                 whiteSpace: 'nowrap',
                 border: '1px solid #0073E6',
+                '&.disabled': {
+                  color: '#DAE3EC',
+                  border: '1px solid #DAE3EC',
+                },
               },
               '& span': {
                 marginRight: '0',
                 color: '#0073E6',
                 textDecoration: 'none',
                 fontWeight: '600',
+              },
+              '&.disabled': {
+                pointerEvents: 'none',
+                '& span': {
+                  color: '#DAE3EC',
+                },
               },
               '&.active': {
                 backgroundColor: '#0066CC',
@@ -88,7 +98,7 @@ export const SideNavigation = (props) => {
   const classes = useStyles();
   const [isMobile, setIsMobile] = useState();
 
-  const { activeList, searchValue } = props;
+  const { activeList, searchValue} = props;
   useEffect(() => {
     setIsMobile(window.innerWidth < 992);
     window.addEventListener('resize', () => {
@@ -98,16 +108,14 @@ export const SideNavigation = (props) => {
 
   useEffect(() => {
     disableLinks();
-    if (isMobile) {
-      const items = document.querySelectorAll(
-        '.sidebar-wrapper .link-list .list-item'
-      );
+    if(isMobile) {
+      const items = document.querySelectorAll('.sidebar-wrapper .link-list .list-item');
       items[0].classList.add('active');
     } else {
-      if (!isMobile) {
+      if(!isMobile) {
         removeActive();
-        setActiveLinkOnChanges(content.sidebar);
-        removeDisabled();
+        setActiveLinkOnChanges(content.sidebar)
+        removeDisabled()
       }
     }
   }, [isMobile]);
@@ -115,43 +123,37 @@ export const SideNavigation = (props) => {
   useEffect(() => disableLinks(), [searchValue]);
 
   function disableLinks() {
-    if (searchValue && searchValue.length >= 3) {
-      const activeItems = content.sidebar.filter((el) => {
-        return activeList.some((f) => {
+    if(searchValue && searchValue.length >= 3) {
+      const activeItems = content.sidebar.filter( el => {
+        return activeList.some( f => {
           return f.sectionId === el.sectionId;
         });
       });
+      
+      const disabledItems = content.sidebar.filter(ad => activeList.every(fd => fd.sectionId !== ad.sectionId));
 
-      const disabledItems = content.sidebar.filter((ad) =>
-        activeList.every((fd) => fd.sectionId !== ad.sectionId)
-      );
-
-      if (!isMobile) {
+      if(!isMobile) {
         removeActive();
-        setActiveLinkOnChanges(activeItems);
+        setActiveLinkOnChanges(activeItems)
       }
 
-      removeDisabled();
+      removeDisabled()
       disabledItems.forEach((item) => {
-        const sideLink = document.querySelector(
-          '[data-id="' + item.sectionId + '"]'
-        );
+        const sideLink = document.querySelector('[data-id="' + item.sectionId + '"]');
         sideLink.classList.add('disabled');
       });
     } else {
       if (!isMobile) {
         removeActive();
-        setActiveLinkOnChanges(content.sidebar);
+        setActiveLinkOnChanges(content.sidebar)
       }
-      removeDisabled();
+      removeDisabled()
     }
   }
 
   function setActiveLinkOnChanges(list) {
-    if (!list.length) return;
-    const activeItem = document.querySelector(
-      '[data-id="' + list[0].sectionId + '"]'
-    );
+    if(!list.length) return
+    const activeItem = document.querySelector('[data-id="' + list[0].sectionId + '"]');
     activeItem.classList.add('active');
   }
 
@@ -183,9 +185,7 @@ export const SideNavigation = (props) => {
   }
 
   function removeDisabled() {
-    const items = document.querySelectorAll(
-      '.sidebar-wrapper .link-list .list-item'
-    );
+    const items = document.querySelectorAll('.sidebar-wrapper .link-list .list-item');
 
     items.forEach((item) => {
       item.classList.remove('disabled');

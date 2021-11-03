@@ -1,5 +1,13 @@
 import React from 'react';
-import { Section, Row, Col, Card, CardBody, CardTitle } from 'design-react-kit';
+import {
+  Section,
+  Row,
+  Col,
+  Card,
+  CardBody,
+  CardTitle,
+  Button,
+} from 'design-react-kit';
 import { createUseStyles } from 'react-jss';
 
 const useStyle = createUseStyles({
@@ -78,6 +86,9 @@ export const OpportunitySection = (props) => {
             </Col>
           ))}
         </Row>
+        <div className="d-flex justify-content-center">
+          <Button className="text-uppercase" color="primary" href="/opportunita">Scopri tutte le opportunità</Button>
+        </div>
       </div>
     </Section>
   );

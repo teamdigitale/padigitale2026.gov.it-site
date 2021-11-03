@@ -121,6 +121,15 @@ const useStyle = createUseStyles({
         borderTop: '1px solid #E6E9F2',
       },
     },
+    '& button.nav-link': {
+      color: '#06c',
+      background: 'none',
+      border: 'none',
+      padding: '0.722rem 1.333rem',
+      '&:hover': {
+        textDecoration: 'underline',
+      }
+    },
   },
   linkListWrapperCustom: {
     '& ul li:not(:first-child)': {
@@ -241,7 +250,7 @@ const CenterHeader = () => {
   );
 };
 
-const NavHeader = () => {
+const NavHeader = ({ toggleModal }) => {
   const [isOpen, setIsOpen] = useState(false);
   const closeMenu = () => setIsOpen(false);
   const toogleMenu = () => setIsOpen(!isOpen);
@@ -324,7 +333,10 @@ const NavHeader = () => {
                   to={internalLinks.updates.linkTo}
                   className="nav-link"
                   activeClassName="active"
-                  onClick={closeMenu}
+                  onClick={() => {
+                    closeMenu();
+                    toggleModal();
+                  }}
                 >
                   <span className="font-weight-semibold">
                     {internalLinks.updates.label}
@@ -345,7 +357,7 @@ export const Header = (props) => (
       <SlimHeader />
       <div className="it-nav-wrapper">
         <CenterHeader />
-        <NavHeader showKit={props.showKit} />
+        <NavHeader showKit={props.showKit} toggleModal={props.toggleModal} />
       </div>
     </Headers>
   </header>
