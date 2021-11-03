@@ -29,12 +29,26 @@ timeline:
   cards:
     - id: 1
       active: false
+      time: Autunno 2021
+      title: Conoscere le opportunità
+      text: Le PA hanno accesso alle risorse necessarie per prepararsi ad aderire agli avvisi, la cui pubblicazione è prevista per la primavera del 2022. 
     - id: 2
       active: false
+      time: Primavera 2022
+      title: Partecipare agli avvisi
+      text: "<strong>I primi avvisi del PNRR dedicati alla transizione digitale della PA sono online:</strong> un’area riservata ne facilita l’adesione attraverso un percorso guidato."
     - id: 3
       active: true
+      time: Autunno 2022
+      title: Realizzare i progetti
+      text: "Le amministrazioni possono <strong>avviare i progetti:</strong> un team dedicato accompagna le PA. La rendicontazione degli interventi implementati è totalmente online."
     - id: 4
       active: false
+      time: Primavera 2022
+      title: Realizzare i progetti
+      text: Le PA hanno accesso alle risorse necessarie per prepararsi ad aderire agli avvisi, la cui pubblicazione è prevista per la primavera del 2022. 
     - id: 5
       active: false
-
+      time: Autunno 2023
+      title: Realizzare i progetti
+      text: Le PA hanno accesso alle risorse necessarie per prepararsi ad aderire agli avvisi, la cui pubblicazione è prevista per la primavera del 2022. 
