@@ -67,7 +67,13 @@ externalLinks:
   dipartimento:
     label: Dipartimento per la Trasformazione Digitale
     linkTo: https://innovazione.gov.it
-    ariaLabel: 'Dipartimento per la Trasformazione Digitale (link esterno)'
+    ariaLabel: 'Dipartimento per la Trasformazione Digitale (Collegamento esterno - Apre su nuova scheda)'
+  eu:
+    linkTo: https://ec.europa.eu/info/index_it
+    ariaLabel: 'Unione Europea (Collegamento esterno - Apre su nuova scheda)'
+  repubblica:
+    linkTo: https://www.governo.it/
+    ariaLabel: 'Governo Italiano (Collegamento esterno - Apre su nuova scheda)'
   agid:
     label: AgID
     linkTo: https://www.agid.gov.it/
@@ -75,7 +81,7 @@ externalLinks:
   a11y:
     label: Dichiarazione di accessibilità
     linkTo: https://form.agid.gov.it/CHANGEME
-    ariaLabel: 'Dichiarazione di accessibilità (link esterno)'
+    ariaLabel: 'Dichiarazione di accessibilità (Collegamento esterno - Apre su nuova scheda)'
   italiaDigitale:
     label: Italia digitale 2026
     linkTo: 'https://innovazione.gov.it/dipartimento/focus/italia-digitale-2026/'

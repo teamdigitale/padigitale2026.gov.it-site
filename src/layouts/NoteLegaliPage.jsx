@@ -11,7 +11,9 @@ const { title: seoTitle, description: seoDescription } = seo.noteLegaliPage;
 
 const query = graphql`
   query {
-    textChunk: markdownRemark(fields: { slug: { eq: "note-legali-page/note-legali" } }) {
+    textChunk: markdownRemark(
+      fields: { slug: { eq: "note-legali-page/note-legali" } }
+    ) {
       html
     }
   }

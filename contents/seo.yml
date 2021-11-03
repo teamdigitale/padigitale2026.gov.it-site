@@ -2,14 +2,22 @@ homePage:
   title: Prossima PA
   description: Le opportunità per una PA protagonista della transazione digitale
 privacyPage:
-  title: Informativa privacy - CHANGEME Site name
-  description: Informativa sulla gestione dei cookie del CHANGEME Site name
+  title: Informativa privacy - Prossima PA
+  description: Informativa sulla gestione dei cookie del Prossima PA
 noteLegaliPage:
-  title: Note legali - CHANGEME Site name
+  title: Note legali - Prossima PA
   description: Informativa sulle note legali del sito CHANGEME
 creditsPage:
-  title: Crediti - CHANGEME Site name
+  title: Crediti - Prossima PA
   description: Elenco degli autori delle risorse visuali utilizzate per il sito CHANGEME
 notFoundPage:
-  title: Pagina non trovata - CHANGEME Site name
+  title: Pagina non trovata - Prossima PA
   description: Pagina non trovata
+opportunityPage:
+  title: Opportunità - Prossima PA
+comeFunzionaPage:
+  title: Come funziona - Prossima PA
+faqPage:
+  title: FAQ - Prossima PA
+supportPage:
+  title: Supporto - Prossima PA

@@ -100,6 +100,7 @@ export const HeroImageBackground = ({
   theme,
   image,
   firstButtonLabel,
+  firstButtonAriaLabel,
   firstButtonClass,
   firstButtonHref,
   secondButtonLabel,
@@ -129,6 +130,9 @@ export const HeroImageBackground = ({
                       classButton={firstButtonClass}
                       label={firstButtonLabel}
                       href={firstButtonHref}
+                      ariaLabel={firstButtonAriaLabel}
+                      target="_blank"
+                      rel="noreferrer"
                     />
                     {secondButtonLabel ? (
                       <HeroButton
