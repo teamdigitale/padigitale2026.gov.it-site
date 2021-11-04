@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useContext }from 'react';
 import { Button, Collapse, Card, CardBody } from 'design-react-kit';
 import { createUseStyles } from 'react-jss';
 import { ExternalLink } from './ExternalLink';
+import { Link } from 'gatsby';
+import { GlobalStateContext } from '../context/globalContext';
 
 const useStyles = createUseStyles({
   collapseWrapper: {
@@ -181,6 +183,10 @@ const useStyles = createUseStyles({
     backgroundImage: 'url(/assets/chevron-down.svg)',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
+    '&:focus': {
+      outline: '2px solid #ff9900',
+      boxShadow: 'none'
+    },
     '&:hover, &:focus': {
       backgroundColor: '#0066CC',
       backgroundImage: 'url(/assets/chevron-down-white.svg)',
@@ -219,9 +225,12 @@ export const AccordionButtonFull = (props) => {
     stalls,
     accessLabel,
     accessLink,
+    accessSectionId,
     moreInfoLabel,
     moreInfoLink,
   } = props.data;
+
+  const [state, dispatch] = useContext(GlobalStateContext)
 
   const eventHandler = () => {
     props.handleToggle(props.id);
@@ -266,7 +275,9 @@ export const AccordionButtonFull = (props) => {
                 </p>
                 <div className="access">
                   <span>Modalità di accesso:</span>{' '}
-                  <a href={accessLink}>{accessLabel}</a>
+                  <Link to="/come-funziona" onClick={() => dispatch({type: 'SET:SECTION_ID', payload: {sectionId: accessSectionId}})}>
+                    <p>{accessLabel}</p>
+                  </Link>
                 </div>
                 <div className={classes.linkAccordion}>
                   <ExternalLink linkTo={moreInfoLink} ariaLabel={`${moreInfoLabel}, ${title}, (Collegamento esterno - Apre su nuova scheda)`}>

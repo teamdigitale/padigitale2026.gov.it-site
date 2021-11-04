@@ -11,10 +11,9 @@ import {
   Button,
 } from 'design-react-kit';
 import content from '../../../contents/support-page/support.yml';
+import { Link } from 'gatsby';
 
-const {
-  faqSection
-} = content;
+const { faqSection } = content;
 
 const useStyle = createUseStyles({
   faqPreview: {
@@ -80,11 +79,11 @@ export const FAQPreview = () => {
     <>
       <div className={classes.faqPreview}>
         <div className="container px-3">
-          <Row>
-            {cards}
-          </Row>
+          <Row>{cards}</Row>
           <div className={classes.btnWrapper}>
-            <Button color="primary" href={faqSection.buttonLink}>{faqSection.buttonLabel}</Button>
+          <Link to="/faq" className="btn btn-primary text-uppercase">
+              {faqSection.buttonLabel}
+            </Link>
           </div>
         </div>
       </div>
