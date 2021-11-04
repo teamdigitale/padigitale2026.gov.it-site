@@ -193,17 +193,6 @@ const SlimHeader = () => {
           <h2 id="siti-esterni-correlati" class="sr-only">
             Siti esterni correlati
           </h2>
-          {/* <HeaderToggler
-            className={classes.headerToggler}
-            tag="button"
-            type="button"
-            onClick={function noRefCheck() {}}
-          >
-            <span className="font-weight-bold">
-              {externalLinks.dipartimento.label}
-            </span>
-            <Icon icon="it-expand" />
-          </HeaderToggler> */}
           <Button className={classes.headerToggler} onClick={toggle} aria-expanded={collapse}>
           <span className="font-weight-bold">
               {externalLinks.dipartimento.label}
