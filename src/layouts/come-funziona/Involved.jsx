@@ -87,7 +87,7 @@ export const Involved = (props) => {
       <div className={classes.involvedSection}>
         <Container tag="section" aria-labelledby="involved-actors-title" className="px-3">
           <Row>
-            <Col xs="12" lg="5" className="offset-lg-1">
+            <Col xs="12" lg="5" className="offset-lg-1" id="attori-coinvolti">
               <p className={classes.category}>{category}</p>
               <h2 className={classes.title} id="involved-actors-title">
                 {title}
