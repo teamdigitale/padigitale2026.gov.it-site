@@ -113,18 +113,40 @@ const useStyles = createUseStyles({
     },
   },
   sidePrevButton: {
-    composes: 'd-none justify-content-center pt-3 d-lg-flex',
+    composes: 'side-button d-none justify-content-center pt-3 d-lg-flex',
     position: 'absolute',
     left: '0',
     top: '400px',
     transform: 'translateY(-50%)',
+    '&.side-button': {
+      '& button': {
+        backgroundColor: 'transparent',
+        border: 'none',
+        outline: 'none',
+      },
+    },
   },
   sideNextButton: {
-    composes: 'd-none justify-content-center pt-3 d-lg-flex',
+    composes: 'side-button d-none justify-content-center pt-3 d-lg-flex',
     position: 'absolute',
     right: '0',
     top: '400px',
     transform: 'translateY(-50%)',
+    '&.side-button': {
+      '& button': {
+        backgroundColor: 'transparent',
+        border: 'none',
+        outline: 'none',
+      },
+    },
+  },
+  mobileNavButton: {
+    '& button': {
+      backgroundColor: 'transparent',
+      border: 'none',
+      outline: 'none',
+      padding: '0',
+    },
   },
 });
 
@@ -146,8 +168,8 @@ export const Tab = ({ tabContent, sideDesktopNavigation, mobileNavigation, title
       firstUpdate.current = false;
       return;
     }
-    const prevBtn = document.querySelectorAll('[data-prev-navigation-id=' + prevBtnId + ']');
-    const nextBtn = document.querySelectorAll('[data-next-navigation-id=' + nextBtnId + ']');
+    const prevBtn = document.querySelectorAll('[data-prev-navigation-id=' + prevBtnId + '] svg');
+    const nextBtn = document.querySelectorAll('[data-next-navigation-id=' + nextBtnId + '] svg');
     const disabledClass = 'tab-button-disabled';
 
     if (tabActive === 0) {
@@ -259,50 +281,50 @@ export const Tab = ({ tabContent, sideDesktopNavigation, mobileNavigation, title
               </div>
               {sideDesktopNavigation && (
                 <div className={classes.sidePrevButton}>
-                  <Icon
-                    data-prev-navigation-id={prevBtnId}
-                    className={classes.navigationBtn}
-                    color="primary"
-                    icon="it-arrow-left-circle"
-                    size="lg"
+                  <button
+                    type="button"
                     onClick={() => setTabActive(tabActive - 1 > 0 ? tabActive - 1 : 0)}
-                  />
+                    data-prev-navigation-id={prevBtnId}
+                  >
+                    <Icon className={classes.navigationBtn} color="primary" icon="it-arrow-left-circle" size="lg" />
+                  </button>
                 </div>
               )}
               {sideDesktopNavigation && (
                 <div className={classes.sideNextButton}>
-                  <Icon
-                    data-next-navigation-id={nextBtnId}
-                    className={classes.navigationBtn}
-                    color="primary"
-                    icon="it-arrow-right-circle"
-                    size="lg"
+                  <button
+                    type="button"
                     onClick={() =>
                       setTabActive(
                         tabActive + 1 < tabContent.tabs.length - 1 ? tabActive + 1 : tabContent.tabs.length - 1
                       )
                     }
-                  />
+                    data-next-navigation-id={nextBtnId}
+                  >
+                    <Icon className={classes.navigationBtn} color="primary" icon="it-arrow-right-circle" size="lg" />
+                  </button>
                 </div>
               )}
               {mobileNavigation && (
                 <div className="d-flex justify-content-center pt-3 d-lg-none">
-                  <Icon
-                    data-prev-navigation-id={prevBtnId}
-                    className={classes.navigationBtn}
-                    color="primary"
-                    icon="it-arrow-left-circle"
-                    size="lg"
-                    onClick={() => setTabActive(tabActive - 1 > 0 ? tabActive - 1 : 0)}
-                  />
-                  <Icon
-                    data-next-navigation-id={nextBtnId}
-                    className={classes.navigationBtn}
-                    color="primary"
-                    icon="it-arrow-right-circle"
-                    size="lg"
-                    onClick={() => setTabActive(tabActive + 1 < 2 ? tabActive + 1 : 2)}
-                  />
+                  <div className={classes.mobileNavButton}>
+                    <button
+                      type="button"
+                      onClick={() => setTabActive(tabActive - 1 > 0 ? tabActive - 1 : 0)}
+                      data-prev-navigation-id={prevBtnId}
+                    >
+                      <Icon className={classes.navigationBtn} color="primary" icon="it-arrow-left-circle" size="lg" />
+                    </button>
+                  </div>
+                  <div className={classes.mobileNavButton}>
+                    <button
+                      type="button"
+                      onClick={() => setTabActive(tabActive + 1 < 2 ? tabActive + 1 : 2)}
+                      data-next-navigation-id={nextBtnId}
+                    >
+                      <Icon className={classes.navigationBtn} color="primary" icon="it-arrow-right-circle" size="lg" />
+                    </button>
+                  </div>
                 </div>
               )}
             </Col>
