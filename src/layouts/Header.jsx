@@ -106,12 +106,12 @@ const useStyle = createUseStyles({
     textDecoration: 'none',
     fontWeight: '700',
   },
-  activeLink: {
-    '@media (max-width: 991px)': {
-      backgroundColor: 'rgba(0,102,204,0.06)',
-      borderLeft: '4px solid #0073E6',
-    },
-  },
+  // activeLink: {
+  //   '@media (max-width: 991px)': {
+  //     backgroundColor: 'rgba(0,102,204,0.06)',
+  //     borderLeft: '4px solid #0073E6',
+  //   },
+  // },
   navbarNav: {
     width: '100%',
     padding: 0,
@@ -129,6 +129,10 @@ const useStyle = createUseStyles({
       '&:hover': {
         textDecoration: 'underline',
       },
+      '&.active': {
+        backgroundColor: 'rgba(0,102,204,0.06)',
+        borderLeft: '4px solid #0073E6',
+      }
     },
   },
   linkListWrapperCustom: {
@@ -295,7 +299,7 @@ const NavHeader = ({ toggleModal }) => {
               <NavItem active>
                 <Link
                   to={internalLinks.opportunity.linkTo}
-                  className={`${classes.activeLink} nav-link`}
+                  className="nav-link"
                   activeClassName="active"
                   onClick={closeMenu}
                 >
