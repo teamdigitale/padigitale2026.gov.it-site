@@ -27,28 +27,39 @@ const useStyles = createUseStyles({
       },
       '& h5.card-title': {
         color: '#0066CC',
-        fontSize: '1rem',
+        fontSize: '1.125rem',
         fontWeight: 'bold',
         lineHeight: '1.26',
         '@media (min-width: 992px)': {
           minHeight: '2.889rem',
+          fontSize: '1rem',
+          lineHeight: '1.44',
         },
       },
       '& .card-text': {
         color: '#33485C',
-        fontSize: '0.889rem',
+        fontSize: '1rem',
         fontFamily: 'Titillium Web',
         fontWeight: '400',
         lineHeight: '1.24',
-        marginBottom: '2.222rem',
+        marginBottom: '1.125rem',
+        '@media (min-width: 992px)': {
+          marginBottom: '2.33rem',
+          fontSize: '0.889rem',
+          lineHeight: '1.44',
+        },
       },
       '& .source': {
         color: '#33485C',
-        fontSize: '0.889rem',
+        fontSize: '1rem',
         fontWeight: '600',
         lineHeight: '1.24',
         display: 'inline-flex',
         alignItems: 'center',
+        '@media (min-width: 992px)': {
+          fontSize: '0.889rem',
+          lineHeight: '1.44',
+        },
         '& img': {
           marginLeft: '0.278rem',
         },

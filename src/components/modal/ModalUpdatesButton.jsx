@@ -25,6 +25,7 @@ const useStyles = createUseStyles({
       padding: '0.889rem 1.333rem',
       '& p': {
         maxWidth: '100%',
+        marginBottom: '1rem'
       },
     },
   },

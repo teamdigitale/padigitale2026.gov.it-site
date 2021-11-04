@@ -8,6 +8,7 @@ const useStyles = createUseStyles({
   heroCards: {
     composes: 'card-bg rounded',
     backgroundColor: '#ffffff',
+    height: '100%',
     '@media (min-width: 992px)': {
       flexDirection: 'row',
     },
@@ -18,12 +19,17 @@ const useStyles = createUseStyles({
     },
     '& .card-body': {
       boxShadow: '0px 0px 20px rgb(0 43 85 / 4%);',
-      padding: '2.667rem',
+      padding: '1.5rem',
       order: '1',
       textAlign: 'center',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
       '@media (min-width: 992px)': {
         order: '0',
+        padding: '2.667rem',
         textAlign: 'left',
+        alignItems: 'flex-start',
       },
       '& .category-top': {
         '& a.category': {
@@ -48,10 +54,13 @@ const useStyles = createUseStyles({
         fontFamily: 'Titillium Web',
         fontWeight: '400',
         lineHeight: '1.28',
-        marginBottom: '7.25rem',
+        marginBottom: '2rem',
         '@media (min-width: 992px)': {
-          marginBottom: '3.778rem',
+          marginBottom: '1.222rem',
         },
+      },
+      '& button': {
+        marginTop: 'auto'
       },
       '& .source': {
         color: '#33485C',
@@ -99,17 +108,19 @@ const useStyles = createUseStyles({
       '@media (max-width: 992px)': {
         margin: '0',
       },
-    },
-    '& .swiper-wrapper': {
-      padding: '0 1.667rem 1.667rem',
-      margin: '0 -1.667rem -1.667rem',
-      '@media (max-width: 992px)': {
+      '& .swiper-wrapper': {
+        padding: '0 1.667rem 1.667rem',
         margin: '0 -1.667rem -1.667rem',
+        '@media (max-width: 992px)': {
+          margin: '0 -1.667rem -1.667rem',
+        },
+      },
+      '& .swiper-wrapper .swiper-slider': {
+        padding: '1.111rem',
       },
     },
-    '& .swiper-slider': {
-      padding: '1.111rem',
-    },
+    
+    
     '& .swiper-pagination.swiper-pagination-bullets .swiper-pagination-bullet': {
       margin: '0 0.889rem',
     },

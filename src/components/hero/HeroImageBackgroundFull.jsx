@@ -28,6 +28,9 @@ const useStyles = createUseStyles({
     composes: 'it-hero-text-wrapper bg-blue',
     paddingLeft: '0 !important',
     zIndex: 2,
+    '@media (max-width: 991px)': {
+      textAlign: 'center',
+    },
   },
   heroWrapper: {
     composes: 'it-hero-wrapper bg-blue',
@@ -123,7 +126,7 @@ export const HeroImageBackgroundFull = ({ category, title, body, image, imageMob
             <Col xs="12" lg="11" className="offset-lg-1">
               <div className={`${classes.contentWrapper}`}>
                 <div>
-                  <HeroCategory title={category} />
+                  <HeroCategory title={category}/>
                   <HeroTitle title={title} className={classes.heroTitle} />
                   <HeroParagraph text={body} />
                 </div>

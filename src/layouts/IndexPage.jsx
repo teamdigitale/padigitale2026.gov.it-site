@@ -38,8 +38,8 @@ export const IndexPage = () => (
       category={heroPnrr.category}
       title={heroPnrr.title}
       body={heroPnrr.body}
-      imageUrl="/assets/placeholder.svg"
-      imageAlt="placeholder"
+      imageUrl="/assets/come-funziona-home.svg"
+      imageAlt=""
       firstButtonHref="#"
       firstButtonLabel={heroPnrr.firstButtonLabel}
       firstButtonAriaLabel={heroPnrr.firstButtonAriaLabel}
