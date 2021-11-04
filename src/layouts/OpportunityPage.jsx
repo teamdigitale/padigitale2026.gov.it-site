@@ -26,7 +26,7 @@ export const OpportunityPage = (props) => {
         title={heroOpportunity.title}
         body={heroOpportunity.body}
         image="opportunity-hero.png"
-        theme="bg-white flex-xs-column-reverse"
+        theme="bg-white flex-column-reverse"
       />
       <ModalUpdatesButton
         label={modalButton.label}
