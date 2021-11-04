@@ -175,7 +175,7 @@ export const Timeline = ({ content, title }) => {
         <div className="container">
           {title ? (
             <Row>
-              <Col xs="12" lg="4" className="offset-lg-1">
+              <Col xs="12" lg="4" className="offset-lg-1" id="calendario">
                 <h3 className={classes.timelineTitle}>{title}</h3>
               </Col>
             </Row>
