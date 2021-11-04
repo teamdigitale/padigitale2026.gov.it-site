@@ -2,16 +2,16 @@ homePage:
   title: Prossima PA
   description: Le opportunità per una PA protagonista della transazione digitale
 privacyPage:
-  title: Informativa privacy - Prossima PA
-  description: Informativa sulla gestione dei cookie del Prossima PA
+  title: Informativa privacy - ProssimaPA
+  description: Informativa sulla gestione dei cookie del sito prossimapa.gov.it
 noteLegaliPage:
-  title: Note legali - Prossima PA
-  description: Informativa sulle note legali del sito CHANGEME
+  title: Note legali - ProssimaPA
+  description: Informativa sulle note legali del sito prossimapa.gov.it
 creditsPage:
-  title: Crediti - Prossima PA
-  description: Elenco degli autori delle risorse visuali utilizzate per il sito CHANGEME
+  title: Crediti - ProssimaPA
+  description: Elenco degli autori delle risorse visuali utilizzate per il sito prossimapa.gov.it
 notFoundPage:
-  title: Pagina non trovata - Prossima PA
+  title: Pagina non trovata - ProssimaPA
   description: Pagina non trovata
 opportunityPage:
   title: Opportunità - Prossima PA
