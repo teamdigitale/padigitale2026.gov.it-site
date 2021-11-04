@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { createUseStyles } from 'react-jss';
 import {
-  Container,
   Row,
   Col,
   Modal,
@@ -10,10 +9,8 @@ import {
   ModalFooter,
   Button,
   Input,
-  TextArea,
   FormGroup,
   Label,
-  NotificationManager,
 } from 'design-react-kit';
 import Select from 'react-select';
 import content from '../../../contents/opportunity-page/opportunity.yml';
@@ -341,8 +338,8 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
           setListenersToSelectOptions();
         }}
       >
-        <div id="updates-modal" class="modal-header">
-          <h5 class="modal-title">{modalTitle}</h5>
+        <div id="updates-modal" className="modal-header">
+          <h5 className="modal-title">{modalTitle}</h5>
           <Button
             type="button"
             className={classes.close}
@@ -673,9 +670,9 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
           </Button>
         </ModalFooter>
       </Modal>
-      <div class="container test-docs">
-        <div class="row">
-          <div class="col-12 col-md-6">
+      <div className="container test-docs">
+        <div className="row">
+          <div className="col-12 col-md-6">
             <div
               class={classes.notification}
               role="alert"
@@ -683,13 +680,13 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
               id="not2dms"
             >
               <h5 id="not2dms-title">
-                <svg class="icon"></svg>
+                <svg className="icon"></svg>
               </h5>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor…
               </p>
-              <button type="button" class="btn notification-close">
+              <button type="button" className="btn notification-close">
                 <svg
                   width="19"
                   height="19"
@@ -714,7 +711,7 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                   />
                 </svg>
 
-                <span class="sr-only">Chiudi notifica: Titolo notifica</span>
+                <span className="sr-only">Chiudi notifica: Titolo notifica</span>
               </button>
             </div>
           </div>
