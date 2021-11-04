@@ -9,6 +9,9 @@ import {
 } from '../../../contents/opportunity-page/opportunity.yml';
 
 const useStyles = createUseStyles({
+  section: {
+    padding: '0'
+  },
   selectWrapper: {
     composes: 'bootstrap-select-wrapper',
     marginBottom: '2.667rem',
@@ -137,7 +140,7 @@ export const BeneficiariesSection = (props) => {
 
   return (
     <>
-      <Section aria-labelledby="lista-opportunita-hader">
+      <Section className={classes.section} aria-labelledby="lista-opportunita-hader">
         <h3 className="sr-only" id="lista-opportunita-hader">
           Elenco opportunità
         </h3>

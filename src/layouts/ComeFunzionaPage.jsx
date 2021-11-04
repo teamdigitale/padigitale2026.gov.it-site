@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { support } from '../../contents/home-page/home.yml';
 import content from '../../contents/come-funziona/come-funziona.yml';
 import { SEO } from '../components/SEO';
@@ -13,7 +13,16 @@ import { SupportSection } from './faq/SupportSection';
 
 const { title: seoTitle, description: seoDescription } = seo.comeFunzionaPage;
 
-export const ComeFunzionaPage = () => (
+export const ComeFunzionaPage = (props) => {
+  useEffect(() => {
+    if (props.section) {
+      document.querySelector('#' + props.section).scrollIntoView({
+        behavior: 'smooth',
+      });
+    }
+  }, [props.section]);
+
+  return (
   <>
     <SEO title={seoTitle} description={seoDescription} />
     <div className="sr-only">
@@ -33,6 +42,7 @@ export const ComeFunzionaPage = () => (
       mobileNavigation
       title={content.pacchettiTabs.title}
       subtitle={content.pacchettiTabs.subtitle}
+      sectionId="pacchetti-standard"
     />
     <Tab
       tabContent={content.presentazioneTabs}
@@ -40,10 +50,12 @@ export const ComeFunzionaPage = () => (
       mobileNavigation
       title={content.presentazioneTabs.title}
       subtitle={content.presentazioneTabs.subtitle}
+      sectionId="presentazione-progetto"
     />
     <Timeline content={content.timeline} title="Il calendario" />
     <Beneficiaries item={content.beneficiaries} />
     <Involved title={content.involved.title} category={content.involved.category} cards={content.involved.cards} />
     <SupportSection supportList={support.cards} title={support.title} buttonLabel={support.buttonLabel} />
   </>
-);
+  )
+};

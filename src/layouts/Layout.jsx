@@ -9,6 +9,7 @@ import labels from '../../contents/labels.yml';
 import { Header } from './Header';
 import { Footer } from './Footer';
 import { ModalUpdates } from '../components/modal/ModalUpdates';
+import { GlobalStateContextProvider } from '../context/globalContext'
 
 const { goToMainContent, goToFooter } = labels;
 
@@ -56,10 +57,12 @@ export const Layout = ({ children }) => {
         {goToFooter}
       </a>
       <Header toggleModal={toggleModal} />
-      <main className="text-info text-break" id="content">
-        {children}
-        <ModalUpdates initialState={modalIsOpen} handleToggle={toggleModal} />
-      </main>
+      <GlobalStateContextProvider>
+        <main className="text-info text-break" id="content">
+          {children}
+          <ModalUpdates initialState={modalIsOpen} handleToggle={toggleModal} />
+        </main>
+      </GlobalStateContextProvider>
       <Footer />
     </>
   );

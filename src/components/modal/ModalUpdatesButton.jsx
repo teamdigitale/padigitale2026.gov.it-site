@@ -46,6 +46,12 @@ const useStyles = createUseStyles({
       textAlign: 'center',
     },
   },
+  button: {
+    '&:focus': {
+      outline: '2px solid #ff9900',
+      boxShadow: 'none'
+    }
+  }
 });
 
 export const ModalUpdatesButton = ({
@@ -63,7 +69,7 @@ export const ModalUpdatesButton = ({
   return (
     <>
       {hasTitle ? (
-        <Container>
+        <Container className="px-3">
           <Row className="align-items-center mb-4">
             <Col sm={12} lg={3}>
               <h3 className={classes.buttonTitle}>Le misure</h3>
@@ -82,12 +88,12 @@ export const ModalUpdatesButton = ({
         ''
       )}
 
-      <Container>
+      <Container className="px-3">
         <Row>
           <Col lg={12}>
             <div className={classes.modalButtonContainer}>
               <p className={classes.text}>{label}</p>
-              <Button color="primary" onClick={eventHandler}>
+              <Button className={classes.button} color="primary" onClick={eventHandler}>
                 {buttonLabel}
               </Button>
             </div>
