@@ -1,17 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { ComeFunzionaPage } from '../layouts/ComeFunzionaPage';
+import { GlobalStateContext } from '../context/globalContext';
 
-const Page = ({location}) => { 
-  const [section, setSection] = useState(null);
-  console.log(section);
-  
-  useEffect(() => {
-    if(location.state !== null) {
-      setSection(location.state.section);
-    }
-  }, []);
+const Page = () => {
+  const [{sectionId}] = useContext(GlobalStateContext)
   return (
-    <ComeFunzionaPage section={section}/>
+    <ComeFunzionaPage section={sectionId}/>
   )
 }
 export default Page;

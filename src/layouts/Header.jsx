@@ -4,6 +4,7 @@ import {
   Collapse,
   Header as HeaderReactKit,
   Headers,
+  Button,
   HeaderContent,
   Icon,
   Nav,
@@ -106,12 +107,6 @@ const useStyle = createUseStyles({
     textDecoration: 'none',
     fontWeight: '700',
   },
-  // activeLink: {
-  //   '@media (max-width: 991px)': {
-  //     backgroundColor: 'rgba(0,102,204,0.06)',
-  //     borderLeft: '4px solid #0073E6',
-  //   },
-  // },
   navbarNav: {
     width: '100%',
     padding: 0,
@@ -137,7 +132,9 @@ const useStyle = createUseStyles({
   },
   linkListWrapperCustom: {
     '& ul li:not(:first-child)': {
-      borderLeft: '1px solid rgba(0,89,179,.2)',
+      '@media (min-width: 992px)': {
+        borderLeft: '1px solid rgba(0,89,179,.2)',
+      },
     },
   },
   noShadow: {
@@ -161,19 +158,31 @@ const useStyle = createUseStyles({
     },
   },
   headerToggler: {
-    composes: 'button-link',
-    '@media (max-width: 991px)': {
-      '&.navbar-toggler': {
-        fontSize: '0.778rem',
-        fontWeight: '600',
-        color: '#0066CC',
-      },
+    fontWeight: '600',
+    color: '#0066CC',
+    fontSize: '0.875rem',
+    border: '0',
+    padding: '0',
+    backgroundColor: 'transparent',
+    boxShadow: 'none',
+    '&:focus': {
+      color: '#0066CC',
+      backgroundColor: 'transparent',
+      outline: '2px solid #ff9900',
+    },
+    '@media (min-width: 992px)': {
+      display: 'none'
     },
   },
 });
 
 const SlimHeader = () => {
   const classes = useStyle();
+  const [collapse, setCollapse] = useState(false);
+
+  const toggle = () => {
+    setCollapse(!collapse);
+  };
   return (
     <HeaderReactKit type="slim" theme="light">
       <HeaderContent>
@@ -184,7 +193,7 @@ const SlimHeader = () => {
           <h2 id="siti-esterni-correlati" class="sr-only">
             Siti esterni correlati
           </h2>
-          <HeaderToggler
+          {/* <HeaderToggler
             className={classes.headerToggler}
             tag="button"
             type="button"
@@ -194,8 +203,14 @@ const SlimHeader = () => {
               {externalLinks.dipartimento.label}
             </span>
             <Icon icon="it-expand" />
-          </HeaderToggler>
-          <Collapse header>
+          </HeaderToggler> */}
+          <Button className={classes.headerToggler} onClick={toggle} aria-expanded={collapse}>
+          <span className="font-weight-bold">
+              {externalLinks.dipartimento.label}
+            </span>
+            <Icon icon="it-expand" />
+          </Button>
+          <Collapse isOpen={collapse}>
             <div className={classes.linkListWrapperCustom}>
               <LinkList className={classes.topListLink}>
                 <LinkListItem href={externalLinks.italiaDigitale.linkTo}>

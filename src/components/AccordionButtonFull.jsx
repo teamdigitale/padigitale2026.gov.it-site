@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Button, Collapse, Card, CardBody } from 'design-react-kit';
 import { createUseStyles } from 'react-jss';
 import { ExternalLink } from './ExternalLink';
 import { Link } from 'gatsby';
+import { GlobalStateContext } from '../context/globalContext';
 
 const useStyles = createUseStyles({
   collapseWrapper: {
@@ -229,6 +230,8 @@ export const AccordionButtonFull = (props) => {
     moreInfoLink,
   } = props.data;
 
+  const [state, dispatch] = useContext(GlobalStateContext)
+
   const eventHandler = () => {
     props.handleToggle(props.id);
   };
@@ -272,7 +275,7 @@ export const AccordionButtonFull = (props) => {
                 </p>
                 <div className="access">
                   <span>Modalità di accesso:</span>{' '}
-                  <Link to="/come-funziona" state={{section: {value: accessSectionId}}}>
+                  <Link to="/come-funziona" onClick={() => dispatch({type: 'SET:SECTION_ID', payload: {sectionId: accessSectionId}})}>
                     <p>{accessLabel}</p>
                   </Link>
                 </div>

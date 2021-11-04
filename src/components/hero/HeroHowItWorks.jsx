@@ -8,6 +8,7 @@ import { HeroParagraph } from './HeroParagraph';
 const useStyles = createUseStyles({
   heroImg: {
     position: 'relative',
+    width: '100%'
   },
   heroTitle: {
     composes: 'no_doc',
@@ -152,7 +153,11 @@ const useStyles = createUseStyles({
     backgroundColor: 'transparent',
     color: '#0066CC',
     fontWeight: '600',
-    marginBottom: '1rem'
+    marginBottom: '1rem',
+    '&:focus': {
+      outline: '2px solid #ff9900',
+      boxShadow: 'none'
+    },
   },
 });
 
@@ -169,41 +174,38 @@ export const HeroHowItWorks = ({ title, body, image, list }) => {
     <Hero>
       <div className={`${classes.heroWrapper} bg-white`}>
         <Container className="pl-3 pr-0">
-          <Row>
+          <Row className="m-0">
             <Col xs="12" lg="11" className="offset-lg-1 px-0">
               <div
                 className={`${classes.contentWrapper} bg-white d-flex flex-column`}
               >
-                <Row>
-                  <Col lg={6} xs={12}>
+                <Row className="m-0">
+                  <Col lg={6} xs={12} className="pr-3">
                     <div className={classes.textWrapper}>
                       <HeroTitle title={title} className={classes.heroTitle} />
                       <HeroParagraph text={body} />
                     </div>
                     <div className={classes.listWrapper}>
-                      {list.map((listItems) => {
-                        const { title, items } = listItems;
-                        return (
-                          <div className={classes.list}>
-                            <span className={classes.listTitle}>{title}</span>
-                            <div className={classes.listItemsWrapper}>
-                              {items.map((item) => {
-                                return (
-                                  <button onClick={() => scrollIntoView(item.anchor)} className={classes.listItem}>
-                                    {item.item}
-                                  </button>
-                                );
-                              })}
-                            </div>
+                      {list.map((listItem) => (
+                        <div key={listItem.title} className={classes.list}>
+                          <span className={classes.listTitle}>{listItem.title}</span>
+                          <div className={classes.listItemsWrapper}>
+                            {listItem.items.map((item) => (
+                              <React.Fragment key={item.item}>
+                                <button onClick={() => scrollIntoView(item.anchor)} className={classes.listItem}>
+                                  {item.item}
+                                </button>
+                              </React.Fragment>
+                            ))}
                           </div>
-                        );
-                      })}
+                        </div>
+                      ))}
                     </div>
                   </Col>
                   <Col
                     xs={12}
                     lg={6}
-                    className="d-flex d-lg-block mt-4 mt-lg-0 justify-content-center pr-0"
+                    className="d-flex d-lg-block mt-4 mt-lg-0 justify-content-center"
                   >
                     <HeroBackground image={image} className={classes.heroImg} />
                   </Col>

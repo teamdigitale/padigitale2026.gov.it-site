@@ -14,15 +14,14 @@ import { SupportSection } from './faq/SupportSection';
 const { title: seoTitle, description: seoDescription } = seo.comeFunzionaPage;
 
 export const ComeFunzionaPage = (props) => {
-  console.log(props.section);
-  
   useEffect(() => {
     if (props.section) {
-      document.querySelector('#' + props.section.value).scrollIntoView({
+      document.querySelector('#' + props.section).scrollIntoView({
         behavior: 'smooth',
       });
     }
-  }, []);
+  }, [props.section]);
+
   return (
   <>
     <SEO title={seoTitle} description={seoDescription} />
