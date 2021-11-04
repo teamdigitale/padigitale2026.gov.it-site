@@ -20,8 +20,17 @@ const useStyles = createUseStyles({
     backgroundColor: '#0066CC',
   },
   navigationBtn: {
+    backgroundColor: 'transparent',
+    border: 'none',
+    outline: 'none',
+    padding: '0',
+    '&:focus': {
+      outline: 'none',
+    },
     '&.swiper-button-disabled': {
-      opacity: '0.2',
+      '& svg': {
+        opacity: '0.2',
+      },
     },
   },
   sidePrevButton: {
@@ -29,18 +38,26 @@ const useStyles = createUseStyles({
     position: 'absolute',
     left: '0',
     top: '50%',
-    transform: 'translateY(-50%)'
+    transform: 'translateY(-50%)',
   },
   sideNextButton: {
     composes: 'd-none justify-content-center pt-3 d-lg-flex',
     position: 'absolute',
     right: '0',
     top: '50%',
-    transform: 'translateY(-50%)'
+    transform: 'translateY(-50%)',
   },
 });
 
-export const DesktopSwiper = ({ slides, breakpoints, pagination, mobilePagination, desktopNavigation, navigation, className }) => {
+export const DesktopSwiper = ({
+  slides,
+  breakpoints,
+  pagination,
+  mobilePagination,
+  desktopNavigation,
+  navigation,
+  className,
+}) => {
   const classes = useStyles();
   const [paginationId, setPaginationId] = useState(null);
   const [nextBtnId, setnextBtnId] = useState(null);
@@ -105,38 +122,22 @@ export const DesktopSwiper = ({ slides, breakpoints, pagination, mobilePaginatio
       )}
       {desktopNavigation && (
         <div className="d-none justify-content-center pt-3 d-lg-flex">
-          <Icon
-            data-prev-navigation-id={prevBtnId}
-            className={classes.navigationBtn}
-            color="primary"
-            icon="it-arrow-left-circle"
-            size="lg"
-          />
-          <Icon
-            data-next-navigation-id={nextBtnId}
-            className={classes.navigationBtn}
-            color="primary"
-            icon="it-arrow-right-circle"
-            size="lg"
-          />
+          <button className={classes.navigationBtn} type="button" data-prev-navigation-id={prevBtnId}>
+            <Icon color="primary" icon="it-arrow-left-circle" size="lg" />
+          </button>
+          <button className={classes.navigationBtn} type="button" data-next-navigation-id={nextBtnId}>
+            <Icon color="primary" icon="it-arrow-right-circle" size="lg" />
+          </button>
         </div>
       )}
       {navigation && (
         <div className="justify-content-center pt-3 d-flex">
-          <Icon
-            data-prev-navigation-id={prevBtnId}
-            className={classes.navigationBtn}
-            color="primary"
-            icon="it-arrow-left-circle"
-            size="lg"
-          />
-          <Icon
-            data-next-navigation-id={nextBtnId}
-            className={classes.navigationBtn}
-            color="primary"
-            icon="it-arrow-right-circle"
-            size="lg"
-          />
+          <button className={classes.navigationBtn} type="button" data-prev-navigation-id={prevBtnId}>
+            <Icon color="primary" icon="it-arrow-left-circle" size="lg" />
+          </button>
+          <button className={classes.navigationBtn} type="button" data-next-navigation-id={nextBtnId}>
+            <Icon color="primary" icon="it-arrow-right-circle" size="lg" />
+          </button>
         </div>
       )}
     </>
