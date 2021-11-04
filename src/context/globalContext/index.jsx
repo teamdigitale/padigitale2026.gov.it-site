@@ -1,4 +1,4 @@
-import React, { createContext, useReducer } from 'react';
+import React, { createContext, useReducer, useState, useEffect } from 'react';
 
 const initialState = {sectionId: null};
 
@@ -15,14 +15,20 @@ export const GlobalStateContext = createContext(null);
 export const GlobalStateContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
+  const [reactContextDevtool, setReactContextDevtool] = useState();
+
+  useEffect(() => {
+    setReactContextDevtool(window._REACT_CONTEXT_DEVTOOL)
+  }, []);
+
   return (
     <GlobalStateContext.Provider value={[state, dispatch]}>
       {((values) => {
         if (
-          window._REACT_CONTEXT_DEVTOOL &&
+          reactContextDevtool &&
           process.env.NODE_ENV === 'development'
         ) {
-          window._REACT_CONTEXT_DEVTOOL({
+          reactContextDevtool({
             id: 'GlobalStateContext',
             displayName: 'GlobalStateContext',
             values,
