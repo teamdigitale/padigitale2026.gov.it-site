@@ -28,6 +28,7 @@ const useStyles = createUseStyles({
     composes: 'it-hero-text-wrapper bg-blue',
     paddingLeft: '0 !important',
     zIndex: 2,
+    paddingTop: '3.75rem !important',
     '@media (max-width: 991px)': {
       textAlign: 'center',
     },
