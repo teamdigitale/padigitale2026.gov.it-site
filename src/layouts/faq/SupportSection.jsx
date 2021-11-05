@@ -20,6 +20,7 @@ const useStyles = createUseStyles({
     marginBottom: '0.555rem',
     textTransform: 'uppercase',
     textAlign: 'center',
+    fontWeight: '600',
     '@media (min-width: 768px)': {
       textAlign: 'left',
     },
