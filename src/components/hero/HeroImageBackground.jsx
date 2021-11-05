@@ -32,7 +32,7 @@ const useStyles = createUseStyles({
     display: 'flex',
     '&.overlap': {
       marginBottom: '-7rem',
-      paddingBottom: '4rem',
+      paddingBottom: '11rem',
     },
     '@media (max-width: 992px)': {
       flexDirection: 'column',
@@ -151,7 +151,7 @@ export const HeroImageBackground = ({
                 </div>
               </div>
             </Col>
-            <Col xs={12} lg={5} className='pr-0 offset-lg-1'>
+            <Col xs={12} lg={5} className='pr-0 offset-lg-1 mt-4 mt-lg-0'>
               <HeroBackground image={image} className={classes.heroImg}/>
             </Col>
           </Row>

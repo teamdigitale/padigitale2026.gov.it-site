@@ -55,7 +55,7 @@ export const IndexPage = () => (
       firstButtonLabel={heroDigital.firstButtonLabel}
       firstButtonAriaLabel={heroDigital.firstButtonAriaLabel}
       firstButtonClass="btn-light"
-      firstButtonHref="#"
+      firstButtonHref={heroDigital.linkTo}
       overlap={true}
     />
     <HeroCarousel content={heroCarouselNews} title={heroCarouselNewsTitle} />

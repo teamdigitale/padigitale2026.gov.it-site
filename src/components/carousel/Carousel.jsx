@@ -76,7 +76,7 @@ const useStyles = createUseStyles({
   },
   newsUpdateSection: {
     backgroundColor: '#fff',
-    padding: '1.111rem 0',
+    padding: '1.111rem 0 4rem',
     '& .swiper': {
       margin: '0 -1.111rem',
       '@media (max-width: 992px)': {
