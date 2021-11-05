@@ -78,6 +78,9 @@ const useStyles = createUseStyles({
       '@media (max-width: 992px)': {
         fontSize: '1.25rem',
       },
+      '@media (min-width: 992px)': {
+        maxWidth: '26.2rem',
+      },
     },
     '& .container .it-hero-text-wrapper .btn': {
       fontSize: '1rem',
