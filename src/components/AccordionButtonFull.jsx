@@ -122,6 +122,11 @@ const useStyles = createUseStyles({
       '@media (min-width: 992px)': {
         padding: '0.444rem 2.222rem 1.778rem',
       },
+      '& .description': {
+        '@media (min-width: 992px)': {
+          maxWidth: '44rem'
+        },
+      }
     },
     '& .stalls': {
       fontSize: '0.875rem',
@@ -272,7 +277,7 @@ export const AccordionButtonFull = (props) => {
           >
             <Card>
               <CardBody>
-                <p>{description}</p>
+                <p className="description">{description}</p>
                 <p className="stalls">
                   Platea beneficiaria: <span>{stalls}</span>
                 </p>
