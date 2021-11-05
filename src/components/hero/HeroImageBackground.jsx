@@ -7,11 +7,6 @@ import { HeroButton } from './HeroButton';
 import { HeroParagraph } from './HeroParagraph';
 
 const useStyles = createUseStyles({
-  heroImg: {
-    position: 'absolute',
-    right: '0',
-    top: '0',
-  },
   heroTitle: {
     composes: 'no_doc',
     fontSize: '2.222rem',
@@ -31,13 +26,25 @@ const useStyles = createUseStyles({
     composes: 'it-hero-wrapper',
     position: 'relative',
     display: 'flex',
+    padding: '0 0 2rem',
+    '&:not(.overlap)': {
+      minHeight: 'auto',
+      '@media (max-width: 992px)': {
+        '& .container .it-hero-text-wrapper': {
+          padding: '4rem 0 1rem',
+        },
+      },
+    },
     '&.overlap': {
       marginBottom: '-7rem',
       paddingBottom: '4rem',
+      '@media (max-width: 992px)': {
+        paddingBottom: '7rem',
+      },
     },
     '@media (max-width: 992px)': {
       flexDirection: 'column',
-      paddingBottom: '5rem',
+      paddingBottom: '.5rem',
       '& .container .it-hero-text-wrapper': {
         padding: '120px 54% 168px 26px',
       },
