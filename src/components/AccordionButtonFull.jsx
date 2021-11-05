@@ -58,11 +58,15 @@ const useStyles = createUseStyles({
       marginTop: '-1.111rem',
     },
     '& .tag-title': {
+      textTransform: 'uppercase',
       marginBottom: '0.444rem',
       textAlign: 'center',
+      fontSize: '0.875rem',
+      lineHeight: '1.4',
       '@media (min-width: 992px)': {
         marginBottom: '0',
         marginRight: '0.444rem',
+        fontSize: '0.778rem'
       },
     },
     '& .tag-wrapper': {
