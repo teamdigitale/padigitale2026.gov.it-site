@@ -162,7 +162,7 @@ const MainFooter = () => {
             </ExternalLink>
           </div>
           <div className="info">
-            <a href="#" className={classes.seeMore}>
+            <a href="/come-funziona" className={classes.seeMore}>
               Scopri l&apos;iniziativa
             </a>
           </div>
