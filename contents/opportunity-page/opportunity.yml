@@ -157,7 +157,7 @@ beneficiaries:
     money: '750 <span>milioni di euro<span>'
     tags:
       - value: pa-centrali
-        label: Pa Centrali
+        label: PA Centrali
       - value: asl
         label: ASL
       - label: Aziende Ospedaliere
@@ -189,7 +189,7 @@ beneficiaries:
     money: '285 <span>milioni di euro<span>'
     tags:
       - value: pa-centrali
-        label: Pa Centrali
+        label: PA Centrali
       - value: asl
         label: ASL
       - label: Aziende Ospedaliere
@@ -215,7 +215,7 @@ beneficiaries:
     money: '245 <span>milioni di euro<span>'
     tags:
       - value: pa-centrali
-        label: Pa Centrali
+        label: PA Centrali
       - value: comuni
         label: Comuni
     description: Sviluppare e implementare la Piattaforma notifiche, lo strumento che le PA utilizzeranno per la notificazione di atti amministrativi a valore legale verso persone fisiche e giuridiche, contribuendo ad una drastica riduzione di costi e tempo per cittadini ed enti. 
