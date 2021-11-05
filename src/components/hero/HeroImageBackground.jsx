@@ -7,17 +7,13 @@ import { HeroButton } from './HeroButton';
 import { HeroParagraph } from './HeroParagraph';
 
 const useStyles = createUseStyles({
-  heroTitleText: {
-    composes: 'no_doc',
-    display: 'block',
-    fontSize: '2.667rem',
-    '@media (min-width: 992px)': {
-      maxWidth: '26.2rem',
-    },
+  heroTitle: {
+    composes: 'no_doc title-hero',
+    fontSize: '2.222rem',
     '@media (max-width: 992px)': {
       display: 'flex',
       justifyContent: 'center',
-      fontSize: '2.5',
+      fontSize: '1.778rem',
       textAlign: 'center',
     },
   },
@@ -33,10 +29,24 @@ const useStyles = createUseStyles({
     padding: '0 0 2rem',
     '&:not(.overlap)': {
       minHeight: 'auto',
-      '@media (max-width: 992px)': {
-        '& .container .it-hero-text-wrapper': {
+      '& .container .it-hero-text-wrapper': {
+        padding: '5rem 0',
+        '@media (max-width: 992px)': {
           padding: '4rem 0 1rem',
         },
+        '& .title-hero': {
+          fontSize: '2.5rem',
+          '@media (min-width: 992px)': {
+            maxWidth: '26.2rem',
+            fontSize: '2.667rem',
+            display: 'block',
+          },
+        },
+        '& p': {
+          '@media (min-width: 992px)': {
+            maxWidth: '26.2rem',
+          },
+        }
       },
     },
     '&.overlap': {
@@ -81,9 +91,6 @@ const useStyles = createUseStyles({
       fontSize: '1.333rem',
       '@media (max-width: 992px)': {
         fontSize: '1.25rem',
-      },
-      '@media (min-width: 992px)': {
-        maxWidth: '26.2rem',
       },
     },
     '& .container .it-hero-text-wrapper .btn': {
@@ -137,7 +144,7 @@ export const HeroImageBackground = ({
                 className={`${classes.contentWrapper} ${theme}`}
               >
                 <div>
-                  <HeroTitle title={title} className={classes.heroTitleText} />
+                  <HeroTitle title={title} className={classes.heroTitle} />
                   <HeroParagraph text={body} />
                   <div className={classes.buttonContainer}>
                     <HeroButton
