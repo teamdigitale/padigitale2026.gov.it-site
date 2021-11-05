@@ -284,6 +284,26 @@ modal:
       label: Fornitore IT
     - value: other
       label: Altro
+  selectInQuanto:
+    - label: Dirigente dell’amministrazione
+    - value: dirigente-administration
+    - label: Dirigente sistemi IT dell’amministrazione
+    - value: dirigente-it-administration
+    - label: Dipendente dell’amministrazione
+    - value: dipendente-administration
+    - label: Altro
+    - value: other
+  selectMessage:
+    - label: Generale
+    - value: general
+    - label: Investimenti del PNRR
+    - value: investimenti-pnrr
+    - label: Richiesta dei fondi
+    - value: richiesta-fondi
+    - label: Realizzazione dei progetti
+    - value: realizzazione-progetti
+    - label: Erogazione delle risorse
+    - value: erogazione-risorse
   modalTitle: Vuoi ricevere aggiornamenti sugli investimenti per la digitalizzazione della PA?
   modalSubtitle: Ricevi <strong>tutte le novità</strong> che riguardano <strong>la tua amministrazione</strong> <br> lasciando i tuoi contatti
   updatesLabel: AGGIORNAMENTI
@@ -295,7 +315,8 @@ modal:
   representLabel: RAPPRESENTO*
   selectPlaceholder: Scegli una voce dall’elenco
   enteValidationLabel: Per favore inserisci una denominazione ente valida.
-  denomitationEnteLabel: DENOMINAZIONE ENTE*
+  enteTypeLabel: TIPO DI ENTE/STRUTTURA*
+  enteNameLabel: NOME ENTE/STRUTTURA*
   inQuantoLabel: IN QUANTO*
   directContactLabel: CONTATTO DIRETTO
   directContactInfo: Un <strong>Team dedicato</strong> è a tua disposizione per ricevere chiarimenti sugli investimenti o approfondire alcuni temi
