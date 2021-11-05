@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import {
   Section,
   Row,
@@ -9,6 +9,8 @@ import {
   Button,
 } from 'design-react-kit';
 import { createUseStyles } from 'react-jss';
+import { Link } from 'gatsby';
+import { GlobalStateContext } from '../../context/globalContext';
 
 const useStyle = createUseStyles({
   section: {
@@ -61,6 +63,9 @@ const useStyle = createUseStyles({
         '& span': {
           fontWeight: 'normal',
         },
+        '& a': {
+          textDecoration: 'none'
+        }
       },
     },
   },
@@ -69,6 +74,7 @@ const useStyle = createUseStyles({
 export const OpportunitySection = (props) => {
   const classes = useStyle();
   const { title, list } = props;
+  const [state, dispatch] = useContext(GlobalStateContext)
 
   return (
     <Section color="muted" className={classes.section}>
@@ -80,7 +86,7 @@ export const OpportunitySection = (props) => {
               <Card spacing className={classes.cardWrapper}>
                 <CardBody>
                   <CardTitle tag="h4">
-                    <span>{item.number}</span> {item.title}
+                  <Link to="/opportunita" onClick={() => dispatch({type: 'SET:SECTION_OPPORTUNITY_ID', payload: {sectionId: item.id}})}><span>{item.number}</span> {item.title}</Link>
                   </CardTitle>
                 </CardBody>
               </Card>
