@@ -77,7 +77,6 @@ export const QuestionSection = (props) => {
         (accordion) =>
           regexp.test(accordion.title) || regexp.test(accordion.content) || regexp.test(accordion.linkLabel)
       );
-      console.log(filterAccordions);
       const newAccordions = filterAccordions.map((acc) => {
         const regex = acc.title.match(regexp);
         const regexContent = acc.content.match(regexp);
@@ -96,9 +95,7 @@ export const QuestionSection = (props) => {
 
           if (regexLink) {
             linkText = acc.linkLabel.replaceAll(/(<mark>|<\/mark>)/gim, '');
-            console.log(linkText);
             const newLink = linkText.replaceAll(regexLink, '<mark>$&</mark>');
-            console.log(newLink);
             linkText = newLink;
           }
 
