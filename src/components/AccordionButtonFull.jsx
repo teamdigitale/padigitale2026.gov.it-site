@@ -224,7 +224,6 @@ export const AccordionButtonFull = (props) => {
     description,
     stalls,
     accessLabel,
-    accessLink,
     accessSectionId,
     moreInfoLabel,
     moreInfoLink,
