@@ -8,13 +8,18 @@ hero:
       title: MODALITÀ DI ACCESSO
       items:
         - item: Soluzioni standard
+          anchor: pacchetti-standard
         - item: Presentazione progetti
+          anchor: presentazione-progetto
     - listItems:
       title: APPROFONDISCI
       items: 
         - item: Il calendario
+          anchor: calendario
         - item: I beneficiari
+          anchor: beneficiari
         - item: Gli attori coinvolti
+          anchor: attori-coinvolti
 beneficiaries:
   category: I Beneficiari
   title: La digitalizzazione a misura di territorio

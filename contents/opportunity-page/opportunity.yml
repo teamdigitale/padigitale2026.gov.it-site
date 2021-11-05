@@ -50,6 +50,7 @@ beneficiaries:
         value: asl
     description: Garantire che i sistemi, i dataset e le applicazioni della PA siano ospitati in data center altamente affidabili e con elevati standard di qualità per sicurezza, prestazioni, scalabilità, interoperabilità europea ed efficienza energetica. La misura prevede la creazione di un'infrastruttura cloud sul territorio nazionale all'avanguardia denominata "Polo Strategico Nazionale”.
     stalls: '280 enti'
+    accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
     accessLink: 'https://italiadomani.gov.it/it/investimenti/infrastrutture-digitali.html'
     moreInfoLabel: 'Leggi di più su Italia Domani'
@@ -66,6 +67,7 @@ beneficiaries:
         value: scuole
     description: Implementare un programma di supporto e incentivo per migrare sistemi, dati e applicazioni delle pubbliche amministrazioni locali verso servizi cloud qualificati.
     stalls: '16,600 enti'
+    accessSectionId: pacchetti-standard
     accessLabel: Pacchetti Standard
     accessLink: 'https://italiadomani.gov.it/content/sogei-ng/it/it/investimenti/abilitazione-e-facilitazione-migrazione-al-cloud.html'
     moreInfoLabel: 'Leggi di più su Italia Domani'
