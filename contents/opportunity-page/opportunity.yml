@@ -7,38 +7,38 @@ modalButton:
 selectBeneficiaries:
   - value: tutti
     label: Tutti
-  - value: 'pa-centrali'
-    label: 'Pubbliche Amministrazioni Centrali'
-  - value: 'comuni'
-    label: 'Comuni'
-  - value: 'province'
-    label: 'Province'
-  - value: 'province-autonome'
-    label: 'Province Autonome'
-  - value: 'regioni'
-    label: 'Regioni'
-  - value: 'enti-regionali'
-    label: 'Enti regionali'
-  - value: 'asl'
-    label: 'Aziende Sanitarie Locali'
-  - value: 'aziende-ospedaliere'
-    label: 'Aziende Ospedaliere'
   - value: 'altre-pa-locali'
     label: 'Altre Pubbliche Amministrazioni locali'
-  - value: 'scuole'
-    label: 'Scuole'
-  - value: 'universita'
-    label: 'Università'
-  - value: 'enti-diritto'
-    label: 'Enti per il diritto allo studio, agenzie, consorzi'
-  - value: 'istituti-formazione'
-    label: 'Istituti di alta formazione musicale e coreutica'
-  - value: 'enti-ricerca-pubblica'
-    label: 'Enti di ricera pubblica'
+  - value: 'aziende-ospedaliere'
+    label: 'Aziende Ospedaliere'
+  - value: 'asl'
+    label: 'Aziende Sanitarie Locali'
+  - value: 'comuni'
+    label: 'Comuni'
   - value: 'consorzi-ricerca'
     label: 'Consorzi interuniversitari di ricerca'
   - value: 'enti-servizio-civile'
     label: 'Enti iscritti all’albo del servizio civile'
+  - value: 'enti-ricerca-pubblica'
+    label: 'Enti di ricera pubblica'
+  - value: 'enti-diritto'
+    label: 'Enti per il diritto allo studio, agenzie, consorzi'
+  - value: 'enti-regionali'
+    label: 'Enti regionali'
+  - value: 'istituti-formazione'
+    label: 'Istituti di alta formazione musicale e coreutica'
+  - value: 'province'
+    label: 'Province'
+  - value: 'province-autonome'
+    label: 'Province Autonome'
+  - value: 'pa-centrali'
+    label: 'Pubbliche Amministrazioni Centrali'
+  - value: 'regioni'
+    label: 'Regioni'
+  - value: 'scuole'
+    label: 'Scuole'
+  - value: 'universita'
+    label: 'Università'
 beneficiaries:
   - number: 1.1
     title: Infrastrutture digitali
@@ -46,10 +46,11 @@ beneficiaries:
     tags:
       - value: pa-centrali
         label: PA Centrali
-      - label: Aziende Sanitarie Locali
+      - label: ASL
         value: asl
     description: Garantire che i sistemi, i dataset e le applicazioni della PA siano ospitati in data center altamente affidabili e con elevati standard di qualità per sicurezza, prestazioni, scalabilità, interoperabilità europea ed efficienza energetica. La misura prevede la creazione di un'infrastruttura cloud sul territorio nazionale all'avanguardia denominata "Polo Strategico Nazionale”.
     stalls: '280 enti'
+    accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
     accessLink: 'https://italiadomani.gov.it/it/investimenti/infrastrutture-digitali.html'
     moreInfoLabel: 'Leggi di più su Italia Domani'
@@ -58,7 +59,7 @@ beneficiaries:
     title: Abilitazione e facilitazione migrazione al Cloud
     money: '1 <span>miliardo di euro<span>'
     tags:
-      - label: Aziende Sanitarie Locali
+      - label: ASL
         value: asl
       - label: 'comuni'
         value: 'Comuni'
@@ -66,6 +67,7 @@ beneficiaries:
         value: scuole
     description: Implementare un programma di supporto e incentivo per migrare sistemi, dati e applicazioni delle pubbliche amministrazioni locali verso servizi cloud qualificati.
     stalls: '16,600 enti'
+    accessSectionId: pacchetti-standard
     accessLabel: Pacchetti Standard
     accessLink: 'https://italiadomani.gov.it/content/sogei-ng/it/it/investimenti/abilitazione-e-facilitazione-migrazione-al-cloud.html'
     moreInfoLabel: 'Leggi di più su Italia Domani'
@@ -77,7 +79,7 @@ beneficiaries:
       - value: pa-centrali
         label: PA Centrali
       - value: asl
-        label: Aziende Sanitarie Locali
+        label: ASL
       - value: comuni
         label: Comuni
       - value: regioni
@@ -97,7 +99,7 @@ beneficiaries:
       - value: pa-centrali
         label: PA Centrali
       - value: asl
-        label: Aziende Sanitarie Locali
+        label: ASL
       - value: comuni
         label: Comuni
       - value: scuole
@@ -151,7 +153,7 @@ beneficiaries:
       - value: pa-centrali
         label: Pa Centrali
       - value: asl
-        label: Aziende Sanitarie Locali
+        label: ASL
       - value: comuni
         label: Comuni
       - value: scuole
@@ -181,7 +183,7 @@ beneficiaries:
       - value: pa-centrali
         label: Pa Centrali
       - value: asl
-        label: Aziende Sanitarie Locali
+        label: ASL
       - value: comuni
         label: Comuni
       - value: scuole

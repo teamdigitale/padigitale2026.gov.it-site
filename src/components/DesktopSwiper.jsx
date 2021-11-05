@@ -11,6 +11,7 @@ SwiperCore.use([Pagination, A11y]);
 const useStyles = createUseStyles({
   swiperSlide: {
     padding: '0 1.111rem 1.111rem',
+    height: 'auto'
   },
   bullet: {
     composes: 'swiper-pagination-bullet p-2',
@@ -114,7 +115,7 @@ export const DesktopSwiper = ({
         </div>
       )}
       {mobilePagination && (
-        <div className="mt-4 pb-4 d-flex justify-content-center pt-3 d-lg-none">
+        <div className="pb-4 d-flex justify-content-center pt-3 d-lg-none">
           {paginationId && (
             <div data-swiper-id={paginationId} className="swiper-pagination" style={{ bottom: 'unset' }}></div>
           )}

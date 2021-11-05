@@ -14,10 +14,10 @@ import { HeroImageBackgroundFull } from '../components/hero/HeroImageBackgroundF
 import { HeroImage } from '../components/hero/HeroImage';
 import { HeroCarousel } from '../components/carousel/Carousel';
 import { HomeCarousel } from '../components/carousel/HomeCarousel';
-import { SupportSection } from './faq/SupportSection';
-import { OpportunitySection } from './home/OpportunitySection';
 import { SEO } from '../components/SEO';
 import seo from '../../contents/seo.yml';
+import { SupportSection } from './faq/SupportSection';
+import { OpportunitySection } from './home/OpportunitySection';
 
 const { title: seoTitle, description: seoDescription } = seo.homePage;
 
@@ -38,8 +38,8 @@ export const IndexPage = () => (
       category={heroPnrr.category}
       title={heroPnrr.title}
       body={heroPnrr.body}
-      imageUrl="/assets/placeholder.svg"
-      imageAlt="placeholder"
+      imageUrl="/assets/come-funziona-home.svg"
+      imageAlt=""
       firstButtonHref="#"
       firstButtonLabel={heroPnrr.firstButtonLabel}
       firstButtonAriaLabel={heroPnrr.firstButtonAriaLabel}
@@ -59,10 +59,6 @@ export const IndexPage = () => (
       overlap={true}
     />
     <HeroCarousel content={heroCarouselNews} title={heroCarouselNewsTitle} />
-    <SupportSection
-      supportList={support.cards}
-      title={support.title}
-      buttonLabel={support.buttonLabel}
-    />
+    <SupportSection supportList={support.cards} title={support.title} buttonLabel={support.buttonLabel} />
   </>
 );

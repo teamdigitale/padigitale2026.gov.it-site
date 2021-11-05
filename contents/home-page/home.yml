@@ -93,8 +93,10 @@ support:
   cards:
     - title: Domande frequenti
       description: Scopri i dettagli dell’iniziativa e le informazioni chiave sulle opportunità del PNRR
+      isModal: false
     - title: Contatti
       description: Compila il modulo per inviarci i tuoi suggerimenti o per avere chiarimenti sull’iniziativa
+      isModal: true
 heroMain:
   category: 'le opportunità del pnrr'
   title: Il punto di accesso per la transizione digitale della PA
