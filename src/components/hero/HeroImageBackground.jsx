@@ -7,13 +7,17 @@ import { HeroButton } from './HeroButton';
 import { HeroParagraph } from './HeroParagraph';
 
 const useStyles = createUseStyles({
-  heroTitle: {
+  heroTitleText: {
     composes: 'no_doc',
-    fontSize: '2.222rem',
+    display: 'block',
+    fontSize: '2.667rem',
+    '@media (min-width: 992px)': {
+      maxWidth: '26.2rem',
+    },
     '@media (max-width: 992px)': {
       display: 'flex',
       justifyContent: 'center',
-      fontSize: '1.778rem',
+      fontSize: '2.5',
       textAlign: 'center',
     },
   },
@@ -133,7 +137,7 @@ export const HeroImageBackground = ({
                 className={`${classes.contentWrapper} ${theme}`}
               >
                 <div>
-                  <HeroTitle title={title} className={classes.heroTitle} />
+                  <HeroTitle title={title} className={classes.heroTitleText} />
                   <HeroParagraph text={body} />
                   <div className={classes.buttonContainer}>
                     <HeroButton
