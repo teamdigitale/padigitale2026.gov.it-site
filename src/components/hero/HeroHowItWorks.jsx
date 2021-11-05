@@ -9,6 +9,15 @@ const useStyles = createUseStyles({
   heroImg: {
     position: 'relative',
     width: '100%',
+    '@media (min-width: 992px)': {
+      position: 'absolute',
+      right: '0',
+      top: '95px',
+      maxWidth: '480px',
+    },
+    '@media (min-width: 1200px)': {
+      maxWidth: '580px',
+    },
   },
   heroTitle: {
     composes: 'no_doc',
@@ -171,7 +180,7 @@ export const HeroHowItWorks = ({ title, body, image, list }) => {
   };
 
   return (
-    <Hero>
+    <Hero className="position-relative">
       <div className={`${classes.heroWrapper} bg-white`}>
         <Container className="pl-3 pr-0">
           <Row className="m-0">
@@ -200,7 +209,7 @@ export const HeroHowItWorks = ({ title, body, image, list }) => {
                       ))}
                     </div>
                   </Col>
-                  <Col xs={12} lg={6} className="d-flex d-lg-block mt-4 mt-lg-0 justify-content-center">
+                  <Col xs={12} lg={6} className="d-flex d-lg-none mt-4 mt-lg-0 justify-content-center">
                     <HeroBackground image={image} className={classes.heroImg} />
                   </Col>
                 </Row>
@@ -209,6 +218,7 @@ export const HeroHowItWorks = ({ title, body, image, list }) => {
           </Row>
         </Container>
       </div>
+      <HeroBackground image={image} className={`${classes.heroImg} d-none d-lg-block`} />
     </Hero>
   );
 };
