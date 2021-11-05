@@ -46,8 +46,10 @@ opportunity:
     - number: 1.3.1
       title: Piattaforma Digitale Nazionale Dati
     - number: 1.3.2
-      title: Esperienza dei servizi pubblici
+      title: Sportello Digitale Unico
     - number: 1.4.1
+      title: Esperienza dei servizi pubblici
+    - number: 1.4.2
       title: Accessibilità
     - number: 1.4.3
       title: Adozione PagoPA e app IO
@@ -109,6 +111,7 @@ homeCarousel:
     imageMobile: 'home-carousel-mobile-1.png'
     button: 'scopri di più'
     buttonAriaLabel: 'Scopri di più su domande frequenti e contatti'
+    linkTo: '/opportunita'
   - id: 2
     title: Fase 2, partecipare agli avvisi
     description: <strong>I primi avvisi del PNRR dedicati alla transizione digitale della PA</strong> sono online. Dalla <strong>primavera del 2022</strong>, attraverso un’<strong>area riservata</strong>, le amministrazioni possono beneficiare di un <strong>percorso guidato</strong> per aderire alle misure e richiedere i finanziamenti dedicati.
@@ -116,6 +119,7 @@ homeCarousel:
     imageMobile: 'home-carousel-mobile-2.png'
     button: 'scopri di più'
     buttonAriaLabel: 'Scopri di più su domande frequenti e contatti'
+    linkTo: '/come-funziona'
   - id: 3
     title: Fase 3, diventare protagonista
     description: 'Dall’<strong>estate del 2022</strong> le amministrazioni possono <strong>avviare i primi progetti</strong>: un team dedicato fornisce alle PA assistenza tecnica e accompagnamento nell’implementazione delle iniziative; un sistema di rendicontazione online organizzato per obiettivi semplifica il percorso delle amministrazioni.'
@@ -123,3 +127,4 @@ homeCarousel:
     imageMobile: 'home-carousel-mobile-3.png'
     button: 'scopri di più'
     buttonAriaLabel: 'Scopri di più su domande frequenti e contatti'
+    linkTo: '/come-funziona'
