@@ -103,8 +103,8 @@ timeline:
       title: Partecipare agli avvisi
       text: "<strong>I primi avvisi del PNRR dedicati alla transizione digitale della PA sono online:</strong> un’area riservata ne facilita l’adesione attraverso un percorso guidato."
     - id: 3
-      active: false
-      time: Autunno 2022
+      active: true
+      time: Estate 2022
       title: Realizzare i progetti
       text: "Le amministrazioni possono <strong>avviare i progetti:</strong> un team dedicato accompagna le PA. La rendicontazione degli interventi implementati è totalmente online."
     - id: 4
