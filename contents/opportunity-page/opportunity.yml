@@ -95,7 +95,7 @@ beneficiaries:
     accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
     moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: 'https://italiadomani.gov.it/content/sogei-ng/it/it/investimenti/dati-e-interoperabilita.html'
+    moreInfoLink: 'https://italiadomani.gov.it/it/investimenti/dati-e-interoperabilita.html'
   - number: 1.3.2
     title: Sportello Digitale Unico
     money: '90 <span>milioni di euro<span>'
@@ -119,7 +119,7 @@ beneficiaries:
     accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
     moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: 'https://italiadomani.gov.it/content/sogei-ng/it/it/investimenti/dati-e-interoperabilita.html'
+    moreInfoLink: 'https://italiadomani.gov.it/it/investimenti/dati-e-interoperabilita.html'
   - number: 1.4.1
     title: Esperienza dei servizi pubblici
     money: '613 <span>milioni di euro<span>'
@@ -133,7 +133,7 @@ beneficiaries:
     accessSectionId: pacchetti-standard
     accessLabel: Pacchetti standard
     moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: 'https://italiadomani.gov.it/content/sogei-ng/it/it/investimenti/servizi-digitali-e-cittadinanza-digitale.html'
+    moreInfoLink: 'https://italiadomani.gov.it/it/investimenti/servizi-digitali-e-cittadinanza-digitale.html'
   - number: 1.4.2
     title: Accessibilità
     money: '80 <span>milioni di euro<span>'
@@ -151,7 +151,7 @@ beneficiaries:
     accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
     moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: 'https://italiadomani.gov.it/content/sogei-ng/it/it/investimenti/servizi-digitali-e-cittadinanza-digitale.html'
+    moreInfoLink: 'https://italiadomani.gov.it/it/investimenti/servizi-digitali-e-cittadinanza-digitale.html'
   - number: 1.4.3
     title: Adozione PagoPA e app IO
     money: '750 <span>milioni di euro<span>'
@@ -183,7 +183,7 @@ beneficiaries:
     accessSectionId: pacchetti-standard
     accessLabel: Pacchetti Standard
     moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: 'https://italiadomani.gov.it/content/sogei-ng/it/it/investimenti/servizi-digitali-e-cittadinanza-digitale.html'
+    moreInfoLink: 'https://italiadomani.gov.it/it/investimenti/servizi-digitali-e-cittadinanza-digitale.html'
   - number: 1.4.4
     title: Adozione identità digitale
     money: '285 <span>milioni di euro<span>'
@@ -209,7 +209,7 @@ beneficiaries:
     accessSectionId: pacchetti-standard
     accessLabel: Pacchetti Standard
     moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: 'https://italiadomani.gov.it/content/sogei-ng/it/it/investimenti/servizi-digitali-e-cittadinanza-digitale.html'
+    moreInfoLink: 'https://italiadomani.gov.it/it/investimenti/servizi-digitali-e-cittadinanza-digitale.html'
   - number: 1.4.5
     title: Digitalizzazione degli avvisi pubblici
     money: '245 <span>milioni di euro<span>'
@@ -223,7 +223,7 @@ beneficiaries:
     accessSectionId: pacchetti-standard
     accessLabel: Pacchetti standard
     moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: 'https://italiadomani.gov.it/content/sogei-ng/it/it/investimenti/servizi-digitali-e-cittadinanza-digitale.html'
+    moreInfoLink: 'https://italiadomani.gov.it/it/investimenti/servizi-digitali-e-cittadinanza-digitale.html'
   - number: 1.4.6
     title: MaaS
     money: '40 <span>milioni di euro<span>'
@@ -235,7 +235,7 @@ beneficiaries:
     accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
     moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: 'https://italiadomani.gov.it/content/sogei-ng/it/it/investimenti/servizi-digitali-e-cittadinanza-digitale.html'
+    moreInfoLink: 'https://italiadomani.gov.it/it/investimenti/servizi-digitali-e-cittadinanza-digitale.html'
   - number: 1.5
     title: Cybersecurity
     money: '623 <span>milioni di euro<span>'
@@ -247,7 +247,7 @@ beneficiaries:
     accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
     moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: 'https://italiadomani.gov.it/content/sogei-ng/it/it/investimenti/cybersecurity-sicurezza-informatica.html'
+    moreInfoLink: 'https://italiadomani.gov.it/it/investimenti/cybersecurity-sicurezza-informatica.html'
   - number: 1.6
     title: Digitalizzazione grandi amministrazioni centrali
     money: '611,2 <span>milioni di euro<span>'
@@ -259,7 +259,7 @@ beneficiaries:
     accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
     moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: 'https://italiadomani.gov.it/content/sogei-ng/it/it/investimenti/digitalizzazione-delle-grandi-amministrazioni-centrali.html'
+    moreInfoLink: 'https://italiadomani.gov.it/it/investimenti/digitalizzazione-delle-grandi-amministrazioni-centrali.html'
   - number: 1.7.1
     title: Centri di facilitazione digitale
     money: '135 <span>milioni di euro<span>'
@@ -273,7 +273,7 @@ beneficiaries:
     accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
     moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: 'https://italiadomani.gov.it/content/sogei-ng/it/it/investimenti/competenze-digitali-di-base.html'
+    moreInfoLink: 'https://italiadomani.gov.it/it/investimenti/competenze-digitali-di-base.html'
   - number: 1.7.2
     title: Servizio civile digitale
     money: '60 <span>milioni di euro<span>'
@@ -285,7 +285,7 @@ beneficiaries:
     accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
     moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: 'https://italiadomani.gov.it/content/sogei-ng/it/it/investimenti/competenze-digitali-di-base.html'
+    moreInfoLink: 'https://italiadomani.gov.it/it/investimenti/competenze-digitali-di-base.html'
 modal:
   selectRepresent:
     - value: public-administration
