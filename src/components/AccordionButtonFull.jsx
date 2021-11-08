@@ -280,7 +280,7 @@ export const AccordionButtonFull = (props) => {
               <CardBody>
                 <p className="description">{description}</p>
                 <p className="stalls">
-                  Platea beneficiaria: <span>{stalls}</span>
+                  Platea potenziale: <span>{stalls}</span>
                 </p>
                 <div className="access">
                   <span>Modalità di accesso:</span>{' '}
