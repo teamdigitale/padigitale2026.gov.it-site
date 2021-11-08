@@ -7,8 +7,8 @@ heroDigital:
   firstButtonAriaLabel: VAI AL SITO Italia digitale 2026 (Collegamento esterno - Apre su nuova scheda)
 heroPnrr:
   category: COME FUNZIONA PA digitale 2026
-  title: Come accedere alle opportunità del PNRR
-  body: <strong>PA digitale 2026</strong> è la piattaforma per accedere alle risorse dedicate alla <strong>transizione digitale</strong> e accompagnare le amministrazioni nel percorso verso Italia digitale 2026
+  title: Come accedere alle misure del PNRR
+  body: <strong>PA digitale 2026</strong> è la piattaforma per accedere alle risorse dedicate alla <strong>transizione digitale</strong> e assistere le amministrazioni nel percorso verso Italia digitale 2026
   firstButtonLabel: SCOPRI DI PIÙ
   firstButtonAriaLabel: Scopri di più su come accedere alle opportunità del PNRR
   secondButtonLabel: VEDI I BENEFICIARI
@@ -115,26 +115,26 @@ support:
       isModal: true
 heroMain:
   category: 'le misure del pnrr'
-  title: Il punto di accesso per la transizione digitale della PA
+  title: Il punto di accesso alle risorse per la transizione digitale della PA
   body: PA digitale 2026 è la piattaforma che consente alle amministrazioni di richiedere i fondi del PNRR dedicati alla transizione digitale, rendicontare l’avanzamento dei progetti e ricevere assistenza
 homeCarousel:
   - id: 1
-    title: Fase 1, conoscere le opportunità
-    description: <strong>Informazioni e aggiornamenti</strong> per accompagnare le amministrazioni verso le opportunità di Italia digitale 2026. A partire dall'<strong>autunno del 2021</strong> le PA hanno accesso alle risorse necessarie per prepararsi ad aderire agli avvisi, la cui pubblicazione è prevista per la <strong>primavera del 2022.</strong> 
+    title: Fase 1, conoscere le misure
+    description: <strong>Informazioni e aggiornamenti</strong> per permettere alle amministrazioni di conoscere le misure del PNRR per la digitalizzazione della PA. Dall'<strong>autunno del 2021</strong> su PA digitale 2026 sarà possibile capire il funzionamento degli avvisi, la cui pubblicazione è prevista per la <strong>primavera del 2022.</strong> 
     image: 'home-carousel-1.svg'
     imageMobile: 'home-carousel-mobile-1.svg'
     button: 'scopri di più'
     buttonAriaLabel: 'Scopri di più su domande frequenti e contatti'
   - id: 2
     title: Fase 2, partecipare agli avvisi
-    description: <strong>I primi avvisi del PNRR dedicati alla transizione digitale della PA</strong> sono online. Dalla <strong>primavera del 2022</strong>, attraverso un’<strong>area riservata</strong>, le amministrazioni possono beneficiare di un <strong>percorso guidato</strong> per aderire alle misure e richiedere i finanziamenti dedicati.
+    description: Dalla <strong>primavera del 20220</strong> saranno pubblicati i <strong>primi avvisi del PNRR dedicati alla digitalizzazione della PA</strong>. Attraverso un’area riservata le amministrazioni potranno compilare un modulo online per <strong>aderire alle misure e richiedere i finanziamenti dedicati</strong>.
     image: 'home-carousel-2.svg'
     imageMobile: 'home-carousel-mobile-2.svg'
     button: 'scopri di più'
     buttonAriaLabel: 'Scopri di più su domande frequenti e contatti'
   - id: 3
-    title: Fase 3, diventare protagonista
-    description: 'Dall’<strong>estate del 2022</strong> le amministrazioni possono <strong>avviare i primi progetti</strong>: un team dedicato fornisce alle PA assistenza tecnica e accompagnamento nell’implementazione delle iniziative; un sistema di rendicontazione online organizzato per obiettivi semplifica il percorso delle amministrazioni.'
+    title: Fase 3, avviare i progetti
+    description: 'Dall’<strong>estate del 2022</strong> le amministrazioni potranno <strong>avviare i primi progetti</strong>: un team dedicato fornirà alle PA assistenza tecnica nell’implementazione delle iniziative; un sistema di rendicontazione online organizzato per obiettivi semplificherà il percorso delle amministrazioni.'
     image: 'home-carousel-3.svg'
     imageMobile: 'home-carousel-mobile-3.svg'
     button: 'scopri di più'
