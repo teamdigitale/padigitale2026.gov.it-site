@@ -44,6 +44,10 @@ const useStyles = createUseStyles({
       '@media (min-width: 992px)': {
         padding: '1.666rem 2.666rem 2.666rem',
       },
+      '& mark': {
+        backgroundColor: '#e3e8f4',
+        padding: '0 2px',
+      },
     },
   },
   linkAccordion: {
