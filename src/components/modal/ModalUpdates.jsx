@@ -203,6 +203,24 @@ const useStyles = createUseStyles({
       display: 'block',
     },
   },
+  radioCustom: {
+    '&.form-check [type=checkbox]+label::after': {
+      borderRadius: '50%',
+    },
+    '&.form-check [type=checkbox]:checked+label::before': {
+      width: '12px',
+      border: 'none',
+      height: '12px',
+      borderRadius: '50%',
+      transform: 'none',
+      background: '#06c',
+      top: '8px',
+      left: '4px',
+    },
+    '&.form-check [type=checkbox]:checked+label::after': {
+      background: 'none',
+    },
+  },
 });
 
 export const ModalUpdates = ({ initialState, handleToggle }) => {
@@ -210,6 +228,7 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
   const [selectValue, setSelectValue] = useState(null);
   const [textareaState, setTextareaState] = useState('not-active');
   const [enteState, setEnteState] = useState('');
+  const [radioState, setRadioState] = useState(false);
 
   const setFocusStyleOnSelect = () => {
     const selectInputArr = document.querySelectorAll('.modal .select input');
@@ -632,11 +651,11 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                   <legend className={classes.selectLabel}>
                     {radioGroupLabel}
                   </legend>
-                  <FormGroup check>
+                  <FormGroup check className={classes.radioCustom}>
                     <input
                       className={errors.radio1 ? 'is-invalid' : ''}
                       name="gruppo1"
-                      type="radio"
+                      type="checkbox"
                       id="radio1"
                       {...register('radio1', { required: true })}
                     />
@@ -644,11 +663,11 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                       {comunicationRadio}
                     </Label>
                   </FormGroup>
-                  <FormGroup check>
+                  <FormGroup check className={classes.radioCustom}>
                     <input
                       className={errors.radio2 ? 'is-invalid' : ''}
                       name="gruppo2"
-                      type="radio"
+                      type="checkbox"
                       id="radio2"
                       {...register('radio2', { required: true })}
                     />
@@ -711,7 +730,9 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                   />
                 </svg>
 
-                <span className="sr-only">Chiudi notifica: Titolo notifica</span>
+                <span className="sr-only">
+                  Chiudi notifica: Titolo notifica
+                </span>
               </button>
             </div>
           </div>
