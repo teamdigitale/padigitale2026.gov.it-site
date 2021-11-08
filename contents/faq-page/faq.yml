@@ -42,8 +42,8 @@ questions:
         linkLabel: Scopri la strategia Italia digitale 2026
         link: 'https://innovazione.gov.it/dipartimento/focus/italia-digitale-2026/'
         ariaLabel: testo aria label
-      - title: Cos’è “Prossima PA”?
-        content: “Prossima PA” è il sito del Dipartimento per la trasformazione digitale, guidato dal Ministro per l’innovazione tecnologica e la transizione digitale, che permette alla PA di accedere ai fondi di Italia digitale 2026. Il sito sarà il punto unico di accesso per avere informazioni sugli avvisi dedicati alla digitalizzazione della PA, fare richiesta di accesso ai fondi e rendicontare l’avanzamento dei progetti. Inoltre è possibile richiedere assistenza diretta e avere tutte le info sulle azioni di accompagno previste dal Dipartimento per la trasformazione digitale della Presidenza del Consiglio dei ministri.
+      - title: Cos’è “PA digitale 2026”?
+        content: “PA digitale 2026” è il sito del Dipartimento per la trasformazione digitale, guidato dal Ministro per l’innovazione tecnologica e la transizione digitale, che permette alla PA di accedere ai fondi di Italia digitale 2026. Il sito sarà il punto unico di accesso per avere informazioni sugli avvisi dedicati alla digitalizzazione della PA, fare richiesta di accesso ai fondi e rendicontare l’avanzamento dei progetti. Inoltre è possibile richiedere assistenza diretta e avere tutte le info sulle azioni di accompagno previste dal Dipartimento per la trasformazione digitale della Presidenza del Consiglio dei ministri.
   - title: Investimenti del PNRR
     description: Gli investimenti di Italia digitale 2026 previsti dal Piano Nazionale di Ripresa e Resilienza (PNRR)
     sectionId: investimenti
