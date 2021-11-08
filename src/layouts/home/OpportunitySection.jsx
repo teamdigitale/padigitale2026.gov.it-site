@@ -86,7 +86,7 @@ export const OpportunitySection = (props) => {
               <Card spacing className={classes.cardWrapper}>
                 <CardBody>
                   <CardTitle tag="h4">
-                  <Link to="/opportunita" onClick={() => dispatch({type: 'SET:SECTION_OPPORTUNITY_ID', payload: {sectionId: item.id}})}><span>{item.number}</span> {item.title}</Link>
+                  <Link to="/misure" onClick={() => dispatch({type: 'SET:SECTION_OPPORTUNITY_ID', payload: {sectionId: item.id}})}><span>{item.number}</span> {item.title}</Link>
                   </CardTitle>
                 </CardBody>
               </Card>
