@@ -14,6 +14,11 @@ import {
 } from 'design-react-kit';
 import Select from 'react-select';
 import content from '../../../contents/opportunity-page/opportunity.yml';
+import links from '../../../contents/links.yml';
+
+const {
+  internalLinks: { privacy },
+} = links;
 
 const useStyles = createUseStyles({
   modalUpdatesContainer: {
@@ -672,7 +677,7 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                       {...register('radio2', { required: true })}
                     />
                     <Label check htmlFor="radio2">
-                      {privacyRadio} <a href="#">{privacyRadioLinkLabel}</a> *
+                      {privacyRadio} <a href={privacy.linkTo}>{privacyRadioLinkLabel}</a> *
                     </Label>
                   </FormGroup>
                   <span className={classes.errorLabel}>
@@ -683,7 +688,7 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
             </Row>
           </form>
         </ModalBody>
-        <ModalFooter className="justify-content-center justify-content-md-start px-0">
+        <ModalFooter className="justify-content-center justify-content-md-start px-0 py-0">
           <Button color="primary" type="submit" form="updates-form">
             {sendButtonLabel}
           </Button>

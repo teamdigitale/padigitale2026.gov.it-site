@@ -25,7 +25,7 @@ const useStyles = createUseStyles({
       padding: '0.889rem 1.333rem',
       '& p': {
         maxWidth: '100%',
-        marginBottom: '1rem'
+        marginBottom: '1rem',
       },
     },
   },
@@ -49,9 +49,9 @@ const useStyles = createUseStyles({
   button: {
     '&:focus': {
       outline: '2px solid #ff9900',
-      boxShadow: 'none'
-    }
-  }
+      boxShadow: 'none',
+    },
+  },
 });
 
 export const ModalUpdatesButton = ({
@@ -93,7 +93,11 @@ export const ModalUpdatesButton = ({
           <Col lg={12}>
             <div className={classes.modalButtonContainer}>
               <p className={classes.text}>{label}</p>
-              <Button className={classes.button} color="primary" onClick={eventHandler}>
+              <Button
+                className={classes.button}
+                color="primary"
+                onClick={eventHandler}
+              >
                 {buttonLabel}
               </Button>
             </div>
