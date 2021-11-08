@@ -41,30 +41,46 @@ opportunity:
   cards: 
     - number: 1.1
       title: Infrastrutture digitali
+      id: inf-dig
     - number: 1.2
       title: Abilitazione e facilitazione migrazione al Cloud
+      id: abili-faci-migr
     - number: 1.3.1
       title: Piattaforma Digitale Nazionale Dati
+      id: piatt-dig-naz
     - number: 1.3.2
-      title: Esperienza dei servizi pubblici
+      title: Sportello Digitale Unico
+      id: sport-digi-unic
     - number: 1.4.1
+      title: Esperienza dei servizi pubblici
+      id: esp-serv-pubb
+    - number: 1.4.2
       title: Accessibilità
+      id: access
     - number: 1.4.3
       title: Adozione PagoPA e app IO
+      id: adoz-pago
     - number: 1.4.4
       title: Adozione identità digitale
+      id: adoz-id
     - number: 1.4.5
       title: Digitalizzazione degli avvisi pubblici
+      id: digi-avvisi
     - number: 1.4.6
       title: MaaS
+      id: maas
     - number: 1.5
       title: Cybersecurity
+      id: cyber
     - number: 1.6
       title: Digitalizzazione grandi amministrazioni centrali
+      id: digi-gran-amm
     - number: 1.7.1
       title: Centri di facilitazione digitale
+      id: centri-facili
     - number: 1.7.2
       title: Servizio civile digitale
+      id: servi-civi
 heroCarouselNews:
   - id: 1
     category: Novità
