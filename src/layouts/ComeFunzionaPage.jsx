@@ -23,39 +23,39 @@ export const ComeFunzionaPage = (props) => {
   }, [props.section]);
 
   return (
-  <>
-    <SEO title={seoTitle} description={seoDescription} />
-    <div className="sr-only">
-      <h1>{content.name}</h1>
-    </div>
-    <HeroHowItWorks
-      title={content.hero.title}
-      body={content.hero.body}
-      theme="bg-white"
-      smallText="true"
-      image="come-funziona-hero.svg"
-      list={content.hero.list}
-    />
-    <Tab
-      tabContent={content.pacchettiTabs}
-      sideDesktopNavigation
-      mobileNavigation
-      title={content.pacchettiTabs.title}
-      subtitle={content.pacchettiTabs.subtitle}
-      sectionId="pacchetti-standard"
-    />
-    <Tab
-      tabContent={content.presentazioneTabs}
-      sideDesktopNavigation
-      mobileNavigation
-      title={content.presentazioneTabs.title}
-      subtitle={content.presentazioneTabs.subtitle}
-      sectionId="presentazione-progetto"
-    />
-    <Timeline content={content.timeline} title="Il calendario" />
-    <Beneficiaries item={content.beneficiaries} />
-    <Involved title={content.involved.title} category={content.involved.category} cards={content.involved.cards} />
-    <SupportSection supportList={support.cards} title={support.title} buttonLabel={support.buttonLabel} />
-  </>
-  )
+    <>
+      <SEO title={seoTitle} description={seoDescription} />
+      <div className="sr-only">
+        <h1>{content.name}</h1>
+      </div>
+      <HeroHowItWorks
+        title={content.hero.title}
+        body={content.hero.body}
+        theme="bg-white"
+        smallText="true"
+        image="come-funziona-hero.svg"
+        list={content.hero.list}
+      />
+      <Tab
+        tabContent={content.pacchettiTabs}
+        sideDesktopNavigation
+        mobileNavigation
+        title={content.pacchettiTabs.title}
+        subtitle={content.pacchettiTabs.subtitle}
+        sectionId="soluzioni-standard"
+      />
+      <Tab
+        tabContent={content.presentazioneTabs}
+        sideDesktopNavigation
+        mobileNavigation
+        title={content.presentazioneTabs.title}
+        subtitle={content.presentazioneTabs.subtitle}
+        sectionId="presentazione-progetto"
+      />
+      <Timeline content={content.timeline} title="Il calendario" />
+      <Beneficiaries item={content.beneficiaries} />
+      <Involved title={content.involved.title} category={content.involved.category} cards={content.involved.cards} />
+      <SupportSection supportList={support.cards} title={support.title} buttonLabel={support.buttonLabel} />
+    </>
+  );
 };
