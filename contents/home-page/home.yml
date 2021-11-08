@@ -37,7 +37,7 @@ contributions:
     title: GitHub
 heroCarouselNewsTitle: Notizie e aggiornamenti
 opportunity: 
-  title: Le opportunità
+  title: Le misure
   cards: 
     - number: 1.1
       title: Infrastrutture digitali
@@ -98,7 +98,7 @@ support:
       description: Compila il modulo per inviarci i tuoi suggerimenti o per avere chiarimenti sull’iniziativa
       isModal: true
 heroMain:
-  category: 'le opportunità del pnrr'
+  category: 'le misure del pnrr'
   title: Il punto di accesso per la transizione digitale della PA
   body: PA digitale 2026 è la piattaforma che consente alle amministrazioni di richiedere i fondi del PNRR dedicati alla transizione digitale, rendicontare l’avanzamento dei progetti e ricevere assistenza
 homeCarousel:
