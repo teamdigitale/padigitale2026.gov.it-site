@@ -41,6 +41,7 @@ selectBeneficiaries:
     label: 'Università'
 beneficiaries:
   - number: 1.1
+    id: inf-dig
     title: Infrastrutture digitali
     money: '900 <span>milioni di euro<span>'
     tags:
@@ -56,6 +57,7 @@ beneficiaries:
     moreInfoLabel: 'Leggi di più su Italia Domani'
     moreInfoLink: '#'
   - number: 1.2
+    id: abili-faci-migr
     title: Abilitazione e facilitazione migrazione al Cloud
     money: '1 <span>miliardo di euro<span>'
     tags:
@@ -73,6 +75,7 @@ beneficiaries:
     moreInfoLabel: 'Leggi di più su Italia Domani'
     moreInfoLink: '#'
   - number: 1.3.1
+    id: piatt-dig-naz
     title: Piattaforma Digitale Nazionale Dati
     money: '556 <span>milioni di euro<span>'
     tags:
@@ -93,6 +96,7 @@ beneficiaries:
     moreInfoLabel: 'Leggi di più su Italia Domani'
     moreInfoLink: '#'
   - number: 1.3.2
+    id: sport-digi-unic
     title: Sportello Digitale Unico
     money: '90 <span>milioni di euro<span>'
     tags:
@@ -115,6 +119,7 @@ beneficiaries:
     moreInfoLabel: 'Leggi di più su Italia Domani'
     moreInfoLink: '#'
   - number: 1.4.1
+    id: esp-serv-pubb
     title: Esperienza dei servizi pubblici
     money: '613 <span>milioni di euro<span>'
     tags:
@@ -129,6 +134,7 @@ beneficiaries:
     moreInfoLabel: 'Leggi di più su Italia Domani'
     moreInfoLink: '#'
   - number: 1.4.2
+    id: access
     title: Accessibilità
     money: '80 <span>milioni di euro<span>'
     tags:
@@ -147,6 +153,7 @@ beneficiaries:
     moreInfoLabel: 'Leggi di più su Italia Domani'
     moreInfoLink: '#'
   - number: 1.4.3
+    id: adoz-pago
     title: Adozione PagoPA e app IO
     money: '750 <span>milioni di euro<span>'
     tags:
@@ -177,6 +184,7 @@ beneficiaries:
     moreInfoLabel: 'Leggi di più su Italia Domani'
     moreInfoLink: '#'
   - number: 1.4.4
+    id: adoz-id
     title: Adozione identità digitale
     money: '285 <span>milioni di euro<span>'
     tags:
@@ -201,6 +209,7 @@ beneficiaries:
     moreInfoLabel: 'Leggi di più su Italia Domani'
     moreInfoLink: '#'
   - number: 1.4.5
+    id: digi-avvisi
     title: Digitalizzazione degli avvisi pubblici
     money: '245 <span>milioni di euro<span>'
     tags:
@@ -215,6 +224,7 @@ beneficiaries:
     moreInfoLabel: 'Leggi di più su Italia Domani'
     moreInfoLink: '#'
   - number: 1.4.6
+    id: maas
     title: MaaS
     money: '40 <span>milioni di euro<span>'
     tags:
@@ -227,6 +237,7 @@ beneficiaries:
     moreInfoLabel: 'Leggi di più su Italia Domani'
     moreInfoLink: '#'
   - number: 1.5
+    id: cyber
     title: Cybersecurity
     money: '623 <span>milioni di euro<span>'
     tags:
@@ -239,6 +250,7 @@ beneficiaries:
     moreInfoLabel: 'Leggi di più su Italia Domani'
     moreInfoLink: '#'
   - number: 1.6
+    id: digi-gran-amm
     title: Digitalizzazione grandi amministrazioni centrali
     money: '611,2 <span>milioni di euro<span>'
     tags:
@@ -251,6 +263,7 @@ beneficiaries:
     moreInfoLabel: 'Leggi di più su Italia Domani'
     moreInfoLink: '#'
   - number: 1.7.1
+    id: centri-facili
     title: Centri di facilitazione digitale
     money: '135 <span>milioni di euro<span>'
     tags:
@@ -265,6 +278,7 @@ beneficiaries:
     moreInfoLabel: 'Leggi di più su Italia Domani'
     moreInfoLink: '#'
   - number: 1.7.2
+    id: servi-civi
     title: Servizio civile digitale
     money: '60 <span>milioni di euro<span>'
     tags:

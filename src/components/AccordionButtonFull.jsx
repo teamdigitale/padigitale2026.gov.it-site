@@ -217,6 +217,7 @@ const useStyles = createUseStyles({
 export const AccordionButtonFull = (props) => {
   const classes = useStyles();
   const {
+    id,
     number,
     title,
     money,
@@ -238,7 +239,7 @@ export const AccordionButtonFull = (props) => {
 
   return (
     <>
-      <div className={classes.collapseWrapper} role="listitem">
+      <div className={classes.collapseWrapper} role="listitem" id={id}>
         <Button
           onClick={eventHandler}
           aria-expanded={props.id === props.active}
