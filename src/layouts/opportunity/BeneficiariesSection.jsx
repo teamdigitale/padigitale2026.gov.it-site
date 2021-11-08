@@ -150,8 +150,8 @@ export const BeneficiariesSection = (props) => {
 
   return (
     <>
-      <Section className={classes.section} aria-labelledby="lista-opportunita-hader">
-        <h3 className="sr-only" id="lista-opportunita-hader">
+      <Section className={classes.section} aria-labelledby="lista-misure-hader">
+        <h3 className="sr-only" id="lista-misure-hader">
           Elenco opportunità
         </h3>
         <div className="container mt-5 px-3" id="filter-beneficiaries">
