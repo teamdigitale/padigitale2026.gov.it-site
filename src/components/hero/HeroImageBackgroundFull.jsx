@@ -72,8 +72,8 @@ const useStyles = createUseStyles({
     '& .container .it-hero-text-wrapper p': {
       fontFamily: 'Titillium Web,Geneva,Tahoma,sans-serif',
       fontSize: '1.333rem',
-      '@media (max-width: 992px)': {
-        fontSize: '1.25rem',
+      '@media (max-width: 991px)': {
+        fontSize: '1.25rem'
       },
     },
     '& .container .it-hero-text-wrapper .btn': {
