@@ -268,7 +268,7 @@ const CenterHeader = () => {
                 <img
                   className="icon"
                   src="/assets/site-logo.svg"
-                  alt="Logo prossima PA"
+                  alt="Logo PA digitale 2026"
                 />
                 <div className="d-none d-lg-inline-block">
                   <h1 className="h3 mb-0">{headerTitle}</h1>

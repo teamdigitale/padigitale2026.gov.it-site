@@ -25,7 +25,7 @@ export const PrivacyPolicyPage = () => {
   } = useStaticQuery(query);
   return (
     <>
-      <SEO title="Privacy - Prossima PA" description={seoDescription} />
+      <SEO title="Privacy - PA digitale 2026" description={seoDescription} />
       <Breadcrumb currentPage={content.breadcrumb} />
       <Hero yPaddingXLScreen={false}>
         <TextChunk html={textChunk} />
