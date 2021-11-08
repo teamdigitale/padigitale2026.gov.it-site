@@ -88,7 +88,7 @@ export const OpportunitySection = (props) => {
           ))}
         </Row>
         <div className="d-flex justify-content-center">
-          <Button className="text-uppercase" color="primary" href="/opportunita">Scopri tutte le opportunità</Button>
+          <Button className="text-uppercase" color="primary" href="/misure">Scopri tutte le misure</Button>
         </div>
       </div>
     </Section>

@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    name: 'ProssimaPA',
-    hostname: 'prossimapa.gov.it',
-    siteUrl: 'https://prossimapa.gov.it/',
+    name: 'PA digitale 2026',
+    hostname: 'padigitale2026.gov.it',
+    siteUrl: 'https://padigitale2026.gov.it/',
   },
   plugins: [
     'gatsby-plugin-sitemap',
@@ -48,7 +48,7 @@ module.exports = {
       options: {
         siteId: 'R9pxNNv0Xm',
         matomoUrl: `https://ingestion.webanalytics.italia.it/`,
-        siteUrl: 'https://prossimapa.gov.it',
+        siteUrl: 'https://padigitale2026.gov.it',
         matomoPhpScript: 'matomo.php',
         matomoJsScript: 'matomo.js',
         localScript: '/assets/matomo.js',
