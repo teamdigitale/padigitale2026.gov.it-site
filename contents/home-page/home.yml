@@ -124,7 +124,7 @@ homeCarousel:
     imageMobile: 'home-carousel-mobile-1.svg'
     button: 'scopri di più'
     buttonAriaLabel: 'Scopri di più su domande frequenti e contatti'
-    linkTo: '/opportunita'
+    linkTo: '/misure'
   - id: 2
     title: Fase 2, partecipare agli avvisi
     description: Dalla <strong>primavera del 2022</strong> saranno pubblicati i <strong>primi avvisi del PNRR dedicati alla digitalizzazione della PA</strong>. Attraverso un’area riservata le amministrazioni potranno compilare un modulo online per <strong>aderire alle misure e richiedere i finanziamenti dedicati</strong>.
