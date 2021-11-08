@@ -121,6 +121,7 @@ const useStyles = createUseStyles({
       },
     },
     '& .text': {
+      fontFamily: 'Lora',
       fontSize: '1rem',
       fontWeight: '400',
       '@media (min-width: 992px)': {

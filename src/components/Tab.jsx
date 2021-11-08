@@ -7,6 +7,7 @@ import classNames from 'classnames';
 const useStyles = createUseStyles({
   howTabsTitle: {
     color: '#004080',
+    fontWeight: '600',
     fontSize: '1.75rem',
     '@media(min-width: 992px)': {
       fontSize: '1.556rem',
@@ -102,8 +103,16 @@ const useStyles = createUseStyles({
       '& .nav-link': {
         flexBasis: '70%',
         cursor: 'pointer',
+        padding: '0.625rem 0',
         '@media (min-width: 992px)': {
           flexBasis: 'auto',
+          padding: '1.111rem 0',
+        },
+        '& span': {
+          paddingTop: '0.625rem',
+          '@media (min-width: 992px)': {
+            paddingTop: '1.111rem 0',
+          },
         },
       },
     },
@@ -112,7 +121,7 @@ const useStyles = createUseStyles({
     cursor: 'pointer',
     '&.tab-button-disabled': {
       opacity: '0.2',
-      cursor: 'unset'
+      cursor: 'unset',
     },
   },
   sidePrevButton: {
@@ -153,11 +162,13 @@ const useStyles = createUseStyles({
   },
 });
 
+// eslint-disable-next-line max-lines-per-function
 export const Tab = ({ tabContent, sideDesktopNavigation, mobileNavigation, title, subtitle, sectionId }) => {
   const classes = useStyles();
   const [tabActive, setTabActive] = useState(0);
   const [nextBtnId, setnextBtnId] = useState(null);
   const [prevBtnId, setprevBtnId] = useState(null);
+  const [isHoverTab, setIsHoverTab] = useState([]);
 
   const firstUpdate = useRef(true);
 
@@ -238,13 +249,15 @@ export const Tab = ({ tabContent, sideDesktopNavigation, mobileNavigation, title
                       role="tab"
                       aria-controls={'nav-tab-' + index + '-' + tabContent.id}
                       aria-selected={index === tabActive}
+                      onMouseEnter={() => setIsHoverTab({ [index]: true })}
+                      onMouseLeave={() => setIsHoverTab({ [index]: false })}
                     >
-                      {index === tabActive ? (
+                      {index === tabActive || isHoverTab[index] ? (
                         <img className={classes.tabLinkImage} src={`/assets/${imageActive}`} alt="" />
                       ) : (
                         <img className={classes.tabLinkImage} src={`/assets/${image}`} alt="" />
                       )}
-                      {name}
+                      <span>{name}</span>
                     </a>
                   ))}
                 </div>

@@ -8,7 +8,16 @@ import { HeroParagraph } from './HeroParagraph';
 const useStyles = createUseStyles({
   heroImg: {
     position: 'relative',
-    width: '100%'
+    width: '100%',
+    '@media (min-width: 992px)': {
+      position: 'absolute',
+      right: '0',
+      top: '95px',
+      maxWidth: '480px',
+    },
+    '@media (min-width: 1200px)': {
+      maxWidth: '580px',
+    },
   },
   heroTitle: {
     composes: 'no_doc',
@@ -156,7 +165,7 @@ const useStyles = createUseStyles({
     marginBottom: '1rem',
     '&:focus': {
       outline: '2px solid #ff9900',
-      boxShadow: 'none'
+      boxShadow: 'none',
     },
   },
 });
@@ -168,17 +177,15 @@ export const HeroHowItWorks = ({ title, body, image, list }) => {
     document.querySelector('#' + id).scrollIntoView({
       behavior: 'smooth',
     });
-  }
+  };
 
   return (
-    <Hero>
+    <Hero className="position-relative">
       <div className={`${classes.heroWrapper} bg-white`}>
         <Container className="pl-3 pr-0">
           <Row className="m-0">
             <Col xs="12" lg="11" className="offset-lg-1 px-0">
-              <div
-                className={`${classes.contentWrapper} bg-white d-flex flex-column`}
-              >
+              <div className={`${classes.contentWrapper} bg-white d-flex flex-column`}>
                 <Row className="m-0">
                   <Col lg={6} xs={12} className="pr-3">
                     <div className={classes.textWrapper}>
@@ -202,11 +209,7 @@ export const HeroHowItWorks = ({ title, body, image, list }) => {
                       ))}
                     </div>
                   </Col>
-                  <Col
-                    xs={12}
-                    lg={6}
-                    className="d-flex d-lg-block mt-4 mt-lg-0 justify-content-center"
-                  >
+                  <Col xs={12} lg={6} className="d-flex d-lg-none mt-4 mt-lg-0 justify-content-center">
                     <HeroBackground image={image} className={classes.heroImg} />
                   </Col>
                 </Row>
@@ -215,6 +218,7 @@ export const HeroHowItWorks = ({ title, body, image, list }) => {
           </Row>
         </Container>
       </div>
+      <HeroBackground image={image} className={`${classes.heroImg} d-none d-lg-block`} />
     </Hero>
   );
 };
