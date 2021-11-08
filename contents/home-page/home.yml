@@ -119,7 +119,7 @@ heroMain:
 homeCarousel:
   - id: 1
     title: Fase 1, conoscere le misure
-    description: Dall’<strong>autunno del 2021</strong> informazioni e aggiornamenti per conoscere le misure del PNRR per la digitalizzazione della PA e il funzionamento degli avvisi pubblici, la cui pubblicazione è prevista per la <strong>primavera del 2022</strong>. 
+    description: Dall’<strong>autunno del 2021</strong> informazioni e aggiornamenti per conoscere le <strong>misure del PNRR per la digitalizzazione della PA</strong> e scoprire il <strong>funzionamento degli avvisi pubblici</strong>, la cui pubblicazione è prevista per la <strong>primavera del 2022</strong>. 
     image: 'home-carousel-1.svg'
     imageMobile: 'home-carousel-mobile-1.svg'
     button: 'scopri di più'
