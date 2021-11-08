@@ -1,7 +1,7 @@
 internalLinks:
   opportunity:
-    linkTo: '/opportunita'
-    label: Le opportunità
+    linkTo: '/misure'
+    label: Le misure
     linkTop: '/#mainTop'
   howitworks:
     linkTo: '/come-funziona'

@@ -6,9 +6,9 @@ heroDigital:
   firstButtonLabel: VAI AL SITO
   firstButtonAriaLabel: VAI AL SITO Italia digitale 2026 (Collegamento esterno - Apre su nuova scheda)
 heroPnrr:
-  category: COME FUNZIONA PROSSIMA PA
+  category: COME FUNZIONA PA digitale 2026
   title: Come accedere alle opportunità del PNRR
-  body: <strong>Prossima PA</strong> è la piattaforma per accedere alle risorse dedicate alla <strong>transizione digitale</strong> e accompagnare le amministrazioni nel percorso verso Italia digitale 2026
+  body: <strong>PA digitale 2026</strong> è la piattaforma per accedere alle risorse dedicate alla <strong>transizione digitale</strong> e accompagnare le amministrazioni nel percorso verso Italia digitale 2026
   firstButtonLabel: SCOPRI DI PIÙ
   firstButtonAriaLabel: Scopri di più su come accedere alle opportunità del PNRR
   secondButtonLabel: VEDI I BENEFICIARI
@@ -100,7 +100,7 @@ support:
 heroMain:
   category: 'le opportunità del pnrr'
   title: Il punto di accesso per la transizione digitale della PA
-  body: Prossima PA è la piattaforma che consente alle amministrazioni di richiedere i fondi del PNRR dedicati alla transizione digitale, rendicontare l’avanzamento dei progetti e ricevere assistenza
+  body: PA digitale 2026 è la piattaforma che consente alle amministrazioni di richiedere i fondi del PNRR dedicati alla transizione digitale, rendicontare l’avanzamento dei progetti e ricevere assistenza
 homeCarousel:
   - id: 1
     title: Fase 1, conoscere le opportunità
