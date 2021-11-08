@@ -8,7 +8,7 @@ import { HeroParagraph } from './HeroParagraph';
 
 const useStyles = createUseStyles({
   heroTitle: {
-    composes: 'no_doc',
+    composes: 'no_doc title-hero',
     fontSize: '2.222rem',
     '@media (max-width: 992px)': {
       display: 'flex',
@@ -29,10 +29,24 @@ const useStyles = createUseStyles({
     padding: '0 0 2rem',
     '&:not(.overlap)': {
       minHeight: 'auto',
-      '@media (max-width: 992px)': {
-        '& .container .it-hero-text-wrapper': {
+      '& .container .it-hero-text-wrapper': {
+        padding: '5rem 0',
+        '@media (max-width: 992px)': {
           padding: '4rem 0 1rem',
         },
+        '& .title-hero': {
+          fontSize: '2.5rem',
+          '@media (min-width: 992px)': {
+            maxWidth: '26.2rem',
+            fontSize: '2.667rem',
+            display: 'block',
+          },
+        },
+        '& p': {
+          '@media (min-width: 992px)': {
+            maxWidth: '26.2rem',
+          },
+        }
       },
     },
     '&.overlap': {
