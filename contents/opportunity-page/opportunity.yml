@@ -61,7 +61,7 @@ beneficiaries:
     tags:
       - label: ASL
         value: asl
-      - label: 'comuni'
+      - label: 'Comuni'
         value: 'Comuni'
       - label: Scuole
         value: scuole
