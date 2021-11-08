@@ -1,6 +1,6 @@
 heroOpportunity:
-  title: Le opportunità del PNRR
-  body: 'Su Prossima PA il dettaglio delle opportunità del PNRR dedicate alla digitalizzazione della Pubblica Amministrazione: fondi allocati, beneficiari e modalità di accesso alle misure'
+  title: Le misure del PNRR
+  body: 'Su PA digitale 2026 il dettaglio delle opportunità del PNRR dedicate alla digitalizzazione della Pubblica Amministrazione: fondi allocati, beneficiari e modalità di accesso alle misure'
 modalButton:
   label: Vuoi ricevere aggiornamenti sugli investimenti per la digitalizzazione della PA? 
   buttonLabel: RICEVI AGGIORNAMENTI
@@ -41,6 +41,7 @@ selectBeneficiaries:
     label: 'Università'
 beneficiaries:
   - number: 1.1
+    id: inf-dig
     title: Infrastrutture digitali
     money: '900 <span>milioni di euro<span>'
     tags:
@@ -48,31 +49,35 @@ beneficiaries:
         label: PA Centrali
       - label: ASL
         value: asl
+      - label: Aziende Ospedaliere
+        value: aziende-ospedaliere
     description: Garantire che i sistemi, i dataset e le applicazioni della PA siano ospitati in data center altamente affidabili e con elevati standard di qualità per sicurezza, prestazioni, scalabilità, interoperabilità europea ed efficienza energetica. La misura prevede la creazione di un'infrastruttura cloud sul territorio nazionale all'avanguardia denominata "Polo Strategico Nazionale”.
     stalls: '280 enti'
     accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
-    accessLink: 'https://italiadomani.gov.it/it/investimenti/infrastrutture-digitali.html'
     moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: '#'
+    moreInfoLink: 'https://italiadomani.gov.it/it/investimenti/infrastrutture-digitali.html'
   - number: 1.2
+    id: abili-faci-migr
     title: Abilitazione e facilitazione migrazione al Cloud
     money: '1 <span>miliardo di euro<span>'
     tags:
-      - label: ASL
-        value: asl
       - label: 'comuni'
         value: 'Comuni'
       - label: Scuole
         value: scuole
+      - label: ASL
+        value: asl
+      - label: Aziende Ospedaliere
+        value: aziende-ospedaliere
     description: Implementare un programma di supporto e incentivo per migrare sistemi, dati e applicazioni delle pubbliche amministrazioni locali verso servizi cloud qualificati.
     stalls: '16,600 enti'
     accessSectionId: pacchetti-standard
     accessLabel: Pacchetti Standard
-    accessLink: 'https://italiadomani.gov.it/content/sogei-ng/it/it/investimenti/abilitazione-e-facilitazione-migrazione-al-cloud.html'
     moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: '#'
+    moreInfoLink: 'https://italiadomani.gov.it/it/investimenti/abilitazione-e-facilitazione-migrazione-al-cloud.html'
   - number: 1.3.1
+    id: piatt-dig-naz
     title: Piattaforma Digitale Nazionale Dati
     money: '556 <span>milioni di euro<span>'
     tags:
@@ -80,6 +85,8 @@ beneficiaries:
         label: PA Centrali
       - value: asl
         label: ASL
+      - label: Aziende Ospedaliere
+        value: aziende-ospedaliere
       - value: comuni
         label: Comuni
       - value: regioni
@@ -88,11 +95,12 @@ beneficiaries:
         label: Università
     description: Sviluppare una “Piattaforma Digitale Nazionale Dati” per garantire l'interoperabilità dei dati pubblici, permettendo così alle amministrazioni di erogare servizi in modo più veloce ed efficace e ai cittadini di non fornire nuovamente informazioni che la PA già possiede.
     stalls: '170 enti'
+    accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
-    accessLink: 'https://italiadomani.gov.it/content/sogei-ng/it/it/investimenti/dati-e-interoperabilita.html'
     moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: '#'
+    moreInfoLink: 'https://italiadomani.gov.it/it/investimenti/dati-e-interoperabilita.html'
   - number: 1.3.2
+    id: sport-digi-unic
     title: Sportello Digitale Unico
     money: '90 <span>milioni di euro<span>'
     tags:
@@ -100,6 +108,8 @@ beneficiaries:
         label: PA Centrali
       - value: asl
         label: ASL
+      - label: Aziende Ospedaliere
+        value: aziende-ospedaliere
       - value: comuni
         label: Comuni
       - value: scuole
@@ -110,11 +120,12 @@ beneficiaries:
         label: 'Enti per il diritto allo studio, agenzie, consorzi'
     description: Facilitare l’implementazione dello “Sportello Digitale Unico” (Single Digital Gateway), il regolamento europeo che ha l’obiettivo di uniformare l’accesso ai servizi digitali su tutto il territorio continentale, attraverso informazioni di qualità e canali di assistenza effettiva.
     stalls: '230 enti'
+    accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
-    accessLink: 'https://italiadomani.gov.it/content/sogei-ng/it/it/investimenti/dati-e-interoperabilita.html'
     moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: '#'
+    moreInfoLink: 'https://italiadomani.gov.it/it/investimenti/dati-e-interoperabilita.html'
   - number: 1.4.1
+    id: esp-serv-pubb
     title: Esperienza dei servizi pubblici
     money: '613 <span>milioni di euro<span>'
     tags:
@@ -124,11 +135,12 @@ beneficiaries:
         label: Scuole
     description: Migliorare l'esperienza dei servizi pubblici digitali definendo modelli collaudati e riutilizzabili per la creazione di siti internet e l’erogazione di servizi pubblici digitali.
     stalls: '16,500 enti'
+    accessSectionId: pacchetti-standard
     accessLabel: Pacchetti standard
-    accessLink: 'https://italiadomani.gov.it/content/sogei-ng/it/it/investimenti/servizi-digitali-e-cittadinanza-digitale.html'
     moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: '#'
+    moreInfoLink: 'https://italiadomani.gov.it/it/investimenti/servizi-digitali-e-cittadinanza-digitale.html'
   - number: 1.4.2
+    id: access
     title: Accessibilità
     money: '80 <span>milioni di euro<span>'
     tags:
@@ -142,18 +154,21 @@ beneficiaries:
         label: Altre PAL
     description: "Migliorare l'accessibilità dei servizi pubblici digitali attraverso la diffusione di strumenti e strategie condivise: da test di usabilità ad attività di comunicazione e disseminazione passando per lo sviluppo di kit dedicati e altro."
     stalls: '54 enti'
+    accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
-    accessLink: 'https://italiadomani.gov.it/content/sogei-ng/it/it/investimenti/servizi-digitali-e-cittadinanza-digitale.html'
     moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: '#'
+    moreInfoLink: 'https://italiadomani.gov.it/it/investimenti/servizi-digitali-e-cittadinanza-digitale.html'
   - number: 1.4.3
+    id: adoz-pago
     title: Adozione PagoPA e app IO
     money: '750 <span>milioni di euro<span>'
     tags:
       - value: pa-centrali
-        label: Pa Centrali
+        label: PA Centrali
       - value: asl
         label: ASL
+      - label: Aziende Ospedaliere
+        value: aziende-ospedaliere
       - value: comuni
         label: Comuni
       - value: scuole
@@ -172,18 +187,21 @@ beneficiaries:
         label: Consorzi interuniversitari di ricerca
     description: Accelerare l'adozione di PagoPa, l'applicazione digitale per i pagamenti tra cittadini e pubbliche amministrazione, e di app IO quale principale punto di contatto tra cittadini e amministrazione
     stalls: '17,500 enti'
+    accessSectionId: pacchetti-standard
     accessLabel: Pacchetti Standard
-    accessLink: 'https://italiadomani.gov.it/content/sogei-ng/it/it/investimenti/servizi-digitali-e-cittadinanza-digitale.html'
     moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: '#'
+    moreInfoLink: 'https://italiadomani.gov.it/it/investimenti/servizi-digitali-e-cittadinanza-digitale.html'
   - number: 1.4.4
+    id: adoz-id
     title: Adozione identità digitale
     money: '285 <span>milioni di euro<span>'
     tags:
       - value: pa-centrali
-        label: Pa Centrali
+        label: PA Centrali
       - value: asl
         label: ASL
+      - label: Aziende Ospedaliere
+        value: aziende-ospedaliere
       - value: comuni
         label: Comuni
       - value: scuole
@@ -196,25 +214,27 @@ beneficiaries:
         label: Altre PAL
     description: Favorire l'adozione dell’identità digitale (Sistema Pubblico di Identità Digitale, SPID e Carta d'Identità Elettronica, CIE) e dell'Anagrafe nazionale della popolazione residente (ANPR)
     stalls: '10,300 enti'
+    accessSectionId: pacchetti-standard
     accessLabel: Pacchetti Standard
-    accessLink: 'https://italiadomani.gov.it/content/sogei-ng/it/it/investimenti/servizi-digitali-e-cittadinanza-digitale.html'
     moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: '#'
+    moreInfoLink: 'https://italiadomani.gov.it/it/investimenti/servizi-digitali-e-cittadinanza-digitale.html'
   - number: 1.4.5
+    id: digi-avvisi
     title: Digitalizzazione degli avvisi pubblici
     money: '245 <span>milioni di euro<span>'
     tags:
       - value: pa-centrali
-        label: Pa Centrali
+        label: PA Centrali
       - value: comuni
         label: Comuni
     description: Sviluppare e implementare la Piattaforma notifiche, lo strumento che le PA utilizzeranno per la notificazione di atti amministrativi a valore legale verso persone fisiche e giuridiche, contribuendo ad una drastica riduzione di costi e tempo per cittadini ed enti. 
     stalls: '7,900 enti'
+    accessSectionId: pacchetti-standard
     accessLabel: Pacchetti standard
-    accessLink: 'https://italiadomani.gov.it/content/sogei-ng/it/it/investimenti/servizi-digitali-e-cittadinanza-digitale.html'
     moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: '#'
+    moreInfoLink: 'https://italiadomani.gov.it/it/investimenti/servizi-digitali-e-cittadinanza-digitale.html'
   - number: 1.4.6
+    id: maas
     title: MaaS
     money: '40 <span>milioni di euro<span>'
     tags:
@@ -222,11 +242,12 @@ beneficiaries:
         label: Comuni
     description: "Promuovere l'adozione di Mobility as a Service (MaaS) nei comuni per digitalizzare il trasporto locale e fornire ai cittadini un'esperienza di mobilità integrata: dalla pianificazione del viaggio ai pagamenti."
     stalls: '10 enti'
+    accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
-    accessLink: 'https://italiadomani.gov.it/content/sogei-ng/it/it/investimenti/servizi-digitali-e-cittadinanza-digitale.html'
     moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: '#'
+    moreInfoLink: 'https://italiadomani.gov.it/it/investimenti/servizi-digitali-e-cittadinanza-digitale.html'
   - number: 1.5
+    id: cyber
     title: Cybersecurity
     money: '623 <span>milioni di euro<span>'
     tags:
@@ -234,11 +255,12 @@ beneficiaries:
         label: PA Centrali
     description: Rafforzare le difese della PA italiana per proteggerla dalle minacce informatiche, come frodi, ricatti e attacchi terroristici e tutti i rischi posti dalla criminalità informatica
     stalls: '6 enti'
+    accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
-    accessLink: 'https://italiadomani.gov.it/content/sogei-ng/it/it/investimenti/cybersecurity-sicurezza-informatica.html'
     moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: '#'
+    moreInfoLink: 'https://italiadomani.gov.it/it/investimenti/cybersecurity-sicurezza-informatica.html'
   - number: 1.6
+    id: digi-gran-amm
     title: Digitalizzazione grandi amministrazioni centrali
     money: '611,2 <span>milioni di euro<span>'
     tags:
@@ -246,11 +268,12 @@ beneficiaries:
         label: PA Centrali
     description: Digitalizzare le grandi amministrazioni centrali, a partire dai processi fondamentali per semplificare l’erogazione di servizi al cittadino, aumentando allo stesso tempo l'efficienza dell’apparato pubblico.
     stalls: '7 enti'
+    accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
-    accessLink: 'https://italiadomani.gov.it/content/sogei-ng/it/it/investimenti/digitalizzazione-delle-grandi-amministrazioni-centrali.html'
     moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: '#'
+    moreInfoLink: 'https://italiadomani.gov.it/it/investimenti/digitalizzazione-delle-grandi-amministrazioni-centrali.html'
   - number: 1.7.1
+    id: centri-facili
     title: Centri di facilitazione digitale
     money: '135 <span>milioni di euro<span>'
     tags:
@@ -260,11 +283,12 @@ beneficiaries:
         label: Province autonome
     description: Ampliare l’esperienza dei "Centri di facilitazione digitale", punti di accesso fisici, solitamente situati in biblioteche, scuole e centri sociali, che forniscono ai cittadini formazione sia di persona che online sulle competenze digitali al fine di supportare l’inclusione digitale
     stalls: '20 enti'
+    accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
-    accessLink: 'https://italiadomani.gov.it/content/sogei-ng/it/it/investimenti/competenze-digitali-di-base.html'
     moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: '#'
+    moreInfoLink: 'https://italiadomani.gov.it/it/investimenti/competenze-digitali-di-base.html'
   - number: 1.7.2
+    id: servi-civi
     title: Servizio civile digitale
     money: '60 <span>milioni di euro<span>'
     tags:
@@ -272,10 +296,10 @@ beneficiaries:
         label: Enti iscritti all'albo del servizio civile
     description: Sviluppare l'iniziativa “Servizio civile digitale”, finalizzata, tra le altre cose, alla formazione di circa 9.700 volontari e al coinvolgimento di 1 milione di cittadini beneficiari di attività di facilitazione digitale e di educazione digitale.
     stalls: '100 enti'
+    accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
-    accessLink: 'https://italiadomani.gov.it/content/sogei-ng/it/it/investimenti/competenze-digitali-di-base.html'
     moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: '#'
+    moreInfoLink: 'https://italiadomani.gov.it/it/investimenti/competenze-digitali-di-base.html'
 modal:
   selectRepresent:
     - value: public-administration

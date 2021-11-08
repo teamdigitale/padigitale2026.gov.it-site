@@ -5,7 +5,6 @@ import content from '../../contents/home-page/home.yml';
 import faq from '../../contents/faq-page/faq.yml';
 import { SEO } from '../components/SEO';
 import seo from '../../contents/seo.yml';
-import { ModalUpdatesButton } from '../components/modal/ModalUpdatesButton';
 import { ModalUpdates } from '../components/modal/ModalUpdates';
 import { SideNavigation } from './faq/SideNavigation';
 import { QuestionSection } from './faq/QuestionSection';
@@ -61,7 +60,9 @@ export const FaqPage = () => {
 
   function getAccordionsFiltered(question, input) {
     const regexp = new RegExp(input, 'i');
-    return question.accordions.filter((accordion) => regexp.test(accordion.title));
+    return question.accordions.filter(
+      (accordion) => regexp.test(accordion.title) || regexp.test(accordion.content) || regexp.test(accordion.linkLabel)
+    );
   }
 
   function getNewQuestions(inputValue) {

@@ -40,12 +40,12 @@ export const IndexPage = () => (
       body={heroPnrr.body}
       imageUrl="/assets/come-funziona-home.svg"
       imageAlt=""
-      firstButtonHref="#"
+      firstButtonHref="/come-funziona"
       firstButtonLabel={heroPnrr.firstButtonLabel}
       firstButtonAriaLabel={heroPnrr.firstButtonAriaLabel}
       secondButtonLabel={heroPnrr.secondButtonLabel}
       secondButtonAriaLabel={heroPnrr.secondButtonAriaLabel}
-      secondButtonHref="#"
+      secondButtonHref="/come-funziona"
     />
     <HeroImageBackground
       title={heroDigital.title}
@@ -55,7 +55,7 @@ export const IndexPage = () => (
       firstButtonLabel={heroDigital.firstButtonLabel}
       firstButtonAriaLabel={heroDigital.firstButtonAriaLabel}
       firstButtonClass="btn-light"
-      firstButtonHref="#"
+      firstButtonHref={heroDigital.linkTo}
       overlap={true}
     />
     <HeroCarousel content={heroCarouselNews} title={heroCarouselNewsTitle} />

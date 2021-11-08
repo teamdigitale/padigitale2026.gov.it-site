@@ -44,6 +44,10 @@ const useStyles = createUseStyles({
       '@media (min-width: 992px)': {
         padding: '1.666rem 2.666rem 2.666rem',
       },
+      '& mark': {
+        backgroundColor: '#e3e8f4',
+        padding: '0 2px',
+      },
     },
   },
   linkAccordion: {
@@ -98,14 +102,38 @@ export const QuestionSection = (props) => {
   useEffect(() => {
     if (inputText && inputText.length >= 3) {
       const regexp = new RegExp(inputText, 'i');
-      const filterAccordions = accordions.filter((accordion) => regexp.test(accordion.title));
+      const filterAccordions = accordions.filter(
+        (accordion) =>
+          regexp.test(accordion.title) || regexp.test(accordion.content) || regexp.test(accordion.linkLabel)
+      );
       const newAccordions = filterAccordions.map((acc) => {
         const regex = acc.title.match(regexp);
-        if (regex?.length) {
-          let text = acc.title.replace(/(<mark>|<\/mark>)/gim, '');
-          const newText = text.replace(regex, '<mark>$&</mark>');
+        const regexContent = acc.content.match(regexp);
+        let regexLink;
+
+        if (acc.linkLabel) {
+          regexLink = acc.linkLabel.match(regexp);
+        } else {
+          regexLink = null;
+        }
+
+        if (regex?.length || regexContent?.length || regexLink?.length) {
+          let text = acc.title.replaceAll(/(<mark>|<\/mark>)/gim, '');
+          let contentText = acc.content.replaceAll(/(<mark>|<\/mark>)/gim, '');
+          let linkText = acc.linkLabel;
+
+          if (regexLink) {
+            linkText = acc.linkLabel.replaceAll(/(<mark>|<\/mark>)/gim, '');
+            const newLink = linkText.replaceAll(regexLink, '<mark>$&</mark>');
+            linkText = newLink;
+          }
+
+          const newText = text.replaceAll(regex, '<mark>$&</mark>');
+          const newContent = contentText.replaceAll(regexContent, '<mark>$&</mark>');
+
           text = newText;
-          return { ...acc, title: text };
+          contentText = newContent;
+          return { ...acc, title: text, content: contentText, linkLabel: linkText };
         }
         return acc;
       });
@@ -135,7 +163,7 @@ export const QuestionSection = (props) => {
                 {accordion.link && (
                   <div className={classes.linkAccordion}>
                     <ExternalLink linkTo={accordion.link} ariaLabel={accordion.ariaLabel}>
-                      {accordion.linkLabel}
+                      <span dangerouslySetInnerHTML={{ __html: accordion.linkLabel }}></span>
                       <img src="/assets/external-icon.svg" alt="" />
                     </ExternalLink>
                   </div>

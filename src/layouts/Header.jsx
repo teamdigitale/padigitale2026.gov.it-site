@@ -19,6 +19,7 @@ import { createUseStyles } from 'react-jss';
 import links from '../../contents/links.yml';
 import labels from '../../contents/labels.yml';
 import { HeaderNav } from '../components/HeaderNav';
+import { ExternalLink } from '../components/ExternalLink';
 
 const { internalLinks, externalLinks } = links;
 const { ariaLabel, headerTitle, headerSubtitle } = labels;
@@ -82,6 +83,9 @@ const useStyle = createUseStyles({
   headerCenterWrapper: {
     height: 'auto',
     padding: [16, 0],
+    '& .it-header-center-content-wrapper .it-brand-wrapper a .icon': {
+      height: '3rem',
+    }
   },
   offCanvasWrapper: {
     padding: [13, 24],
@@ -156,6 +160,9 @@ const useStyle = createUseStyles({
       marginTop: 'auto',
       borderTop: '1px solid #E6E9F2',
     },
+    '& button': {
+      height: '100%',
+    }
   },
   headerToggler: {
     fontWeight: '600',
@@ -174,6 +181,10 @@ const useStyle = createUseStyles({
       display: 'none',
     },
   },
+  headerLink: {
+    composes: 'font-weight-bold',
+    cursor: 'pointer',
+  },
 });
 
 const SlimHeader = () => {
@@ -186,7 +197,7 @@ const SlimHeader = () => {
   return (
     <HeaderReactKit type="slim" theme="light">
       <HeaderContent>
-        <HeaderBrand className="font-weight-bold">
+        <HeaderBrand className={classes.headerLink}>
           {externalLinks.dipartimento.label}
         </HeaderBrand>
         <HeaderLinkZone aria-labelledby="siti-esterni-correlati">
@@ -206,21 +217,31 @@ const SlimHeader = () => {
           <Collapse isOpen={collapse}>
             <div className={classes.linkListWrapperCustom}>
               <LinkList className={classes.topListLink}>
-                <LinkListItem href={externalLinks.italiaDigitale.linkTo}>
+                <LinkListItem
+                  href={externalLinks.italiaDigitale.linkTo}
+                  target="_blank"
+                >
                   {externalLinks.italiaDigitale.label}
                 </LinkListItem>
-                <LinkListItem href={externalLinks.pnrr.linkTo}>
+                <LinkListItem href={externalLinks.pnrr.linkTo} target="_blank">
                   {externalLinks.pnrr.label}
                 </LinkListItem>
               </LinkList>
             </div>
           </Collapse>
         </HeaderLinkZone>
-        <img
-          className="d-none d-lg-block"
-          src="/assets/eu-flag.svg"
-          alt=""
-        ></img>
+        <ExternalLink
+          linkTo={externalLinks.eu.linkTo}
+          ariaLabel={externalLinks.eu.ariaLabel}
+          href={externalLinks.italiaDigitale.linkTo}
+          target="_blank"
+        >
+          <img
+            className="d-none d-lg-block"
+            src="/assets/eu-flag.svg"
+            alt=""
+          ></img>
+        </ExternalLink>
       </HeaderContent>
     </HeaderReactKit>
   );
@@ -247,7 +268,7 @@ const CenterHeader = () => {
                 <img
                   className="icon"
                   src="/assets/site-logo.svg"
-                  alt="Logo prossima PA"
+                  alt="Logo PA digitale 2026"
                 />
                 <div className="d-none d-lg-inline-block">
                   <h1 className="h3 mb-0">{headerTitle}</h1>
@@ -341,8 +362,7 @@ const NavHeader = ({ toggleModal }) => {
                 </Link>
               </NavItem>
               <NavItem active className={classes.updatesBtn}>
-                <Link
-                  to={internalLinks.updates.linkTo}
+                <Button
                   className="nav-link"
                   activeClassName="active"
                   onClick={() => {
@@ -353,7 +373,7 @@ const NavHeader = ({ toggleModal }) => {
                   <span className="font-weight-semibold">
                     {internalLinks.updates.label}
                   </span>
-                </Link>
+                </Button>
               </NavItem>
             </Nav>
           </div>

@@ -1,8 +1,8 @@
-title: Come funziona - Prossima PA
+title: Come funziona - PA digitale 2026
 name: Come Funziona
-hero: 
+hero:
   title: 'La transizione digitale: semplice e a misura di PA'
-  body: Sono previste due modalità di accesso ai fondi del PNRR gestiti dal Dipartimento per la trasformazione digitale. A seconda della tipologia di misura e di PA, sarà possibile accedere alle risorse o attraverso delle soluzioni standard o attraverso la presentazione di progetti.
+  body: A seconda della tipologia di misura e di PA, sarà possibile accedere alle risorse o attraverso delle soluzioni standard o attraverso la presentazione di progetti.
   list:
     - listItems:
       title: MODALITÀ DI ACCESSO
@@ -13,7 +13,7 @@ hero:
           anchor: presentazione-progetto
     - listItems:
       title: APPROFONDISCI
-      items: 
+      items:
         - item: Il calendario
           anchor: calendario
         - item: I beneficiari
@@ -23,10 +23,10 @@ hero:
 beneficiaries:
   category: I Beneficiari
   title: La digitalizzazione a misura di territorio
-  categories: 
+  categories:
     - icon: '/assets/icone-beneficiari/regioni.svg'
       name: 'Pubbliche Amministrazioni Locali'
-      items: 
+      items:
         - linkLabel: 'Comuni'
           filterId: 'comuni'
         - linkLabel: 'Enti regionali'
@@ -41,7 +41,7 @@ beneficiaries:
           filterId: 'altre-pa-locali'
     - icon: '/assets/icone-beneficiari/universita.svg'
       name: 'Istruzione e Ricerca'
-      items: 
+      items:
         - linkLabel: 'Università'
           filterId: 'universita'
         - linkLabel: 'Scuole'
@@ -56,19 +56,19 @@ beneficiaries:
           filterId: 'enti-diritto'
     - icon: '/assets/icone-beneficiari/pa-centrali.svg'
       name: 'Pubbliche Amministrazioni Centrali'
-      items: 
+      items:
         - linkLabel: 'Pubbliche Amministrazioni centrali'
           filterId: 'pa-centrali'
     - icon: '/assets/icone-beneficiari/asl.svg'
       name: 'Salute'
-      items: 
+      items:
         - linkLabel: 'Aziende Sanitarie Locali'
           filterId: 'asl'
         - linkLabel: 'Aziende Ospedaliere'
           filterId: 'aziende-ospedaliere'
     - icon: '/assets/icone-beneficiari/province-autonome.svg'
       name: 'Terzo Settore'
-      items: 
+      items:
         - linkLabel: 'Enti iscritti agli albi del servizio civile'
           filterId: 'enti-servizio-civile'
 involved:
@@ -96,27 +96,27 @@ timeline:
       active: false
       time: Autunno 2021
       title: Conoscere le opportunità
-      text: Le PA hanno accesso alle risorse necessarie per prepararsi ad aderire agli avvisi, la cui pubblicazione è prevista per la primavera del 2022. 
+      text: 'Le PA hanno accesso a informazioni e materiali per prepararsi ad aderire agli avvisi, la cui pubblicazione è prevista per la primavera del 2022.'
     - id: 2
       active: false
       time: Primavera 2022
       title: Partecipare agli avvisi
-      text: "<strong>I primi avvisi del PNRR dedicati alla transizione digitale della PA sono online:</strong> un’area riservata ne facilita l’adesione attraverso un percorso guidato."
+      text: '<strong>I primi avvisi del PNRR dedicati alla transizione digitale della PA sono pubblicati:</strong> un’area riservata ne facilita l’adesione attraverso un modulo online.'
     - id: 3
       active: true
       time: Estate 2022
-      title: Realizzare i progetti
-      text: "Le amministrazioni possono <strong>avviare i progetti:</strong> un team dedicato accompagna le PA. La rendicontazione degli interventi implementati è totalmente online."
+      title: Avviare i progetti
+      text: 'Le amministrazioni possono <strong>avviare i progetti:</strong> un team dedicato accompagna le PA. La rendicontazione degli interventi implementati è totalmente online.'
     - id: 4
       active: false
       time: Primavera 2022
       title: Realizzare i progetti
-      text: Le PA hanno accesso alle risorse necessarie per prepararsi ad aderire agli avvisi, la cui pubblicazione è prevista per la primavera del 2022. 
+      text: Le PA hanno accesso alle risorse necessarie per prepararsi ad aderire agli avvisi, la cui pubblicazione è prevista per la primavera del 2022.
     - id: 5
       active: false
       time: Autunno 2023
       title: Realizzare i progetti
-      text: Le PA hanno accesso alle risorse necessarie per prepararsi ad aderire agli avvisi, la cui pubblicazione è prevista per la primavera del 2022. 
+      text: Le PA hanno accesso alle risorse necessarie per prepararsi ad aderire agli avvisi, la cui pubblicazione è prevista per la primavera del 2022.
 pacchettiTabs:
   title: Soluzioni standard
   subtitle: Per le misure con una platea ampia di beneficiari (oltre 1.000 PA), è prevista una modalità di accesso per soluzioni standard. Un percorso semplificato e guidato che va dalla richiesta dei finanziamenti all’erogazione dei fondi.
@@ -131,11 +131,11 @@ pacchettiTabs:
         first:
           title: soluzioni standard
           image: box.svg
-          description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti. 
+          description: Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti.
         second:
           title: Soluzioni multimisura
           image: multi-box.svg
-          description: Per semplificare l’accesso ai fondi del PNRR le amministrazioni potranno - <strong>con un’unica candidatura</strong> - accedere a soluzioni multimisura, che includono, per esempio, sia finanziamenti per la migrazione al cloud che per il miglioramento dei siti web. 
+          description: Per semplificare l’accesso ai fondi del PNRR le amministrazioni potranno - <strong>con un’unica candidatura</strong> - accedere a soluzioni multimisura, che includono, per esempio, sia finanziamenti per la migrazione al cloud che per il miglioramento dei siti web.
     - id: 1
       name: Realizzazione delle iniziative
       image: second-tab.svg
@@ -146,11 +146,11 @@ pacchettiTabs:
         first:
           title: Un portale dedicato
           image: computer.svg
-          description: "“Prossima PA” <strong>accompagnerà gli Enti con risorse e informazioni</strong> lungo tutto il percorso di attuazione delle misure previste dal PNRR: dalla prima fase informativa, che precede l’avvio degli avvisi, al momento dell’accesso ai fondi e fino all’implementazione stessa delle iniziative. I <strong>fornitori saranno scelti dalla PA</strong> anche avvalendosi di fornitori certificati attraverso strumenti Consip."
+          description: '“PA digitale 2026” <strong>accompagnerà gli Enti con risorse e informazioni</strong> lungo tutto il percorso di attuazione delle misure previste dal PNRR: dalla prima fase informativa, che precede l’avvio degli avvisi, al momento dell’accesso ai fondi e fino all’implementazione stessa delle iniziative. I <strong>fornitori saranno scelti dalla PA</strong> anche avvalendosi di fornitori certificati attraverso strumenti Consip.'
         second:
           title: Un team sul territorio
           image: ItaliaPin.svg
-          description: "Per sostenere la transizione digitale dei singoli Enti, nasce un team dedicato: il <strong>Transformation Office</strong>. Questa struttura, che sarà anche dislocata sul territorio con referenti locali, è parte del Dipartimento per la trasformazione digitale, e farà da ponte con amministrazioni locali e fornitori IT della PA, con <strong>assistenza informativa e tecnica.</strong>"
+          description: 'Per sostenere la transizione digitale dei singoli Enti, nasce un team dedicato: il <strong>Transformation Office</strong>. Questa struttura, che sarà anche dislocata sul territorio con referenti locali, è parte del Dipartimento per la trasformazione digitale, e farà da ponte con amministrazioni locali e fornitori IT della PA, con <strong>assistenza informativa e tecnica.</strong>'
     - id: 2
       name: Erogazione dei fondi
       image: third-tab.svg
@@ -161,14 +161,14 @@ pacchettiTabs:
         first:
           title: 100% online
           image: computer-2.svg
-          description: Attraverso “Prossima PA” le amministrazioni potranno <strong>accedere ad un’area riservata</strong>, per seguire la gestione amministrativa delle singole iniziative finanziate attraverso l’azione del Dipartimento per la trasformazione digitale. Con l’avvio degli avvisi avranno infatti la possibilità non solo di fare <strong>richiesta per i fondi</strong>, ma anche di <strong>produrre i dati relativi all’avanzamento delle iniziative, ricevere comunicazioni dedicate</strong> e <strong>inviare documentazioni ufficiali per l’erogazione delle risorse.</strong>
+          description: Attraverso “PA digitale 2026” le amministrazioni potranno <strong>accedere ad un’area riservata</strong>, per seguire la gestione amministrativa delle singole iniziative finanziate attraverso l’azione del Dipartimento per la trasformazione digitale. Con l’avvio degli avvisi avranno infatti la possibilità non solo di fare <strong>richiesta per i fondi</strong>, ma anche di <strong>produrre i dati relativi all’avanzamento delle iniziative, ricevere comunicazioni dedicate</strong> e <strong>inviare documentazioni ufficiali per l’erogazione delle risorse.</strong>
         second:
           title: Erogazioni per obiettivi
           image: obiettivi.svg
           description: Per semplificare l’erogazione delle risorse, i contributi saranno riconosciuti alle amministrazioni sulla base del <strong>raggiungimento di specifici obiettivi predefiniti</strong>. Il processo di rendicontazione sarà quindi alleggerito, e <strong>non sarà necessario rendicontare le singole spese effettuate per ottenere i fondi.</strong>
 presentazioneTabs:
   title: Presentazione progetti
-  subtitle: Per le misure con una platea ristretta di beneficiari (fino a 1.000 PA), è stata prevista una modalità di accesso che prevede la presentazione di progetti, sempre ispirata ai principi della semplicità e della riduzione degli oneri amministrativi 
+  subtitle: Per le misure con una platea ristretta di beneficiari (fino a 1.000 PA), è stata prevista una modalità di accesso che prevede la presentazione di progetti, sempre ispirata ai principi della semplicità e della riduzione degli oneri amministrativi
   tabs:
     - id: 0
       name: Richiesta Fondi
@@ -195,11 +195,11 @@ presentazioneTabs:
         first:
           title: Un portale dedicato
           image: computer.svg
-          description: "“Prossima PA” <strong>accompagnerà gli Enti con risorse e strumenti</strong> lungo tutto il percorso di attuazione delle misure previste dal PNRR: dalla prima fase informativa, che precede l’avvio degli avvisi, al momento dell’accesso ai fondi e fino all’implementazione stessa dei progetti. I fornitori saranno <strong>scelti dalla PA</strong> anche avvalendosi di fornitori certificati attraverso strumenti Consip."
+          description: '“PA digitale 2026” <strong>accompagnerà gli Enti con risorse e strumenti</strong> lungo tutto il percorso di attuazione delle misure previste dal PNRR: dalla prima fase informativa, che precede l’avvio degli avvisi, al momento dell’accesso ai fondi e fino all’implementazione stessa dei progetti. I fornitori saranno <strong>scelti dalla PA</strong> anche avvalendosi di fornitori certificati attraverso strumenti Consip.'
         second:
           title: Un team sul territorio
           image: ItaliaPin.svg
-          description: Attraverso “Prossima PA” le amministrazioni potranno <strong>accedere ad un’area riservata</strong>, per seguire la gestione amministrativa delle singole iniziative finanziate attraverso l’azione del Dipartimento per la trasformazione digitale. Con l’avvio degli avvisi avranno infatti la possibilità non solo di fare <strong>richiesta per i fondi</strong>, ma anche di <strong>produrre i dati relativi all’avanzamento dei progetti, ricevere comunicazioni dedicate e inviare documentazioni ufficiali per l’erogazione delle risorse</strong>
+          description: Attraverso “PA digitale 2026” le amministrazioni potranno <strong>accedere ad un’area riservata</strong>, per seguire la gestione amministrativa delle singole iniziative finanziate attraverso l’azione del Dipartimento per la trasformazione digitale. Con l’avvio degli avvisi avranno infatti la possibilità non solo di fare <strong>richiesta per i fondi</strong>, ma anche di <strong>produrre i dati relativi all’avanzamento dei progetti, ricevere comunicazioni dedicate e inviare documentazioni ufficiali per l’erogazione delle risorse</strong>
     - id: 2
       name: Erogazione dei fondi
       image: third-tab.svg
@@ -210,7 +210,7 @@ presentazioneTabs:
         first:
           title: Spese riconosciute
           image: obiettivi.svg
-          description: "Le amministrazioni dovranno <strong>implementare</strong>, con il proprio personale o attraverso l’acquisto di servizi e forniture, <strong>il progetto in tutte le sue componenti</strong> effettuando le spese previste per la realizzazione delle attività: impegno delle risorse, svolgimento delle procedure di gara per l’acquisizione di lavori/servizi/forniture a seconda della tipologia di progetto, esecuzione dei pagamenti ai fornitori."
+          description: 'Le amministrazioni dovranno <strong>implementare</strong>, con il proprio personale o attraverso l’acquisto di servizi e forniture, <strong>il progetto in tutte le sue componenti</strong> effettuando le spese previste per la realizzazione delle attività: impegno delle risorse, svolgimento delle procedure di gara per l’acquisizione di lavori/servizi/forniture a seconda della tipologia di progetto, esecuzione dei pagamenti ai fornitori.'
         second:
           title: Rendicontazione ed erogazione dei fondi
           image: Erogazione.svg

@@ -20,6 +20,7 @@ const useStyles = createUseStyles({
     marginBottom: '0.555rem',
     textTransform: 'uppercase',
     textAlign: 'center',
+    fontWeight: '600',
     '@media (min-width: 768px)': {
       textAlign: 'left',
     },
@@ -39,6 +40,7 @@ const useStyles = createUseStyles({
     border: '0',
     textAlign: 'left',
     fontWeight: 'normal',
+    height: '100%',
     backgroundColor: 'transparent',
     '&:focus': {
       outline: '2px solid #ff9900',
