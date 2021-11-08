@@ -58,7 +58,10 @@ const useStyle = createUseStyles({
     },
   },
   logoImg: {
-    height: '2.5rem',
+    height: '2.667rem',
+    '&.logo-gov': {
+      height: '3.556rem',
+    },
   },
   logoSeparator: {
     composes: 'mx-2 d-none d-md-block',
@@ -142,7 +145,7 @@ const MainFooter = () => {
               className={classes.footerLogo}
             >
               <img
-                className={classes.logoImg}
+                className={`${classes.logoImg} logo-gov`}
                 src="/assets/repubblica-logo-colorato.svg"
                 alt="Governo Italiano"
               />
@@ -159,7 +162,7 @@ const MainFooter = () => {
             </ExternalLink>
           </div>
           <div className="info">
-            <a href="#" className={classes.seeMore}>
+            <a href="/come-funziona" className={classes.seeMore}>
               Scopri l&apos;iniziativa
             </a>
           </div>
