@@ -94,8 +94,7 @@ questions:
         content: In attesa della pubblicazione degli avvisi, è possibile richiedere di rimanere aggiornati. Lasciando i tuoi contatti verrai anche notificato su tutte le novità, le iniziative e su eventuali attività informative pensate per agevolare la conoscenza e la futura partecipazione agli avvisi.
       - title: È possibile richiedere supporto? 
         content: Sì, il sito prevede un modulo di contatto per richiedere assistenza e porre domande. Lasciando i propri contatti e selezionando l’argomento della richiesta, è possibile inviare un messaggio. Sarete poi ricontattati via mail dallo staff dedicato.
-        linkLabel: Rimani aggiornato
-        link: '#'
+        modalBtn: Rimani aggiornato
         ariaLabel: testo aria label
   - title: Erogazione delle risorse
     description: Le indicazioni pratiche per ricevere chiarimenti e aggiornamenti
@@ -114,3 +113,4 @@ support:
   cards:
     - title: Contatti
       description: Compila il modulo per inviarci i tuoi suggerimenti o per avere chiarimenti sull'iniziativa
+      isModal: true

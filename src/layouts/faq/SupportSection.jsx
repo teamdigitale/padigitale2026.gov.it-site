@@ -9,9 +9,9 @@ const useStyles = createUseStyles({
     '& a': {
       '&:focus': {
         outline: '2px solid #ff9900',
-        boxShadow: 'none'
-      } 
-    }
+        boxShadow: 'none',
+      },
+    },
   },
   tag: {
     fontSize: '0.888rem',
@@ -27,12 +27,12 @@ const useStyles = createUseStyles({
   cleanLink: {
     textDecoration: 'none',
     '&:hover': {
-      textDecoration: 'none'
+      textDecoration: 'none',
     },
     '&:focus': {
       outline: '2px solid #ff9900',
-      boxShadow: 'none'
-    } 
+      boxShadow: 'none',
+    },
   },
   resetButton: {
     padding: '0',
@@ -42,16 +42,16 @@ const useStyles = createUseStyles({
     backgroundColor: 'transparent',
     '&:focus': {
       outline: '2px solid #ff9900',
-      boxShadow: 'none'
-    } 
+      boxShadow: 'none',
+    },
   },
   colCard: {
     composes: 'mb-3 mb-md-0 col-card',
     '&+.col-card': {
       '@media (min-width: 768px)': {
-        marginLeft: '30px'
+        marginLeft: '30px',
       },
-    }
+    },
   },
   sectionTitle: {
     fontSize: '1.555rem',
@@ -75,7 +75,7 @@ const useStyles = createUseStyles({
     '&:hover': {
       '&.card.card-teaser': {
         '& h5.card-title': {
-          textDecoration: 'underline'
+          textDecoration: 'underline',
         },
       },
     },
@@ -109,7 +109,9 @@ export const SupportSection = (props) => {
   return (
     <>
       <Section color="muted" aria-labelledby="suppost-section">
-        <h3 id="suppost-section" className="sr-only">Sezione supporto</h3>
+        <h3 id="suppost-section" className="sr-only">
+          Sezione supporto
+        </h3>
         <div className="container">
           <Row>
             <Col md={8} lg={6} className={classes.layout}>
@@ -122,28 +124,29 @@ export const SupportSection = (props) => {
               <Row>
                 {supportList.map((card) => (
                   <Col key={card.title} md={5} lg={3} className={classes.colCard}>
-                  {card.isModal ? 
-                    <Button onClick={handleToggle} className={classes.resetButton}>
-                      <Card teaser noWrapper className={classes.cardWrapper}>
-                        <CardBody>
-                          <CardTitle tag="h5" className={classes.cardTitle}>
-                            {card.title}
-                          </CardTitle>
-                          <CardText className={classes.cardText}>{card.description}</CardText>
-                        </CardBody>
-                      </Card>
-                    </Button> :
-                    <Link to="/faq" className={classes.cleanLink}>
-                      <Card teaser noWrapper className={classes.cardWrapper}>
-                        <CardBody>
-                          <CardTitle tag="h5" className={classes.cardTitle}>
-                            {card.title}
-                          </CardTitle>
-                          <CardText className={classes.cardText}>{card.description}</CardText>
-                        </CardBody>
-                      </Card>
-                    </Link>
-                  }
+                    {card.isModal ? (
+                      <Button onClick={handleToggle} className={classes.resetButton}>
+                        <Card teaser noWrapper className={classes.cardWrapper}>
+                          <CardBody>
+                            <CardTitle tag="h5" className={classes.cardTitle}>
+                              {card.title}
+                            </CardTitle>
+                            <CardText className={classes.cardText}>{card.description}</CardText>
+                          </CardBody>
+                        </Card>
+                      </Button>
+                    ) : (
+                      <Link to="/faq" className={classes.cleanLink}>
+                        <Card teaser noWrapper className={classes.cardWrapper}>
+                          <CardBody>
+                            <CardTitle tag="h5" className={classes.cardTitle}>
+                              {card.title}
+                            </CardTitle>
+                            <CardText className={classes.cardText}>{card.description}</CardText>
+                          </CardBody>
+                        </Card>
+                      </Link>
+                    )}
                   </Col>
                 ))}
               </Row>
@@ -152,8 +155,8 @@ export const SupportSection = (props) => {
           {props.buttonLabel && (
             <Row>
               <Col md={8} lg={6} className={`${classes.layout} mt-5`}>
-              <Link to="/supporto" className="btn btn-primary text-uppercase">
-                {buttonLabel}
+                <Link to="/supporto" className="btn btn-primary text-uppercase">
+                  {buttonLabel}
                 </Link>
               </Col>
             </Row>

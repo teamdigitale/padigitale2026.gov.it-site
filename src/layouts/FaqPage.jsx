@@ -3,12 +3,14 @@ import { Container, Input, Row, Col } from 'design-react-kit';
 import { createUseStyles } from 'react-jss';
 import content from '../../contents/home-page/home.yml';
 import faq from '../../contents/faq-page/faq.yml';
+import { SEO } from '../components/SEO';
+import seo from '../../contents/seo.yml';
+import { ModalUpdatesButton } from '../components/modal/ModalUpdatesButton';
+import { ModalUpdates } from '../components/modal/ModalUpdates';
 import { SideNavigation } from './faq/SideNavigation';
 import { QuestionSection } from './faq/QuestionSection';
 import { SupportSection } from './faq/SupportSection';
 import { HeroSupport } from './support/Hero';
-import { SEO } from '../components/SEO';
-import seo from '../../contents/seo.yml';
 
 const { title: seoTitle, description: seoDescription } = seo.faqPage;
 
@@ -28,6 +30,10 @@ export const FaqPage = () => {
   const [filterId, setFilterId] = useState('all');
   const [questions, setQuestions] = useState(faq.questions);
   const [isMobile, setIsMobile] = useState();
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleModal = () => {
+    setIsOpen(!isOpen);
+  };
 
   useEffect(() => {
     setIsMobile(window.innerWidth < 992);
@@ -46,9 +52,7 @@ export const FaqPage = () => {
       }
     } else {
       if (isMobile) {
-        filterId !== 'all'
-          ? setQuestions(getQuestionsMobile(faq.questions))
-          : setQuestions(faq.questions);
+        filterId !== 'all' ? setQuestions(getQuestionsMobile(faq.questions)) : setQuestions(faq.questions);
       } else {
         setQuestions(faq.questions);
       }
@@ -57,9 +61,7 @@ export const FaqPage = () => {
 
   function getAccordionsFiltered(question, input) {
     const regexp = new RegExp(input, 'i');
-    return question.accordions.filter((accordion) =>
-      regexp.test(accordion.title)
-    );
+    return question.accordions.filter((accordion) => regexp.test(accordion.title));
   }
 
   function getNewQuestions(inputValue) {
@@ -92,16 +94,9 @@ export const FaqPage = () => {
   useEffect(() => {
     if (filterId) {
       if (filterId === 'all') {
-        inputValue
-          ? setQuestions(getNewQuestions(inputValue))
-          : setQuestions(faq.questions);
+        inputValue ? setQuestions(getNewQuestions(inputValue)) : setQuestions(faq.questions);
       } else {
-        if (
-          !getAccordionsFiltered(
-            getQuestionsMobile(faq.questions)[0],
-            inputValue
-          ).length
-        ) {
+        if (!getAccordionsFiltered(getQuestionsMobile(faq.questions)[0], inputValue).length) {
           setQuestions(filterAccordions);
         } else {
           setQuestions(getQuestionsMobile(faq.questions));
@@ -136,11 +131,7 @@ export const FaqPage = () => {
           </Row>
           <Row>
             <Col lg={3}>
-              <SideNavigation
-                getFilter={setFilterId}
-                activeList={questions}
-                searchValue={inputValue}
-              />
+              <SideNavigation getFilter={setFilterId} activeList={questions} searchValue={inputValue} />
             </Col>
             <Col lg={9} className="px-lg-3">
               {questions.map((question) => (
@@ -148,19 +139,16 @@ export const FaqPage = () => {
                   key={question.title}
                   item={question}
                   inputText={inputValue}
+                  handleToggle={toggleModal}
                 />
               ))}
-              {!questions.length && (
-                <p className={classes.noResults}>{faq.noResults}</p>
-              )}
+              {!questions.length && <p className={classes.noResults}>{faq.noResults}</p>}
             </Col>
           </Row>
         </Container>
       </div>
-      <SupportSection
-        supportList={faq.support.cards}
-        title={faq.support.title}
-      />
+      <SupportSection supportList={faq.support.cards} title={faq.support.title} handleToggle={toggleModal} />
+      <ModalUpdates initialState={isOpen} handleToggle={toggleModal} />
     </>
   );
 };
