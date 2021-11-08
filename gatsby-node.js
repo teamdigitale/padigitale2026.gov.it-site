@@ -15,13 +15,3 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     }
   }
 };
-
-exports.createPages = ({ actions }) => {
-  const { createPage } = actions;
-
-  createPage({
-    path: '/conferma/:jwt',
-    matchPath: `/conferma/:jwt`,
-    component: path.resolve(`./src/pages/conferma.jsx`),
-  });
-};
