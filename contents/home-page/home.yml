@@ -105,21 +105,21 @@ homeCarousel:
   - id: 1
     title: Fase 1, conoscere le opportunità
     description: <strong>Informazioni e aggiornamenti</strong> per accompagnare le amministrazioni verso le opportunità di Italia digitale 2026. A partire dall'<strong>autunno del 2021</strong> le PA hanno accesso alle risorse necessarie per prepararsi ad aderire agli avvisi, la cui pubblicazione è prevista per la <strong>primavera del 2022.</strong> 
-    image: 'home-carousel-1.png'
-    imageMobile: 'home-carousel-mobile-1.png'
+    image: 'home-carousel-1.svg'
+    imageMobile: 'home-carousel-mobile-1.svg'
     button: 'scopri di più'
     buttonAriaLabel: 'Scopri di più su domande frequenti e contatti'
   - id: 2
     title: Fase 2, partecipare agli avvisi
     description: <strong>I primi avvisi del PNRR dedicati alla transizione digitale della PA</strong> sono online. Dalla <strong>primavera del 2022</strong>, attraverso un’<strong>area riservata</strong>, le amministrazioni possono beneficiare di un <strong>percorso guidato</strong> per aderire alle misure e richiedere i finanziamenti dedicati.
-    image: 'home-carousel-2.png'
-    imageMobile: 'home-carousel-mobile-2.png'
+    image: 'home-carousel-2.svg'
+    imageMobile: 'home-carousel-mobile-2.svg'
     button: 'scopri di più'
     buttonAriaLabel: 'Scopri di più su domande frequenti e contatti'
   - id: 3
     title: Fase 3, diventare protagonista
     description: 'Dall’<strong>estate del 2022</strong> le amministrazioni possono <strong>avviare i primi progetti</strong>: un team dedicato fornisce alle PA assistenza tecnica e accompagnamento nell’implementazione delle iniziative; un sistema di rendicontazione online organizzato per obiettivi semplifica il percorso delle amministrazioni.'
-    image: 'home-carousel-3.png'
-    imageMobile: 'home-carousel-mobile-3.png'
+    image: 'home-carousel-3.svg'
+    imageMobile: 'home-carousel-mobile-3.svg'
     button: 'scopri di più'
     buttonAriaLabel: 'Scopri di più su domande frequenti e contatti'
