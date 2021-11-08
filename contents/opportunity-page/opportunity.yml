@@ -68,7 +68,7 @@ beneficiaries:
     description: Implementare un programma di supporto e incentivo per migrare sistemi, dati e applicazioni delle pubbliche amministrazioni locali verso servizi cloud qualificati.
     stalls: '16,600 enti'
     accessSectionId: pacchetti-standard
-    accessLabel: Pacchetti Standard
+    accessLabel: Soluzioni Standard
     accessLink: 'https://italiadomani.gov.it/content/sogei-ng/it/it/investimenti/abilitazione-e-facilitazione-migrazione-al-cloud.html'
     moreInfoLabel: 'Leggi di più su Italia Domani'
     moreInfoLink: '#'
@@ -124,7 +124,7 @@ beneficiaries:
         label: Scuole
     description: Migliorare l'esperienza dei servizi pubblici digitali definendo modelli collaudati e riutilizzabili per la creazione di siti internet e l’erogazione di servizi pubblici digitali.
     stalls: '16,500 enti'
-    accessLabel: Pacchetti standard
+    accessLabel: Soluzioni standard
     accessLink: 'https://italiadomani.gov.it/content/sogei-ng/it/it/investimenti/servizi-digitali-e-cittadinanza-digitale.html'
     moreInfoLabel: 'Leggi di più su Italia Domani'
     moreInfoLink: '#'
@@ -172,7 +172,7 @@ beneficiaries:
         label: Consorzi interuniversitari di ricerca
     description: Accelerare l'adozione di PagoPa, l'applicazione digitale per i pagamenti tra cittadini e pubbliche amministrazione, e di app IO quale principale punto di contatto tra cittadini e amministrazione
     stalls: '17,500 enti'
-    accessLabel: Pacchetti Standard
+    accessLabel: Soluzioni Standard
     accessLink: 'https://italiadomani.gov.it/content/sogei-ng/it/it/investimenti/servizi-digitali-e-cittadinanza-digitale.html'
     moreInfoLabel: 'Leggi di più su Italia Domani'
     moreInfoLink: '#'
@@ -196,7 +196,7 @@ beneficiaries:
         label: Altre PAL
     description: Favorire l'adozione dell’identità digitale (Sistema Pubblico di Identità Digitale, SPID e Carta d'Identità Elettronica, CIE) e dell'Anagrafe nazionale della popolazione residente (ANPR)
     stalls: '10,300 enti'
-    accessLabel: Pacchetti Standard
+    accessLabel: Soluzioni Standard
     accessLink: 'https://italiadomani.gov.it/content/sogei-ng/it/it/investimenti/servizi-digitali-e-cittadinanza-digitale.html'
     moreInfoLabel: 'Leggi di più su Italia Domani'
     moreInfoLink: '#'
@@ -210,7 +210,7 @@ beneficiaries:
         label: Comuni
     description: Sviluppare e implementare la Piattaforma notifiche, lo strumento che le PA utilizzeranno per la notificazione di atti amministrativi a valore legale verso persone fisiche e giuridiche, contribuendo ad una drastica riduzione di costi e tempo per cittadini ed enti. 
     stalls: '7,900 enti'
-    accessLabel: Pacchetti standard
+    accessLabel: Soluzioni standard
     accessLink: 'https://italiadomani.gov.it/content/sogei-ng/it/it/investimenti/servizi-digitali-e-cittadinanza-digitale.html'
     moreInfoLabel: 'Leggi di più su Italia Domani'
     moreInfoLink: '#'
