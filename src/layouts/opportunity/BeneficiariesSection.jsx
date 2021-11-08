@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { createUseStyles } from 'react-jss';
 import Select from 'react-select';
 import { Section } from 'design-react-kit';
@@ -7,6 +7,7 @@ import {
   beneficiaries,
   selectBeneficiaries,
 } from '../../../contents/opportunity-page/opportunity.yml';
+import { GlobalStateContext } from '../../context/globalContext';
 
 const useStyles = createUseStyles({
   section: {
@@ -101,10 +102,19 @@ export const BeneficiariesSection = (props) => {
   const handleChange = (selectedOption) => setSelectValue(selectedOption);
   const handleOpen = () => setIsOpen(true);
   const handleClose = () => setIsOpen(false);
+  const [{sectionId}] = useContext(GlobalStateContext)
 
   const setActiveAccordion = (i) => {
     indexOpen === i ? setIndexOpen(-1) : setIndexOpen(i);
   };
+
+  useEffect(() => {
+    if (sectionId) {
+      document.querySelector('#' + sectionId).scrollIntoView({
+        behavior: 'smooth',
+      });
+    }
+  }, [sectionId]);
 
   useEffect(() => {
     if (props.externalFilter) {

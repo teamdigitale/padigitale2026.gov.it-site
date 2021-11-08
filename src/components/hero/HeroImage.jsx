@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { createUseStyles } from 'react-jss';
 
 import { HeroCategory } from '../../components/hero/HeroCategory';
@@ -8,6 +8,8 @@ import { HeroCtaContainer } from '../../components/hero/HeroCtaContainer';
 import { HeroGraphic } from '../../components/hero/HeroGraphic';
 import { Hero } from '../../components/hero/Hero';
 import { ExternalLink } from '../../components/ExternalLink';
+import { Link } from 'gatsby';
+import { GlobalStateContext } from '../../context/globalContext';
 
 const useStyles = createUseStyles({
   btnPrimaryLight: {
@@ -81,6 +83,7 @@ export const HeroImage = ({
   imageAlt,
 }) => {
   const classes = useStyles();
+  const [state, dispatch] = useContext(GlobalStateContext)
 
   return (
     <Hero>
@@ -100,13 +103,9 @@ export const HeroImage = ({
               {firstButtonLabel}
             </ExternalLink>
             {secondButtonLabel ? (
-              <ExternalLink
-                linkTo={secondButtonHref}
-                ariaLabel={secondButtonAriaLabel}
-                className="btn text-uppercase mx-4 ml-lg-0 my-3 my-md-0 btn-outline-primary"
-              >
+              <Link className="btn text-uppercase mx-4 ml-lg-0 my-3 my-md-0 btn-outline-primary" to="/come-funziona" onClick={() => dispatch({type: 'SET:SECTION_ID', payload: {sectionId: 'beneficiari'}})}>
                 {secondButtonLabel}
-              </ExternalLink>
+              </Link>
             ) : (
               ''
             )}

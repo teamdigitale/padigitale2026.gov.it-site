@@ -6,6 +6,8 @@ const reducer = (state, { type, payload }) => {
   switch (type) {
     case 'SET:SECTION_ID':
       return { ...state, sectionId: payload.sectionId };
+    case 'SET:SECTION_OPPORTUNITY_ID':
+      return { ...state, sectionId: payload.sectionId };
     default:
       return { ...state };
   }
