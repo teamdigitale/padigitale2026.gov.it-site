@@ -40,6 +40,7 @@ export const IndexPage = () => (
       body={heroPnrr.body}
       imageUrl="/assets/come-funziona-home.svg"
       imageAlt=""
+      firstInternal={true}
       firstButtonHref="/come-funziona"
       firstButtonLabel={heroPnrr.firstButtonLabel}
       firstButtonAriaLabel={heroPnrr.firstButtonAriaLabel}

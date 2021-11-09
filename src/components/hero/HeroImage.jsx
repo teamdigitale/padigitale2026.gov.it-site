@@ -73,6 +73,7 @@ export const HeroImage = ({
   category,
   title,
   body,
+  firstInternal,
   firstButtonHref,
   firstButtonLabel,
   firstButtonAriaLabel,
@@ -95,13 +96,19 @@ export const HeroImage = ({
             <HeroBody html={body} />
           </div>
           <HeroCtaContainer>
-            <ExternalLink
-              linkTo={firstButtonHref}
-              ariaLabel={firstButtonAriaLabel}
-              className="btn text-uppercase mx-4 ml-lg-0 my-3 my-md-0 btn-primary"
-            >
-              {firstButtonLabel}
-            </ExternalLink>
+            {firstInternal ? 
+              <Link className="btn text-uppercase mx-4 ml-lg-0 my-3 my-md-0 btn-primary" to={firstButtonHref} ariaLabel={firstButtonAriaLabel}>
+                {firstButtonLabel}
+              </Link>
+            :
+              <ExternalLink
+                linkTo={firstButtonHref}
+                ariaLabel={firstButtonAriaLabel}
+                className="btn text-uppercase mx-4 ml-lg-0 my-3 my-md-0 btn-primary"
+              >
+                {firstButtonLabel}
+              </ExternalLink>
+            }
             {secondButtonLabel ? (
               <Link className="btn text-uppercase mx-4 ml-lg-0 my-3 my-md-0 btn-outline-primary" to="/come-funziona" onClick={() => dispatch({type: 'SET:SECTION_ID', payload: {sectionId: 'beneficiari'}})}>
                 {secondButtonLabel}
