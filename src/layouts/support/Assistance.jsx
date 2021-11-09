@@ -1,13 +1,14 @@
 /* eslint-disable prettier/prettier */
-import React from 'react';
+import React, { useState } from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 import { createUseStyles } from 'react-jss';
+import { Button } from 'design-react-kit';
 import { HeroTitle } from '../../components/hero/HeroTitle';
 import { HeroBody } from '../../components/hero/HeroBody';
 import { HeroCtaContainer } from '../../components/hero/HeroCtaContainer';
 import { HeroGraphic } from '../../components/hero/HeroGraphic';
 import { Hero } from '../../components/hero/Hero';
-import { ExternalLink } from '../../components/ExternalLink';
+import { ModalUpdates } from '../../components/modal/ModalUpdates';
 import content from '../../../contents/support-page/support.yml';
 
 const {
@@ -27,35 +28,43 @@ const useStyle = createUseStyles({
       fontSize: '1.778rem',
     },
   },
+  heroBtn:{
+    textTransform: 'uppercase',
+    marginTop: '1.5rem',
+    '@media (min-width: 992px)': {
+      marginTop: '2.667rem',
+    },
+  },
 });
 
 export const Assistance = () => {
   const classes = useStyle();
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleModal = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
-    <Hero className={classes.heroAssistanceBg}>
-      <div className="row align-items-center px-lg-5">
-        <div className="col-lg-6 p-0 mt-3 mt-lg-0 pr-lg-5">
-          <HeroTitle title={title} className={classes.heroTitle} />
-          <HeroBody html={body} />
-          <HeroCtaContainer>
-            <ExternalLink
-              linkTo="#"
-              ariaLabel=""
-              className="btn text-uppercase mx-4 ml-lg-0 my-4 btn-primary"
-            >
-              {btnText}
-            </ExternalLink>
-          </HeroCtaContainer>
+    <React.Fragment>
+      <Hero className={classes.heroAssistanceBg}>
+        <div className="row align-items-center px-lg-5">
+          <div className="col-lg-6 p-0 mt-3 mt-lg-0 pr-lg-5">
+            <HeroTitle title={title} className={classes.heroTitle} />
+            <HeroBody html={body} />
+            <HeroCtaContainer>
+              <Button color='primary' className={classes.heroBtn} onClick={() => toggleModal()}>{btnText}</Button>
+            </HeroCtaContainer>
+          </div>
+          <HeroGraphic className="col-lg-6">
+            <StaticImage
+              src="../../images/section01.jpg"
+              alt={altImg}
+              aria-label={altImg}
+            />
+          </HeroGraphic>
         </div>
-        <HeroGraphic className="col-lg-6">
-          <StaticImage
-            src="../../images/section01.jpg"
-            alt={altImg}
-            aria-label={altImg}
-          />
-        </HeroGraphic>
-      </div>
-    </Hero>
+      </Hero>
+      <ModalUpdates initialState={isOpen} handleToggle={toggleModal} />
+    </React.Fragment>
   );
 };
