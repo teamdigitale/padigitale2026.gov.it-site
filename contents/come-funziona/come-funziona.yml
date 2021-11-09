@@ -2,7 +2,7 @@ title: Come funziona - PA digitale 2026
 name: Come Funziona
 hero:
   title: 'La transizione digitale: semplice e a misura di PA'
-  body: Sono previste due modalità di accesso ai fondi del PNRR gestiti dal Dipartimento per la trasformazione digitale. A seconda della tipologia di misura e di PA, sarà possibile accedere alle risorse o attraverso delle soluzioni standard o attraverso la presentazione di progetti.
+  body: A seconda della tipologia di misura e di PA, sarà possibile accedere alle risorse o attraverso delle soluzioni standard o attraverso la presentazione di progetti.
   list:
     - listItems:
       title: MODALITÀ DI ACCESSO
@@ -96,16 +96,16 @@ timeline:
       active: false
       time: Autunno 2021
       title: Conoscere le opportunità
-      text: Le PA hanno accesso alle risorse necessarie per prepararsi ad aderire agli avvisi, la cui pubblicazione è prevista per la primavera del 2022.
+      text: 'Le PA hanno accesso a informazioni e materiali per prepararsi ad aderire agli avvisi, la cui pubblicazione è prevista per la primavera del 2022.'
     - id: 2
       active: false
       time: Primavera 2022
       title: Partecipare agli avvisi
-      text: '<strong>I primi avvisi del PNRR dedicati alla transizione digitale della PA sono online:</strong> un’area riservata ne facilita l’adesione attraverso un percorso guidato.'
+      text: '<strong>I primi avvisi del PNRR dedicati alla transizione digitale della PA sono pubblicati:</strong> un’area riservata ne facilita l’adesione attraverso un modulo online.'
     - id: 3
       active: true
       time: Estate 2022
-      title: Realizzare i progetti
+      title: Avviare i progetti
       text: 'Le amministrazioni possono <strong>avviare i progetti:</strong> un team dedicato accompagna le PA. La rendicontazione degli interventi implementati è totalmente online.'
     - id: 4
       active: false
