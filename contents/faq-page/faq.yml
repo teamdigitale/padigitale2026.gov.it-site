@@ -42,7 +42,7 @@ questions:
       - title: Quali sono gli obiettivi di Italia digitale 2026?
         content: "L'importante piano di investimenti e riforme previsto dal Piano nazionale di ripresa e resilienza vuole mettere l'Italia nel gruppo di testa in Europa entro il 2026. Italia digitale 2026 si pone cinque ambiziosi obiettivi: <ol><li>Diffondere l’identità digitale, assicurando che venga utilizzata dal 70% della popolazione;</li><li>Colmare il gap di competenze digitali, con almeno il 70% della popolazione che sia digitalmente abile;</li><li>Portare circa il 75% delle PA italiane a utilizzare servizi in cloud;</li><li>Raggiungere almeno l’80% dei servizi pubblici essenziali erogati online;</li><li>Raggiungere, in collaborazione con il Mise, il 100% delle famiglie e delle imprese italiane con reti a banda ultra-larga.</li></ol>"
         linkLabel: Scopri la strategia Italia digitale 2026
-        link: 'https://innovazione.gov.it/dipartimento/focus/italia-digitale-2026/'
+        link: 'https://innovazione.gov.it/dipartimento/focus/italia-digitale-2026/#gli-obiettivi-italia-digitale-2026'
         ariaLabel: testo aria label
       - title: Cos’è “PA digitale 2026”?
         content: “PA digitale 2026” è il sito del Dipartimento per la trasformazione digitale, guidato dal Ministro per l’innovazione tecnologica e la transizione digitale, che permette alla PA di accedere ai fondi di Italia digitale 2026. Il sito sarà il punto unico di accesso per avere informazioni sugli avvisi dedicati alla digitalizzazione della PA, fare richiesta di accesso ai fondi e rendicontare l’avanzamento dei progetti. Inoltre è possibile richiedere assistenza diretta e avere tutte le info sulle azioni di accompagno previste dal Dipartimento per la trasformazione digitale della Presidenza del Consiglio dei ministri.
@@ -80,7 +80,7 @@ questions:
       - title: Quando saranno pubblicati gli avvisi?
         content: La pubblicazione dei primi avvisi è prevista per la primavera del 2022.
       - title: Come posso fare richiesta di accesso ai fondi?
-        content: Sono previste due modalità di accesso ai fondi del PNRR gestiti dal Dipartimento per la trasformazione digitale. A seconda della tipologia di misura e di PA, sarà possibile accedere alle risorse o attraverso delle <strong><a href="#">soluzioni standard</a></strong> o attraverso la <strong><a href="#">presentazione di progetti</a></strong>.
+        content: Sono previste due modalità di accesso ai fondi del PNRR gestiti dal Dipartimento per la trasformazione digitale. A seconda della tipologia di misura e di PA, sarà possibile accedere alle risorse o attraverso delle <strong><a href="/come-funziona/#soluzioni-standard">soluzioni standard</a></strong> o attraverso la <strong><a href="/come-funziona/#presentazione-progetto">presentazione di progetti</a></strong>.
       - title: Come funzionano gli avvisi a soluzioni standard?
         content: "L'importante piano di investimenti e riforme previsto dal Piano nazionale di ripresa e resilienza vuole mettere l'Italia nel gruppo di testa in Europa entro il 2026.Italia digitale 2026 si pone cinque ambiziosi obiettivi:<ol><li>Soluzioni standard: ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso soluzioni standard, ciascuna con un valore economico predefinito. Non sarà necessario scrivere e presentare progetti per ricevere finanziamenti;</li><li>Multimisura: per semplificare l’accesso ai fondi del PNRR le amministrazioni potranno - con un’unica candidatura - accedere a soluzioni multimisura, che includono, per esempio, sia finanziamenti per la migrazione al cloud che per il miglioramento dei siti web;</li><li>Per obiettivi: per semplificare l’erogazione delle risorse, i contributi saranno riconosciuti alle amministrazioni sulla base del raggiungimento di specifici obiettivi predefiniti. Il processo di rendicontazione sarà quindi alleggerito, e non sarà necessario rendicontare le singole spese effettuate per ottenere i fondi.</li></ol>"
       - title: Come funzionano gli avvisi per cui è necessario presentare un progetto?
@@ -97,8 +97,7 @@ questions:
         content: In attesa della pubblicazione degli avvisi, è possibile richiedere di rimanere aggiornati. Lasciando i tuoi contatti verrai anche notificato su tutte le novità, le iniziative e su eventuali attività informative pensate per agevolare la conoscenza e la futura partecipazione agli avvisi.
       - title: È possibile richiedere supporto? 
         content: Sì, il sito prevede un modulo di contatto per richiedere assistenza e porre domande. Lasciando i propri contatti e selezionando l’argomento della richiesta, è possibile inviare un messaggio. Sarete poi ricontattati via mail dallo staff dedicato.
-        linkLabel: Rimani aggiornato
-        link: '#'
+        modalBtn: Rimani aggiornato
         ariaLabel: testo aria label
   - title: Erogazione delle risorse
     description: Le indicazioni pratiche per ricevere chiarimenti e aggiornamenti
@@ -117,3 +116,4 @@ support:
   cards:
     - title: Contatti
       description: Compila il modulo per inviarci i tuoi suggerimenti o per avere chiarimenti sull'iniziativa
+      isModal: true

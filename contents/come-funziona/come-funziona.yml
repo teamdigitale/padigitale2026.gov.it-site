@@ -107,16 +107,6 @@ timeline:
       time: Estate 2022
       title: Avviare i progetti
       text: 'Le amministrazioni possono <strong>avviare i progetti:</strong> un team dedicato accompagna le PA. La rendicontazione degli interventi implementati è totalmente online.'
-    - id: 4
-      active: false
-      time: Primavera 2022
-      title: Realizzare i progetti
-      text: Le PA hanno accesso alle risorse necessarie per prepararsi ad aderire agli avvisi, la cui pubblicazione è prevista per la primavera del 2022.
-    - id: 5
-      active: false
-      time: Autunno 2023
-      title: Realizzare i progetti
-      text: Le PA hanno accesso alle risorse necessarie per prepararsi ad aderire agli avvisi, la cui pubblicazione è prevista per la primavera del 2022.
 pacchettiTabs:
   title: Soluzioni standard
   subtitle: Per le misure con una platea ampia di beneficiari (oltre 1.000 PA), è prevista una modalità di accesso per soluzioni standard. Un percorso semplificato e guidato che va dalla richiesta dei finanziamenti all’erogazione dei fondi.
