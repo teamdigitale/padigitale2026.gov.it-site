@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useContext } from 'react';
 import { support } from '../../contents/home-page/home.yml';
 import content from '../../contents/come-funziona/come-funziona.yml';
 import { SEO } from '../components/SEO';
@@ -10,17 +10,20 @@ import seo from '../../contents/seo.yml';
 import { Involved } from './come-funziona/Involved';
 import { Beneficiaries } from './come-funziona/Beneficiaries';
 import { SupportSection } from './faq/SupportSection';
+import { GlobalStateContext } from '../context/globalContext';
 
 const { title: seoTitle, description: seoDescription } = seo.comeFunzionaPage;
 
-export const ComeFunzionaPage = (props) => {
+export const ComeFunzionaPage = () => {
+  const [{howId}] = useContext(GlobalStateContext);
+
   useEffect(() => {
-    if (props.section) {
-      document.querySelector('#' + props.section).scrollIntoView({
+    if (howId) {
+      document.querySelector('#' + howId).scrollIntoView({
         behavior: 'smooth',
       });
     }
-  }, [props.section]);
+  }, []);
 
   return (
     <>

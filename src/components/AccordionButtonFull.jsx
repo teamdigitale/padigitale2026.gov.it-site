@@ -284,7 +284,7 @@ export const AccordionButtonFull = (props) => {
                 </p>
                 <div className="access">
                   <span>Modalità di accesso:</span>{' '}
-                  <Link to="/come-funziona" onClick={() => dispatch({type: 'SET:SECTION_ID', payload: {sectionId: accessSectionId}})}>
+                  <Link to="/come-funziona" onClick={() => dispatch({type: 'SET:HOW_SECTION_ID', payload: {howId: accessSectionId}})}>
                     <p>{accessLabel}</p>
                   </Link>
                 </div>

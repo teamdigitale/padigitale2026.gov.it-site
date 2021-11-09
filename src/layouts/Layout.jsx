@@ -62,8 +62,8 @@ export const Layout = ({ children }) => {
           {children}
           <ModalUpdates initialState={modalIsOpen} handleToggle={toggleModal} />
         </main>
+        <Footer />
       </GlobalStateContextProvider>
-      <Footer />
     </>
   );
 };
