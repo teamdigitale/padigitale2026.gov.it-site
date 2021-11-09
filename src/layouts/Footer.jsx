@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'gatsby';
 import { createUseStyles } from 'react-jss';
 import links from '../../contents/links.yml';
 import { ExternalLink } from '../components/ExternalLink';
+import { GlobalStateContext } from '../context/globalContext';
 
 const {
   internalLinks: { privacy, noteLegali },
@@ -58,7 +59,10 @@ const useStyle = createUseStyles({
     },
   },
   logoImg: {
-    height: '2.5rem',
+    height: '2.667rem',
+    '&.logo-gov': {
+      height: '3.556rem',
+    },
   },
   logoSeparator: {
     composes: 'mx-2 d-none d-md-block',
@@ -120,6 +124,8 @@ const SlimFooter = () => {
 
 const MainFooter = () => {
   const classes = useStyle();
+  const [state, dispatch] = useContext(GlobalStateContext);
+
   return (
     <div className={`${classes.mainFooter} it-footer-main`}>
       <div className="container text-center text-md-left">
@@ -142,7 +148,7 @@ const MainFooter = () => {
               className={classes.footerLogo}
             >
               <img
-                className={classes.logoImg}
+                className={`${classes.logoImg} logo-gov`}
                 src="/assets/repubblica-logo-colorato.svg"
                 alt="Governo Italiano"
               />
@@ -159,9 +165,9 @@ const MainFooter = () => {
             </ExternalLink>
           </div>
           <div className="info">
-            <a href="#" className={classes.seeMore}>
+            <Link to="/come-funziona" className={classes.seeMore} onClick={() => dispatch({type: 'SET:HOW_SECTION_ID', payload: {howId: 'attori-coinvolti'}})}>
               Scopri l&apos;iniziativa
-            </a>
+            </Link>
           </div>
         </div>
       </div>

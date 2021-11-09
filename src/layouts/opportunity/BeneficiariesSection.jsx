@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { createUseStyles } from 'react-jss';
 import Select from 'react-select';
 import { Section } from 'design-react-kit';
@@ -7,6 +7,7 @@ import {
   beneficiaries,
   selectBeneficiaries,
 } from '../../../contents/opportunity-page/opportunity.yml';
+import { GlobalStateContext } from '../../context/globalContext';
 
 const useStyles = createUseStyles({
   section: {
@@ -101,10 +102,19 @@ export const BeneficiariesSection = (props) => {
   const handleChange = (selectedOption) => setSelectValue(selectedOption);
   const handleOpen = () => setIsOpen(true);
   const handleClose = () => setIsOpen(false);
+  const [{sectionId}] = useContext(GlobalStateContext)
 
   const setActiveAccordion = (i) => {
     indexOpen === i ? setIndexOpen(-1) : setIndexOpen(i);
   };
+
+  useEffect(() => {
+    if (sectionId) {
+      document.querySelector('#' + sectionId).scrollIntoView({
+        behavior: 'smooth',
+      });
+    }
+  }, [sectionId]);
 
   useEffect(() => {
     if (props.externalFilter) {
@@ -140,8 +150,8 @@ export const BeneficiariesSection = (props) => {
 
   return (
     <>
-      <Section className={classes.section} aria-labelledby="lista-opportunita-hader">
-        <h3 className="sr-only" id="lista-opportunita-hader">
+      <Section className={classes.section} aria-labelledby="lista-misure-hader">
+        <h3 className="sr-only" id="lista-misure-hader">
           Elenco opportunità
         </h3>
         <div className="container mt-5 px-3" id="filter-beneficiaries">

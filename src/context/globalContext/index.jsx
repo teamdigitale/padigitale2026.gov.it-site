@@ -4,7 +4,9 @@ const initialState = {sectionId: null};
 
 const reducer = (state, { type, payload }) => {
   switch (type) {
-    case 'SET:SECTION_ID':
+    case 'SET:HOW_SECTION_ID':
+      return { ...state, howId: payload.howId };
+    case 'SET:SECTION_OPPORTUNITY_ID':
       return { ...state, sectionId: payload.sectionId };
     default:
       return { ...state };

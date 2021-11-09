@@ -39,7 +39,7 @@ const useStyles = createUseStyles({
       },
       '& h5.card-title': {
         color: '#0066CC',
-        fontSize: '1.75rem',
+        fontSize: '1.778rem',
         fontWeight: 'bold',
         lineHeight: '1.43',
         marginBottom: '0.889rem',
@@ -49,10 +49,10 @@ const useStyles = createUseStyles({
       },
       '& .card-text': {
         color: '#33485C',
-        fontSize: '1.125rem',
+        fontSize: '1rem',
         fontFamily: 'Titillium Web',
         fontWeight: '400',
-        lineHeight: '1.28',
+        lineHeight: '1.556rem',
         marginBottom: '2rem',
         '@media (min-width: 992px)': {
           marginBottom: '1.222rem',
@@ -144,7 +144,7 @@ export const HomeCarousel = ({ content, title }) => {
         <CardBody>
           <CardTitle tag="h5">{element.title}</CardTitle>
           <CardText dangerouslySetInnerHTML={{ __html: element.description }} />
-          <Button color="primary" className="text-uppercase" aria-lebel={element.buttonAriaLabel}>
+          <Button href={element.linkTo} color="primary" className="text-uppercase" aria-lebel={element.buttonAriaLabel}>
             {element.button}
           </Button>
         </CardBody>
