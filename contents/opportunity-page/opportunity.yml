@@ -285,25 +285,25 @@ modal:
     - value: other
       label: Altro
   selectInQuanto:
-    - label: Dirigente dell’amministrazione
     - value: dirigente-administration
-    - label: Dirigente sistemi IT dell’amministrazione
+      label: Dirigente dell’amministrazione
     - value: dirigente-it-administration
-    - label: Dipendente dell’amministrazione
+      label: Dirigente sistemi IT dell’amministrazione
     - value: dipendente-administration
-    - label: Altro
+      label: Dipendente dell’amministrazione
     - value: other
+      label: Altro
   selectMessage:
-    - label: Generale
     - value: general
-    - label: Investimenti del PNRR
+      label: Generale
     - value: investimenti-pnrr
-    - label: Richiesta dei fondi
+      label: Investimenti del PNRR
     - value: richiesta-fondi
-    - label: Realizzazione dei progetti
+      label: Richiesta dei fondi
     - value: realizzazione-progetti
-    - label: Erogazione delle risorse
+      label: Realizzazione dei progetti
     - value: erogazione-risorse
+      label: Erogazione delle risorse
   modalTitle: Vuoi ricevere aggiornamenti sugli investimenti per la digitalizzazione della PA?
   modalSubtitle: Ricevi <strong>tutte le novità</strong> che riguardano <strong>la tua amministrazione</strong> <br> lasciando i tuoi contatti
   updatesLabel: AGGIORNAMENTI

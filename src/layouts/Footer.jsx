@@ -83,7 +83,7 @@ const SlimFooter = () => {
   return (
     <div className={classes.slimFooter}>
       <section className="container" aria-labelledby="linkutili-header">
-        <h3 id="linkutili-header" class="sr-only">
+        <h3 id="linkutili-header" className="sr-only">
           Link Utili
         </h3>
         <ul className="list-inline link-list mb-0 text-center text-md-left">

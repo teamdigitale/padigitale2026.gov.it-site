@@ -15,10 +15,13 @@ import {
 import Select from 'react-select';
 import content from '../../../contents/opportunity-page/opportunity.yml';
 import links from '../../../contents/links.yml';
+import notificationsLabel from '../../../contents/notifications.yml';
 
 const {
   internalLinks: { privacy },
 } = links;
+
+const { success: successLabels, error: errorLabels } = notificationsLabel;
 
 const useStyles = createUseStyles({
   modalUpdatesContainer: {
@@ -204,8 +207,17 @@ const useStyles = createUseStyles({
   notification: {
     composes: 'notification with-icon dismissable',
     zIndex: '9',
+    display: 'block',
+    opacity: '0',
+    visibility: 'hidden',
+    transition: '.3s ease',
     '&.show': {
-      display: 'block',
+      opacity: '1',
+      visibility: 'visible',
+      transition: '.3s ease',
+    },
+    '&.with-icon.success': {
+      borderColor: '#00CF86',
     },
   },
   radioCustom: {
@@ -306,13 +318,68 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
   useEffect(() => {}, [selectValue]);
 
   const onSubmit = async (data, event) => {
-    console.log('submit', data);
+    Object.keys(data).map(function (key, index) {
+      if (data[key] == undefined) {
+        delete data[key];
+      }
+      if (key == 'enteSelect' || key == 'representative') {
+        data[key] = data[key].value;
+      }
+    });
+
+    const notificationElement = document.querySelector('.notification');
+    const titleElement = notificationElement.querySelector('h5');
+    const descriptionElement = notificationElement.querySelector('p');
     const modalCloseBtn = event.target
       .closest('.modal-content')
       .querySelector('.modal-header .btn');
-    modalCloseBtn.click();
-    const notificationElement = document.querySelector('.notification');
-    notificationElement.classList.add('show');
+
+    const closeNotification = notificationElement.querySelector(
+      '.notification-close'
+    );
+
+    const closeNotificationHandler = (event) => {
+      event.target.closest('.notification').classList.remove('show');
+      closeNotification.removeEventListener('click', closeNotificationHandler);
+    };
+    closeNotification.addEventListener('click', closeNotificationHandler);
+
+    fetch('https://api.prossimapa.gov.it/api/users', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
+      .then((response) => {
+        modalCloseBtn.click();
+        setTimeout(() => {
+          if (response.status == '200') {
+            notificationElement.classList.add('show');
+            notificationElement.classList.add('success');
+
+            titleElement.innerHTML = `${successLabels.icon} ${successLabels.title}`;
+            descriptionElement.innerHTML = successLabels.description;
+
+            setTimeout(() => {
+              notificationElement.classList.remove('show');
+            }, 5000);
+          } else {
+            notificationElement.classList.add('show');
+            notificationElement.classList.add('error');
+
+            titleElement.innerHTML = `${errorLabels.icon} ${errorLabels.title}`;
+            descriptionElement.innerHTML = errorLabels.description;
+
+            setTimeout(() => {
+              notificationElement.classList.remove('show');
+            }, 5000);
+          }
+        }, 500);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   const onError = async (data) => {
@@ -417,7 +484,7 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
               <Row className="mt-5">
                 <Col xs={12}>
                   <Controller
-                    name="email"
+                    name="address"
                     control={control}
                     rules={{
                       required: requiredLabel,
@@ -428,11 +495,11 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                     }}
                     render={({ field }) => (
                       <Input
-                        invalid={errors.email}
-                        infoText={errors.email && errors.email.message}
+                        invalid={errors.address}
+                        infoText={errors.address && errors.address.message}
                         label={emailLabel}
                         type="text"
-                        id="email"
+                        id="address"
                         {...field}
                       />
                     )}
@@ -444,7 +511,7 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                   <span className={classes.selectLabel}>{representLabel}</span>
                   <Controller
                     control={control}
-                    name="represent"
+                    name="representative"
                     rules={{ required: true }}
                     render={({ field: { onChange, value } }) => (
                       <Select
@@ -455,7 +522,7 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                         placeholder={selectPlaceholder}
                         aria-label={selectPlaceholder}
                         className={`select ${
-                          errors.represent && ' is-invalid'
+                          errors.representative && ' is-invalid'
                         }`}
                       />
                     )}
@@ -511,7 +578,7 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                 <Row className="mt-5">
                   <Col xs={12}>
                     <Controller
-                      name="enteName"
+                      name="ente"
                       control={control}
                       rules={{
                         required: {
@@ -529,8 +596,8 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                       }}
                       render={({ field }) => (
                         <Input
-                          invalid={errors.enteName}
-                          infoText={errors.enteName && errors.enteName.message}
+                          invalid={errors.ente}
+                          infoText={errors.ente && errors.ente.message}
                           label={enteNameLabel}
                           type="text"
                           {...field}
@@ -567,7 +634,7 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                           placeholder={selectPlaceholder}
                           aria-label={selectPlaceholder}
                           className={`${
-                            errors.represent && 'select is-invalid'
+                            errors.enteSelect && 'select is-invalid'
                           }`}
                         />
                       )}
@@ -677,7 +744,8 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                       {...register('radio2', { required: true })}
                     />
                     <Label check htmlFor="radio2">
-                      {privacyRadio} <a href={privacy.linkTo}>{privacyRadioLinkLabel}</a> *
+                      {privacyRadio}{' '}
+                      <a href={privacy.linkTo}>{privacyRadioLinkLabel}</a> *
                     </Label>
                   </FormGroup>
                   <span className={classes.errorLabel}>
@@ -698,7 +766,7 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
         <div className="row">
           <div className="col-12 col-md-6">
             <div
-              class={classes.notification}
+              className={classes.notification}
               role="alert"
               aria-labelledby="not2dms-title"
               id="not2dms"
@@ -724,14 +792,14 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                     width="1.49987"
                     height="24.4978"
                     transform="rotate(45 17.3242 0.5)"
-                    fill="#0066CC"
+                    fill="#5C6F82"
                   />
                   <rect
                     y="1.56055"
                     width="1.49987"
                     height="24.4978"
                     transform="rotate(-45 0 1.56055)"
-                    fill="#0066CC"
+                    fill="#5C6F82"
                   />
                 </svg>
 
