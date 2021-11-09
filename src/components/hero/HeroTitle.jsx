@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 
 export const HeroTitle = ({ linkTo = null, title, className = '', Tag = 'h3' }) => (
-  <h2 className="h2 mb-4">
+  <h3 className="h2 mb-4">
     {linkTo ? (
       <Link to={linkTo} className={`text-decoration-none ${className}`}>
         {title}
@@ -11,7 +11,7 @@ export const HeroTitle = ({ linkTo = null, title, className = '', Tag = 'h3' }) 
     ) : (
       <span className={`${className}`}>{title}</span>
     )}
-  </h2>
+  </h3>
 );
 
 HeroTitle.propTypes = {

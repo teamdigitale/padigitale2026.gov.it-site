@@ -110,14 +110,13 @@ export const SupportSection = (props) => {
   const { title, supportList, buttonLabel, handleToggle } = props;
   return (
     <>
-      <Section color="muted" aria-labelledby="suppost-section">
-        <h3 id="suppost-section" className="sr-only">
-          Sezione supporto
-        </h3>
+      <Section color="muted" aria-labelledby="support-section">
         <div className="container">
           <Row>
             <Col md={8} lg={6} className={classes.layout}>
-              <p className={classes.tag}>Supporto</p>
+              <h3 id="support-section" className={classes.tag}>
+                Supporto
+              </h3>
               <h4 className={classes.sectionTitle}>{title}</h4>
             </Col>
           </Row>

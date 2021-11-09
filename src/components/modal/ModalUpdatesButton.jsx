@@ -66,7 +66,7 @@ export const ModalUpdatesButton = ({ label, buttonLabel, initialState, handleTog
         <Container className="px-3">
           <Row className="align-items-center mb-4">
             <Col sm={12} lg={3}>
-              <h3 className={classes.buttonTitle}>Le misure</h3>
+              <span className={classes.buttonTitle}>Le misure</span>
             </Col>
             <Col sm={12} lg={9}>
               <span className={classes.buttonInfo}>

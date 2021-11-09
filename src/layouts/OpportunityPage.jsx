@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
-import { createUseStyles } from 'react-jss';
 import content from '../../contents/home-page/home.yml';
+import { createUseStyles } from 'react-jss';
 import opportunityContent from '../../contents/opportunity-page/opportunity.yml';
+import { BeneficiariesSection } from './opportunity/BeneficiariesSection';
+import { SupportSection } from './faq/SupportSection';
 import { HeroImageBackground } from '../components/hero/HeroImageBackground';
 import { ModalUpdatesButton } from '../components/modal/ModalUpdatesButton';
 import { ModalUpdates } from '../components/modal/ModalUpdates';
 import { SEO } from '../components/SEO';
 import seo from '../../contents/seo.yml';
-import { SupportSection } from './faq/SupportSection';
-import { BeneficiariesSection } from './opportunity/BeneficiariesSection';
 
 const { title: seoTitle, description: seoDescription } = seo.opportunityPage;
 
@@ -17,8 +17,8 @@ const { heroOpportunity, modalButton } = opportunityContent;
 
 const useStyles = createUseStyles({
   manageSpaces: {
-    paddingBottom: '4rem',
-  },
+    paddingBottom: '4rem'
+  }
 });
 
 export const OpportunityPage = (props) => {
@@ -30,6 +30,9 @@ export const OpportunityPage = (props) => {
   return (
     <>
       <SEO title={seoTitle} description={seoDescription} />
+      <div className="sr-only">
+        <h2>{opportunityContent.name}</h2>
+      </div>
       <HeroImageBackground
         title={heroOpportunity.title}
         body={heroOpportunity.body}
