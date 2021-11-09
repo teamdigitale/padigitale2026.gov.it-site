@@ -285,6 +285,19 @@ beneficiaries:
     moreInfoLabel: 'Leggi di più su Italia Domani'
     moreInfoLink: 'https://italiadomani.gov.it/it/investimenti/digitalizzazione-delle-grandi-amministrazioni-centrali.html'
   - number: 1.7.1
+    id: servi-civi
+    title: Servizio civile digitale
+    money: '60 <span>milioni di euro<span>'
+    tags:
+      - value: enti-servizio-civile
+        label: Enti iscritti all'albo del servizio civile
+    description: Sviluppare l'iniziativa “Servizio civile digitale”, finalizzata, tra le altre cose, alla formazione di circa 9.700 volontari e al coinvolgimento di 1 milione di cittadini beneficiari di attività di facilitazione digitale e di educazione digitale.
+    stalls: '100 enti'
+    accessSectionId: presentazione-progetto
+    accessLabel: Presentazione Progetto
+    moreInfoLabel: 'Leggi di più su Italia Domani'
+    moreInfoLink: 'https://italiadomani.gov.it/it/investimenti/competenze-digitali-di-base.html'
+  - number: 1.7.2
     id: centri-facili
     title: Centri di facilitazione digitale
     money: '135 <span>milioni di euro<span>'
@@ -295,19 +308,6 @@ beneficiaries:
         label: Province autonome
     description: Ampliare l’esperienza dei "Centri di facilitazione digitale", punti di accesso fisici, solitamente situati in biblioteche, scuole e centri sociali, che forniscono ai cittadini formazione sia di persona che online sulle competenze digitali al fine di supportare l’inclusione digitale
     stalls: '20 enti'
-    accessSectionId: presentazione-progetto
-    accessLabel: Presentazione Progetto
-    moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: 'https://italiadomani.gov.it/it/investimenti/competenze-digitali-di-base.html'
-  - number: 1.7.2
-    id: servi-civi
-    title: Servizio civile digitale
-    money: '60 <span>milioni di euro<span>'
-    tags:
-      - value: enti-servizio-civile
-        label: Enti iscritti all'albo del servizio civile
-    description: Sviluppare l'iniziativa “Servizio civile digitale”, finalizzata, tra le altre cose, alla formazione di circa 9.700 volontari e al coinvolgimento di 1 milione di cittadini beneficiari di attività di facilitazione digitale e di educazione digitale.
-    stalls: '100 enti'
     accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
     moreInfoLabel: 'Leggi di più su Italia Domani'
