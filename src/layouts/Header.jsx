@@ -85,7 +85,7 @@ const useStyle = createUseStyles({
     padding: [16, 0],
     '& .it-header-center-content-wrapper .it-brand-wrapper a .icon': {
       height: '3rem',
-    }
+    },
   },
   offCanvasWrapper: {
     padding: [13, 24],
@@ -162,7 +162,7 @@ const useStyle = createUseStyles({
     },
     '& button': {
       height: '100%',
-    }
+    },
   },
   headerToggler: {
     fontWeight: '600',
@@ -200,27 +200,15 @@ const SlimHeader = () => {
         <HeaderBrand href="https://innovazione.gov.it/dipartimento" target="_blank" className={classes.headerLink}>
           {externalLinks.dipartimento.label}
         </HeaderBrand>
-        <HeaderLinkZone aria-labelledby="siti-esterni-correlati">
-          <h2 id="siti-esterni-correlati" class="sr-only">
-            Siti esterni correlati
-          </h2>
-          <Button
-            className={classes.headerToggler}
-            onClick={toggle}
-            aria-expanded={collapse}
-          >
-            <span className="font-weight-bold">
-              {externalLinks.dipartimento.label}
-            </span>
+        <HeaderLinkZone aria-label="Siti esterni correlati">
+          <Button className={classes.headerToggler} onClick={toggle} aria-expanded={collapse}>
+            <span className="font-weight-bold">{externalLinks.dipartimento.label}</span>
             <Icon icon="it-expand" />
           </Button>
           <Collapse isOpen={collapse}>
             <div className={classes.linkListWrapperCustom}>
               <LinkList className={classes.topListLink}>
-                <LinkListItem
-                  href={externalLinks.italiaDigitale.linkTo}
-                  target="_blank"
-                >
+                <LinkListItem href={externalLinks.italiaDigitale.linkTo} target="_blank">
                   {externalLinks.italiaDigitale.label}
                 </LinkListItem>
                 <LinkListItem href={externalLinks.pnrr.linkTo} target="_blank">
@@ -236,11 +224,7 @@ const SlimHeader = () => {
           href={externalLinks.italiaDigitale.linkTo}
           target="_blank"
         >
-          <img
-            className="d-none d-lg-block"
-            src="/assets/eu-flag.svg"
-            alt=""
-          ></img>
+          <img className="d-none d-lg-block" src="/assets/eu-flag.svg" alt=""></img>
         </ExternalLink>
       </HeaderContent>
     </HeaderReactKit>
@@ -250,26 +234,14 @@ const SlimHeader = () => {
 const CenterHeader = () => {
   const classes = useStyle();
   return (
-    <HeaderReactKit
-      type="center"
-      theme="light"
-      className={classes.headerCenterWrapper}
-    >
+    <HeaderReactKit type="center" theme="light" className={classes.headerCenterWrapper}>
       <HeaderContent>
         <div className="it-brand-wrapper pl-5 pl-sm-0">
           <Link to="/">
             <div className="it-brand-text pr-0">
               <div className="d-md-flex align-items-center">
-                <img
-                  className="icon"
-                  src="/assets/repubblica-logo-blue.svg"
-                  alt="Logo Repubblica Italiana"
-                />
-                <img
-                  className="icon"
-                  src="/assets/site-logo.svg"
-                  alt="Logo PA digitale 2026"
-                />
+                <img className="icon" src="/assets/repubblica-logo-blue.svg" alt="Logo Repubblica Italiana" />
+                <img className="icon" src="/assets/site-logo.svg" alt="Logo PA digitale 2026" />
                 <div className="d-none d-lg-inline-block">
                   <h1 className="h3 mb-0">{headerTitle}</h1>
                   <div className={classes.subtitle}>{headerSubtitle}</div>
@@ -297,7 +269,7 @@ const NavHeader = ({ toggleModal }) => {
         aria-labelledby="menu-principale"
         className="px-2"
       >
-        <h2 id="menu-principale" class="sr-only">
+        <h2 id="menu-principale" className="sr-only">
           Menu principale
         </h2>
         <button
@@ -315,11 +287,7 @@ const NavHeader = ({ toggleModal }) => {
             <Nav navbar className={classes.navbarNav}>
               <div className={classes.offCanvasWrapper}>
                 <a href="/" tabIndex="-1">
-                  <img
-                    className="icon"
-                    src="/assets/site-logo.svg"
-                    alt="Logo"
-                  />
+                  <img className="icon" src="/assets/site-logo.svg" alt="Logo" />
                 </a>
                 <a href="/" className={classes.offCanvasTitle}>
                   {headerTitle}
@@ -332,9 +300,7 @@ const NavHeader = ({ toggleModal }) => {
                   activeClassName="active"
                   onClick={closeMenu}
                 >
-                  <span className="font-weight-semibold">
-                    {internalLinks.opportunity.label}
-                  </span>
+                  <span className="font-weight-semibold">{internalLinks.opportunity.label}</span>
                 </Link>
               </NavItem>
               <NavItem>
@@ -344,9 +310,7 @@ const NavHeader = ({ toggleModal }) => {
                   activeClassName="active"
                   onClick={closeMenu}
                 >
-                  <span className="font-weight-semibold">
-                    {internalLinks.howitworks.label}
-                  </span>
+                  <span className="font-weight-semibold">{internalLinks.howitworks.label}</span>
                 </Link>
               </NavItem>
               <NavItem>
@@ -356,9 +320,7 @@ const NavHeader = ({ toggleModal }) => {
                   activeClassName="active"
                   onClick={closeMenu}
                 >
-                  <span className="font-weight-semibold">
-                    {internalLinks.support.label}
-                  </span>
+                  <span className="font-weight-semibold">{internalLinks.support.label}</span>
                 </Link>
               </NavItem>
               <NavItem active className={classes.updatesBtn}>
@@ -370,9 +332,7 @@ const NavHeader = ({ toggleModal }) => {
                     toggleModal();
                   }}
                 >
-                  <span className="font-weight-semibold">
-                    {internalLinks.updates.label}
-                  </span>
+                  <span className="font-weight-semibold">{internalLinks.updates.label}</span>
                 </Button>
               </NavItem>
             </Nav>

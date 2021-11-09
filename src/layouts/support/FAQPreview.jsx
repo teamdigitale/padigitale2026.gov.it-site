@@ -79,7 +79,7 @@ export const FAQPreview = () => {
       <Link to="/faq" onClick={() => dispatch({ type: 'SET:FAQ_ID', payload: { faqId: card.faqId } })} className={classes.linkCard}>
         <Card className={classes.faqCard}>
           <CardBody>
-            <CardTitle tag="h5">{card.title}</CardTitle>
+            <CardTitle tag="h4">{card.title}</CardTitle>
             <CardText dangerouslySetInnerHTML={{ __html: card.text }} />
           </CardBody>
         </Card>
