@@ -745,7 +745,7 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                     />
                     <Label check htmlFor="radio2">
                       {privacyRadio}{' '}
-                      <a href={privacy.linkTo}>{privacyRadioLinkLabel}</a> *
+                      <a target="_blank" href={privacy.linkTo}>{privacyRadioLinkLabel}</a> *
                     </Label>
                   </FormGroup>
                   <span className={classes.errorLabel}>
