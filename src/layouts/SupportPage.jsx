@@ -15,9 +15,6 @@ const {
 export const SupportPage = () => (
   <>
     <SEO title={seoTitle} description={seoDescription} />
-    <div className="sr-only">
-      <h2>{content.name}</h2>
-    </div>
     <HeroSupport title={title} subtitle={description} />
     <FAQPreview />
     <Assistance />

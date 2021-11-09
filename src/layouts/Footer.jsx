@@ -86,15 +86,24 @@ const SlimFooter = () => {
   const classes = useStyle();
   return (
     <div className={classes.slimFooter}>
-      <div className="container">
+      <section className="container" aria-labelledby="linkutili-header">
+        <h3 id="linkutili-header" class="sr-only">
+          Link Utili
+        </h3>
         <ul className="list-inline link-list mb-0 text-center text-md-left">
           <li className={`${classes.listItem} mr-0 mr-md-5`}>
-            <Link to={noteLegali.linkTo} className="list-item mid-footer-link mx-4 mx-md-0">
+            <Link
+              to={noteLegali.linkTo}
+              className="list-item mid-footer-link mx-4 mx-md-0"
+            >
               {noteLegali.label}
             </Link>
           </li>
           <li className={`${classes.listItem} mr-0 mr-md-5`}>
-            <Link to={privacy.linkTo} className="list-item mid-footer-link mx-4 mx-md-0">
+            <Link
+              to={privacy.linkTo}
+              className="list-item mid-footer-link mx-4 mx-md-0"
+            >
               {privacy.label}
             </Link>
           </li>
@@ -108,7 +117,7 @@ const SlimFooter = () => {
             </ExternalLink>
           </li>
         </ul>
-      </div>
+      </section>
     </div>
   );
 };
@@ -122,17 +131,32 @@ const MainFooter = () => {
       <div className="container text-center text-md-left">
         <div className={classes.mainWrapper}>
           <div className="logos">
-            <ExternalLink linkTo={eu.linkTo} ariaLabel={eu.ariaLabel} className={classes.footerLogo}>
-              <img className={classes.logoImg} src="/assets/eu-flag.svg" alt="Unione Europea" />
+            <ExternalLink
+              linkTo={eu.linkTo}
+              ariaLabel={eu.ariaLabel}
+              className={classes.footerLogo}
+            >
+              <img
+                className={classes.logoImg}
+                src="/assets/eu-flag.svg"
+                alt="Unione Europea"
+              />
             </ExternalLink>
-            <ExternalLink linkTo={repubblica.linkTo} ariaLabel={repubblica.ariaLabel} className={classes.footerLogo}>
+            <ExternalLink
+              linkTo={repubblica.linkTo}
+              ariaLabel={repubblica.ariaLabel}
+              className={classes.footerLogo}
+            >
               <img
                 className={`${classes.logoImg} logo-gov`}
                 src="/assets/repubblica-logo-colorato.svg"
                 alt="Governo Italiano"
               />
             </ExternalLink>
-            <ExternalLink linkTo={dipartimento.linkTo} ariaLabel={dipartimento.ariaLabel}>
+            <ExternalLink
+              linkTo={dipartimento.linkTo}
+              ariaLabel={dipartimento.ariaLabel}
+            >
               <img
                 className={classes.departmentLogo}
                 src="/assets/dipartimento.svg"
@@ -141,11 +165,7 @@ const MainFooter = () => {
             </ExternalLink>
           </div>
           <div className="info">
-            <Link
-              to="/come-funziona"
-              className={classes.seeMore}
-              onClick={() => dispatch({ type: 'SET:HOW_SECTION_ID', payload: { howId: 'attori-coinvolti' } })}
-            >
+            <Link to="/come-funziona" className={classes.seeMore} onClick={() => dispatch({type: 'SET:HOW_SECTION_ID', payload: {howId: 'attori-coinvolti'}})}>
               Scopri l&apos;iniziativa
             </Link>
           </div>
@@ -156,10 +176,7 @@ const MainFooter = () => {
 };
 
 export const Footer = () => (
-  <footer className="it-footer" id="footer" aria-labelledby="linkutili-header">
-    <h2 id="linkutili-header" className="sr-only">
-      Link Utili
-    </h2>
+  <footer className="it-footer" id="footer">
     <MainFooter />
     <SlimFooter />
   </footer>

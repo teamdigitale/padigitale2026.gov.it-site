@@ -30,9 +30,6 @@ export const OpportunityPage = (props) => {
   return (
     <>
       <SEO title={seoTitle} description={seoDescription} />
-      <div className="sr-only">
-        <h2>{opportunityContent.name}</h2>
-      </div>
       <HeroImageBackground
         title={heroOpportunity.title}
         body={heroOpportunity.body}

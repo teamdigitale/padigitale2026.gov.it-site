@@ -159,10 +159,8 @@ export const QuestionSection = (props) => {
 
   return (
     <>
-      <section id={sectionId} className={classes.section} aria-labelledby={sectionId + '-headings'}>
-        <h4 id={sectionId + '-headings'} className={classes.sectionTitle}>
-          {title}
-        </h4>
+      <section id={sectionId} className={classes.section}>
+        <h3 className={classes.sectionTitle}>{title}</h3>
         <Accordion background="active">
           {accordionList.map((accordion, i) => (
             <div key={accordion.title} className={classes.accordionWrapper}>

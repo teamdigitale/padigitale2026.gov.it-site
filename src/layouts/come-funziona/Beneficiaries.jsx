@@ -77,43 +77,49 @@ export const Beneficiaries = (props) => {
 
   return (
     <>
-      <Container tag="section" aria-labelledby="involved-actors-title" className="px-3 pt-5">
+      <Container
+        tag="section"
+        aria-labelledby="involved-actors-title"
+        className="px-3 pt-5"
+      >
         <Row>
           <Col className="offset-lg-1">
             <Row>
               <Col xs="12" lg="5" id="beneficiari">
-                <h3 className={classes.category}>{category}</h3>
-                <h4 className={classes.title} id="involved-actors-title">
+                <p className={classes.category}>{category}</p>
+                <h2 className={classes.title} id="involved-actors-title">
                   {title}
-                </h4>
+                </h2>
               </Col>
             </Row>
             <Row>
-              {categories.map((category) => (
-                <React.Fragment key={category.name}>
-                  <Col lg="6" className="px-lg-3">
-                    <div className={classes.headCategory}>
-                      <img src={category.icon} alt="" />
-                      <h4 className="category-title">{category.name}</h4>
-                    </div>
-                    {category.items.map((item) => (
-                      <Link
-                        to="/misure"
-                        key={item.linkLabel}
-                        state={{
-                          filter: {
-                            value: item.filterId,
-                            label: item.linkLabel,
-                          },
-                        }}
-                        className={classes.linkItem}
-                      >
-                        <p>{item.linkLabel}</p>
-                      </Link>
-                    ))}
-                  </Col>
-                </React.Fragment>
-              ))}
+              {categories.map((category) => {
+                return (
+                  <React.Fragment key={category.name}>
+                    <Col lg="6" className="px-lg-3">
+                      <div className={classes.headCategory}>
+                        <img src={category.icon} alt="" />
+                        <h3 className="category-title">{category.name}</h3>
+                      </div>
+                      {category.items.map((item) => (
+                        <Link
+                          to="/misure"
+                          key={item.linkLabel}
+                          state={{
+                            filter: {
+                              value: item.filterId,
+                              label: item.linkLabel,
+                            },
+                          }}
+                          className={classes.linkItem}
+                        >
+                          <p>{item.linkLabel}</p>
+                        </Link>
+                      ))}
+                    </Col>
+                  </React.Fragment>
+                );
+              })}
             </Row>
           </Col>
         </Row>

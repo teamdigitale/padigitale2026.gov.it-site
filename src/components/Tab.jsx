@@ -277,7 +277,7 @@ export const Tab = ({ tabContent, sideDesktopNavigation, mobileNavigation, title
                     aria-labelledby={'nav-tab-' + index + '-tab' + tabContent.id}
                   >
                     <div className={classes.tabCard}>
-                      <h4 className={classes.tabCardTitle}>{content.title}</h4>
+                      <h3 className={classes.tabCardTitle}>{content.title}</h3>
                       <p className={classes.tabCardDesc}>{content.description}</p>
                       <Row>
                         <Col xs="12" lg="6">
