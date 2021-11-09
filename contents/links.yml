@@ -1,11 +1,10 @@
 internalLinks:
-  strategy:
-    linkTo: '/opportunita'
-    label: Le opportunità
+  opportunity:
+    linkTo: '/misure'
+    label: Le misure
     linkTop: '/#mainTop'
-  enablement:
-    homeLinkTo: '/come-funziona'
-    linkTo: 'https://www.youtube.com/CHANGEME'
+  howitworks:
+    linkTo: '/come-funziona'
     label: Come funziona
     linkTop: '#mainTop'
   support:
@@ -67,14 +66,20 @@ externalLinks:
   dipartimento:
     label: Dipartimento per la Trasformazione Digitale
     linkTo: https://innovazione.gov.it
-    ariaLabel: 'Dipartimento per la Trasformazione Digitale (link esterno)'
+    ariaLabel: 'Dipartimento per la Trasformazione Digitale (Collegamento esterno - Apre su nuova scheda)'
+  eu:
+    linkTo: https://ec.europa.eu/info/index_it
+    ariaLabel: 'Unione Europea (Collegamento esterno - Apre su nuova scheda)'
+  repubblica:
+    linkTo: https://www.governo.it/
+    ariaLabel: 'Governo Italiano (Collegamento esterno - Apre su nuova scheda)'
   agid:
     label: AgID
     linkTo: https://www.agid.gov.it/
     ariaLabel: "Agenzia per l'Italia Digitale (link esterno)"
   a11y:
     label: Dichiarazione di accessibilità
-    linkTo: https://form.agid.gov.it/CHANGEME
+    linkTo: https://form.agid.gov.it/prossimapa.gov.it
     ariaLabel: 'Dichiarazione di accessibilità (link esterno)'
   italiaDigitale:
     label: Italia digitale 2026

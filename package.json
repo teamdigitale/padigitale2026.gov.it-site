@@ -13,7 +13,7 @@
     "lint": "eslint src --ext .js,.jsx",
     "lint-autofix": "eslint src --ext .js,.jsx --fix",
     "html-proofer": "docker-compose up --build",
-    "pa11y": "sh pa11y.sh",
+    "pa11y": "chmod +x pa11y.sh && ./pa11y.sh",
     "serve": "gatsby serve"
   },
   "dependencies": {

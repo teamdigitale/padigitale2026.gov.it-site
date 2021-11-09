@@ -14,11 +14,16 @@ import { HeroImageBackgroundFull } from '../components/hero/HeroImageBackgroundF
 import { HeroImage } from '../components/hero/HeroImage';
 import { HeroCarousel } from '../components/carousel/Carousel';
 import { HomeCarousel } from '../components/carousel/HomeCarousel';
+import { SEO } from '../components/SEO';
+import seo from '../../contents/seo.yml';
 import { SupportSection } from './faq/SupportSection';
 import { OpportunitySection } from './home/OpportunitySection';
 
+const { title: seoTitle, description: seoDescription } = seo.homePage;
+
 export const IndexPage = () => (
   <>
+    <SEO title={seoTitle} description={seoDescription} />
     <HeroImageBackgroundFull
       category={heroMain.category}
       title={heroMain.title}
@@ -33,12 +38,14 @@ export const IndexPage = () => (
       category={heroPnrr.category}
       title={heroPnrr.title}
       body={heroPnrr.body}
+      imageUrl="/assets/come-funziona-home.svg"
+      imageAlt=""
+      firstButtonHref="/come-funziona"
       firstButtonLabel={heroPnrr.firstButtonLabel}
-      imageUrl="/assets/placeholder.svg"
-      imageAlt="placeholder"
-      firstButtonHref="#"
+      firstButtonAriaLabel={heroPnrr.firstButtonAriaLabel}
       secondButtonLabel={heroPnrr.secondButtonLabel}
-      secondButtonHref="#"
+      secondButtonAriaLabel={heroPnrr.secondButtonAriaLabel}
+      secondButtonHref="/come-funziona"
     />
     <HeroImageBackground
       title={heroDigital.title}
@@ -46,8 +53,9 @@ export const IndexPage = () => (
       theme="bg-blue"
       image="italy-blue.png"
       firstButtonLabel={heroDigital.firstButtonLabel}
+      firstButtonAriaLabel={heroDigital.firstButtonAriaLabel}
       firstButtonClass="btn-light"
-      firstButtonHref="#"
+      firstButtonHref={heroDigital.linkTo}
       overlap={true}
     />
     <HeroCarousel content={heroCarouselNews} title={heroCarouselNewsTitle} />

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { createUseStyles } from 'react-jss';
 
 import { HeroCategory } from '../../components/hero/HeroCategory';
@@ -8,6 +8,8 @@ import { HeroCtaContainer } from '../../components/hero/HeroCtaContainer';
 import { HeroGraphic } from '../../components/hero/HeroGraphic';
 import { Hero } from '../../components/hero/Hero';
 import { ExternalLink } from '../../components/ExternalLink';
+import { Link } from 'gatsby';
+import { GlobalStateContext } from '../../context/globalContext';
 
 const useStyles = createUseStyles({
   btnPrimaryLight: {
@@ -27,9 +29,10 @@ const useStyles = createUseStyles({
   },
   heroTitle: {
     color: '#33485C',
-    fontSize: '2.667rem',
-    '@media (max-width: 992px)': {
-      fontSize: '1.778rem',
+    fontSize: '2rem',
+    lineHeight: '1.25',
+    '@media (min-width: 992px)': {
+      fontSize: '2.667rem',
     },
   },
   a11yHighContrast: {
@@ -41,15 +44,28 @@ const useStyles = createUseStyles({
   },
   heroImage: {
     composes: 'row align-items-center',
-    '@media (min-width: 992px)': {},
+    '@media (min-width: 992px)': {
+      padding: '2.222rem 0'
+    },
     '& .hero-category': {
       color: '#33485C',
       fontSize: '0.889rem',
     },
     '& .hero-body': {
       color: '#33485C',
-      fontSize: '1.333rem',
+      fontSize: '1.5rem',
+      lineHeight: '1.5',
+      marginBottom: '2rem',
+      '@media (min-width: 992px)': {
+        fontSize: '1.333rem',
+      },
     },
+    '& .graphic-image': {
+      '@media (max-width: 991px)': {
+        maxWidth: '15.6rem',
+        margin: '0 auto 2.5rem'
+      },
+    }
   },
 });
 
@@ -59,12 +75,15 @@ export const HeroImage = ({
   body,
   firstButtonHref,
   firstButtonLabel,
+  firstButtonAriaLabel,
   secondButtonHref,
   secondButtonLabel,
+  secondButtonAriaLabel,
   imageUrl,
   imageAlt,
 }) => {
   const classes = useStyles();
+  const [state, dispatch] = useContext(GlobalStateContext)
 
   return (
     <Hero>
@@ -78,26 +97,22 @@ export const HeroImage = ({
           <HeroCtaContainer>
             <ExternalLink
               linkTo={firstButtonHref}
-              ariaLabel={firstButtonLabel}
-              className="btn text-uppercase mx-4 ml-lg-0 my-2 btn-primary"
+              ariaLabel={firstButtonAriaLabel}
+              className="btn text-uppercase mx-4 ml-lg-0 my-3 my-md-0 btn-primary"
             >
               {firstButtonLabel}
             </ExternalLink>
             {secondButtonLabel ? (
-              <ExternalLink
-                linkTo={secondButtonHref}
-                ariaLabel={secondButtonLabel}
-                className="btn text-uppercase mx-4 ml-lg-0 my-2 btn-outline-primary"
-              >
+              <Link className="btn text-uppercase mx-4 ml-lg-0 my-3 my-md-0 btn-outline-primary" to="/come-funziona" onClick={() => dispatch({type: 'SET:SECTION_ID', payload: {sectionId: 'beneficiari'}})}>
                 {secondButtonLabel}
-              </ExternalLink>
+              </Link>
             ) : (
               ''
             )}
           </HeroCtaContainer>
         </div>
         <HeroGraphic className="col-lg-5 d-flex justify-content-sm-center">
-          <img src={imageUrl} alt={imageAlt} aria-label={imageAlt} />
+        <img className="graphic-image" src={imageUrl} alt={imageAlt} aria-label={imageAlt} />
         </HeroGraphic>
       </div>
     </Hero>

@@ -18,12 +18,17 @@ const useStyles = createUseStyles({
     },
     '& .card-body': {
       boxShadow: '0px 0px 20px rgb(0 43 85 / 4%);',
-      padding: '2.667rem',
+      padding: '1.5rem',
       order: '1',
       textAlign: 'center',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
       '@media (min-width: 992px)': {
         order: '0',
+        padding: '2.667rem',
         textAlign: 'left',
+        alignItems: 'flex-start',
       },
       '& .category-top': {
         '& a.category': {
@@ -34,7 +39,7 @@ const useStyles = createUseStyles({
       },
       '& h5.card-title': {
         color: '#0066CC',
-        fontSize: '1.75rem',
+        fontSize: '1.778rem',
         fontWeight: 'bold',
         lineHeight: '1.43',
         marginBottom: '0.889rem',
@@ -44,14 +49,17 @@ const useStyles = createUseStyles({
       },
       '& .card-text': {
         color: '#33485C',
-        fontSize: '1.125rem',
+        fontSize: '1rem',
         fontFamily: 'Titillium Web',
         fontWeight: '400',
-        lineHeight: '1.28',
-        marginBottom: '7.25rem',
+        lineHeight: '1.556rem',
+        marginBottom: '2rem',
         '@media (min-width: 992px)': {
-          marginBottom: '3.778rem',
+          marginBottom: '1.222rem',
         },
+      },
+      '& button': {
+        marginTop: 'auto'
       },
       '& .source': {
         color: '#33485C',
@@ -107,7 +115,7 @@ const useStyles = createUseStyles({
         margin: '0 -1.667rem -1.667rem',
       },
     },
-    '& .swiper-slider': {
+    '& .swiper-wrapper .swiper-slider': {
       padding: '1.111rem',
     },
     '& .swiper-pagination.swiper-pagination-bullets .swiper-pagination-bullet': {
@@ -136,7 +144,7 @@ export const HomeCarousel = ({ content, title }) => {
         <CardBody>
           <CardTitle tag="h5">{element.title}</CardTitle>
           <CardText dangerouslySetInnerHTML={{ __html: element.description }} />
-          <Button color="primary" className="text-uppercase">
+          <Button href={element.linkTo} color="primary" className="text-uppercase" aria-lebel={element.buttonAriaLabel}>
             {element.button}
           </Button>
         </CardBody>

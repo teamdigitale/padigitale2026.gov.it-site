@@ -8,12 +8,11 @@ import { HeroParagraph } from './HeroParagraph';
 
 const useStyles = createUseStyles({
   heroImg: {
-    position: 'absolute',
-    right: '0',
-    top: '0',
+    position: 'relative',
+    width: '100%'
   },
   heroTitle: {
-    composes: 'no_doc',
+    composes: 'no_doc title-hero',
     fontSize: '2.222rem',
     '@media (max-width: 992px)': {
       display: 'flex',
@@ -31,19 +30,36 @@ const useStyles = createUseStyles({
     composes: 'it-hero-wrapper',
     position: 'relative',
     display: 'flex',
+    padding: '0 0 2rem',
+    '&:not(.overlap)': {
+      minHeight: 'auto',
+      '& .container .it-hero-text-wrapper': {
+        padding: '5rem 0',
+        '@media (max-width: 992px)': {
+          padding: '4rem 0 1rem',
+        },
+        '& .title-hero': {
+          fontSize: '2.5rem',
+          '@media (min-width: 992px)': {
+            maxWidth: '26.2rem',
+            fontSize: '2.667rem',
+            display: 'block',
+          },
+        },
+        '& p': {
+          '@media (min-width: 992px)': {
+            maxWidth: '26.2rem',
+          },
+        }
+      },
+    },
     '&.overlap': {
       marginBottom: '-7rem',
-      paddingBottom: '4rem',
+      paddingBottom: '11rem',
     },
     '@media (max-width: 992px)': {
       flexDirection: 'column',
       paddingBottom: '5rem',
-      '& .container .it-hero-text-wrapper': {
-        padding: '120px 54% 168px 26px',
-      },
-      '&.it-hero-wrapper .it-hero-text-wrapper': {
-        padding: '3rem 0',
-      },
     },
     '&.bg-white': {
       backgrodunColor: '#fff',
@@ -75,6 +91,9 @@ const useStyles = createUseStyles({
     '& .container .it-hero-text-wrapper .btn': {
       fontSize: '1rem',
     },
+    '&.it-hero-wrapper .it-hero-text-wrapper': {
+      /* padding: '10rem' */
+    }
   },
   buttonContainer: {
     composes: 'it-btn-container',
@@ -92,6 +111,16 @@ const useStyles = createUseStyles({
       },
     },
   },
+  heroContentContainer: {
+    composes:'container',
+    '&.container': {
+      marginRight: '0',
+      maxWidth: '100%',
+    },
+    '& .it-hero-text-wrapper': {
+      padding: '5.333rem 0 0',
+    },
+  }
 });
 
 export const HeroImageBackground = ({
@@ -100,6 +129,7 @@ export const HeroImageBackground = ({
   theme,
   image,
   firstButtonLabel,
+  firstButtonAriaLabel,
   firstButtonClass,
   firstButtonHref,
   secondButtonLabel,
@@ -110,18 +140,33 @@ export const HeroImageBackground = ({
   const classes = useStyles();
   return (
     <Hero>
-      <div className={`${classes.heroWrapper} ${overlap ? 'overlap' : ''} ${theme}`}>
-        <div className="container px-3 px-md-0">
+      <div
+        className={`${classes.heroWrapper} ${
+          overlap ? 'overlap' : ''
+        } ${theme}`}
+      >
+        <div className={classes.heroContentContainer}>
           <Row>
-            <Col xs="12" lg="11" className="offset-lg-1">
+            <Col xs="12" lg="5" className='offset-lg-1'>
               <div className={`${classes.contentWrapper} ${theme}`}>
                 <div>
                   <HeroTitle title={title} className={classes.heroTitle} />
                   <HeroParagraph text={body} />
                   <div className={classes.buttonContainer}>
-                    <HeroButton classButton={firstButtonClass} label={firstButtonLabel} href={firstButtonHref} />
+                    <HeroButton
+                      classButton={firstButtonClass}
+                      label={firstButtonLabel}
+                      href={firstButtonHref}
+                      ariaLabel={firstButtonAriaLabel}
+                      target="_blank"
+                      rel="noreferrer"
+                    />
                     {secondButtonLabel ? (
-                      <HeroButton classButton={secondButtonClass} label={secondButtonLabel} href={secondButtonHref} />
+                      <HeroButton
+                        classButton={secondButtonClass}
+                        label={secondButtonLabel}
+                        href={secondButtonHref}
+                      />
                     ) : (
                       ''
                     )}
@@ -129,9 +174,11 @@ export const HeroImageBackground = ({
                 </div>
               </div>
             </Col>
+            <Col xs={12} lg={5} className='pr-0 offset-lg-1 mt-4 mt-lg-0'>
+              <HeroBackground image={image} className={classes.heroImg}/>
+            </Col>
           </Row>
         </div>
-        <HeroBackground image={image} />
       </div>
     </Hero>
   );

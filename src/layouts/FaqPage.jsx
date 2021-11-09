@@ -3,10 +3,14 @@ import { Container, Input, Row, Col } from 'design-react-kit';
 import { createUseStyles } from 'react-jss';
 import content from '../../contents/home-page/home.yml';
 import faq from '../../contents/faq-page/faq.yml';
+import { SEO } from '../components/SEO';
+import seo from '../../contents/seo.yml';
 import { SideNavigation } from './faq/SideNavigation';
 import { QuestionSection } from './faq/QuestionSection';
 import { SupportSection } from './faq/SupportSection';
 import { HeroSupport } from './support/Hero';
+
+const { title: seoTitle, description: seoDescription } = seo.faqPage;
 
 const useStyles = createUseStyles({
   noResults: {
@@ -51,8 +55,8 @@ export const FaqPage = () => {
 
   function getAccordionsFiltered(question, input) {
     const regexp = new RegExp(input, 'i');
-    return question.accordions.filter((accordion) =>
-      regexp.test(accordion.title)
+    return question.accordions.filter(
+      (accordion) => regexp.test(accordion.title) || regexp.test(accordion.content) || regexp.test(accordion.linkLabel)
     );
   }
 
@@ -86,9 +90,7 @@ export const FaqPage = () => {
   useEffect(() => {
     if (filterId) {
       if (filterId === 'all') {
-        inputValue
-          ? setQuestions(getNewQuestions(inputValue))
-          : setQuestions(faq.questions);
+        inputValue ? setQuestions(getNewQuestions(inputValue)) : setQuestions(faq.questions);
       } else {
         if (!getAccordionsFiltered(getQuestionsMobile(faq.questions)[0], inputValue).length) {
           setQuestions(filterAccordions);
@@ -101,12 +103,16 @@ export const FaqPage = () => {
 
   return (
     <>
+      <SEO title={seoTitle} description={seoDescription} />
       <div className="sr-only">
         <h1>{content.name}</h1>
       </div>
       <HeroSupport title={faq.hero.title} subtitle={faq.hero.subtitle} />
       <div className="docs py-4 py-md-5">
-        <Container className="px-3">
+        <Container className="px-3" aria-labelledby="question-section">
+          <h3 id="question-section" className="sr-only">
+            Sezione domande frequenti
+          </h3>
           <Row>
             <Col lg={9} className="offset-lg-3 px-lg-3">
               <Input
@@ -121,27 +127,18 @@ export const FaqPage = () => {
           </Row>
           <Row>
             <Col lg={3}>
-              <SideNavigation getFilter={setFilterId} activeList={questions} searchValue={inputValue}/>
+              <SideNavigation getFilter={setFilterId} activeList={questions} searchValue={inputValue} />
             </Col>
             <Col lg={9} className="px-lg-3">
               {questions.map((question) => (
-                <QuestionSection
-                  key={question.title}
-                  item={question}
-                  inputText={inputValue}
-                />
+                <QuestionSection key={question.title} item={question} inputText={inputValue} />
               ))}
-              {!questions.length && (
-                <p className={classes.noResults}>{faq.noResults}</p>
-              )}
+              {!questions.length && <p className={classes.noResults}>{faq.noResults}</p>}
             </Col>
           </Row>
         </Container>
       </div>
-      <SupportSection
-        supportList={faq.support.cards}
-        title={faq.support.title}
-      />
+      <SupportSection supportList={faq.support.cards} title={faq.support.title} />
     </>
   );
 };

@@ -25,9 +25,33 @@ const useStyles = createUseStyles({
       padding: '0.889rem 1.333rem',
       '& p': {
         maxWidth: '100%',
-      }
+        marginBottom: '1rem'
+      },
     },
   },
+  buttonTitle: {
+    fontSize: '1.556rem',
+    fontWeight: '600',
+    color: '#33485C',
+    '@media (max-width: 992px)': {
+      textAlign: 'center',
+    },
+  },
+  buttonInfo: {
+    fontSize: '0.889rem',
+    fontWeight: '400',
+    color: '#33485C',
+    '@media (max-width: 992px)': {
+      display: 'block',
+      textAlign: 'center',
+    },
+  },
+  button: {
+    '&:focus': {
+      outline: '2px solid #ff9900',
+      boxShadow: 'none'
+    }
+  }
 });
 
 export const ModalUpdatesButton = ({
@@ -35,6 +59,7 @@ export const ModalUpdatesButton = ({
   buttonLabel,
   initialState,
   handleToggle,
+  hasTitle,
 }) => {
   const classes = useStyles();
   const eventHandler = () => {
@@ -42,17 +67,39 @@ export const ModalUpdatesButton = ({
   };
 
   return (
-    <Container className="px-3">
-      <Row>
-        <Col lg={12}>
-          <div className={classes.modalButtonContainer}>
-            <p className={classes.text}>{label}</p>
-            <Button color="primary" onClick={eventHandler}>
-              {buttonLabel}
-            </Button>
-          </div>
-        </Col>
-      </Row>
-    </Container>
+    <>
+      {hasTitle ? (
+        <Container className="px-3">
+          <Row className="align-items-center mb-4">
+            <Col sm={12} lg={3}>
+              <h3 className={classes.buttonTitle}>Le misure</h3>
+            </Col>
+            <Col sm={12} lg={9}>
+              <span className={classes.buttonInfo}>
+                M1C1{' '}
+                <strong>
+                  DIGITALIZZAZIONE, INNOVAZIONE E SICUREZZA NELLA PA
+                </strong>
+              </span>
+            </Col>
+          </Row>
+        </Container>
+      ) : (
+        ''
+      )}
+
+      <Container className="px-3">
+        <Row>
+          <Col lg={12}>
+            <div className={classes.modalButtonContainer}>
+              <p className={classes.text}>{label}</p>
+              <Button className={classes.button} color="primary" onClick={eventHandler}>
+                {buttonLabel}
+              </Button>
+            </div>
+          </Col>
+        </Row>
+      </Container>
+    </>
   );
 };

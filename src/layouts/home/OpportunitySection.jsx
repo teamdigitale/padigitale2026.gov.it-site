@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import {
   Section,
   Row,
@@ -9,6 +9,8 @@ import {
   Button,
 } from 'design-react-kit';
 import { createUseStyles } from 'react-jss';
+import { Link } from 'gatsby';
+import { GlobalStateContext } from '../../context/globalContext';
 
 const useStyle = createUseStyles({
   section: {
@@ -54,12 +56,16 @@ const useStyle = createUseStyles({
     },
     '& .card-body': {
       padding: '1.333rem 0.889rem',
-      '& h5.card-title': {
+      '& h4.card-title': {
         color: '#0066CC',
         marginBottom: '0',
+        fontSize: '1rem',
         '& span': {
           fontWeight: 'normal',
         },
+        '& a': {
+          textDecoration: 'none'
+        }
       },
     },
   },
@@ -68,18 +74,19 @@ const useStyle = createUseStyles({
 export const OpportunitySection = (props) => {
   const classes = useStyle();
   const { title, list } = props;
+  const [state, dispatch] = useContext(GlobalStateContext)
 
   return (
     <Section color="muted" className={classes.section}>
       <div className="container">
         <h4 className={classes.title}>{title}</h4>
-        <Row className={classes.row}>
+        <Row className={classes.row} role="list">
           {list.map((item) => (
-            <Col md="6" lg="3" key={item.title} className="px-md-3">
+            <Col md="6" lg="3" key={item.title} className="px-md-3" role="listitem">
               <Card spacing className={classes.cardWrapper}>
                 <CardBody>
-                  <CardTitle tag="h5">
-                    <span>{item.number}</span> {item.title}
+                  <CardTitle tag="h4">
+                  <Link to="/misure" onClick={() => dispatch({type: 'SET:SECTION_OPPORTUNITY_ID', payload: {sectionId: item.id}})}><span>{item.number}</span> {item.title}</Link>
                   </CardTitle>
                 </CardBody>
               </Card>
@@ -87,7 +94,7 @@ export const OpportunitySection = (props) => {
           ))}
         </Row>
         <div className="d-flex justify-content-center">
-          <Button className="text-uppercase" color="primary" href="/opportunita">Scopri tutte le opportunità</Button>
+          <Button className="text-uppercase" color="primary" href="/misure">Scopri tutte le misure</Button>
         </div>
       </div>
     </Section>

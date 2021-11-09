@@ -11,7 +11,9 @@ const { title: seoTitle, description: seoDescription } = seo.privacyPage;
 
 const query = graphql`
   query {
-    textChunk: markdownRemark(fields: { slug: { eq: "privacy-page/privacy" } }) {
+    textChunk: markdownRemark(
+      fields: { slug: { eq: "privacy-page/privacy" } }
+    ) {
       html
     }
   }
@@ -23,7 +25,7 @@ export const PrivacyPolicyPage = () => {
   } = useStaticQuery(query);
   return (
     <>
-      <SEO title={seoTitle} description={seoDescription} />
+      <SEO title="Privacy - PA digitale 2026" description={seoDescription} />
       <Breadcrumb currentPage={content.breadcrumb} />
       <Hero yPaddingXLScreen={false}>
         <TextChunk html={textChunk} />

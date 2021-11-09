@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useContext }from 'react';
 import { Button, Collapse, Card, CardBody } from 'design-react-kit';
 import { createUseStyles } from 'react-jss';
 import { ExternalLink } from './ExternalLink';
+import { Link } from 'gatsby';
+import { GlobalStateContext } from '../context/globalContext';
 
 const useStyles = createUseStyles({
   collapseWrapper: {
@@ -56,11 +58,15 @@ const useStyles = createUseStyles({
       marginTop: '-1.111rem',
     },
     '& .tag-title': {
+      textTransform: 'uppercase',
       marginBottom: '0.444rem',
       textAlign: 'center',
+      fontSize: '0.875rem',
+      lineHeight: '1.4',
       '@media (min-width: 992px)': {
         marginBottom: '0',
         marginRight: '0.444rem',
+        fontSize: '0.778rem'
       },
     },
     '& .tag-wrapper': {
@@ -116,6 +122,11 @@ const useStyles = createUseStyles({
       '@media (min-width: 992px)': {
         padding: '0.444rem 2.222rem 1.778rem',
       },
+      '& .description': {
+        '@media (min-width: 992px)': {
+          maxWidth: '44rem'
+        },
+      }
     },
     '& .stalls': {
       fontSize: '0.875rem',
@@ -181,6 +192,10 @@ const useStyles = createUseStyles({
     backgroundImage: 'url(/assets/chevron-down.svg)',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
+    '&:focus': {
+      outline: '2px solid #ff9900',
+      boxShadow: 'none'
+    },
     '&:hover, &:focus': {
       backgroundColor: '#0066CC',
       backgroundImage: 'url(/assets/chevron-down-white.svg)',
@@ -211,6 +226,7 @@ const useStyles = createUseStyles({
 export const AccordionButtonFull = (props) => {
   const classes = useStyles();
   const {
+    id,
     number,
     title,
     money,
@@ -218,10 +234,12 @@ export const AccordionButtonFull = (props) => {
     description,
     stalls,
     accessLabel,
-    accessLink,
+    accessSectionId,
     moreInfoLabel,
     moreInfoLink,
   } = props.data;
+
+  const [state, dispatch] = useContext(GlobalStateContext)
 
   const eventHandler = () => {
     props.handleToggle(props.id);
@@ -229,7 +247,7 @@ export const AccordionButtonFull = (props) => {
 
   return (
     <>
-      <div className={classes.collapseWrapper}>
+      <div className={classes.collapseWrapper} role="listitem" id={id}>
         <Button
           onClick={eventHandler}
           aria-expanded={props.id === props.active}
@@ -237,9 +255,9 @@ export const AccordionButtonFull = (props) => {
         ></Button>
         <div className={classes.cardWrapper}>
           <div className={classes.cardHeader}>
-            <p className={classes.cardTitle}>
+            <h4 className={classes.cardTitle}>
               <span>{number}</span> {title}
-            </p>
+            </h4>
             <div className={classes.cardHeaderValue} dangerouslySetInnerHTML={{ __html: money }} />
             <div className={classes.cardTags}>
               <p className="tag-title">Beneficiari</p>
@@ -260,16 +278,18 @@ export const AccordionButtonFull = (props) => {
           >
             <Card>
               <CardBody>
-                <p>{description}</p>
+                <p className="description">{description}</p>
                 <p className="stalls">
-                  Platea beneficiaria: <span>{stalls}</span>
+                  Platea potenziale: <span>{stalls}</span>
                 </p>
                 <div className="access">
                   <span>Modalità di accesso:</span>{' '}
-                  <a href={accessLink}>{accessLabel}</a>
+                  <Link to="/come-funziona" onClick={() => dispatch({type: 'SET:HOW_SECTION_ID', payload: {howId: accessSectionId}})}>
+                    <p>{accessLabel}</p>
+                  </Link>
                 </div>
                 <div className={classes.linkAccordion}>
-                  <ExternalLink linkTo={moreInfoLink} ariaLabel="aria label">
+                  <ExternalLink linkTo={moreInfoLink} ariaLabel={`${moreInfoLabel}, ${title}, (Collegamento esterno - Apre su nuova scheda)`}>
                     {moreInfoLabel}
                     <img src="/assets/external-icon.svg" alt="" />
                   </ExternalLink>

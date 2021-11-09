@@ -16,7 +16,7 @@ const useStyles = createUseStyles({
   },
   heroTitle: {
     composes: 'no_doc',
-    fontSize: '2.222rem',
+    fontSize: '2.667rem',
     '@media (max-width: 992px)': {
       display: 'flex',
       justifyContent: 'center',
@@ -28,6 +28,10 @@ const useStyles = createUseStyles({
     composes: 'it-hero-text-wrapper bg-blue',
     paddingLeft: '0 !important',
     zIndex: 2,
+    paddingTop: '3.75rem !important',
+    '@media (max-width: 991px)': {
+      textAlign: 'center',
+    },
   },
   heroWrapper: {
     composes: 'it-hero-wrapper bg-blue',
@@ -68,8 +72,8 @@ const useStyles = createUseStyles({
     '& .container .it-hero-text-wrapper p': {
       fontFamily: 'Titillium Web,Geneva,Tahoma,sans-serif',
       fontSize: '1.333rem',
-      '@media (max-width: 992px)': {
-        fontSize: '1.25rem',
+      '@media (max-width: 991px)': {
+        fontSize: '1.25rem'
       },
     },
     '& .container .it-hero-text-wrapper .btn': {
@@ -104,7 +108,14 @@ const useStyles = createUseStyles({
   },
 });
 
-export const HeroImageBackgroundFull = ({ category, title, body, image, imageMobile, overlap }) => {
+export const HeroImageBackgroundFull = ({
+  category,
+  title,
+  body,
+  image,
+  imageMobile,
+  overlap,
+}) => {
   const classes = useStyles();
   const [isMobile, setIsMobile] = useState();
 
@@ -131,11 +142,6 @@ export const HeroImageBackgroundFull = ({ category, title, body, image, imageMob
             </Col>
           </Row>
         </div>
-        {isMobile ? (
-          <HeroBackground image={imageMobile} className="full" />
-        ) : (
-          <HeroBackground image={image} className="full" />
-        )}
         <div className={classes.bgMask}></div>
       </div>
     </Hero>

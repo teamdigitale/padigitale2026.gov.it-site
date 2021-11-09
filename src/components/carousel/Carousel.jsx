@@ -1,8 +1,17 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
-import { Row, Col, Card, CardBody, CardCategory, CardTitle, CardText } from 'design-react-kit';
+import {
+  Row,
+  Col,
+  Card,
+  CardBody,
+  CardCategory,
+  CardTitle,
+  CardText,
+} from 'design-react-kit';
 import PropTypes from 'prop-types';
 import { DesktopSwiper } from '../DesktopSwiper';
+import { ExternalLink } from '../ExternalLink';
 
 const useStyles = createUseStyles({
   heroCards: {
@@ -27,28 +36,39 @@ const useStyles = createUseStyles({
       },
       '& h5.card-title': {
         color: '#0066CC',
-        fontSize: '1rem',
+        fontSize: '1.125rem',
         fontWeight: 'bold',
         lineHeight: '1.26',
         '@media (min-width: 992px)': {
           minHeight: '2.889rem',
+          fontSize: '1rem',
+          lineHeight: '1.44',
         },
       },
       '& .card-text': {
         color: '#33485C',
-        fontSize: '0.889rem',
+        fontSize: '1rem',
         fontFamily: 'Titillium Web',
         fontWeight: '400',
         lineHeight: '1.24',
-        marginBottom: '2.222rem',
+        marginBottom: '1.125rem',
+        '@media (min-width: 992px)': {
+          marginBottom: '2.33rem',
+          fontSize: '0.889rem',
+          lineHeight: '1.44',
+        },
       },
       '& .source': {
         color: '#33485C',
-        fontSize: '0.889rem',
+        fontSize: '1rem',
         fontWeight: '600',
         lineHeight: '1.24',
         display: 'inline-flex',
         alignItems: 'center',
+        '@media (min-width: 992px)': {
+          fontSize: '0.889rem',
+          lineHeight: '1.44',
+        },
         '& img': {
           marginLeft: '0.278rem',
         },
@@ -65,7 +85,7 @@ const useStyles = createUseStyles({
   },
   newsUpdateSection: {
     backgroundColor: '#fff',
-    padding: '1.111rem 0',
+    padding: '1.111rem 0 4rem',
     '& .swiper': {
       margin: '0 -1.111rem',
       '@media (max-width: 992px)': {
@@ -82,9 +102,13 @@ const useStyles = createUseStyles({
     '& .swiper-slider': {
       padding: '1.111rem',
     },
-    '& .swiper-pagination.swiper-pagination-bullets .swiper-pagination-bullet': {
-      margin: '0 0.889rem',
-    },
+    '& .swiper-pagination.swiper-pagination-bullets .swiper-pagination-bullet':
+      {
+        margin: '0 0.889rem',
+      },
+  },
+  heroLink: {
+    textDecoration: 'none',
   },
 });
 // const carousel = React.createRef();
@@ -99,10 +123,12 @@ export const HeroCarousel = ({ content, title }) => {
           <CardCategory>{element.category}</CardCategory>
           <CardTitle tag="h5">{element.title}</CardTitle>
           <CardText>{element.description}</CardText>
-          <div className="source">
-            {element.source}
-            <img src={`/assets/external-link.svg`} alt="" />
-          </div>
+          <ExternalLink linkTo={element.linkTo} alt="" className={classes.heroLink}>
+            <div className="source">
+              {element.source}
+              <img src={`/assets/external-link.svg`} alt="" />
+            </div>
+          </ExternalLink>
         </CardBody>
       </Card>
     </>

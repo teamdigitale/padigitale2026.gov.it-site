@@ -1,10 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { createUseStyles } from 'react-jss';
 import Select from 'react-select';
+import { Section } from 'design-react-kit';
 import { AccordionButtonFull } from '../../components/AccordionButtonFull';
-import { beneficiaries, selectBeneficiaries } from '../../../contents/opportunity-page/opportunity.yml';
+import {
+  beneficiaries,
+  selectBeneficiaries,
+} from '../../../contents/opportunity-page/opportunity.yml';
+import { GlobalStateContext } from '../../context/globalContext';
 
 const useStyles = createUseStyles({
+  section: {
+    padding: '0'
+  },
   selectWrapper: {
     composes: 'bootstrap-select-wrapper',
     marginBottom: '2.667rem',
@@ -67,8 +75,8 @@ const useStyles = createUseStyles({
         fontSize: '0.889rem',
         lineHeight: '1.5',
         '&:hover': {
-          fontWeight: 'bold'
-        }
+          fontWeight: 'bold',
+        },
       },
     },
   },
@@ -86,21 +94,32 @@ export const BeneficiariesSection = (props) => {
   const [accordions, setAccordions] = useState(beneficiaries);
   const [indexOpen, setIndexOpen] = useState(-1);
   const [selectValue, setSelectValue] = useState(null);
-  const [initialSelectValue, setInitialSelectValue] = useState(selectBeneficiaries[0]);  
+  const [initialSelectValue, setInitialSelectValue] = useState(
+    selectBeneficiaries[0]
+  );
   const [isOpen, setIsOpen] = useState(false);
   const [filterIsAll, setFilterIsAll] = useState(true);
   const handleChange = (selectedOption) => setSelectValue(selectedOption);
   const handleOpen = () => setIsOpen(true);
   const handleClose = () => setIsOpen(false);
+  const [{sectionId}] = useContext(GlobalStateContext)
 
   const setActiveAccordion = (i) => {
     indexOpen === i ? setIndexOpen(-1) : setIndexOpen(i);
   };
 
   useEffect(() => {
-    if(props.externalFilter) {      
+    if (sectionId) {
+      document.querySelector('#' + sectionId).scrollIntoView({
+        behavior: 'smooth',
+      });
+    }
+  }, [sectionId]);
+
+  useEffect(() => {
+    if (props.externalFilter) {
       setInitialSelectValue(props.externalFilter);
-      setSelectValue(props.externalFilter);      
+      setSelectValue(props.externalFilter);
       document.querySelector('#filter-beneficiaries').scrollIntoView({
         behavior: 'smooth',
       });
@@ -112,7 +131,9 @@ export const BeneficiariesSection = (props) => {
       if (selectValue.value !== 'tutti') {
         const filteredList = [];
         for (let index = 0; index < beneficiaries.length; index++) {
-          const element = beneficiaries[index].tags.filter((tag) => tag.value === selectValue.value);
+          const element = beneficiaries[index].tags.filter(
+            (tag) => tag.value === selectValue.value
+          );
           if (element.length) {
             filteredList.push(beneficiaries[index]);
           }
@@ -129,34 +150,43 @@ export const BeneficiariesSection = (props) => {
 
   return (
     <>
-      <div className="container mt-5 px-3" id="filter-beneficiaries">
-        <div className={classes.selectWrapper}>
-          <label htmlFor="beneficiaries">Beneficiari</label>
-          <Select
-            styles={customStyles}
-            isSearchable={false}
-            value={selectValue || initialSelectValue}
-            id="beneficiaries"
-            onChange={handleChange}
-            onMenuOpen={handleOpen}
-            onMenuClose={handleClose}
-            options={selectBeneficiaries}
-            placeholder={false}
-            className={(isOpen ? 'is-open' : '', filterIsAll ? '' : 'not-all')}
-            aria-label="Scegli una opzione"
-          />
-        </div>
-        {accordions.map((item, i) => (
-          <React.Fragment key={item.title}>
-            <AccordionButtonFull
-              data={item}
-              handleToggle={setActiveAccordion}
-              id={i}
-              active={indexOpen}
+      <Section className={classes.section} aria-labelledby="lista-misure-hader">
+        <h3 className="sr-only" id="lista-misure-hader">
+          Elenco opportunità
+        </h3>
+        <div className="container mt-5 px-3" id="filter-beneficiaries">
+          <div className={classes.selectWrapper}>
+            <label htmlFor="beneficiaries">Beneficiari</label>
+            <Select
+              styles={customStyles}
+              isSearchable={false}
+              value={selectValue || initialSelectValue}
+              id="beneficiaries"
+              onChange={handleChange}
+              onMenuOpen={handleOpen}
+              onMenuClose={handleClose}
+              options={selectBeneficiaries}
+              placeholder={false}
+              className={
+                (isOpen ? 'is-open' : '', filterIsAll ? '' : 'not-all')
+              }
+              aria-label="Scegli una opzione"
             />
-          </React.Fragment>
-        ))}
-      </div>
+          </div>
+          <div role="list">
+            {accordions.map((item, i) => (
+              <React.Fragment key={item.title}>
+                <AccordionButtonFull
+                  data={item}
+                  handleToggle={setActiveAccordion}
+                  id={i}
+                  active={indexOpen}
+                />
+              </React.Fragment>
+            ))}
+          </div>
+        </div>
+      </Section>
     </>
   );
 };

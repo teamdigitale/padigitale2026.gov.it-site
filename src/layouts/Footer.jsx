@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'gatsby';
 import { createUseStyles } from 'react-jss';
 import links from '../../contents/links.yml';
 import { ExternalLink } from '../components/ExternalLink';
+import { GlobalStateContext } from '../context/globalContext';
 
 const {
-  internalLinks: { privacy, credits, noteLegali },
-  externalLinks: { dipartimento, a11y },
+  internalLinks: { privacy, noteLegali },
+  externalLinks: { dipartimento, a11y, eu, repubblica },
 } = links;
 
 const useStyle = createUseStyles({
@@ -58,7 +59,10 @@ const useStyle = createUseStyles({
     },
   },
   logoImg: {
-    height: '2.5rem',
+    height: '2.667rem',
+    '&.logo-gov': {
+      height: '3.556rem',
+    },
   },
   logoSeparator: {
     composes: 'mx-2 d-none d-md-block',
@@ -82,15 +86,24 @@ const SlimFooter = () => {
   const classes = useStyle();
   return (
     <div className={classes.slimFooter}>
-      <div className="container">
+      <section className="container" aria-labelledby="linkutili-header">
+        <h3 id="linkutili-header" class="sr-only">
+          Link Utili
+        </h3>
         <ul className="list-inline link-list mb-0 text-center text-md-left">
           <li className={`${classes.listItem} mr-0 mr-md-5`}>
-            <Link to={noteLegali.linkTo} className="list-item mid-footer-link mx-4 mx-md-0">
+            <Link
+              to={noteLegali.linkTo}
+              className="list-item mid-footer-link mx-4 mx-md-0"
+            >
               {noteLegali.label}
             </Link>
           </li>
           <li className={`${classes.listItem} mr-0 mr-md-5`}>
-            <Link to={privacy.linkTo} className="list-item mid-footer-link mx-4 mx-md-0">
+            <Link
+              to={privacy.linkTo}
+              className="list-item mid-footer-link mx-4 mx-md-0"
+            >
               {privacy.label}
             </Link>
           </li>
@@ -103,54 +116,58 @@ const SlimFooter = () => {
               {a11y.label}
             </ExternalLink>
           </li>
-          <li className={`${classes.listItem} mr-0 mr-md-5`}>
-            <Link to={credits.linkTo} className="list-item mid-footer-link mx-4 mx-md-0">
-              {credits.label}
-            </Link>
-          </li>
         </ul>
-      </div>
+      </section>
     </div>
   );
 };
 
 const MainFooter = () => {
   const classes = useStyle();
+  const [state, dispatch] = useContext(GlobalStateContext);
+
   return (
     <div className={`${classes.mainFooter} it-footer-main`}>
       <div className="container text-center text-md-left">
         <div className={classes.mainWrapper}>
           <div className="logos">
             <ExternalLink
-              linkTo={dipartimento.linkTo}
-              ariaLabel={dipartimento.ariaLabel}
-              className={classes.footerLogo}
-            >
-              <img className={classes.logoImg} src="/assets/eu-flag.svg" alt="Logo della Repubblica Italiana" />
-            </ExternalLink>
-            <ExternalLink
-              linkTo={dipartimento.linkTo}
-              ariaLabel={dipartimento.ariaLabel}
+              linkTo={eu.linkTo}
+              ariaLabel={eu.ariaLabel}
               className={classes.footerLogo}
             >
               <img
                 className={classes.logoImg}
-                src="/assets/repubblica-logo-colorato.svg"
-                alt="Logo della Repubblica Italiana"
+                src="/assets/eu-flag.svg"
+                alt="Unione Europea"
               />
             </ExternalLink>
-            <ExternalLink linkTo={dipartimento.linkTo} ariaLabel={dipartimento.ariaLabel}>
+            <ExternalLink
+              linkTo={repubblica.linkTo}
+              ariaLabel={repubblica.ariaLabel}
+              className={classes.footerLogo}
+            >
+              <img
+                className={`${classes.logoImg} logo-gov`}
+                src="/assets/repubblica-logo-colorato.svg"
+                alt="Governo Italiano"
+              />
+            </ExternalLink>
+            <ExternalLink
+              linkTo={dipartimento.linkTo}
+              ariaLabel={dipartimento.ariaLabel}
+            >
               <img
                 className={classes.departmentLogo}
                 src="/assets/dipartimento.svg"
-                alt="Logo della Repubblica Italiana"
+                alt="Dipartimento per la trasformazione digitale"
               />
             </ExternalLink>
           </div>
           <div className="info">
-            <a href="#" className={classes.seeMore}>
+            <Link to="/come-funziona" className={classes.seeMore} onClick={() => dispatch({type: 'SET:HOW_SECTION_ID', payload: {howId: 'attori-coinvolti'}})}>
               Scopri l&apos;iniziativa
-            </a>
+            </Link>
           </div>
         </div>
       </div>

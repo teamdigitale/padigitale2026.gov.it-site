@@ -11,6 +11,7 @@ SwiperCore.use([Pagination, A11y]);
 const useStyles = createUseStyles({
   swiperSlide: {
     padding: '0 1.111rem 1.111rem',
+    height: 'auto'
   },
   bullet: {
     composes: 'swiper-pagination-bullet p-2',
@@ -20,13 +21,44 @@ const useStyles = createUseStyles({
     backgroundColor: '#0066CC',
   },
   navigationBtn: {
-    '&.swiper-button-disabled': {
-      opacity: '0.2',
+    backgroundColor: 'transparent',
+    border: 'none',
+    outline: 'none',
+    padding: '0',
+    '&:focus': {
+      outline: 'none',
     },
+    '&.swiper-button-disabled': {
+      '& svg': {
+        opacity: '0.2',
+      },
+    },
+  },
+  sidePrevButton: {
+    composes: 'd-none justify-content-center pt-3 d-lg-flex',
+    position: 'absolute',
+    left: '0',
+    top: '50%',
+    transform: 'translateY(-50%)',
+  },
+  sideNextButton: {
+    composes: 'd-none justify-content-center pt-3 d-lg-flex',
+    position: 'absolute',
+    right: '0',
+    top: '50%',
+    transform: 'translateY(-50%)',
   },
 });
 
-export const DesktopSwiper = ({ slides, breakpoints, pagination, mobilePagination, desktopNavigation, className }) => {
+export const DesktopSwiper = ({
+  slides,
+  breakpoints,
+  pagination,
+  mobilePagination,
+  desktopNavigation,
+  navigation,
+  className,
+}) => {
   const classes = useStyles();
   const [paginationId, setPaginationId] = useState(null);
   const [nextBtnId, setnextBtnId] = useState(null);
@@ -83,7 +115,7 @@ export const DesktopSwiper = ({ slides, breakpoints, pagination, mobilePaginatio
         </div>
       )}
       {mobilePagination && (
-        <div className="mt-4 pb-4 d-flex justify-content-center pt-3 d-lg-none">
+        <div className="pb-4 d-flex justify-content-center pt-3 d-lg-none">
           {paginationId && (
             <div data-swiper-id={paginationId} className="swiper-pagination" style={{ bottom: 'unset' }}></div>
           )}
@@ -91,20 +123,22 @@ export const DesktopSwiper = ({ slides, breakpoints, pagination, mobilePaginatio
       )}
       {desktopNavigation && (
         <div className="d-none justify-content-center pt-3 d-lg-flex">
-          <Icon
-            data-prev-navigation-id={prevBtnId}
-            className={classes.navigationBtn}
-            color="primary"
-            icon="it-arrow-left-circle"
-            size="lg"
-          />
-          <Icon
-            data-next-navigation-id={nextBtnId}
-            className={classes.navigationBtn}
-            color="primary"
-            icon="it-arrow-right-circle"
-            size="lg"
-          />
+          <button className={classes.navigationBtn} type="button" data-prev-navigation-id={prevBtnId}>
+            <Icon color="primary" icon="it-arrow-left-circle" size="lg" />
+          </button>
+          <button className={classes.navigationBtn} type="button" data-next-navigation-id={nextBtnId}>
+            <Icon color="primary" icon="it-arrow-right-circle" size="lg" />
+          </button>
+        </div>
+      )}
+      {navigation && (
+        <div className="justify-content-center pt-3 d-flex">
+          <button className={classes.navigationBtn} type="button" data-prev-navigation-id={prevBtnId}>
+            <Icon color="primary" icon="it-arrow-left-circle" size="lg" />
+          </button>
+          <button className={classes.navigationBtn} type="button" data-next-navigation-id={nextBtnId}>
+            <Icon color="primary" icon="it-arrow-right-circle" size="lg" />
+          </button>
         </div>
       )}
     </>
@@ -117,5 +151,6 @@ DesktopSwiper.propTypes = {
   pagination: PropTypes.bool,
   mobilePagination: PropTypes.bool,
   desktopNavigation: PropTypes.bool,
+  navigation: PropTypes.bool,
   className: PropTypes.any,
 };

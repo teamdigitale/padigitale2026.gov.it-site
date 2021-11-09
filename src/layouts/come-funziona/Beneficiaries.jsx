@@ -46,9 +46,9 @@ const useStyle = createUseStyles({
       marginTop: '1rem',
       '@media (min-width: 992px)': {
         marginLeft: '1.4rem',
-        marginTop: '0'
+        marginTop: '0',
       },
-    }
+    },
   },
   linkItem: {
     display: 'block',
@@ -57,7 +57,7 @@ const useStyle = createUseStyles({
     padding: '0.889rem 0',
     borderBottom: '1px solid #E6E9F2',
     '&:last-child': {
-      borderBottom: '0'
+      borderBottom: '0',
     },
     '& p': {
       fontSize: '1.25rem',
@@ -85,7 +85,7 @@ export const Beneficiaries = (props) => {
         <Row>
           <Col className="offset-lg-1">
             <Row>
-              <Col xs="12" lg="5">
+              <Col xs="12" lg="5" id="beneficiari">
                 <p className={classes.category}>{category}</p>
                 <h2 className={classes.title} id="involved-actors-title">
                   {title}
@@ -101,11 +101,21 @@ export const Beneficiaries = (props) => {
                         <img src={category.icon} alt="" />
                         <h3 className="category-title">{category.name}</h3>
                       </div>
-                      {category.items.map((item) => 
-                        <Link to="/opportunita" key={item.linkLabel} state={{filter: {value: item.filterId, label: item.linkLabel}}} className={classes.linkItem}>
+                      {category.items.map((item) => (
+                        <Link
+                          to="/misure"
+                          key={item.linkLabel}
+                          state={{
+                            filter: {
+                              value: item.filterId,
+                              label: item.linkLabel,
+                            },
+                          }}
+                          className={classes.linkItem}
+                        >
                           <p>{item.linkLabel}</p>
                         </Link>
-                      )}
+                      ))}
                     </Col>
                   </React.Fragment>
                 );

@@ -23,7 +23,7 @@ questions:
     sectionId: generali
     accordions:
       - title: Cos'è Next Generation EU?
-        content: Next Generation EU (NGEU) è un piano da €750 miliardi di Euro che ha l'obiettivo di rilanciare l'economia europea dopo la pandemia di COVID-19 e di renderla più verde e digitale.
+        content: Next Generation EU (NGEU) è un piano Next da €750 miliardi di Euro che ha l'obiettivo di rilanciare l'economia europea dopo la pandemia di COVID-19 e di renderla più verde e digitale.
         linkLabel: Vai al sito Next Generation EU dell'Unione Europea
         link: 'https://europa.eu/next-generation-eu/index_it'
         ariaLabel: testo aria label
@@ -42,8 +42,8 @@ questions:
         linkLabel: Scopri la strategia Italia digitale 2026
         link: 'https://innovazione.gov.it/dipartimento/focus/italia-digitale-2026/'
         ariaLabel: testo aria label
-      - title: Cos’è “Prossima PA”?
-        content: “Prossima PA” è il sito del Dipartimento per la trasformazione digitale, guidato dal Ministro per l’innovazione tecnologica e la transizione digitale, che permette alla PA di accedere ai fondi di Italia digitale 2026. Il sito sarà il punto unico di accesso per avere informazioni sugli avvisi dedicati alla digitalizzazione della PA, fare richiesta di accesso ai fondi e rendicontare l’avanzamento dei progetti. Inoltre è possibile richiedere assistenza diretta e avere tutte le info sulle azioni di accompagno previste dal Dipartimento per la trasformazione digitale della Presidenza del Consiglio dei ministri.
+      - title: Cos’è “PA digitale 2026”?
+        content: “PA digitale 2026” è il sito del Dipartimento per la trasformazione digitale, guidato dal Ministro per l’innovazione tecnologica e la transizione digitale, che permette alla PA di accedere ai fondi di Italia digitale 2026. Il sito sarà il punto unico di accesso per avere informazioni sugli avvisi dedicati alla digitalizzazione della PA, fare richiesta di accesso ai fondi e rendicontare l’avanzamento dei progetti. Inoltre è possibile richiedere assistenza diretta e avere tutte le info sulle azioni di accompagno previste dal Dipartimento per la trasformazione digitale della Presidenza del Consiglio dei ministri.
   - title: Investimenti del PNRR
     description: Gli investimenti di Italia digitale 2026 previsti dal Piano Nazionale di Ripresa e Resilienza (PNRR)
     sectionId: investimenti
@@ -77,7 +77,7 @@ questions:
       - title: Quando saranno pubblicati gli avvisi?
         content: La pubblicazione dei primi avvisi è prevista per la primavera del 2022.
       - title: Come posso fare richiesta di accesso ai fondi?
-        content: La strada verso <a href="https://innovazione.gov.it/dipartimento/focus/italia-digitale-2026/">Italia digitale 2026</a> è appena cominciata. Su Prossima PA sono resi disponibili tutti i materiali, le informazioni e gli strumenti per aiutare le amministrazioni a percorrerla. In questo percorso sono state pensate diverse modalità di accesso ai fondi del PNRR gestiti dal Dipartimento per la trasformazione digitale. A seconda della tipologia di misura e di PA, sarà possibile accedere alle risorse o attraverso delle <strong><a href="#">soluzioni standard</a></strong> o attraverso la <strong><a href="#">presentazione di progetti</a></strong>.
+        content: Sono previste due modalità di accesso ai fondi del PNRR gestiti dal Dipartimento per la trasformazione digitale. A seconda della tipologia di misura e di PA, sarà possibile accedere alle risorse o attraverso delle <strong><a href="#">soluzioni standard</a></strong> o attraverso la <strong><a href="#">presentazione di progetti</a></strong>.
       - title: Come funzionano gli avvisi a soluzioni standard?
         content: "L'importante piano di investimenti e riforme previsto dal Piano nazionale di ripresa e resilienza vuole mettere l'Italia nel gruppo di testa in Europa entro il 2026.Italia digitale 2026 si pone cinque ambiziosi obiettivi:<ol><li>Soluzioni standard: ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso soluzioni standard, ciascuna con un valore economico predefinito. Non sarà necessario scrivere e presentare progetti per ricevere finanziamenti;</li><li>Multimisura: per semplificare l’accesso ai fondi del PNRR le amministrazioni potranno - con un’unica candidatura - accedere a soluzioni multimisura, che includono, per esempio, sia finanziamenti per la migrazione al cloud che per il miglioramento dei siti web;</li><li>Per obiettivi: per semplificare l’erogazione delle risorse, i contributi saranno riconosciuti alle amministrazioni sulla base del raggiungimento di specifici obiettivi predefiniti. Il processo di rendicontazione sarà quindi alleggerito, e non sarà necessario rendicontare le singole spese effettuate per ottenere i fondi.</li></ol>"
       - title: Come funzionano gli avvisi per cui è necessario presentare un progetto?
