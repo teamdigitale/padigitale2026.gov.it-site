@@ -201,7 +201,7 @@ const SlimHeader = () => {
           {externalLinks.dipartimento.label}
         </HeaderBrand>
         <HeaderLinkZone aria-labelledby="siti-esterni-correlati">
-          <h2 id="siti-esterni-correlati" class="sr-only">
+          <h2 id="siti-esterni-correlati" className="sr-only">
             Siti esterni correlati
           </h2>
           <Button
@@ -297,7 +297,7 @@ const NavHeader = ({ toggleModal }) => {
         aria-labelledby="menu-principale"
         className="px-2"
       >
-        <h2 id="menu-principale" class="sr-only">
+        <h2 id="menu-principale" className="sr-only">
           Menu principale
         </h2>
         <button

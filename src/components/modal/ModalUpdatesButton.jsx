@@ -84,7 +84,11 @@ export const ModalUpdatesButton = ({ label, buttonLabel, initialState, handleTog
           <Col lg={12}>
             <div className={classes.modalButtonContainer}>
               <p className={classes.text}>{label}</p>
-              <Button className={classes.button} color="primary" onClick={eventHandler}>
+              <Button
+                className={classes.button}
+                color="primary"
+                onClick={eventHandler}
+              >
                 {buttonLabel}
               </Button>
             </div>
