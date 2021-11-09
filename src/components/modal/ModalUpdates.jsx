@@ -1,9 +1,27 @@
 import React, { useState, useEffect } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { createUseStyles } from 'react-jss';
-import { Row, Col, Modal, ModalBody, ModalFooter, Button, Input, FormGroup, Label } from 'design-react-kit';
+import {
+  Row,
+  Col,
+  Modal,
+  ModalBody,
+  ModalFooter,
+  Button,
+  Input,
+  FormGroup,
+  Label,
+} from 'design-react-kit';
 import Select from 'react-select';
 import content from '../../../contents/opportunity-page/opportunity.yml';
+import links from '../../../contents/links.yml';
+import notificationsLabel from '../../../contents/notifications.yml';
+
+const {
+  internalLinks: { privacy },
+} = links;
+
+const { success: successLabels, error: errorLabels } = notificationsLabel;
 
 const useStyles = createUseStyles({
   modalUpdatesContainer: {
@@ -189,8 +207,35 @@ const useStyles = createUseStyles({
   notification: {
     composes: 'notification with-icon dismissable',
     zIndex: '9',
+    display: 'block',
+    opacity: '0',
+    visibility: 'hidden',
+    transition: '.3s ease',
     '&.show': {
-      display: 'block',
+      opacity: '1',
+      visibility: 'visible',
+      transition: '.3s ease',
+    },
+    '&.with-icon.success': {
+      borderColor: '#00CF86',
+    },
+  },
+  radioCustom: {
+    '&.form-check [type=checkbox]+label::after': {
+      borderRadius: '50%',
+    },
+    '&.form-check [type=checkbox]:checked+label::before': {
+      width: '12px',
+      border: 'none',
+      height: '12px',
+      borderRadius: '50%',
+      transform: 'none',
+      background: '#06c',
+      top: '8px',
+      left: '4px',
+    },
+    '&.form-check [type=checkbox]:checked+label::after': {
+      background: 'none',
     },
   },
 });
@@ -200,6 +245,7 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
   const [selectValue, setSelectValue] = useState(null);
   const [textareaState, setTextareaState] = useState('not-active');
   const [enteState, setEnteState] = useState('');
+  const [radioState, setRadioState] = useState(false);
 
   const setFocusStyleOnSelect = () => {
     const selectInputArr = document.querySelectorAll('.modal .select input');
@@ -223,7 +269,9 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
     const setObserver = (mutationsList) => {
       for (const mutation of mutationsList) {
         if (mutation.type === 'childList') {
-          let value = representSelectOptions.querySelector('div[class*="singleValue"]');
+          let value = representSelectOptions.querySelector(
+            'div[class*="singleValue"]'
+          );
           value ? (value = value.innerHTML) : (value = '');
           let valueSelected = selectRepresent.find((valueObj) => {
             if (value == valueObj.label) {
@@ -270,11 +318,68 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
   useEffect(() => {}, [selectValue]);
 
   const onSubmit = async (data, event) => {
-    console.log('submit', data);
-    const modalCloseBtn = event.target.closest('.modal-content').querySelector('.modal-header .btn');
-    modalCloseBtn.click();
+    Object.keys(data).map(function (key, index) {
+      if (data[key] == undefined) {
+        delete data[key];
+      }
+      if (key == 'enteSelect' || key == 'representative') {
+        data[key] = data[key].value;
+      }
+    });
+
     const notificationElement = document.querySelector('.notification');
-    notificationElement.classList.add('show');
+    const titleElement = notificationElement.querySelector('h5');
+    const descriptionElement = notificationElement.querySelector('p');
+    const modalCloseBtn = event.target
+      .closest('.modal-content')
+      .querySelector('.modal-header .btn');
+
+    const closeNotification = notificationElement.querySelector(
+      '.notification-close'
+    );
+
+    const closeNotificationHandler = (event) => {
+      event.target.closest('.notification').classList.remove('show');
+      closeNotification.removeEventListener('click', closeNotificationHandler);
+    };
+    closeNotification.addEventListener('click', closeNotificationHandler);
+
+    fetch('https://api.prossimapa.gov.it/api/users', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
+      .then((response) => {
+        modalCloseBtn.click();
+        setTimeout(() => {
+          if (response.status == '200') {
+            notificationElement.classList.add('show');
+            notificationElement.classList.add('success');
+
+            titleElement.innerHTML = `${successLabels.icon} ${successLabels.title}`;
+            descriptionElement.innerHTML = successLabels.description;
+
+            setTimeout(() => {
+              notificationElement.classList.remove('show');
+            }, 5000);
+          } else {
+            notificationElement.classList.add('show');
+            notificationElement.classList.add('error');
+
+            titleElement.innerHTML = `${errorLabels.icon} ${errorLabels.title}`;
+            descriptionElement.innerHTML = errorLabels.description;
+
+            setTimeout(() => {
+              notificationElement.classList.remove('show');
+            }, 5000);
+          }
+        }, 500);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   const onError = async (data) => {
@@ -326,14 +431,30 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
       >
         <div id="updates-modal" className="modal-header">
           <h5 className="modal-title">{modalTitle}</h5>
-          <Button type="button" className={classes.close} aria-label="Close" onClick={handleToggle}>
+          <Button
+            type="button"
+            className={classes.close}
+            aria-label="Close"
+            onClick={handleToggle}
+          >
             <span>Chiudi</span>
-            <img src="assets/icon-close.svg" alt="chiudi modale" aria-hidden="true" />
+            <img
+              src="assets/icon-close.svg"
+              alt="chiudi modale"
+              aria-hidden="true"
+            />
           </Button>
         </div>
-        <p className={classes.modalSubtitle} dangerouslySetInnerHTML={{ __html: modalSubtitle }}></p>
+        <p
+          className={classes.modalSubtitle}
+          dangerouslySetInnerHTML={{ __html: modalSubtitle }}
+        ></p>
         <ModalBody className={classes.modalBody}>
-          <form onSubmit={handleSubmit(onSubmit, onError)} id="updates-form" aria-describedby="mandatory-label">
+          <form
+            onSubmit={handleSubmit(onSubmit, onError)}
+            id="updates-form"
+            aria-describedby="mandatory-label"
+          >
             <fieldset>
               <Row>
                 <Col xs={12}>
@@ -354,13 +475,16 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
               </legend>
               <Row className="mt-5">
                 <Col xs={12}>
-                  <p id="mandatory-label" dangerouslySetInnerHTML={{ __html: mandatoryAdvise }}></p>
+                  <p
+                    id="mandatory-label"
+                    dangerouslySetInnerHTML={{ __html: mandatoryAdvise }}
+                  ></p>
                 </Col>
               </Row>
               <Row className="mt-5">
                 <Col xs={12}>
                   <Controller
-                    name="email"
+                    name="address"
                     control={control}
                     rules={{
                       required: requiredLabel,
@@ -371,11 +495,11 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                     }}
                     render={({ field }) => (
                       <Input
-                        invalid={errors.email}
-                        infoText={errors.email && errors.email.message}
+                        invalid={errors.address}
+                        infoText={errors.address && errors.address.message}
                         label={emailLabel}
                         type="text"
-                        id="email"
+                        id="address"
                         {...field}
                       />
                     )}
@@ -387,7 +511,7 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                   <span className={classes.selectLabel}>{representLabel}</span>
                   <Controller
                     control={control}
-                    name="represent"
+                    name="representative"
                     rules={{ required: true }}
                     render={({ field: { onChange, value } }) => (
                       <Select
@@ -397,19 +521,29 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                         options={selectRepresent}
                         placeholder={selectPlaceholder}
                         aria-label={selectPlaceholder}
-                        className={`select ${errors.represent && ' is-invalid'}`}
+                        className={`select ${
+                          errors.representative && ' is-invalid'
+                        }`}
                       />
                     )}
                   />
                 </Col>
               </Row>
-              <span className={classes.errorLabel}>{errors.represent ? requiredLabel : ''}</span>
+              <span className={classes.errorLabel}>
+                {errors.represent ? requiredLabel : ''}
+              </span>
               <div
                 className={`${classes.enteContainer} ${
-                  enteState == 'public-administration' || enteState == 'other' ? '' : 'hidden'
+                  enteState == 'public-administration' || enteState == 'other'
+                    ? ''
+                    : 'hidden'
                 }`}
               >
-                <div className={`${classes.enteContainer} ${enteState == 'other' ? '' : 'hidden'}`}>
+                <div
+                  className={`${classes.enteContainer} ${
+                    enteState == 'other' ? '' : 'hidden'
+                  }`}
+                >
                   <Row className="mt-5">
                     <Col xs={12}>
                       <Controller
@@ -428,7 +562,9 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                         render={({ field }) => (
                           <Input
                             invalid={errors.enteType}
-                            infoText={errors.enteType && errors.enteType.message}
+                            infoText={
+                              errors.enteType && errors.enteType.message
+                            }
                             label={enteTypeLabel}
                             type="text"
                             {...field}
@@ -442,11 +578,15 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                 <Row className="mt-5">
                   <Col xs={12}>
                     <Controller
-                      name="enteName"
+                      name="ente"
                       control={control}
                       rules={{
                         required: {
-                          value: enteState == 'public-administration' || enteState == 'other' ? true : false,
+                          value:
+                            enteState == 'public-administration' ||
+                            enteState == 'other'
+                              ? true
+                              : false,
                           message: requiredLabel,
                         },
                         pattern: {
@@ -456,8 +596,8 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                       }}
                       render={({ field }) => (
                         <Input
-                          invalid={errors.enteName}
-                          infoText={errors.enteName && errors.enteName.message}
+                          invalid={errors.ente}
+                          infoText={errors.ente && errors.ente.message}
                           label={enteNameLabel}
                           type="text"
                           {...field}
@@ -469,13 +609,19 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                 </Row>
                 <Row className="mt-5">
                   <Col xs={12} lg={6}>
-                    <label className={classes.selectLabel}>{inQuantoLabel}</label>
+                    <label className={classes.selectLabel}>
+                      {inQuantoLabel}
+                    </label>
                     <Controller
                       control={control}
                       name="enteSelect"
                       rules={{
                         required: {
-                          value: enteState == 'public-administration' || enteState == 'other' ? true : false,
+                          value:
+                            enteState == 'public-administration' ||
+                            enteState == 'other'
+                              ? true
+                              : false,
                           message: requiredLabel,
                         },
                       }}
@@ -487,13 +633,17 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                           options={selectInQuanto}
                           placeholder={selectPlaceholder}
                           aria-label={selectPlaceholder}
-                          className={`${errors.represent && 'select is-invalid'}`}
+                          className={`${
+                            errors.enteSelect && 'select is-invalid'
+                          }`}
                         />
                       )}
                     />
                   </Col>
                 </Row>
-                <span className={classes.errorLabel}>{errors.enteSelect ? requiredLabel : ''}</span>
+                <span className={classes.errorLabel}>
+                  {errors.enteSelect ? requiredLabel : ''}
+                </span>
               </div>
             </fieldset>
             <fieldset>
@@ -505,23 +655,31 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
               <legend>
                 <Row className="mt-3">
                   <Col xs={12}>
-                    <span className={classes.modalLabel}>{directContactLabel}</span>
+                    <span className={classes.modalLabel}>
+                      {directContactLabel}
+                    </span>
                   </Col>
                 </Row>
                 <Row className="mt-2">
                   <Col xs={12}>
-                    <p dangerouslySetInnerHTML={{ __html: directContactInfo }}></p>
+                    <p
+                      dangerouslySetInnerHTML={{ __html: directContactInfo }}
+                    ></p>
                   </Col>
                 </Row>
               </legend>
               <Row className="mt-5">
                 <Col xs={12}>
-                  <h3 className={classes.modalTitleSecondary}>{addMessageLabel}</h3>
+                  <h3 className={classes.modalTitleSecondary}>
+                    {addMessageLabel}
+                  </h3>
                 </Col>
               </Row>
               <Row className="mt-5">
                 <Col xs={12} lg={6}>
-                  <label className={classes.selectLabel}>{messageSelectLabel}</label>
+                  <label className={classes.selectLabel}>
+                    {messageSelectLabel}
+                  </label>
                   <Select
                     id="message-select"
                     onChange={handleChange}
@@ -543,11 +701,16 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                         maxLength={textareaMaxLength}
                         id="message"
                       ></textarea>
-                      <label className={textareaState == 'active' ? 'active' : ''} htmlFor="message">
+                      <label
+                        className={textareaState == 'active' ? 'active' : ''}
+                        htmlFor="message"
+                      >
                         {messageLabel}
                       </label>
                       <span className={classes.maxLengthLabel}>
-                        Massimo <span id="max-length-number">{textareaMaxLength}</span> caratteri
+                        Massimo{' '}
+                        <span id="max-length-number">{textareaMaxLength}</span>{' '}
+                        caratteri
                       </span>
                     </div>
                   </div>
@@ -557,12 +720,14 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
             <Row className="mt-5">
               <Col xs={12}>
                 <fieldset>
-                  <legend className={classes.selectLabel}>{radioGroupLabel}</legend>
-                  <FormGroup check>
+                  <legend className={classes.selectLabel}>
+                    {radioGroupLabel}
+                  </legend>
+                  <FormGroup check className={classes.radioCustom}>
                     <input
                       className={errors.radio1 ? 'is-invalid' : ''}
                       name="gruppo1"
-                      type="radio"
+                      type="checkbox"
                       id="radio1"
                       {...register('radio1', { required: true })}
                     />
@@ -570,16 +735,17 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                       {comunicationRadio}
                     </Label>
                   </FormGroup>
-                  <FormGroup check>
+                  <FormGroup check className={classes.radioCustom}>
                     <input
                       className={errors.radio2 ? 'is-invalid' : ''}
                       name="gruppo2"
-                      type="radio"
+                      type="checkbox"
                       id="radio2"
                       {...register('radio2', { required: true })}
                     />
                     <Label check htmlFor="radio2">
-                      {privacyRadio} <a href="#">{privacyRadioLinkLabel}</a> *
+                      {privacyRadio}{' '}
+                      <a target="_blank" href={privacy.linkTo}>{privacyRadioLinkLabel}</a> *
                     </Label>
                   </FormGroup>
                   <span className={classes.errorLabel}>
@@ -590,7 +756,7 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
             </Row>
           </form>
         </ModalBody>
-        <ModalFooter className="justify-content-center justify-content-md-start px-0">
+        <ModalFooter className="justify-content-center justify-content-md-start px-0 py-0">
           <Button color="primary" type="submit" form="updates-form">
             {sendButtonLabel}
           </Button>
@@ -599,25 +765,47 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
       <div className="container test-docs">
         <div className="row">
           <div className="col-12 col-md-6">
-            <div className={classes.notification} role="alert" aria-labelledby="not2dms-title" id="not2dms">
+            <div
+              className={classes.notification}
+              role="alert"
+              aria-labelledby="not2dms-title"
+              id="not2dms"
+            >
               <h5 id="not2dms-title">
                 <svg className="icon"></svg>
               </h5>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor…
+              </p>
               <button type="button" className="btn notification-close">
-                <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg
+                  width="19"
+                  height="19"
+                  viewBox="0 0 19 19"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
                   <rect
                     x="17.3242"
                     y="0.5"
                     width="1.49987"
                     height="24.4978"
                     transform="rotate(45 17.3242 0.5)"
-                    fill="#0066CC"
+                    fill="#5C6F82"
                   />
-                  <rect y="1.56055" width="1.49987" height="24.4978" transform="rotate(-45 0 1.56055)" fill="#0066CC" />
+                  <rect
+                    y="1.56055"
+                    width="1.49987"
+                    height="24.4978"
+                    transform="rotate(-45 0 1.56055)"
+                    fill="#5C6F82"
+                  />
                 </svg>
 
-                <span className="sr-only">Chiudi notifica: Titolo notifica</span>
+                <span className="sr-only">
+                  Chiudi notifica: Titolo notifica
+                </span>
               </button>
             </div>
           </div>
