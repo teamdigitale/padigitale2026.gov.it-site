@@ -3,6 +3,7 @@ import { createUseStyles } from 'react-jss';
 import { Row, Col, Card, CardBody, CardTitle, CardText, Button } from 'design-react-kit';
 import PropTypes from 'prop-types';
 import { DesktopSwiper } from '../DesktopSwiper';
+import { Link } from 'gatsby';
 
 const useStyles = createUseStyles({
   heroCards: {
@@ -144,9 +145,7 @@ export const HomeCarousel = ({ content, title }) => {
         <CardBody>
           <CardTitle tag="h5">{element.title}</CardTitle>
           <CardText dangerouslySetInnerHTML={{ __html: element.description }} />
-          <Button href={element.linkTo} color="primary" className="text-uppercase" aria-lebel={element.buttonAriaLabel}>
-            {element.button}
-          </Button>
+          <Link to={element.linkTo} className="text-uppercase btn btn-primary" aria-lebel={element.buttonAriaLabel}>{element.button}</Link>
         </CardBody>
         {isMobile ? (
           <img className={classes.heroCardImg} src={`/assets/${element.imageMobile}`} alt="" />
