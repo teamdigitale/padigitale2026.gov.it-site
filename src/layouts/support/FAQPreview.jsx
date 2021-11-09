@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import React from 'react';
+import React, { useContext } from 'react';
 import { createUseStyles } from 'react-jss';
 import {
   Row,
@@ -8,10 +8,10 @@ import {
   CardBody,
   CardTitle,
   CardText,
-  Button,
 } from 'design-react-kit';
-import content from '../../../contents/support-page/support.yml';
 import { Link } from 'gatsby';
+import { GlobalStateContext } from '../../context/globalContext';
+import content from '../../../contents/support-page/support.yml';
 
 const { faqSection } = content;
 
@@ -23,6 +23,8 @@ const useStyle = createUseStyles({
   faqCard: {
     composes: 'card rounded',
     '&.card': {
+      textAlign: 'left',
+      textDecoration: 'none',
       boxShadow: '0px 0px 80px rgba(0, 43, 85, 0.1)',
       '& h5.card-title': {
         color: '#0066CC',
@@ -64,9 +66,10 @@ const useStyle = createUseStyles({
 
 export const FAQPreview = () => {
   const classes = useStyle();
+  const [state, dispatch] = useContext(GlobalStateContext);
   const cards = faqSection.faqPreviewCards.map((card) => (
     <Col key={card.id} xs="12" lg="4">
-      <Card className={classes.faqCard}>
+      <Card tag="a" href="/faq" onClick={() => dispatch({type: 'SET:FAQ_ID', payload: {faqId: card.faqId}})} className={classes.faqCard}>
         <CardBody>
           <CardTitle tag="h5">{card.title}</CardTitle>
           <CardText dangerouslySetInnerHTML={{ __html: card.text }} />

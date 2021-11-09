@@ -1,6 +1,6 @@
 import React, { createContext, useReducer, useState, useEffect } from 'react';
 
-const initialState = {sectionId: null};
+const initialState = { sectionId: null, faqId: null };
 
 const reducer = (state, { type, payload }) => {
   switch (type) {
@@ -8,6 +8,8 @@ const reducer = (state, { type, payload }) => {
       return { ...state, sectionId: payload.sectionId };
     case 'SET:SECTION_OPPORTUNITY_ID':
       return { ...state, sectionId: payload.sectionId };
+    case 'SET:FAQ_ID':
+      return { ...state, faqId: payload.faqId };
     default:
       return { ...state };
   }
@@ -20,16 +22,13 @@ export const GlobalStateContextProvider = ({ children }) => {
   const [reactContextDevtool, setReactContextDevtool] = useState();
 
   useEffect(() => {
-    setReactContextDevtool(window._REACT_CONTEXT_DEVTOOL)
+    setReactContextDevtool(window._REACT_CONTEXT_DEVTOOL);
   }, []);
 
   return (
     <GlobalStateContext.Provider value={[state, dispatch]}>
       {((values) => {
-        if (
-          reactContextDevtool &&
-          process.env.NODE_ENV === 'development'
-        ) {
+        if (reactContextDevtool && process.env.NODE_ENV === 'development') {
           reactContextDevtool({
             id: 'GlobalStateContext',
             displayName: 'GlobalStateContext',

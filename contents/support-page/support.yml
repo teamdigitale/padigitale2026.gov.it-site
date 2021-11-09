@@ -8,11 +8,13 @@ faqSection:
     - id: 1
       title: Cos'è Next Generation EU?
       text: <strong>Next Generation EU (NGEU)</strong> è un piano da €750 miliardi di Euro che ha l’obiettivo di rilanciare l’economia europea...
+      faqId: faq-1
     - id: 2
       title: Cos’è Italia domani, il Piano nazionale di ripresa e resilienza (PNRR)?
       text: '<strong>Next Generation EU (NGEU)</strong> è un piano da
         €750 miliardi di Euro che ha l’obiettivo di rilanciare
         l’economia europea...'
+      faqId: faq-2
     - id: 3
       title: A chi sono rivolti i fondi di Italia digitale 2026?
       text: '<strong>Next Generation EU (NGEU)</strong> è un piano da
