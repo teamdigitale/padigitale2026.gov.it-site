@@ -84,18 +84,24 @@ opportunity:
       id: servi-civi
 heroCarouselNews:
   - id: 1
+    category: Notizia
+    title: Mobility as a Service for Italy, l'esito della Manifestazione di interesse
+    description: 'Pubblicato l’esito della Manifestazione di interesse rivolta ai Comuni capoluogo delle 14 Città metropolitane.'
+    source: 'Fonte: innovazione.gov.it'
+    linkTo: 'https://innovazione.gov.it/notizie/articoli/mobility-as-a-service-for-italy-l-esito-della-manifestazione-di-interesse/' 
+  - id: 2
     category: Novità
     title: Dal 15 novembre certificati anagrafici online e gratuiti per i cittadini
     description: Accedendo all'Anagrafe nazionale, per la prima volta i cittadini italiani potranno scaricare i certificati anagrafici online in maniera autonoma.
     source: 'Fonte: innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/articoli/dal-15-novembre-certificati-anagrafici-online-e-gratuiti-per-i-cittadini/'
-  - id: 2
+  - id: 3
     category: Comunicato stampa
     title: 'DL PNRR: 250 milioni per le competenze digitali degli italiani'
     description: Tutte le novità introdotte dal Decreto per l'attuazione del PNRR.
     source: 'Fonte: innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/comunicati-stampa/dl-pnrr-250-milioni-per-le-competenze-digitali-degli-italiani/'
-  - id: 3
+  - id: 4
     category: Notizia
     title: Cloud Italia, presentati gli indirizzi strategici per la Pubblica Amministrazione
     description: 'Le sfide della strategia: assicurare l’autonomia tecnologica del Paese, garantire il controllo sui dati e aumentare la resilienza dei servizi digitali.'
