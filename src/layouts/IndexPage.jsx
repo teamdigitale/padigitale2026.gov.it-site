@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   heroMain,
   heroDigital,
@@ -18,47 +18,60 @@ import { SEO } from '../components/SEO';
 import seo from '../../contents/seo.yml';
 import { SupportSection } from './faq/SupportSection';
 import { OpportunitySection } from './home/OpportunitySection';
+import { ModalUpdates } from '../components/modal/ModalUpdates';
 
 const { title: seoTitle, description: seoDescription } = seo.homePage;
 
-export const IndexPage = () => (
-  <>
-    <SEO title={seoTitle} description={seoDescription} />
-    <HeroImageBackgroundFull
-      category={heroMain.category}
-      title={heroMain.title}
-      body={heroMain.body}
-      image="hero-home.png"
-      imageMobile="hero-home-mobile.png"
-      overlap={true}
-    />
-    <HomeCarousel content={homeCarousel} />
-    <OpportunitySection title={opportunity.title} list={opportunity.cards} />
-    <HeroImage
-      category={heroPnrr.category}
-      title={heroPnrr.title}
-      body={heroPnrr.body}
-      imageUrl="/assets/come-funziona-home.svg"
-      imageAlt=""
-      firstButtonHref="/come-funziona"
-      firstButtonLabel={heroPnrr.firstButtonLabel}
-      firstButtonAriaLabel={heroPnrr.firstButtonAriaLabel}
-      secondButtonLabel={heroPnrr.secondButtonLabel}
-      secondButtonAriaLabel={heroPnrr.secondButtonAriaLabel}
-      secondButtonHref="/come-funziona"
-    />
-    <HeroImageBackground
-      title={heroDigital.title}
-      body={heroDigital.body}
-      theme="bg-blue"
-      image="italy-blue.png"
-      firstButtonLabel={heroDigital.firstButtonLabel}
-      firstButtonAriaLabel={heroDigital.firstButtonAriaLabel}
-      firstButtonClass="btn-light"
-      firstButtonHref={heroDigital.linkTo}
-      overlap={true}
-    />
-    <HeroCarousel content={heroCarouselNews} title={heroCarouselNewsTitle} />
-    <SupportSection supportList={support.cards} title={support.title} buttonLabel={support.buttonLabel} />
-  </>
-);
+export const IndexPage = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleModal = () => {
+    setIsOpen(!isOpen);
+  };
+  return (
+    <>
+      <SEO title={seoTitle} description={seoDescription} />
+      <HeroImageBackgroundFull
+        category={heroMain.category}
+        title={heroMain.title}
+        body={heroMain.body}
+        image="hero-home.png"
+        imageMobile="hero-home-mobile.png"
+        overlap={true}
+      />
+      <HomeCarousel content={homeCarousel} />
+      <OpportunitySection title={opportunity.title} list={opportunity.cards} />
+      <HeroImage
+        category={heroPnrr.category}
+        title={heroPnrr.title}
+        body={heroPnrr.body}
+        imageUrl="/assets/come-funziona-home.svg"
+        imageAlt=""
+        firstButtonHref="/come-funziona"
+        firstButtonLabel={heroPnrr.firstButtonLabel}
+        firstButtonAriaLabel={heroPnrr.firstButtonAriaLabel}
+        secondButtonLabel={heroPnrr.secondButtonLabel}
+        secondButtonAriaLabel={heroPnrr.secondButtonAriaLabel}
+        secondButtonHref="/come-funziona"
+      />
+      <HeroImageBackground
+        title={heroDigital.title}
+        body={heroDigital.body}
+        theme="bg-blue"
+        image="italy-blue.png"
+        firstButtonLabel={heroDigital.firstButtonLabel}
+        firstButtonAriaLabel={heroDigital.firstButtonAriaLabel}
+        firstButtonClass="btn-light"
+        firstButtonHref={heroDigital.linkTo}
+        overlap={true}
+      />
+      <HeroCarousel content={heroCarouselNews} title={heroCarouselNewsTitle} />
+      <SupportSection
+        supportList={support.cards}
+        title={support.title}
+        buttonLabel={support.buttonLabel}
+        handleToggle={toggleModal}
+      />
+      <ModalUpdates initialState={isOpen} handleToggle={toggleModal} />
+    </>
+  );
+};
