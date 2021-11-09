@@ -62,8 +62,8 @@ beneficiaries:
     title: Abilitazione e facilitazione migrazione al Cloud
     money: '1 <span>miliardo di euro<span>'
     tags:
-      - label: 'comuni'
-        value: 'Comuni'
+      - label: Comuni
+        value: comuni
       - label: Scuole
         value: scuole
       - label: ASL
