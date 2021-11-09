@@ -1,11 +1,9 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { ComeFunzionaPage } from '../layouts/ComeFunzionaPage';
-import { GlobalStateContext } from '../context/globalContext';
 
 const Page = () => {
-  const [{sectionId}] = useContext(GlobalStateContext)
   return (
-    <ComeFunzionaPage section={sectionId}/>
+    <ComeFunzionaPage/>
   )
 }
 export default Page;
