@@ -83,14 +83,16 @@ beneficiaries:
     tags:
       - value: pa-centrali
         label: PA Centrali
+      - value: comuni
+        label: Comuni
       - value: asl
         label: ASL
       - label: Aziende Ospedaliere
         value: aziende-ospedaliere
-      - value: comuni
-        label: Comuni
       - value: regioni
         label: Regioni
+      - value: province-autonome
+        label: Provincie autonome
       - value: universita
         label: Università
     description: Sviluppare una “Piattaforma Digitale Nazionale Dati” per garantire l'interoperabilità dei dati pubblici, permettendo così alle amministrazioni di erogare servizi in modo più veloce ed efficace e ai cittadini di non fornire nuovamente informazioni che la PA già possiede.
@@ -110,12 +112,12 @@ beneficiaries:
         label: ASL
       - label: Aziende Ospedaliere
         value: aziende-ospedaliere
-      - value: comuni
-        label: Comuni
-      - value: scuole
-        label: Scuole
       - value: regioni
         label: Regioni
+      - value: province-autonome
+        label: Provincie autonome
+      - value: universita
+        label: Università
       - value: 'enti-diritto'
         label: 'Enti per il diritto allo studio, agenzie, consorzi'
     description: Facilitare l’implementazione dello “Sportello Digitale Unico” (Single Digital Gateway), il regolamento europeo che ha l’obiettivo di uniformare l’accesso ai servizi digitali su tutto il territorio continentale, attraverso informazioni di qualità e canali di assistenza effettiva.
@@ -165,16 +167,18 @@ beneficiaries:
     tags:
       - value: pa-centrali
         label: PA Centrali
-      - value: asl
-        label: ASL
-      - label: Aziende Ospedaliere
-        value: aziende-ospedaliere
       - value: comuni
         label: Comuni
       - value: scuole
         label: Scuole
-      - value: enti-regionali
-        label: Enti Regionali
+      - value: asl
+        label: ASL
+      - label: Aziende Ospedaliere
+        value: aziende-ospedaliere
+      - value: province
+        label: Province
+      - value: altre-pa-locali
+        label: Altre PAL
       - value: universita
         label: Università
       - value: enti-diritto
@@ -190,7 +194,7 @@ beneficiaries:
     accessSectionId: pacchetti-standard
     accessLabel: Soluzioni Standard
     moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: 'https://italiadomani.gov.it/it/investimenti/servizi-digitali-e-cittadinanza-digitale.html'
+    moreInfoLink: 'https://italiadomani.gov.it/content/sogei-ng/it/it/investimenti/servizi-digitali-e-cittadinanza-digitale.html'
   - number: 1.4.4
     id: adoz-id
     title: Adozione identità digitale
@@ -198,20 +202,28 @@ beneficiaries:
     tags:
       - value: pa-centrali
         label: PA Centrali
-      - value: asl
-        label: ASL
-      - label: Aziende Ospedaliere
-        value: aziende-ospedaliere
       - value: comuni
         label: Comuni
       - value: scuole
         label: Scuole
-      - value: regioni
-        label: Regioni
+      - value: asl
+        label: ASL
+      - label: Aziende Ospedaliere
+        value: aziende-ospedaliere
       - value: province
         label: Province
       - value: altre-pa-locali
         label: Altre PAL
+      - value: universita
+        label: Università
+      - value: enti-diritto
+        label: Enti diritto allo studio, agenzie e consorzi
+      - value: istituti-formazione
+        label: Istituti alta formazione musicale e coreutica
+      - value: enti-ricerca-pubblica
+        label: Enti di ricerca pubblica
+      - value: consorzi-ricerca
+        label: Consorzi interuniversitari di ricerca
     description: Favorire l'adozione dell’identità digitale (Sistema Pubblico di Identità Digitale, SPID e Carta d'Identità Elettronica, CIE) e dell'Anagrafe nazionale della popolazione residente (ANPR)
     stalls: '10,300 enti'
     accessSectionId: pacchetti-standard
