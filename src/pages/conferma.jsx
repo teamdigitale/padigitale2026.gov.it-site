@@ -1,5 +1,5 @@
 import React from 'react';
 import { ConfirmPage } from '../layouts/ConfirmPage';
 
-const Page = (jwt) => <ConfirmPage {...jwt} />;
+const Page = (location) => <ConfirmPage {...location} />;
 export default Page;
