@@ -698,12 +698,12 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                         onBlur={textareaFocusOutHandler}
                         onInput={textareaInputHandler}
                         rows="3"
-                        maxlength={textareaMaxLength}
+                        maxLength={textareaMaxLength}
                         id="message"
                       ></textarea>
                       <label
                         className={textareaState == 'active' ? 'active' : ''}
-                        for="message"
+                        htmlFor="message"
                       >
                         {messageLabel}
                       </label>

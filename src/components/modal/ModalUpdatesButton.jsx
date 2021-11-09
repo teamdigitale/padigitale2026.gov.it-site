@@ -54,13 +54,7 @@ const useStyles = createUseStyles({
   },
 });
 
-export const ModalUpdatesButton = ({
-  label,
-  buttonLabel,
-  initialState,
-  handleToggle,
-  hasTitle,
-}) => {
+export const ModalUpdatesButton = ({ label, buttonLabel, initialState, handleToggle, hasTitle }) => {
   const classes = useStyles();
   const eventHandler = () => {
     handleToggle();
@@ -76,10 +70,7 @@ export const ModalUpdatesButton = ({
             </Col>
             <Col sm={12} lg={9}>
               <span className={classes.buttonInfo}>
-                M1C1{' '}
-                <strong>
-                  DIGITALIZZAZIONE, INNOVAZIONE E SICUREZZA NELLA PA
-                </strong>
+                M1C1 <strong>DIGITALIZZAZIONE, INNOVAZIONE E SICUREZZA NELLA PA</strong>
               </span>
             </Col>
           </Row>
