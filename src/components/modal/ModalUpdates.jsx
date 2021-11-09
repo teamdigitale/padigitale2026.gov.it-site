@@ -1,17 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { createUseStyles } from 'react-jss';
-import {
-  Row,
-  Col,
-  Modal,
-  ModalBody,
-  ModalFooter,
-  Button,
-  Input,
-  FormGroup,
-  Label,
-} from 'design-react-kit';
+import { Row, Col, Modal, ModalBody, ModalFooter, Button, Input, FormGroup, Label } from 'design-react-kit';
 import Select from 'react-select';
 import content from '../../../contents/opportunity-page/opportunity.yml';
 
@@ -233,9 +223,7 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
     const setObserver = (mutationsList) => {
       for (const mutation of mutationsList) {
         if (mutation.type === 'childList') {
-          let value = representSelectOptions.querySelector(
-            'div[class*="singleValue"]'
-          );
+          let value = representSelectOptions.querySelector('div[class*="singleValue"]');
           value ? (value = value.innerHTML) : (value = '');
           let valueSelected = selectRepresent.find((valueObj) => {
             if (value == valueObj.label) {
@@ -283,9 +271,7 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
 
   const onSubmit = async (data, event) => {
     console.log('submit', data);
-    const modalCloseBtn = event.target
-      .closest('.modal-content')
-      .querySelector('.modal-header .btn');
+    const modalCloseBtn = event.target.closest('.modal-content').querySelector('.modal-header .btn');
     modalCloseBtn.click();
     const notificationElement = document.querySelector('.notification');
     notificationElement.classList.add('show');
@@ -340,30 +326,14 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
       >
         <div id="updates-modal" className="modal-header">
           <h5 className="modal-title">{modalTitle}</h5>
-          <Button
-            type="button"
-            className={classes.close}
-            aria-label="Close"
-            onClick={handleToggle}
-          >
+          <Button type="button" className={classes.close} aria-label="Close" onClick={handleToggle}>
             <span>Chiudi</span>
-            <img
-              src="assets/icon-close.svg"
-              alt="chiudi modale"
-              aria-hidden="true"
-            />
+            <img src="assets/icon-close.svg" alt="chiudi modale" aria-hidden="true" />
           </Button>
         </div>
-        <p
-          className={classes.modalSubtitle}
-          dangerouslySetInnerHTML={{ __html: modalSubtitle }}
-        ></p>
+        <p className={classes.modalSubtitle} dangerouslySetInnerHTML={{ __html: modalSubtitle }}></p>
         <ModalBody className={classes.modalBody}>
-          <form
-            onSubmit={handleSubmit(onSubmit, onError)}
-            id="updates-form"
-            aria-describedby="mandatory-label"
-          >
+          <form onSubmit={handleSubmit(onSubmit, onError)} id="updates-form" aria-describedby="mandatory-label">
             <fieldset>
               <Row>
                 <Col xs={12}>
@@ -384,10 +354,7 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
               </legend>
               <Row className="mt-5">
                 <Col xs={12}>
-                  <p
-                    id="mandatory-label"
-                    dangerouslySetInnerHTML={{ __html: mandatoryAdvise }}
-                  ></p>
+                  <p id="mandatory-label" dangerouslySetInnerHTML={{ __html: mandatoryAdvise }}></p>
                 </Col>
               </Row>
               <Row className="mt-5">
@@ -430,29 +397,19 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                         options={selectRepresent}
                         placeholder={selectPlaceholder}
                         aria-label={selectPlaceholder}
-                        className={`select ${
-                          errors.represent && ' is-invalid'
-                        }`}
+                        className={`select ${errors.represent && ' is-invalid'}`}
                       />
                     )}
                   />
                 </Col>
               </Row>
-              <span className={classes.errorLabel}>
-                {errors.represent ? requiredLabel : ''}
-              </span>
+              <span className={classes.errorLabel}>{errors.represent ? requiredLabel : ''}</span>
               <div
                 className={`${classes.enteContainer} ${
-                  enteState == 'public-administration' || enteState == 'other'
-                    ? ''
-                    : 'hidden'
+                  enteState == 'public-administration' || enteState == 'other' ? '' : 'hidden'
                 }`}
               >
-                <div
-                  className={`${classes.enteContainer} ${
-                    enteState == 'other' ? '' : 'hidden'
-                  }`}
-                >
+                <div className={`${classes.enteContainer} ${enteState == 'other' ? '' : 'hidden'}`}>
                   <Row className="mt-5">
                     <Col xs={12}>
                       <Controller
@@ -471,9 +428,7 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                         render={({ field }) => (
                           <Input
                             invalid={errors.enteType}
-                            infoText={
-                              errors.enteType && errors.enteType.message
-                            }
+                            infoText={errors.enteType && errors.enteType.message}
                             label={enteTypeLabel}
                             type="text"
                             {...field}
@@ -491,11 +446,7 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                       control={control}
                       rules={{
                         required: {
-                          value:
-                            enteState == 'public-administration' ||
-                            enteState == 'other'
-                              ? true
-                              : false,
+                          value: enteState == 'public-administration' || enteState == 'other' ? true : false,
                           message: requiredLabel,
                         },
                         pattern: {
@@ -518,19 +469,13 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                 </Row>
                 <Row className="mt-5">
                   <Col xs={12} lg={6}>
-                    <label className={classes.selectLabel}>
-                      {inQuantoLabel}
-                    </label>
+                    <label className={classes.selectLabel}>{inQuantoLabel}</label>
                     <Controller
                       control={control}
                       name="enteSelect"
                       rules={{
                         required: {
-                          value:
-                            enteState == 'public-administration' ||
-                            enteState == 'other'
-                              ? true
-                              : false,
+                          value: enteState == 'public-administration' || enteState == 'other' ? true : false,
                           message: requiredLabel,
                         },
                       }}
@@ -542,17 +487,13 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                           options={selectInQuanto}
                           placeholder={selectPlaceholder}
                           aria-label={selectPlaceholder}
-                          className={`${
-                            errors.represent && 'select is-invalid'
-                          }`}
+                          className={`${errors.represent && 'select is-invalid'}`}
                         />
                       )}
                     />
                   </Col>
                 </Row>
-                <span className={classes.errorLabel}>
-                  {errors.enteSelect ? requiredLabel : ''}
-                </span>
+                <span className={classes.errorLabel}>{errors.enteSelect ? requiredLabel : ''}</span>
               </div>
             </fieldset>
             <fieldset>
@@ -564,31 +505,23 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
               <legend>
                 <Row className="mt-3">
                   <Col xs={12}>
-                    <span className={classes.modalLabel}>
-                      {directContactLabel}
-                    </span>
+                    <span className={classes.modalLabel}>{directContactLabel}</span>
                   </Col>
                 </Row>
                 <Row className="mt-2">
                   <Col xs={12}>
-                    <p
-                      dangerouslySetInnerHTML={{ __html: directContactInfo }}
-                    ></p>
+                    <p dangerouslySetInnerHTML={{ __html: directContactInfo }}></p>
                   </Col>
                 </Row>
               </legend>
               <Row className="mt-5">
                 <Col xs={12}>
-                  <h3 className={classes.modalTitleSecondary}>
-                    {addMessageLabel}
-                  </h3>
+                  <h3 className={classes.modalTitleSecondary}>{addMessageLabel}</h3>
                 </Col>
               </Row>
               <Row className="mt-5">
                 <Col xs={12} lg={6}>
-                  <label className={classes.selectLabel}>
-                    {messageSelectLabel}
-                  </label>
+                  <label className={classes.selectLabel}>{messageSelectLabel}</label>
                   <Select
                     id="message-select"
                     onChange={handleChange}
@@ -607,19 +540,14 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                         onBlur={textareaFocusOutHandler}
                         onInput={textareaInputHandler}
                         rows="3"
-                        maxlength={textareaMaxLength}
+                        maxLength={textareaMaxLength}
                         id="message"
                       ></textarea>
-                      <label
-                        className={textareaState == 'active' ? 'active' : ''}
-                        for="message"
-                      >
+                      <label className={textareaState == 'active' ? 'active' : ''} htmlFor="message">
                         {messageLabel}
                       </label>
                       <span className={classes.maxLengthLabel}>
-                        Massimo{' '}
-                        <span id="max-length-number">{textareaMaxLength}</span>{' '}
-                        caratteri
+                        Massimo <span id="max-length-number">{textareaMaxLength}</span> caratteri
                       </span>
                     </div>
                   </div>
@@ -629,9 +557,7 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
             <Row className="mt-5">
               <Col xs={12}>
                 <fieldset>
-                  <legend className={classes.selectLabel}>
-                    {radioGroupLabel}
-                  </legend>
+                  <legend className={classes.selectLabel}>{radioGroupLabel}</legend>
                   <FormGroup check>
                     <input
                       className={errors.radio1 ? 'is-invalid' : ''}
@@ -673,27 +599,13 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
       <div className="container test-docs">
         <div className="row">
           <div className="col-12 col-md-6">
-            <div
-              class={classes.notification}
-              role="alert"
-              aria-labelledby="not2dms-title"
-              id="not2dms"
-            >
+            <div className={classes.notification} role="alert" aria-labelledby="not2dms-title" id="not2dms">
               <h5 id="not2dms-title">
                 <svg className="icon"></svg>
               </h5>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor…
-              </p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</p>
               <button type="button" className="btn notification-close">
-                <svg
-                  width="19"
-                  height="19"
-                  viewBox="0 0 19 19"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
+                <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect
                     x="17.3242"
                     y="0.5"
@@ -702,13 +614,7 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                     transform="rotate(45 17.3242 0.5)"
                     fill="#0066CC"
                   />
-                  <rect
-                    y="1.56055"
-                    width="1.49987"
-                    height="24.4978"
-                    transform="rotate(-45 0 1.56055)"
-                    fill="#0066CC"
-                  />
+                  <rect y="1.56055" width="1.49987" height="24.4978" transform="rotate(-45 0 1.56055)" fill="#0066CC" />
                 </svg>
 
                 <span className="sr-only">Chiudi notifica: Titolo notifica</span>

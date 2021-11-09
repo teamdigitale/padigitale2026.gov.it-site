@@ -5,6 +5,7 @@ import content from '../../contents/home-page/home.yml';
 import faq from '../../contents/faq-page/faq.yml';
 import { SEO } from '../components/SEO';
 import seo from '../../contents/seo.yml';
+import { ModalUpdates } from '../components/modal/ModalUpdates';
 import { SideNavigation } from './faq/SideNavigation';
 import { QuestionSection } from './faq/QuestionSection';
 import { SupportSection } from './faq/SupportSection';
@@ -28,6 +29,10 @@ export const FaqPage = () => {
   const [filterId, setFilterId] = useState('all');
   const [questions, setQuestions] = useState(faq.questions);
   const [isMobile, setIsMobile] = useState();
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleModal = () => {
+    setIsOpen(!isOpen);
+  };
 
   useEffect(() => {
     setIsMobile(window.innerWidth < 992);
@@ -131,14 +136,20 @@ export const FaqPage = () => {
             </Col>
             <Col lg={9} className="px-lg-3">
               {questions.map((question) => (
-                <QuestionSection key={question.title} item={question} inputText={inputValue} />
+                <QuestionSection
+                  key={question.title}
+                  item={question}
+                  inputText={inputValue}
+                  handleToggle={toggleModal}
+                />
               ))}
               {!questions.length && <p className={classes.noResults}>{faq.noResults}</p>}
             </Col>
           </Row>
         </Container>
       </div>
-      <SupportSection supportList={faq.support.cards} title={faq.support.title} />
+      <SupportSection supportList={faq.support.cards} title={faq.support.title} handleToggle={toggleModal} />
+      <ModalUpdates initialState={isOpen} handleToggle={toggleModal} />
     </>
   );
 };

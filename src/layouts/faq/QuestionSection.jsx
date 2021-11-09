@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Accordion, AccordionHeader, AccordionBody } from 'design-react-kit';
+import { Accordion, AccordionHeader, AccordionBody, Button } from 'design-react-kit';
 import { createUseStyles } from 'react-jss';
 import { ExternalLink } from '../../components/ExternalLink';
 
@@ -63,11 +63,36 @@ const useStyles = createUseStyles({
       },
     },
   },
+  modalLink: {
+    marginTop: '2.222rem',
+    '&.btn-secondary': {
+      backgroundColor: 'transparent',
+      border: 'none',
+      boxShadow: 'unset',
+      color: '#06c',
+      padding: '0',
+      display: 'inline-flex',
+      alignItems: 'center',
+      fontSize: '1rem',
+      fontWeight: 'bold',
+
+      '&:hover': {
+        color: '#004080',
+      },
+      '&:not(:disabled):not(.disabled):active': {
+        backgroundColor: 'transparent',
+        border: 'none',
+        boxShadow: 'unset',
+        color: '#004080',
+      },
+    },
+  },
 });
 
 export const QuestionSection = (props) => {
   const classes = useStyles();
   const { title, description, accordions, sectionId } = props.item;
+  const { handleToggle } = props;
   const { inputText } = props;
 
   const [indexIsOpen, setIndexIsOpen] = useState(-1);
@@ -142,6 +167,14 @@ export const QuestionSection = (props) => {
                       <img src="/assets/external-icon.svg" alt="" />
                     </ExternalLink>
                   </div>
+                )}
+                {accordion.modalBtn ? (
+                  <Button className={classes.modalLink} onClick={handleToggle}>
+                    {accordion.modalBtn}
+                    <img className="ml-2" src="/assets/external-icon.svg" alt="" />
+                  </Button>
+                ) : (
+                  ''
                 )}
               </AccordionBody>
             </div>
