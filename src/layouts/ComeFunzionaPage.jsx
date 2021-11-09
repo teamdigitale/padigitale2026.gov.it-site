@@ -29,7 +29,7 @@ export const ComeFunzionaPage = () => {
     <>
       <SEO title={seoTitle} description={seoDescription} />
       <div className="sr-only">
-        <h1>{content.name}</h1>
+        <h2>{content.name}</h2>
       </div>
       <HeroHowItWorks
         title={content.hero.title}
