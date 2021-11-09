@@ -9,7 +9,10 @@ import { HeroParagraph } from './HeroParagraph';
 const useStyles = createUseStyles({
   heroImg: {
     position: 'relative',
-    width: '100%'
+    width: '100%',
+    maxHeight: '25rem',
+    objectFit: 'none',
+    objectPosition: 'right',
   },
   heroTitle: {
     composes: 'no_doc title-hero',
