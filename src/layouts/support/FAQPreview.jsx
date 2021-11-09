@@ -23,8 +23,6 @@ const useStyle = createUseStyles({
   faqCard: {
     composes: 'card rounded',
     '&.card': {
-      textAlign: 'left',
-      textDecoration: 'none',
       boxShadow: '0px 0px 80px rgba(0, 43, 85, 0.1)',
       '& h5.card-title': {
         color: '#0066CC',
@@ -45,6 +43,11 @@ const useStyle = createUseStyles({
         fontFamily: 'Titillium Web',
         fontSize: '1rem',
         lineHeight: '1.28',
+        display: '-webkit-box',
+        WebkitBoxOrient: 'vertical',
+        WebkitLineClamp: 3,
+        overflow: 'hidden',
+        textOverflow: 'ellipsis',
       },
       '&:after': {
         content: 'none',
@@ -62,19 +65,25 @@ const useStyle = createUseStyles({
       textTransform: 'uppercase',
     },
   },
+  linkCard: {
+    textDecoration: 'none',
+  },
 });
 
 export const FAQPreview = () => {
   const classes = useStyle();
   const [state, dispatch] = useContext(GlobalStateContext);
+
   const cards = faqSection.faqPreviewCards.map((card) => (
     <Col key={card.id} xs="12" lg="4">
-      <Card tag="a" href="/faq" onClick={() => dispatch({type: 'SET:FAQ_ID', payload: {faqId: card.faqId}})} className={classes.faqCard}>
-        <CardBody>
-          <CardTitle tag="h5">{card.title}</CardTitle>
-          <CardText dangerouslySetInnerHTML={{ __html: card.text }} />
-        </CardBody>
-      </Card>
+      <Link to="/faq" onClick={() => dispatch({ type: 'SET:FAQ_ID', payload: { faqId: card.faqId } })} className={classes.linkCard}>
+        <Card className={classes.faqCard}>
+          <CardBody>
+            <CardTitle tag="h5">{card.title}</CardTitle>
+            <CardText dangerouslySetInnerHTML={{ __html: card.text }} />
+          </CardBody>
+        </Card>
+      </Link>
     </Col>
   ));
 
@@ -84,7 +93,7 @@ export const FAQPreview = () => {
         <div className="container px-3">
           <Row>{cards}</Row>
           <div className={classes.btnWrapper}>
-          <Link to="/faq" className="btn btn-primary text-uppercase">
+            <Link to="/faq" className="btn btn-primary text-uppercase">
               {faqSection.buttonLabel}
             </Link>
           </div>

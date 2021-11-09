@@ -2,8 +2,8 @@ import React, { useState, useEffect, useRef, useContext } from 'react';
 import { Accordion, AccordionHeader, AccordionBody } from 'design-react-kit';
 import { createUseStyles } from 'react-jss';
 import { element } from 'prop-types';
-import { ExternalLink } from '../../components/ExternalLink';
 import { GlobalStateContext } from '../../context/globalContext';
+import { ExternalLink } from '../../components/ExternalLink';
 
 const useStyles = createUseStyles({
   section: {
@@ -71,10 +71,10 @@ export const QuestionSection = (props) => {
   const classes = useStyles();
   const { title, description, accordions, sectionId } = props.item;
   const { inputText } = props;
-  const [{faqId}] = useContext(GlobalStateContext);
 
   const [indexIsOpen, setIndexIsOpen] = useState(-1);
   const [accordionList, setAccordionList] = useState(accordions);
+  const [{ faqId }] = useContext(GlobalStateContext);
   // const [sectionVisible, setSectionVisible] = useState(true);
 
   useEffect(() => {
@@ -123,22 +123,14 @@ export const QuestionSection = (props) => {
   }, [inputText]);
 
   useEffect(() => {
-    // const url = window.location.href;
-    // const regexp = new RegExp('#', 'i');
-
-    // if (regexp.test(url)) {
-    //   const anchorId = url.substring(url.match(regexp).index + 1);
-    //   const isAccordion = (element) => anchorId === element.accordionId;
-    //   setIndexIsOpen(accordionList.findIndex(isAccordion));
-    // }
-    console.log(faqId);
-
     if (faqId) {
       document.querySelector('#' + faqId).scrollIntoView({
         behavior: 'smooth',
       });
+      const isAccordion = (element) => faqId === element.accordionId;
+      setIndexIsOpen(accordionList.findIndex(isAccordion));
     }
-  }, [faqId]);
+  }, [faqId, accordionList]);
 
   return (
     <>
