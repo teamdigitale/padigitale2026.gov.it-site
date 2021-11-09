@@ -60,7 +60,7 @@ beneficiaries:
   - number: 1.2
     id: abili-faci-migr
     title: Abilitazione e facilitazione migrazione al Cloud
-    money: '1 <span>miliardo di euro<span>'
+    money: '1000 <span>milioni di euro<span>'
     tags:
       - label: Comuni
         value: comuni

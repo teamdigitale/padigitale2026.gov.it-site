@@ -197,7 +197,7 @@ const SlimHeader = () => {
   return (
     <HeaderReactKit type="slim" theme="light">
       <HeaderContent>
-        <HeaderBrand className={classes.headerLink}>
+        <HeaderBrand href="https://innovazione.gov.it/dipartimento" target="_blank" className={classes.headerLink}>
           {externalLinks.dipartimento.label}
         </HeaderBrand>
         <HeaderLinkZone aria-labelledby="siti-esterni-correlati">
