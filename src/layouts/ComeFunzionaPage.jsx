@@ -45,7 +45,7 @@ export const ComeFunzionaPage = () => {
         mobileNavigation
         title={content.pacchettiTabs.title}
         subtitle={content.pacchettiTabs.subtitle}
-        sectionId="pacchetti-standard"
+        sectionId="soluzioni-standard"
       />
       <Tab
         tabContent={content.presentazioneTabs}
@@ -60,5 +60,5 @@ export const ComeFunzionaPage = () => {
       <Involved title={content.involved.title} category={content.involved.category} cards={content.involved.cards} />
       <SupportSection supportList={support.cards} title={support.title} buttonLabel={support.buttonLabel} />
     </>
-  )
+  );
 };

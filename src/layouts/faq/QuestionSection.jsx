@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { Accordion, AccordionHeader, AccordionBody } from 'design-react-kit';
+import React, { useState, useEffect, useContext } from 'react';
+import { Accordion, AccordionHeader, AccordionBody, Button } from 'design-react-kit';
 import { createUseStyles } from 'react-jss';
+import { element } from 'prop-types';
+import { GlobalStateContext } from '../../context/globalContext';
 import { ExternalLink } from '../../components/ExternalLink';
 
 const useStyles = createUseStyles({
@@ -63,15 +65,41 @@ const useStyles = createUseStyles({
       },
     },
   },
+  modalLink: {
+    marginTop: '2.222rem',
+    '&.btn-secondary': {
+      backgroundColor: 'transparent',
+      border: 'none',
+      boxShadow: 'unset',
+      color: '#06c',
+      padding: '0',
+      display: 'inline-flex',
+      alignItems: 'center',
+      fontSize: '1rem',
+      fontWeight: 'bold',
+
+      '&:hover': {
+        color: '#004080',
+      },
+      '&:not(:disabled):not(.disabled):active': {
+        backgroundColor: 'transparent',
+        border: 'none',
+        boxShadow: 'unset',
+        color: '#004080',
+      },
+    },
+  },
 });
 
 export const QuestionSection = (props) => {
   const classes = useStyles();
   const { title, description, accordions, sectionId } = props.item;
+  const { handleToggle } = props;
   const { inputText } = props;
 
   const [indexIsOpen, setIndexIsOpen] = useState(-1);
   const [accordionList, setAccordionList] = useState(accordions);
+  const [{ faqId }] = useContext(GlobalStateContext);
   // const [sectionVisible, setSectionVisible] = useState(true);
 
   useEffect(() => {
@@ -119,6 +147,16 @@ export const QuestionSection = (props) => {
     }
   }, [inputText]);
 
+  useEffect(() => {
+    if (faqId) {
+      document.querySelector('#' + faqId).scrollIntoView({
+        behavior: 'smooth',
+      });
+      const isAccordion = (element) => faqId === element.accordionId;
+      setIndexIsOpen(accordionList.findIndex(isAccordion));
+    }
+  }, [faqId, accordionList]);
+
   return (
     <>
       <section id={sectionId} className={classes.section}>
@@ -130,6 +168,7 @@ export const QuestionSection = (props) => {
                 onToggle={() => setIndexIsOpen((state) => (state === i ? -1 : i))}
                 active={i === indexIsOpen}
                 className={classes.accordionTitle}
+                id={accordion.accordionId}
               >
                 <div dangerouslySetInnerHTML={{ __html: accordion.title }}></div>
               </AccordionHeader>
@@ -142,6 +181,14 @@ export const QuestionSection = (props) => {
                       <img src="/assets/external-icon.svg" alt="" />
                     </ExternalLink>
                   </div>
+                )}
+                {accordion.modalBtn ? (
+                  <Button className={classes.modalLink} onClick={handleToggle}>
+                    {accordion.modalBtn}
+                    <img className="ml-2" src="/assets/external-icon.svg" alt="" />
+                  </Button>
+                ) : (
+                  ''
                 )}
               </AccordionBody>
             </div>

@@ -110,6 +110,7 @@ const useStyles = createUseStyles({
     display: 'flex',
     '@media (max-width: 991px)': {
       flexDirection: 'column',
+      textAlign: 'center',
     },
   },
   list: {
@@ -163,6 +164,9 @@ const useStyles = createUseStyles({
     color: '#0066CC',
     fontWeight: '600',
     marginBottom: '1rem',
+    '@media (max-width: 991px)': {
+      textAlign: 'center',
+    },
     '&:focus': {
       outline: '2px solid #ff9900',
       boxShadow: 'none',

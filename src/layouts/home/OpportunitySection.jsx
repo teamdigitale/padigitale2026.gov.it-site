@@ -1,13 +1,5 @@
 import React, { useContext } from 'react';
-import {
-  Section,
-  Row,
-  Col,
-  Card,
-  CardBody,
-  CardTitle,
-  Button,
-} from 'design-react-kit';
+import { Section, Row, Col, Card, CardBody, CardTitle, Button } from 'design-react-kit';
 import { createUseStyles } from 'react-jss';
 import { Link } from 'gatsby';
 import { GlobalStateContext } from '../../context/globalContext';
@@ -64,8 +56,8 @@ const useStyle = createUseStyles({
           fontWeight: 'normal',
         },
         '& a': {
-          textDecoration: 'none'
-        }
+          textDecoration: 'none',
+        },
       },
     },
   },
@@ -74,7 +66,7 @@ const useStyle = createUseStyles({
 export const OpportunitySection = (props) => {
   const classes = useStyle();
   const { title, list } = props;
-  const [state, dispatch] = useContext(GlobalStateContext)
+  const [state, dispatch] = useContext(GlobalStateContext);
 
   return (
     <Section color="muted" className={classes.section}>
