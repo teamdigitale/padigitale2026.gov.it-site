@@ -25,7 +25,7 @@ const useStyles = createUseStyles({
       padding: '0.889rem 1.333rem',
       '& p': {
         maxWidth: '100%',
-        marginBottom: '1rem'
+        marginBottom: '1rem',
       },
     },
   },
@@ -49,18 +49,12 @@ const useStyles = createUseStyles({
   button: {
     '&:focus': {
       outline: '2px solid #ff9900',
-      boxShadow: 'none'
-    }
-  }
+      boxShadow: 'none',
+    },
+  },
 });
 
-export const ModalUpdatesButton = ({
-  label,
-  buttonLabel,
-  initialState,
-  handleToggle,
-  hasTitle,
-}) => {
+export const ModalUpdatesButton = ({ label, buttonLabel, initialState, handleToggle, hasTitle }) => {
   const classes = useStyles();
   const eventHandler = () => {
     handleToggle();
@@ -76,10 +70,7 @@ export const ModalUpdatesButton = ({
             </Col>
             <Col sm={12} lg={9}>
               <span className={classes.buttonInfo}>
-                M1C1{' '}
-                <strong>
-                  DIGITALIZZAZIONE, INNOVAZIONE E SICUREZZA NELLA PA
-                </strong>
+                M1C1 <strong>DIGITALIZZAZIONE, INNOVAZIONE E SICUREZZA NELLA PA</strong>
               </span>
             </Col>
           </Row>

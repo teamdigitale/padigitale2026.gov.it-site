@@ -6,10 +6,10 @@ import 'bootstrap-italia/dist/css/bootstrap-italia.min.css';
 import { createUseStyles } from 'react-jss';
 import { SEO } from '../components/SEO';
 import labels from '../../contents/labels.yml';
+import { ModalUpdates } from '../components/modal/ModalUpdates';
+import { GlobalStateContextProvider } from '../context/globalContext';
 import { Header } from './Header';
 import { Footer } from './Footer';
-import { ModalUpdates } from '../components/modal/ModalUpdates';
-import { GlobalStateContextProvider } from '../context/globalContext'
 
 const { goToMainContent, goToFooter } = labels;
 
