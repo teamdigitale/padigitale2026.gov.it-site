@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'gatsby';
 import { createUseStyles } from 'react-jss';
 import links from '../../contents/links.yml';
 import { ExternalLink } from '../components/ExternalLink';
+import { GlobalStateContext } from '../context/globalContext';
 
 const {
   internalLinks: { privacy, noteLegali },
@@ -123,6 +124,8 @@ const SlimFooter = () => {
 
 const MainFooter = () => {
   const classes = useStyle();
+  const [state, dispatch] = useContext(GlobalStateContext);
+
   return (
     <div className={`${classes.mainFooter} it-footer-main`}>
       <div className="container text-center text-md-left">
@@ -162,9 +165,9 @@ const MainFooter = () => {
             </ExternalLink>
           </div>
           <div className="info">
-            <a href="/come-funziona" className={classes.seeMore}>
+            <Link to="/come-funziona" className={classes.seeMore} onClick={() => dispatch({type: 'SET:HOW_SECTION_ID', payload: {howId: 'attori-coinvolti'}})}>
               Scopri l&apos;iniziativa
-            </a>
+            </Link>
           </div>
         </div>
       </div>
