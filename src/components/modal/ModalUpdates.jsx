@@ -607,6 +607,12 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                     />
                   </Col>
                 </Row>
+              </div>
+              <div
+                className={`${classes.enteContainer} ${
+                  enteState == 'public-administration' ? '' : 'hidden'
+                }`}
+              >
                 <Row className="mt-5">
                   <Col xs={12} lg={6}>
                     <label className={classes.selectLabel}>
