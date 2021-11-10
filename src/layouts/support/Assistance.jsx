@@ -47,7 +47,7 @@ export const Assistance = () => {
   return (
     <React.Fragment>
       <Hero className={classes.heroAssistanceBg}>
-        <div className="row align-items-center px-lg-5">
+        <div className="row align-items-center px-lg-5 flex-column-reverse flex-lg-row">
           <div className="col-lg-6 p-0 mt-3 mt-lg-0 pr-lg-5">
             <HeroTitle title={title} className={classes.heroTitle} />
             <HeroBody html={body} />
@@ -55,9 +55,9 @@ export const Assistance = () => {
               <Button color='primary' className={classes.heroBtn} onClick={() => toggleModal()}>{btnText}</Button>
             </HeroCtaContainer>
           </div>
-          <HeroGraphic className="col-lg-6">
+          <HeroGraphic className="col-lg-6 text-center mt-4 mt-lg-0">
             <StaticImage
-              src="../../images/section01.jpg"
+              src="../../../static/assets/supporto.svg"
               alt={altImg}
               aria-label={altImg}
             />

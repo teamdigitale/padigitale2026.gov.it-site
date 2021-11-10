@@ -140,7 +140,7 @@ export const HeroImageBackground = ({
   secondButtonHref,
   overlap,
   noButton,
-  titleId
+  titleId,
 }) => {
   const classes = useStyles();
   return (
