@@ -1,14 +1,6 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
-import {
-  Row,
-  Col,
-  Card,
-  CardBody,
-  CardCategory,
-  CardTitle,
-  CardText,
-} from 'design-react-kit';
+import { Row, Col, Card, CardBody, CardCategory, CardTitle, CardText } from 'design-react-kit';
 import PropTypes from 'prop-types';
 import { DesktopSwiper } from '../DesktopSwiper';
 import { ExternalLink } from '../ExternalLink';
@@ -34,7 +26,7 @@ const useStyles = createUseStyles({
           color: '#33485C',
         },
       },
-      '& h5.card-title': {
+      '& h4.card-title': {
         color: '#0066CC',
         fontSize: '1.125rem',
         fontWeight: 'bold',
@@ -102,10 +94,9 @@ const useStyles = createUseStyles({
     '& .swiper-slider': {
       padding: '1.111rem',
     },
-    '& .swiper-pagination.swiper-pagination-bullets .swiper-pagination-bullet':
-      {
-        margin: '0 0.889rem',
-      },
+    '& .swiper-pagination.swiper-pagination-bullets .swiper-pagination-bullet': {
+      margin: '0 0.889rem',
+    },
   },
   heroLink: {
     textDecoration: 'none',
@@ -121,7 +112,7 @@ export const HeroCarousel = ({ content, title }) => {
       <Card key={element.id} className={classes.heroCards} spacing noWrapper>
         <CardBody>
           <CardCategory>{element.category}</CardCategory>
-          <CardTitle tag="h5">{element.title}</CardTitle>
+          <CardTitle tag="h4">{element.title}</CardTitle>
           <CardText>{element.description}</CardText>
           <ExternalLink linkTo={element.linkTo} alt="" className={classes.heroLink}>
             <div className="source">
@@ -137,11 +128,13 @@ export const HeroCarousel = ({ content, title }) => {
   return (
     <>
       <div className={classes.newsUpdateSection}>
-        <div className="container">
+        <section className="container">
           {title ? (
             <Row>
               <Col xs="12" lg="4">
-                <h3 className={classes.heroCarouselTitle}>{title}</h3>
+                <h3 id="news-home-carousel" className={classes.heroCarouselTitle}>
+                  {title}
+                </h3>
               </Col>
             </Row>
           ) : (
@@ -157,7 +150,7 @@ export const HeroCarousel = ({ content, title }) => {
             }}
             pagination
           />
-        </div>
+        </section>
       </div>
     </>
   );

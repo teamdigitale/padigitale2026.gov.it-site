@@ -200,10 +200,7 @@ const SlimHeader = () => {
         <HeaderBrand href="https://innovazione.gov.it/" target="_blank" className={classes.headerLink}>
           {externalLinks.dipartimento.label}
         </HeaderBrand>
-        <HeaderLinkZone aria-labelledby="siti-esterni-correlati">
-          <h2 id="siti-esterni-correlati" className="sr-only">
-            Siti esterni correlati
-          </h2>
+        <HeaderLinkZone aria-labelledby="Siti esterni correlati">
           <Button
             className={classes.headerToggler}
             onClick={toggle}
@@ -220,6 +217,8 @@ const SlimHeader = () => {
                 <LinkListItem
                   href={externalLinks.italiaDigitale.linkTo}
                   target="_blank"
+                  rel="noreferrer"
+                  aria-label="VAI AL SITO Italia digitale 2026 (Collegamento esterno - Apre su nuova scheda)"
                 >
                   {externalLinks.italiaDigitale.label}
                 </LinkListItem>
@@ -313,7 +312,7 @@ const NavHeader = ({ toggleModal }) => {
         <HeaderNav isOpen={isOpen} onCloseMenu={toogleMenu}>
           <div className={classes.menuWrapper}>
             <Nav navbar className={classes.navbarNav}>
-              <div className={classes.offCanvasWrapper}>
+              <li className={classes.offCanvasWrapper}>
                 <a href="/" tabIndex="-1">
                   <img
                     className="icon"
@@ -324,7 +323,7 @@ const NavHeader = ({ toggleModal }) => {
                 <a href="/" className={classes.offCanvasTitle}>
                   {headerTitle}
                 </a>
-              </div>
+              </li>
               <NavItem active>
                 <Link
                   to={internalLinks.opportunity.linkTo}

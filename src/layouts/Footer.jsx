@@ -176,7 +176,10 @@ const MainFooter = () => {
 };
 
 export const Footer = () => (
-  <footer className="it-footer" id="footer">
+  <footer className="it-footer" id="footer" aria-labelledby="linkutili-header">
+    <h2 id="linkutili-header" className="sr-only">
+      Link Utili
+    </h2>
     <MainFooter />
     <SlimFooter />
   </footer>

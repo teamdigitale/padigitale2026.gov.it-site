@@ -110,11 +110,11 @@ export const FaqPage = () => {
     <>
       <SEO title={seoTitle} description={seoDescription} />
       <div className="sr-only">
-        <h1>{content.name}</h1>
+        <h2>{faq.name}</h2>
       </div>
       <HeroSupport title={faq.hero.title} subtitle={faq.hero.subtitle} />
       <div className="docs py-4 py-md-5">
-        <Container className="px-3" aria-labelledby="question-section">
+        <Container className="px-3">
           <h3 id="question-section" className="sr-only">
             Sezione domande frequenti
           </h3>

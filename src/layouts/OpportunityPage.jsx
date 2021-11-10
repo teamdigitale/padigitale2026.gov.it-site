@@ -30,11 +30,15 @@ export const OpportunityPage = (props) => {
   return (
     <>
       <SEO title={seoTitle} description={seoDescription} />
+      <div className="sr-only">
+        <h2>{opportunityContent.name}</h2>
+      </div>
       <HeroImageBackground
         title={heroOpportunity.title}
         body={heroOpportunity.body}
         image="opportunity-hero.png"
         theme="bg-white flex-column-reverse"
+        noButton
       />
       <div className={classes.manageSpaces}>
         <ModalUpdatesButton

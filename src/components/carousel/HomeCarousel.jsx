@@ -38,7 +38,7 @@ const useStyles = createUseStyles({
           color: '#33485C',
         },
       },
-      '& h5.card-title': {
+      '& h4.card-title': {
         color: '#0066CC',
         fontSize: '1.778rem',
         fontWeight: 'bold',
@@ -143,7 +143,7 @@ export const HomeCarousel = ({ content, title }) => {
     <>
       <Card key={element.id} className={classes.heroCards} spacing noWrapper>
         <CardBody>
-          <CardTitle tag="h5">{element.title}</CardTitle>
+          <CardTitle tag="h4">{element.title}</CardTitle>
           <CardText dangerouslySetInnerHTML={{ __html: element.description }} />
           <Link to={element.linkTo} className="text-uppercase btn btn-primary" aria-lebel={element.buttonAriaLabel}>{element.button}</Link>
         </CardBody>
