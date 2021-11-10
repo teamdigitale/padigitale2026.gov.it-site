@@ -155,7 +155,7 @@ beneficiaries:
       - value: altre-pa-locali
         label: Altre PAL
     description: "Migliorare l'accessibilità dei servizi pubblici digitali attraverso la diffusione di strumenti e strategie condivise: da test di usabilità ad attività di comunicazione e disseminazione passando per lo sviluppo di kit dedicati e altro."
-    stalls: '54 enti'
+    stalls: '55 enti'
     accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
     moreInfoLabel: 'Leggi di più su Italia Domani'
@@ -303,7 +303,7 @@ beneficiaries:
       - value: 'enti-servizio-civile'
         label: 'Enti iscritti all’albo del servizio civile'
     description: Ampliare l’esperienza dei "Centri di facilitazione digitale", punti di accesso fisici, solitamente situati in biblioteche, scuole e centri sociali, che forniscono ai cittadini formazione sia di persona che online sulle competenze digitali al fine di supportare l’inclusione digitale
-    stalls: '20 enti'
+    stalls: '21 enti'
     accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
     moreInfoLabel: 'Leggi di più su Italia Domani'
