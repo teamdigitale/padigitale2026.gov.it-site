@@ -3,6 +3,7 @@ module.exports = {
     name: 'PA digitale 2026',
     hostname: 'padigitale2026.gov.it',
     siteUrl: 'https://padigitale2026.gov.it/',
+    apiUrl: 'https://api.padigitale2026.gov.it/api',
   },
   plugins: [
     'gatsby-plugin-sitemap',
