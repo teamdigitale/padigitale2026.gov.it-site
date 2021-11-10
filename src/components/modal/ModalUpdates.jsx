@@ -534,7 +534,9 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
               </span>
               <div
                 className={`${classes.enteContainer} ${
-                  enteState == 'public-administration' || enteState == 'other'
+                  enteState == 'public-administration' ||
+                  enteState == 'other' ||
+                  enteState == 'fornitore-it'
                     ? ''
                     : 'hidden'
                 }`}
@@ -584,7 +586,8 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                         required: {
                           value:
                             enteState == 'public-administration' ||
-                            enteState == 'other'
+                            enteState == 'other' ||
+                            enteState == 'fornitore-it'
                               ? true
                               : false,
                           message: requiredLabel,
@@ -607,40 +610,46 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                     />
                   </Col>
                 </Row>
-                <Row className="mt-5">
-                  <Col xs={12} lg={6}>
-                    <label className={classes.selectLabel}>
-                      {inQuantoLabel}
-                    </label>
-                    <Controller
-                      control={control}
-                      name="enteSelect"
-                      rules={{
-                        required: {
-                          value:
-                            enteState == 'public-administration' ||
-                            enteState == 'other'
-                              ? true
-                              : false,
-                          message: requiredLabel,
-                        },
-                      }}
-                      render={({ field: { onChange, value } }) => (
-                        <Select
-                          value={value}
-                          id="enteSelect"
-                          onChange={onChange}
-                          options={selectInQuanto}
-                          placeholder={selectPlaceholder}
-                          aria-label={selectPlaceholder}
-                          className={`${
-                            errors.enteSelect && 'select is-invalid'
-                          }`}
-                        />
-                      )}
-                    />
-                  </Col>
-                </Row>
+                <div
+                  className={`${classes.enteContainer} ${
+                    enteState == 'public-administration' ? '' : 'hidden'
+                  }`}
+                >
+                  <Row className="mt-5">
+                    <Col xs={12} lg={6}>
+                      <label className={classes.selectLabel}>
+                        {inQuantoLabel}
+                      </label>
+                      <Controller
+                        control={control}
+                        name="enteSelect"
+                        rules={{
+                          required: {
+                            value:
+                              enteState == 'public-administration' ||
+                              enteState == 'other'
+                                ? true
+                                : false,
+                            message: requiredLabel,
+                          },
+                        }}
+                        render={({ field: { onChange, value } }) => (
+                          <Select
+                            value={value}
+                            id="enteSelect"
+                            onChange={onChange}
+                            options={selectInQuanto}
+                            placeholder={selectPlaceholder}
+                            aria-label={selectPlaceholder}
+                            className={`${
+                              errors.enteSelect && 'select is-invalid'
+                            }`}
+                          />
+                        )}
+                      />
+                    </Col>
+                  </Row>
+                </div>
                 <span className={classes.errorLabel}>
                   {errors.enteSelect ? requiredLabel : ''}
                 </span>
@@ -745,7 +754,10 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                     />
                     <Label check htmlFor="radio2">
                       {privacyRadio}{' '}
-                      <a target="_blank" href={privacy.linkTo}>{privacyRadioLinkLabel}</a> *
+                      <a target="_blank" href={privacy.linkTo}>
+                        {privacyRadioLinkLabel}
+                      </a>{' '}
+                      *
                     </Label>
                   </FormGroup>
                   <span className={classes.errorLabel}>
