@@ -16,6 +16,7 @@ import Select from 'react-select';
 import content from '../../../contents/opportunity-page/opportunity.yml';
 import links from '../../../contents/links.yml';
 import notificationsLabel from '../../../contents/notifications.yml';
+import { graphql, useStaticQuery } from 'gatsby';
 
 const {
   internalLinks: { privacy },
@@ -240,12 +241,27 @@ const useStyles = createUseStyles({
   },
 });
 
+const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        apiUrl
+      }
+    }
+  }
+`;
+
 export const ModalUpdates = ({ initialState, handleToggle }) => {
   const textareaMaxLength = 160;
   const [selectValue, setSelectValue] = useState(null);
   const [textareaState, setTextareaState] = useState('not-active');
   const [enteState, setEnteState] = useState('');
   const [radioState, setRadioState] = useState(false);
+  const {
+    site: {
+      siteMetadata: { apiUrl },
+    },
+  } = useStaticQuery(query);
 
   const setFocusStyleOnSelect = () => {
     const selectInputArr = document.querySelectorAll('.modal .select input');
@@ -322,7 +338,14 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
       if (data[key] == undefined) {
         delete data[key];
       }
-      if (key == 'enteSelect' || key == 'representative') {
+      if (key == 'privacy1' || key == 'privacy2') {
+        delete data[key];
+      }
+      if (
+        key == 'enteSelect' ||
+        key == 'representative' ||
+        key == 'messageSelect'
+      ) {
         data[key] = data[key].value;
       }
     });
@@ -344,7 +367,7 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
     };
     closeNotification.addEventListener('click', closeNotificationHandler);
 
-    fetch('https://api.prossimapa.gov.it/api/users', {
+    fetch(`${apiUrl}/users`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -607,7 +630,13 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                     />
                   </Col>
                 </Row>
-                <Row className="mt-5">
+              </div>
+              <div
+                className={`${classes.enteContainer} ${
+                  enteState == 'public-administration' ? '' : 'hidden'
+                }`}
+              >
+                <Row className="mt-5"> 
                   <Col xs={12} lg={6}>
                     <label className={classes.selectLabel}>
                       {inQuantoLabel}
@@ -680,12 +709,18 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                   <label className={classes.selectLabel}>
                     {messageSelectLabel}
                   </label>
-                  <Select
-                    id="message-select"
-                    onChange={handleChange}
-                    options={selectMessage}
-                    placeholder={selectPlaceholder}
-                    aria-label={selectPlaceholder}
+                  <Controller
+                    control={control}
+                    name="messageSelect"
+                    render={({ field: { onChange, value } }) => (
+                      <Select
+                        id="message-select"
+                        onChange={onChange}
+                        options={selectMessage}
+                        placeholder={selectPlaceholder}
+                        aria-label={selectPlaceholder}
+                      />
+                    )}
                   />
                 </Col>
               </Row>
@@ -693,14 +728,21 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                 <Col xs={12}>
                   <div>
                     <div className="form-group">
-                      <textarea
-                        onFocus={textareaFocusHandler}
-                        onBlur={textareaFocusOutHandler}
-                        onInput={textareaInputHandler}
-                        rows="3"
-                        maxLength={textareaMaxLength}
-                        id="message"
-                      ></textarea>
+                      <Controller
+                        name="message"
+                        control={control}
+                        render={({ field }) => (
+                          <textarea
+                            onFocus={textareaFocusHandler}
+                            onBlur={textareaFocusOutHandler}
+                            onInput={textareaInputHandler}
+                            rows="3"
+                            maxLength={textareaMaxLength}
+                            {...field}
+                            id="message"
+                          ></textarea>
+                        )}
+                      />
                       <label
                         className={textareaState == 'active' ? 'active' : ''}
                         htmlFor="message"
@@ -725,31 +767,36 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                   </legend>
                   <FormGroup check className={classes.radioCustom}>
                     <input
-                      className={errors.radio1 ? 'is-invalid' : ''}
+                      className={errors.privacy1 ? 'is-invalid' : ''}
                       name="gruppo1"
                       type="checkbox"
-                      id="radio1"
-                      {...register('radio1', { required: true })}
+                      id="privacy1"
+                      {...register('privacy1', { required: true })}
                     />
-                    <Label check htmlFor="radio1">
+                    <Label check htmlFor="privacy1">
                       {comunicationRadio}
                     </Label>
                   </FormGroup>
                   <FormGroup check className={classes.radioCustom}>
                     <input
-                      className={errors.radio2 ? 'is-invalid' : ''}
+                      className={errors.privacy2 ? 'is-invalid' : ''}
                       name="gruppo2"
                       type="checkbox"
-                      id="radio2"
-                      {...register('radio2', { required: true })}
+                      id="privacy2"
+                      {...register('privacy2', { required: true })}
                     />
-                    <Label check htmlFor="radio2">
+                    <Label check htmlFor="privacy2">
                       {privacyRadio}{' '}
-                      <a target="_blank" href={privacy.linkTo}>{privacyRadioLinkLabel}</a> *
+                      <a target="_blank" href={privacy.linkTo}>
+                        {privacyRadioLinkLabel}
+                      </a>{' '}
+                      *
                     </Label>
                   </FormGroup>
                   <span className={classes.errorLabel}>
-                    {errors.radio1 || errors.radio2 ? mandatoryRadioLabel : ''}
+                    {errors.radio1 || errors.privacy2
+                      ? mandatoryRadioLabel
+                      : ''}
                   </span>
                 </fieldset>
               </Col>

@@ -1,6 +1,14 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
-import { Row, Col, Card, CardBody, CardCategory, CardTitle, CardText } from 'design-react-kit';
+import {
+  Row,
+  Col,
+  Card,
+  CardBody,
+  CardCategory,
+  CardTitle,
+  CardText,
+} from 'design-react-kit';
 import PropTypes from 'prop-types';
 import { DesktopSwiper } from '../DesktopSwiper';
 import { ExternalLink } from '../ExternalLink';
@@ -94,9 +102,13 @@ const useStyles = createUseStyles({
     '& .swiper-slider': {
       padding: '1.111rem',
     },
-    '& .swiper-pagination.swiper-pagination-bullets .swiper-pagination-bullet': {
-      margin: '0 0.889rem',
-    },
+    '& .swiper-pagination.swiper-pagination-bullets .swiper-pagination-bullet':
+      {
+        margin: '0 0.889rem',
+      },
+  },
+  heroLink: {
+    textDecoration: 'none',
   },
   heroLink: {
     textDecoration: 'none',

@@ -1,0 +1,11 @@
+loading:
+  title: Attendi la conferma
+  body: "Attendi che l'indirizzo email che hai scelto venga confermato Grazie!"
+error:
+  title: Errore nella conferma
+  body: Errore nella conferma, prova di nuovo utilizzando il bottone qui sotto.
+  button: Riprova
+success:
+  title: Indirizzo confermato
+  body: "L’indirizzo email che hai scelto per ricevere comunicazioni da PA Digitale 2026 è stato confermato. <br />Grazie!"
+  button: Prosegui sul sito

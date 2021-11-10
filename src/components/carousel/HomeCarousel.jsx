@@ -145,7 +145,7 @@ export const HomeCarousel = ({ content, title }) => {
         <CardBody>
           <CardTitle tag="h5">{element.title}</CardTitle>
           <CardText dangerouslySetInnerHTML={{ __html: element.description }} />
-          <Link to={element.linkTo} className="text-uppercase btn btn-primary" aria-label={element.buttonAriaLabel}>{element.button}</Link>
+          <Link to={element.linkTo} className="text-uppercase btn btn-primary" aria-lebel={element.buttonAriaLabel}>{element.button}</Link>
         </CardBody>
         {isMobile ? (
           <img className={classes.heroCardImg} src={`/assets/${element.imageMobile}`} alt="" />

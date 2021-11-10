@@ -166,8 +166,6 @@ beneficiaries:
     title: Adozione PagoPA e app IO
     money: '750 <span>milioni di euro<span>'
     tags:
-      - value: pa-centrali
-        label: PA Centrali
       - value: comuni
         label: Comuni
       - value: scuole
@@ -176,10 +174,8 @@ beneficiaries:
         label: ASL
       - label: Aziende Ospedaliere
         value: aziende-ospedaliere
-      - value: province
-        label: Province
-      - value: altre-pa-locali
-        label: Altre PAL
+      - value: enti-regionali
+        label: Enti Regionali
       - value: universita
         label: Università
       - value: enti-diritto
@@ -290,8 +286,10 @@ beneficiaries:
     title: Servizio civile digitale
     money: '60 <span>milioni di euro<span>'
     tags:
-      - value: enti-servizio-civile
-        label: Enti iscritti all'albo del servizio civile
+      - value: regioni
+        label: Regioni
+      - value: province-autonome
+        label: Provincie autonome
     description: Sviluppare l'iniziativa “Servizio civile digitale”, finalizzata, tra le altre cose, alla formazione di circa 9.700 volontari e al coinvolgimento di 1 milione di cittadini beneficiari di attività di facilitazione digitale e di educazione digitale.
     stalls: '100 enti'
     accessSectionId: presentazione-progetto
@@ -303,10 +301,8 @@ beneficiaries:
     title: Centri di facilitazione digitale
     money: '135 <span>milioni di euro<span>'
     tags:
-      - value: regioni
-        label: Regioni
-      - value: province-autonome
-        label: Province autonome
+      - value: 'enti-servizio-civile'
+        label: 'Enti iscritti all’albo del servizio civile'
     description: Ampliare l’esperienza dei "Centri di facilitazione digitale", punti di accesso fisici, solitamente situati in biblioteche, scuole e centri sociali, che forniscono ai cittadini formazione sia di persona che online sulle competenze digitali al fine di supportare l’inclusione digitale
     stalls: '20 enti'
     accessSectionId: presentazione-progetto

@@ -86,15 +86,24 @@ const SlimFooter = () => {
   const classes = useStyle();
   return (
     <div className={classes.slimFooter}>
-      <div className="container">
+      <section className="container" aria-labelledby="linkutili-header">
+        <h3 id="linkutili-header" className="sr-only">
+          Link Utili
+        </h3>
         <ul className="list-inline link-list mb-0 text-center text-md-left">
           <li className={`${classes.listItem} mr-0 mr-md-5`}>
-            <Link to={noteLegali.linkTo} className="list-item mid-footer-link mx-4 mx-md-0">
+            <Link
+              to={noteLegali.linkTo}
+              className="list-item mid-footer-link mx-4 mx-md-0"
+            >
               {noteLegali.label}
             </Link>
           </li>
           <li className={`${classes.listItem} mr-0 mr-md-5`}>
-            <Link to={privacy.linkTo} className="list-item mid-footer-link mx-4 mx-md-0">
+            <Link
+              to={privacy.linkTo}
+              className="list-item mid-footer-link mx-4 mx-md-0"
+            >
               {privacy.label}
             </Link>
           </li>
@@ -108,7 +117,7 @@ const SlimFooter = () => {
             </ExternalLink>
           </li>
         </ul>
-      </div>
+      </section>
     </div>
   );
 };
@@ -132,7 +141,10 @@ const MainFooter = () => {
                 alt="Governo Italiano"
               />
             </ExternalLink>
-            <ExternalLink linkTo={dipartimento.linkTo} ariaLabel={dipartimento.ariaLabel}>
+            <ExternalLink
+              linkTo={dipartimento.linkTo}
+              ariaLabel={dipartimento.ariaLabel}
+            >
               <img
                 className={classes.departmentLogo}
                 src="/assets/dipartimento.svg"

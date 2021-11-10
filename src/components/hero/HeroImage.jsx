@@ -63,9 +63,9 @@ const useStyles = createUseStyles({
     '& .graphic-image': {
       '@media (max-width: 991px)': {
         maxWidth: '15.6rem',
-        margin: '0 auto 2.5rem',
+        margin: '0 auto 2.5rem'
       },
-    },
+    }
   },
 });
 
@@ -97,15 +97,11 @@ export const HeroImage = ({
             <HeroBody html={body} />
           </div>
           <HeroCtaContainer>
-            {firstInternal ? (
-              <Link
-                className="btn text-uppercase mx-4 ml-lg-0 my-3 my-md-0 btn-primary"
-                to={firstButtonHref}
-                ariaLabel={firstButtonAriaLabel}
-              >
+            {firstInternal ? 
+              <Link className="btn text-uppercase mx-4 ml-lg-0 my-3 my-md-0 btn-primary" to={firstButtonHref} ariaLabel={firstButtonAriaLabel}>
                 {firstButtonLabel}
               </Link>
-            ) : (
+            :
               <ExternalLink
                 linkTo={firstButtonHref}
                 ariaLabel={firstButtonAriaLabel}
@@ -113,13 +109,9 @@ export const HeroImage = ({
               >
                 {firstButtonLabel}
               </ExternalLink>
-            )}
+            }
             {secondButtonLabel ? (
-              <Link
-                className="btn text-uppercase mx-4 ml-lg-0 my-3 my-md-0 btn-outline-primary"
-                to="/come-funziona"
-                onClick={() => dispatch({ type: 'SET:SECTION_ID', payload: { sectionId: 'beneficiari' } })}
-              >
+              <Link className="btn text-uppercase mx-4 ml-lg-0 my-3 my-md-0 btn-outline-primary" to="/come-funziona" onClick={() => dispatch({type: 'SET:HOW_SECTION_ID', payload: {howId: 'beneficiari'}})}>
                 {secondButtonLabel}
               </Link>
             ) : (
@@ -128,7 +120,7 @@ export const HeroImage = ({
           </HeroCtaContainer>
         </div>
         <HeroGraphic className="col-lg-5 d-flex justify-content-sm-center">
-          <img className="graphic-image" src={imageUrl} alt={imageAlt} />
+        <img className="graphic-image" src={imageUrl} alt={imageAlt} aria-label={imageAlt} />
         </HeroGraphic>
       </div>
     </Hero>
