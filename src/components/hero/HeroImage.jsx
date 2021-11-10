@@ -110,7 +110,7 @@ export const HeroImage = ({
               </ExternalLink>
             }
             {secondButtonLabel ? (
-              <Link className="btn text-uppercase mx-4 ml-lg-0 my-3 my-md-0 btn-outline-primary" to="/come-funziona" onClick={() => dispatch({type: 'SET:SECTION_ID', payload: {sectionId: 'beneficiari'}})}>
+              <Link className="btn text-uppercase mx-4 ml-lg-0 my-3 my-md-0 btn-outline-primary" to="/come-funziona" onClick={() => dispatch({type: 'SET:HOW_SECTION_ID', payload: {howId: 'beneficiari'}})}>
                 {secondButtonLabel}
               </Link>
             ) : (
