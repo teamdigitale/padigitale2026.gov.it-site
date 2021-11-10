@@ -9,7 +9,6 @@ import { HeroCtaContainer } from '../../components/hero/HeroCtaContainer';
 import { HeroGraphic } from '../../components/hero/HeroGraphic';
 import { Hero } from '../../components/hero/Hero';
 import { ExternalLink } from '../../components/ExternalLink';
-import { Link } from 'gatsby';
 import { GlobalStateContext } from '../../context/globalContext';
 
 const useStyles = createUseStyles({
