@@ -207,7 +207,7 @@ const useStyles = createUseStyles({
   },
   notification: {
     composes: 'notification with-icon dismissable',
-    zIndex: '9',
+    zIndex: '9999',
     display: 'block',
     opacity: '0',
     visibility: 'hidden',
@@ -375,9 +375,9 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
       body: JSON.stringify(data),
     })
       .then((response) => {
-        modalCloseBtn.click();
         setTimeout(() => {
           if (response.status == '200') {
+            modalCloseBtn.click();
             notificationElement.classList.add('show');
             notificationElement.classList.add('success');
 
