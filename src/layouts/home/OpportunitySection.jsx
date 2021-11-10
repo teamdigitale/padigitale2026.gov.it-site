@@ -95,9 +95,7 @@ export const OpportunitySection = (props) => {
           ))}
         </Row>
         <div className="d-flex justify-content-center">
-          <Button className="text-uppercase" color="primary" href="/misure">
-            Scopri tutte le misure
-          </Button>
+          <Link to="/misure" className="text-uppercase btn btn-primary">Scopri tutte le misure</Link>
         </div>
       </div>
     </Section>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   name,
   heroMain,
@@ -19,6 +19,7 @@ import { SEO } from '../components/SEO';
 import seo from '../../contents/seo.yml';
 import { SupportSection } from './faq/SupportSection';
 import { OpportunitySection } from './home/OpportunitySection';
+import { ModalUpdates } from '../components/modal/ModalUpdates';
 
 const { title: seoTitle, description: seoDescription } = seo.homePage;
 

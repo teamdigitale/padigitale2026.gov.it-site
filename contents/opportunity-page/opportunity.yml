@@ -61,7 +61,7 @@ beneficiaries:
   - number: 1.2
     id: abili-faci-migr
     title: Abilitazione e facilitazione migrazione al Cloud
-    money: '1 <span>miliardo di euro<span>'
+    money: '1000 <span>milioni di euro<span>'
     tags:
       - label: Comuni
         value: comuni
@@ -73,7 +73,7 @@ beneficiaries:
         value: aziende-ospedaliere
     description: Implementare un programma di supporto e incentivo per migrare sistemi, dati e applicazioni delle pubbliche amministrazioni locali verso servizi cloud qualificati.
     stalls: '16,600 enti'
-    accessSectionId: pacchetti-standard
+    accessSectionId: soluzioni-standard
     accessLabel: Soluzioni Standard
     moreInfoLabel: 'Leggi di più su Italia Domani'
     moreInfoLink: 'https://italiadomani.gov.it/it/investimenti/abilitazione-e-facilitazione-migrazione-al-cloud.html'
@@ -138,7 +138,7 @@ beneficiaries:
         label: Scuole
     description: Migliorare l'esperienza dei servizi pubblici digitali definendo modelli collaudati e riutilizzabili per la creazione di siti internet e l’erogazione di servizi pubblici digitali.
     stalls: '16,500 enti'
-    accessSectionId: pacchetti-standard
+    accessSectionId: soluzioni-standard
     accessLabel: Soluzioni standard
     moreInfoLabel: 'Leggi di più su Italia Domani'
     moreInfoLink: 'https://italiadomani.gov.it/it/investimenti/servizi-digitali-e-cittadinanza-digitale.html'
@@ -192,7 +192,7 @@ beneficiaries:
         label: Consorzi interuniversitari di ricerca
     description: Accelerare l'adozione di PagoPa, l'applicazione digitale per i pagamenti tra cittadini e pubbliche amministrazione, e di app IO quale principale punto di contatto tra cittadini e amministrazione
     stalls: '17,500 enti'
-    accessSectionId: pacchetti-standard
+    accessSectionId: soluzioni-standard
     accessLabel: Soluzioni Standard
     moreInfoLabel: 'Leggi di più su Italia Domani'
     moreInfoLink: 'https://italiadomani.gov.it/content/sogei-ng/it/it/investimenti/servizi-digitali-e-cittadinanza-digitale.html'
@@ -227,7 +227,7 @@ beneficiaries:
         label: Consorzi interuniversitari di ricerca
     description: Favorire l'adozione dell’identità digitale (Sistema Pubblico di Identità Digitale, SPID e Carta d'Identità Elettronica, CIE) e dell'Anagrafe nazionale della popolazione residente (ANPR)
     stalls: '10,300 enti'
-    accessSectionId: pacchetti-standard
+    accessSectionId: soluzioni-standard
     accessLabel: Soluzioni Standard
     moreInfoLabel: 'Leggi di più su Italia Domani'
     moreInfoLink: 'https://italiadomani.gov.it/it/investimenti/servizi-digitali-e-cittadinanza-digitale.html'
@@ -242,7 +242,7 @@ beneficiaries:
         label: Comuni
     description: Sviluppare e implementare la Piattaforma notifiche, lo strumento che le PA utilizzeranno per la notificazione di atti amministrativi a valore legale verso persone fisiche e giuridiche, contribuendo ad una drastica riduzione di costi e tempo per cittadini ed enti. 
     stalls: '7,900 enti'
-    accessSectionId: pacchetti-standard
+    accessSectionId: soluzioni-standard
     accessLabel: Soluzioni standard
     moreInfoLabel: 'Leggi di più su Italia Domani'
     moreInfoLink: 'https://italiadomani.gov.it/it/investimenti/servizi-digitali-e-cittadinanza-digitale.html'
@@ -286,6 +286,19 @@ beneficiaries:
     moreInfoLabel: 'Leggi di più su Italia Domani'
     moreInfoLink: 'https://italiadomani.gov.it/it/investimenti/digitalizzazione-delle-grandi-amministrazioni-centrali.html'
   - number: 1.7.1
+    id: servi-civi
+    title: Servizio civile digitale
+    money: '60 <span>milioni di euro<span>'
+    tags:
+      - value: enti-servizio-civile
+        label: Enti iscritti all'albo del servizio civile
+    description: Sviluppare l'iniziativa “Servizio civile digitale”, finalizzata, tra le altre cose, alla formazione di circa 9.700 volontari e al coinvolgimento di 1 milione di cittadini beneficiari di attività di facilitazione digitale e di educazione digitale.
+    stalls: '100 enti'
+    accessSectionId: presentazione-progetto
+    accessLabel: Presentazione Progetto
+    moreInfoLabel: 'Leggi di più su Italia Domani'
+    moreInfoLink: 'https://italiadomani.gov.it/it/investimenti/competenze-digitali-di-base.html'
+  - number: 1.7.2
     id: centri-facili
     title: Centri di facilitazione digitale
     money: '135 <span>milioni di euro<span>'
@@ -300,19 +313,6 @@ beneficiaries:
     accessLabel: Presentazione Progetto
     moreInfoLabel: 'Leggi di più su Italia Domani'
     moreInfoLink: 'https://italiadomani.gov.it/it/investimenti/competenze-digitali-di-base.html'
-  - number: 1.7.2
-    id: servi-civi
-    title: Servizio civile digitale
-    money: '60 <span>milioni di euro<span>'
-    tags:
-      - value: enti-servizio-civile
-        label: Enti iscritti all'albo del servizio civile
-    description: Sviluppare l'iniziativa “Servizio civile digitale”, finalizzata, tra le altre cose, alla formazione di circa 9.700 volontari e al coinvolgimento di 1 milione di cittadini beneficiari di attività di facilitazione digitale e di educazione digitale.
-    stalls: '100 enti'
-    accessSectionId: presentazione-progetto
-    accessLabel: Presentazione Progetto
-    moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: 'https://italiadomani.gov.it/it/investimenti/competenze-digitali-di-base.html'
 modal:
   selectRepresent:
     - value: public-administration
@@ -322,25 +322,25 @@ modal:
     - value: other
       label: Altro
   selectInQuanto:
-    - label: Dirigente dell’amministrazione
     - value: dirigente-administration
-    - label: Dirigente sistemi IT dell’amministrazione
+      label: Dirigente dell’amministrazione
     - value: dirigente-it-administration
-    - label: Dipendente dell’amministrazione
+      label: Dirigente sistemi IT dell’amministrazione
     - value: dipendente-administration
-    - label: Altro
+      label: Dipendente dell’amministrazione
     - value: other
+      label: Altro
   selectMessage:
-    - label: Generale
     - value: general
-    - label: Investimenti del PNRR
+      label: Generale
     - value: investimenti-pnrr
-    - label: Richiesta dei fondi
+      label: Investimenti del PNRR
     - value: richiesta-fondi
-    - label: Realizzazione dei progetti
+      label: Richiesta dei fondi
     - value: realizzazione-progetti
-    - label: Erogazione delle risorse
+      label: Realizzazione dei progetti
     - value: erogazione-risorse
+      label: Erogazione delle risorse
   modalTitle: Vuoi ricevere aggiornamenti sugli investimenti per la digitalizzazione della PA?
   modalSubtitle: Ricevi <strong>tutte le novità</strong> che riguardano <strong>la tua amministrazione</strong> <br> lasciando i tuoi contatti
   updatesLabel: AGGIORNAMENTI
