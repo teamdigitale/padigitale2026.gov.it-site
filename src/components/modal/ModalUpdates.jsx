@@ -557,59 +557,17 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
               </span>
               <div
                 className={`${classes.enteContainer} ${
-                  enteState == 'public-administration' || enteState == 'other'
-                    ? ''
-                    : 'hidden'
+                  enteState == 'other' ? '' : 'hidden'
                 }`}
               >
-                <div
-                  className={`${classes.enteContainer} ${
-                    enteState == 'other' ? '' : 'hidden'
-                  }`}
-                >
-                  <Row className="mt-5">
-                    <Col xs={12}>
-                      <Controller
-                        name="enteType"
-                        control={control}
-                        rules={{
-                          required: {
-                            value: enteState == 'other' ? true : false,
-                            message: requiredLabel,
-                          },
-                          pattern: {
-                            value: /^[a-zA-Z ]*$/i,
-                            message: enteValidationLabel,
-                          },
-                        }}
-                        render={({ field }) => (
-                          <Input
-                            invalid={errors.enteType}
-                            infoText={
-                              errors.enteType && errors.enteType.message
-                            }
-                            label={enteTypeLabel}
-                            type="text"
-                            {...field}
-                            id="enteType"
-                          />
-                        )}
-                      />
-                    </Col>
-                  </Row>
-                </div>
                 <Row className="mt-5">
                   <Col xs={12}>
                     <Controller
-                      name="ente"
+                      name="enteType"
                       control={control}
                       rules={{
                         required: {
-                          value:
-                            enteState == 'public-administration' ||
-                            enteState == 'other'
-                              ? true
-                              : false,
+                          value: enteState == 'other' ? true : false,
                           message: requiredLabel,
                         },
                         pattern: {
@@ -619,24 +577,57 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                       }}
                       render={({ field }) => (
                         <Input
-                          invalid={errors.ente}
-                          infoText={errors.ente && errors.ente.message}
-                          label={enteNameLabel}
+                          invalid={errors.enteType}
+                          infoText={errors.enteType && errors.enteType.message}
+                          label={enteTypeLabel}
                           type="text"
                           {...field}
-                          id="enteName"
+                          id="enteType"
                         />
                       )}
                     />
                   </Col>
                 </Row>
               </div>
+              <Row className="mt-5">
+                <Col xs={12}>
+                  <Controller
+                    name="ente"
+                    control={control}
+                    rules={{
+                      required: {
+                        value:
+                          enteState == 'public-administration' ||
+                          enteState == 'other' ||
+                          enteState == 'fornitore-it'
+                            ? true
+                            : false,
+                        message: requiredLabel,
+                      },
+                      pattern: {
+                        value: /^[a-zA-Z ]*$/i,
+                        message: enteValidationLabel,
+                      },
+                    }}
+                    render={({ field }) => (
+                      <Input
+                        invalid={errors.ente}
+                        infoText={errors.ente && errors.ente.message}
+                        label={enteNameLabel}
+                        type="text"
+                        {...field}
+                        id="enteName"
+                      />
+                    )}
+                  />
+                </Col>
+              </Row>
               <div
                 className={`${classes.enteContainer} ${
                   enteState == 'public-administration' ? '' : 'hidden'
                 }`}
               >
-                <Row className="mt-5"> 
+                <Row className="mt-5">
                   <Col xs={12} lg={6}>
                     <label className={classes.selectLabel}>
                       {inQuantoLabel}
