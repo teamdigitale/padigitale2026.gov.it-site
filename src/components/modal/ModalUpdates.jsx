@@ -620,7 +620,7 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                       <label className={classes.selectLabel}>
                         {inQuantoLabel}
                       </label>
-                      <Controller
+                      <Controller 
                         control={control}
                         name="enteSelect"
                         rules={{
