@@ -613,7 +613,7 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                   enteState == 'public-administration' ? '' : 'hidden'
                 }`}
               >
-                <Row className="mt-5">
+                <Row className="mt-5"> 
                   <Col xs={12} lg={6}>
                     <label className={classes.selectLabel}>
                       {inQuantoLabel}
