@@ -8,7 +8,7 @@ hero:
       title: MODALITÀ DI ACCESSO
       items:
         - item: Soluzioni standard
-          anchor: pacchetti-standard
+          anchor: soluzioni-standard
         - item: Presentazione progetti
           anchor: presentazione-progetto
     - listItems:
