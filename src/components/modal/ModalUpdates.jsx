@@ -16,6 +16,7 @@ import Select from 'react-select';
 import content from '../../../contents/opportunity-page/opportunity.yml';
 import links from '../../../contents/links.yml';
 import notificationsLabel from '../../../contents/notifications.yml';
+import { graphql, useStaticQuery } from 'gatsby';
 
 const {
   internalLinks: { privacy },
@@ -240,12 +241,27 @@ const useStyles = createUseStyles({
   },
 });
 
+const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        apiUrl
+      }
+    }
+  }
+`;
+
 export const ModalUpdates = ({ initialState, handleToggle }) => {
   const textareaMaxLength = 160;
   const [selectValue, setSelectValue] = useState(null);
   const [textareaState, setTextareaState] = useState('not-active');
   const [enteState, setEnteState] = useState('');
   const [radioState, setRadioState] = useState(false);
+  const {
+    site: {
+      siteMetadata: { apiUrl },
+    },
+  } = useStaticQuery(query);
 
   const setFocusStyleOnSelect = () => {
     const selectInputArr = document.querySelectorAll('.modal .select input');
@@ -351,7 +367,7 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
     };
     closeNotification.addEventListener('click', closeNotificationHandler);
 
-    fetch('https://api.prossimapa.gov.it/api/users', {
+    fetch(`${apiUrl}/users`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
