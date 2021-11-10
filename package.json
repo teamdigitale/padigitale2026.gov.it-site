@@ -1,6 +1,6 @@
 {
   "name": "prossimapa",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Sito https://prossimapa.gov.it/",
   "main": "src/pages/index.js",
   "repository": "git@github.com:teamdigitale/prossimapa.gov.it-site.git",
