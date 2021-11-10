@@ -285,14 +285,14 @@ const NavHeader = ({ toggleModal }) => {
         <HeaderNav isOpen={isOpen} onCloseMenu={toogleMenu}>
           <div className={classes.menuWrapper}>
             <Nav navbar className={classes.navbarNav}>
-              <div className={classes.offCanvasWrapper}>
+              <li className={classes.offCanvasWrapper}>
                 <a href="/" tabIndex="-1">
                   <img className="icon" src="/assets/site-logo.svg" alt="Logo" />
                 </a>
                 <a href="/" className={classes.offCanvasTitle}>
                   {headerTitle}
                 </a>
-              </div>
+              </li>
               <NavItem active>
                 <Link
                   to={internalLinks.opportunity.linkTo}

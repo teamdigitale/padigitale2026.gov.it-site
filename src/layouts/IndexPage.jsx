@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  name,
   heroMain,
   heroDigital,
   heroPnrr,
@@ -24,6 +25,9 @@ const { title: seoTitle, description: seoDescription } = seo.homePage;
 export const IndexPage = () => (
   <>
     <SEO title={seoTitle} description={seoDescription} />
+    <div className="sr-only">
+      <h2>{name}</h2>
+    </div>
     <HeroImageBackgroundFull
       category={heroMain.category}
       title={heroMain.title}

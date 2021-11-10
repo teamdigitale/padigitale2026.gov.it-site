@@ -38,6 +38,7 @@ export const OpportunityPage = (props) => {
         body={heroOpportunity.body}
         image="opportunity-hero.png"
         theme="bg-white flex-column-reverse"
+        noButton
       />
       <div className={classes.manageSpaces}>
         <ModalUpdatesButton

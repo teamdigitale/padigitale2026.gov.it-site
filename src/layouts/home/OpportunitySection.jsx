@@ -61,6 +61,15 @@ const useStyle = createUseStyles({
       },
     },
   },
+  cardTitle: {
+    '& a': {
+      textDecoration: 'none',
+      fontWeight: '700',
+      '& span': {
+        fontWeight: 'normal',
+      },
+    },
+  },
 });
 
 export const OpportunitySection = (props) => {
@@ -77,7 +86,7 @@ export const OpportunitySection = (props) => {
             <Col md="6" lg="3" key={item.title} className="px-md-3" role="listitem">
               <Card spacing className={classes.cardWrapper}>
                 <CardBody>
-                  <CardTitle tag="h4">
+                  <CardTitle className={classes.cardTitle}>
                   <Link to="/misure" onClick={() => dispatch({type: 'SET:SECTION_OPPORTUNITY_ID', payload: {sectionId: item.id}})}><span>{item.number}</span> {item.title}</Link>
                   </CardTitle>
                 </CardBody>
