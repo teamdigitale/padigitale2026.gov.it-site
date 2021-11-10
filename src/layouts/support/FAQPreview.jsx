@@ -24,7 +24,13 @@ const useStyle = createUseStyles({
     composes: 'card rounded',
     '&.card': {
       boxShadow: '0px 0px 80px rgba(0, 43, 85, 0.1)',
-      '& h5.card-title': {
+      height: '100%',
+      '& .card-body': {
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+      },
+      '& h4.card-title': {
         color: '#0066CC',
         fontWeight: 'bold',
         fontSize: '1.556rem',
@@ -67,6 +73,13 @@ const useStyle = createUseStyles({
   },
   linkCard: {
     textDecoration: 'none',
+    height: '100%',
+    '&:hover': {
+      textDecoration: 'none',
+    },
+    '& .card-wrapper': {
+      height: '100%',
+    }
   },
 });
 
