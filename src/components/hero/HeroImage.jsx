@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { createUseStyles } from 'react-jss';
 
+import { Link } from 'gatsby';
 import { HeroCategory } from '../../components/hero/HeroCategory';
 import { HeroTitle } from '../../components/hero/HeroTitle';
 import { HeroBody } from '../../components/hero/HeroBody';
@@ -8,7 +9,6 @@ import { HeroCtaContainer } from '../../components/hero/HeroCtaContainer';
 import { HeroGraphic } from '../../components/hero/HeroGraphic';
 import { Hero } from '../../components/hero/Hero';
 import { ExternalLink } from '../../components/ExternalLink';
-import { Link } from 'gatsby';
 import { GlobalStateContext } from '../../context/globalContext';
 
 const useStyles = createUseStyles({
@@ -45,7 +45,7 @@ const useStyles = createUseStyles({
   heroImage: {
     composes: 'row align-items-center',
     '@media (min-width: 992px)': {
-      padding: '2.222rem 0'
+      padding: '2.222rem 0',
     },
     '& .hero-category': {
       color: '#33485C',
@@ -63,9 +63,9 @@ const useStyles = createUseStyles({
     '& .graphic-image': {
       '@media (max-width: 991px)': {
         maxWidth: '15.6rem',
-        margin: '0 auto 2.5rem'
+        margin: '0 auto 2.5rem',
       },
-    }
+    },
   },
 });
 
@@ -82,25 +82,30 @@ export const HeroImage = ({
   secondButtonAriaLabel,
   imageUrl,
   imageAlt,
+  heroTitleId,
 }) => {
   const classes = useStyles();
-  const [state, dispatch] = useContext(GlobalStateContext)
+  const [state, dispatch] = useContext(GlobalStateContext);
 
   return (
-    <Hero>
+    <Hero Tag="section" ariaLabelled={heroTitleId}>
       <div className={classes.heroImage}>
         <div className="col-lg-6 offset-lg-1 p-0 mt-3 mt-lg-0 pr-lg-5">
           <div className="text-center text-lg-left">
             <HeroCategory title={category} className={classes.heroCategory} />
-            <HeroTitle title={title} className={classes.heroTitle} />
+            <HeroTitle id={heroTitleId} title={title} className={classes.heroTitle} />
             <HeroBody html={body} />
           </div>
           <HeroCtaContainer>
-            {firstInternal ? 
-              <Link className="btn text-uppercase mx-4 ml-lg-0 my-3 my-md-0 btn-primary" to={firstButtonHref} ariaLabel={firstButtonAriaLabel}>
+            {firstInternal ? (
+              <Link
+                className="btn text-uppercase mx-4 ml-lg-0 my-3 my-md-0 btn-primary"
+                to={firstButtonHref}
+                ariaLabel={firstButtonAriaLabel}
+              >
                 {firstButtonLabel}
               </Link>
-            :
+            ) : (
               <ExternalLink
                 linkTo={firstButtonHref}
                 ariaLabel={firstButtonAriaLabel}
@@ -108,9 +113,13 @@ export const HeroImage = ({
               >
                 {firstButtonLabel}
               </ExternalLink>
-            }
+            )}
             {secondButtonLabel ? (
-              <Link className="btn text-uppercase mx-4 ml-lg-0 my-3 my-md-0 btn-outline-primary" to="/come-funziona" onClick={() => dispatch({type: 'SET:SECTION_ID', payload: {sectionId: 'beneficiari'}})}>
+              <Link
+                className="btn text-uppercase mx-4 ml-lg-0 my-3 my-md-0 btn-outline-primary"
+                to="/come-funziona"
+                onClick={() => dispatch({ type: 'SET:SECTION_ID', payload: { sectionId: 'beneficiari' } })}
+              >
                 {secondButtonLabel}
               </Link>
             ) : (
@@ -119,7 +128,7 @@ export const HeroImage = ({
           </HeroCtaContainer>
         </div>
         <HeroGraphic className="col-lg-5 d-flex justify-content-sm-center">
-        <img className="graphic-image" src={imageUrl} alt={imageAlt} />
+          <img className="graphic-image" src={imageUrl} alt={imageAlt} />
         </HeroGraphic>
       </div>
     </Hero>

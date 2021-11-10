@@ -208,7 +208,12 @@ const SlimHeader = () => {
           <Collapse isOpen={collapse}>
             <div className={classes.linkListWrapperCustom}>
               <LinkList className={classes.topListLink}>
-                <LinkListItem href={externalLinks.italiaDigitale.linkTo} target="_blank">
+                <LinkListItem
+                  href={externalLinks.italiaDigitale.linkTo}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="VAI AL SITO Italia digitale 2026 (Collegamento esterno - Apre su nuova scheda)"
+                >
                   {externalLinks.italiaDigitale.label}
                 </LinkListItem>
                 <LinkListItem href={externalLinks.pnrr.linkTo} target="_blank">

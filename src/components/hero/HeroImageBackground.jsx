@@ -1,6 +1,6 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
-import { Row, Col, Hero } from 'design-react-kit';
+import { Section, Row, Col, Hero } from 'design-react-kit';
 import { HeroTitle } from './HeroTitle';
 import { HeroBackground } from './HeroBackground';
 import { HeroButton } from './HeroButton';
@@ -140,17 +140,18 @@ export const HeroImageBackground = ({
   secondButtonHref,
   overlap,
   noButton,
+  titleId
 }) => {
   const classes = useStyles();
   return (
     <Hero>
       <div className={`${classes.heroWrapper} ${overlap ? 'overlap' : ''} ${theme}`}>
-        <div className={classes.heroContentContainer}>
+        <section aria-labelledby={titleId} className={classes.heroContentContainer}>
           <Row>
             <Col xs="12" lg="5" className="offset-lg-1">
               <div className={`${classes.contentWrapper} ${theme}`}>
                 <div>
-                  <HeroTitle Tag="h3" title={title} className={classes.heroTitle} />
+                  <HeroTitle id={titleId} Tag="h3" title={title} className={classes.heroTitle} />
                   <HeroParagraph text={body} />
                   <div className={classes.buttonContainer}>
                     {noButton ? (
@@ -178,7 +179,7 @@ export const HeroImageBackground = ({
               <HeroBackground image={image} className={classes.heroImg} />
             </Col>
           </Row>
-        </div>
+        </section>
       </div>
     </Hero>
   );

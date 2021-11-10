@@ -128,11 +128,13 @@ export const HeroCarousel = ({ content, title }) => {
   return (
     <>
       <div className={classes.newsUpdateSection}>
-        <div className="container">
+        <section className="container">
           {title ? (
             <Row>
               <Col xs="12" lg="4">
-                <h3 className={classes.heroCarouselTitle}>{title}</h3>
+                <h3 id="news-home-carousel" className={classes.heroCarouselTitle}>
+                  {title}
+                </h3>
               </Col>
             </Row>
           ) : (
@@ -148,7 +150,7 @@ export const HeroCarousel = ({ content, title }) => {
             }}
             pagination
           />
-        </div>
+        </section>
       </div>
     </>
   );

@@ -52,6 +52,7 @@ export const IndexPage = () => (
       secondButtonLabel={heroPnrr.secondButtonLabel}
       secondButtonAriaLabel={heroPnrr.secondButtonAriaLabel}
       secondButtonHref="/come-funziona"
+      heroTitleId="home-hero-title"
     />
     <HeroImageBackground
       title={heroDigital.title}
@@ -63,6 +64,7 @@ export const IndexPage = () => (
       firstButtonClass="btn-light"
       firstButtonHref={heroDigital.linkTo}
       overlap={true}
+      titleId="home-italia-digitale"
     />
     <HeroCarousel content={heroCarouselNews} title={heroCarouselNewsTitle} />
     <SupportSection supportList={support.cards} title={support.title} buttonLabel={support.buttonLabel} />

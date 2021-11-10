@@ -78,16 +78,23 @@ export const OpportunitySection = (props) => {
   const [state, dispatch] = useContext(GlobalStateContext);
 
   return (
-    <Section color="muted" className={classes.section}>
-      <div className="container">
-        <h4 className={classes.title}>{title}</h4>
+    <div color="muted" className={classes.section}>
+      <Section className="container" aria-labelledby="misure-section">
+        <h4 id="misure-section" className={classes.title}>
+          {title}
+        </h4>
         <Row className={classes.row} role="list">
           {list.map((item) => (
             <Col md="6" lg="3" key={item.title} className="px-md-3" role="listitem">
               <Card spacing className={classes.cardWrapper}>
                 <CardBody>
                   <CardTitle className={classes.cardTitle}>
-                  <Link to="/misure" onClick={() => dispatch({type: 'SET:SECTION_OPPORTUNITY_ID', payload: {sectionId: item.id}})}><span>{item.number}</span> {item.title}</Link>
+                    <Link
+                      to="/misure"
+                      onClick={() => dispatch({ type: 'SET:SECTION_OPPORTUNITY_ID', payload: { sectionId: item.id } })}
+                    >
+                      <span>{item.number}</span> {item.title}
+                    </Link>
                   </CardTitle>
                 </CardBody>
               </Card>
@@ -95,9 +102,11 @@ export const OpportunitySection = (props) => {
           ))}
         </Row>
         <div className="d-flex justify-content-center">
-          <Link to="/misure" className="text-uppercase btn btn-primary">Scopri tutte le misure</Link>
+          <Link to="/misure" className="text-uppercase btn btn-primary">
+            Scopri tutte le misure
+          </Link>
         </div>
-      </div>
-    </Section>
+      </Section>
+    </div>
   );
 };
