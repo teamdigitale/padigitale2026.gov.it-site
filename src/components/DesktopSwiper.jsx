@@ -11,7 +11,7 @@ SwiperCore.use([Pagination, A11y]);
 const useStyles = createUseStyles({
   swiperSlide: {
     padding: '0 1.111rem 1.111rem',
-    height: 'auto'
+    height: 'auto',
   },
   bullet: {
     composes: 'swiper-pagination-bullet p-2',
@@ -123,21 +123,49 @@ export const DesktopSwiper = ({
       )}
       {desktopNavigation && (
         <div className="d-none justify-content-center pt-3 d-lg-flex">
-          <button className={classes.navigationBtn} type="button" data-prev-navigation-id={prevBtnId}>
+          <button
+            className={classes.navigationBtn}
+            type="button"
+            data-prev-navigation-id={prevBtnId}
+            role="img"
+            aria-label="Vai alla slide precedente"
+            focusable="false"
+          >
             <Icon color="primary" icon="it-arrow-left-circle" size="lg" />
           </button>
           <button className={classes.navigationBtn} type="button" data-next-navigation-id={nextBtnId}>
-            <Icon color="primary" icon="it-arrow-right-circle" size="lg" />
+            <Icon
+              color="primary"
+              icon="it-arrow-right-circle"
+              size="lg"
+              role="img"
+              aria-label="Vai alla slide successiva"
+              focusable="false"
+            />
           </button>
         </div>
       )}
       {navigation && (
         <div className="justify-content-center pt-3 d-flex">
           <button className={classes.navigationBtn} type="button" data-prev-navigation-id={prevBtnId}>
-            <Icon color="primary" icon="it-arrow-left-circle" size="lg" />
+            <Icon
+              color="primary"
+              icon="it-arrow-left-circle"
+              size="lg"
+              role="img"
+              aria-label="Vai alla slide precedente"
+              focusable="false"
+            />
           </button>
           <button className={classes.navigationBtn} type="button" data-next-navigation-id={nextBtnId}>
-            <Icon color="primary" icon="it-arrow-right-circle" size="lg" />
+            <Icon
+              color="primary"
+              icon="it-arrow-right-circle"
+              size="lg"
+              role="img"
+              aria-label="Vai alla slide successiva"
+              focusable="false"
+            />
           </button>
         </div>
       )}

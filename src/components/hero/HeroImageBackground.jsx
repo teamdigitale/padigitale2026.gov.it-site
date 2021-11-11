@@ -59,7 +59,7 @@ const useStyles = createUseStyles({
           '@media (min-width: 992px)': {
             maxWidth: '26.2rem',
           },
-        }
+        },
       },
     },
     '&.overlap': {
@@ -125,7 +125,7 @@ const useStyles = createUseStyles({
     },
   },
   heroContentContainer: {
-    composes:'container',
+    composes: 'container',
     '&.container': {
       /* marginRight: '0',
       maxWidth: '100%', */
@@ -158,37 +158,35 @@ export const HeroImageBackground = ({
   secondButtonClass,
   secondButtonHref,
   overlap,
+  noButton,
+  titleId,
 }) => {
   const classes = useStyles();
   return (
     <Hero>
-      <div
-        className={`${classes.heroWrapper} ${
-          overlap ? 'overlap' : ''
-        } ${theme}`}
-      >
-        <div className={classes.heroContentContainer}>
+      <div className={`${classes.heroWrapper} ${overlap ? 'overlap' : ''} ${theme}`}>
+        <section aria-labelledby={titleId} className={classes.heroContentContainer}>
           <Row>
-            <Col xs="12" lg="5" className='offset-lg-1'>
+            <Col xs="12" lg="5" className="offset-lg-1">
               <div className={`${classes.contentWrapper} ${theme}`}>
                 <div>
-                  <HeroTitle title={title} className={classes.heroTitle} />
+                  <HeroTitle id={titleId} Tag="h3" title={title} className={classes.heroTitle} />
                   <HeroParagraph text={body} />
                   <div className={classes.buttonContainer}>
-                    <HeroButton
-                      classButton={firstButtonClass}
-                      label={firstButtonLabel}
-                      href={firstButtonHref}
-                      ariaLabel={firstButtonAriaLabel}
-                      target="_blank"
-                      rel="noreferrer"
-                    />
-                    {secondButtonLabel ? (
+                    {noButton ? (
+                      ''
+                    ) : (
                       <HeroButton
-                        classButton={secondButtonClass}
-                        label={secondButtonLabel}
-                        href={secondButtonHref}
+                        classButton={firstButtonClass}
+                        label={firstButtonLabel}
+                        href={firstButtonHref}
+                        ariaLabel={firstButtonAriaLabel}
+                        target="_blank"
+                        rel="noreferrer"
                       />
+                    )}
+                    {secondButtonLabel ? (
+                      <HeroButton classButton={secondButtonClass} label={secondButtonLabel} href={secondButtonHref} />
                     ) : (
                       ''
                     )}
@@ -200,7 +198,7 @@ export const HeroImageBackground = ({
               <HeroBackground image={image} className={classes.heroImg}/>
             </Col>
           </Row>
-        </div>
+        </section>
       </div>
     </Hero>
   );

@@ -214,7 +214,7 @@ export const Tab = ({ tabContent, sideDesktopNavigation, mobileNavigation, title
           {title ? (
             <Row>
               <Col xs="12" lg="4" className="offset-lg-1" id={sectionId}>
-                <h3 className={classes.howTabsTitle}>{title}</h3>
+                <h4 className={classes.howTabsTitle}>{title}</h4>
               </Col>
             </Row>
           ) : (
