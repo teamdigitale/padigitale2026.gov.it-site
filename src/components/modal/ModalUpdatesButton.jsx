@@ -9,11 +9,11 @@ const useStyles = createUseStyles({
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    '& p': {
+    '& .description': {
       margin: '0',
       fontSize: '1.333rem',
       fontWeight: '700',
-      color: '#0066CC',
+      color: '#33485C',
       maxWidth: '60%',
     },
     '& .btn': {
@@ -83,7 +83,7 @@ export const ModalUpdatesButton = ({ label, buttonLabel, initialState, handleTog
         <Row>
           <Col lg={12}>
             <div className={classes.modalButtonContainer}>
-              <p className={classes.text}>{label}</p>
+              <p className="description">{label}</p>
               <Button
                 className={classes.button}
                 color="primary"
