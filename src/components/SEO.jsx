@@ -75,8 +75,6 @@ export const SEO = ({ title, description, socialCard }) => {
       title={title ?? seoTitle}
       link={[...favicons]}
       meta={[
-        { name: 'robots', content: 'noindex' },
-        { name: 'AdsBot-Google', content: 'noindex' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1, shrink-to-fit=no' },
         { name: 'description', content: description ?? seoDescription },
         { httpEquiv: 'X-UA-Compatible', content: 'IE=Edge' },
