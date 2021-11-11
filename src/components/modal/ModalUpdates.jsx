@@ -338,7 +338,7 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
       if (data[key] == undefined) {
         delete data[key];
       }
-      if (key == 'privacy1' || key == 'privacy2') {
+      if (key == 'privacy') {
         delete data[key];
       }
       if (
@@ -522,6 +522,7 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                         infoText={errors.address && errors.address.message}
                         aria-invalid={errors.address && 'true'}
                         label={emailLabel}
+                        aria-describedby="mandatory-label"
                         type="text"
                         id="address"
                         aria-required="true"
@@ -546,7 +547,9 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                         options={selectRepresent}
                         placeholder={selectPlaceholder}
                         aria-label={selectPlaceholder}
+                        aria-describedby="mandatory-label"
                         aria-invalid={errors.representative && 'true'}
+                        aria-labelledby={errors.privacy && 'error-represent'}
                         className={`select ${
                           errors.representative && ' is-invalid'
                         }`}
@@ -555,7 +558,7 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                   />
                 </Col>
               </Row>
-              <span className={classes.errorLabel}>
+              <span className={classes.errorLabel} id="error-represent">
                 {errors.represent ? requiredLabel : ''}
               </span>
               <div
@@ -584,11 +587,8 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                           infoText={errors.enteType && errors.enteType.message}
                           label={enteTypeLabel}
                           type="text"
-                          aria-required={
-                            enteState == 'other'
-                              ? true
-                              : ''
-                          }
+                          aria-describedby="mandatory-label"
+                          aria-required={enteState == 'other' ? true : ''}
                           aria-invalid={errors.enteType && 'true'}
                           {...field}
                           id="enteType"
@@ -619,7 +619,8 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                         infoText={errors.ente && errors.ente.message}
                         label={enteNameLabel}
                         type="text"
-                        aria-required='true'
+                        aria-describedby="mandatory-label"
+                        aria-required="true"
                         aria-invalid={errors.ente && 'true'}
                         {...field}
                         id="enteName"
@@ -657,9 +658,11 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                           id="enteSelect"
                           onChange={onChange}
                           options={selectInQuanto}
+                          aria-describedby="mandatory-label"
                           placeholder={selectPlaceholder}
                           aria-label={selectPlaceholder}
                           aria-invalid={errors.enteSelect && 'true'}
+                          aria-labelledby={errors.privacy && 'error-enteSelect'}
                           className={`${
                             errors.enteSelect && 'select is-invalid'
                           }`}
@@ -668,7 +671,7 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                     />
                   </Col>
                 </Row>
-                <span className={classes.errorLabel}>
+                <span className={classes.errorLabel} id="error-enteSelect">
                   {errors.enteSelect ? requiredLabel : ''}
                 </span>
               </div>
@@ -765,40 +768,22 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                   </legend>
                   <FormGroup check className={classes.radioCustom}>
                     <input
-                      className={errors.privacy1 ? 'is-invalid' : ''}
+                      className={errors.privacy ? 'is-invalid' : ''}
                       name="gruppo1"
                       type="checkbox"
-                      id="privacy1"
+                      id="privacy"
                       aria-required="true"
-                      aria-invalid={errors.privacy1 && 'true'}
-                      {...register('privacy1', { required: true })}
+                      aria-describedby="mandatory-label"
+                      aria-invalid={errors.privacy && 'true'}
+                      aria-labelledby={errors.privacy && 'error-privacy'}
+                      {...register('privacy', { required: true })}
                     />
-                    <Label check htmlFor="privacy1">
+                    <Label check htmlFor="privacy">
                       {comunicationRadio}
                     </Label>
                   </FormGroup>
-                  <FormGroup check className={classes.radioCustom}>
-                    <input
-                      className={errors.privacy2 ? 'is-invalid' : ''}
-                      name="gruppo2"
-                      type="checkbox"
-                      id="privacy2"
-                      aria-required="true"
-                      aria-invalid={errors.privacy2 && 'true'}
-                      {...register('privacy2', { required: true })}
-                    />
-                    <Label check htmlFor="privacy2">
-                      {privacyRadio}{' '}
-                      <a target="_blank" href={privacy.linkTo}>
-                        {privacyRadioLinkLabel}
-                      </a>{' '}
-                      *
-                    </Label>
-                  </FormGroup>
-                  <span className={classes.errorLabel}>
-                    {errors.radio1 || errors.privacy2
-                      ? mandatoryRadioLabel
-                      : ''}
+                  <span className={classes.errorLabel} id="error-privacy">
+                    {errors.privacy ? mandatoryRadioLabel : ''}
                   </span>
                 </fieldset>
               </Col>
