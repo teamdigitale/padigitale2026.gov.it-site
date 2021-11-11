@@ -40,6 +40,10 @@ const useStyles = createUseStyles({
         },
       },
     },
+    '& .css-1pahdxg-control': {
+      outline: '2px solid #ff9900 !important',
+      boxShadow: 'none',
+    },
     '& [class$="-control"]': {
       cursor: 'pointer',
       backgroundColor: '#5D6F81',
@@ -68,6 +72,9 @@ const useStyles = createUseStyles({
       borderTopLeftRadius: '0',
       borderTopRightRadius: '0',
       boxShadow: '0 2px 20px 0 rgb(0 0 0 / 10%)',
+      '& .css-11uursq-option': {
+        fontWeight: 'bold',
+      },
       '& [class$="-option"]': {
         cursor: 'pointer',
         backgroundColor: '#fff',
@@ -162,6 +169,7 @@ export const BeneficiariesSection = (props) => {
               isSearchable={false}
               value={selectValue || initialSelectValue}
               id="beneficiaries"
+              defaultMenuIsOpen={true}
               onChange={handleChange}
               onMenuOpen={handleOpen}
               onMenuClose={handleClose}
