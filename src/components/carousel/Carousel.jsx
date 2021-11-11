@@ -128,7 +128,7 @@ export const HeroCarousel = ({ content, title }) => {
   return (
     <>
       <div className={classes.newsUpdateSection}>
-        <section className="container">
+        <section className="container" aria-labelledby="news-home-carousel">
           {title ? (
             <Row>
               <Col xs="12" lg="4">
