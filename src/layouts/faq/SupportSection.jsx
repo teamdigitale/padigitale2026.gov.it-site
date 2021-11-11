@@ -111,7 +111,7 @@ export const SupportSection = (props) => {
   return (
     <>
       <Section color="muted">
-        <h3 id="suppost-section" className="sr-only">
+        <h3 id="support-section" className="sr-only">
           Supporto
         </h3>
         <section className="container" aria-labelledby="support-section">
