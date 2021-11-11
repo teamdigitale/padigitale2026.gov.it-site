@@ -101,6 +101,10 @@ const useStyles = createUseStyles({
   buttonContainer: {
     composes: 'it-btn-container',
     display: 'flex',
+    '& .btn.btn-light:hover': {
+      background: '#e9e6f2',
+      color: '#004d99',
+    },
     '& .btn+.btn': {
       marginLeft: '1.875rem',
     },
