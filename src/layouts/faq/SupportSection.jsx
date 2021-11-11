@@ -110,7 +110,7 @@ export const SupportSection = (props) => {
   const { title, supportList, buttonLabel, handleToggle } = props;
   return (
     <>
-      <Section color="muted">
+      <div className="section section-muted">
         <h3 id="support-section" className="sr-only">
           Supporto
         </h3>
@@ -168,7 +168,7 @@ export const SupportSection = (props) => {
             </Row>
           )}
         </section>
-      </Section>
+      </div>
     </>
   );
 };
