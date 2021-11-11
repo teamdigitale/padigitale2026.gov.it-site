@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import {
+  name,
   heroMain,
   heroDigital,
   heroPnrr,
@@ -30,6 +31,9 @@ export const IndexPage = () => {
   return (
     <>
       <SEO title={seoTitle} description={seoDescription} />
+      <div className="sr-only">
+        <h2>{name}</h2>
+      </div>
       <HeroImageBackgroundFull
         category={heroMain.category}
         title={heroMain.title}
@@ -53,6 +57,7 @@ export const IndexPage = () => {
         secondButtonLabel={heroPnrr.secondButtonLabel}
         secondButtonAriaLabel={heroPnrr.secondButtonAriaLabel}
         secondButtonHref="/come-funziona"
+        heroTitleId="home-hero-title"
       />
       <HeroImageBackground
         title={heroDigital.title}
@@ -64,6 +69,7 @@ export const IndexPage = () => {
         firstButtonClass="btn-light"
         firstButtonHref={heroDigital.linkTo}
         overlap={true}
+        titleId="home-italia-digitale"
       />
       <HeroCarousel content={heroCarouselNews} title={heroCarouselNewsTitle} />
       <SupportSection

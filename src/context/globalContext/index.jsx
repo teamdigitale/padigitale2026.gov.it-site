@@ -1,15 +1,17 @@
 import React, { createContext, useReducer, useState, useEffect } from 'react';
 
-const initialState = { sectionId: null, faqId: null };
+const initialState = { sectionId: null, faqId: null, footerType: null };
 
 const reducer = (state, { type, payload }) => {
   switch (type) {
     case 'SET:HOW_SECTION_ID':
-      return { ...state, howId: payload.howId };
+      return { ...state, howId: payload?.howId };
     case 'SET:SECTION_OPPORTUNITY_ID':
       return { ...state, sectionId: payload.sectionId };
     case 'SET:FAQ_ID':
       return { ...state, faqId: payload.faqId };
+    case 'SET:FOOTER_TYPE':
+      return { ...state, footerType: payload.footerType };
     default:
       return { ...state };
   }

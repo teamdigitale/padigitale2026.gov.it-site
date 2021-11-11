@@ -110,11 +110,11 @@ export const SupportSection = (props) => {
   const { title, supportList, buttonLabel, handleToggle } = props;
   return (
     <>
-      <Section color="muted" aria-labelledby="suppost-section">
+      <Section color="muted">
         <h3 id="suppost-section" className="sr-only">
-          Sezione supporto
+          Supporto
         </h3>
-        <div className="container">
+        <section className="container" aria-labelledby="support-section">
           <Row>
             <Col md={8} lg={6} className={classes.layout}>
               <p className={classes.tag}>Supporto</p>
@@ -167,7 +167,7 @@ export const SupportSection = (props) => {
               </Col>
             </Row>
           )}
-        </div>
+        </section>
       </Section>
     </>
   );

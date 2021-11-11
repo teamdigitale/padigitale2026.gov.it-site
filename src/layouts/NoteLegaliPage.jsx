@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { Hero } from '../components/hero/Hero';
 import { TextChunk } from '../components/TextChunk';
@@ -6,6 +6,7 @@ import { Breadcrumb } from '../components/Breadcrumb';
 import content from '../../contents/note-legali-page/note-legali.yml';
 import seo from '../../contents/seo.yml';
 import { SEO } from '../components/SEO';
+import { GlobalStateContext } from '../context/globalContext';
 
 const { title: seoTitle, description: seoDescription } = seo.noteLegaliPage;
 
@@ -23,6 +24,14 @@ export const NoteLegaliPage = () => {
   const {
     textChunk: { html: textChunk },
   } = useStaticQuery(query);
+
+  const [{}, dispatch] = useContext(GlobalStateContext);
+  useEffect(() => {
+    dispatch({ type: 'SET:FOOTER_TYPE', payload: { footerType: 'heading' } });
+    return () => {
+      dispatch({ type: 'SET:FOOTER_TYPE' });
+    };
+  }, []);
   return (
     <>
       <SEO title={seoTitle} description={seoDescription} />
