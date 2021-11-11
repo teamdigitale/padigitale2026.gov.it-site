@@ -50,7 +50,7 @@ const useStyles = createUseStyles({
     '&.modal-dialog .modal-content .modal-header .modal-title': {
       fontSize: '1.333rem',
       fontWeight: '700',
-      color: '#0066CC',
+      color: '#33485C',
       maxWidth: '70%',
       '@media (max-width: 991px)': {
         maxWidth: '100%',
