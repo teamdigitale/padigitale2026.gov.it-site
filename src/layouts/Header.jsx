@@ -215,7 +215,7 @@ const SlimHeader = () => {
   return (
     <HeaderReactKit type="slim" theme="light">
       <HeaderContent>
-        <HeaderBrand href="https://innovazione.gov.it/" target="_blank" className={classes.headerLink}>
+        <HeaderBrand href="https://innovazione.gov.it/" target="_blank" className={classes.headerLink} rel="noreferrer">
           {externalLinks.dipartimento.label}
         </HeaderBrand>
         <HeaderLinkZone aria-label="Siti esterni correlati">
@@ -240,7 +240,7 @@ const SlimHeader = () => {
                 >
                   {externalLinks.italiaDigitale.label}
                 </LinkListItem>
-                <LinkListItem href={externalLinks.pnrr.linkTo} target="_blank">
+                <LinkListItem href={externalLinks.pnrr.linkTo} target="_blank" rel="noreferrer">
                   {externalLinks.pnrr.label}
                 </LinkListItem>
               </LinkList>
