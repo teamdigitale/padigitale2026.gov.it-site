@@ -26,12 +26,6 @@ export const NoteLegaliPage = () => {
   } = useStaticQuery(query);
 
   const [{}, dispatch] = useContext(GlobalStateContext);
-  useEffect(() => {
-    dispatch({ type: 'SET:FOOTER_TYPE', payload: { footerType: 'heading' } });
-    return () => {
-      dispatch({ type: 'SET:FOOTER_TYPE' });
-    };
-  }, []);
   return (
     <>
       <SEO title={seoTitle} description={seoDescription} />

@@ -84,26 +84,10 @@ const useStyle = createUseStyles({
 
 const SlimFooter = () => {
   const classes = useStyle();
-  const [{ footerType }] = useContext(GlobalStateContext);
-
-  const [heading, setHeading] = useState(null);
-
-  useEffect(() => {
-    setHeading(footerType);
-  }, [footerType]);
 
   return (
     <div className={classes.slimFooter}>
       <section className="container" aria-labelledby="linkutili-header">
-        {heading == null ? (
-          <h3 id="linkutili-header" className="sr-only">
-            Link Utili
-          </h3>
-        ) : (
-          <h2 id="linkutili-header" className="sr-only">
-            Link Utili
-          </h2>
-        )}
         <ul className="list-inline link-list mb-0 text-center text-md-left">
           <li className={`${classes.listItem} mr-0 mr-md-5`}>
             <Link
