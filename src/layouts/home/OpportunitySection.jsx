@@ -82,7 +82,7 @@ export const OpportunitySection = (props) => {
   const [state, dispatch] = useContext(GlobalStateContext);
 
   return (
-    <section className={classes.section}>
+    <div className={classes.section}>
       <section className="container" aria-labelledby="misure-section">
         <h3 id="misure-section" className={classes.title}>{title}</h3>
         <Row className={classes.row} role="list">
@@ -104,6 +104,6 @@ export const OpportunitySection = (props) => {
           <Link to="/misure" className="text-uppercase btn btn-primary">Scopri tutte le misure</Link>
         </div>
       </section>
-    </section>
+    </div>
   );
 };
