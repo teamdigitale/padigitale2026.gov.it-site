@@ -520,9 +520,11 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                       <Input
                         invalid={errors.address}
                         infoText={errors.address && errors.address.message}
+                        aria-invalid={errors.address && 'true'}
                         label={emailLabel}
                         type="text"
                         id="address"
+                        aria-required="true"
                         {...field}
                       />
                     )}
@@ -544,6 +546,7 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                         options={selectRepresent}
                         placeholder={selectPlaceholder}
                         aria-label={selectPlaceholder}
+                        aria-invalid={errors.representative && 'true'}
                         className={`select ${
                           errors.representative && ' is-invalid'
                         }`}
@@ -581,6 +584,12 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                           infoText={errors.enteType && errors.enteType.message}
                           label={enteTypeLabel}
                           type="text"
+                          aria-required={
+                            enteState == 'other'
+                              ? true
+                              : ''
+                          }
+                          aria-invalid={errors.enteType && 'true'}
                           {...field}
                           id="enteType"
                         />
@@ -596,12 +605,7 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                     control={control}
                     rules={{
                       required: {
-                        value:
-                          enteState == 'public-administration' ||
-                          enteState == 'other' ||
-                          enteState == 'fornitore-it'
-                            ? true
-                            : false,
+                        value: true,
                         message: requiredLabel,
                       },
                       pattern: {
@@ -615,6 +619,8 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                         infoText={errors.ente && errors.ente.message}
                         label={enteNameLabel}
                         type="text"
+                        aria-required='true'
+                        aria-invalid={errors.ente && 'true'}
                         {...field}
                         id="enteName"
                       />
@@ -653,6 +659,7 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                           options={selectInQuanto}
                           placeholder={selectPlaceholder}
                           aria-label={selectPlaceholder}
+                          aria-invalid={errors.enteSelect && 'true'}
                           className={`${
                             errors.enteSelect && 'select is-invalid'
                           }`}
@@ -762,6 +769,8 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                       name="gruppo1"
                       type="checkbox"
                       id="privacy1"
+                      aria-required="true"
+                      aria-invalid={errors.privacy1 && 'true'}
                       {...register('privacy1', { required: true })}
                     />
                     <Label check htmlFor="privacy1">
@@ -774,6 +783,8 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                       name="gruppo2"
                       type="checkbox"
                       id="privacy2"
+                      aria-required="true"
+                      aria-invalid={errors.privacy2 && 'true'}
                       {...register('privacy2', { required: true })}
                     />
                     <Label check htmlFor="privacy2">
