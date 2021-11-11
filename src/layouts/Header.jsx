@@ -224,7 +224,7 @@ const SlimHeader = () => {
             onClick={toggle}
             aria-expanded={collapse}
           >
-            <a href="https://innovazione.gov.it/" target="_blank" className={classes.headerLink} aria-label="Dipartimento per la Trasformazione Digitale (Collegamento esterno - Apre su nuova scheda)">
+            <a href="https://innovazione.gov.it/" target="_blank" className={classes.headerLink} aria-label="Dipartimento per la Trasformazione Digitale (Collegamento esterno - Apre su nuova scheda)" rel="noreferrer">
               {externalLinks.dipartimento.label}
             </a>
             <Icon icon="it-expand" />
