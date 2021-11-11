@@ -1,9 +1,9 @@
 loading:
   title: Attendi la conferma
-  body: "Attendi che l'indirizzo email che hai scelto venga confermato Grazie!"
+  body: "Stiamo verificando il tuo indirizzo email: grazie per l’attesa!"
 error:
   title: Errore nella conferma
-  body: Errore nella conferma, prova di nuovo utilizzando il bottone qui sotto.
+  body: Abbiamo riscontrato un problema tecnico: per favore riprova inviando nuovamente la richiesta.
   button: Riprova
 success:
   title: Indirizzo confermato
