@@ -120,7 +120,7 @@ beneficiaries:
         label: Università
       - value: 'enti-diritto'
         label: 'Enti per il diritto allo studio, agenzie, consorzi'
-    description: Facilitare l’implementazione dello “Sportello Digitale Unico” (Single Digital Gateway), il regolamento europeo che ha l’obiettivo di uniformare l’accesso ai servizi digitali su tutto il territorio continentale, attraverso informazioni di qualità e canali di assistenza effettiva.
+    description: Facilitare l’implementazione dello “Sportello Digitale Unico” (Single Digital Gateway), ovvero supportare l’attuazione del regolamento europeo che ha l’obiettivo di uniformare l’accesso ai servizi digitali in tutto i Paesi membri dell'UE.
     stalls: '230 enti'
     accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
@@ -135,7 +135,7 @@ beneficiaries:
         label: Comuni
       - value: scuole
         label: Scuole
-    description: Migliorare l'esperienza dei servizi pubblici digitali definendo modelli collaudati e riutilizzabili per la creazione di siti internet e l’erogazione di servizi pubblici digitali.
+    description: Migliorare l'esperienza dei servizi pubblici digitali definendo e promuovendo l’adozione di modelli collaudati e riutilizzabili per la creazione di siti internet e l’erogazione di servizi pubblici digitali.
     stalls: '16,500 enti'
     accessSectionId: soluzioni-standard
     accessLabel: Soluzioni standard
@@ -261,7 +261,7 @@ beneficiaries:
     tags:
       - value: pa-centrali
         label: PA Centrali
-    description: Rafforzare le difese della PA italiana per proteggerla dalle minacce informatiche, come frodi, ricatti e attacchi terroristici e tutti i rischi posti dalla criminalità informatica
+    description: Rafforzare le difese della Pubblica Amministrazione italiana per proteggerla dalle minacce informatiche, come frodi, ricatti e attacchi terroristici e tutti i rischi posti dalla criminalità informatica.
     stalls: '6 enti'
     accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
