@@ -95,14 +95,14 @@ export const Beneficiaries = (props) => {
               </Col>
             </Row>
             <Row>
-              {categories.map((category) => {
-                return (
-                  <React.Fragment key={category.name}>
-                    <Col lg="6" className="px-lg-3">
-                      <div className={classes.headCategory}>
-                        <img src={category.icon} alt="" />
-                        <h4 className="category-title">{category.name}</h4>
-                      </div>
+              {categories.map((category) => (
+                <React.Fragment key={category.name}>
+                  <Col lg="6" className="px-lg-3">
+                    <div className={classes.headCategory}>
+                      <img src={category.icon} alt="" />
+                      <h4 className="category-title">{category.name}</h4>
+                    </div>
+                    <ul className={classes.beneficiariesList}>
                       {category.items.map((item) => (
                         <li key={item.linkLabel}>
                           <Link
