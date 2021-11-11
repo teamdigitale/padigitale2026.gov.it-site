@@ -4,6 +4,7 @@ import content from '../../contents/come-funziona/come-funziona.yml';
 import { SEO } from '../components/SEO';
 // import { ComeFunzionaCarousel } from '../components/carousel/ComeFunzionaCarousel';
 import { Tab } from '../components/Tab';
+import { TabAdobe } from '../components/TabAdobe';
 import { Timeline } from '../components/carousel/Timeline';
 import { HeroHowItWorks } from '../components/hero/HeroHowItWorks';
 import seo from '../../contents/seo.yml';
@@ -32,7 +33,7 @@ export const ComeFunzionaPage = () => {
     <>
       <SEO title={seoTitle} description={seoDescription} />
       <div className="sr-only">
-        <h1>{content.name}</h1>
+        <h2>{content.name}</h2>
       </div>
       <HeroHowItWorks
         title={content.hero.title}
@@ -42,7 +43,7 @@ export const ComeFunzionaPage = () => {
         image="come-funziona-hero.svg"
         list={content.hero.list}
       />
-      <Tab
+      <TabAdobe
         tabContent={content.pacchettiTabs}
         sideDesktopNavigation
         mobileNavigation
@@ -50,7 +51,7 @@ export const ComeFunzionaPage = () => {
         subtitle={content.pacchettiTabs.subtitle}
         sectionId="soluzioni-standard"
       />
-      <Tab
+      <TabAdobe
         tabContent={content.presentazioneTabs}
         sideDesktopNavigation
         mobileNavigation

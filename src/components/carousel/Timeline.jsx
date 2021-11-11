@@ -164,7 +164,7 @@ export const Timeline = ({ content, title }) => {
           {element.time}
           <div className="arrow"></div>
         </span>
-        <div className="title">{element.title}</div>
+        <h4 className="title">{element.title}</h4>
         <div className="text" dangerouslySetInnerHTML={{ __html: element.text }} />
       </div>
     </>

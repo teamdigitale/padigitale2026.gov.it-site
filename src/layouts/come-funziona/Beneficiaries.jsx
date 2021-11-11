@@ -86,10 +86,10 @@ export const Beneficiaries = (props) => {
           <Col className="offset-lg-1">
             <Row>
               <Col xs="12" lg="5" id="beneficiari">
-                <p className={classes.category}>{category}</p>
-                <h2 className={classes.title} id="involved-actors-title">
+                <h3 className={classes.category}>{category}</h3>
+                <h4 className={classes.title} id="involved-actors-title">
                   {title}
-                </h2>
+                </h4>
               </Col>
             </Row>
             <Row>
@@ -99,7 +99,7 @@ export const Beneficiaries = (props) => {
                     <Col lg="6" className="px-lg-3">
                       <div className={classes.headCategory}>
                         <img src={category.icon} alt="" />
-                        <h3 className="category-title">{category.name}</h3>
+                        <h4 className="category-title">{category.name}</h4>
                       </div>
                       {category.items.map((item) => (
                         <Link

@@ -32,7 +32,7 @@ const useStyle = createUseStyles({
   },
 });
 
-export const HeroSupport = ({title, subtitle}) => {
+export const HeroSupport = ({ title, subtitle }) => {
   const classes = useStyle();
 
   return (
@@ -42,7 +42,7 @@ export const HeroSupport = ({title, subtitle}) => {
           <div className="row">
             <div className="col-12 col-lg-6 offset-lg-1">
               <div className="it-hero-text-wrapper">
-                <h1 className="no_toc">{title}</h1>
+                <h3 className="no_toc">{title}</h3>
                 <p
                   className="support-hero-description"
                   dangerouslySetInnerHTML={{ __html: subtitle }}
