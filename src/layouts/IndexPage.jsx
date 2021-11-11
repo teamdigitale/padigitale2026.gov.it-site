@@ -16,6 +16,7 @@ import { HeroImage } from '../components/hero/HeroImage';
 import { HeroCarousel } from '../components/carousel/Carousel';
 import { HomeCarousel } from '../components/carousel/HomeCarousel';
 import { SEO } from '../components/SEO';
+import { createUseStyles } from 'react-jss';
 import seo from '../../contents/seo.yml';
 import { SupportSection } from './faq/SupportSection';
 import { OpportunitySection } from './home/OpportunitySection';
@@ -23,7 +24,26 @@ import { ModalUpdates } from '../components/modal/ModalUpdates';
 
 const { title: seoTitle, description: seoDescription } = seo.homePage;
 
+const useStyles = createUseStyles({
+  mobileTitle: {
+    composes: 'px-3',
+    '@media (min-width: 992px)': {
+      display: 'none',
+    },
+    '& .title': {
+      fontSize: '1.25rem',
+      color: '#0066CC',
+      fontWeight: 'bold'
+    },
+    '& .description': {
+      fontSize: '1.25rem',
+      color: '#0066CC',
+    }
+  }
+});
+
 export const IndexPage = () => {
+  const classes = useStyles();
   const [isOpen, setIsOpen] = useState(false);
   const toggleModal = () => {
     setIsOpen(!isOpen);
@@ -31,6 +51,10 @@ export const IndexPage = () => {
   return (
     <>
       <SEO title={seoTitle} description={seoDescription} />
+      <div className={classes.mobileTitle}>
+        <h1 className="title">PA digitale 2026</h1>
+        <p className="description">Le opportunità per una PA protagonista della transizione digitale</p>
+      </div>
       <div className="sr-only">
         <h2>{name}</h2>
       </div>

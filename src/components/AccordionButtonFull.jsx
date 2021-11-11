@@ -252,6 +252,7 @@ export const AccordionButtonFull = (props) => {
           onClick={eventHandler}
           aria-expanded={props.id === props.active}
           className={classes.button}
+          aria-label={`Dettaglio opportunità ${number} ${title}`}
         ></Button>
         <div className={classes.cardWrapper}>
           <div className={classes.cardHeader}>

@@ -18,12 +18,12 @@ const useStyles = createUseStyles({
       boxShadow: '0px 0px 20px rgb(0 43 85 / 4%);',
       display: 'flex',
       flexDirection: 'column',
-      '& .category-top': {
-        '& a.category': {
-          fontSize: '0.778rem',
-          fontWeight: '600',
-          color: '#33485C',
-        },
+      '& .category': {
+        fontSize: '0.778rem',
+        fontWeight: '600',
+        color: '#33485C',
+        marginBottom: '1rem',
+        textTransform: 'uppercase'
       },
       '& h4.card-title': {
         color: '#0066CC',
@@ -111,7 +111,7 @@ export const HeroCarousel = ({ content, title }) => {
     <>
       <Card key={element.id} className={classes.heroCards} spacing noWrapper>
         <CardBody>
-          <CardCategory>{element.category}</CardCategory>
+          <span className="category">{element.category}</span>
           <CardTitle tag="h4">{element.title}</CardTitle>
           <CardText>{element.description}</CardText>
           <ExternalLink linkTo={element.linkTo} alt="" className={classes.heroLink}>
@@ -128,7 +128,7 @@ export const HeroCarousel = ({ content, title }) => {
   return (
     <>
       <div className={classes.newsUpdateSection}>
-        <section className="container">
+        <section className="container" aria-labelledby="news-home-carousel">
           {title ? (
             <Row>
               <Col xs="12" lg="4">
