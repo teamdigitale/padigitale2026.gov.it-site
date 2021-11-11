@@ -1,6 +1,6 @@
 import React, { createContext, useReducer, useState, useEffect } from 'react';
 
-const initialState = { sectionId: null, faqId: null, footerType: null };
+const initialState = { sectionId: null, faqId: null};
 
 const reducer = (state, { type, payload }) => {
   switch (type) {
@@ -10,8 +10,6 @@ const reducer = (state, { type, payload }) => {
       return { ...state, sectionId: payload.sectionId };
     case 'SET:FAQ_ID':
       return { ...state, faqId: payload.faqId };
-    case 'SET:FOOTER_TYPE':
-      return { ...state, footerType: payload.footerType };
     default:
       return { ...state };
   }
