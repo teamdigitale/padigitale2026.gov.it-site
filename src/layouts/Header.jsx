@@ -218,7 +218,7 @@ const SlimHeader = () => {
         <HeaderBrand href="https://innovazione.gov.it/" target="_blank" className={classes.headerLink}>
           {externalLinks.dipartimento.label}
         </HeaderBrand>
-        <HeaderLinkZone aria-labelledby="Siti esterni correlati">
+        <HeaderLinkZone aria-label="Siti esterni correlati">
           <Button
             className={classes.headerToggler}
             onClick={toggle}
