@@ -16,10 +16,7 @@ import { ExternalLink } from '../ExternalLink';
 const useStyles = createUseStyles({
   heroCards: {
     composes: 'card-bg rounded',
-    height: '250px',
-    '@media (min-width: 992px)': {
-      height: 'auto',
-    },
+    height: '100%',
     '&.card.card-bg': {
       '@media (max-width: 992px)': {
         marginLeft: '0',
@@ -27,6 +24,8 @@ const useStyles = createUseStyles({
     },
     '& .card-body': {
       boxShadow: '0px 0px 20px rgb(0 43 85 / 4%);',
+      display: 'flex',
+      flexDirection: 'column',
       '& .category-top': {
         '& a.category': {
           fontSize: '0.778rem',
@@ -53,7 +52,7 @@ const useStyles = createUseStyles({
         lineHeight: '1.24',
         marginBottom: '1.125rem',
         '@media (min-width: 992px)': {
-          marginBottom: '2.33rem',
+          marginBottom: '0.778rem',
           fontSize: '0.889rem',
           lineHeight: '1.44',
         },
@@ -109,6 +108,7 @@ const useStyles = createUseStyles({
   },
   heroLink: {
     textDecoration: 'none',
+    marginTop: 'auto'
   },
 });
 // const carousel = React.createRef();
