@@ -219,16 +219,18 @@ const SlimHeader = () => {
           {externalLinks.dipartimento.label}
         </HeaderBrand>
         <HeaderLinkZone aria-label="Siti esterni correlati">
-          <Button
-            className={classes.headerToggler}
-            onClick={toggle}
-            aria-expanded={collapse}
-          >
+          <div className={classes.headerToggler}>
             <a href="https://innovazione.gov.it/" target="_blank" className={classes.headerLink} aria-label="Dipartimento per la Trasformazione Digitale (Collegamento esterno - Apre su nuova scheda)" rel="noreferrer">
               {externalLinks.dipartimento.label}
             </a>
-            <Icon icon="it-expand" />
-          </Button>
+            <Button
+            className={classes.headerToggler}
+              onClick={toggle}
+              aria-expanded={collapse}
+            >
+              <Icon icon="it-expand" />
+            </Button>
+          </div>
           <Collapse isOpen={collapse}>
             <div className={classes.linkListWrapperCustom}>
               <LinkList className={classes.topListLink}>
