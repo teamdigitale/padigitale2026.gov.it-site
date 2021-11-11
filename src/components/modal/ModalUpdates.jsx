@@ -517,17 +517,22 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                       },
                     }}
                     render={({ field }) => (
-                      <Input
-                        invalid={errors.address}
-                        infoText={errors.address && errors.address.message}
-                        aria-invalid={errors.address && 'true'}
-                        label={emailLabel}
-                        aria-describedby="mandatory-label"
-                        type="text"
-                        id="address"
-                        aria-required="true"
-                        {...field}
-                      />
+                      <>
+                        <Input
+                          invalid={errors.address}
+                          aria-invalid={errors.address && 'true'}
+                          label={emailLabel}
+                          aria-describedby="mandatory-label"
+                          aria-labelledby={errors.address && 'error-address'}
+                          type="text"
+                          id="address"
+                          aria-required="true"
+                          {...field}
+                        />
+                        <span className={classes.errorLabel} id="error-address">
+                          {errors.address && errors.address.message}
+                        </span>
+                      </>
                     )}
                   />
                 </Col>
@@ -584,17 +589,27 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                         },
                       }}
                       render={({ field }) => (
-                        <Input
-                          invalid={errors.enteType}
-                          infoText={errors.enteType && errors.enteType.message}
-                          label={enteTypeLabel}
-                          type="text"
-                          aria-describedby="mandatory-label"
-                          aria-required={enteState == 'other' ? true : ''}
-                          aria-invalid={errors.enteType && 'true'}
-                          {...field}
-                          id="enteType"
-                        />
+                        <>
+                          <Input
+                            invalid={errors.enteType}
+                            label={enteTypeLabel}
+                            type="text"
+                            aria-describedby="mandatory-label"
+                            aria-labelledby={
+                              errors.enteType && 'error-enteType'
+                            }
+                            aria-required={enteState == 'other' ? true : ''}
+                            aria-invalid={errors.enteType && 'true'}
+                            {...field}
+                            id="enteType"
+                          />
+                          <span
+                            className={classes.errorLabel}
+                            id="error-enteType"
+                          >
+                            {errors.enteType && errors.enteType.message}
+                          </span>
+                        </>
                       )}
                     />
                   </Col>
@@ -616,17 +631,25 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                       },
                     }}
                     render={({ field }) => (
-                      <Input
-                        invalid={errors.ente}
-                        infoText={errors.ente && errors.ente.message}
-                        label={enteNameLabel}
-                        type="text"
-                        aria-describedby="mandatory-label"
-                        aria-required="true"
-                        aria-invalid={errors.ente && 'true'}
-                        {...field}
-                        id="enteName"
-                      />
+                      <>
+                        <Input
+                          invalid={errors.ente}
+                          label={enteNameLabel}
+                          type="text"
+                          aria-describedby="mandatory-label"
+                          aria-required="true"
+                          aria-labelledby={errors.ente && 'error-enteName'}
+                          aria-invalid={errors.ente && 'true'}
+                          {...field}
+                          id="enteName"
+                        />
+                        <span
+                          className={classes.errorLabel}
+                          id="error-enteName"
+                        >
+                          {errors.ente && errors.ente.message}
+                        </span>
+                      </>
                     )}
                   />
                 </Col>
@@ -831,19 +854,20 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
               id="not2dms"
             >
               <h5 id="not2dms-title">
-                <svg className="icon"></svg>
+                notifiche
+                <svg className="icon" role="img" aria-label=""></svg>
               </h5>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor…
               </p>
-              <button type="button" className="btn notification-close">
+              <button type="button" className="btn notification-close" aria-label='Chiudi' aria-describedby="not2dms-title">
                 <svg
                   width="19"
                   height="19"
                   viewBox="0 0 19 19"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
+                  focusable="false"
+                  role="img" aria-label="Chiudi"
                 >
                   <rect
                     x="17.3242"
@@ -861,10 +885,6 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                     fill="#5C6F82"
                   />
                 </svg>
-
-                <span className="sr-only">
-                  Chiudi notifica: Titolo notifica
-                </span>
               </button>
             </div>
           </div>
