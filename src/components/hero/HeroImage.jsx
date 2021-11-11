@@ -119,7 +119,7 @@ export const HeroImage = ({
           </HeroCtaContainer>
         </div>
         <HeroGraphic className="col-lg-5 d-flex justify-content-sm-center">
-        <img className="graphic-image" src={imageUrl} alt={imageAlt} aria-label={imageAlt} />
+        <img className="graphic-image" src={imageUrl} alt={imageAlt} />
         </HeroGraphic>
       </div>
     </Hero>
