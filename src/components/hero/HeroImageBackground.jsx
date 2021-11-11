@@ -11,8 +11,11 @@ const useStyles = createUseStyles({
     position: 'relative',
     width: '100%',
     maxHeight: '25rem',
-    objectFit: 'none',
+    objectFit: 'contain',
     objectPosition: 'right',
+    '@media (max-width: 992px)': {
+      objectPosition: 'center',
+    }
   },
   heroTitle: {
     composes: 'no_doc title-hero',
@@ -28,6 +31,9 @@ const useStyles = createUseStyles({
     composes: 'it-hero-text-wrapper',
     paddingLeft: '0 !important',
     zIndex: 2,
+    '@media (max-width: 992px)': {
+      marginBottom: '4rem',
+    },
   },
   heroWrapper: {
     composes: 'it-hero-wrapper',
@@ -94,8 +100,8 @@ const useStyles = createUseStyles({
     '& .container .it-hero-text-wrapper .btn': {
       fontSize: '1rem',
     },
-    '&.it-hero-wrapper .it-hero-text-wrapper': {
-      /* padding: '10rem' */
+    '&.it-hero-wrapper .it-hero-text-wrapper .it-btn-container': {
+      position: 'relative',
     }
   },
   buttonContainer: {
@@ -121,11 +127,20 @@ const useStyles = createUseStyles({
   heroContentContainer: {
     composes:'container',
     '&.container': {
-      marginRight: '0',
-      maxWidth: '100%',
+      /* marginRight: '0',
+      maxWidth: '100%', */
     },
     '& .it-hero-text-wrapper': {
       padding: '5.333rem 0 0',
+    },
+  },
+  imageContainer: {
+    composes: 'pr-0 offset-lg-1 mt-4 mt-lg-0',
+    position: 'absolute',
+    right: '0',
+    top: '0',
+    '@media (max-width: 992px)': {
+      position: 'relative',
     },
   }
 });
@@ -181,7 +196,7 @@ export const HeroImageBackground = ({
                 </div>
               </div>
             </Col>
-            <Col xs={12} lg={5} className='pr-0 offset-lg-1 mt-4 mt-lg-0'>
+            <Col xs={12} lg={5} className={classes.imageContainer}>
               <HeroBackground image={image} className={classes.heroImg}/>
             </Col>
           </Row>

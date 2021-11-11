@@ -162,7 +162,17 @@ const useStyle = createUseStyles({
     },
     '& button': {
       height: '100%',
-    }
+      boxShadow: 'none',
+    },
+    '& button:active': {
+      background: 'none !important',
+      color: '#06c !important',
+      boxShadow: 'none !important',
+    },
+    '& button:focus': {
+      boxShadow: '0 0 0 2px #f90;',
+      borderRadius: '0',
+    },
   },
   headerToggler: {
     fontWeight: '600',
