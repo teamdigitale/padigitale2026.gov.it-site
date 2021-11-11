@@ -6,6 +6,7 @@ import { GlobalStateContext } from '../../context/globalContext';
 
 const useStyle = createUseStyles({
   section: {
+    composes: 'section section-muted',
     '&.section-muted': {
       padding: '2.667rem 0.833rem',
       '@media (min-width: 768px)': {
@@ -81,7 +82,7 @@ export const OpportunitySection = (props) => {
   const [state, dispatch] = useContext(GlobalStateContext);
 
   return (
-    <Section color="muted" className={classes.section}>
+    <div className={classes.section}>
       <section className="container" aria-labelledby="misure-section">
         <h3 id="misure-section" className={classes.title}>{title}</h3>
         <Row className={classes.row} role="list">
@@ -103,6 +104,6 @@ export const OpportunitySection = (props) => {
           <Link to="/misure" className="text-uppercase btn btn-primary">Scopri tutte le misure</Link>
         </div>
       </section>
-    </Section>
+    </div>
   );
 };
