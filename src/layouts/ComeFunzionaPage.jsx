@@ -16,15 +16,18 @@ import { GlobalStateContext } from '../context/globalContext';
 const { title: seoTitle, description: seoDescription } = seo.comeFunzionaPage;
 
 export const ComeFunzionaPage = () => {
-  const [{howId}] = useContext(GlobalStateContext);
+  const [{howId}, dispatch] = useContext(GlobalStateContext);
 
   useEffect(() => {
+    console.log(howId);
+    
     if (howId) {
-      document.querySelector('#' + howId).scrollIntoView({
-        behavior: 'smooth',
-      });
+      document.querySelector('#' + howId).scrollIntoView();
+      return () => {
+        dispatch({ type: 'SET:HOW_SECTION_ID' });
+      };
     }
-  }, []);
+  }, [howId]);
 
   return (
     <>
