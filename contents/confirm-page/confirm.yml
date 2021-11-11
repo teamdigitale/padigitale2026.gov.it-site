@@ -3,7 +3,7 @@ loading:
   body: "Stiamo verificando il tuo indirizzo email: grazie per l’attesa!"
 error:
   title: Errore nella conferma
-  body: Abbiamo riscontrato un problema tecnico: per favore riprova inviando nuovamente la richiesta.
+  body: "Abbiamo riscontrato un problema tecnico: per favore riprova inviando nuovamente la richiesta."
   button: Riprova
 success:
   title: Indirizzo confermato
