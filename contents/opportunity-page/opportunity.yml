@@ -352,7 +352,7 @@ modal:
   enteNameLabel: NOME ENTE/STRUTTURA*
   inQuantoLabel: IN QUANTO*
   directContactLabel: CONTATTO DIRETTO
-  directContactInfo: Un <strong>Team dedicato</strong> è a tua disposizione per ricevere chiarimenti sugli investimenti o approfondire alcuni temi
+  directContactInfo: Un <strong>Team dedicato</strong> è a tua disposizione per ricevere<br>chiarimenti sugli investimenti o approfondire alcuni temi
   addMessageLabel: Voglio aggiungere un messaggio
   messageSelectLabel: ARGOMENTO MESSAGGIO
   messageLabel: TESTO MESSAGGIO
