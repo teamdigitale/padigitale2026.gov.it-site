@@ -19,8 +19,6 @@ export const ComeFunzionaPage = () => {
   const [{howId}, dispatch] = useContext(GlobalStateContext);
 
   useEffect(() => {
-    console.log(howId);
-    
     if (howId) {
       document.querySelector('#' + howId).scrollIntoView();
       return () => {
