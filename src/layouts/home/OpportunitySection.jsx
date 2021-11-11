@@ -46,6 +46,14 @@ const useStyle = createUseStyles({
     '&:after': {
       content: 'unset',
     },
+    '& a': {
+      textDecoration: 'none',
+      width: '100%',
+      '&:hover': {
+        color: '#0066CC',
+        textDecoration: 'underline'
+      }
+    },
     '& .card-body': {
       padding: '1.333rem 0.889rem',
       '& h4.card-title': {
@@ -54,9 +62,6 @@ const useStyle = createUseStyles({
         fontSize: '1rem',
         '& span': {
           fontWeight: 'normal',
-        },
-        '& a': {
-          textDecoration: 'none',
         },
       },
     },
@@ -76,11 +81,13 @@ export const OpportunitySection = (props) => {
           {list.map((item) => (
             <Col md="6" lg="3" key={item.title} className="px-md-3" role="listitem">
               <Card spacing className={classes.cardWrapper}>
+              <Link to="/misure" onClick={() => dispatch({type: 'SET:SECTION_OPPORTUNITY_ID', payload: {sectionId: item.id}})}>
                 <CardBody>
                   <CardTitle tag="h4">
-                  <Link to="/misure" onClick={() => dispatch({type: 'SET:SECTION_OPPORTUNITY_ID', payload: {sectionId: item.id}})}><span>{item.number}</span> {item.title}</Link>
+                  <span>{item.number}</span> {item.title}
                   </CardTitle>
                 </CardBody>
+                </Link>
               </Card>
             </Col>
           ))}
