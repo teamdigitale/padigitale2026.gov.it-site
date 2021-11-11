@@ -120,6 +120,11 @@ const useStyles = createUseStyles({
             paddingTop: '1.111rem 0',
           },
         },
+        '&[aria-selected="true"]': {
+          '& span': {
+            color: '#0066CC',
+          },
+        },
       },
     },
   },

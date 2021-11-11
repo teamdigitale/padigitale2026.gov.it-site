@@ -69,6 +69,12 @@ const useStyle = createUseStyles({
       },
     },
   },
+  beneficiariesList: {
+    paddingLeft: '0',
+    '& li': {
+      listStyleType: 'none',
+    },
+  },
 });
 
 export const Beneficiaries = (props) => {
@@ -77,11 +83,7 @@ export const Beneficiaries = (props) => {
 
   return (
     <>
-      <Container
-        tag="section"
-        aria-labelledby="involved-actors-title"
-        className="px-3 pt-5"
-      >
+      <Container tag="section" aria-labelledby="involved-actors-title" className="px-3 pt-5">
         <Row>
           <Col className="offset-lg-1">
             <Row>
@@ -93,33 +95,34 @@ export const Beneficiaries = (props) => {
               </Col>
             </Row>
             <Row>
-              {categories.map((category) => {
-                return (
-                  <React.Fragment key={category.name}>
-                    <Col lg="6" className="px-lg-3">
-                      <div className={classes.headCategory}>
-                        <img src={category.icon} alt="" />
-                        <h4 className="category-title">{category.name}</h4>
-                      </div>
+              {categories.map((category) => (
+                <React.Fragment key={category.name}>
+                  <Col lg="6" className="px-lg-3">
+                    <div className={classes.headCategory}>
+                      <img src={category.icon} alt="" />
+                      <h4 className="category-title">{category.name}</h4>
+                    </div>
+                    <ul className={classes.beneficiariesList}>
                       {category.items.map((item) => (
-                        <Link
-                          to="/misure"
-                          key={item.linkLabel}
-                          state={{
-                            filter: {
-                              value: item.filterId,
-                              label: item.linkLabel,
-                            },
-                          }}
-                          className={classes.linkItem}
-                        >
-                          <p>{item.linkLabel}</p>
-                        </Link>
+                        <li key={item.linkLabel}>
+                          <Link
+                            to="/misure"
+                            state={{
+                              filter: {
+                                value: item.filterId,
+                                label: item.linkLabel,
+                              },
+                            }}
+                            className={classes.linkItem}
+                          >
+                            <p>{item.linkLabel}</p>
+                          </Link>
+                        </li>
                       ))}
-                    </Col>
-                  </React.Fragment>
-                );
-              })}
+                    </ul>
+                  </Col>
+                </React.Fragment>
+              ))}
             </Row>
           </Col>
         </Row>
