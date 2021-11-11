@@ -23,6 +23,16 @@ const useStyle = createUseStyles({
       justifyContent: 'space-between',
       padding: [40, 0],
     },
+    '& .logos': {
+      '& a': {
+        '&:focus': {
+          boxShadow: 'none',
+          '& img': {
+            outline: '2px solid #ff9900',
+          }
+        }
+      }
+    }
   },
   slimFooter: {
     composes: 'it-footer-small-prints py-4',
