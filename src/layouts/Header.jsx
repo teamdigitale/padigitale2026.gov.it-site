@@ -84,7 +84,14 @@ const useStyle = createUseStyles({
     height: 'auto',
     padding: [16, 0],
     '& .it-header-center-content-wrapper .it-brand-wrapper a .icon': {
-      height: '3rem',
+      '&.site-logo': {
+        width: '3rem',
+        height: '3rem'
+      },
+      '&.repubblica-logo': {
+        width: '3.556rem',
+        height: '4rem'
+      }
     }
   },
   offCanvasWrapper: {
@@ -182,10 +189,11 @@ const useStyle = createUseStyles({
     padding: '0',
     backgroundColor: 'transparent',
     boxShadow: 'none',
-    '&:focus': {
+    '&:focus, &:hover': {
       color: '#0066CC',
       backgroundColor: 'transparent',
       outline: '2px solid #ff9900',
+      borderRadius: '0',
     },
     '@media (min-width: 992px)': {
       display: 'none',
@@ -270,12 +278,12 @@ const CenterHeader = () => {
             <div className="it-brand-text pr-0">
               <div className="d-md-flex align-items-center">
                 <img
-                  className="icon"
+                  className="icon repubblica-logo"
                   src="/assets/repubblica-logo-blue.svg"
                   alt="Logo Repubblica Italiana"
                 />
                 <img
-                  className="icon"
+                  className="icon site-logo"
                   src="/assets/site-logo.svg"
                   alt="Logo PA digitale 2026"
                 />
