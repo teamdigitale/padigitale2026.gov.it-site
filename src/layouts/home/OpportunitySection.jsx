@@ -61,6 +61,15 @@ const useStyle = createUseStyles({
       },
     },
   },
+  cardTitle: {
+    '& a': {
+      textDecoration: 'none',
+      fontWeight: '700',
+      '& span': {
+        fontWeight: 'normal',
+      },
+    },
+  },
 });
 
 export const OpportunitySection = (props) => {
@@ -70,14 +79,14 @@ export const OpportunitySection = (props) => {
 
   return (
     <Section color="muted" className={classes.section}>
-      <div className="container">
-        <h4 className={classes.title}>{title}</h4>
+      <section className="container" aria-labelledby="misure-section">
+        <h3 id="misure-section" className={classes.title}>{title}</h3>
         <Row className={classes.row} role="list">
           {list.map((item) => (
             <Col md="6" lg="3" key={item.title} className="px-md-3" role="listitem">
               <Card spacing className={classes.cardWrapper}>
                 <CardBody>
-                  <CardTitle tag="h4">
+                  <CardTitle className={classes.cardTitle}>
                   <Link to="/misure" onClick={() => dispatch({type: 'SET:SECTION_OPPORTUNITY_ID', payload: {sectionId: item.id}})}><span>{item.number}</span> {item.title}</Link>
                   </CardTitle>
                 </CardBody>
@@ -88,7 +97,7 @@ export const OpportunitySection = (props) => {
         <div className="d-flex justify-content-center">
           <Link to="/misure" className="text-uppercase btn btn-primary">Scopri tutte le misure</Link>
         </div>
-      </div>
+      </section>
     </Section>
   );
 };

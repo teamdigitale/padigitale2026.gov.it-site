@@ -135,7 +135,7 @@ export const HeroImageBackgroundFull = ({
               <div className={`${classes.contentWrapper}`}>
                 <div>
                   <HeroCategory title={category} />
-                  <HeroTitle title={title} className={classes.heroTitle} />
+                  <HeroTitle Tag="h4" title={title} className={classes.heroTitle} />
                   <HeroParagraph text={body} />
                 </div>
               </div>
