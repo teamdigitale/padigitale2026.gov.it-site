@@ -169,7 +169,6 @@ export const BeneficiariesSection = (props) => {
               isSearchable={false}
               value={selectValue || initialSelectValue}
               id="beneficiaries"
-              defaultMenuIsOpen={true}
               onChange={handleChange}
               onMenuOpen={handleOpen}
               onMenuClose={handleClose}
