@@ -380,8 +380,9 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
     })
       .then(async (response) => {
         const data = await response.json();
+        const status = response.status;
         setTimeout(() => {
-          if (response.status == '200') {
+          if (status >= 200 && status <= 299) {
             modalCloseBtn.click();
             notificationElement.classList.add('show');
             notificationElement.classList.add('success');
