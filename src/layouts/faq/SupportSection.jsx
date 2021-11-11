@@ -157,7 +157,11 @@ export const SupportSection = (props) => {
           {props.buttonLabel && (
             <Row>
               <Col md={8} lg={6} className={`${classes.layout} mt-5`}>
-                <Link to="/supporto" className="btn btn-primary text-uppercase">
+                <Link
+                  to="/supporto"
+                  className="btn btn-primary text-uppercase"
+                  aria-label="Scopri di più sulla pagina supporto"
+                >
                   {buttonLabel}
                 </Link>
               </Col>
