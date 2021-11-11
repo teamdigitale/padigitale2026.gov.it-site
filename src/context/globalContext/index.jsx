@@ -11,7 +11,7 @@ const reducer = (state, { type, payload }) => {
     case 'SET:FAQ_ID':
       return { ...state, faqId: payload.faqId };
     case 'SET:FOOTER_TYPE':
-      return { ...state, footerType: payload.footerType };
+      return { ...state, footerType: payload?.footerType || null };
     default:
       return { ...state };
   }
