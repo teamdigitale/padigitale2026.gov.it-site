@@ -243,6 +243,10 @@ const useStyles = createUseStyles({
       background: 'none',
     },
   },
+  modalFooterLabel: {
+    composes: 'mb-3',
+    fontSize: '0.889rem',
+  },
 });
 
 const query = graphql`
@@ -849,7 +853,11 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
             </Row>
           </form>
         </ModalBody>
-        <ModalFooter className="justify-content-center justify-content-md-start px-0 py-0">
+        <ModalFooter className="justify-content-center flex-column align-items-start justify-content-md-start px-0 py-0">
+          <p className={classes.modalFooterLabel}>
+            Cliccando su INVIA dichiaro di aver letto e compreso l'informativa
+            privacy
+          </p>
           <Button color="primary" type="submit" form="updates-form">
             {sendButtonLabel}
           </Button>
