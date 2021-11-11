@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'gatsby';
 import { createUseStyles } from 'react-jss';
 import links from '../../contents/links.yml';
@@ -84,12 +84,26 @@ const useStyle = createUseStyles({
 
 const SlimFooter = () => {
   const classes = useStyle();
+  const [{ footerType }] = useContext(GlobalStateContext);
+
+  const [heading, setHeading] = useState(null);
+
+  useEffect(() => {
+    setHeading(footerType);
+  }, [footerType]);
+
   return (
     <div className={classes.slimFooter}>
       <section className="container" aria-labelledby="linkutili-header">
-        <h3 id="linkutili-header" className="sr-only">
-          Link Utili
-        </h3>
+        {heading == null ? (
+          <h3 id="linkutili-header" className="sr-only">
+            Link Utili
+          </h3>
+        ) : (
+          <h2 id="linkutili-header" className="sr-only">
+            Link Utili
+          </h2>
+        )}
         <ul className="list-inline link-list mb-0 text-center text-md-left">
           <li className={`${classes.listItem} mr-0 mr-md-5`}>
             <Link
@@ -165,7 +179,16 @@ const MainFooter = () => {
             </ExternalLink>
           </div>
           <div className="info">
-            <Link to="/come-funziona" className={classes.seeMore} onClick={() => dispatch({type: 'SET:HOW_SECTION_ID', payload: {howId: 'attori-coinvolti'}})}>
+            <Link
+              to="/come-funziona"
+              className={classes.seeMore}
+              onClick={() =>
+                dispatch({
+                  type: 'SET:HOW_SECTION_ID',
+                  payload: { howId: 'attori-coinvolti' },
+                })
+              }
+            >
               Scopri l&apos;iniziativa
             </Link>
           </div>
