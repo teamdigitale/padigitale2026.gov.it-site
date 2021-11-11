@@ -6,3 +6,6 @@ error:
   title: Abbiamo riscontrato un problema tecnico
   description: Per favore, invia nuovamente la richiesta.
   icon: <svg role="img" focusable="false" aria-label="errore" class="icon" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M27.3337 8.53341V19.6001L19.467 27.3334H8.53366L0.666992 19.6001V8.53341L8.53366 0.666748H19.467L27.3337 8.53341ZM13.3337 5.60008V16.9334H14.9337V5.60008H13.3337ZM14.8003 22.4001H13.2003V20.0001H14.8003V22.4001ZM18.9337 2.00008L26.0003 9.06675V19.0667L18.9337 26.0001H9.06699L2.00033 19.0667V9.06675L9.06699 2.00008H18.9337Z" fill="#D1344C"/></svg>
+errorAddress:
+  title: 'Attenzione:'
+  description: l’email che hai indicato risulta già registrata.

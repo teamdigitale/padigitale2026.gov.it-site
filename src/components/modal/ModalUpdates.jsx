@@ -22,7 +22,11 @@ const {
   internalLinks: { privacy },
 } = links;
 
-const { success: successLabels, error: errorLabels } = notificationsLabel;
+const {
+  success: successLabels,
+  error: errorLabels,
+  errorAddress: errorAddressLabel,
+} = notificationsLabel;
 
 const useStyles = createUseStyles({
   modalUpdatesContainer: {
@@ -239,6 +243,10 @@ const useStyles = createUseStyles({
       background: 'none',
     },
   },
+  modalFooterLabel: {
+    composes: 'mb-3',
+    fontSize: '0.889rem',
+  },
 });
 
 const query = graphql`
@@ -346,7 +354,7 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
         key == 'representative' ||
         key == 'messageSelect'
       ) {
-        data[key] = data[key].value;
+        data[key] = data[key]?.value;
       }
     });
 
@@ -374,9 +382,11 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
       },
       body: JSON.stringify(data),
     })
-      .then((response) => {
+      .then(async (response) => {
+        const data = await response.json();
+        const status = response.status;
         setTimeout(() => {
-          if (response.status == '200') {
+          if (status >= 200 && status <= 299) {
             modalCloseBtn.click();
             notificationElement.classList.add('show');
             notificationElement.classList.add('success');
@@ -391,8 +401,13 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
             notificationElement.classList.add('show');
             notificationElement.classList.add('error');
 
-            titleElement.innerHTML = `${errorLabels.icon} ${errorLabels.title}`;
-            descriptionElement.innerHTML = errorLabels.description;
+            if (data.message.includes('already exists')) {
+              titleElement.innerHTML = `${errorLabels.icon} ${errorAddressLabel.title}`;
+              descriptionElement.innerHTML = errorAddressLabel.description;
+            } else {
+              titleElement.innerHTML = `${errorLabels.icon} ${errorLabels.title}`;
+              descriptionElement.innerHTML = errorLabels.description;
+            }
 
             setTimeout(() => {
               notificationElement.classList.remove('show');
@@ -838,7 +853,11 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
             </Row>
           </form>
         </ModalBody>
-        <ModalFooter className="justify-content-center justify-content-md-start px-0 py-0">
+        <ModalFooter className="justify-content-center flex-column align-items-start justify-content-md-start px-0 py-0">
+          <p className={classes.modalFooterLabel}>
+            Cliccando su INVIA dichiaro di aver letto e compreso l'informativa
+            privacy
+          </p>
           <Button color="primary" type="submit" form="updates-form">
             {sendButtonLabel}
           </Button>
@@ -857,9 +876,13 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                 notifiche
                 <svg className="icon" role="img" aria-label=""></svg>
               </h5>
-              <p>
-              </p>
-              <button type="button" className="btn notification-close" aria-label='Chiudi' aria-describedby="not2dms-title">
+              <p></p>
+              <button
+                type="button"
+                className="btn notification-close"
+                aria-label="Chiudi"
+                aria-describedby="not2dms-title"
+              >
                 <svg
                   width="19"
                   height="19"
@@ -867,7 +890,8 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                   focusable="false"
-                  role="img" aria-label="Chiudi"
+                  role="img"
+                  aria-label="Chiudi"
                 >
                   <rect
                     x="17.3242"

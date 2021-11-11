@@ -210,6 +210,7 @@ function Tabs(props) {
             onClick={() => {
               prevTab(state);
             }}
+            aria-label="vai al tab precedente"
           >
             {state.selectedKey === state.collection.firstKey ? (
               <Icon
@@ -228,6 +229,7 @@ function Tabs(props) {
         <div className={classes.sideNextButton}>
           <button
             type="button"
+            aria-label="vai al tab successivo"
             onClick={() => {
               nextTab(state);
             }}
@@ -250,6 +252,7 @@ function Tabs(props) {
           <div className={classes.mobileNavButton}>
             <button
               type="button"
+              aria-label="vai al tab precedente"
               onClick={() => {
                 prevTab(state);
               }}
@@ -269,6 +272,7 @@ function Tabs(props) {
           <div className={classes.mobileNavButton}>
             <button
               type="button"
+              aria-label="vai al tab successivo"
               onClick={() => {
                 nextTab(state);
               }}
