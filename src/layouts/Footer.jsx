@@ -7,7 +7,7 @@ import { GlobalStateContext } from '../context/globalContext';
 
 const {
   internalLinks: { privacy, noteLegali },
-  externalLinks: { dipartimento, a11y, eu, repubblica },
+  externalLinks: { dipartimento, a11y, eu, repubblica, ministeroMitd },
 } = links;
 
 const useStyle = createUseStyles({
@@ -17,13 +17,23 @@ const useStyle = createUseStyles({
   },
   mainWrapper: {
     padding: [50, 0],
-    '@media (min-width: 768px)': {
+    '@media (min-width: 992px)': {
       display: 'flex',
+      flexDirection: 'column',
       alignItems: 'center',
-      justifyContent: 'space-between',
       padding: [40, 0],
     },
+    '@media (min-width: 1200px)': {
+      justifyContent: 'space-between',
+      flexDirection: 'row',
+    },
     '& .logos': {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      '@media (min-width: 992px)': {
+        flexDirection: 'row',
+      },
       '& a': {
         '&:focus': {
           boxShadow: 'none',
@@ -45,20 +55,29 @@ const useStyle = createUseStyles({
     color: '#33485C',
     textDecoration: 'none',
     fontWeight: 'bold',
+    marginTop: '2.5rem',
+    display: 'block',
     '&:hover': {
       textDecoration: 'underline',
       color: '#33485C',
+    },
+    '@media (min-width: 1200px)': {
+      marginTop: '0',
     },
   },
   departmentLogo: {
     display: 'block',
     margin: [50, 'auto'],
-    '@media (min-width: 768px)': {
+    maxWidth: '400px',
+    width: '100%',
+    '@media (min-width: 992px)': {
+      width: 'auto',
       display: 'inline-block',
       margin: 0,
-      maxHeight: '45px',
-      marginLeft: '45px',
-      paddingLeft: '45px',
+      maxHeight: '2.5rem',
+      marginLeft: '2.5rem',
+      marginRight: '1.2rem',
+      paddingLeft: '1.5rem',
       borderLeft: '1px solid #E6E9F2',
     },
   },
@@ -83,7 +102,7 @@ const useStyle = createUseStyles({
     '&+.list-inline-item': {
       marginTop: '30px',
     },
-    '@media (min-width: 768px)': {
+    '@media (min-width: 992px)': {
       display: 'inline-block',
       '&+.list-inline-item': {
         marginTop: '0',
@@ -139,6 +158,7 @@ const MainFooter = () => {
       <div className="container text-center text-md-left">
         <div className={classes.mainWrapper}>
           <div className="logos">
+            <div className="d-flex align-items-center">
             <ExternalLink
               linkTo={eu.linkTo}
               ariaLabel={eu.ariaLabel}
@@ -161,18 +181,28 @@ const MainFooter = () => {
                 alt="Governo Italiano"
               />
             </ExternalLink>
+            </div>
+            <ExternalLink
+              linkTo={ministeroMitd.linkTo}
+              ariaLabel={ministeroMitd.ariaLabel}
+            >
+              <img
+                className={classes.departmentLogo}
+                src="/assets/mitd.svg"
+                alt=""
+              />
+            </ExternalLink>
             <ExternalLink
               linkTo={dipartimento.linkTo}
               ariaLabel={dipartimento.ariaLabel}
             >
               <img
-                className={classes.departmentLogo}
                 src="/assets/dipartimento.svg"
                 alt="Dipartimento per la trasformazione digitale"
               />
             </ExternalLink>
           </div>
-          <div className="info">
+          <div className="info text-center">
             <Link
               to="/come-funziona"
               className={classes.seeMore}
