@@ -16,7 +16,7 @@ import { GlobalStateContext } from '../context/globalContext';
 const { title: seoTitle, description: seoDescription } = seo.comeFunzionaPage;
 
 export const ComeFunzionaPage = () => {
-  const [{howId}, dispatch] = useContext(GlobalStateContext);
+  const [{ howId }, dispatch] = useContext(GlobalStateContext);
 
   useEffect(() => {
     if (howId) {
@@ -59,8 +59,21 @@ export const ComeFunzionaPage = () => {
       />
       <Timeline content={content.timeline} title="Il calendario" />
       <Beneficiaries item={content.beneficiaries} />
-      <Involved title={content.involved.title} category={content.involved.category} cards={content.involved.cards} />
-      <SupportSection supportList={support.cards} title={support.title} buttonLabel={support.buttonLabel} />
+      <Involved
+        title={content.involved.title}
+        category={content.involved.category}
+        cards={content.involved.cards}
+      />
+      <SupportSection
+        supportList={support.cards}
+        title={support.title}
+        buttonLabel={support.buttonLabel}
+        handleToggle={() => {
+          dispatch({
+            type: 'SET:TOGGLE_MODAL',
+          });
+        }}
+      />
     </>
   );
 };
