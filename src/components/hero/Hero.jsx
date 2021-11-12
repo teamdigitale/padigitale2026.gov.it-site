@@ -8,7 +8,7 @@ export const Hero = ({
   className,
   yPaddingXLScreen = true,
   Tag = 'div',
-  ariaLabelled,
+  ariaLabelledBy,
   children,
 }) => {
   const heroClasses = classNames(
@@ -25,7 +25,7 @@ export const Hero = ({
   });
   return (
     <div className={heroClasses}>
-      <Tag className={containerClass} aria-labelledby={ariaLabelled}>
+      <Tag className={containerClass} aria-labelledby={ariaLabelledBy}>
         {children}
       </Tag>
     </div>

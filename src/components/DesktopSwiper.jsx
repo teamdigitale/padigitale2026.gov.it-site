@@ -58,6 +58,7 @@ export const DesktopSwiper = ({
   desktopNavigation,
   navigation,
   className,
+  title,
 }) => {
   const classes = useStyles();
   const [paginationId, setPaginationId] = useState(null);
@@ -127,36 +128,37 @@ export const DesktopSwiper = ({
             className={classes.navigationBtn}
             type="button"
             data-prev-navigation-id={prevBtnId}
-            aria-label="Vai alla slide precedente"
+            aria-label={`Vai alla slide precedente di ${title}`}
             focusable="false"
           >
             <Icon color="primary" role="img" icon="it-arrow-left-circle" size="lg" />
           </button>
-          <button className={classes.navigationBtn} type="button" data-next-navigation-id={nextBtnId}>
-            <Icon
-              color="primary"
-              icon="it-arrow-right-circle"
-              size="lg"
-              role="img"
-              aria-label="Vai alla slide successiva"
-              focusable="false"
-            />
+          <button
+            className={classes.navigationBtn}
+            type="button"
+            data-next-navigation-id={nextBtnId}
+            aria-label={`Vai alla slide successiva di ${title}`}
+          >
+            <Icon color="primary" icon="it-arrow-right-circle" size="lg" role="img" focusable="false" />
           </button>
         </div>
       )}
       {navigation && (
         <div className="justify-content-center pt-3 d-flex">
-          <button className={classes.navigationBtn} type="button" data-prev-navigation-id={prevBtnId}>
-            <Icon
-              color="primary"
-              icon="it-arrow-left-circle"
-              size="lg"
-              role="img"
-              aria-label="Vai alla slide precedente"
-              focusable="false"
-            />
+          <button
+            className={classes.navigationBtn}
+            type="button"
+            data-prev-navigation-id={prevBtnId}
+            aria-label={`Vai alla slide precedente di ${title}`}
+          >
+            <Icon color="primary" icon="it-arrow-left-circle" size="lg" role="img" focusable="false" />
           </button>
-          <button className={classes.navigationBtn} type="button" data-next-navigation-id={nextBtnId}>
+          <button
+            className={classes.navigationBtn}
+            type="button"
+            data-next-navigation-id={nextBtnId}
+            aria-label={`Vai alla slide successiva di ${title}`}
+          >
             <Icon
               color="primary"
               icon="it-arrow-right-circle"
