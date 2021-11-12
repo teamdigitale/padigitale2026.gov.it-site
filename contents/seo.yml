@@ -1,26 +1,31 @@
 homePage:
-  title: PA digitale 2026
-  description: Le opportunità per una PA protagonista della transazione digitale
+  title: Le Risorse del PNRR per la Transizione Digitale - PA digitale 2026
+  description: PA Digitale 2026 è la piattaforma per richiedere i fondi del PNRR dedicati alla transizione digitale delle PA. Scopri le misure e le modalità di accesso
 privacyPage:
-  title: Informativa privacy - PA digitale 2026
-  description: Informativa sulla gestione dei cookie del sito padigitale2026.gov.it
+  title: Privacy Policy - PA digitale 2026
+  description: Privacy policy di PA Digitale 2026, la piattaforma per accedere ai fondi del PNRR dedicati alla transizione digitale
 noteLegaliPage:
-  title: Note legali - PA digitale 2026
-  description: Informativa sulle note legali del sito padigitale2026.gov.it
+  title: Note Legali - PA digitale 2026
+  description: Note legali di PA Digitale 2026, la piattaforma per accedere ai fondi del PNRR dedicati alla transizione digitale
 creditsPage:
   title: Crediti - PA digitale 2026
-  description: Elenco degli autori delle risorse visuali utilizzate per il sito padigitale2026.gov.it
+  description: Elenco degli autori delle risorse visuali utilizzate su PA Digitale 2026
 notFoundPage:
   title: Pagina non trovata - PA digitale 2026
   description: Pagina non trovata
 opportunityPage:
-  title: Le misure - PA digitale 2026
+  title: Le Misure del PNRR per la Transizione Digitale - PA digitale 2026
+  description: Scopri le misure del PNRR dedicate alla digitalizzazione della Pubblica Amministrazione italiana su PA Digitale 2026
 comeFunzionaPage:
-  title: Come funziona - PA digitale 2026
+  title: Come Funziona - PA digitale 2026
+  description: Scopri le modalità per accedere ai fondi del PNRR per la digitalizzazione della Pubblica Amministrazione attraverso la piattaforma PA Digitale 2026
 faqPage:
-  title: FAQ - PA digitale 2026
+  title: Domande Frequenti - PA digitale 2026
+  description: Domande frequenti su PA Digitale 2026, la piattaforma per richiedere i fondi del PNRR dedicati alla transizione digitale delle pubbliche amministrazioni
 supportPage:
   title: Supporto - PA digitale 2026
+  description: Ottieni supporto e trova le risposte alle domande più frequenti sulla richiesta dei fondi del PNRR dedicati alla transizione digitale della PA
 confirmPage:
-  title: Conferma email - PA digitale 2026
-  description: Conferma la tua email di iscrizione agli aggiornamenti
+  title: Conferma Email - PA digitale 2026
+  description: Conferma la tua email per ricevere agli aggiornamenti dalla piattaforma PA Digitale 2026
+  
