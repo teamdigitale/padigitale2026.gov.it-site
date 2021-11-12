@@ -189,7 +189,7 @@ const MainFooter = () => {
               <img
                 className={classes.departmentLogo}
                 src="/assets/mitd.svg"
-                alt=""
+                alt={ministeroMitd.ariaLabel}
               />
             </ExternalLink>
             <ExternalLink
@@ -198,7 +198,7 @@ const MainFooter = () => {
             >
               <img
                 src="/assets/dipartimento.svg"
-                alt="Dipartimento per la trasformazione digitale"
+                alt={dipartimento.ariaLabel}
               />
             </ExternalLink>
           </div>
