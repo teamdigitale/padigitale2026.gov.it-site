@@ -210,6 +210,8 @@ const useStyles = createUseStyles({
     opacity: '0',
     visibility: 'hidden',
     transition: '.3s ease',
+    bottom: 'unset',
+    top: '16px',
     '&.show': {
       opacity: '1',
       visibility: 'visible',
@@ -311,8 +313,6 @@ export const ModalUpdates = () => {
     number.innerHTML = textareaMaxLength - parseInt(event.target.value.length);
   };
 
-  const handleChange = (selectedOption) => setSelectValue(selectedOption);
-
   const classes = useStyles();
 
   useEffect(() => {}, [selectValue]);
@@ -381,10 +381,6 @@ export const ModalUpdates = () => {
               titleElement.innerHTML = `${errorLabels.icon} ${errorLabels.title}`;
               descriptionElement.innerHTML = errorLabels.description;
             }
-
-            setTimeout(() => {
-              notificationElement.classList.remove('show');
-            }, 5000);
           }
         }, 500);
       })
@@ -657,8 +653,7 @@ export const ModalUpdates = () => {
                       rules={{
                         required: {
                           value:
-                            enteState == 'public-administration' ||
-                            enteState == 'other'
+                            enteState == 'public-administration'
                               ? true
                               : false,
                           message: requiredLabel,
