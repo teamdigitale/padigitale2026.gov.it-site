@@ -90,7 +90,7 @@ export const ConfirmPage = ({ location }) => {
   return (
     <>
       <SEO title={seoTitle} description={seoDescription} />
-      <h1 className="sr-only">{content.title}</h1>
+      <h1 className="sr-only">{seoTitle}</h1>
       <Hero>
         {state.status === LOADING && (
           <div className="text-center text-primary">
