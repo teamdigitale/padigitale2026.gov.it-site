@@ -20,7 +20,9 @@ export const ComeFunzionaPage = () => {
 
   useEffect(() => {
     if (howId) {
-      document.querySelector('#' + howId).scrollIntoView();
+      const element = document.querySelector('#' + howId);
+      const elDistanceToTop = window.pageYOffset + element.getBoundingClientRect().top;
+      window.scrollTo(0, elDistanceToTop)
       return () => {
         dispatch({ type: 'SET:HOW_SECTION_ID' });
       };
