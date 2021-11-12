@@ -127,11 +127,10 @@ export const DesktopSwiper = ({
             className={classes.navigationBtn}
             type="button"
             data-prev-navigation-id={prevBtnId}
-            role="img"
             aria-label="Vai alla slide precedente"
             focusable="false"
           >
-            <Icon color="primary" icon="it-arrow-left-circle" size="lg" />
+            <Icon color="primary" role="img" icon="it-arrow-left-circle" size="lg" />
           </button>
           <button className={classes.navigationBtn} type="button" data-next-navigation-id={nextBtnId}>
             <Icon

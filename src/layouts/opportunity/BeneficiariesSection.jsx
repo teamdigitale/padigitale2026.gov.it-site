@@ -168,7 +168,7 @@ export const BeneficiariesSection = (props) => {
               styles={customStyles}
               isSearchable={false}
               value={selectValue || initialSelectValue}
-              id="beneficiaries"
+              inputId="beneficiaries"
               onChange={handleChange}
               onMenuOpen={handleOpen}
               onMenuClose={handleClose}

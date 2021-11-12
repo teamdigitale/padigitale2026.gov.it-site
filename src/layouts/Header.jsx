@@ -274,7 +274,7 @@ const SlimHeader = () => {
           <img
             className="d-none d-lg-block"
             src="/assets/eu-flag.svg"
-            alt=""
+            alt={externalLinks.eu.ariaLabel}
           ></img>
         </ExternalLink>
       </HeaderContent>
