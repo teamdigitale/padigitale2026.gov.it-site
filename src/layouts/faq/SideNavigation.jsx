@@ -212,7 +212,7 @@ export const SideNavigation = (props) => {
           )}
 
           {content.sidebar.map((anchor) => (
-            <>
+            <React.Fragment key={anchor.sectionId}>
               {anchor.sectionActive ? (
                 <LinkListItem
                   key={anchor.sectionId}
@@ -237,7 +237,7 @@ export const SideNavigation = (props) => {
                   <span>{anchor.sectionTitle}</span>
                 </LinkListItem>
               )}
-            </>
+            </React.Fragment>
           ))}
         </LinkList>
       </nav>
