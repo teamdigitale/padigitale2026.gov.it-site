@@ -77,11 +77,11 @@ opportunity:
       title: Digitalizzazione grandi amministrazioni centrali
       id: digi-gran-amm
     - number: 1.7.1
-      title: Centri di facilitazione digitale
-      id: centri-facili
-    - number: 1.7.2
       title: Servizio civile digitale
       id: servi-civi
+    - number: 1.7.2
+      title: Centri di facilitazione digitale
+      id: centri-facili
 heroCarouselNews:
   - id: 1
     category: Notizia

@@ -12,6 +12,8 @@ const reducer = (state, { type, payload }) => {
       return { ...state, faqId: payload.faqId };
     case 'SET:TOGGLE_MODAL':
       return { ...state, modalState: !state.modalState };
+      case 'SET:ACTIVE_HEADER':
+        return { ...state, activeItem: payload?.activeItem };
     default:
       return { ...state };
   }
