@@ -225,6 +225,13 @@ const useStyles = createUseStyles({
     composes: 'mb-3',
     fontSize: '0.889rem',
   },
+  spinner: {
+    composes: 'spinner hidden ml-3',
+    maxHeight: '2.667rem',
+    '&.hidden': {
+      display: 'none',
+    },
+  },
 });
 
 const query = graphql`
@@ -331,6 +338,9 @@ export const ModalUpdates = () => {
       }
     });
 
+    const spinner = document.querySelector('.spinner');
+    spinner.classList.remove('hidden');
+
     const notificationElement = document.querySelector('.notification');
     const titleElement = notificationElement.querySelector('h5');
     const descriptionElement = notificationElement.querySelector('p');
@@ -386,6 +396,9 @@ export const ModalUpdates = () => {
       })
       .catch((error) => {
         console.log(error);
+      })
+      .then(() => {
+        spinner.classList.add('hidden');
       });
   };
 
@@ -653,9 +666,7 @@ export const ModalUpdates = () => {
                       rules={{
                         required: {
                           value:
-                            enteState == 'public-administration'
-                              ? true
-                              : false,
+                            enteState == 'public-administration' ? true : false,
                           message: requiredLabel,
                         },
                       }}
@@ -776,9 +787,12 @@ export const ModalUpdates = () => {
             Cliccando su INVIA dichiaro di aver letto e compreso l'informativa
             privacy
           </p>
-          <Button color="primary" type="submit" form="updates-form">
-            {sendButtonLabel}
-          </Button>
+          <div className="d-flex">
+            <Button color="primary" type="submit" form="updates-form">
+              {sendButtonLabel}
+            </Button>
+            <img className={classes.spinner} src="assets/spinner.gif"></img>
+          </div>
         </ModalFooter>
       </Modal>
       <div className="container test-docs">
