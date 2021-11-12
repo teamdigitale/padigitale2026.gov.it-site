@@ -50,7 +50,7 @@ const useStyles = createUseStyles({
       paddingBottom: '4rem',
     },
     '&.bg-white': {
-      backgrodunColor: '#fff',
+      backgroundColor: '#fff',
       '& .it-hero-text-wrapper.bg-white span, h1, h2, h3, p': {
         color: '#33485C',
       },
@@ -65,7 +65,7 @@ const useStyles = createUseStyles({
       },
     },
     '&.bg-blue': {
-      backgrodunColor: '#0066CC',
+      backgroundColor: '#0066CC',
       '& .bg-blue': {
         color: '#fff',
       },
