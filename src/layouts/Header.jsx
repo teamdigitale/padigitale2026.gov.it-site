@@ -304,11 +304,12 @@ const CenterHeader = () => {
 };
 
 const NavHeader = () => {
-  const [{}, dispatch] = useContext(GlobalStateContext);
+  const [{activeItem}, dispatch] = useContext(GlobalStateContext);
   const [isOpen, setIsOpen] = useState(false);
   const closeMenu = () => setIsOpen(false);
   const toogleMenu = () => setIsOpen(!isOpen);
   const classes = useStyle();
+  
   return (
     <HeaderReactKit type="navbar" theme="light" className={classes.noShadow}>
       <HeaderContent
@@ -343,17 +344,29 @@ const NavHeader = () => {
                 </a>
               </li>
               <NavItem active>
-                <Link to={internalLinks.opportunity.linkTo} className="nav-link" onClick={closeMenu}>
+                <Link
+                  to={internalLinks.opportunity.linkTo}
+                  className={activeItem === 'misure' ? 'nav-link active' : 'nav-link'}
+                  onClick={closeMenu}
+                >
                   <span className="font-weight-semibold">{internalLinks.opportunity.label}</span>
                 </Link>
               </NavItem>
               <NavItem>
-                <Link to={internalLinks.howitworks.linkTo} className="nav-link" onClick={closeMenu}>
+                <Link
+                  to={internalLinks.howitworks.linkTo}
+                  className={activeItem === 'come-funziona' ? 'nav-link active' : 'nav-link'}
+                  onClick={closeMenu}
+                >
                   <span className="font-weight-semibold">{internalLinks.howitworks.label}</span>
                 </Link>
               </NavItem>
               <NavItem>
-                <Link to={internalLinks.support.linkTo} className="nav-link" onClick={closeMenu}>
+                <Link
+                  to={internalLinks.support.linkTo}
+                  className={activeItem === 'supporto' ? 'nav-link active' : 'nav-link'}
+                  onClick={closeMenu}
+                >
                   <span className="font-weight-semibold">{internalLinks.support.label}</span>
                 </Link>
               </NavItem>
