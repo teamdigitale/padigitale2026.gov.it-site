@@ -186,7 +186,7 @@ beneficiaries:
         label: Enti di ricerca pubblica
       - value: consorzi-ricerca
         label: Consorzi interuniversitari di ricerca
-    description: Accelerare l'adozione di PagoPa, l'applicazione digitale per i pagamenti tra cittadini e pubbliche amministrazione, e di app IO quale principale punto di contatto tra cittadini e amministrazione
+    description: Accelerare l'adozione di pagoPA, la piattaforma digitale per i pagamenti verso le Pubbliche Amministrazioni, e dell’app IO quale principale punto di contatto tra Enti e cittadini per la fruizione dei servizi pubblici digitali.
     stalls: '17,500 enti'
     accessSectionId: soluzioni-standard
     accessLabel: Soluzioni Standard
@@ -221,7 +221,7 @@ beneficiaries:
         label: Enti di ricerca pubblica
       - value: consorzi-ricerca
         label: Consorzi interuniversitari di ricerca
-    description: Favorire l'adozione dell’identità digitale (Sistema Pubblico di Identità Digitale, SPID e Carta d'Identità Elettronica, CIE) e dell'Anagrafe nazionale della popolazione residente (ANPR)
+    description: Favorire l'adozione dell’identità digitale (Sistema Pubblico di Identità Digitale, SPID e Carta d'Identità Elettronica, CIE) e dell'Anagrafe nazionale della popolazione residente (ANPR).
     stalls: '10,300 enti'
     accessSectionId: soluzioni-standard
     accessLabel: Soluzioni Standard
@@ -236,7 +236,7 @@ beneficiaries:
         label: PA Centrali
       - value: comuni
         label: Comuni
-    description: Sviluppare e implementare la Piattaforma notifiche, lo strumento che le PA utilizzeranno per la notificazione di atti amministrativi a valore legale verso persone fisiche e giuridiche, contribuendo ad una drastica riduzione di costi e tempo per cittadini ed enti. 
+    description: Sviluppare e implementare la Piattaforma notifiche digitali degli atti pubblici, l’infrastruttura che le PA utilizzeranno per la notificazione di atti amministrativi a valore legale verso persone fisiche e giuridiche, contribuendo ad una riduzione di costi e tempo per cittadini ed enti. 
     stalls: '7,900 enti'
     accessSectionId: soluzioni-standard
     accessLabel: Soluzioni standard
@@ -303,7 +303,7 @@ beneficiaries:
         label: Regioni
       - value: province-autonome
         label: Provincie autonome
-    description: Ampliare l’esperienza dei "Centri di facilitazione digitale", punti di accesso fisici, solitamente situati in biblioteche, scuole e centri sociali, che forniscono ai cittadini formazione sia di persona che online sulle competenze digitali al fine di supportare l’inclusione digitale
+    description: Ampliare l’esperienza dei "Centri di facilitazione digitale", punti di accesso fisici, solitamente situati in biblioteche, scuole e centri sociali, che forniscono ai cittadini formazione sia di persona che online sulle competenze digitali al fine di supportare l’inclusione digitale.
     stalls: '21 enti'
     accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
