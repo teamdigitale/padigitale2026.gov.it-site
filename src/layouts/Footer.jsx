@@ -145,7 +145,7 @@ const SlimFooter = () => {
 
 const MainFooter = () => {
   const classes = useStyle();
-  const [state, dispatch] = useContext(GlobalStateContext);
+  const [{activeItem}, dispatch] = useContext(GlobalStateContext);
 
   return (
     <div className={`${classes.mainFooter} it-footer-main`}>
@@ -172,18 +172,27 @@ const MainFooter = () => {
             </ExternalLink>
           </div>
           <div className="info text-center">
+            {activeItem === 'come-funziona' ?
             <Link
-              to="/come-funziona"
-              className={classes.seeMore}
-              onClick={() =>
-                dispatch({
-                  type: 'SET:HOW_SECTION_ID',
-                  payload: { howId: 'attori-coinvolti' },
-                })
-              }
-            >
-              Scopri l&apos;iniziativa
-            </Link>
+            to="#attori-coinvolti"
+            className={classes.seeMore}
+          >
+            Scopri l&apos;iniziativa
+          </Link> :
+          <Link
+            to="/come-funziona"
+            className={classes.seeMore}
+            onClick={() =>
+              dispatch({
+                type: 'SET:HOW_SECTION_ID',
+                payload: { howId: 'attori-coinvolti' },
+              })
+            }
+          >
+            Scopri l&apos;iniziativa
+          </Link>
+            }
+            
           </div>
         </div>
       </div>
