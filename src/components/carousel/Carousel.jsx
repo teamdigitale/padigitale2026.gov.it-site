@@ -23,7 +23,7 @@ const useStyles = createUseStyles({
         fontWeight: '600',
         color: '#33485C',
         marginBottom: '1rem',
-        textTransform: 'uppercase'
+        textTransform: 'uppercase',
       },
       '& h4.card-title': {
         color: '#0066CC',
@@ -73,6 +73,7 @@ const useStyles = createUseStyles({
     color: '#fff',
     fontSize: '1.556rem',
     whiteSpace: 'nowrap',
+    backgroundColor: '#0066CC',
   },
   newsUpdateSection: {
     backgroundColor: '#fff',
@@ -99,7 +100,7 @@ const useStyles = createUseStyles({
   },
   heroLink: {
     textDecoration: 'none',
-    marginTop: 'auto'
+    marginTop: 'auto',
   },
 });
 // const carousel = React.createRef();
@@ -114,7 +115,12 @@ export const HeroCarousel = ({ content, title }) => {
           <span className="category">{element.category}</span>
           <CardTitle tag="h4">{element.title}</CardTitle>
           <CardText>{element.description}</CardText>
-          <ExternalLink linkTo={element.linkTo} alt="" className={classes.heroLink}>
+          <ExternalLink
+            linkTo={element.linkTo}
+            alt=""
+            className={classes.heroLink}
+            ariaLabel={`${element.title} (Collegamento sito esterno apre su nuova scheda)`}
+          >
             <div className="source">
               {element.source}
               <img src={`/assets/external-link.svg`} alt="" />
@@ -149,6 +155,7 @@ export const HeroCarousel = ({ content, title }) => {
               },
             }}
             pagination
+            title={title}
           />
         </section>
       </div>

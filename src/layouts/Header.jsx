@@ -239,6 +239,7 @@ const SlimHeader = () => {
               className={classes.headerToggler}
               onClick={toggle}
               aria-expanded={collapse}
+              aria-label="Apre lista link esterni"
             >
               <Icon icon="it-expand" />
             </Button>
@@ -271,11 +272,7 @@ const SlimHeader = () => {
           href={externalLinks.italiaDigitale.linkTo}
           target="_blank"
         >
-          <img
-            className="d-none d-lg-block"
-            src="/assets/eu-flag.svg"
-            alt={externalLinks.eu.ariaLabel}
-          ></img>
+          <img className="d-none d-lg-block" src="/assets/eu-flag.svg" alt={externalLinks.eu.ariaLabel}></img>
         </ExternalLink>
       </HeaderContent>
     </HeaderReactKit>
@@ -285,11 +282,7 @@ const SlimHeader = () => {
 const CenterHeader = () => {
   const classes = useStyle();
   return (
-    <HeaderReactKit
-      type="center"
-      theme="light"
-      className={classes.headerCenterWrapper}
-    >
+    <HeaderReactKit type="center" theme="light" className={classes.headerCenterWrapper}>
       <HeaderContent>
         <div className="it-brand-wrapper pl-5 pl-sm-0">
           <Link to="/">
@@ -300,11 +293,7 @@ const CenterHeader = () => {
                   src="/assets/repubblica-logo-blue.svg"
                   alt="Logo Repubblica Italiana"
                 />
-                <img
-                  className="icon site-logo"
-                  src="/assets/site-logo.svg"
-                  alt="Logo PA digitale 2026"
-                />
+                <img className="icon site-logo" src="/assets/site-logo.svg" alt="Logo PA digitale 2026" />
                 <div className="d-none d-lg-inline-block">
                   <h1 className="h3 mb-0">{headerTitle}</h1>
                   <div className={classes.subtitle}>{headerSubtitle}</div>
@@ -351,11 +340,7 @@ const NavHeader = () => {
             <Nav navbar className={classes.navbarNav}>
               <li className={classes.offCanvasWrapper}>
                 <a href="/" tabIndex="-1">
-                  <img
-                    className="icon"
-                    src="/assets/site-logo.svg"
-                    alt="Logo"
-                  />
+                  <img className="icon" src="/assets/site-logo.svg" alt="Logo" />
                 </a>
                 <a href="/" className={classes.offCanvasTitle}>
                   {headerTitle}
@@ -368,9 +353,7 @@ const NavHeader = () => {
                   activeClassName="active"
                   onClick={closeMenu}
                 >
-                  <span className="font-weight-semibold">
-                    {internalLinks.opportunity.label}
-                  </span>
+                  <span className="font-weight-semibold">{internalLinks.opportunity.label}</span>
                 </Link>
               </NavItem>
               <NavItem>
@@ -380,9 +363,7 @@ const NavHeader = () => {
                   activeClassName="active"
                   onClick={closeMenu}
                 >
-                  <span className="font-weight-semibold">
-                    {internalLinks.howitworks.label}
-                  </span>
+                  <span className="font-weight-semibold">{internalLinks.howitworks.label}</span>
                 </Link>
               </NavItem>
               <NavItem>
@@ -392,9 +373,7 @@ const NavHeader = () => {
                   activeClassName="active"
                   onClick={closeMenu}
                 >
-                  <span className="font-weight-semibold">
-                    {internalLinks.support.label}
-                  </span>
+                  <span className="font-weight-semibold">{internalLinks.support.label}</span>
                 </Link>
               </NavItem>
               <NavItem active className={classes.updatesBtn}>
@@ -406,9 +385,7 @@ const NavHeader = () => {
                     dispatch({ type: 'SET:TOGGLE_MODAL' });
                   }}
                 >
-                  <span className="font-weight-semibold">
-                    {internalLinks.updates.label}
-                  </span>
+                  <span className="font-weight-semibold">{internalLinks.updates.label}</span>
                 </Button>
               </NavItem>
             </Nav>

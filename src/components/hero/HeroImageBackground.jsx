@@ -71,13 +71,13 @@ const useStyles = createUseStyles({
       paddingBottom: '5rem',
     },
     '&.bg-white': {
-      backgrodunColor: '#fff',
+      backgroundColor: '#fff',
       '& .it-hero-text-wrapper.bg-white span, h1, h2, h3, p': {
         color: '#33485C',
       },
     },
     '&.bg-blue': {
-      backgrodunColor: '#0066CC',
+      backgroundColor: '#0066CC',
       '& .bg-blue': {
         color: '#fff',
       },
@@ -195,7 +195,7 @@ export const HeroImageBackground = ({
               </div>
             </Col>
             <Col xs={12} lg={5} className={classes.imageContainer}>
-              <HeroBackground image={image} className={classes.heroImg}/>
+              <HeroBackground image={image} className={classes.heroImg} />
             </Col>
           </Row>
         </section>
