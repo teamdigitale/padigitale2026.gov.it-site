@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import {
   name,
   heroMain,
@@ -20,7 +20,7 @@ import { createUseStyles } from 'react-jss';
 import seo from '../../contents/seo.yml';
 import { SupportSection } from './faq/SupportSection';
 import { OpportunitySection } from './home/OpportunitySection';
-import { ModalUpdates } from '../components/modal/ModalUpdates';
+import { GlobalStateContext } from '../context/globalContext';
 
 const { title: seoTitle, description: seoDescription } = seo.homePage;
 
@@ -33,27 +33,26 @@ const useStyles = createUseStyles({
     '& .title': {
       fontSize: '1.25rem',
       color: '#0066CC',
-      fontWeight: 'bold'
+      fontWeight: 'bold',
     },
     '& .description': {
       fontSize: '1.25rem',
       color: '#0066CC',
-    }
-  }
+    },
+  },
 });
 
 export const IndexPage = () => {
   const classes = useStyles();
-  const [isOpen, setIsOpen] = useState(false);
-  const toggleModal = () => {
-    setIsOpen(!isOpen);
-  };
+  const [{ modalState }, dispatch] = useContext(GlobalStateContext);
   return (
     <>
       <SEO title={seoTitle} description={seoDescription} />
       <div className={classes.mobileTitle}>
         <h1 className="title">PA digitale 2026</h1>
-        <p className="description">Le opportunità per una PA protagonista della transizione digitale</p>
+        <p className="description">
+          Le opportunità per una PA protagonista della transizione digitale
+        </p>
       </div>
       <div className="sr-only">
         <h2>{name}</h2>
@@ -100,9 +99,13 @@ export const IndexPage = () => {
         supportList={support.cards}
         title={support.title}
         buttonLabel={support.buttonLabel}
-        handleToggle={toggleModal}
+        initialState={modalState}
+        handleToggle={() => {
+          dispatch({
+            type: 'SET:TOGGLE_MODAL',
+          });
+        }}
       />
-      <ModalUpdates initialState={isOpen} handleToggle={toggleModal} />
     </>
   );
 };

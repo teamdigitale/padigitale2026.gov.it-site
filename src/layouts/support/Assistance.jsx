@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 import { createUseStyles } from 'react-jss';
 import { Button } from 'design-react-kit';
@@ -8,13 +8,12 @@ import { HeroBody } from '../../components/hero/HeroBody';
 import { HeroCtaContainer } from '../../components/hero/HeroCtaContainer';
 import { HeroGraphic } from '../../components/hero/HeroGraphic';
 import { Hero } from '../../components/hero/Hero';
-import { ModalUpdates } from '../../components/modal/ModalUpdates';
 import content from '../../../contents/support-page/support.yml';
+import { GlobalStateContext } from '../../context/globalContext';
 
 const {
   heroAssistance: { title, body, btnText, altImg },
 } = content;
-
 
 const useStyle = createUseStyles({
   heroAssistanceBg: {
@@ -28,7 +27,7 @@ const useStyle = createUseStyles({
       fontSize: '1.778rem',
     },
   },
-  heroBtn:{
+  heroBtn: {
     textTransform: 'uppercase',
     marginTop: '1.5rem',
     '@media (min-width: 992px)': {
@@ -39,10 +38,7 @@ const useStyle = createUseStyles({
 
 export const Assistance = () => {
   const classes = useStyle();
-  const [isOpen, setIsOpen] = useState(false);
-  const toggleModal = () => {
-    setIsOpen(!isOpen);
-  };
+  const [{ modalState }, dispatch] = useContext(GlobalStateContext);
 
   return (
     <React.Fragment>
@@ -52,7 +48,15 @@ export const Assistance = () => {
             <HeroTitle title={title} className={classes.heroTitle} />
             <HeroBody html={body} />
             <HeroCtaContainer>
-              <Button color='primary' className={classes.heroBtn} onClick={() => toggleModal()}>{btnText}</Button>
+              <Button
+                color="primary"
+                className={classes.heroBtn}
+                onClick={() => {
+                  dispatch({ type: 'SET:TOGGLE_MODAL' });
+                }}
+              >
+                {btnText}
+              </Button>
             </HeroCtaContainer>
           </div>
           <HeroGraphic className="col-lg-6 text-center mt-4 mt-lg-0">
@@ -64,7 +68,6 @@ export const Assistance = () => {
           </HeroGraphic>
         </div>
       </Hero>
-      <ModalUpdates initialState={isOpen} handleToggle={toggleModal} />
     </React.Fragment>
   );
 };
