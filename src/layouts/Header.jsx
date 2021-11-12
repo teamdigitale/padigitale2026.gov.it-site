@@ -308,11 +308,12 @@ const CenterHeader = () => {
 };
 
 const NavHeader = () => {
-  const [{}, dispatch] = useContext(GlobalStateContext);
+  const [{activeItem}, dispatch] = useContext(GlobalStateContext);
   const [isOpen, setIsOpen] = useState(false);
   const closeMenu = () => setIsOpen(false);
   const toogleMenu = () => setIsOpen(!isOpen);
   const classes = useStyle();
+  
   return (
     <HeaderReactKit type="navbar" theme="light" className={classes.noShadow}>
       <HeaderContent
@@ -349,8 +350,7 @@ const NavHeader = () => {
               <NavItem active>
                 <Link
                   to={internalLinks.opportunity.linkTo}
-                  className="nav-link"
-                  activeClassName="active"
+                  className={activeItem === 'misure' ? 'nav-link active' : 'nav-link'}
                   onClick={closeMenu}
                 >
                   <span className="font-weight-semibold">{internalLinks.opportunity.label}</span>
@@ -359,8 +359,7 @@ const NavHeader = () => {
               <NavItem>
                 <Link
                   to={internalLinks.howitworks.linkTo}
-                  className="nav-link"
-                  activeClassName="active"
+                  className={activeItem === 'come-funziona' ? 'nav-link active' : 'nav-link'}
                   onClick={closeMenu}
                 >
                   <span className="font-weight-semibold">{internalLinks.howitworks.label}</span>
@@ -369,8 +368,7 @@ const NavHeader = () => {
               <NavItem>
                 <Link
                   to={internalLinks.support.linkTo}
-                  className="nav-link"
-                  activeClassName="active"
+                  className={activeItem === 'supporto' ? 'nav-link active' : 'nav-link'}
                   onClick={closeMenu}
                 >
                   <span className="font-weight-semibold">{internalLinks.support.label}</span>
@@ -379,7 +377,6 @@ const NavHeader = () => {
               <NavItem active className={classes.updatesBtn}>
                 <Button
                   className="nav-link"
-                  activeClassName="active"
                   onClick={() => {
                     closeMenu();
                     dispatch({ type: 'SET:TOGGLE_MODAL' });
