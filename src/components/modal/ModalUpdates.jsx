@@ -198,6 +198,8 @@ const useStyles = createUseStyles({
     transition: '.3s ease',
     bottom: 'unset',
     top: '16px',
+    left: '50%',
+    transform: 'translateX(-50%)',
     '&.show': {
       opacity: '1',
       visibility: 'visible',
