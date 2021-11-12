@@ -433,7 +433,7 @@ export const ModalUpdates = () => {
             }}
           >
             <span>Chiudi</span>
-            <img src="assets/icon-close.svg" alt="chiudi modale" aria-hidden="true" />
+            <img src="/assets/icon-close.svg" alt="chiudi modale" aria-hidden="true" />
           </Button>
         </div>
         <p className={classes.modalSubtitle} dangerouslySetInnerHTML={{ __html: modalSubtitle }}></p>
@@ -442,7 +442,7 @@ export const ModalUpdates = () => {
             <fieldset>
               <Row>
                 <Col xs={12}>
-                  <img src="assets/icon-updates.svg" alt="" />
+                  <img src="/assets/icon-updates.svg" alt="" />
                 </Col>
               </Row>
               <legend>
@@ -636,7 +636,7 @@ export const ModalUpdates = () => {
               <legend>
                 <Row className="mt-5">
                   <Col xs={12}>
-                    <img src="assets/icon-chat.svg" alt="" />
+                    <img src="/assets/icon-chat.svg" alt="" />
                   </Col>
                 </Row>
                 <Row className="mt-3">
@@ -713,7 +713,7 @@ export const ModalUpdates = () => {
             <Button color="primary" type="submit" form="updates-form">
               {sendButtonLabel}
             </Button>
-            <img className={classes.spinner} src="assets/spinner.gif"></img>
+            <img className={classes.spinner} src="/assets/spinner.gif"></img>
           </div>
         </ModalFooter>
       </Modal>
