@@ -95,7 +95,9 @@ export const ConfirmPage = ({ location }) => {
         {state.status === LOADING && (
           <div className="text-center text-primary">
             <div className="display-3">{content[state.status].title}</div>
-            <div className="my-4 text-dark" dangerouslySetInnerHTML={{ __html: content[state.status].body }} />
+            <div className="progress-spinner progress-spinner-active mx-auto mt-5">
+              <span className="sr-only">Caricamento...</span>
+            </div>
           </div>
         )}
         {state.status === ERROR && (
