@@ -86,13 +86,13 @@ const useStyle = createUseStyles({
     '& .it-header-center-content-wrapper .it-brand-wrapper a .icon': {
       '&.site-logo': {
         width: '3rem',
-        height: '3rem'
+        height: '3rem',
       },
       '&.repubblica-logo': {
         width: '3.556rem',
-        height: '4rem'
-      }
-    }
+        height: '4rem',
+      },
+    },
   },
   offCanvasWrapper: {
     padding: [13, 24],
@@ -220,13 +220,20 @@ const SlimHeader = () => {
         </HeaderBrand>
         <HeaderLinkZone aria-label="Siti esterni correlati">
           <div className={classes.headerToggler}>
-            <a href="https://innovazione.gov.it/" target="_blank" className={classes.headerLink} aria-label="Dipartimento per la Trasformazione Digitale (Collegamento esterno - Apre su nuova scheda)" rel="noreferrer">
+            <a
+              href="https://innovazione.gov.it/"
+              target="_blank"
+              className={classes.headerLink}
+              aria-label="Dipartimento per la Trasformazione Digitale (Collegamento esterno - Apre su nuova scheda)"
+              rel="noreferrer"
+            >
               {externalLinks.dipartimento.label}
             </a>
             <Button
-            className={classes.headerToggler}
+              className={classes.headerToggler}
               onClick={toggle}
               aria-expanded={collapse}
+              aria-label="Apre lista link esterni"
             >
               <Icon icon="it-expand" />
             </Button>
@@ -255,11 +262,7 @@ const SlimHeader = () => {
           href={externalLinks.italiaDigitale.linkTo}
           target="_blank"
         >
-          <img
-            className="d-none d-lg-block"
-            src="/assets/eu-flag.svg"
-            alt={externalLinks.eu.ariaLabel}
-          ></img>
+          <img className="d-none d-lg-block" src="/assets/eu-flag.svg" alt={externalLinks.eu.ariaLabel}></img>
         </ExternalLink>
       </HeaderContent>
     </HeaderReactKit>
@@ -269,11 +272,7 @@ const SlimHeader = () => {
 const CenterHeader = () => {
   const classes = useStyle();
   return (
-    <HeaderReactKit
-      type="center"
-      theme="light"
-      className={classes.headerCenterWrapper}
-    >
+    <HeaderReactKit type="center" theme="light" className={classes.headerCenterWrapper}>
       <HeaderContent>
         <div className="it-brand-wrapper pl-5 pl-sm-0">
           <Link to="/">
@@ -284,11 +283,7 @@ const CenterHeader = () => {
                   src="/assets/repubblica-logo-blue.svg"
                   alt="Logo Repubblica Italiana"
                 />
-                <img
-                  className="icon site-logo"
-                  src="/assets/site-logo.svg"
-                  alt="Logo PA digitale 2026"
-                />
+                <img className="icon site-logo" src="/assets/site-logo.svg" alt="Logo PA digitale 2026" />
                 <div className="d-none d-lg-inline-block">
                   <h1 className="h3 mb-0">{headerTitle}</h1>
                   <div className={classes.subtitle}>{headerSubtitle}</div>
@@ -334,11 +329,7 @@ const NavHeader = ({ toggleModal }) => {
             <Nav navbar className={classes.navbarNav}>
               <li className={classes.offCanvasWrapper}>
                 <a href="/" tabIndex="-1">
-                  <img
-                    className="icon"
-                    src="/assets/site-logo.svg"
-                    alt="Logo"
-                  />
+                  <img className="icon" src="/assets/site-logo.svg" alt="Logo" />
                 </a>
                 <a href="/" className={classes.offCanvasTitle}>
                   {headerTitle}
@@ -351,9 +342,7 @@ const NavHeader = ({ toggleModal }) => {
                   activeClassName="active"
                   onClick={closeMenu}
                 >
-                  <span className="font-weight-semibold">
-                    {internalLinks.opportunity.label}
-                  </span>
+                  <span className="font-weight-semibold">{internalLinks.opportunity.label}</span>
                 </Link>
               </NavItem>
               <NavItem>
@@ -363,9 +352,7 @@ const NavHeader = ({ toggleModal }) => {
                   activeClassName="active"
                   onClick={closeMenu}
                 >
-                  <span className="font-weight-semibold">
-                    {internalLinks.howitworks.label}
-                  </span>
+                  <span className="font-weight-semibold">{internalLinks.howitworks.label}</span>
                 </Link>
               </NavItem>
               <NavItem>
@@ -375,9 +362,7 @@ const NavHeader = ({ toggleModal }) => {
                   activeClassName="active"
                   onClick={closeMenu}
                 >
-                  <span className="font-weight-semibold">
-                    {internalLinks.support.label}
-                  </span>
+                  <span className="font-weight-semibold">{internalLinks.support.label}</span>
                 </Link>
               </NavItem>
               <NavItem active className={classes.updatesBtn}>
@@ -389,9 +374,7 @@ const NavHeader = ({ toggleModal }) => {
                     toggleModal();
                   }}
                 >
-                  <span className="font-weight-semibold">
-                    {internalLinks.updates.label}
-                  </span>
+                  <span className="font-weight-semibold">{internalLinks.updates.label}</span>
                 </Button>
               </NavItem>
             </Nav>
