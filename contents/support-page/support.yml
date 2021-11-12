@@ -1,7 +1,7 @@
 name: Supporto - PA digitale 2026
 mainHero:
   title: Hai bisogno di chiarimenti o supporto?
-  description: Consulta le <strong>le domande frequenti</strong> o <strong>compila il modulo</strong> per ricevere una risposta via email
+  description: Consulta le <strong>le domande frequenti</strong> o <strong>scrivici</strong> per ricevere una risposta via email
 faqSection:
   buttonLink: '/faq'
   buttonLabel: Vai alle domande frequenti
@@ -20,6 +20,6 @@ faqSection:
       faqId: faq-3
 heroAssistance:
   title: Richiedi assistenza
-  body: 'Se non hai trovato le informazioni che cercavi fra le domande frequenti, <strong>compila il modulo dedicato</strong>: ti risponderemo al più presto'
+  body: 'Se non hai trovato le informazioni che cercavi fra le domande frequenti, <strong>scrivici</strong>: ti risponderemo al più presto'
   altImg: immagine placeholder
-  btnText: compila il modulo
+  btnText: scrivici
