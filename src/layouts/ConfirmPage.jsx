@@ -60,7 +60,7 @@ export const ConfirmPage = ({ location }) => {
       });
       return;
     }
-    const { address } = jwt_decode(jwt);
+    const { address, unique_id } = jwt_decode(jwt);
     const options = {
       crossDomain: true,
       method: 'PUT',
@@ -70,7 +70,7 @@ export const ConfirmPage = ({ location }) => {
       body: JSON.stringify({ jwt }),
     };
     try {
-      const response = await fetch(`${apiUrl}/users/${address}/confirm`, options);
+      const response = await fetch(`${apiUrl}/users/${address}/${unique_id}/confirm`, options);
       const { status } = response;
       const message = await response.json();
       if (status >= 200 && status <= 299) {
