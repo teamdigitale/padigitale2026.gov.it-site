@@ -90,12 +90,14 @@ export const ConfirmPage = ({ location }) => {
   return (
     <>
       <SEO title={seoTitle} description={seoDescription} />
-      <h1 className="sr-only">{content.title}</h1>
+      <h1 className="sr-only">{seoTitle}</h1>
       <Hero>
         {state.status === LOADING && (
           <div className="text-center text-primary">
             <div className="display-3">{content[state.status].title}</div>
-            <div className="my-4 text-dark" dangerouslySetInnerHTML={{ __html: content[state.status].body }} />
+            <div className="progress-spinner progress-spinner-active mx-auto mt-5">
+              <span className="sr-only">Caricamento...</span>
+            </div>
           </div>
         )}
         {state.status === ERROR && (
