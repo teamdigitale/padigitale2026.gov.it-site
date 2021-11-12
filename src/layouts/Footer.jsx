@@ -39,10 +39,10 @@ const useStyle = createUseStyles({
           boxShadow: 'none',
           '& img': {
             outline: '2px solid #ff9900',
-          }
-        }
-      }
-    }
+          },
+        },
+      },
+    },
   },
   slimFooter: {
     composes: 'it-footer-small-prints py-4',
@@ -119,18 +119,12 @@ const SlimFooter = () => {
       <section className="container" aria-labelledby="linkutili-header">
         <ul className="list-inline link-list mb-0 text-center text-md-left">
           <li className={`${classes.listItem} mr-0 mr-md-5`}>
-            <Link
-              to={noteLegali.linkTo}
-              className="list-item mid-footer-link mx-4 mx-md-0"
-            >
+            <Link to={noteLegali.linkTo} className="list-item mid-footer-link mx-4 mx-md-0">
               {noteLegali.label}
             </Link>
           </li>
           <li className={`${classes.listItem} mr-0 mr-md-5`}>
-            <Link
-              to={privacy.linkTo}
-              className="list-item mid-footer-link mx-4 mx-md-0"
-            >
+            <Link to={privacy.linkTo} className="list-item mid-footer-link mx-4 mx-md-0">
               {privacy.label}
             </Link>
           </li>
@@ -159,47 +153,22 @@ const MainFooter = () => {
         <div className={classes.mainWrapper}>
           <div className="logos">
             <div className="d-flex align-items-center">
-            <ExternalLink
-              linkTo={eu.linkTo}
-              ariaLabel={eu.ariaLabel}
-              className={classes.footerLogo}
-            >
-              <img
-                className={classes.logoImg}
-                src="/assets/eu-flag.svg"
-                alt="Unione Europea"
-              />
-            </ExternalLink>
-            <ExternalLink
-              linkTo={repubblica.linkTo}
-              ariaLabel={repubblica.ariaLabel}
-              className={classes.footerLogo}
-            >
-              <img
-                className={`${classes.logoImg} logo-gov`}
-                src="/assets/repubblica-logo-colorato.svg"
-                alt="Governo Italiano"
-              />
-            </ExternalLink>
+              <ExternalLink linkTo={eu.linkTo} ariaLabel={eu.ariaLabel} className={classes.footerLogo}>
+                <img className={classes.logoImg} src="/assets/eu-flag.svg" alt="Unione Europea" />
+              </ExternalLink>
+              <ExternalLink linkTo={repubblica.linkTo} ariaLabel={repubblica.ariaLabel} className={classes.footerLogo}>
+                <img
+                  className={`${classes.logoImg} logo-gov`}
+                  src="/assets/repubblica-logo-colorato.svg"
+                  alt="Governo Italiano"
+                />
+              </ExternalLink>
             </div>
-            <ExternalLink
-              linkTo={ministeroMitd.linkTo}
-              ariaLabel={ministeroMitd.ariaLabel}
-            >
-              <img
-                className={classes.departmentLogo}
-                src="/assets/mitd.svg"
-                alt={ministeroMitd.ariaLabel}
-              />
+            <ExternalLink linkTo={ministeroMitd.linkTo} ariaLabel={ministeroMitd.ariaLabel}>
+              <img className={classes.departmentLogo} src="/assets/mitd.svg" alt={ministeroMitd.ariaLabel} />
             </ExternalLink>
-            <ExternalLink
-              linkTo={dipartimento.linkTo}
-              ariaLabel={dipartimento.ariaLabel}
-            >
-              <img
-                src="/assets/dipartimento.svg"
-                alt={dipartimento.ariaLabel}
-              />
+            <ExternalLink linkTo={dipartimento.linkTo} ariaLabel={dipartimento.ariaLabel}>
+              <img src="/assets/dipartimento.svg" alt={dipartimento.ariaLabel} />
             </ExternalLink>
           </div>
           <div className="info text-center">
