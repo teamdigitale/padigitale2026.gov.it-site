@@ -66,11 +66,11 @@ externalLinks:
   dipartimento:
     label: Dipartimento per la Trasformazione Digitale
     linkTo: https://innovazione.gov.it
-    ariaLabel: 'Dipartimento per la Trasformazione Digitale (Collegamento esterno - Apre su nuova scheda)'
+    ariaLabel: 'Dipartimento per la Trasformazione Digitale'
   ministeroMitd:
     label: "Ministero per l'innovazione tecnologica e la transizione digitale"
     linkTo: 'https://innovazione.gov.it/'
-    ariaLabel: "Ministero per l'innovazione tecnologica e la transizione digitale (Collegamento esterno - Apre su nuova scheda)"
+    ariaLabel: "Ministero per l'innovazione tecnologica e la transizione digitale"
   eu:
     linkTo: https://ec.europa.eu/info/index_it
     ariaLabel: 'Unione Europea (Collegamento esterno - Apre su nuova scheda)'

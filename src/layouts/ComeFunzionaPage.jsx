@@ -48,6 +48,7 @@ export const ComeFunzionaPage = () => {
         title={content.pacchettiTabs.title}
         subtitle={content.pacchettiTabs.subtitle}
         sectionId="soluzioni-standard"
+        ariaLabel="Tabs delle soluzioni standard"
       />
       <TabAdobe
         tabContent={content.presentazioneTabs}
@@ -56,6 +57,7 @@ export const ComeFunzionaPage = () => {
         title={content.presentazioneTabs.title}
         subtitle={content.presentazioneTabs.subtitle}
         sectionId="presentazione-progetto"
+        ariaLabel="Tabs della presentazione progetti"
       />
       <Timeline content={content.timeline} title="Il calendario" />
       <Beneficiaries item={content.beneficiaries} />

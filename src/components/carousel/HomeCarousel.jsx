@@ -185,6 +185,7 @@ export const HomeCarousel = ({ content, title }) => {
                 className={classes.noHidden}
                 mobilePagination
                 desktopNavigation
+                title="home hero carousel"
               />
             </Col>
           </Row>

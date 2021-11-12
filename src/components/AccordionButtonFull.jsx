@@ -1,9 +1,9 @@
-import React, { useContext }from 'react';
+import React, { useContext } from 'react';
 import { Button, Collapse, Card, CardBody } from 'design-react-kit';
 import { createUseStyles } from 'react-jss';
-import { ExternalLink } from './ExternalLink';
 import { Link } from 'gatsby';
 import { GlobalStateContext } from '../context/globalContext';
+import { ExternalLink } from './ExternalLink';
 
 const useStyles = createUseStyles({
   collapseWrapper: {
@@ -66,7 +66,7 @@ const useStyles = createUseStyles({
       '@media (min-width: 992px)': {
         marginBottom: '0',
         marginRight: '0.444rem',
-        fontSize: '0.778rem'
+        fontSize: '0.778rem',
       },
     },
     '& .tag-wrapper': {
@@ -124,9 +124,9 @@ const useStyles = createUseStyles({
       },
       '& .description': {
         '@media (min-width: 992px)': {
-          maxWidth: '44rem'
+          maxWidth: '44rem',
         },
-      }
+      },
     },
     '& .stalls': {
       fontSize: '0.875rem',
@@ -194,7 +194,7 @@ const useStyles = createUseStyles({
     backgroundPosition: 'center',
     '&:focus': {
       outline: '2px solid #ff9900',
-      boxShadow: 'none'
+      boxShadow: 'none',
     },
     '&:hover, &:focus': {
       backgroundColor: '#0066CC',
@@ -239,7 +239,7 @@ export const AccordionButtonFull = (props) => {
     moreInfoLink,
   } = props.data;
 
-  const [state, dispatch] = useContext(GlobalStateContext)
+  const [state, dispatch] = useContext(GlobalStateContext);
 
   const eventHandler = () => {
     props.handleToggle(props.id);
@@ -263,20 +263,15 @@ export const AccordionButtonFull = (props) => {
             <div className={classes.cardTags}>
               <p className="tag-title">Beneficiari</p>
               <div className="tag-wrapper">
-                {tags.map((tag) => {
-                    return (
-                      <div key={tag.label} className="tag">
-                        {tag.label}
-                      </div>
-                    );
-                  })}
+                {tags.map((tag) => (
+                  <div key={tag.label} className="tag">
+                    {tag.label}
+                  </div>
+                ))}
               </div>
             </div>
           </div>
-          <Collapse
-            isOpen={props.id === props.active}
-            className={classes.collapseAccordion}
-          >
+          <Collapse isOpen={props.id === props.active} className={classes.collapseAccordion}>
             <Card>
               <CardBody>
                 <p className="description">{description}</p>
@@ -285,12 +280,18 @@ export const AccordionButtonFull = (props) => {
                 </p>
                 <div className="access">
                   <span>Modalità di accesso:</span>{' '}
-                  <Link to="/come-funziona" onClick={() => dispatch({type: 'SET:HOW_SECTION_ID', payload: {howId: accessSectionId}})}>
+                  <Link
+                    to="/come-funziona"
+                    onClick={() => dispatch({ type: 'SET:HOW_SECTION_ID', payload: { howId: accessSectionId } })}
+                  >
                     <p>{accessLabel}</p>
                   </Link>
                 </div>
                 <div className={classes.linkAccordion}>
-                  <ExternalLink linkTo={moreInfoLink} ariaLabel={`${moreInfoLabel}, ${title}, (Collegamento esterno - Apre su nuova scheda)`}>
+                  <ExternalLink
+                    linkTo={moreInfoLink}
+                    ariaLabel={`${moreInfoLabel}, ${title}, (Collegamento esterno - Apre su nuova scheda)`}
+                  >
                     {moreInfoLabel}
                     <img src="/assets/external-icon.svg" alt="" />
                   </ExternalLink>

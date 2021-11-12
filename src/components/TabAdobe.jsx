@@ -337,7 +337,7 @@ function TabPanel({ state, ...props }) {
   );
 }
 
-export const TabAdobe = ({ tabContent, sideDesktopNavigation, mobileNavigation, title, subtitle, sectionId }) => {
+export const TabAdobe = ({ tabContent, sideDesktopNavigation, mobileNavigation, title, subtitle, sectionId, ariaLabel }) => {
   const classes = useStyles();
   return (
     <>
@@ -364,7 +364,7 @@ export const TabAdobe = ({ tabContent, sideDesktopNavigation, mobileNavigation, 
           <Row>
             <Col xs="12" lg="10" className="offset-lg-1 position-static">
               <Tabs
-                aria-label="History of Ancient Rome"
+                aria-label={ariaLabel}
                 sideDesktopNavigation={sideDesktopNavigation}
                 mobileNavigation={mobileNavigation}
               >

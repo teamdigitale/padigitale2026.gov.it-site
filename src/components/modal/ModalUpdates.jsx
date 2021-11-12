@@ -104,7 +104,7 @@ const useStyles = createUseStyles({
     },
     '& [class$="-ValueContainer"]': {
       paddingLeft: '1.333rem',
-      fontSize: '0.889',
+      fontSize: '0.889rem',
       color: '#808080',
     },
     '& [class$="-indicatorSeparator"]': {

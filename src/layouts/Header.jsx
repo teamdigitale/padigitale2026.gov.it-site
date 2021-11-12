@@ -216,12 +216,7 @@ const SlimHeader = () => {
   return (
     <HeaderReactKit type="slim" theme="light">
       <HeaderContent>
-        <HeaderBrand
-          href="https://innovazione.gov.it/"
-          target="_blank"
-          className={classes.headerLink}
-          rel="noreferrer"
-        >
+        <HeaderBrand href="https://innovazione.gov.it/" target="_blank" className={classes.headerLink} rel="noreferrer">
           {externalLinks.dipartimento.label}
         </HeaderBrand>
         <HeaderLinkZone aria-label="Siti esterni correlati">
@@ -259,6 +254,7 @@ const SlimHeader = () => {
                   href={externalLinks.pnrr.linkTo}
                   target="_blank"
                   rel="noreferrer"
+                  aria-label="Italia domani - PNRR (Collegamento esterno - Apre su nuova scheda)"
                 >
                   {externalLinks.pnrr.label}
                 </LinkListItem>
@@ -347,39 +343,23 @@ const NavHeader = () => {
                 </a>
               </li>
               <NavItem active>
-                <Link
-                  to={internalLinks.opportunity.linkTo}
-                  className="nav-link"
-                  activeClassName="active"
-                  onClick={closeMenu}
-                >
+                <Link to={internalLinks.opportunity.linkTo} className="nav-link" onClick={closeMenu}>
                   <span className="font-weight-semibold">{internalLinks.opportunity.label}</span>
                 </Link>
               </NavItem>
               <NavItem>
-                <Link
-                  to={internalLinks.howitworks.linkTo}
-                  className="nav-link"
-                  activeClassName="active"
-                  onClick={closeMenu}
-                >
+                <Link to={internalLinks.howitworks.linkTo} className="nav-link" onClick={closeMenu}>
                   <span className="font-weight-semibold">{internalLinks.howitworks.label}</span>
                 </Link>
               </NavItem>
               <NavItem>
-                <Link
-                  to={internalLinks.support.linkTo}
-                  className="nav-link"
-                  activeClassName="active"
-                  onClick={closeMenu}
-                >
+                <Link to={internalLinks.support.linkTo} className="nav-link" onClick={closeMenu}>
                   <span className="font-weight-semibold">{internalLinks.support.label}</span>
                 </Link>
               </NavItem>
-              <NavItem active className={classes.updatesBtn}>
+              <NavItem className={classes.updatesBtn} active>
                 <Button
                   className="nav-link"
-                  activeClassName="active"
                   onClick={() => {
                     closeMenu();
                     dispatch({ type: 'SET:TOGGLE_MODAL' });
