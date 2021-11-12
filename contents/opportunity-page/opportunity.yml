@@ -344,7 +344,7 @@ modal:
   mandatoryAdvise: I campi con * sono obbligatori
   requiredLabel: Questo campo è richiesto
   emailLabel: EMAIL*
-  emailValidationLabel: Per favore inserisci una denominazione ente valida.
+  emailValidationLabel: Per favore inserisci un'indirizzo email valido.
   representLabel: RAPPRESENTO*
   selectPlaceholder: Scegli una voce dall’elenco
   enteValidationLabel: Per favore inserisci una denominazione ente valida.
