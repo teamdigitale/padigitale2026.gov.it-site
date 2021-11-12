@@ -1,5 +1,5 @@
 import { Link } from 'gatsby';
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import {
   Collapse,
   Header as HeaderReactKit,
@@ -20,6 +20,7 @@ import links from '../../contents/links.yml';
 import labels from '../../contents/labels.yml';
 import { HeaderNav } from '../components/HeaderNav';
 import { ExternalLink } from '../components/ExternalLink';
+import { GlobalStateContext } from '../context/globalContext';
 
 const { internalLinks, externalLinks } = links;
 const { ariaLabel, headerTitle, headerSubtitle } = labels;
@@ -169,7 +170,7 @@ const useStyle = createUseStyles({
     },
     '& button': {
       height: '100%',
-      boxShadow: 'none',
+      boxShadow: 'none !important',
     },
     '& button:active': {
       background: 'none !important',
@@ -215,7 +216,12 @@ const SlimHeader = () => {
   return (
     <HeaderReactKit type="slim" theme="light">
       <HeaderContent>
-        <HeaderBrand href="https://innovazione.gov.it/" target="_blank" className={classes.headerLink} rel="noreferrer">
+        <HeaderBrand
+          href="https://innovazione.gov.it/"
+          target="_blank"
+          className={classes.headerLink}
+          rel="noreferrer"
+        >
           {externalLinks.dipartimento.label}
         </HeaderBrand>
         <HeaderLinkZone aria-label="Siti esterni correlati">
@@ -249,7 +255,11 @@ const SlimHeader = () => {
                 >
                   {externalLinks.italiaDigitale.label}
                 </LinkListItem>
-                <LinkListItem href={externalLinks.pnrr.linkTo} target="_blank" rel="noreferrer">
+                <LinkListItem
+                  href={externalLinks.pnrr.linkTo}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   {externalLinks.pnrr.label}
                 </LinkListItem>
               </LinkList>
@@ -297,7 +307,8 @@ const CenterHeader = () => {
   );
 };
 
-const NavHeader = ({ toggleModal }) => {
+const NavHeader = () => {
+  const [{}, dispatch] = useContext(GlobalStateContext);
   const [isOpen, setIsOpen] = useState(false);
   const closeMenu = () => setIsOpen(false);
   const toogleMenu = () => setIsOpen(!isOpen);
@@ -371,7 +382,7 @@ const NavHeader = ({ toggleModal }) => {
                   activeClassName="active"
                   onClick={() => {
                     closeMenu();
-                    toggleModal();
+                    dispatch({ type: 'SET:TOGGLE_MODAL' });
                   }}
                 >
                   <span className="font-weight-semibold">{internalLinks.updates.label}</span>

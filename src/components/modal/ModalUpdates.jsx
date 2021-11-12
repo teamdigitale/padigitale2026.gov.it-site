@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { createUseStyles } from 'react-jss';
 import {
@@ -17,10 +17,7 @@ import content from '../../../contents/opportunity-page/opportunity.yml';
 import links from '../../../contents/links.yml';
 import notificationsLabel from '../../../contents/notifications.yml';
 import { graphql, useStaticQuery } from 'gatsby';
-
-const {
-  internalLinks: { privacy },
-} = links;
+import { GlobalStateContext } from '../../context/globalContext';
 
 const {
   success: successLabels,
@@ -156,9 +153,6 @@ const useStyles = createUseStyles({
       fontWeight: '600',
       color: '#17324D',
     },
-    '& input[type="radio"].is-invalid:not(:checked)+label::before': {
-      borderColor: '#F83E5A',
-    },
     '& .form-group': {
       margin: '0',
     },
@@ -225,24 +219,6 @@ const useStyles = createUseStyles({
       borderColor: '#00CF86',
     },
   },
-  radioCustom: {
-    '&.form-check [type=checkbox]+label::after': {
-      borderRadius: '50%',
-    },
-    '&.form-check [type=checkbox]:checked+label::before': {
-      width: '12px',
-      border: 'none',
-      height: '12px',
-      borderRadius: '50%',
-      transform: 'none',
-      background: '#06c',
-      top: '8px',
-      left: '4px',
-    },
-    '&.form-check [type=checkbox]:checked+label::after': {
-      background: 'none',
-    },
-  },
   modalFooterLabel: {
     composes: 'mb-3',
     fontSize: '0.889rem',
@@ -259,12 +235,12 @@ const query = graphql`
   }
 `;
 
-export const ModalUpdates = ({ initialState, handleToggle }) => {
+export const ModalUpdates = () => {
+  const [{ modalState }, dispatch] = useContext(GlobalStateContext);
   const textareaMaxLength = 160;
   const [selectValue, setSelectValue] = useState(null);
   const [textareaState, setTextareaState] = useState('not-active');
   const [enteState, setEnteState] = useState('');
-  const [radioState, setRadioState] = useState(false);
   const {
     site: {
       siteMetadata: { apiUrl },
@@ -344,9 +320,6 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
   const onSubmit = async (data, event) => {
     Object.keys(data).map(function (key, index) {
       if (data[key] == undefined) {
-        delete data[key];
-      }
-      if (key == 'privacy1' || key == 'privacy2') {
         delete data[key];
       }
       if (
@@ -447,19 +420,16 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
     addMessageLabel,
     messageSelectLabel,
     messageLabel,
-    radioGroupLabel,
-    comunicationRadio,
-    privacyRadio,
-    privacyRadioLinkLabel,
-    mandatoryRadioLabel,
     sendButtonLabel,
   } = content.modal;
 
   return (
     <>
       <Modal
-        isOpen={initialState}
-        toggle={handleToggle}
+        isOpen={modalState}
+        toggle={() => {
+          dispatch({ type: 'SET:TOGGLE_MODAL' });
+        }}
         labelledBy="updates-modal"
         className={classes.modalUpdatesContainer}
         onOpened={() => {
@@ -473,7 +443,9 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
             type="button"
             className={classes.close}
             aria-label="Close"
-            onClick={handleToggle}
+            onClick={() => {
+              dispatch({ type: 'SET:TOGGLE_MODAL' });
+            }}
           >
             <span>Chiudi</span>
             <img
@@ -802,58 +774,9 @@ export const ModalUpdates = ({ initialState, handleToggle }) => {
                 </Col>
               </Row>
             </fieldset>
-            <Row className="mt-5">
-              <Col xs={12}>
-                <fieldset>
-                  <legend className={classes.selectLabel}>
-                    {radioGroupLabel}
-                  </legend>
-                  <FormGroup check className={classes.radioCustom}>
-                    <input
-                      className={errors.privacy1 ? 'is-invalid' : ''}
-                      name="gruppo1"
-                      type="checkbox"
-                      id="privacy1"
-                      aria-required="true"
-                      aria-describedby="mandatory-label"
-                      aria-invalid={errors.privacy1 && 'true'}
-                      aria-labelledby={errors.privacy1 && 'error-privacy'}
-                      {...register('privacy1', { required: true })}
-                    />
-                    <Label check htmlFor="privacy1">
-                      {comunicationRadio}
-                    </Label>
-                  </FormGroup>
-                  <FormGroup check className={classes.radioCustom}>
-                    <input
-                      className={errors.privacy2 ? 'is-invalid' : ''}
-                      name="gruppo2"
-                      type="checkbox"
-                      id="privacy2"
-                      aria-required="true"
-                      aria-invalid={errors.privacy2 && 'true'}
-                      aria-labelledby={errors.privacy2 && 'error-privacy'}
-                      {...register('privacy2', { required: true })}
-                    />
-                    <Label check htmlFor="privacy2">
-                      {privacyRadio}{' '}
-                      <a target="_blank" href={privacy.linkTo}>
-                        {privacyRadioLinkLabel}
-                      </a>{' '}
-                      *
-                    </Label>
-                  </FormGroup>
-                  <span className={classes.errorLabel} id="error-privacy">
-                    {errors.privacy1 || errors.privacy2
-                      ? mandatoryRadioLabel
-                      : ''}
-                  </span>
-                </fieldset>
-              </Col>
-            </Row>
           </form>
         </ModalBody>
-        <ModalFooter className="justify-content-center flex-column align-items-start justify-content-md-start px-0 py-0">
+        <ModalFooter className="justify-content-center flex-column align-items-start justify-content-md-start px-0 py-0 mt-5">
           <p className={classes.modalFooterLabel}>
             Cliccando su INVIA dichiaro di aver letto e compreso l'informativa
             privacy
