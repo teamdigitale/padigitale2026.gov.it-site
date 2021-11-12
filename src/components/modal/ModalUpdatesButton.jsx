@@ -54,11 +54,8 @@ const useStyles = createUseStyles({
   },
 });
 
-export const ModalUpdatesButton = ({ label, buttonLabel, initialState, handleToggle, hasTitle }) => {
+export const ModalUpdatesButton = ({ label, buttonLabel, hasTitle, handleToggle }) => {
   const classes = useStyles();
-  const eventHandler = () => {
-    handleToggle();
-  };
 
   return (
     <>
@@ -87,7 +84,7 @@ export const ModalUpdatesButton = ({ label, buttonLabel, initialState, handleTog
               <Button
                 className={classes.button}
                 color="primary"
-                onClick={eventHandler}
+                onClick={handleToggle}
               >
                 {buttonLabel}
               </Button>

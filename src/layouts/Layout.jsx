@@ -39,11 +39,6 @@ const useStyles = createUseStyles({
 export const Layout = ({ children }) => {
   useStyles();
   const [modalIsOpen, setModalIsOpen] = useState(false);
-  /* if (children.props) {
-    children.props.toggleModal = () => {
-      setModalIsOpen(!modalIsOpen);
-    };
-  } */
   const toggleModal = () => {
     setModalIsOpen(!modalIsOpen);
   };
@@ -56,8 +51,8 @@ export const Layout = ({ children }) => {
       <a className="sr-only sr-only-focusable" href="#footer">
         {goToFooter}
       </a>
-      <Header toggleModal={toggleModal} />
       <GlobalStateContextProvider>
+        <Header toggleModal={toggleModal} />
         <main className="text-info text-break" id="content">
           {children}
           <ModalUpdates initialState={modalIsOpen} handleToggle={toggleModal} />
