@@ -62,6 +62,7 @@ const useStyle = createUseStyles({
   },
   actorsCardImage: {
     height: '100%',
+    maxWidth: '100%'
   },
 });
 
