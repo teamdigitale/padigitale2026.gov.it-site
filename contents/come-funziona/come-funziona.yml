@@ -29,6 +29,8 @@ beneficiaries:
       items:
         - linkLabel: 'Comuni'
           filterId: 'comuni'
+        - linkLabel: 'Città metropolitane'
+          filterId: 'citta-metropolitane'
         - linkLabel: 'Enti regionali'
           filterId: 'enti-regionali'
         - linkLabel: 'Province'
