@@ -343,7 +343,7 @@ const NavHeader = () => {
             <Nav navbar className={classes.navbarNav}>
               <li className={classes.offCanvasWrapper}>
                 <a href="/" tabIndex="-1">
-                  <img className="icon" src="/assets/site-logo.svg" alt="Logo" />
+                  <img className="icon" src="/assets/site-logo.svg" alt="Vai alla pagina principale" />
                 </a>
                 <a href="/" className={classes.offCanvasTitle}>
                   {headerTitle}
