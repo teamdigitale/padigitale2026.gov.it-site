@@ -19,7 +19,7 @@ jobs:
       - run: |
           git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
 
-          # echo prossimapa.gov.it > public/CNAME
+          echo padigitale2026.gov.it > public/CNAME
 
           yarn deploy
         env:
