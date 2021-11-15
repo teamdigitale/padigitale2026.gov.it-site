@@ -76,6 +76,9 @@ const useStyle = createUseStyles({
     height: '100%',
     '&:hover': {
       textDecoration: 'none',
+      '& .card-title': {
+        textDecoration: 'underline',
+      }
     },
     '& .card-wrapper': {
       height: '100%',
