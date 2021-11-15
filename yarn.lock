@@ -6154,11 +6154,6 @@ gatsby-plugin-matomo@0.10.0:
   resolved "https://registry.yarnpkg.com/gatsby-plugin-matomo/-/gatsby-plugin-matomo-0.10.0.tgz#10290811a650c9b0b588d03068da4751bf79a489"
   integrity sha512-ghtWLfs4tkanB6B6rMZPcH8y5F99GTV0hpupxDWkxk1RrCRyGEDhHJ6QpmDp62Tkkss1EfoXXPia8E3IV+qP9g==
 
-gatsby-plugin-no-index@1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-no-index/-/gatsby-plugin-no-index-1.0.2.tgz#2e37e8ba381d398752581bc50d13c524efba65a0"
-  integrity sha512-gCRkGfhBBdfEf/jc+Mos9J70FtJcM/39SjxBWpO8KpOASZEre6lsuDFnF0u8bc44VExN76GNEmpUf271LHPH3Q==
-
 gatsby-plugin-page-creator@^3.14.0:
   version "3.14.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-page-creator/-/gatsby-plugin-page-creator-3.14.0.tgz#d16eba7e270206207309576200881dd95cc46cde"
