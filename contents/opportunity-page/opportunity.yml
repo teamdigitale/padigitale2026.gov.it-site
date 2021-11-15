@@ -16,6 +16,8 @@ selectBeneficiaries:
     label: 'Aziende Sanitarie Locali'
   - value: 'comuni'
     label: 'Comuni'
+  - value: 'citta-metropolitane'
+    label: 'Città metropolitane'
   - value: 'consorzi-ricerca'
     label: 'Consorzi interuniversitari di ricerca'
   - value: 'enti-servizio-civile'
@@ -84,8 +86,8 @@ beneficiaries:
     tags:
       - value: pa-centrali
         label: PA Centrali
-      - value: comuni
-        label: Comuni
+      - value: citta-metropolitane
+        label: "Città metropolitane"
       - value: asl
         label: ASL
       - label: Aziende Ospedaliere
@@ -109,6 +111,8 @@ beneficiaries:
     tags:
       - value: pa-centrali
         label: PA Centrali
+      - value: citta-metropolitane
+        label: "Città metropolitane"
       - value: asl
         label: ASL
       - label: Aziende Ospedaliere
@@ -147,8 +151,8 @@ beneficiaries:
     title: Accessibilità
     money: '80 <span>milioni di euro<span>'
     tags:
-      - value: comuni
-        label: Comuni
+      - value: citta-metropolitane
+        label: "Città metropolitane"
       - value: regioni
         label: Regioni
       - value: province-autonome
@@ -247,8 +251,8 @@ beneficiaries:
     title: MaaS
     money: '40 <span>milioni di euro<span>'
     tags:
-      - value: comuni
-        label: Comuni
+      - value: citta-metropolitane
+        label: "Città metropolitane"
     description: "Promuovere l'adozione di Mobility as a Service (MaaS) nei comuni per digitalizzare il trasporto locale e fornire ai cittadini un'esperienza di mobilità integrata: dalla pianificazione del viaggio ai pagamenti."
     stalls: '10 enti'
     accessSectionId: presentazione-progetto
