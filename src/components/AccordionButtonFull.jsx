@@ -259,8 +259,9 @@ export const AccordionButtonFull = (props) => {
           aria-expanded={props.id === props.active}
           className={classes.button}
           aria-label={`Dettaglio opportunità ${number} ${title}`}
+          aria-controls={`Misure-accordion-${id}`}
         ></Button>
-        <div className={classes.cardWrapper}>
+        <div id={`Misure-accordion-${id}`} className={classes.cardWrapper}>
           <div className={classes.cardHeader}>
             <h4 className={classes.cardTitle}>
               <span>{number}</span> {title}
