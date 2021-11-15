@@ -141,6 +141,12 @@ const useStyle = createUseStyles({
         borderLeft: '4px solid #0073E6',
       },
     },
+    '& .modal-button': {
+      '&:focus': {
+        outline: '2px solid #ff9900',
+        boxShadow: 'none',
+      }
+    }
   },
   linkListWrapperCustom: {
     '& ul li:not(:first-child)': {
@@ -337,7 +343,7 @@ const NavHeader = () => {
             <Nav navbar className={classes.navbarNav}>
               <li className={classes.offCanvasWrapper}>
                 <a href="/" tabIndex="-1">
-                  <img className="icon" src="/assets/site-logo.svg" alt="Logo" />
+                  <img className="icon" src="/assets/site-logo.svg" alt="Vai alla pagina principale" />
                 </a>
                 <a href="/" className={classes.offCanvasTitle}>
                   {headerTitle}
@@ -372,7 +378,7 @@ const NavHeader = () => {
               </NavItem>
               <NavItem className={classes.updatesBtn} active>
                 <Button
-                  className="nav-link"
+                  className="nav-link modal-button"
                   onClick={() => {
                     closeMenu();
                     dispatch({ type: 'SET:TOGGLE_MODAL' });

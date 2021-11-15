@@ -50,6 +50,10 @@ const useStyles = createUseStyles({
       top: '0.556rem',
       right: '-0.5rem',
     },
+    '&:focus': {
+      outline: '2px solid #ff9900',
+      boxShadow: 'none',
+    },
     '&.btn': {
       background: 'none',
       boxShadow: 'none',
