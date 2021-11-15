@@ -108,6 +108,9 @@ const useStyle = createUseStyles({
         marginTop: '0',
       },
     },
+    '&:hover': {
+      textDecoration: 'underline',
+    },
   },
 });
 

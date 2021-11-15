@@ -171,6 +171,9 @@ const useStyles = createUseStyles({
       outline: '2px solid #ff9900',
       boxShadow: 'none',
     },
+    '&:hover': {
+      textDecoration: 'underline',
+    },
   },
 });
 

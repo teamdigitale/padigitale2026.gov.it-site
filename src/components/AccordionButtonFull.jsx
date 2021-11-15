@@ -163,6 +163,9 @@ const useStyles = createUseStyles({
         '@media (min-width: 992px)': {
           fontSize: '1rem',
         },
+        '&:hover': {
+          textDecoration: 'underline',
+        },
       },
     },
   },
@@ -178,6 +181,9 @@ const useStyles = createUseStyles({
       fontSize: '0.778rem',
       '& img': {
         marginLeft: '0.444rem',
+      },
+      '&:hover': {
+        textDecoration: 'underline',
       },
     },
   },
@@ -281,6 +287,7 @@ export const AccordionButtonFull = (props) => {
                 <div className="access">
                   <span>Modalità di accesso:</span>{' '}
                   <Link
+                    className={classes.accessLink}
                     to="/come-funziona"
                     onClick={() => dispatch({ type: 'SET:HOW_SECTION_ID', payload: { howId: accessSectionId } })}
                   >
