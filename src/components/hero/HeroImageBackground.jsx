@@ -11,8 +11,11 @@ const useStyles = createUseStyles({
     position: 'relative',
     width: '100%',
     maxHeight: '25rem',
-    objectFit: 'none',
+    objectFit: 'contain',
     objectPosition: 'right',
+    '@media (max-width: 992px)': {
+      objectPosition: 'center',
+    }
   },
   heroTitle: {
     composes: 'no_doc title-hero',
@@ -28,6 +31,9 @@ const useStyles = createUseStyles({
     composes: 'it-hero-text-wrapper',
     paddingLeft: '0 !important',
     zIndex: 2,
+    '@media (max-width: 992px)': {
+      marginBottom: '4rem',
+    },
   },
   heroWrapper: {
     composes: 'it-hero-wrapper',
@@ -53,7 +59,7 @@ const useStyles = createUseStyles({
           '@media (min-width: 992px)': {
             maxWidth: '26.2rem',
           },
-        }
+        },
       },
     },
     '&.overlap': {
@@ -65,13 +71,13 @@ const useStyles = createUseStyles({
       paddingBottom: '5rem',
     },
     '&.bg-white': {
-      backgrodunColor: '#fff',
+      backgroundColor: '#fff',
       '& .it-hero-text-wrapper.bg-white span, h1, h2, h3, p': {
         color: '#33485C',
       },
     },
     '&.bg-blue': {
-      backgrodunColor: '#0066CC',
+      backgroundColor: '#0066CC',
       '& .bg-blue': {
         color: '#fff',
       },
@@ -94,13 +100,17 @@ const useStyles = createUseStyles({
     '& .container .it-hero-text-wrapper .btn': {
       fontSize: '1rem',
     },
-    '&.it-hero-wrapper .it-hero-text-wrapper': {
-      /* padding: '10rem' */
+    '&.it-hero-wrapper .it-hero-text-wrapper .it-btn-container': {
+      position: 'relative',
     }
   },
   buttonContainer: {
     composes: 'it-btn-container',
     display: 'flex',
+    '& .btn.btn-light:hover': {
+      background: '#e9e6f2',
+      color: '#004d99',
+    },
     '& .btn+.btn': {
       marginLeft: '1.875rem',
     },
@@ -115,13 +125,22 @@ const useStyles = createUseStyles({
     },
   },
   heroContentContainer: {
-    composes:'container',
+    composes: 'container',
     '&.container': {
-      marginRight: '0',
-      maxWidth: '100%',
+      /* marginRight: '0',
+      maxWidth: '100%', */
     },
     '& .it-hero-text-wrapper': {
       padding: '5.333rem 0 0',
+    },
+  },
+  imageContainer: {
+    composes: 'pr-0 offset-lg-1 mt-4 mt-lg-0',
+    position: 'absolute',
+    right: '0',
+    top: '0',
+    '@media (max-width: 992px)': {
+      position: 'relative',
     },
   }
 });
@@ -139,37 +158,35 @@ export const HeroImageBackground = ({
   secondButtonClass,
   secondButtonHref,
   overlap,
+  noButton,
+  titleId,
 }) => {
   const classes = useStyles();
   return (
     <Hero>
-      <div
-        className={`${classes.heroWrapper} ${
-          overlap ? 'overlap' : ''
-        } ${theme}`}
-      >
-        <div className={classes.heroContentContainer}>
+      <div className={`${classes.heroWrapper} ${overlap ? 'overlap' : ''} ${theme}`}>
+        <section aria-labelledby={titleId} className={classes.heroContentContainer}>
           <Row>
-            <Col xs="12" lg="5" className='offset-lg-1'>
+            <Col xs="12" lg="5" className="offset-lg-1">
               <div className={`${classes.contentWrapper} ${theme}`}>
                 <div>
-                  <HeroTitle title={title} className={classes.heroTitle} />
+                  <HeroTitle id={titleId} Tag="h3" title={title} className={classes.heroTitle} />
                   <HeroParagraph text={body} />
                   <div className={classes.buttonContainer}>
-                    <HeroButton
-                      classButton={firstButtonClass}
-                      label={firstButtonLabel}
-                      href={firstButtonHref}
-                      ariaLabel={firstButtonAriaLabel}
-                      target="_blank"
-                      rel="noreferrer"
-                    />
-                    {secondButtonLabel ? (
+                    {noButton ? (
+                      ''
+                    ) : (
                       <HeroButton
-                        classButton={secondButtonClass}
-                        label={secondButtonLabel}
-                        href={secondButtonHref}
+                        classButton={firstButtonClass}
+                        label={firstButtonLabel}
+                        href={firstButtonHref}
+                        ariaLabel={firstButtonAriaLabel}
+                        target="_blank"
+                        rel="noreferrer"
                       />
+                    )}
+                    {secondButtonLabel ? (
+                      <HeroButton classButton={secondButtonClass} label={secondButtonLabel} href={secondButtonHref} />
                     ) : (
                       ''
                     )}
@@ -177,11 +194,11 @@ export const HeroImageBackground = ({
                 </div>
               </div>
             </Col>
-            <Col xs={12} lg={5} className='pr-0 offset-lg-1 mt-4 mt-lg-0'>
-              <HeroBackground image={image} className={classes.heroImg}/>
+            <Col xs={12} lg={5} className={classes.imageContainer}>
+              <HeroBackground image={image} className={classes.heroImg} />
             </Col>
           </Row>
-        </div>
+        </section>
       </div>
     </Hero>
   );

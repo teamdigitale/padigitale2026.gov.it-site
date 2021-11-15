@@ -1,3 +1,4 @@
+name: Le misure - PA digitale 2026
 heroOpportunity:
   title: Le misure del PNRR
   body: 'Su PA digitale 2026 il dettaglio delle opportunità del PNRR dedicate alla digitalizzazione della Pubblica Amministrazione: fondi allocati, beneficiari e modalità di accesso alle misure'
@@ -15,6 +16,8 @@ selectBeneficiaries:
     label: 'Aziende Sanitarie Locali'
   - value: 'comuni'
     label: 'Comuni'
+  - value: 'citta-metropolitane'
+    label: 'Città metropolitane'
   - value: 'consorzi-ricerca'
     label: 'Consorzi interuniversitari di ricerca'
   - value: 'enti-servizio-civile'
@@ -83,8 +86,8 @@ beneficiaries:
     tags:
       - value: pa-centrali
         label: PA Centrali
-      - value: comuni
-        label: Comuni
+      - value: citta-metropolitane
+        label: "Città metropolitane"
       - value: asl
         label: ASL
       - label: Aziende Ospedaliere
@@ -108,6 +111,8 @@ beneficiaries:
     tags:
       - value: pa-centrali
         label: PA Centrali
+      - value: citta-metropolitane
+        label: "Città metropolitane"
       - value: asl
         label: ASL
       - label: Aziende Ospedaliere
@@ -120,7 +125,7 @@ beneficiaries:
         label: Università
       - value: 'enti-diritto'
         label: 'Enti per il diritto allo studio, agenzie, consorzi'
-    description: Facilitare l’implementazione dello “Sportello Digitale Unico” (Single Digital Gateway), il regolamento europeo che ha l’obiettivo di uniformare l’accesso ai servizi digitali su tutto il territorio continentale, attraverso informazioni di qualità e canali di assistenza effettiva.
+    description: Facilitare l’implementazione dello “Sportello Digitale Unico” (Single Digital Gateway), ovvero supportare l’attuazione del regolamento europeo che ha l’obiettivo di uniformare l’accesso ai servizi digitali in tutto i Paesi membri dell'UE.
     stalls: '230 enti'
     accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
@@ -135,7 +140,7 @@ beneficiaries:
         label: Comuni
       - value: scuole
         label: Scuole
-    description: Migliorare l'esperienza dei servizi pubblici digitali definendo modelli collaudati e riutilizzabili per la creazione di siti internet e l’erogazione di servizi pubblici digitali.
+    description: Migliorare l'esperienza dei servizi pubblici digitali definendo e promuovendo l’adozione di modelli collaudati e riutilizzabili per la creazione di siti internet e l’erogazione di servizi pubblici digitali.
     stalls: '16,500 enti'
     accessSectionId: soluzioni-standard
     accessLabel: Soluzioni standard
@@ -146,8 +151,8 @@ beneficiaries:
     title: Accessibilità
     money: '80 <span>milioni di euro<span>'
     tags:
-      - value: comuni
-        label: Comuni
+      - value: citta-metropolitane
+        label: "Città metropolitane"
       - value: regioni
         label: Regioni
       - value: province-autonome
@@ -155,7 +160,7 @@ beneficiaries:
       - value: altre-pa-locali
         label: Altre PAL
     description: "Migliorare l'accessibilità dei servizi pubblici digitali attraverso la diffusione di strumenti e strategie condivise: da test di usabilità ad attività di comunicazione e disseminazione passando per lo sviluppo di kit dedicati e altro."
-    stalls: '54 enti'
+    stalls: '55 enti'
     accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
     moreInfoLabel: 'Leggi di più su Italia Domani'
@@ -185,7 +190,7 @@ beneficiaries:
         label: Enti di ricerca pubblica
       - value: consorzi-ricerca
         label: Consorzi interuniversitari di ricerca
-    description: Accelerare l'adozione di PagoPa, l'applicazione digitale per i pagamenti tra cittadini e pubbliche amministrazione, e di app IO quale principale punto di contatto tra cittadini e amministrazione
+    description: Accelerare l'adozione di pagoPA, la piattaforma digitale per i pagamenti verso le Pubbliche Amministrazioni, e dell’app IO quale principale punto di contatto tra Enti e cittadini per la fruizione dei servizi pubblici digitali.
     stalls: '17,500 enti'
     accessSectionId: soluzioni-standard
     accessLabel: Soluzioni Standard
@@ -220,7 +225,7 @@ beneficiaries:
         label: Enti di ricerca pubblica
       - value: consorzi-ricerca
         label: Consorzi interuniversitari di ricerca
-    description: Favorire l'adozione dell’identità digitale (Sistema Pubblico di Identità Digitale, SPID e Carta d'Identità Elettronica, CIE) e dell'Anagrafe nazionale della popolazione residente (ANPR)
+    description: Favorire l'adozione dell’identità digitale (Sistema Pubblico di Identità Digitale, SPID e Carta d'Identità Elettronica, CIE) e dell'Anagrafe nazionale della popolazione residente (ANPR).
     stalls: '10,300 enti'
     accessSectionId: soluzioni-standard
     accessLabel: Soluzioni Standard
@@ -235,7 +240,7 @@ beneficiaries:
         label: PA Centrali
       - value: comuni
         label: Comuni
-    description: Sviluppare e implementare la Piattaforma notifiche, lo strumento che le PA utilizzeranno per la notificazione di atti amministrativi a valore legale verso persone fisiche e giuridiche, contribuendo ad una drastica riduzione di costi e tempo per cittadini ed enti. 
+    description: Sviluppare e implementare la Piattaforma notifiche digitali degli atti pubblici, l’infrastruttura che le PA utilizzeranno per la notificazione di atti amministrativi a valore legale verso persone fisiche e giuridiche, contribuendo ad una riduzione di costi e tempo per cittadini ed enti. 
     stalls: '7,900 enti'
     accessSectionId: soluzioni-standard
     accessLabel: Soluzioni standard
@@ -246,8 +251,8 @@ beneficiaries:
     title: MaaS
     money: '40 <span>milioni di euro<span>'
     tags:
-      - value: comuni
-        label: Comuni
+      - value: citta-metropolitane
+        label: "Città metropolitane"
     description: "Promuovere l'adozione di Mobility as a Service (MaaS) nei comuni per digitalizzare il trasporto locale e fornire ai cittadini un'esperienza di mobilità integrata: dalla pianificazione del viaggio ai pagamenti."
     stalls: '10 enti'
     accessSectionId: presentazione-progetto
@@ -261,7 +266,7 @@ beneficiaries:
     tags:
       - value: pa-centrali
         label: PA Centrali
-    description: Rafforzare le difese della PA italiana per proteggerla dalle minacce informatiche, come frodi, ricatti e attacchi terroristici e tutti i rischi posti dalla criminalità informatica
+    description: Rafforzare le difese della Pubblica Amministrazione italiana per proteggerla dalle minacce informatiche, come frodi, ricatti e attacchi terroristici e tutti i rischi posti dalla criminalità informatica.
     stalls: '6 enti'
     accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
@@ -285,10 +290,8 @@ beneficiaries:
     title: Servizio civile digitale
     money: '60 <span>milioni di euro<span>'
     tags:
-      - value: regioni
-        label: Regioni
-      - value: province-autonome
-        label: Provincie autonome
+      - value: 'enti-servizio-civile'
+        label: 'Enti iscritti all’albo del servizio civile'
     description: Sviluppare l'iniziativa “Servizio civile digitale”, finalizzata, tra le altre cose, alla formazione di circa 9.700 volontari e al coinvolgimento di 1 milione di cittadini beneficiari di attività di facilitazione digitale e di educazione digitale.
     stalls: '100 enti'
     accessSectionId: presentazione-progetto
@@ -300,10 +303,12 @@ beneficiaries:
     title: Centri di facilitazione digitale
     money: '135 <span>milioni di euro<span>'
     tags:
-      - value: 'enti-servizio-civile'
-        label: 'Enti iscritti all’albo del servizio civile'
-    description: Ampliare l’esperienza dei "Centri di facilitazione digitale", punti di accesso fisici, solitamente situati in biblioteche, scuole e centri sociali, che forniscono ai cittadini formazione sia di persona che online sulle competenze digitali al fine di supportare l’inclusione digitale
-    stalls: '20 enti'
+      - value: regioni
+        label: Regioni
+      - value: province-autonome
+        label: Provincie autonome
+    description: Ampliare l’esperienza dei "Centri di facilitazione digitale", punti di accesso fisici, solitamente situati in biblioteche, scuole e centri sociali, che forniscono ai cittadini formazione sia di persona che online sulle competenze digitali al fine di supportare l’inclusione digitale.
+    stalls: '21 enti'
     accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
     moreInfoLabel: 'Leggi di più su Italia Domani'
@@ -343,7 +348,7 @@ modal:
   mandatoryAdvise: I campi con * sono obbligatori
   requiredLabel: Questo campo è richiesto
   emailLabel: EMAIL*
-  emailValidationLabel: Per favore inserisci una denominazione ente valida.
+  emailValidationLabel: Per favore inserisci un'indirizzo email valido.
   representLabel: RAPPRESENTO*
   selectPlaceholder: Scegli una voce dall’elenco
   enteValidationLabel: Per favore inserisci una denominazione ente valida.
@@ -351,7 +356,7 @@ modal:
   enteNameLabel: NOME ENTE/STRUTTURA*
   inQuantoLabel: IN QUANTO*
   directContactLabel: CONTATTO DIRETTO
-  directContactInfo: Un <strong>Team dedicato</strong> è a tua disposizione per ricevere chiarimenti sugli investimenti o approfondire alcuni temi
+  directContactInfo: Un <strong>Team dedicato</strong> è a tua disposizione per ricevere<br>chiarimenti sugli investimenti o approfondire alcuni temi
   addMessageLabel: Voglio aggiungere un messaggio
   messageSelectLabel: ARGOMENTO MESSAGGIO
   messageLabel: TESTO MESSAGGIO

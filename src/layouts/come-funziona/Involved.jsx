@@ -62,6 +62,7 @@ const useStyle = createUseStyles({
   },
   actorsCardImage: {
     height: '100%',
+    maxWidth: '100%'
   },
 });
 
@@ -88,10 +89,10 @@ export const Involved = (props) => {
         <Container tag="section" aria-labelledby="involved-actors-title" className="px-3">
           <Row>
             <Col xs="12" lg="5" className="offset-lg-1" id="attori-coinvolti">
-              <p className={classes.category}>{category}</p>
-              <h2 className={classes.title} id="involved-actors-title">
+              <h3 className={classes.category}>{category}</h3>
+              <h4 className={classes.title} id="involved-actors-title">
                 {title}
-              </h2>
+              </h4>
             </Col>
           </Row>
           <Row role="list">{actorsCards}</Row>

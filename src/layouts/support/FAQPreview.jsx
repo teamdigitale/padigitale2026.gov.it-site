@@ -24,7 +24,13 @@ const useStyle = createUseStyles({
     composes: 'card rounded',
     '&.card': {
       boxShadow: '0px 0px 80px rgba(0, 43, 85, 0.1)',
-      '& h5.card-title': {
+      height: '100%',
+      '& .card-body': {
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+      },
+      '& h4.card-title': {
         color: '#0066CC',
         fontWeight: 'bold',
         fontSize: '1.556rem',
@@ -52,6 +58,11 @@ const useStyle = createUseStyles({
       '&:after': {
         content: 'none',
       },
+      '&:hover': {
+        '& h4.card-title': {
+          textDecoration: 'underline',
+        },
+      },
     },
   },
   btnWrapper: {
@@ -67,6 +78,16 @@ const useStyle = createUseStyles({
   },
   linkCard: {
     textDecoration: 'none',
+    height: '100%',
+    '&:hover': {
+      textDecoration: 'none',
+      '& .card-title': {
+        textDecoration: 'underline',
+      }
+    },
+    '& .card-wrapper': {
+      height: '100%',
+    }
   },
 });
 
@@ -79,7 +100,7 @@ export const FAQPreview = () => {
       <Link to="/faq" onClick={() => dispatch({ type: 'SET:FAQ_ID', payload: { faqId: card.faqId } })} className={classes.linkCard}>
         <Card className={classes.faqCard}>
           <CardBody>
-            <CardTitle tag="h5">{card.title}</CardTitle>
+            <CardTitle tag="h4">{card.title}</CardTitle>
             <CardText dangerouslySetInnerHTML={{ __html: card.text }} />
           </CardBody>
         </Card>

@@ -1,6 +1,7 @@
+name: Supporto - PA digitale 2026
 mainHero:
   title: Hai bisogno di chiarimenti o supporto?
-  description: Consulta le <strong>le domande frequenti</strong> o <strong>compila il modulo</strong> per ricevere una risposta via email
+  description: Consulta le <strong>le domande frequenti</strong> o <strong>scrivici</strong> per ricevere una risposta via email
 faqSection:
   buttonLink: '/faq'
   buttonLabel: Vai alle domande frequenti
@@ -15,10 +16,10 @@ faqSection:
       faqId: faq-2
     - id: 3
       title: Chi può accedere alle risorse di Italia digitale 2026?
-      text: Il ruolo della PA, soprattutto quella locale, è centrale nell’implementazione di Italia digitale 2026. Le risorse a disposizione servono per permettere alle diverse amministrazioni di partecipare in prima persona al percorso di transizione digitale del Paese. Per questo i fondi sono rivolti a:<ul><li>Comuni</li><li>Province</li><li>Regioni e Province autonome</li><li>Enti regionali</li><li>ASL/AO</li><li>Scuole</li><li>Università</li><li>Enti di diritto allo studio, agenzie, consorzi</li><li>Istituti di alta formazione musicale e coreutica</li><li>Enti di ricerca pubblica</li><li>Consorzi interuniversitari di ricerca</li><li>Enti iscritti all’albo del servizio civile</li><li>Enti centrali</li></ul>
+      text: Il ruolo della PA, soprattutto quella locale, è centrale nell’implementazione di Italia digitale 2026. Le risorse a disposizione servono per permettere alle diverse amministrazioni di partecipare in prima persona al percorso di transizione digitale del Paese.
       faqId: faq-3
 heroAssistance:
   title: Richiedi assistenza
-  body: 'Se non hai trovato le informazioni che cercavi fra le domande frequenti, <strong>compila il modulo dedicato</strong>: ti risponderemo al più presto'
+  body: 'Se non hai trovato le informazioni che cercavi fra le domande frequenti, <strong>scrivici</strong>: ti risponderemo al più presto'
   altImg: immagine placeholder
-  btnText: compila il modulo
+  btnText: scrivici

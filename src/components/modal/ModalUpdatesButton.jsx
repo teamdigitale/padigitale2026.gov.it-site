@@ -9,11 +9,11 @@ const useStyles = createUseStyles({
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    '& p': {
+    '& .description': {
       margin: '0',
       fontSize: '1.333rem',
       fontWeight: '700',
-      color: '#0066CC',
+      color: '#33485C',
       maxWidth: '60%',
     },
     '& .btn': {
@@ -54,11 +54,8 @@ const useStyles = createUseStyles({
   },
 });
 
-export const ModalUpdatesButton = ({ label, buttonLabel, initialState, handleToggle, hasTitle }) => {
+export const ModalUpdatesButton = ({ label, buttonLabel, hasTitle, handleToggle }) => {
   const classes = useStyles();
-  const eventHandler = () => {
-    handleToggle();
-  };
 
   return (
     <>
@@ -66,7 +63,7 @@ export const ModalUpdatesButton = ({ label, buttonLabel, initialState, handleTog
         <Container className="px-3">
           <Row className="align-items-center mb-4">
             <Col sm={12} lg={3}>
-              <h3 className={classes.buttonTitle}>Le misure</h3>
+              <span className={classes.buttonTitle}>Le misure</span>
             </Col>
             <Col sm={12} lg={9}>
               <span className={classes.buttonInfo}>
@@ -83,12 +80,10 @@ export const ModalUpdatesButton = ({ label, buttonLabel, initialState, handleTog
         <Row>
           <Col lg={12}>
             <div className={classes.modalButtonContainer}>
-              <p className={classes.text}>{label}</p>
-              <Button
-                className={classes.button}
-                color="primary"
-                onClick={eventHandler}
-              >
+              <p className="description">
+                <strong>{label}</strong>
+              </p>
+              <Button className={classes.button} color="primary" onClick={handleToggle}>
                 {buttonLabel}
               </Button>
             </div>

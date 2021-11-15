@@ -195,9 +195,9 @@ export const SideNavigation = (props) => {
   return (
     <Sidebar className={`${classes.wrapper} p-0`}>
       <nav aria-labelledby="table-of-contents">
-        <h2 id="table-of-contents" className="sr-only">
+        <h3 id="table-of-contents" className="sr-only">
           Indice dei contenuti
-        </h2>
+        </h3>
         <LinkList>
           {isMobile && (
             <LinkListItem
@@ -212,7 +212,7 @@ export const SideNavigation = (props) => {
           )}
 
           {content.sidebar.map((anchor) => (
-            <>
+            <React.Fragment key={anchor.sectionId}>
               {anchor.sectionActive ? (
                 <LinkListItem
                   key={anchor.sectionId}
@@ -237,7 +237,7 @@ export const SideNavigation = (props) => {
                   <span>{anchor.sectionTitle}</span>
                 </LinkListItem>
               )}
-            </>
+            </React.Fragment>
           ))}
         </LinkList>
       </nav>

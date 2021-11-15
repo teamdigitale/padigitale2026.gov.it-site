@@ -10,6 +10,7 @@ import { SideNavigation } from './faq/SideNavigation';
 import { QuestionSection } from './faq/QuestionSection';
 import { SupportSection } from './faq/SupportSection';
 import { HeroSupport } from './support/Hero';
+import { GlobalStateContext } from '../context/globalContext';
 
 const { title: seoTitle, description: seoDescription } = seo.faqPage;
 
@@ -29,10 +30,7 @@ export const FaqPage = () => {
   const [filterId, setFilterId] = useState('all');
   const [questions, setQuestions] = useState(faq.questions);
   const [isMobile, setIsMobile] = useState();
-  const [isOpen, setIsOpen] = useState(false);
-  const toggleModal = () => {
-    setIsOpen(!isOpen);
-  };
+  const [{}, dispatch] = useContext(GlobalStateContext);
 
   useEffect(() => {
     setIsMobile(window.innerWidth < 992);
@@ -51,7 +49,9 @@ export const FaqPage = () => {
       }
     } else {
       if (isMobile) {
-        filterId !== 'all' ? setQuestions(getQuestionsMobile(faq.questions)) : setQuestions(faq.questions);
+        filterId !== 'all'
+          ? setQuestions(getQuestionsMobile(faq.questions))
+          : setQuestions(faq.questions);
       } else {
         setQuestions(faq.questions);
       }
@@ -61,7 +61,10 @@ export const FaqPage = () => {
   function getAccordionsFiltered(question, input) {
     const regexp = new RegExp(input, 'i');
     return question.accordions.filter(
-      (accordion) => regexp.test(accordion.title) || regexp.test(accordion.content) || regexp.test(accordion.linkLabel)
+      (accordion) =>
+        regexp.test(accordion.title) ||
+        regexp.test(accordion.content) ||
+        regexp.test(accordion.linkLabel)
     );
   }
 
@@ -95,9 +98,16 @@ export const FaqPage = () => {
   useEffect(() => {
     if (filterId) {
       if (filterId === 'all') {
-        inputValue ? setQuestions(getNewQuestions(inputValue)) : setQuestions(faq.questions);
+        inputValue
+          ? setQuestions(getNewQuestions(inputValue))
+          : setQuestions(faq.questions);
       } else {
-        if (!getAccordionsFiltered(getQuestionsMobile(faq.questions)[0], inputValue).length) {
+        if (
+          !getAccordionsFiltered(
+            getQuestionsMobile(faq.questions)[0],
+            inputValue
+          ).length
+        ) {
           setQuestions(filterAccordions);
         } else {
           setQuestions(getQuestionsMobile(faq.questions));
@@ -110,11 +120,11 @@ export const FaqPage = () => {
     <>
       <SEO title={seoTitle} description={seoDescription} />
       <div className="sr-only">
-        <h1>{content.name}</h1>
+        <h2>{faq.name}</h2>
       </div>
       <HeroSupport title={faq.hero.title} subtitle={faq.hero.subtitle} />
       <div className="docs py-4 py-md-5">
-        <Container className="px-3" aria-labelledby="question-section">
+        <Container className="px-3">
           <h3 id="question-section" className="sr-only">
             Sezione domande frequenti
           </h3>
@@ -132,7 +142,11 @@ export const FaqPage = () => {
           </Row>
           <Row>
             <Col lg={3}>
-              <SideNavigation getFilter={setFilterId} activeList={questions} searchValue={inputValue} />
+              <SideNavigation
+                getFilter={setFilterId}
+                activeList={questions}
+                searchValue={inputValue}
+              />
             </Col>
             <Col lg={9} className="px-lg-3">
               {questions.map((question) => (
@@ -140,16 +154,25 @@ export const FaqPage = () => {
                   key={question.title}
                   item={question}
                   inputText={inputValue}
-                  handleToggle={toggleModal}
+                  handleToggle={() => {
+                    dispatch({ type: 'SET:TOGGLE_MODAL' });
+                  }}
                 />
               ))}
-              {!questions.length && <p className={classes.noResults}>{faq.noResults}</p>}
+              {!questions.length && (
+                <p className={classes.noResults}>{faq.noResults}</p>
+              )}
             </Col>
           </Row>
         </Container>
       </div>
-      <SupportSection supportList={faq.support.cards} title={faq.support.title} handleToggle={toggleModal} />
-      <ModalUpdates initialState={isOpen} handleToggle={toggleModal} />
+      <SupportSection
+        supportList={faq.support.cards}
+        title={faq.support.title}
+        handleToggle={() => {
+          dispatch({ type: 'SET:TOGGLE_MODAL' });
+        }}
+      />
     </>
   );
 };

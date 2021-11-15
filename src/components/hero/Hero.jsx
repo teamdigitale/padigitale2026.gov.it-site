@@ -2,7 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-export const Hero = ({ bgColor = '', xPadding = true, className, yPaddingXLScreen = true, children }) => {
+export const Hero = ({
+  bgColor = '',
+  xPadding = true,
+  className,
+  yPaddingXLScreen = true,
+  Tag = 'div',
+  ariaLabelledBy,
+  children,
+}) => {
   const heroClasses = classNames(
     'py-5',
     {
@@ -17,7 +25,9 @@ export const Hero = ({ bgColor = '', xPadding = true, className, yPaddingXLScree
   });
   return (
     <div className={heroClasses}>
-      <div className={containerClass}>{children}</div>
+      <Tag className={containerClass} aria-labelledby={ariaLabelledBy}>
+        {children}
+      </Tag>
     </div>
   );
 };

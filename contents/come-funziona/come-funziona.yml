@@ -1,5 +1,5 @@
 title: Come funziona - PA digitale 2026
-name: Come Funziona
+name: Come Funziona - PA digitale 2026
 hero:
   title: 'La transizione digitale: semplice e a misura di PA'
   body: A seconda della tipologia di misura e di PA, sarà possibile accedere alle risorse o attraverso delle soluzioni standard o attraverso la presentazione di progetti.
@@ -29,6 +29,8 @@ beneficiaries:
       items:
         - linkLabel: 'Comuni'
           filterId: 'comuni'
+        - linkLabel: 'Città metropolitane'
+          filterId: 'citta-metropolitane'
         - linkLabel: 'Enti regionali'
           filterId: 'enti-regionali'
         - linkLabel: 'Province'

@@ -1,15 +1,19 @@
 import React, { createContext, useReducer, useState, useEffect } from 'react';
 
-const initialState = { sectionId: null, faqId: null };
+const initialState = { sectionId: null, faqId: null, modalState: false};
 
 const reducer = (state, { type, payload }) => {
   switch (type) {
     case 'SET:HOW_SECTION_ID':
-      return { ...state, howId: payload.howId };
+      return { ...state, howId: payload?.howId };
     case 'SET:SECTION_OPPORTUNITY_ID':
       return { ...state, sectionId: payload.sectionId };
     case 'SET:FAQ_ID':
       return { ...state, faqId: payload.faqId };
+    case 'SET:TOGGLE_MODAL':
+      return { ...state, modalState: !state.modalState };
+      case 'SET:ACTIVE_HEADER':
+        return { ...state, activeItem: payload?.activeItem };
     default:
       return { ...state };
   }

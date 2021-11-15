@@ -1,5 +1,5 @@
 import { Link } from 'gatsby';
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import {
   Collapse,
   Header as HeaderReactKit,
@@ -20,6 +20,7 @@ import links from '../../contents/links.yml';
 import labels from '../../contents/labels.yml';
 import { HeaderNav } from '../components/HeaderNav';
 import { ExternalLink } from '../components/ExternalLink';
+import { GlobalStateContext } from '../context/globalContext';
 
 const { internalLinks, externalLinks } = links;
 const { ariaLabel, headerTitle, headerSubtitle } = labels;
@@ -84,8 +85,15 @@ const useStyle = createUseStyles({
     height: 'auto',
     padding: [16, 0],
     '& .it-header-center-content-wrapper .it-brand-wrapper a .icon': {
-      height: '3rem',
-    }
+      '&.site-logo': {
+        width: '3rem',
+        height: '3rem',
+      },
+      '&.repubblica-logo': {
+        width: '3.556rem',
+        height: '4rem',
+      },
+    },
   },
   offCanvasWrapper: {
     padding: [13, 24],
@@ -133,6 +141,12 @@ const useStyle = createUseStyles({
         borderLeft: '4px solid #0073E6',
       },
     },
+    '& .modal-button': {
+      '&:focus': {
+        outline: '2px solid #ff9900',
+        boxShadow: 'none',
+      }
+    }
   },
   linkListWrapperCustom: {
     '& ul li:not(:first-child)': {
@@ -162,7 +176,17 @@ const useStyle = createUseStyles({
     },
     '& button': {
       height: '100%',
-    }
+      boxShadow: 'none !important',
+    },
+    '& button:active': {
+      background: 'none !important',
+      color: '#06c !important',
+      boxShadow: 'none !important',
+    },
+    '& button:focus': {
+      boxShadow: '0 0 0 2px #f90;',
+      borderRadius: '0',
+    },
   },
   headerToggler: {
     fontWeight: '600',
@@ -172,10 +196,11 @@ const useStyle = createUseStyles({
     padding: '0',
     backgroundColor: 'transparent',
     boxShadow: 'none',
-    '&:focus': {
+    '&:focus, &:hover': {
       color: '#0066CC',
       backgroundColor: 'transparent',
       outline: '2px solid #ff9900',
+      borderRadius: '0',
     },
     '@media (min-width: 992px)': {
       display: 'none',
@@ -197,33 +222,46 @@ const SlimHeader = () => {
   return (
     <HeaderReactKit type="slim" theme="light">
       <HeaderContent>
-        <HeaderBrand href="https://innovazione.gov.it/dipartimento" target="_blank" className={classes.headerLink}>
+        <HeaderBrand href="https://innovazione.gov.it/" target="_blank" className={classes.headerLink} rel="noreferrer">
           {externalLinks.dipartimento.label}
         </HeaderBrand>
-        <HeaderLinkZone aria-labelledby="siti-esterni-correlati">
-          <h2 id="siti-esterni-correlati" className="sr-only">
-            Siti esterni correlati
-          </h2>
-          <Button
-            className={classes.headerToggler}
-            onClick={toggle}
-            aria-expanded={collapse}
-          >
-            <span className="font-weight-bold">
+        <HeaderLinkZone aria-label="Siti esterni correlati">
+          <div className={classes.headerToggler}>
+            <a
+              href="https://innovazione.gov.it/"
+              target="_blank"
+              className={classes.headerLink}
+              aria-label="Dipartimento per la Trasformazione Digitale (Collegamento esterno - Apre su nuova scheda)"
+              rel="noreferrer"
+            >
               {externalLinks.dipartimento.label}
-            </span>
-            <Icon icon="it-expand" />
-          </Button>
+            </a>
+            <Button
+              className={classes.headerToggler}
+              onClick={toggle}
+              aria-expanded={collapse}
+              aria-label="Apre lista link esterni"
+            >
+              <Icon icon="it-expand" />
+            </Button>
+          </div>
           <Collapse isOpen={collapse}>
             <div className={classes.linkListWrapperCustom}>
               <LinkList className={classes.topListLink}>
                 <LinkListItem
                   href={externalLinks.italiaDigitale.linkTo}
                   target="_blank"
+                  rel="noreferrer"
+                  aria-label="VAI AL SITO Italia digitale 2026 (Collegamento esterno - Apre su nuova scheda)"
                 >
                   {externalLinks.italiaDigitale.label}
                 </LinkListItem>
-                <LinkListItem href={externalLinks.pnrr.linkTo} target="_blank">
+                <LinkListItem
+                  href={externalLinks.pnrr.linkTo}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Italia domani - PNRR (Collegamento esterno - Apre su nuova scheda)"
+                >
                   {externalLinks.pnrr.label}
                 </LinkListItem>
               </LinkList>
@@ -236,11 +274,7 @@ const SlimHeader = () => {
           href={externalLinks.italiaDigitale.linkTo}
           target="_blank"
         >
-          <img
-            className="d-none d-lg-block"
-            src="/assets/eu-flag.svg"
-            alt=""
-          ></img>
+          <img className="d-none d-lg-block" src="/assets/eu-flag.svg" alt={externalLinks.eu.ariaLabel}></img>
         </ExternalLink>
       </HeaderContent>
     </HeaderReactKit>
@@ -250,26 +284,18 @@ const SlimHeader = () => {
 const CenterHeader = () => {
   const classes = useStyle();
   return (
-    <HeaderReactKit
-      type="center"
-      theme="light"
-      className={classes.headerCenterWrapper}
-    >
+    <HeaderReactKit type="center" theme="light" className={classes.headerCenterWrapper}>
       <HeaderContent>
         <div className="it-brand-wrapper pl-5 pl-sm-0">
           <Link to="/">
             <div className="it-brand-text pr-0">
               <div className="d-md-flex align-items-center">
                 <img
-                  className="icon"
+                  className="icon repubblica-logo"
                   src="/assets/repubblica-logo-blue.svg"
                   alt="Logo Repubblica Italiana"
                 />
-                <img
-                  className="icon"
-                  src="/assets/site-logo.svg"
-                  alt="Logo PA digitale 2026"
-                />
+                <img className="icon site-logo" src="/assets/site-logo.svg" alt="Logo PA digitale 2026" />
                 <div className="d-none d-lg-inline-block">
                   <h1 className="h3 mb-0">{headerTitle}</h1>
                   <div className={classes.subtitle}>{headerSubtitle}</div>
@@ -283,11 +309,13 @@ const CenterHeader = () => {
   );
 };
 
-const NavHeader = ({ toggleModal }) => {
+const NavHeader = () => {
+  const [{activeItem}, dispatch] = useContext(GlobalStateContext);
   const [isOpen, setIsOpen] = useState(false);
   const closeMenu = () => setIsOpen(false);
   const toogleMenu = () => setIsOpen(!isOpen);
   const classes = useStyle();
+  
   return (
     <HeaderReactKit type="navbar" theme="light" className={classes.noShadow}>
       <HeaderContent
@@ -313,66 +341,50 @@ const NavHeader = ({ toggleModal }) => {
         <HeaderNav isOpen={isOpen} onCloseMenu={toogleMenu}>
           <div className={classes.menuWrapper}>
             <Nav navbar className={classes.navbarNav}>
-              <div className={classes.offCanvasWrapper}>
+              <li className={classes.offCanvasWrapper}>
                 <a href="/" tabIndex="-1">
-                  <img
-                    className="icon"
-                    src="/assets/site-logo.svg"
-                    alt="Logo"
-                  />
+                  <img className="icon" src="/assets/site-logo.svg" alt="Vai alla pagina principale" />
                 </a>
                 <a href="/" className={classes.offCanvasTitle}>
                   {headerTitle}
                 </a>
-              </div>
+              </li>
               <NavItem active>
                 <Link
                   to={internalLinks.opportunity.linkTo}
-                  className="nav-link"
-                  activeClassName="active"
+                  className={activeItem === 'misure' ? 'nav-link active' : 'nav-link'}
                   onClick={closeMenu}
                 >
-                  <span className="font-weight-semibold">
-                    {internalLinks.opportunity.label}
-                  </span>
+                  <span className="font-weight-semibold">{internalLinks.opportunity.label}</span>
                 </Link>
               </NavItem>
               <NavItem>
                 <Link
                   to={internalLinks.howitworks.linkTo}
-                  className="nav-link"
-                  activeClassName="active"
+                  className={activeItem === 'come-funziona' ? 'nav-link active' : 'nav-link'}
                   onClick={closeMenu}
                 >
-                  <span className="font-weight-semibold">
-                    {internalLinks.howitworks.label}
-                  </span>
+                  <span className="font-weight-semibold">{internalLinks.howitworks.label}</span>
                 </Link>
               </NavItem>
               <NavItem>
                 <Link
                   to={internalLinks.support.linkTo}
-                  className="nav-link"
-                  activeClassName="active"
+                  className={activeItem === 'supporto' ? 'nav-link active' : 'nav-link'}
                   onClick={closeMenu}
                 >
-                  <span className="font-weight-semibold">
-                    {internalLinks.support.label}
-                  </span>
+                  <span className="font-weight-semibold">{internalLinks.support.label}</span>
                 </Link>
               </NavItem>
-              <NavItem active className={classes.updatesBtn}>
+              <NavItem className={classes.updatesBtn} active>
                 <Button
-                  className="nav-link"
-                  activeClassName="active"
+                  className="nav-link modal-button"
                   onClick={() => {
                     closeMenu();
-                    toggleModal();
+                    dispatch({ type: 'SET:TOGGLE_MODAL' });
                   }}
                 >
-                  <span className="font-weight-semibold">
-                    {internalLinks.updates.label}
-                  </span>
+                  <span className="font-weight-semibold">{internalLinks.updates.label}</span>
                 </Button>
               </NavItem>
             </Nav>

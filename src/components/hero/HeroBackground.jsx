@@ -29,7 +29,7 @@ const useStyles = createUseStyles({
 export const HeroBackground = ({ image, className }) => {
   const classes = useStyles();
   const heroBgClasses = classNames(classes.heroImg, className);
-  return <img src={`/assets/${image}`} alt="italy" className={heroBgClasses} />;
+  return <img src={`/assets/${image}`} alt="" className={heroBgClasses} />;
 };
 
 HeroBackground.propTypes = {

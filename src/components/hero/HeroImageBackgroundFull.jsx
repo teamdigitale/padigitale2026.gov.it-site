@@ -55,13 +55,13 @@ const useStyles = createUseStyles({
       },
     },
     '&.bg-white': {
-      backgrodunColor: '#fff',
+      backgroundColor: '#fff',
       '& .it-hero-text-wrapper.bg-white span, h1, h2, h3, p': {
         color: '#33485C',
       },
     },
     '&.bg-blue': {
-      backgrodunColor: '#0066CC',
+      backgroundColor: '#0066CC',
       '& .bg-blue': {
         color: '#fff',
       },
@@ -135,7 +135,7 @@ export const HeroImageBackgroundFull = ({
               <div className={`${classes.contentWrapper}`}>
                 <div>
                   <HeroCategory title={category} />
-                  <HeroTitle title={title} className={classes.heroTitle} />
+                  <HeroTitle Tag="h4" title={title} className={classes.heroTitle} />
                   <HeroParagraph text={body} />
                 </div>
               </div>

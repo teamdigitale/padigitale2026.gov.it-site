@@ -85,7 +85,6 @@ export const ComeFunzionaCarousel = ({ content, title, subtitle }) => {
 
     carousel.swiper.on('slideChange', () => {
       const tabs = document.querySelector('[class ^= howTabs]');
-      console.log(tabs);
     });
   }, []);
 

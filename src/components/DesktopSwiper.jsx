@@ -11,7 +11,7 @@ SwiperCore.use([Pagination, A11y]);
 const useStyles = createUseStyles({
   swiperSlide: {
     padding: '0 1.111rem 1.111rem',
-    height: 'auto'
+    height: 'auto',
   },
   bullet: {
     composes: 'swiper-pagination-bullet p-2',
@@ -58,6 +58,7 @@ export const DesktopSwiper = ({
   desktopNavigation,
   navigation,
   className,
+  title,
 }) => {
   const classes = useStyles();
   const [paginationId, setPaginationId] = useState(null);
@@ -123,21 +124,70 @@ export const DesktopSwiper = ({
       )}
       {desktopNavigation && (
         <div className="d-none justify-content-center pt-3 d-lg-flex">
-          <button className={classes.navigationBtn} type="button" data-prev-navigation-id={prevBtnId}>
-            <Icon color="primary" icon="it-arrow-left-circle" size="lg" />
+          <button
+            className={classes.navigationBtn}
+            type="button"
+            data-prev-navigation-id={prevBtnId}
+            aria-label={`Vai alla slide precedente di ${title}`}
+          >
+            <Icon
+              color="primary"
+              aria-label={`Vai alla slide precedente di ${title}`}
+              role="img"
+              icon="it-arrow-left-circle"
+              size="lg"
+              focusable="false"
+            />
           </button>
-          <button className={classes.navigationBtn} type="button" data-next-navigation-id={nextBtnId}>
-            <Icon color="primary" icon="it-arrow-right-circle" size="lg" />
+          <button
+            className={classes.navigationBtn}
+            type="button"
+            data-next-navigation-id={nextBtnId}
+            aria-label={`Vai alla slide successiva di ${title}`}
+          >
+            <Icon
+              color="primary"
+              aria-label={`Vai alla slide successiva di ${title}`}
+              icon="it-arrow-right-circle"
+              size="lg"
+              role="img"
+              focusable="false"
+            />
           </button>
         </div>
       )}
       {navigation && (
         <div className="justify-content-center pt-3 d-flex">
-          <button className={classes.navigationBtn} type="button" data-prev-navigation-id={prevBtnId}>
-            <Icon color="primary" icon="it-arrow-left-circle" size="lg" />
+          <button
+            className={classes.navigationBtn}
+            type="button"
+            data-prev-navigation-id={prevBtnId}
+            aria-label={`Vai alla slide precedente di ${title}`}
+          >
+            <Icon
+              color="primary"
+              aria-label={`Vai alla slide precedente di ${title}`}
+              icon="it-arrow-left-circle"
+              size="lg"
+              role="img"
+              focusable="false"
+            />
           </button>
-          <button className={classes.navigationBtn} type="button" data-next-navigation-id={nextBtnId}>
-            <Icon color="primary" icon="it-arrow-right-circle" size="lg" />
+          <button
+            className={classes.navigationBtn}
+            type="button"
+            data-next-navigation-id={nextBtnId}
+            aria-label={`Vai alla slide successiva di ${title}`}
+          >
+            <Icon
+              color="primary"
+              icon="it-arrow-right-circle"
+              size="lg"
+              role="img"
+              aria-label="Vai alla slide successiva"
+              focusable="false"
+              aria-label={`Vai alla slide successiva di ${title}`}
+            />
           </button>
         </div>
       )}

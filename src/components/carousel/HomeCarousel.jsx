@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { createUseStyles } from 'react-jss';
 import { Row, Col, Card, CardBody, CardTitle, CardText, Button } from 'design-react-kit';
 import PropTypes from 'prop-types';
-import { DesktopSwiper } from '../DesktopSwiper';
 import { Link } from 'gatsby';
+import { DesktopSwiper } from '../DesktopSwiper';
 
 const useStyles = createUseStyles({
   heroCards: {
@@ -38,7 +38,7 @@ const useStyles = createUseStyles({
           color: '#33485C',
         },
       },
-      '& h5.card-title': {
+      '& h4.card-title': {
         color: '#0066CC',
         fontSize: '1.778rem',
         fontWeight: 'bold',
@@ -60,7 +60,7 @@ const useStyles = createUseStyles({
         },
       },
       '& button': {
-        marginTop: 'auto'
+        marginTop: 'auto',
       },
       '& .source': {
         color: '#33485C',
@@ -143,9 +143,15 @@ export const HomeCarousel = ({ content, title }) => {
     <>
       <Card key={element.id} className={classes.heroCards} spacing noWrapper>
         <CardBody>
-          <CardTitle tag="h5">{element.title}</CardTitle>
+          <CardTitle tag="h4">{element.title}</CardTitle>
           <CardText dangerouslySetInnerHTML={{ __html: element.description }} />
-          <Link to={element.linkTo} className="text-uppercase btn btn-primary" aria-lebel={element.buttonAriaLabel}>{element.button}</Link>
+          <Link
+            aria-label={`Scopri di più su ${element.title}`}
+            to={element.linkTo}
+            className="text-uppercase btn btn-primary"
+          >
+            {element.button}
+          </Link>
         </CardBody>
         {isMobile ? (
           <img className={classes.heroCardImg} src={`/assets/${element.imageMobile}`} alt="" />
@@ -179,6 +185,7 @@ export const HomeCarousel = ({ content, title }) => {
                 className={classes.noHidden}
                 mobilePagination
                 desktopNavigation
+                title="home hero carousel"
               />
             </Col>
           </Row>
