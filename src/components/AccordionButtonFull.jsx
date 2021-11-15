@@ -163,6 +163,9 @@ const useStyles = createUseStyles({
         '@media (min-width: 992px)': {
           fontSize: '1rem',
         },
+        '&:hover': {
+          textDecoration: 'underline',
+        },
       },
     },
   },
@@ -178,6 +181,9 @@ const useStyles = createUseStyles({
       fontSize: '0.778rem',
       '& img': {
         marginLeft: '0.444rem',
+      },
+      '&:hover': {
+        textDecoration: 'underline',
       },
     },
   },
@@ -253,8 +259,9 @@ export const AccordionButtonFull = (props) => {
           aria-expanded={props.id === props.active}
           className={classes.button}
           aria-label={`Dettaglio opportunità ${number} ${title}`}
+          aria-controls={`Misure-accordion-${id}`}
         ></Button>
-        <div className={classes.cardWrapper}>
+        <div id={`Misure-accordion-${id}`} className={classes.cardWrapper}>
           <div className={classes.cardHeader}>
             <h4 className={classes.cardTitle}>
               <span>{number}</span> {title}
@@ -281,6 +288,7 @@ export const AccordionButtonFull = (props) => {
                 <div className="access">
                   <span>Modalità di accesso:</span>{' '}
                   <Link
+                    className={classes.accessLink}
                     to="/come-funziona"
                     onClick={() => dispatch({ type: 'SET:HOW_SECTION_ID', payload: { howId: accessSectionId } })}
                   >

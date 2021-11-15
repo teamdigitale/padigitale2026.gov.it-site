@@ -80,12 +80,10 @@ export const ModalUpdatesButton = ({ label, buttonLabel, hasTitle, handleToggle 
         <Row>
           <Col lg={12}>
             <div className={classes.modalButtonContainer}>
-              <p className="description">{label}</p>
-              <Button
-                className={classes.button}
-                color="primary"
-                onClick={handleToggle}
-              >
+              <p className="description">
+                <strong>{label}</strong>
+              </p>
+              <Button className={classes.button} color="primary" onClick={handleToggle}>
                 {buttonLabel}
               </Button>
             </div>

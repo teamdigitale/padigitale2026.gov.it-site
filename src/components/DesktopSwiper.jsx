@@ -130,7 +130,14 @@ export const DesktopSwiper = ({
             data-prev-navigation-id={prevBtnId}
             aria-label={`Vai alla slide precedente di ${title}`}
           >
-            <Icon color="primary" role="img" icon="it-arrow-left-circle" size="lg" focusable="false" />
+            <Icon
+              color="primary"
+              aria-label={`Vai alla slide precedente di ${title}`}
+              role="img"
+              icon="it-arrow-left-circle"
+              size="lg"
+              focusable="false"
+            />
           </button>
           <button
             className={classes.navigationBtn}
@@ -138,7 +145,14 @@ export const DesktopSwiper = ({
             data-next-navigation-id={nextBtnId}
             aria-label={`Vai alla slide successiva di ${title}`}
           >
-            <Icon color="primary" icon="it-arrow-right-circle" size="lg" role="img" focusable="false" />
+            <Icon
+              color="primary"
+              aria-label={`Vai alla slide successiva di ${title}`}
+              icon="it-arrow-right-circle"
+              size="lg"
+              role="img"
+              focusable="false"
+            />
           </button>
         </div>
       )}
@@ -150,7 +164,14 @@ export const DesktopSwiper = ({
             data-prev-navigation-id={prevBtnId}
             aria-label={`Vai alla slide precedente di ${title}`}
           >
-            <Icon color="primary" icon="it-arrow-left-circle" size="lg" role="img" focusable="false" />
+            <Icon
+              color="primary"
+              aria-label={`Vai alla slide precedente di ${title}`}
+              icon="it-arrow-left-circle"
+              size="lg"
+              role="img"
+              focusable="false"
+            />
           </button>
           <button
             className={classes.navigationBtn}
@@ -165,6 +186,7 @@ export const DesktopSwiper = ({
               role="img"
               aria-label="Vai alla slide successiva"
               focusable="false"
+              aria-label={`Vai alla slide successiva di ${title}`}
             />
           </button>
         </div>

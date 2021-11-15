@@ -58,6 +58,11 @@ const useStyle = createUseStyles({
       '&:after': {
         content: 'none',
       },
+      '&:hover': {
+        '& h4.card-title': {
+          textDecoration: 'underline',
+        },
+      },
     },
   },
   btnWrapper: {
