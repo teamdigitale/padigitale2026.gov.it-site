@@ -18,7 +18,7 @@
   padding: 4.444rem 5.556rem;
 }
 .modalUpdatesContainer-0-2-22.modal-dialog .modal-content .modal-header .modal-title {
-  color: #0066CC;
+  color: #33485C;
   font-size: 1.333rem;
   max-width: 70%;
   font-weight: 700;
@@ -46,6 +46,10 @@
     position: absolute;
   }
 }
+  .close-0-2-23:focus {
+    outline: 2px solid #ff9900;
+    box-shadow: none;
+  }
   .close-0-2-23.btn {
     background: none;
     box-shadow: none;
@@ -88,7 +92,7 @@
   }
   .modalBody-0-2-25 [class$="-ValueContainer"] {
     color: #808080;
-    font-size: 0.889;
+    font-size: 0.889rem;
     padding-left: 1.333rem;
   }
   .modalBody-0-2-25 [class$="-indicatorSeparator"] {
@@ -130,9 +134,6 @@
     color: #17324D;
     font-size: 0.889rem;
     font-weight: 600;
-  }
-  .modalBody-0-2-25 input[type="radio"].is-invalid:not(:checked)+label::before {
-    border-color: #F83E5A;
   }
   .modalBody-0-2-25 .form-group {
     margin: 0;
@@ -187,9 +188,13 @@
     font-weight: 600;
   }
   .notification-0-2-32 {
+    top: 16px;
+    left: 50%;
+    bottom: unset;
     display: block;
     opacity: 0;
-    z-index: 9;
+    z-index: 9999;
+    transform: translateX(-50%);
     transition: .3s ease;
     visibility: hidden;
   }
@@ -201,21 +206,14 @@
   .notification-0-2-32.with-icon.success {
     border-color: #00CF86;
   }
-  .radioCustom-0-2-33.form-check [type=checkbox]+label::after {
-    border-radius: 50%;
+  .modalFooterLabel-0-2-33 {
+    font-size: 0.889rem;
   }
-  .radioCustom-0-2-33.form-check [type=checkbox]:checked+label::before {
-    top: 8px;
-    left: 4px;
-    width: 12px;
-    border: none;
-    height: 12px;
-    transform: none;
-    background: #06c;
-    border-radius: 50%;
+  .spinner-0-2-34 {
+    max-height: 2.667rem;
   }
-  .radioCustom-0-2-33.form-check [type=checkbox]:checked+label::after {
-    background: none;
+  .spinner-0-2-34.hidden {
+    display: none;
   }
   .overlay-0-2-19 {  }
   .overlay-d0-0-2-20 {
@@ -270,8 +268,13 @@
     height: auto;
     padding: 16px 0;
   }
-  .headerCenterWrapper-0-2-9 .it-header-center-content-wrapper .it-brand-wrapper a .icon {
+  .headerCenterWrapper-0-2-9 .it-header-center-content-wrapper .it-brand-wrapper a .icon.site-logo {
+    width: 3rem;
     height: 3rem;
+  }
+  .headerCenterWrapper-0-2-9 .it-header-center-content-wrapper .it-brand-wrapper a .icon.repubblica-logo {
+    width: 3.556rem;
+    height: 4rem;
   }
   .offCanvasWrapper-0-2-10 {
     display: flex;
@@ -317,6 +320,10 @@
     padding: 0.722rem 1.333rem;
     background: none;
   }
+  .navbarNav-0-2-12 .modal-button:focus {
+    outline: 2px solid #ff9900;
+    box-shadow: none;
+  }
   .navbarNav-0-2-12 button.nav-link:hover {
     text-decoration: underline;
   }
@@ -351,6 +358,16 @@
 }
   .updatesBtn-0-2-16 button {
     height: 100%;
+    box-shadow: none !important;
+  }
+  .updatesBtn-0-2-16 button:active {
+    color: #06c !important;
+    background: none !important;
+    box-shadow: none !important;
+  }
+  .updatesBtn-0-2-16 button:focus {
+    box-shadow: 0 0 0 2px #f90;;
+    border-radius: 0;
   }
   .headerToggler-0-2-17 {
     color: #0066CC;
@@ -361,9 +378,10 @@
     font-weight: 600;
     background-color: transparent;
   }
-  .headerToggler-0-2-17:focus {
+  .headerToggler-0-2-17:focus, .headerToggler-0-2-17:hover {
     color: #0066CC;
     outline: 2px solid #ff9900;
+    border-radius: 0;
     background-color: transparent;
   }
 @media (min-width: 992px) {
@@ -374,73 +392,109 @@
   .headerLink-0-2-18 {
     cursor: pointer;
   }
-  .mainFooter-0-2-34 {
+  .mainFooter-0-2-35 {
     filter: drop-shadow(0px 4px 80px rgba(0, 43, 85, 0.1));
     background-color: #fff;
   }
-  .mainWrapper-0-2-35 {
+  .mainWrapper-0-2-36 {
     padding: 50px 0;
   }
-@media (min-width: 768px) {
-  .mainWrapper-0-2-35 {
+@media (min-width: 992px) {
+  .mainWrapper-0-2-36 {
     display: flex;
     padding: 40px 0;
     align-items: center;
+    flex-direction: column;
+  }
+}
+@media (min-width: 1200px) {
+  .mainWrapper-0-2-36 {
+    flex-direction: row;
     justify-content: space-between;
   }
 }
-  .slimFooter-0-2-36 {
+  .mainWrapper-0-2-36 .logos {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+@media (min-width: 992px) {
+  .mainWrapper-0-2-36 .logos {
+    flex-direction: row;
+  }
+}
+  .mainWrapper-0-2-36 .logos a:focus {
+    box-shadow: none;
+  }
+  .mainWrapper-0-2-36 .logos a:focus img {
+    outline: 2px solid #ff9900;
+  }
+  .slimFooter-0-2-37 {
     background-color: #01254C;
   }
-  .slimFooter-0-2-36 a {
+  .slimFooter-0-2-37 a {
     color: #27D1D6;
   }
-  .seeMore-0-2-37 {
+  .seeMore-0-2-38 {
     color: #33485C;
+    display: block;
+    margin-top: 2.5rem;
     font-weight: bold;
     text-decoration: none;
   }
-  .seeMore-0-2-37:hover {
+  .seeMore-0-2-38:hover {
     color: #33485C;
     text-decoration: underline;
   }
-  .departmentLogo-0-2-38 {
-    margin: 50px auto;
-    display: block;
-  }
-@media (min-width: 768px) {
-  .departmentLogo-0-2-38 {
-    margin: 0;
-    display: inline-block;
-    max-height: 45px;
-    border-left: 1px solid #E6E9F2;
-    margin-left: 45px;
-    padding-left: 45px;
-  }
-}
-  .footerLogo-0-2-39+.footer-logo {
-    margin-left: 30px;
-  }
-  .logoImg-0-2-40 {
-    height: 2.667rem;
-  }
-  .logoImg-0-2-40.logo-gov {
-    height: 3.556rem;
-  }
-  .listItem-0-2-42 {
-    display: block;
-  }
-  .listItem-0-2-42+.list-inline-item {
-    margin-top: 30px;
-  }
-@media (min-width: 768px) {
-  .listItem-0-2-42 {
-    display: inline-block;
-  }
-  .listItem-0-2-42+.list-inline-item {
+@media (min-width: 1200px) {
+  .seeMore-0-2-38 {
     margin-top: 0;
   }
 }
+  .departmentLogo-0-2-39 {
+    width: 100%;
+    margin: 50px auto;
+    display: block;
+    max-width: 400px;
+  }
+@media (min-width: 992px) {
+  .departmentLogo-0-2-39 {
+    width: auto;
+    margin: 0;
+    display: inline-block;
+    max-height: 2.5rem;
+    border-left: 1px solid #E6E9F2;
+    margin-left: 2.5rem;
+    margin-right: 1.2rem;
+    padding-left: 1.5rem;
+  }
+}
+  .footerLogo-0-2-40+.footer-logo {
+    margin-left: 30px;
+  }
+  .logoImg-0-2-41 {
+    height: 2.667rem;
+  }
+  .logoImg-0-2-41.logo-gov {
+    height: 3.556rem;
+  }
+  .listItem-0-2-43 {
+    display: block;
+  }
+  .listItem-0-2-43+.list-inline-item {
+    margin-top: 30px;
+  }
+@media (min-width: 992px) {
+  .listItem-0-2-43 {
+    display: inline-block;
+  }
+  .listItem-0-2-43+.list-inline-item {
+    margin-top: 0;
+  }
+}
+  .listItem-0-2-43:hover {
+    text-decoration: underline;
+  }
 :focus:not(:focus-visible) {
   box-shadow: none;
   border-color: initial;
@@ -459,7 +513,7 @@
 }
   .statusCode-0-2-21 {
     font-size: 7em;
-  }</style><title data-react-helmet="true">Pagina non trovata - PA digitale 2026</title><link data-react-helmet="true" rel="icon" href="/assets/favicons/favicon.ico"/><link data-react-helmet="true" rel="icon" sizes="16x16" type="image/png" href="/assets/favicons/favicon-16x16.png"/><link data-react-helmet="true" rel="icon" sizes="32x32" type="image/png" href="/assets/favicons/favicon-32x32.png"/><link data-react-helmet="true" rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon.png"/><meta data-react-helmet="true" name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta data-react-helmet="true" name="description" content="Pagina non trovata"/><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"/><meta data-react-helmet="true" name="twitter:title" content="Pagina non trovata - PA digitale 2026"/><meta data-react-helmet="true" name="twitter:description" content="Pagina non trovata"/><meta data-react-helmet="true" name="twitter:site" content="@innovazioneGov"/><meta data-react-helmet="true" name="twitter:image" content="https://padigitale2026.gov.it/assets/social-cards/home.png"/><meta data-react-helmet="true" name="og:title" content="Pagina non trovata - PA digitale 2026"/><meta data-react-helmet="true" name="og:description" content="Pagina non trovata"/><meta data-react-helmet="true" name="og:type" content="website"/><meta data-react-helmet="true" name="og:locale" content="it_IT"/><meta data-react-helmet="true" name="og:image" content="https://padigitale2026.gov.it/assets/social-cards/home.png"/><meta data-react-helmet="true" name="og:site_name" content="PA digitale 2026"/><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){if(void 0===e.target.dataset.mainImage)return;if(void 0===e.target.dataset.gatsbyImageSsr)return;const t=e.target;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><link rel="preconnect" href="https://ingestion.webanalytics.italia.it/"/><script>window.dataLayer = window.dataLayer || [];window.dataLayer.push({"platform":"gatsby"}); (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl+'';f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer', 'XXXXX');</script><meta name="robots" content="noindex, nofollow, noimageindex" data-no-index="true"/><link as="script" rel="preload" href="/webpack-runtime-531dd484d06dccafa28b.js"/><link as="script" rel="preload" href="/framework-ba7d9d678fe12ac8e5cb.js"/><link as="script" rel="preload" href="/bb5d0dd9-3ad1df544b48881a8b5f.js"/><link as="script" rel="preload" href="/app-9b2e84fadbe2d904db39.js"/><link as="script" rel="preload" href="/component---src-pages-404-jsx-2bb72f193db8e66e5cd8.js"/><link as="fetch" rel="preload" href="/page-data/404/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/705215811.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=XXXXX" height="0" width="0" style="display: none; visibility: hidden" aria-hidden="true"></iframe></noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><a class="sr-only sr-only-focusable" href="#content">Vai al contenuto principale</a><a class="sr-only sr-only-focusable" href="#footer">Vai al footer</a><header id="mainTop"><div class="it-header-wrapper"><div class="it-header-slim-wrapper theme-light"><div class="container"><div class="row"><div class="col-12"><div class="it-header-slim-wrapper-content"><a href="https://innovazione.gov.it/dipartimento" target="_blank" class="d-lg-block headerLink-0-2-18 font-weight-bold d-none navbar-brand">Dipartimento per la Trasformazione Digitale</a><div class="nav-mobile"><nav class="" aria-labelledby="siti-esterni-correlati"><h2 id="siti-esterni-correlati" class="sr-only">Siti esterni correlati</h2><button type="button" aria-expanded="false" class="headerToggler-0-2-17 btn btn-secondary"><span class="font-weight-bold">Dipartimento per la Trasformazione Digitale</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon"><path d="M11.6 15.4L6 9.8l.7-.8 4.9 4.9L16.5 9l.7.8z"></path></svg></button><div class="collapse"><div class="linkListWrapperCustom-0-2-13"><div class="link-list-wrapper"><ul class="topListLink-0-2-8 border-0 p-0 mr-0 link-list"><li><a target="_blank" href="https://innovazione.gov.it/dipartimento/focus/italia-digitale-2026/" class="list-item">Italia digitale 2026</a></li><li><a target="_blank" href="https://italiadomani.gov.it/it/home.html" class="list-item">Italia domani - PNRR</a></li></ul></div></div></div></nav></div><a href="https://ec.europa.eu/info/index_it" target="_blank" rel="noreferrer" aria-label="Unione Europea (Collegamento esterno - Apre su nuova scheda)" class=""><img class="d-none d-lg-block" src="/assets/eu-flag.svg" alt=""/></a></div></div></div></div></div><div class="it-nav-wrapper"><div class="headerCenterWrapper-0-2-9 it-header-center-wrapper theme-light"><div class="container"><div class="row"><div class="col-12"><div class="it-header-center-content-wrapper"><div class="it-brand-wrapper pl-5 pl-sm-0"><a href="/"><div class="it-brand-text pr-0"><div class="d-md-flex align-items-center"><img class="icon" src="/assets/repubblica-logo-blue.svg" alt="Logo Repubblica Italiana"/><img class="icon" src="/assets/site-logo.svg" alt="Logo PA digitale 2026"/><div class="d-none d-lg-inline-block"><h1 class="h3 mb-0">PA digitale 2026</h1><div class="subtitle-0-2-7 small">Le risorse per una PA protagonista della transizione digitale</div></div></div></div></a></div></div></div></div></div></div><div class="noShadow-0-2-14 shadow-none it-header-navbar-wrapper theme-light-desk"><div class="container"><div class="row"><div class="col-12"><nav aria-labelledby="menu-principale" class="px-2 navbar has-megamenu navbar navbar-expand-lg"><h2 id="menu-principale" class="sr-only">Menu principale</h2><button aria-label="Mostra / Nascondi la navigazione" aria-expanded="false" type="button" class="custom-navbar-toggler navbar-toggler"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon"><path d="M22 5v1H2V5zM2 12.5h20v-1H2zM2 19h20v-1H2z"></path><path fill="none" d="M0 0h24v24H0z"></path></svg></button><div class="navbar-collapsable" style="z-index:11"><div class="overlay-0-2-19 overlay overlay-d0-0-2-20"></div><div class="close-div sr-only"><button class="btn close-menu" type="button"><span class="it-close">Chiudi</span></button></div><div class="menuWrapper-0-2-15 menu-wrapper"><ul class="navbarNav-0-2-12 navbar-nav"><div class="offCanvasWrapper-0-2-10"><a href="/" tabindex="-1"><img class="icon" src="/assets/site-logo.svg" alt="Logo"/></a><a href="/" class="offCanvasTitle-0-2-11">PA digitale 2026</a></div><li class="nav-item active"><a class="nav-link" href="/misure"><span class="font-weight-semibold">Le misure</span></a></li><li class="nav-item"><a class="nav-link" href="/come-funziona"><span class="font-weight-semibold">Come funziona</span></a></li><li class="nav-item"><a class="nav-link" href="/supporto"><span class="font-weight-semibold">Supporto</span></a></li><li class="updatesBtn-0-2-16 nav-item active"><button type="button" activeClassName="active" class="nav-link btn btn-secondary"><span class="font-weight-semibold">Ricevi aggiornamenti</span></button></li></ul></div></div></nav></div></div></div></div></div></div></header><main class="text-info text-break" id="content"><h1 class="sr-only">Pagina non trovata</h1><div class="py-5"><div class="container py-xl-5 px-3 px-md-0"><div class="text-center text-primary"><div class="statusCode-0-2-21 h1">404</div><div class="display-3">Pagina non trovata</div><div class="my-4 text-dark">Utilizza il menu per riprendere la navigazione</div><a class="btn text-uppercase btn-primary" href="/">Vai alla pagina iniziale</a></div></div></div><div class="container test-docs"><div class="row"><div class="col-12 col-md-6"><div class="notification-0-2-32 notification with-icon dismissable" role="alert" aria-labelledby="not2dms-title" id="not2dms"><h5 id="not2dms-title"><svg class="icon"></svg></h5><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</p><button type="button" class="btn notification-close"><svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="17.3242" y="0.5" width="1.49987" height="24.4978" transform="rotate(45 17.3242 0.5)" fill="#5C6F82"></rect><rect y="1.56055" width="1.49987" height="24.4978" transform="rotate(-45 0 1.56055)" fill="#5C6F82"></rect></svg><span class="sr-only">Chiudi notifica: Titolo notifica</span></button></div></div></div></div></main><footer class="it-footer" id="footer"><div class="mainFooter-0-2-34 it-footer-main"><div class="container text-center text-md-left"><div class="mainWrapper-0-2-35"><div class="logos"><a href="https://ec.europa.eu/info/index_it" target="_blank" rel="noreferrer" aria-label="Unione Europea (Collegamento esterno - Apre su nuova scheda)" class="footerLogo-0-2-39 footer-logo"><img class="logoImg-0-2-40" src="/assets/eu-flag.svg" alt="Unione Europea"/></a><a href="https://www.governo.it/" target="_blank" rel="noreferrer" aria-label="Governo Italiano (Collegamento esterno - Apre su nuova scheda)" class="footerLogo-0-2-39 footer-logo"><img class="logoImg-0-2-40 logo-gov" src="/assets/repubblica-logo-colorato.svg" alt="Governo Italiano"/></a><a href="https://innovazione.gov.it" target="_blank" rel="noreferrer" aria-label="Dipartimento per la Trasformazione Digitale (Collegamento esterno - Apre su nuova scheda)" class=""><img class="departmentLogo-0-2-38" src="/assets/dipartimento.svg" alt="Dipartimento per la trasformazione digitale"/></a></div><div class="info"><a class="seeMore-0-2-37" href="/come-funziona">Scopri l&#x27;iniziativa</a></div></div></div></div><div class="slimFooter-0-2-36 it-footer-small-prints py-4"><section class="container" aria-labelledby="linkutili-header"><h3 id="linkutili-header" class="sr-only">Link Utili</h3><ul class="list-inline link-list mb-0 text-center text-md-left"><li class="listItem-0-2-42 list-inline-item mr-0 mr-md-5"><a class="list-item mid-footer-link mx-4 mx-md-0" href="/note-legali/">Note legali</a></li><li class="listItem-0-2-42 list-inline-item mr-0 mr-md-5"><a class="list-item mid-footer-link mx-4 mx-md-0" href="/privacy-policy/">Privacy policy</a></li><li class="listItem-0-2-42 list-inline-item mr-0 mr-md-5"><a href="https://form.agid.gov.it/prossimapa.gov.it" target="_blank" rel="noreferrer" aria-label="Dichiarazione di accessibilità (link esterno)" class="list-item mid-footer-link mx-4 mx-md-0">Dichiarazione di accessibilità</a></li></ul></section></div></footer></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script>
+  }</style><title data-react-helmet="true">Pagina non trovata - PA digitale 2026</title><link data-react-helmet="true" rel="icon" href="/assets/favicons/favicon.ico"/><link data-react-helmet="true" rel="icon" sizes="16x16" type="image/png" href="/assets/favicons/favicon-16x16.png"/><link data-react-helmet="true" rel="icon" sizes="32x32" type="image/png" href="/assets/favicons/favicon-32x32.png"/><link data-react-helmet="true" rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon.png"/><meta data-react-helmet="true" name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta data-react-helmet="true" name="description" content="Pagina non trovata"/><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"/><meta data-react-helmet="true" name="twitter:title" content="Pagina non trovata - PA digitale 2026"/><meta data-react-helmet="true" name="twitter:description" content="Pagina non trovata"/><meta data-react-helmet="true" name="twitter:site" content="@innovazioneGov"/><meta data-react-helmet="true" name="twitter:image" content="https://padigitale2026.gov.it/assets/social-cards/home.png"/><meta data-react-helmet="true" name="og:title" content="Pagina non trovata - PA digitale 2026"/><meta data-react-helmet="true" name="og:description" content="Pagina non trovata"/><meta data-react-helmet="true" name="og:type" content="website"/><meta data-react-helmet="true" name="og:locale" content="it_IT"/><meta data-react-helmet="true" name="og:image" content="https://padigitale2026.gov.it/assets/social-cards/home.png"/><meta data-react-helmet="true" name="og:site_name" content="PA digitale 2026"/><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){if(void 0===e.target.dataset.mainImage)return;if(void 0===e.target.dataset.gatsbyImageSsr)return;const t=e.target;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><link rel="preconnect" href="https://ingestion.webanalytics.italia.it/"/><script>window.dataLayer = window.dataLayer || [];window.dataLayer.push({"platform":"gatsby"}); (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl+'';f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer', 'XXXXX');</script><meta name="robots" content="noindex, nofollow, noimageindex" data-no-index="true"/><link as="script" rel="preload" href="/webpack-runtime-f481a0f2b11e33f1d1fb.js"/><link as="script" rel="preload" href="/framework-ba7d9d678fe12ac8e5cb.js"/><link as="script" rel="preload" href="/bb5d0dd9-5c1ad5072fdc8dc92770.js"/><link as="script" rel="preload" href="/app-18e3beb0ed386e4963d2.js"/><link as="script" rel="preload" href="/component---src-pages-404-jsx-857be965ead62ea394f6.js"/><link as="fetch" rel="preload" href="/page-data/404/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/2767305448.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/705215811.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=XXXXX" height="0" width="0" style="display: none; visibility: hidden" aria-hidden="true"></iframe></noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><a class="sr-only sr-only-focusable" href="#content">Vai al contenuto principale</a><a class="sr-only sr-only-focusable" href="#footer">Vai al footer</a><header id="mainTop"><div class="it-header-wrapper"><div class="it-header-slim-wrapper theme-light"><div class="container"><div class="row"><div class="col-12"><div class="it-header-slim-wrapper-content"><a href="https://innovazione.gov.it/" target="_blank" rel="noreferrer" class="d-lg-block headerLink-0-2-18 font-weight-bold d-none navbar-brand">Dipartimento per la Trasformazione Digitale</a><div class="nav-mobile"><nav class="" aria-label="Siti esterni correlati"><div class="headerToggler-0-2-17"><a href="https://innovazione.gov.it/" target="_blank" class="headerLink-0-2-18 font-weight-bold" aria-label="Dipartimento per la Trasformazione Digitale (Collegamento esterno - Apre su nuova scheda)" rel="noreferrer">Dipartimento per la Trasformazione Digitale</a><button type="button" aria-expanded="false" class="headerToggler-0-2-17 btn btn-secondary" aria-label="Apre lista link esterni"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon"><path d="M11.6 15.4L6 9.8l.7-.8 4.9 4.9L16.5 9l.7.8z"></path></svg></button></div><div class="collapse"><div class="linkListWrapperCustom-0-2-13"><div class="link-list-wrapper"><ul class="topListLink-0-2-8 border-0 p-0 mr-0 link-list"><li><a target="_blank" rel="noreferrer" aria-label="VAI AL SITO Italia digitale 2026 (Collegamento esterno - Apre su nuova scheda)" href="https://innovazione.gov.it/dipartimento/focus/italia-digitale-2026/" class="list-item">Italia digitale 2026</a></li><li><a target="_blank" rel="noreferrer" aria-label="Italia domani - PNRR (Collegamento esterno - Apre su nuova scheda)" href="https://italiadomani.gov.it/it/home.html" class="list-item">Italia domani - PNRR</a></li></ul></div></div></div></nav></div><a href="https://ec.europa.eu/info/index_it" target="_blank" rel="noreferrer" aria-label="Unione Europea (Collegamento esterno - Apre su nuova scheda)" class=""><img class="d-none d-lg-block" src="/assets/eu-flag.svg" alt="Unione Europea (Collegamento esterno - Apre su nuova scheda)"/></a></div></div></div></div></div><div class="it-nav-wrapper"><div class="headerCenterWrapper-0-2-9 it-header-center-wrapper theme-light"><div class="container"><div class="row"><div class="col-12"><div class="it-header-center-content-wrapper"><div class="it-brand-wrapper pl-5 pl-sm-0"><a href="/"><div class="it-brand-text pr-0"><div class="d-md-flex align-items-center"><img class="icon repubblica-logo" src="/assets/repubblica-logo-blue.svg" alt="Logo Repubblica Italiana"/><img class="icon site-logo" src="/assets/site-logo.svg" alt="Logo PA digitale 2026"/><div class="d-none d-lg-inline-block"><h1 class="h3 mb-0">PA digitale 2026</h1><div class="subtitle-0-2-7 small">Le risorse per una PA protagonista della transizione digitale</div></div></div></div></a></div></div></div></div></div></div><div class="noShadow-0-2-14 shadow-none it-header-navbar-wrapper theme-light-desk"><div class="container"><div class="row"><div class="col-12"><nav aria-labelledby="menu-principale" class="px-2 navbar has-megamenu navbar navbar-expand-lg"><h2 id="menu-principale" class="sr-only">Menu principale</h2><button aria-label="Mostra / Nascondi la navigazione" aria-expanded="false" type="button" class="custom-navbar-toggler navbar-toggler"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon"><path d="M22 5v1H2V5zM2 12.5h20v-1H2zM2 19h20v-1H2z"></path><path fill="none" d="M0 0h24v24H0z"></path></svg></button><div class="navbar-collapsable" style="z-index:11"><div class="overlay-0-2-19 overlay overlay-d0-0-2-20"></div><div class="close-div sr-only"><button class="btn close-menu" type="button"><span class="it-close">Chiudi</span></button></div><div class="menuWrapper-0-2-15 menu-wrapper"><ul class="navbarNav-0-2-12 navbar-nav"><li class="offCanvasWrapper-0-2-10"><a href="/" tabindex="-1"><img class="icon" src="/assets/site-logo.svg" alt="Vai alla pagina principale"/></a><a href="/" class="offCanvasTitle-0-2-11">PA digitale 2026</a></li><li class="nav-item active"><a class="nav-link" href="/misure"><span class="font-weight-semibold">Le misure</span></a></li><li class="nav-item"><a class="nav-link" href="/come-funziona"><span class="font-weight-semibold">Come funziona</span></a></li><li class="nav-item"><a class="nav-link" href="/supporto"><span class="font-weight-semibold">Supporto</span></a></li><li class="updatesBtn-0-2-16 nav-item active"><button type="button" class="nav-link modal-button btn btn-secondary"><span class="font-weight-semibold">Ricevi aggiornamenti</span></button></li></ul></div></div></nav></div></div></div></div></div></div></header><main class="text-info text-break" id="content"><h1 class="sr-only">Pagina non trovata</h1><div class="py-5"><div class="container py-xl-5 px-3 px-md-0"><div class="text-center text-primary"><div class="statusCode-0-2-21 h1">404</div><div class="display-3">Pagina non trovata</div><div class="my-4 text-dark">Utilizza il menu per riprendere la navigazione</div><a class="btn text-uppercase btn-primary" href="/">Vai alla pagina iniziale</a></div></div></div><div class="container test-docs"><div class="row"><div class="col-12 col-md-6"><div class="notification-0-2-32 notification with-icon dismissable" role="alert" aria-labelledby="not2dms-title" id="not2dms"><h5 id="not2dms-title">notifiche<svg class="icon" role="img" aria-label=""></svg></h5><p></p><button type="button" class="btn notification-close" aria-label="Chiudi" aria-describedby="not2dms-title"><svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg" focusable="false" role="img" aria-label="Chiudi"><rect x="17.3242" y="0.5" width="1.49987" height="24.4978" transform="rotate(45 17.3242 0.5)" fill="#5C6F82"></rect><rect y="1.56055" width="1.49987" height="24.4978" transform="rotate(-45 0 1.56055)" fill="#5C6F82"></rect></svg></button></div></div></div></div></main><footer class="it-footer" id="footer" aria-labelledby="linkutili-header"><h2 id="linkutili-header" class="sr-only">Link Utili</h2><div class="mainFooter-0-2-35 it-footer-main"><div class="container text-center text-md-left"><div class="mainWrapper-0-2-36"><div class="logos"><div class="d-flex align-items-center"><a href="https://ec.europa.eu/info/index_it" target="_blank" rel="noreferrer" aria-label="Unione Europea (Collegamento esterno - Apre su nuova scheda)" class="footerLogo-0-2-40 footer-logo"><img class="logoImg-0-2-41" src="/assets/eu-flag.svg" alt="Unione Europea"/></a><a href="https://www.governo.it/" target="_blank" rel="noreferrer" aria-label="Governo Italiano (Collegamento esterno - Apre su nuova scheda)" class="footerLogo-0-2-40 footer-logo"><img class="logoImg-0-2-41 logo-gov" src="/assets/repubblica-logo-colorato.svg" alt="Governo Italiano"/></a></div><a href="https://innovazione.gov.it/" target="_blank" rel="noreferrer" aria-label="Ministero per l&#x27;innovazione tecnologica e la transizione digitale" class=""><img class="departmentLogo-0-2-39" src="/assets/mitd.svg" alt="Ministero per l&#x27;innovazione tecnologica e la transizione digitale"/></a><a href="https://innovazione.gov.it" target="_blank" rel="noreferrer" aria-label="Dipartimento per la Trasformazione Digitale" class=""><img src="/assets/dipartimento.svg" alt="Dipartimento per la Trasformazione Digitale"/></a></div><div class="info text-center"><a class="seeMore-0-2-38" href="/come-funziona">Scopri l&#x27;iniziativa</a></div></div></div></div><div class="slimFooter-0-2-37 it-footer-small-prints py-4"><section class="container" aria-labelledby="linkutili-header"><ul class="list-inline link-list mb-0 text-center text-md-left"><li class="listItem-0-2-43 list-inline-item mr-0 mr-md-5"><a class="list-item mid-footer-link mx-4 mx-md-0" href="/note-legali/">Note legali</a></li><li class="listItem-0-2-43 list-inline-item mr-0 mr-md-5"><a class="list-item mid-footer-link mx-4 mx-md-0" href="/privacy-policy/">Privacy policy</a></li><li class="listItem-0-2-43 list-inline-item mr-0 mr-md-5"><a href="https://form.agid.gov.it/prossimapa.gov.it" target="_blank" rel="noreferrer" aria-label="Dichiarazione di accessibilità (link esterno)" class="list-item mid-footer-link mx-4 mx-md-0">Dichiarazione di accessibilità</a></li></ul></section></div></footer></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script>
     window.dev = undefined
     if (window.dev === true || !(navigator.doNotTrack === '1' || window.doNotTrack === '1')) {
       window._paq = window._paq || [];
@@ -483,4 +537,4 @@
         console.debug('[Matomo] matomoUrl: https://ingestion.webanalytics.italia.it/, siteId: R9pxNNv0Xm')
       }
     }
-  </script><noscript><img src="https://ingestion.webanalytics.italia.it//matomo.php?idsite=R9pxNNv0Xm&rec=1&url=https://padigitale2026.gov.it/404/" style="border:0" alt="tracker" /></noscript><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/404/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-a8d9a60fca838cb47dc6.js"],"app":["/app-9b2e84fadbe2d904db39.js"],"component---src-pages-404-jsx":["/component---src-pages-404-jsx-2bb72f193db8e66e5cd8.js"],"component---src-pages-come-funziona-jsx":["/component---src-pages-come-funziona-jsx-2e2f82fede23f412058b.js"],"component---src-pages-faq-jsx":["/component---src-pages-faq-jsx-4cb59855e46b839eddcf.js"],"component---src-pages-index-jsx":["/component---src-pages-index-jsx-1252baf7773dc7f762a1.js"],"component---src-pages-misure-jsx":["/component---src-pages-misure-jsx-6c1edc27d059b69f3c4f.js"],"component---src-pages-note-legali-jsx":["/component---src-pages-note-legali-jsx-796156478841e41d7c4f.js"],"component---src-pages-privacy-policy-jsx":["/component---src-pages-privacy-policy-jsx-f55a05306fc6d0259b99.js"],"component---src-pages-supporto-jsx":["/component---src-pages-supporto-jsx-a59562e86d4676412b27.js"]};/*]]>*/</script><script src="/polyfill-a8d9a60fca838cb47dc6.js" nomodule=""></script><script src="/component---src-pages-404-jsx-2bb72f193db8e66e5cd8.js" async=""></script><script src="/app-9b2e84fadbe2d904db39.js" async=""></script><script src="/bb5d0dd9-3ad1df544b48881a8b5f.js" async=""></script><script src="/framework-ba7d9d678fe12ac8e5cb.js" async=""></script><script src="/webpack-runtime-531dd484d06dccafa28b.js" async=""></script></body></html>
+  </script><noscript><img src="https://ingestion.webanalytics.italia.it//matomo.php?idsite=R9pxNNv0Xm&rec=1&url=https://padigitale2026.gov.it/404/" style="border:0" alt="tracker" /></noscript><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/404/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-a8d9a60fca838cb47dc6.js"],"app":["/app-18e3beb0ed386e4963d2.js"],"component---src-pages-404-jsx":["/component---src-pages-404-jsx-857be965ead62ea394f6.js"],"component---src-pages-come-funziona-jsx":["/component---src-pages-come-funziona-jsx-f07295c57696f85df1bd.js"],"component---src-pages-conferma-jsx":["/component---src-pages-conferma-jsx-cb750473f459f042213f.js"],"component---src-pages-faq-jsx":["/component---src-pages-faq-jsx-c432efee56ee41950bfb.js"],"component---src-pages-index-jsx":["/component---src-pages-index-jsx-c3c4aee132cb02159dcf.js"],"component---src-pages-misure-jsx":["/component---src-pages-misure-jsx-59c5c6396c4ead0e81be.js"],"component---src-pages-note-legali-jsx":["/component---src-pages-note-legali-jsx-d5d01f953bcf28f52553.js"],"component---src-pages-privacy-policy-jsx":["/component---src-pages-privacy-policy-jsx-6604ba19540f66a993e5.js"],"component---src-pages-supporto-jsx":["/component---src-pages-supporto-jsx-bdb7271726db3ab413bb.js"]};/*]]>*/</script><script src="/polyfill-a8d9a60fca838cb47dc6.js" nomodule=""></script><script src="/component---src-pages-404-jsx-857be965ead62ea394f6.js" async=""></script><script src="/app-18e3beb0ed386e4963d2.js" async=""></script><script src="/bb5d0dd9-5c1ad5072fdc8dc92770.js" async=""></script><script src="/framework-ba7d9d678fe12ac8e5cb.js" async=""></script><script src="/webpack-runtime-f481a0f2b11e33f1d1fb.js" async=""></script></body></html>
