@@ -1,9 +1,9 @@
 {
-  "name": "prossimapa",
+  "name": "padigitale2026",
   "version": "1.0.0",
-  "description": "Sito https://prossimapa.gov.it/",
+  "description": "Sito https://padigitale2026.gov.it/",
   "main": "src/pages/index.js",
-  "repository": "git@github.com:teamdigitale/prossimapa.gov.it-site.git",
+  "repository": "git@github.com:teamdigitale/padigitale2026.gov.it-site.git",
   "license": "BSD-3-Clause",
   "scripts": {
     "build": "gatsby build",
