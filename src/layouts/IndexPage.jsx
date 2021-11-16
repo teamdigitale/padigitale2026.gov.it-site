@@ -86,7 +86,7 @@ export const IndexPage = () => {
         title={heroDigital.title}
         body={heroDigital.body}
         theme="bg-blue"
-        image="italy-blue.png"
+        image="italy-blue.webp"
         firstButtonLabel={heroDigital.firstButtonLabel}
         firstButtonAriaLabel={heroDigital.firstButtonAriaLabel}
         firstButtonClass="btn-light"
