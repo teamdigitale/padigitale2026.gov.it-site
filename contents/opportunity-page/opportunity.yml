@@ -98,7 +98,7 @@ beneficiaries:
         label: Provincie autonome
       - value: universita
         label: Università
-    description: Sviluppare una “Piattaforma Digitale Nazionale Dati” per garantire l'interoperabilità dei dati pubblici, permettendo così alle amministrazioni di erogare servizi in modo più veloce ed efficace e ai cittadini di non fornire nuovamente informazioni che la PA già possiede.
+    description: Sviluppare una Piattaforma Digitale Nazionale Dati (PDND) per garantire l'interoperabilità dei dati pubblici, permettendo così agli enti di erogare servizi in modo sicuro, più veloce ed efficace e ai cittadini di non fornire nuovamente informazioni che la PA già possiede.
     stalls: '170 enti'
     accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
