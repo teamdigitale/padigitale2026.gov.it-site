@@ -132,7 +132,7 @@ export const DesktopSwiper = ({
           >
             <Icon
               color="primary"
-              aria-label={`Vai alla slide precedente di ${title}`}
+              aria-label={`slide precedente`}
               role="img"
               icon="it-arrow-left-circle"
               size="lg"
@@ -147,7 +147,7 @@ export const DesktopSwiper = ({
           >
             <Icon
               color="primary"
-              aria-label={`Vai alla slide successiva di ${title}`}
+              aria-label={`slide successiva`}
               icon="it-arrow-right-circle"
               size="lg"
               role="img"
@@ -166,7 +166,7 @@ export const DesktopSwiper = ({
           >
             <Icon
               color="primary"
-              aria-label={`Vai alla slide precedente di ${title}`}
+              aria-label={`slide precedente`}
               icon="it-arrow-left-circle"
               size="lg"
               role="img"
@@ -184,9 +184,8 @@ export const DesktopSwiper = ({
               icon="it-arrow-right-circle"
               size="lg"
               role="img"
-              aria-label="Vai alla slide successiva"
               focusable="false"
-              aria-label={`Vai alla slide successiva di ${title}`}
+              aria-label={`slide successiva`}
             />
           </button>
         </div>

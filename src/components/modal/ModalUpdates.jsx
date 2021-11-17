@@ -236,6 +236,7 @@ const query = graphql`
   }
 `;
 
+// eslint-disable-next-line sonarjs/cognitive-complexity
 export const ModalUpdates = () => {
   const [{ modalState }, dispatch] = useContext(GlobalStateContext);
   const textareaMaxLength = 160;
@@ -312,7 +313,7 @@ export const ModalUpdates = () => {
 
   const classes = useStyles();
 
-  useEffect(() => {}, [selectValue]);
+  useEffect(() => { }, [selectValue]);
 
   const onSubmit = async (data, event) => {
     Object.keys(data).map(function (key, index) {
@@ -433,7 +434,7 @@ export const ModalUpdates = () => {
           <Button
             type="button"
             className={classes.close}
-            aria-label="Close"
+            aria-label="Chiudi"
             onClick={() => {
               dispatch({ type: 'SET:TOGGLE_MODAL' });
             }}
@@ -503,7 +504,7 @@ export const ModalUpdates = () => {
               </Row>
               <Row className="mt-5">
                 <Col xs={12} lg={6}>
-                  <span className={classes.selectLabel}>{representLabel}</span>
+                  <label for="represent-select-input" className={classes.selectLabel}>{representLabel}</label>
                   <Controller
                     control={control}
                     name="representative"
@@ -512,6 +513,7 @@ export const ModalUpdates = () => {
                       <Select
                         value={value}
                         id="represent-select"
+                        inputId="represent-select-input"
                         onChange={onChange}
                         options={selectRepresent}
                         placeholder={selectPlaceholder}
@@ -605,7 +607,7 @@ export const ModalUpdates = () => {
               <div className={`${classes.enteContainer} ${enteState == 'public-administration' ? '' : 'hidden'}`}>
                 <Row className="mt-5">
                   <Col xs={12} lg={6}>
-                    <label className={classes.selectLabel}>{inQuantoLabel}</label>
+                    <label for="enteSelect-input" className={classes.selectLabel}>{inQuantoLabel}</label>
                     <Controller
                       control={control}
                       name="enteSelect"
@@ -620,6 +622,7 @@ export const ModalUpdates = () => {
                         <Select
                           value={value}
                           id="enteSelect"
+                          inputId="enteSelect-input"
                           onChange={onChange}
                           options={selectInQuanto}
                           aria-describedby="mandatory-label"
@@ -663,13 +666,14 @@ export const ModalUpdates = () => {
               </Row>
               <Row className="mt-5">
                 <Col xs={12} lg={6}>
-                  <label className={classes.selectLabel}>{messageSelectLabel}</label>
+                  <label for="message-select-input" className={classes.selectLabel}>{messageSelectLabel}</label>
                   <Controller
                     control={control}
                     name="messageSelect"
                     render={({ field: { onChange, value } }) => (
                       <Select
                         id="message-select"
+                        inputId="message-select-input"
                         onChange={onChange}
                         options={selectMessage}
                         placeholder={selectPlaceholder}

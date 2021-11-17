@@ -342,10 +342,8 @@ const NavHeader = () => {
           <div className={classes.menuWrapper}>
             <Nav navbar className={classes.navbarNav}>
               <li className={classes.offCanvasWrapper}>
-                <a href="/" tabIndex="-1">
-                  <img className="icon" src="/assets/site-logo.svg" alt="Vai alla pagina principale" />
-                </a>
                 <a href="/" className={classes.offCanvasTitle}>
+                  <img className="icon" src="/assets/site-logo.svg" alt="Vai alla pagina principale" />
                   {headerTitle}
                 </a>
               </li>
@@ -378,6 +376,7 @@ const NavHeader = () => {
               </NavItem>
               <NavItem className={classes.updatesBtn} active>
                 <Button
+                  aria-label="Ricevi aggiornamenti (Apri modale e compila il modulo)"
                   className="nav-link modal-button"
                   onClick={() => {
                     closeMenu();

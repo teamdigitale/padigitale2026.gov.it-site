@@ -19,6 +19,9 @@ const useStyles = createUseStyles({
     '&:after': {
       content: 'unset',
     },
+    '&[tabindex="-1"]:focus:not(:focus-visible)': {
+      boxShadow: '0 2px 20px 0 rgb(0 0 0 / 10%)',
+    },
   },
   cardWrapper: {
     width: '100%',
@@ -86,7 +89,7 @@ const useStyles = createUseStyles({
       fontWeight: '600',
       marginBottom: '0.444rem',
       marginRight: '0.444rem',
-      '&::last-child': {
+      '&:last-child': {
         marginRight: '0',
       },
     },
@@ -261,7 +264,7 @@ export const AccordionButtonFull = (props) => {
           aria-label={`Dettaglio opportunità ${number} ${title}`}
           aria-controls={`Misure-accordion-${id}`}
         ></Button>
-        <div id={`Misure-accordion-${id}`} className={classes.cardWrapper}>
+        <div className={classes.cardWrapper}>
           <div className={classes.cardHeader}>
             <h4 className={classes.cardTitle}>
               <span>{number}</span> {title}
@@ -278,7 +281,11 @@ export const AccordionButtonFull = (props) => {
               </div>
             </div>
           </div>
-          <Collapse isOpen={props.id === props.active} className={classes.collapseAccordion}>
+          <Collapse
+            id={`Misure-accordion-${id}`}
+            isOpen={props.id === props.active}
+            className={classes.collapseAccordion}
+          >
             <Card>
               <CardBody>
                 <p className="description">{description}</p>

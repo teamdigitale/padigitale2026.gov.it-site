@@ -119,7 +119,7 @@ const SlimFooter = () => {
 
   return (
     <div className={classes.slimFooter}>
-      <section className="container" aria-labelledby="linkutili-header">
+      <div className="container">
         <ul className="list-inline link-list mb-0 text-center text-md-left">
           <li className={`${classes.listItem} mr-0 mr-md-5`}>
             <Link to={noteLegali.linkTo} className="list-item mid-footer-link mx-4 mx-md-0">
@@ -141,14 +141,14 @@ const SlimFooter = () => {
             </ExternalLink>
           </li> */}
         </ul>
-      </section>
+      </div>
     </div>
   );
 };
 
 const MainFooter = () => {
   const classes = useStyle();
-  const [{activeItem}, dispatch] = useContext(GlobalStateContext);
+  const [{ activeItem }, dispatch] = useContext(GlobalStateContext);
 
   return (
     <div className={`${classes.mainFooter} it-footer-main`}>
@@ -168,34 +168,31 @@ const MainFooter = () => {
               </ExternalLink>
             </div>
             <ExternalLink linkTo={ministeroMitd.linkTo} ariaLabel={ministeroMitd.ariaLabel}>
-              <img className={classes.departmentLogo} src="/assets/mitd.svg" alt={ministeroMitd.ariaLabel} />
+              <img className={classes.departmentLogo} src="/assets/mitd.svg" alt={ministeroMitd.label} />
             </ExternalLink>
             <ExternalLink linkTo={dipartimento.linkTo} ariaLabel={dipartimento.ariaLabel}>
               <img src="/assets/dipartimento.svg" alt={dipartimento.ariaLabel} />
             </ExternalLink>
           </div>
           <div className="info text-center">
-            {activeItem === 'come-funziona' ?
-            <Link
-            to="#attori-coinvolti"
-            className={classes.seeMore}
-          >
-            Scopri l&apos;iniziativa
-          </Link> :
-          <Link
-            to="/come-funziona"
-            className={classes.seeMore}
-            onClick={() =>
-              dispatch({
-                type: 'SET:HOW_SECTION_ID',
-                payload: { howId: 'attori-coinvolti' },
-              })
-            }
-          >
-            Scopri l&apos;iniziativa
-          </Link>
-            }
-            
+            {activeItem === 'come-funziona' ? (
+              <Link to="#attori-coinvolti" className={classes.seeMore}>
+                Scopri l&apos;iniziativa
+              </Link>
+            ) : (
+              <Link
+                to="/come-funziona"
+                className={classes.seeMore}
+                onClick={() =>
+                  dispatch({
+                    type: 'SET:HOW_SECTION_ID',
+                    payload: { howId: 'attori-coinvolti' },
+                  })
+                }
+              >
+                Scopri l&apos;iniziativa
+              </Link>
+            )}
           </div>
         </div>
       </div>

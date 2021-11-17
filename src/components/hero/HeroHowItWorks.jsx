@@ -181,9 +181,12 @@ export const HeroHowItWorks = ({ title, body, image, list }) => {
   const classes = useStyles();
 
   const scrollIntoView = (id) => {
-    document.querySelector('#' + id).scrollIntoView({
+    const item = document.querySelector('#' + id);
+    item.scrollIntoView(true, {
       behavior: 'smooth',
     });
+    item.setAttribute('tabindex', '-1');
+    item.focus();
   };
 
   return (

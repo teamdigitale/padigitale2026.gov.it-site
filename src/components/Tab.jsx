@@ -111,7 +111,7 @@ const useStyles = createUseStyles({
         '& span': {
           paddingTop: '0.625rem',
           '@media (min-width: 992px)': {
-            paddingTop: '1.111rem 0',
+            paddingTop: '1.111rem',
           },
         },
       },

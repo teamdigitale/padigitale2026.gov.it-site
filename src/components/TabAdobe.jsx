@@ -117,7 +117,7 @@ const useStyles = createUseStyles({
         '& span': {
           paddingTop: '0.625rem',
           '@media (min-width: 992px)': {
-            paddingTop: '1.111rem 0',
+            paddingTop: '1.111rem',
           },
         },
         '&[aria-selected="true"]': {
@@ -194,7 +194,7 @@ function Tabs(props) {
   const state = useTabListState(props);
   const ref = React.useRef();
   const { tabListProps } = useTabList(props, state, ref);
-  const { sideDesktopNavigation, mobileNavigation } = props;
+  const { sideDesktopNavigation, mobileNavigation, title } = props;
   return (
     <React.Fragment>
       <div {...tabListProps} ref={ref} className={classes.howTabs}>
@@ -210,7 +210,7 @@ function Tabs(props) {
             onClick={() => {
               prevTab(state);
             }}
-            aria-label="vai al tab precedente"
+            aria-label={`vai al tab precedente ${title}`}
           >
             {state.selectedKey === state.collection.firstKey ? (
               <Icon
@@ -218,9 +218,20 @@ function Tabs(props) {
                 color="primary"
                 icon="it-arrow-left-circle"
                 size="lg"
+                focusable="false"
+                role="img"
+                aria-label="Indietro"
               />
             ) : (
-              <Icon className={classes.navigationBtn} color="primary" icon="it-arrow-left-circle" size="lg" />
+              <Icon
+                className={classes.navigationBtn}
+                color="primary"
+                icon="it-arrow-left-circle"
+                size="lg"
+                focusable="false"
+                role="img"
+                aria-label="Indietro"
+              />
             )}
           </button>
         </div>
@@ -229,7 +240,7 @@ function Tabs(props) {
         <div className={classes.sideNextButton}>
           <button
             type="button"
-            aria-label="vai al tab successivo"
+            aria-label={`vai al tab successivo ${title}`}
             onClick={() => {
               nextTab(state);
             }}
@@ -240,9 +251,20 @@ function Tabs(props) {
                 color="primary"
                 icon="it-arrow-right-circle"
                 size="lg"
+                focusable="false"
+                role="img"
+                aria-label="Avanti"
               />
             ) : (
-              <Icon className={classes.navigationBtn} color="primary" icon="it-arrow-right-circle" size="lg" />
+              <Icon
+                className={classes.navigationBtn}
+                color="primary"
+                icon="it-arrow-right-circle"
+                size="lg"
+                focusable="false"
+                role="img"
+                aria-label="Avanti"
+              />
             )}
           </button>
         </div>
@@ -252,7 +274,7 @@ function Tabs(props) {
           <div className={classes.mobileNavButton}>
             <button
               type="button"
-              aria-label="vai al tab precedente"
+              aria-label={`vai al tab precedente ${title}`}
               onClick={() => {
                 prevTab(state);
               }}
@@ -263,16 +285,27 @@ function Tabs(props) {
                   color="primary"
                   icon="it-arrow-left-circle"
                   size="lg"
+                  focusable="false"
+                  role="img"
+                  aria-label="Indietro"
                 />
               ) : (
-                <Icon className={classes.navigationBtn} color="primary" icon="it-arrow-left-circle" size="lg" />
+                <Icon
+                  className={classes.navigationBtn}
+                  color="primary"
+                  icon="it-arrow-left-circle"
+                  size="lg"
+                  focusable="false"
+                  role="img"
+                  aria-label="Indietro"
+                />
               )}
             </button>
           </div>
           <div className={classes.mobileNavButton}>
             <button
               type="button"
-              aria-label="vai al tab successivo"
+              aria-label={`vai al tab successivo ${title}`}
               onClick={() => {
                 nextTab(state);
               }}
@@ -283,9 +316,20 @@ function Tabs(props) {
                   color="primary"
                   icon="it-arrow-right-circle"
                   size="lg"
+                  focusable="false"
+                  role="img"
+                  aria-label="Avanti"
                 />
               ) : (
-                <Icon className={classes.navigationBtn} color="primary" icon="it-arrow-right-circle" size="lg" />
+                <Icon
+                  className={classes.navigationBtn}
+                  color="primary"
+                  icon="it-arrow-right-circle"
+                  size="lg"
+                  focusable="false"
+                  role="img"
+                  aria-label="Avanti"
+                />
               )}
             </button>
           </div>
@@ -337,7 +381,15 @@ function TabPanel({ state, ...props }) {
   );
 }
 
-export const TabAdobe = ({ tabContent, sideDesktopNavigation, mobileNavigation, title, subtitle, sectionId, ariaLabel }) => {
+export const TabAdobe = ({
+  tabContent,
+  sideDesktopNavigation,
+  mobileNavigation,
+  title,
+  subtitle,
+  sectionId,
+  ariaLabel,
+}) => {
   const classes = useStyles();
   return (
     <>
@@ -367,6 +419,7 @@ export const TabAdobe = ({ tabContent, sideDesktopNavigation, mobileNavigation, 
                 aria-label={ariaLabel}
                 sideDesktopNavigation={sideDesktopNavigation}
                 mobileNavigation={mobileNavigation}
+                title={title}
               >
                 {tabContent.tabs.map(({ name, image, imageActive, content }, index) => (
                   <Item key={index} title={name} image={image} imageActive={imageActive}>

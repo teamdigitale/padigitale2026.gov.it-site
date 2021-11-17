@@ -127,7 +127,7 @@ export const SupportSection = (props) => {
                 {supportList.map((card) => (
                   <Col key={card.title} md={5} lg={3} className={classes.colCard}>
                     {card.isModal ? (
-                      <div onClick={handleToggle} className={classes.resetButton}>
+                      <button onClick={handleToggle} className={classes.resetButton}>
                         <Card teaser noWrapper className={classes.cardWrapper}>
                           <CardBody>
                             <CardTitle tag="h5" className={classes.cardTitle}>
@@ -136,7 +136,7 @@ export const SupportSection = (props) => {
                             <CardText className={classes.cardText}>{card.description}</CardText>
                           </CardBody>
                         </Card>
-                      </div>
+                      </button>
                     ) : (
                       <Link to="/faq" className={classes.cleanLink}>
                         <Card teaser noWrapper className={classes.cardWrapper}>
