@@ -81,6 +81,7 @@ export const FaqPage = () => {
         setQuestions(faq.questions);
       }
     }
+    setquestNum(countQuestions());
   };
 
   function getAccordionsFiltered(question, input) {
@@ -175,7 +176,7 @@ export const FaqPage = () => {
               aria-label="Lista domande frequenti"
               aria-describedby="numberfaq"
             >
-              <span className="" id="numberfaq" aria-live="assertive">
+              <span className="sr-only" id="numberfaq" aria-live="assertive">
                 Numero faq filtrate {questNum}
               </span>
               {questions.map((question) => (

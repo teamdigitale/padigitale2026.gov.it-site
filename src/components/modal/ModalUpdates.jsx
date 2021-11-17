@@ -1,3 +1,4 @@
+/* eslint-disable max-lines-per-function */
 import React, { useState, useEffect, useContext } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { createUseStyles } from 'react-jss';
@@ -313,7 +314,7 @@ export const ModalUpdates = () => {
 
   const classes = useStyles();
 
-  useEffect(() => { }, [selectValue]);
+  useEffect(() => {}, [selectValue]);
 
   const onSubmit = async (data, event) => {
     Object.keys(data).map(function (key, index) {
@@ -492,6 +493,7 @@ export const ModalUpdates = () => {
                           type="text"
                           id="address"
                           aria-required="true"
+                          autocomplete="email"
                           {...field}
                         />
                         <span className={classes.errorLabel} id="error-address">
@@ -504,7 +506,9 @@ export const ModalUpdates = () => {
               </Row>
               <Row className="mt-5">
                 <Col xs={12} lg={6}>
-                  <label for="represent-select-input" className={classes.selectLabel}>{representLabel}</label>
+                  <label htmlFor="represent-select-input" className={classes.selectLabel}>
+                    {representLabel}
+                  </label>
                   <Controller
                     control={control}
                     name="representative"
@@ -607,14 +611,15 @@ export const ModalUpdates = () => {
               <div className={`${classes.enteContainer} ${enteState == 'public-administration' ? '' : 'hidden'}`}>
                 <Row className="mt-5">
                   <Col xs={12} lg={6}>
-                    <label for="enteSelect-input" className={classes.selectLabel}>{inQuantoLabel}</label>
+                    <label htmlFor="enteSelect-input" className={classes.selectLabel}>
+                      {inQuantoLabel}
+                    </label>
                     <Controller
                       control={control}
                       name="enteSelect"
                       rules={{
                         required: {
-                          value:
-                            enteState == 'public-administration' ? true : false,
+                          value: enteState == 'public-administration' ? true : false,
                           message: requiredLabel,
                         },
                       }}
@@ -666,7 +671,9 @@ export const ModalUpdates = () => {
               </Row>
               <Row className="mt-5">
                 <Col xs={12} lg={6}>
-                  <label for="message-select-input" className={classes.selectLabel}>{messageSelectLabel}</label>
+                  <label htmlFor="message-select-input" className={classes.selectLabel}>
+                    {messageSelectLabel}
+                  </label>
                   <Controller
                     control={control}
                     name="messageSelect"

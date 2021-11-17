@@ -99,9 +99,10 @@ export const DesktopSwiper = ({
               nextEl: `[data-next-navigation-id=${nextBtnId}]`,
               hiddenClass: classes.disabledNavBtn,
             }}
+            aria-roledescription="carousel"
           >
             {slides.map((slide, k) => (
-              <SwiperSlide className={classes.swiperSlide} key={k}>
+              <SwiperSlide role="group" aria-roledescription="slide" className={classes.swiperSlide} key={k}>
                 {slide}
               </SwiperSlide>
             ))}

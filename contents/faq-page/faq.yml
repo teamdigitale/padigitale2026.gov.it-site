@@ -70,7 +70,7 @@ questions:
             <li>1.7.2 Centri di facilitazione digitale (135 mln) - Ampliare l’esperienza dei "Centri di facilitazione digitale", punti di accesso fisici, solitamente situati in biblioteche, scuole e centri sociali, che forniscono ai cittadini formazione sia di persona che online sulle competenze digitali al fine di supportare l’inclusione digitale</li>            
           </ul>
       - title: Dove posso trovare informazioni su tutti gli investimenti di Italia domani, il Piano nazionale di ripresa e resilienza?
-        content: Per tutte le informazioni sugli investimenti di Italia domani, il Piano nazionale di ripresa e resilienza dell’Italia, è possibile visitare il sito ufficiale del Governo <a href='https://italiadomani.gov.it/'>https://italiadomani.gov.it/</a>
+        content: Per tutte le informazioni sugli investimenti di Italia domani, il Piano nazionale di ripresa e resilienza dell’Italia, è possibile visitare il sito ufficiale del Governo <a aria-label="Vai al sito Italia domani (Collegamento esterno - Apre su nuova scheda)" href='https://italiadomani.gov.it/'>https://italiadomani.gov.it/</a>
   - title: Richiesta dei fondi
     description: I bandi e gli avvisi degli investimenti di Italia digitale 2026 e tutte le indicazioni necessarie per scoprire le opportunità e candidarsi
     sectionId: richiesta-fondi

@@ -145,8 +145,8 @@ const useStyle = createUseStyles({
       '&:focus': {
         outline: '2px solid #ff9900',
         boxShadow: 'none',
-      }
-    }
+      },
+    },
   },
   linkListWrapperCustom: {
     '& ul li:not(:first-child)': {
@@ -222,7 +222,13 @@ const SlimHeader = () => {
   return (
     <HeaderReactKit type="slim" theme="light">
       <HeaderContent>
-        <HeaderBrand href="https://innovazione.gov.it/" target="_blank" className={classes.headerLink} rel="noreferrer">
+        <HeaderBrand
+          href="https://innovazione.gov.it/"
+          target="_blank"
+          className={classes.headerLink}
+          rel="noreferrer"
+          aria-label={externalLinks.dipartimento.ariaLabel}
+        >
           {externalLinks.dipartimento.label}
         </HeaderBrand>
         <HeaderLinkZone aria-label="Siti esterni correlati">
@@ -310,12 +316,12 @@ const CenterHeader = () => {
 };
 
 const NavHeader = () => {
-  const [{activeItem}, dispatch] = useContext(GlobalStateContext);
+  const [{ activeItem }, dispatch] = useContext(GlobalStateContext);
   const [isOpen, setIsOpen] = useState(false);
   const closeMenu = () => setIsOpen(false);
   const toogleMenu = () => setIsOpen(!isOpen);
   const classes = useStyle();
-  
+
   return (
     <HeaderReactKit type="navbar" theme="light" className={classes.noShadow}>
       <HeaderContent
