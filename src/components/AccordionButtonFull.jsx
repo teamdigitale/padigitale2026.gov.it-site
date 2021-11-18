@@ -17,7 +17,6 @@ const useStyles = createUseStyles({
       marginRight: '0',
     },
     '&:after': {
-      
       content: 'unset',
     },
   },
