@@ -95,7 +95,7 @@ beneficiaries:
       - value: regioni
         label: Regioni
       - value: province-autonome
-        label: Provincie autonome
+        label: Province autonome
       - value: universita
         label: Università
     description: Sviluppare una Piattaforma Digitale Nazionale Dati (PDND) per garantire l'interoperabilità dei dati pubblici, permettendo così agli enti di erogare servizi in modo sicuro, più veloce ed efficace e ai cittadini di non fornire nuovamente informazioni che la PA già possiede.
@@ -120,7 +120,7 @@ beneficiaries:
       - value: regioni
         label: Regioni
       - value: province-autonome
-        label: Provincie autonome
+        label: Province autonome
       - value: universita
         label: Università
       - value: 'enti-diritto'
@@ -156,7 +156,7 @@ beneficiaries:
       - value: regioni
         label: Regioni
       - value: province-autonome
-        label: Provincie autonome
+        label: Province autonome
       - value: altre-pa-locali
         label: Altre PAL
     description: "Migliorare l'accessibilità dei servizi pubblici digitali attraverso la diffusione di strumenti e strategie condivise: da test di usabilità ad attività di comunicazione e disseminazione passando per lo sviluppo di kit dedicati e altro."
@@ -306,7 +306,7 @@ beneficiaries:
       - value: regioni
         label: Regioni
       - value: province-autonome
-        label: Provincie autonome
+        label: Province autonome
     description: Ampliare l’esperienza dei "Centri di facilitazione digitale", punti di accesso fisici, solitamente situati in biblioteche, scuole e centri sociali, che forniscono ai cittadini formazione sia di persona che online sulle competenze digitali al fine di supportare l’inclusione digitale.
     stalls: '21 enti'
     accessSectionId: presentazione-progetto
