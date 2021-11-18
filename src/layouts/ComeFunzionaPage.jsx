@@ -74,7 +74,7 @@ export const ComeFunzionaPage = () => {
         buttonLabel={support.buttonLabel}
         handleToggle={() => {
           dispatch({
-            type: 'SET:TOGGLE_MODAL',
+            type: 'SET:TOGGLE_MODAL_MESSAGE',
           });
         }}
       />

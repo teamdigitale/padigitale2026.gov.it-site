@@ -23,7 +23,7 @@ const useStyles = createUseStyles({
 
 export const OpportunityPage = (props) => {
   const classes = useStyles();
-  const [{ modalState }, dispatch] = useContext(GlobalStateContext);
+  const [{}, dispatch] = useContext(GlobalStateContext);
   return (
     <>
       <SEO title={seoTitle} description={seoDescription} />
@@ -63,10 +63,9 @@ export const OpportunityPage = (props) => {
         supportList={support.cards}
         title={support.title}
         buttonLabel={support.buttonLabel}
-        initialState={modalState}
         handleToggle={() => {
           dispatch({
-            type: 'SET:TOGGLE_MODAL',
+            type: 'SET:TOGGLE_MODAL_MESSAGE',
           });
         }}
       />

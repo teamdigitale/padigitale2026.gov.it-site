@@ -170,7 +170,7 @@ export const FaqPage = () => {
         supportList={faq.support.cards}
         title={faq.support.title}
         handleToggle={() => {
-          dispatch({ type: 'SET:TOGGLE_MODAL' });
+          dispatch({ type: 'SET:TOGGLE_MODAL_MESSAGE' });
         }}
       />
     </>

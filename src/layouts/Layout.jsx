@@ -10,6 +10,7 @@ import { ModalUpdates } from '../components/modal/ModalUpdates';
 import { GlobalStateContextProvider } from '../context/globalContext';
 import { Header } from './Header';
 import { Footer } from './Footer';
+import { ModalMessage } from '../components/modal/ModalMessage';
 
 const { goToMainContent, goToFooter } = labels;
 
@@ -42,6 +43,10 @@ export const Layout = ({ children }) => {
   const toggleModal = () => {
     setModalIsOpen(!modalIsOpen);
   };
+  const [modalIsOpenMessage, setModalIsOpenMessage] = useState(false);
+  const toggleModalMessage = () => {
+    setModalIsOpenMessage(!modalIsOpenMessage);
+  };
   return (
     <>
       <SEO />
@@ -56,6 +61,10 @@ export const Layout = ({ children }) => {
         <main className="text-info text-break" id="content">
           {children}
           <ModalUpdates initialState={modalIsOpen} handleToggle={toggleModal} />
+          <ModalMessage
+            initialState={modalIsOpenMessage}
+            handleToggle={toggleModalMessage}
+          />
         </main>
         <Footer />
       </GlobalStateContextProvider>
