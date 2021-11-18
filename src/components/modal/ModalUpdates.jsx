@@ -162,20 +162,10 @@ const useStyles = createUseStyles({
       color: '#F83E5A !important',
     },
   },
-  modalTitleSecondary: {
-    fontSize: '1.333rem',
-    fontWeight: '600',
-    color: '#33485C',
-  },
   modalLabel: {
     fontSize: '0.778rem',
     color: '#33485C',
     fontWeight: '600',
-  },
-  maxLengthLabel: {
-    fontSize: '0.778rem',
-    color: '#808080',
-    marginLeft: '0.444rem',
   },
   enteContainer: {
     '&.hidden': {
@@ -638,77 +628,6 @@ export const ModalUpdates = () => {
                 </span>
               </div>
             </fieldset>
-            {/* <fieldset>
-              <legend>
-                <Row className="mt-5">
-                  <Col xs={12}>
-                    <img src="/assets/icon-chat.svg" alt="" />
-                  </Col>
-                </Row>
-                <Row className="mt-3">
-                  <Col xs={12}>
-                    <span className={classes.modalLabel}>{directContactLabel}</span>
-                  </Col>
-                </Row>
-                <Row className="mt-2">
-                  <Col xs={12}>
-                    <p dangerouslySetInnerHTML={{ __html: directContactInfo }}></p>
-                  </Col>
-                </Row>
-              </legend>
-              <Row className="mt-5">
-                <Col xs={12}>
-                  <h3 className={classes.modalTitleSecondary}>{addMessageLabel}</h3>
-                </Col>
-              </Row>
-              <Row className="mt-5">
-                <Col xs={12} lg={6}>
-                  <label className={classes.selectLabel}>{messageSelectLabel}</label>
-                  <Controller
-                    control={control}
-                    name="messageSelect"
-                    render={({ field: { onChange, value } }) => (
-                      <Select
-                        id="message-select"
-                        onChange={onChange}
-                        options={selectMessage}
-                        placeholder={selectPlaceholder}
-                        aria-label={selectPlaceholder}
-                      />
-                    )}
-                  />
-                </Col>
-              </Row>
-              <Row className="mt-5">
-                <Col xs={12}>
-                  <div>
-                    <div className="form-group">
-                      <Controller
-                        name="message"
-                        control={control}
-                        render={({ field }) => (
-                          <textarea
-                            onFocus={textareaFocusHandler}
-                            onBlur={textareaFocusOutHandler}
-                            onInput={textareaInputHandler}
-                            rows="3"
-                            maxLength={textareaMaxLength}
-                            {...field}
-                            id="message"
-                          ></textarea>
-                        )}
-                      />
-                      <label className={textareaState == 'active' ? 'active' : ''} htmlFor="message">
-                        {messageLabel}
-                      </label>
-                      <span className={classes.maxLengthLabel}>
-                        Massimo <span id="max-length-number">{textareaMaxLength}</span> caratteri
-                      </span>
-                    </div>
-                  </div>
-                </Col>
-              </Row>
-            </fieldset> */}
           </form>
         </ModalBody>
         <ModalFooter className="justify-content-center flex-column align-items-start justify-content-md-start px-0 py-0 mt-5">

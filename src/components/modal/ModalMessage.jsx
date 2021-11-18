@@ -176,11 +176,6 @@ const useStyles = createUseStyles({
       color: '#F83E5A !important',
     },
   },
-  modalTitleSecondary: {
-    fontSize: '1.333rem',
-    fontWeight: '600',
-    color: '#33485C',
-  },
   modalLabel: {
     fontSize: '0.778rem',
     color: '#33485C',
@@ -190,11 +185,6 @@ const useStyles = createUseStyles({
     fontSize: '0.778rem',
     color: '#808080',
     marginLeft: '0.444rem',
-  },
-  enteContainer: {
-    '&.hidden': {
-      display: 'none',
-    },
   },
   errorLabel: {
     fontSize: '0.778rem',
