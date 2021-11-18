@@ -685,6 +685,7 @@ export const ModalUpdates = () => {
                         options={selectMessage}
                         placeholder={selectPlaceholder}
                         aria-label={selectPlaceholder}
+                        className={`select`}
                       />
                     )}
                   />
@@ -730,7 +731,7 @@ export const ModalUpdates = () => {
             <Button color="primary" type="submit" form="updates-form">
               {sendButtonLabel}
             </Button>
-            <img className={classes.spinner} src="/assets/spinner.gif"></img>
+            <img className={classes.spinner} src="/assets/spinner.gif" alt=""></img>
           </div>
         </ModalFooter>
       </Modal>
