@@ -467,7 +467,7 @@ export const ModalMessage = () => {
         <ModalBody className={classes.modalBody}>
           <form
             onSubmit={handleSubmit(onSubmit, onError)}
-            id="updates-form"
+            id="message-form"
             aria-describedby="mandatory-label"
           >
             <fieldset>
@@ -513,11 +513,11 @@ export const ModalMessage = () => {
                           aria-describedby="mandatory-label"
                           aria-labelledby={errors.address && 'error-address'}
                           type="text"
-                          id="address"
+                          id="address2"
                           aria-required="true"
                           {...field}
                         />
-                        <span className={classes.errorLabel} id="error-address">
+                        <span className={classes.errorLabel} id="error-address2">
                           {errors.address && errors.address.message}
                         </span>
                       </>
@@ -535,7 +535,7 @@ export const ModalMessage = () => {
                     render={({ field: { onChange, value } }) => (
                       <Select
                         value={value}
-                        id="represent-select"
+                        id="represent-select2"
                         onChange={onChange}
                         options={selectRepresent}
                         placeholder={selectPlaceholder}
@@ -630,9 +630,9 @@ export const ModalMessage = () => {
               className={classes.notification}
               role="alert"
               aria-labelledby="not2dms-title"
-              id="not2dms"
+              id="not2dms2"
             >
-              <h5 id="not2dms-title">
+              <h5 id="not2dms-title2">
                 notifiche
                 <svg className="icon" role="img" aria-label=""></svg>
               </h5>
