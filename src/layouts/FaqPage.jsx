@@ -213,7 +213,7 @@ export const FaqPage = () => {
                   }}
                 />
               ))}
-              {!questions.length && <p className={classes.noResults}>{faq.noResults}</p>}
+              {!questions.length && <p className={classes.noResults} role="alert">{faq.noResults}</p>}
             </Col>
           </Row>
         </Container>
