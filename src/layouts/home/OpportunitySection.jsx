@@ -101,15 +101,16 @@ export const OpportunitySection = (props) => {
           {list.map((item) => (
             <Col md="6" key={item.title} className="px-md-3" role="listitem">
               <Card spacing className={classes.cardWrapper}>
-                <button 
+                <button
                   className={classes.oppButton}
                   onClick={() => {
                     dispatch({ type: 'SET:SECTION_OPPORTUNITY_ID', payload: { sectionId: item.id } });
                     navigate('/misure');
                   }}
                 >
-                  <CardBody>
-                    <CardTitle className={classes.cardTitle}>
+                  <CardBody tag="span" className="d-block">
+                    <CardTitle tag="span" className={classes.cardTitle}>
+                      <span className="sr-only">vai alla misura </span>
                       <span>{item.number}</span> {item.title}
                     </CardTitle>
                   </CardBody>

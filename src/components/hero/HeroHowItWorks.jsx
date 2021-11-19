@@ -210,6 +210,7 @@ export const HeroHowItWorks = ({ title, body, image, list }) => {
                             {listItem.items.map((item) => (
                               <React.Fragment key={item.item}>
                                 <button onClick={() => scrollIntoView(item.anchor)} className={classes.listItem}>
+                                  <span className="sr-only">Vai alla sezione </span>
                                   {item.item}
                                 </button>
                               </React.Fragment>

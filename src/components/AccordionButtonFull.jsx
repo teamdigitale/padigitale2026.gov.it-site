@@ -243,6 +243,12 @@ const useStyles = createUseStyles({
       outline: 'none',
     },
   },
+  description: {
+    marginBottom: '1rem',
+  },
+  stalls: {
+    marginBottom: '1rem',
+  },
 });
 
 export const AccordionButtonFull = (props) => {
@@ -301,10 +307,10 @@ export const AccordionButtonFull = (props) => {
           >
             <Card>
               <CardBody>
-                <p className="description">{description}</p>
-                <p className="stalls">
+                <div className={classes.description}>{description}</div>
+                <div className={classes.stalls}>
                   Platea potenziale: <span>{stalls}</span>
-                </p>
+                </div>
                 <div className="access">
                   <span>Modalità di accesso:</span>{' '}
                   <button
@@ -314,7 +320,8 @@ export const AccordionButtonFull = (props) => {
                       navigate('/come-funziona');
                     }}
                   >
-                    <p>{accessLabel}</p>
+                    <span className="sr-only">Vai alla sezione </span>
+                    <span>{accessLabel}</span>
                   </button>
                 </div>
                 <div className={classes.linkAccordion}>
