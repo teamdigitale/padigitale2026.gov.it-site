@@ -112,9 +112,12 @@ export const BeneficiariesSection = (props) => {
 
   useEffect(() => {
     if (sectionId) {
-      document.querySelector('#' + sectionId).scrollIntoView({
+      const item = document.querySelector('#' + sectionId);
+      item.scrollIntoView(true, {
         behavior: 'smooth',
       });
+      item.setAttribute('tabindex', '-1');
+      item.focus();
     }
   }, [sectionId]);
 
@@ -122,9 +125,12 @@ export const BeneficiariesSection = (props) => {
     if (props.externalFilter) {
       setInitialSelectValue(props.externalFilter);
       setSelectValue(props.externalFilter);
-      document.querySelector('#filter-beneficiaries').scrollIntoView({
+      const item = document.querySelector('#filter-beneficiaries');
+      item.scrollIntoView(true, {
         behavior: 'smooth',
       });
+      item.querySelector('[role="list"]').firstChild.setAttribute('tabindex', '-1');
+      item.querySelector('[role="list"]').firstChild.focus();
     }
   }, [props.externalFilter]);
 

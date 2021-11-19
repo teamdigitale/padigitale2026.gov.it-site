@@ -162,7 +162,7 @@ export const Timeline = ({ content, title }) => {
       <div className={classes.timelineCard}>
         <span className="time">
           {element.time}
-          <div className="arrow"></div>
+          <span className="arrow"></span>
         </span>
         <h4 className="title">{element.title}</h4>
         <div className="text" dangerouslySetInnerHTML={{ __html: element.text }} />
@@ -187,6 +187,7 @@ export const Timeline = ({ content, title }) => {
             <Col xs="12" lg="10" className="offset-lg-1 position-relative">
               <div className={classes.line}></div>
               <DesktopSwiper
+                title={title}
                 slides={slides}
                 breakpoints={{
                   slidesPerView: 1,
@@ -195,6 +196,7 @@ export const Timeline = ({ content, title }) => {
                   },
                 }}
                 navigation
+                id="calendar-timeline"
               />
             </Col>
           </Row>

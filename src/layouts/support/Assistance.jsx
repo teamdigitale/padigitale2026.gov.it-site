@@ -60,10 +60,9 @@ export const Assistance = () => {
             </HeroCtaContainer>
           </div>
           <HeroGraphic className="col-lg-6 text-center mt-4 mt-lg-0">
-            <StaticImage
-              src="../../../static/assets/supporto.svg"
-              alt={altImg}
-              aria-label={altImg}
+            <img
+              src={`/assets/supporto.svg`}
+              alt=""
             />
           </HeroGraphic>
         </div>

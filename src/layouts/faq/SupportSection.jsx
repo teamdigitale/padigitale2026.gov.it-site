@@ -110,11 +110,11 @@ export const SupportSection = (props) => {
   const { title, supportList, buttonLabel, handleToggle } = props;
   return (
     <>
-      <div className="section section-muted">
+      <section className="section section-muted" aria-labelledby="support-section">
         <h3 id="support-section" className="sr-only">
           Supporto
         </h3>
-        <section className="container" aria-labelledby="support-section">
+        <div className="container">
           <Row>
             <Col md={8} lg={6} className={classes.layout}>
               <p className={classes.tag}>Supporto</p>
@@ -127,7 +127,13 @@ export const SupportSection = (props) => {
                 {supportList.map((card) => (
                   <Col key={card.title} md={5} lg={3} className={classes.colCard}>
                     {card.isModal ? (
-                      <div onClick={handleToggle} className={classes.resetButton}>
+                      <div
+                        role="button"
+                        tabIndex="0"
+                        onKeyPress={handleToggle}
+                        onClick={handleToggle}
+                        className={classes.resetButton}
+                      >
                         <Card teaser noWrapper className={classes.cardWrapper}>
                           <CardBody>
                             <CardTitle tag="h5" className={classes.cardTitle}>
@@ -167,8 +173,8 @@ export const SupportSection = (props) => {
               </Col>
             </Row>
           )}
-        </section>
-      </div>
+        </div>
+      </section>
     </>
   );
 };

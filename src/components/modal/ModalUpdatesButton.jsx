@@ -83,7 +83,12 @@ export const ModalUpdatesButton = ({ label, buttonLabel, hasTitle, handleToggle 
               <p className="description">
                 <strong>{label}</strong>
               </p>
-              <Button className={classes.button} color="primary" onClick={handleToggle}>
+              <Button
+                aria-label="Ricevi aggiornamenti (Apri modale e compila il modulo)"
+                className={classes.button}
+                color="primary"
+                onClick={handleToggle}
+              >
                 {buttonLabel}
               </Button>
             </div>
