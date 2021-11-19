@@ -162,7 +162,12 @@ export const BeneficiariesSection = (props) => {
         </h3>
         <div className="container mt-5 px-3" id="filter-beneficiaries">
           <div className={classes.selectWrapper}>
-            <label htmlFor="beneficiaries">Beneficiari</label>
+            <label htmlFor="beneficiaries">
+              Beneficiari
+              <span id="select-desk" className="sr-only">
+                Ad ogni selezione il numero di beneficari presenti in pagina verrà aggiornato.
+              </span>
+            </label>
             <Select
               styles={customStyles}
               isSearchable={false}
@@ -177,6 +182,9 @@ export const BeneficiariesSection = (props) => {
               aria-label="Scegli una opzione"
             />
           </div>
+          <span className="sr-only" aria-live="assertive">
+            Elementi in pagina: {accordions.length}
+          </span>
           <div role="list">
             {accordions.map((item, i) => (
               <React.Fragment key={item.title}>
