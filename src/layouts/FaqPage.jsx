@@ -181,7 +181,10 @@ export const FaqPage = () => {
                   value={inputValue}
                   onChange={handleChange}
                 />
-                {inputValue.length > 0 && <button className="reset-btn" onClick={resetInput}></button>}
+                {inputValue.length > 0 && 
+                <button className="reset-btn" onClick={resetInput}>
+                  <span className="sr-only">Il campo svuota l'input</span>
+                </button>}
               </div>
             </Col>
           </Row>
