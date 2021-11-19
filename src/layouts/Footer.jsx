@@ -171,7 +171,7 @@ const MainFooter = () => {
               <img className={classes.departmentLogo} src="/assets/mitd.svg" alt={ministeroMitd.label} />
             </ExternalLink>
             <ExternalLink linkTo={dipartimento.linkTo} ariaLabel={dipartimento.ariaLabel}>
-              <img src="/assets/dipartimento.svg" alt={dipartimento.ariaLabel} />
+              <img src="/assets/dipartimento.svg" alt={dipartimento.label} />
             </ExternalLink>
           </div>
           <div className="info text-center">

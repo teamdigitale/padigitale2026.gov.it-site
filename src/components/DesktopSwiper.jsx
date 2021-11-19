@@ -59,6 +59,7 @@ export const DesktopSwiper = ({
   navigation,
   className,
   title,
+  id
 }) => {
   const classes = useStyles();
   const [paginationId, setPaginationId] = useState(null);
@@ -100,6 +101,7 @@ export const DesktopSwiper = ({
               hiddenClass: classes.disabledNavBtn,
             }}
             aria-roledescription="carousel"
+            id={`Carousel-${id}`}
           >
             {slides.map((slide, k) => (
               <SwiperSlide role="group" aria-roledescription="slide" className={classes.swiperSlide} key={k}>
@@ -130,6 +132,7 @@ export const DesktopSwiper = ({
             type="button"
             data-prev-navigation-id={prevBtnId}
             aria-label={`Vai alla slide precedente di ${title}`}
+            aria-controls={`Carousel-${id}`}
           >
             <Icon
               color="primary"
@@ -145,6 +148,7 @@ export const DesktopSwiper = ({
             type="button"
             data-next-navigation-id={nextBtnId}
             aria-label={`Vai alla slide successiva di ${title}`}
+            aria-controls={`Carousel-${id}`}
           >
             <Icon
               color="primary"
@@ -164,6 +168,7 @@ export const DesktopSwiper = ({
             type="button"
             data-prev-navigation-id={prevBtnId}
             aria-label={`Vai alla slide precedente di ${title}`}
+            aria-controls={`Carousel-${id}`}
           >
             <Icon
               color="primary"
@@ -179,6 +184,7 @@ export const DesktopSwiper = ({
             type="button"
             data-next-navigation-id={nextBtnId}
             aria-label={`Vai alla slide successiva di ${title}`}
+            aria-controls={`Carousel-${id}`}
           >
             <Icon
               color="primary"

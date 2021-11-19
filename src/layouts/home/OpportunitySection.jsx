@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Section, Row, Col, Card, CardBody, CardTitle, Button } from 'design-react-kit';
 import { createUseStyles } from 'react-jss';
-import { Link } from 'gatsby';
+import { Link, navigate } from 'gatsby';
 import { GlobalStateContext } from '../../context/globalContext';
 
 const useStyle = createUseStyles({
@@ -47,7 +47,7 @@ const useStyle = createUseStyles({
     '&:after': {
       content: 'unset',
     },
-    '& a': {
+    '& button': {
       textDecoration: 'none',
       width: '100%',
       '&:hover': {
@@ -74,6 +74,16 @@ const useStyle = createUseStyles({
       fontWeight: 'normal',
     },
   },
+  oppButton: {
+    backgroundColor: 'transparent',
+    border: 'none',
+    width: '100%',
+    textAlign: 'left',
+    color: '#0066CC',
+    '&:focus': {
+      outline: 'none',
+    },
+  },
 });
 
 export const OpportunitySection = (props) => {
@@ -91,16 +101,19 @@ export const OpportunitySection = (props) => {
           {list.map((item) => (
             <Col md="6" key={item.title} className="px-md-3" role="listitem">
               <Card spacing className={classes.cardWrapper}>
-                <Link
-                  to={`/misure`}
-                  onClick={() => dispatch({ type: 'SET:SECTION_OPPORTUNITY_ID', payload: { sectionId: item.id } })}
+                <button 
+                  className={classes.oppButton}
+                  onClick={() => {
+                    dispatch({ type: 'SET:SECTION_OPPORTUNITY_ID', payload: { sectionId: item.id } });
+                    navigate('/misure');
+                  }}
                 >
                   <CardBody>
                     <CardTitle className={classes.cardTitle}>
                       <span>{item.number}</span> {item.title}
                     </CardTitle>
                   </CardBody>
-                </Link>
+                </button>
               </Card>
             </Col>
           ))}

@@ -280,7 +280,7 @@ const SlimHeader = () => {
           href={externalLinks.italiaDigitale.linkTo}
           target="_blank"
         >
-          <img className="d-none d-lg-block" src="/assets/eu-flag.svg" alt={externalLinks.eu.ariaLabel}></img>
+          <img className="d-none d-lg-block" src="/assets/eu-flag.svg" alt={externalLinks.eu.label}></img>
         </ExternalLink>
       </HeaderContent>
     </HeaderReactKit>

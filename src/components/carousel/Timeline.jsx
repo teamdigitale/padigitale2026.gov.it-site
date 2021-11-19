@@ -187,6 +187,7 @@ export const Timeline = ({ content, title }) => {
             <Col xs="12" lg="10" className="offset-lg-1 position-relative">
               <div className={classes.line}></div>
               <DesktopSwiper
+                title={title}
                 slides={slides}
                 breakpoints={{
                   slidesPerView: 1,
@@ -195,6 +196,7 @@ export const Timeline = ({ content, title }) => {
                   },
                 }}
                 navigation
+                id="calendar-timeline"
               />
             </Col>
           </Row>

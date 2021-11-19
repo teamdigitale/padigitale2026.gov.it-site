@@ -74,6 +74,7 @@ externalLinks:
   eu:
     linkTo: https://ec.europa.eu/info/index_it
     ariaLabel: 'Unione Europea (Collegamento esterno - Apre su nuova scheda)'
+    label: 'Unione Europea'
   repubblica:
     linkTo: https://www.governo.it/
     ariaLabel: 'Governo Italiano (Collegamento esterno - Apre su nuova scheda)'

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Button, Collapse, Card, CardBody } from 'design-react-kit';
 import { createUseStyles } from 'react-jss';
-import { Link } from 'gatsby';
+import { Link, navigate } from 'gatsby';
 import { GlobalStateContext } from '../context/globalContext';
 import { ExternalLink } from './ExternalLink';
 
@@ -230,6 +230,19 @@ const useStyles = createUseStyles({
       borderBottomRightRadius: '4px',
     },
   },
+  accessLink: {
+    backgroundColor: 'transparent',
+    border: 'none',
+    fontSize: '1rem',
+    fontWeight: 'bold',
+    color: '#0066CC',
+    '&:hover': {
+      textDecoration: 'underline',
+    },
+    '&:focus': {
+      outline: 'none',
+    },
+  },
 });
 
 export const AccordionButtonFull = (props) => {
@@ -294,13 +307,15 @@ export const AccordionButtonFull = (props) => {
                 </p>
                 <div className="access">
                   <span>Modalità di accesso:</span>{' '}
-                  <Link
+                  <button
                     className={classes.accessLink}
-                    to="/come-funziona"
-                    onClick={() => dispatch({ type: 'SET:HOW_SECTION_ID', payload: { howId: accessSectionId } })}
+                    onClick={() => {
+                      dispatch({ type: 'SET:HOW_SECTION_ID', payload: { howId: accessSectionId } });
+                      navigate('/come-funziona');
+                    }}
                   >
                     <p>{accessLabel}</p>
-                  </Link>
+                  </button>
                 </div>
                 <div className={classes.linkAccordion}>
                   <ExternalLink

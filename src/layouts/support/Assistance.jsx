@@ -62,8 +62,7 @@ export const Assistance = () => {
           <HeroGraphic className="col-lg-6 text-center mt-4 mt-lg-0">
             <StaticImage
               src="../../../static/assets/supporto.svg"
-              alt={altImg}
-              aria-label={altImg}
+              alt=""
             />
           </HeroGraphic>
         </div>
