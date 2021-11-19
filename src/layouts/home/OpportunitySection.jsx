@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Section, Row, Col, Card, CardBody, CardTitle, Button } from 'design-react-kit';
 import { createUseStyles } from 'react-jss';
-import { Link } from 'gatsby';
+import { Link, navigate } from 'gatsby';
 import { GlobalStateContext } from '../../context/globalContext';
 
 const useStyle = createUseStyles({
@@ -47,13 +47,13 @@ const useStyle = createUseStyles({
     '&:after': {
       content: 'unset',
     },
-    '& a': {
+    '& button': {
       textDecoration: 'none',
       width: '100%',
       '&:hover': {
         color: '#0066CC',
-        textDecoration: 'underline'
-      }
+        textDecoration: 'underline',
+      },
     },
     '& .card-body': {
       padding: '1.333rem 0.889rem',
@@ -74,6 +74,16 @@ const useStyle = createUseStyles({
       fontWeight: 'normal',
     },
   },
+  oppButton: {
+    backgroundColor: 'transparent',
+    border: 'none',
+    width: '100%',
+    textAlign: 'left',
+    color: '#0066CC',
+    '&:focus': {
+      outline: 'none',
+    },
+  },
 });
 
 export const OpportunitySection = (props) => {
@@ -84,24 +94,35 @@ export const OpportunitySection = (props) => {
   return (
     <div className={classes.section}>
       <section className="container" aria-labelledby="misure-section">
-        <h3 id="misure-section" className={classes.title}>{title}</h3>
+        <h3 id="misure-section" className={classes.title}>
+          {title}
+        </h3>
         <Row className={classes.row} role="list">
           {list.map((item) => (
             <Col md="6" key={item.title} className="px-md-3" role="listitem">
               <Card spacing className={classes.cardWrapper}>
-              <Link to="/misure" onClick={() => dispatch({type: 'SET:SECTION_OPPORTUNITY_ID', payload: {sectionId: item.id}})}>
-                <CardBody>
-                  <CardTitle className={classes.cardTitle}>
-                  <span>{item.number}</span> {item.title}
-                  </CardTitle>
-                </CardBody>
-                </Link>
+                <button
+                  className={classes.oppButton}
+                  onClick={() => {
+                    dispatch({ type: 'SET:SECTION_OPPORTUNITY_ID', payload: { sectionId: item.id } });
+                    navigate('/misure');
+                  }}
+                >
+                  <CardBody tag="span" className="d-block">
+                    <CardTitle tag="span" className={classes.cardTitle}>
+                      <span className="sr-only">vai alla misura </span>
+                      <span>{item.number}</span> {item.title}
+                    </CardTitle>
+                  </CardBody>
+                </button>
               </Card>
             </Col>
           ))}
         </Row>
         <div className="d-flex justify-content-center">
-          <Link to="/misure" className="text-uppercase btn btn-primary">Scopri tutte le misure</Link>
+          <Link to="/misure" className="text-uppercase btn btn-primary">
+            Scopri tutte le misure
+          </Link>
         </div>
       </section>
     </div>
