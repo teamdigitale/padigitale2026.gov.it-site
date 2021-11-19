@@ -291,9 +291,9 @@ export const AccordionButtonFull = (props) => {
             <div className={classes.cardHeaderValue} dangerouslySetInnerHTML={{ __html: money }} />
             <div className={classes.cardTags}>
               <p className="tag-title">Beneficiari</p>
-              <div className="tag-wrapper">
+              <div role="list" className="tag-wrapper">
                 {tags.map((tag) => (
-                  <div key={tag.label} className="tag">
+                  <div role="listitem" key={tag.label} className="tag">
                     {tag.label}
                   </div>
                 ))}
