@@ -1,3 +1,4 @@
+/* eslint-disable max-lines-per-function */
 import React, { useState, useEffect, useContext } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { createUseStyles } from 'react-jss';
@@ -236,6 +237,7 @@ const query = graphql`
   }
 `;
 
+// eslint-disable-next-line sonarjs/cognitive-complexity
 export const ModalUpdates = () => {
   const [{ modalState }, dispatch] = useContext(GlobalStateContext);
   const textareaMaxLength = 160;
@@ -433,7 +435,7 @@ export const ModalUpdates = () => {
           <Button
             type="button"
             className={classes.close}
-            aria-label="Close"
+            aria-label="Chiudi"
             onClick={() => {
               dispatch({ type: 'SET:TOGGLE_MODAL' });
             }}
@@ -491,6 +493,7 @@ export const ModalUpdates = () => {
                           type="text"
                           id="address"
                           aria-required="true"
+                          autocomplete="email"
                           {...field}
                         />
                         <span className={classes.errorLabel} id="error-address">
@@ -503,7 +506,9 @@ export const ModalUpdates = () => {
               </Row>
               <Row className="mt-5">
                 <Col xs={12} lg={6}>
-                  <span className={classes.selectLabel}>{representLabel}</span>
+                  <label htmlFor="represent-select-input" className={classes.selectLabel}>
+                    {representLabel}
+                  </label>
                   <Controller
                     control={control}
                     name="representative"
@@ -512,6 +517,7 @@ export const ModalUpdates = () => {
                       <Select
                         value={value}
                         id="represent-select"
+                        inputId="represent-select-input"
                         onChange={onChange}
                         options={selectRepresent}
                         placeholder={selectPlaceholder}
@@ -605,14 +611,15 @@ export const ModalUpdates = () => {
               <div className={`${classes.enteContainer} ${enteState == 'public-administration' ? '' : 'hidden'}`}>
                 <Row className="mt-5">
                   <Col xs={12} lg={6}>
-                    <label className={classes.selectLabel}>{inQuantoLabel}</label>
+                    <label htmlFor="enteSelect-input" className={classes.selectLabel}>
+                      {inQuantoLabel}
+                    </label>
                     <Controller
                       control={control}
                       name="enteSelect"
                       rules={{
                         required: {
-                          value:
-                            enteState == 'public-administration' ? true : false,
+                          value: enteState == 'public-administration' ? true : false,
                           message: requiredLabel,
                         },
                       }}
@@ -620,6 +627,7 @@ export const ModalUpdates = () => {
                         <Select
                           value={value}
                           id="enteSelect"
+                          inputId="enteSelect-input"
                           onChange={onChange}
                           options={selectInQuanto}
                           aria-describedby="mandatory-label"
@@ -663,17 +671,21 @@ export const ModalUpdates = () => {
               </Row>
               <Row className="mt-5">
                 <Col xs={12} lg={6}>
-                  <label className={classes.selectLabel}>{messageSelectLabel}</label>
+                  <label htmlFor="message-select-input" className={classes.selectLabel}>
+                    {messageSelectLabel}
+                  </label>
                   <Controller
                     control={control}
                     name="messageSelect"
                     render={({ field: { onChange, value } }) => (
                       <Select
                         id="message-select"
+                        inputId="message-select-input"
                         onChange={onChange}
                         options={selectMessage}
                         placeholder={selectPlaceholder}
                         aria-label={selectPlaceholder}
+                        className={`select`}
                       />
                     )}
                   />
@@ -719,7 +731,7 @@ export const ModalUpdates = () => {
             <Button color="primary" type="submit" form="updates-form">
               {sendButtonLabel}
             </Button>
-            <img className={classes.spinner} src="/assets/spinner.gif"></img>
+            <img className={classes.spinner} src="/assets/spinner.gif" alt=""></img>
           </div>
         </ModalFooter>
       </Modal>

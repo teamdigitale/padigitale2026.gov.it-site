@@ -186,6 +186,7 @@ export const HomeCarousel = ({ content, title }) => {
                 mobilePagination
                 desktopNavigation
                 title="home hero carousel"
+                id="home-hero-carousel"
               />
             </Col>
           </Row>
