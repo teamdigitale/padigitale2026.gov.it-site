@@ -269,7 +269,7 @@ export const ModalMessage = () => {
   };
 
   const setListenersToSelectOptions = () => {
-    const representSelectOptions = document.querySelector('#represent-select');
+    const representSelectOptions = document.querySelector('#represent-select2');
     const config = { childList: true, subtree: true };
     const setObserver = (mutationsList) => {
       for (const mutation of mutationsList) {
