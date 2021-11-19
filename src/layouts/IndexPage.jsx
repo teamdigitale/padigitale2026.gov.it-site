@@ -18,11 +18,13 @@ import { HomeCarousel } from '../components/carousel/HomeCarousel';
 import { SEO } from '../components/SEO';
 import { createUseStyles } from 'react-jss';
 import seo from '../../contents/seo.yml';
+import labels from '../../contents/labels.yml';
 import { SupportSection } from './faq/SupportSection';
 import { OpportunitySection } from './home/OpportunitySection';
 import { GlobalStateContext } from '../context/globalContext';
 
 const { title: seoTitle, description: seoDescription } = seo.homePage;
+const { ariaLabel, headerTitle, headerSubtitle } = labels;
 
 const useStyles = createUseStyles({
   mobileTitle: {
@@ -49,10 +51,8 @@ export const IndexPage = () => {
     <>
       <SEO title={seoTitle} description={seoDescription} />
       <div className={classes.mobileTitle}>
-        <h1 className="title">PA digitale 2026</h1>
-        <p className="description">
-          Le opportunità per una PA protagonista della transizione digitale
-        </p>
+        <h1 className="title">{headerTitle}</h1>
+        <p className="description">{headerSubtitle}</p>
       </div>
       <div className="sr-only">
         <h2>{name}</h2>
@@ -86,7 +86,7 @@ export const IndexPage = () => {
         title={heroDigital.title}
         body={heroDigital.body}
         theme="bg-blue"
-        image="italy-blue.png"
+        image="italy-blue.webp"
         firstButtonLabel={heroDigital.firstButtonLabel}
         firstButtonAriaLabel={heroDigital.firstButtonAriaLabel}
         firstButtonClass="btn-light"

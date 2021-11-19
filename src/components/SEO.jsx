@@ -48,7 +48,7 @@ export const SEO = ({ title, description, socialCard }) => {
 
   const socialCardContent = socialCard
     ? `${siteUrl}/assets/social-cards/${socialCard}`
-    : `${siteUrl}/assets/social-cards/home.png`;
+    : `${siteUrl}/assets/social-cards/social.png`;
 
   const twitter = [
     { name: 'twitter:card', content: 'summary_large_image' },

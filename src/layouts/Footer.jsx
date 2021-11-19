@@ -131,7 +131,7 @@ const SlimFooter = () => {
               {privacy.label}
             </Link>
           </li>
-          {/* <li className={`${classes.listItem} mr-0 mr-md-5`}>
+          <li className={`${classes.listItem} mr-0 mr-md-5`}>
             <ExternalLink
               linkTo={a11y.linkTo}
               ariaLabel={a11y.ariaLabel}
@@ -139,7 +139,7 @@ const SlimFooter = () => {
             >
               {a11y.label}
             </ExternalLink>
-          </li> */}
+          </li>
         </ul>
       </div>
     </div>

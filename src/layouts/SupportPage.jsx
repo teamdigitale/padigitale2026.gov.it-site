@@ -5,6 +5,7 @@ import { FAQPreview } from './support/FAQPreview';
 import { Assistance } from './support/Assistance';
 import { SEO } from '../components/SEO';
 import seo from '../../contents/seo.yml';
+import { SupportBanner } from './support/Banner';
 
 const { title: seoTitle, description: seoDescription } = seo.supportPage;
 
@@ -21,5 +22,6 @@ export const SupportPage = () => (
     <HeroSupport title={title} subtitle={description} />
     <FAQPreview />
     <Assistance />
+    <SupportBanner text={content.bottomBanner} />
   </>
 );
