@@ -408,8 +408,7 @@ export const ModalUpdates = () => {
     selectRepresent,
     selectInQuanto,
     selectMessage,
-    modalTitle,
-    modalSubtitle,
+    modalUpdatesTitle,
     updatesLabel,
     updatesInfo,
     mandatoryAdvise,
@@ -445,7 +444,7 @@ export const ModalUpdates = () => {
         }}
       >
         <div id="updates-modal" className="modal-header">
-          <h5 className="modal-title">{modalTitle}</h5>
+          <h5 className="modal-title">{modalUpdatesTitle}</h5>
           <Button
             type="button"
             className={classes.close}
@@ -462,10 +461,6 @@ export const ModalUpdates = () => {
             />
           </Button>
         </div>
-        <p
-          className={classes.modalSubtitle}
-          dangerouslySetInnerHTML={{ __html: modalSubtitle }}
-        ></p>
         <ModalBody className={classes.modalBody}>
           <form
             onSubmit={handleSubmit(onSubmit, onError)}
@@ -473,12 +468,12 @@ export const ModalUpdates = () => {
             aria-describedby="mandatory-label"
           >
             <fieldset>
-              <Row>
-                <Col xs={12}>
-                  <img src="/assets/icon-updates.svg" alt="" />
-                </Col>
-              </Row>
               <legend>
+                <Row>
+                  <Col xs={12}>
+                    <img src="/assets/icon-updates.svg" alt="" />
+                  </Col>
+                </Row>
                 <Row className="mt-3">
                   <Col xs={12}>
                     <span className={classes.modalLabel}>{updatesLabel}</span>

@@ -406,8 +406,8 @@ export const ModalMessage = () => {
     selectRepresent,
     selectInQuanto,
     selectMessage,
-    modalTitle,
-    modalSubtitle,
+    modalMessageTitle,
+    modalMessageSubtitle,
     updatesLabel,
     updatesInfo,
     mandatoryAdvise,
@@ -443,7 +443,7 @@ export const ModalMessage = () => {
         }}
       >
         <div id="message-modal" className="modal-header">
-          <h5 className="modal-title">{modalTitle}</h5>
+          <h5 className="modal-title">{modalMessageTitle}</h5>
           <Button
             type="button"
             className={classes.close}
@@ -460,10 +460,6 @@ export const ModalMessage = () => {
             />
           </Button>
         </div>
-        <p
-          className={classes.modalSubtitle}
-          dangerouslySetInnerHTML={{ __html: modalSubtitle }}
-        ></p>
         <ModalBody className={classes.modalBody}>
           <form
             onSubmit={handleSubmit(onSubmit, onError)}
@@ -472,7 +468,7 @@ export const ModalMessage = () => {
           >
             <fieldset>
               <legend>
-                <Row className="mt-5">
+                <Row>
                   <Col xs={12}>
                     <img src="/assets/icon-chat.svg" alt="" />
                   </Col>
