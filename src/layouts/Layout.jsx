@@ -50,6 +50,9 @@ export const Layout = ({ children }) => {
   return (
     <>
       <SEO />
+      <a className="sr-only sr-only-focusable" href="#menu-principale-anchor">
+        Menù principale
+      </a>
       <a className="sr-only sr-only-focusable" href="#content">
         {goToMainContent}
       </a>
@@ -58,7 +61,7 @@ export const Layout = ({ children }) => {
       </a>
       <GlobalStateContextProvider>
         <Header toggleModal={toggleModal} />
-        <main className="text-info text-break" id="content">
+        <main className="text-info text-break" tabIndex="-1" id="content">
           {children}
           <ModalUpdates initialState={modalIsOpen} handleToggle={toggleModal} />
           <ModalMessage

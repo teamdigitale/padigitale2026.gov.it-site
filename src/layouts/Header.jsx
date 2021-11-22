@@ -296,12 +296,8 @@ const CenterHeader = () => {
           <Link to="/">
             <div className="it-brand-text pr-0">
               <div className="d-md-flex align-items-center">
-                <img
-                  className="icon repubblica-logo"
-                  src="/assets/repubblica-logo-blue.svg"
-                  alt="Logo Repubblica Italiana"
-                />
-                <img className="icon site-logo" src="/assets/site-logo.svg" alt="Logo PA digitale 2026" />
+                <img className="icon repubblica-logo" src="/assets/repubblica-logo-blue.svg" alt="" />
+                <img className="icon site-logo" src="/assets/site-logo.svg" alt="" />
                 <div className="d-none d-lg-inline-block">
                   <h1 className="h3 mb-0">{headerTitle}</h1>
                   <div className={classes.subtitle}>{headerSubtitle}</div>
@@ -330,6 +326,8 @@ const NavHeader = () => {
         /* aria-label={ariaLabel.menu} */
         aria-labelledby="menu-principale"
         className="px-2"
+        id="menu-principale-anchor"
+        tabIndex="-1"
       >
         <h2 id="menu-principale" className="sr-only">
           Menu principale
