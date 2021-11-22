@@ -46,7 +46,7 @@ const useStyles = createUseStyles({
 
 export const IndexPage = () => {
   const classes = useStyles();
-  const [{ modalState }, dispatch] = useContext(GlobalStateContext);
+  const [{}, dispatch] = useContext(GlobalStateContext);
   return (
     <>
       <SEO title={seoTitle} description={seoDescription} />
@@ -99,10 +99,9 @@ export const IndexPage = () => {
         supportList={support.cards}
         title={support.title}
         buttonLabel={support.buttonLabel}
-        initialState={modalState}
         handleToggle={() => {
           dispatch({
-            type: 'SET:TOGGLE_MODAL',
+            type: 'SET:TOGGLE_MODAL_MESSAGE',
           });
         }}
       />

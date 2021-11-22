@@ -52,7 +52,7 @@ export const Assistance = () => {
                 color="primary"
                 className={classes.heroBtn}
                 onClick={() => {
-                  dispatch({ type: 'SET:TOGGLE_MODAL' });
+                  dispatch({ type: 'SET:TOGGLE_MODAL_MESSAGE' });
                 }}
               >
                 {btnText}

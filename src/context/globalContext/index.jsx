@@ -1,6 +1,6 @@
 import React, { createContext, useReducer, useState, useEffect } from 'react';
 
-const initialState = { sectionId: null, faqId: null, modalState: false};
+const initialState = { sectionId: null, faqId: null, modalState: false };
 
 const reducer = (state, { type, payload }) => {
   switch (type) {
@@ -12,8 +12,10 @@ const reducer = (state, { type, payload }) => {
       return { ...state, faqId: payload.faqId };
     case 'SET:TOGGLE_MODAL':
       return { ...state, modalState: !state.modalState };
-      case 'SET:ACTIVE_HEADER':
-        return { ...state, activeItem: payload?.activeItem };
+    case 'SET:TOGGLE_MODAL_MESSAGE':
+      return { ...state, modalStateMessage: !state.modalStateMessage };
+    case 'SET:ACTIVE_HEADER':
+      return { ...state, activeItem: payload?.activeItem };
     default:
       return { ...state };
   }
