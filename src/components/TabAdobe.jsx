@@ -107,7 +107,7 @@ const useStyles = createUseStyles({
         display: 'flex',
         borderBottom: '1px solid #E6E9F2',
         flexDirection: 'column',
-        flexBasis: '70%',
+        flexBasis: '60%',
         cursor: 'pointer',
         padding: '0.625rem 0',
         '@media (min-width: 992px)': {
