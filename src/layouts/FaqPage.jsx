@@ -20,6 +20,20 @@ const useStyles = createUseStyles({
     color: '#33485C',
     margin: '0.833rem 0',
   },
+  inputContainer: {
+    position: 'relative',
+    '& .reset-btn': {
+      background: 'transparent',
+      border: '0',
+      position: 'absolute',
+      top: '15px',
+      right: '10px',
+      backgroundImage: 'url("../assets/close-black.svg")',
+      backgroundRepeat: 'no-repeat',
+      width: '1.1rem',
+      height: '1.1rem'
+    }
+  },
   inputWrap: {
     backgroundImage: 'url("../assets/icon-search.svg")',
     '&:focus': {
@@ -27,6 +41,7 @@ const useStyles = createUseStyles({
     },
   },
 });
+
 export const FaqPage = () => {
   const classes = useStyles();
   const [inputValue, setInputValue] = useState('');
@@ -132,6 +147,11 @@ export const FaqPage = () => {
     }
   }, [filterId]);
 
+  const resetInput = () => {
+    setInputValue('')
+    setQuestions(faq.questions)
+  }
+
   return (
     <>
       <SEO title={seoTitle} description={seoDescription} />
@@ -146,12 +166,12 @@ export const FaqPage = () => {
           </h3>
           <Row>
             <Col lg={9} className="offset-lg-3 px-lg-3">
-              <div role="search" aria-label="Nelle domande frequenti">
+              <div role="search" className={classes.inputContainer} aria-label="Nelle domande frequenti">
                 <div id="searchbox-desk" className="sr-only">
                   Ad ogni digitazione il numero di domande frequenti presenti in pagina verrà aggiornato.
                 </div>
                 <Input
-                  className={classes.inputWrap}
+                  className={inputValue.length > 0 ? '' : classes.inputWrap}
                   type="text"
                   label="Cerca nelle domande frequenti"
                   id="faq-search"
@@ -161,6 +181,10 @@ export const FaqPage = () => {
                   value={inputValue}
                   onChange={handleChange}
                 />
+                {inputValue.length > 0 && 
+                <button className="reset-btn" onClick={resetInput}>
+                  <span className="sr-only">Il campo svuota l'input</span>
+                </button>}
               </div>
             </Col>
           </Row>
@@ -189,7 +213,7 @@ export const FaqPage = () => {
                   }}
                 />
               ))}
-              {!questions.length && <p className={classes.noResults}>{faq.noResults}</p>}
+              {!questions.length && <p className={classes.noResults} role="alert">{faq.noResults}</p>}
             </Col>
           </Row>
         </Container>
