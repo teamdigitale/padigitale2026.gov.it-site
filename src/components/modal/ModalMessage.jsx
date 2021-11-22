@@ -1,4 +1,3 @@
-/* eslint-disable max-lines-per-function */
 import React, { useState, useEffect, useContext } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { createUseStyles } from 'react-jss';
@@ -182,10 +181,10 @@ const useStyles = createUseStyles({
     color: '#33485C',
     fontWeight: '600',
   },
-  enteContainer: {
-    '&.hidden': {
-      display: 'none',
-    },
+  maxLengthLabel: {
+    fontSize: '0.778rem',
+    color: '#808080',
+    marginLeft: '0.444rem',
   },
   errorLabel: {
     fontSize: '0.778rem',
@@ -241,9 +240,8 @@ const query = graphql`
   }
 `;
 
-// eslint-disable-next-line sonarjs/cognitive-complexity
-export const ModalUpdates = () => {
-  const [{ modalState }, dispatch] = useContext(GlobalStateContext);
+export const ModalMessage = () => {
+  const [{ modalStateMessage }, dispatch] = useContext(GlobalStateContext);
   const textareaMaxLength = 160;
   const [selectValue, setSelectValue] = useState(null);
   const [textareaState, setTextareaState] = useState('not-active');
@@ -271,7 +269,7 @@ export const ModalUpdates = () => {
   };
 
   const setListenersToSelectOptions = () => {
-    const representSelectOptions = document.querySelector('#represent-select');
+    const representSelectOptions = document.querySelector('#represent-select2');
     const config = { childList: true, subtree: true };
     const setObserver = (mutationsList) => {
       for (const mutation of mutationsList) {
@@ -408,7 +406,8 @@ export const ModalUpdates = () => {
     selectRepresent,
     selectInQuanto,
     selectMessage,
-    modalUpdatesTitle,
+    modalMessageTitle,
+    modalMessageSubtitle,
     updatesLabel,
     updatesInfo,
     mandatoryAdvise,
@@ -432,25 +431,25 @@ export const ModalUpdates = () => {
   return (
     <>
       <Modal
-        isOpen={modalState}
+        isOpen={modalStateMessage}
         toggle={() => {
-          dispatch({ type: 'SET:TOGGLE_MODAL' });
+          dispatch({ type: 'SET:TOGGLE_MODAL_MESSAGE' });
         }}
-        labelledBy="updates-modal"
+        labelledBy="message-modal"
         className={classes.modalUpdatesContainer}
         onOpened={() => {
           setFocusStyleOnSelect();
           setListenersToSelectOptions();
         }}
       >
-        <div id="updates-modal" className="modal-header">
-          <h5 className="modal-title">{modalUpdatesTitle}</h5>
+        <div id="message-modal" className="modal-header">
+          <h5 className="modal-title">{modalMessageTitle}</h5>
           <Button
             type="button"
             className={classes.close}
-            aria-label="Chiudi"
+            aria-label="Close"
             onClick={() => {
-              dispatch({ type: 'SET:TOGGLE_MODAL' });
+              dispatch({ type: 'SET:TOGGLE_MODAL_MESSAGE' });
             }}
           >
             <span>Chiudi</span>
@@ -464,35 +463,31 @@ export const ModalUpdates = () => {
         <ModalBody className={classes.modalBody}>
           <form
             onSubmit={handleSubmit(onSubmit, onError)}
-            id="updates-form"
+            id="message-form"
             aria-describedby="mandatory-label"
           >
             <fieldset>
               <legend>
                 <Row>
                   <Col xs={12}>
-                    <img src="/assets/icon-updates.svg" alt="" />
+                    <img src="/assets/icon-chat.svg" alt="" />
                   </Col>
                 </Row>
                 <Row className="mt-3">
                   <Col xs={12}>
-                    <span className={classes.modalLabel}>{updatesLabel}</span>
+                    <span className={classes.modalLabel}>
+                      {directContactLabel}
+                    </span>
                   </Col>
                 </Row>
                 <Row className="mt-2">
                   <Col xs={12}>
-                    <p dangerouslySetInnerHTML={{ __html: updatesInfo }}></p>
+                    <p
+                      dangerouslySetInnerHTML={{ __html: directContactInfo }}
+                    ></p>
                   </Col>
                 </Row>
               </legend>
-              <Row className="mt-5">
-                <Col xs={12}>
-                  <p
-                    id="mandatory-label"
-                    dangerouslySetInnerHTML={{ __html: mandatoryAdvise }}
-                  ></p>
-                </Col>
-              </Row>
               <Row className="mt-5">
                 <Col xs={12}>
                   <Controller
@@ -514,12 +509,11 @@ export const ModalUpdates = () => {
                           aria-describedby="mandatory-label"
                           aria-labelledby={errors.address && 'error-address'}
                           type="text"
-                          id="address"
+                          id="address2"
                           aria-required="true"
-                          autocomplete="email"
                           {...field}
                         />
-                        <span className={classes.errorLabel} id="error-address">
+                        <span className={classes.errorLabel} id="error-address2">
                           {errors.address && errors.address.message}
                         </span>
                       </>
@@ -529,12 +523,7 @@ export const ModalUpdates = () => {
               </Row>
               <Row className="mt-5">
                 <Col xs={12} lg={6}>
-                  <label
-                    htmlFor="represent-select-input"
-                    className={classes.selectLabel}
-                  >
-                    {representLabel}
-                  </label>
+                  <span className={classes.selectLabel}>{representLabel}</span>
                   <Controller
                     control={control}
                     name="representative"
@@ -542,8 +531,7 @@ export const ModalUpdates = () => {
                     render={({ field: { onChange, value } }) => (
                       <Select
                         value={value}
-                        id="represent-select"
-                        inputId="represent-select-input"
+                        id="represent-select2"
                         onChange={onChange}
                         options={selectRepresent}
                         placeholder={selectPlaceholder}
@@ -561,144 +549,60 @@ export const ModalUpdates = () => {
                   />
                 </Col>
               </Row>
-              <span className={classes.errorLabel} id="error-represent">
-                {errors.represent ? requiredLabel : ''}
-              </span>
-              <div
-                className={`${classes.enteContainer} ${
-                  enteState == 'other' ? '' : 'hidden'
-                }`}
-              >
-                <Row className="mt-5">
-                  <Col xs={12}>
-                    <Controller
-                      name="enteType"
-                      control={control}
-                      rules={{
-                        required: {
-                          value: enteState == 'other' ? true : false,
-                          message: requiredLabel,
-                        },
-                        pattern: {
-                          value: /^[a-zA-Z ]*$/i,
-                          message: enteValidationLabel,
-                        },
-                      }}
-                      render={({ field }) => (
-                        <>
-                          <Input
-                            invalid={errors.enteType}
-                            label={enteTypeLabel}
-                            type="text"
-                            aria-describedby="mandatory-label"
-                            aria-labelledby={
-                              errors.enteType && 'error-enteType'
-                            }
-                            aria-required={enteState == 'other' ? true : ''}
-                            aria-invalid={errors.enteType && 'true'}
-                            {...field}
-                            id="enteType"
-                          />
-                          <span
-                            className={classes.errorLabel}
-                            id="error-enteType"
-                          >
-                            {errors.enteType && errors.enteType.message}
-                          </span>
-                        </>
-                      )}
-                    />
-                  </Col>
-                </Row>
-              </div>
               <Row className="mt-5">
-                <Col xs={12}>
+                <Col xs={12} lg={6}>
+                  <label className={classes.selectLabel}>
+                    {messageSelectLabel}
+                  </label>
                   <Controller
-                    name="ente"
                     control={control}
-                    rules={{
-                      required: {
-                        value: true,
-                        message: requiredLabel,
-                      },
-                      pattern: {
-                        value: /^[a-zA-Z ]*$/i,
-                        message: enteValidationLabel,
-                      },
-                    }}
-                    render={({ field }) => (
-                      <>
-                        <Input
-                          invalid={errors.ente}
-                          label={enteNameLabel}
-                          type="text"
-                          aria-describedby="mandatory-label"
-                          aria-required="true"
-                          aria-labelledby={errors.ente && 'error-enteName'}
-                          aria-invalid={errors.ente && 'true'}
-                          {...field}
-                          id="enteName"
-                        />
-                        <span
-                          className={classes.errorLabel}
-                          id="error-enteName"
-                        >
-                          {errors.ente && errors.ente.message}
-                        </span>
-                      </>
+                    name="messageSelect"
+                    render={({ field: { onChange, value } }) => (
+                      <Select
+                        id="message-select"
+                        onChange={onChange}
+                        options={selectMessage}
+                        placeholder={selectPlaceholder}
+                        aria-label={selectPlaceholder}
+                      />
                     )}
                   />
                 </Col>
               </Row>
-              <div
-                className={`${classes.enteContainer} ${
-                  enteState == 'public-administration' ? '' : 'hidden'
-                }`}
-              >
-                <Row className="mt-5">
-                  <Col xs={12} lg={6}>
-                    <label
-                      htmlFor="enteSelect-input"
-                      className={classes.selectLabel}
-                    >
-                      {inQuantoLabel}
-                    </label>
-                    <Controller
-                      control={control}
-                      name="enteSelect"
-                      rules={{
-                        required: {
-                          value:
-                            enteState == 'public-administration' ? true : false,
-                          message: requiredLabel,
-                        },
-                      }}
-                      render={({ field: { onChange, value } }) => (
-                        <Select
-                          value={value}
-                          id="enteSelect"
-                          inputId="enteSelect-input"
-                          onChange={onChange}
-                          options={selectInQuanto}
-                          aria-describedby="mandatory-label"
-                          placeholder={selectPlaceholder}
-                          aria-label={selectPlaceholder}
-                          aria-invalid={errors.enteSelect && 'true'}
-                          aria-labelledby={
-                            errors.enteSelect && 'error-enteSelect'
-                          }
-                          className={`${
-                            errors.enteSelect && 'select is-invalid'
-                          }`}
-                        />
-                      )}
-                    />
-                  </Col>
-                </Row>
-                <span className={classes.errorLabel} id="error-enteSelect">
-                  {errors.enteSelect ? requiredLabel : ''}
-                </span>
-              </div>
+              <Row className="mt-5">
+                <Col xs={12}>
+                  <div>
+                    <div className="form-group">
+                      <Controller
+                        name="message"
+                        control={control}
+                        render={({ field }) => (
+                          <textarea
+                            onFocus={textareaFocusHandler}
+                            onBlur={textareaFocusOutHandler}
+                            onInput={textareaInputHandler}
+                            rows="3"
+                            maxLength={textareaMaxLength}
+                            {...field}
+                            id="message"
+                          ></textarea>
+                        )}
+                      />
+                      <label
+                        className={textareaState == 'active' ? 'active' : ''}
+                        htmlFor="message"
+                      >
+                        {messageLabel}
+                      </label>
+                      <span className={classes.maxLengthLabel}>
+                        Massimo{' '}
+                        <span id="max-length-number">{textareaMaxLength}</span>{' '}
+                        caratteri
+                      </span>
+                    </div>
+                  </div>
+                </Col>
+              </Row>
             </fieldset>
           </form>
         </ModalBody>
@@ -711,11 +615,7 @@ export const ModalUpdates = () => {
             <Button color="primary" type="submit" form="updates-form">
               {sendButtonLabel}
             </Button>
-            <img
-              className={classes.spinner}
-              src="/assets/spinner.gif"
-              alt=""
-            ></img>
+            <img className={classes.spinner} src="/assets/spinner.gif"></img>
           </div>
         </ModalFooter>
       </Modal>
@@ -726,9 +626,9 @@ export const ModalUpdates = () => {
               className={classes.notification}
               role="alert"
               aria-labelledby="not2dms-title"
-              id="not2dms"
+              id="not2dms2"
             >
-              <h5 id="not2dms-title">
+              <h5 id="not2dms-title2">
                 notifiche
                 <svg className="icon" role="img" aria-label=""></svg>
               </h5>
