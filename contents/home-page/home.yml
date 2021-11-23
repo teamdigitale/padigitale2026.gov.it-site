@@ -86,7 +86,7 @@ heroCarouselNews:
   - id: 1
     category: Avviso Pubblico
     title: Mobility as a Service for Italy, parte l'Avviso Pubblico
-    description: 'L'Avviso Pubblico permetterà di selezionare i primi tre progetti pilota che parteciperanno alla sperimentazione di servizi Mobility as a Service (MaaS)'
+    description: "L'Avviso Pubblico permetterà di selezionare i primi tre progetti pilota che parteciperanno alla sperimentazione di servizi Mobility as a Service (MaaS)"
     source: 'Fonte: innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/avvisi-pubblici/mobility-as-a-service-for-italy/'
   - id: 2
