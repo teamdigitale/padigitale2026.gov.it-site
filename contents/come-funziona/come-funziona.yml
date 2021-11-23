@@ -172,7 +172,7 @@ presentazioneTabs:
         first:
           title: Presentazione di progetti
           image: Progetti.svg
-          description: Le amministrazioni potranno accedere alle risorse del PNRR candidandosi ad appositi <strong>avvisi pubblici</strong>, attraverso un <strong>percorso guidato per la presentazione di progetti</strong>. Alla conclusione della fase di selezione, saranno individuate le amministrazioni ammesse a finanziamento. Per l'attuazione di specifiche misure invece le amministrazioni interessate saranno coinvolte direttamente attraverso <strong>appositi accordi</strong>.
+          description: Le amministrazioni potranno accedere alle risorse del PNRR candidandosi ad appositi <strong>avvisi pubblici</strong>, attraverso un <strong>percorso guidato per la presentazione di progetti</strong>. Alla conclusione della fase di selezione, saranno individuate le amministrazioni ammesse a finanziamento. <strong>Per l'attuazione di specifiche misure</strong> invece le amministrazioni interessate saranno coinvolte direttamente attraverso <strong>appositi accordi</strong>.
         second:
           title: Tempi rapidi
           image: tempi.svg
