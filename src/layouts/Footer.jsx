@@ -176,7 +176,7 @@ const MainFooter = () => {
           </div>
           <div className="info text-center">
             {activeItem === 'come-funziona' ? (
-              <Link to="#attori-coinvolti" className={classes.seeMore}>
+              <Link to="/come-funziona#attori-coinvolti" className={classes.seeMore}>
                 Scopri l&apos;iniziativa
               </Link>
             ) : (
