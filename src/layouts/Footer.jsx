@@ -181,7 +181,7 @@ const MainFooter = () => {
               </Link>
             ) : (
               <Link
-                to="/come-funziona"
+                to="/come-funziona#attori-coinvolti"
                 className={classes.seeMore}
                 onClick={() =>
                   dispatch({
