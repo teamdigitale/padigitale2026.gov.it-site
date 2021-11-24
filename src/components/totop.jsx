@@ -3,7 +3,23 @@ import PropTypes from 'prop-types';
 import { Icon } from 'design-react-kit';
 import { createUseStyles } from 'react-jss';
 
-const useStyle = createUseStyles({});
+const useStyle = createUseStyles({
+  totop: {
+    composes: 'back-to-top back-to-top-small shadow',
+    padding: '0',
+    border: 'none',
+    '&.back-to-top.back-to-top-small .icon': {
+      top: '0',
+    },
+    '&:focus': {
+      outline: 'none',
+    },
+  },
+});
+
+const goToTop = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
 
 export const Totop = () => {
   const classes = useStyle();
@@ -20,9 +36,9 @@ export const Totop = () => {
   }, []);
   return (
     <>
-      <a href="#" aria-hidden="true" data-attribute="back-to-top" className="back-to-top back-to-top-small shadow">
+      <button aria-hidden="true" data-attribute="back-to-top" className={classes.totop} onClick={() => goToTop()}>
         <Icon color="white" icon="it-arrow-up" />
-      </a>
+      </button>
     </>
   );
 };
