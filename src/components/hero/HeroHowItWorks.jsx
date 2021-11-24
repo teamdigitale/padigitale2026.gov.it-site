@@ -4,6 +4,7 @@ import { Row, Col, Hero, Container } from 'design-react-kit';
 import { HeroTitle } from './HeroTitle';
 import { HeroBackground } from './HeroBackground';
 import { HeroParagraph } from './HeroParagraph';
+import { Link } from 'gatsby';
 
 const useStyles = createUseStyles({
   heroImg: {
@@ -157,13 +158,11 @@ const useStyles = createUseStyles({
   },
   listItem: {
     composes: 'list-item',
-    padding: '0',
-    border: '0',
     textAlign: 'left',
-    backgroundColor: 'transparent',
     color: '#0066CC',
     fontWeight: '600',
     marginBottom: '1rem',
+    textDecoration: 'none',
     '@media (max-width: 991px)': {
       textAlign: 'center',
     },
@@ -182,9 +181,6 @@ export const HeroHowItWorks = ({ title, body, image, list }) => {
 
   const scrollIntoView = (id) => {
     const item = document.querySelector('#' + id);
-    item.scrollIntoView(true, {
-      behavior: 'smooth',
-    });
     item.setAttribute('tabindex', '-1');
     item.focus();
   };
@@ -209,10 +205,13 @@ export const HeroHowItWorks = ({ title, body, image, list }) => {
                           <div className={classes.listItemsWrapper}>
                             {listItem.items.map((item) => (
                               <React.Fragment key={item.item}>
-                                <button onClick={() => scrollIntoView(item.anchor)} className={classes.listItem}>
-                                  <span className="sr-only">Vai alla sezione </span>
+                                <Link
+                                  to={`/come-funziona#` + item.anchor}
+                                  onClick={() => scrollIntoView(item.anchor)}
+                                  className={classes.listItem}
+                                >
                                   {item.item}
-                                </button>
+                                </Link>
                               </React.Fragment>
                             ))}
                           </div>

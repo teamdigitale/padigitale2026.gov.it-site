@@ -93,11 +93,11 @@ const useStyle = createUseStyles({
 
 export const FAQPreview = () => {
   const classes = useStyle();
-  const [state, dispatch] = useContext(GlobalStateContext);
+  const [{}, dispatch] = useContext(GlobalStateContext);
 
   const cards = faqSection.faqPreviewCards.map((card) => (
     <Col key={card.id} xs="12" lg="4">
-      <Link to="/faq" onClick={() => dispatch({ type: 'SET:FAQ_ID', payload: { faqId: card.faqId } })} className={classes.linkCard}>
+      <Link to={`/faq#` + card.faqId} onClick={() => dispatch({ type: 'SET:FAQ_ID', payload: { faqId: card.faqId } })} className={classes.linkCard}>
         <Card className={classes.faqCard}>
           <CardBody>
             <CardTitle tag="h4">{card.title}</CardTitle>
