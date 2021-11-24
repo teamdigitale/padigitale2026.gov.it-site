@@ -322,6 +322,7 @@ export const AccordionButtonFull = (props) => {
                   >
                     <span className="sr-only">Vai alla sezione </span>
                     <span>{accessLabel}</span>
+                    <span className="sr-only"> della pagina come funziona</span>
                   </button>
                 </div>
                 <div className={classes.linkAccordion}>

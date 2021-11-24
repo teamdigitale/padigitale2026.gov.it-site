@@ -106,7 +106,7 @@ export const Beneficiaries = (props) => {
                       {category.items.map((item) => (
                         <li key={item.linkLabel}>
                           <Link
-                            to="/misure"
+                            to={`/misure#` + item.filterId}
                             state={{
                               filter: {
                                 value: item.filterId,

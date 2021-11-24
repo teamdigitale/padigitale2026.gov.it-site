@@ -113,9 +113,6 @@ export const BeneficiariesSection = (props) => {
   useEffect(() => {
     if (sectionId) {
       const item = document.querySelector('#' + sectionId);
-      item.scrollIntoView(true, {
-        behavior: 'smooth',
-      });
       item.setAttribute('tabindex', '-1');
       item.focus();
     }
