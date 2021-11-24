@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { Container, Input, Row, Col } from 'design-react-kit';
 import { createUseStyles } from 'react-jss';
+import { announce } from '@react-aria/live-announcer';
 import content from '../../contents/home-page/home.yml';
 import faq from '../../contents/faq-page/faq.yml';
 import { SEO } from '../components/SEO';
@@ -31,8 +32,8 @@ const useStyles = createUseStyles({
       backgroundImage: 'url("../assets/close-black.svg")',
       backgroundRepeat: 'no-repeat',
       width: '1.1rem',
-      height: '1.1rem'
-    }
+      height: '1.1rem',
+    },
   },
   inputWrap: {
     backgroundImage: 'url("../assets/icon-search.svg")',
@@ -48,8 +49,9 @@ export const FaqPage = () => {
   const [filterId, setFilterId] = useState('all');
   const [questions, setQuestions] = useState(faq.questions);
   const [isMobile, setIsMobile] = useState();
-  const [questNum, setquestNum] = useState(countInitQuestions());
+  // const [questNum, setquestNum] = useState(countInitQuestions());
   const [{}, dispatch] = useContext(GlobalStateContext);
+  const [searchText, setSearchText] = useState('Risultati mostrati a schermo');
 
   useEffect(() => {
     setIsMobile(window.innerWidth < 992);
@@ -58,28 +60,32 @@ export const FaqPage = () => {
     });
   }, []);
 
-  function countInitQuestions() {
-    let count = 0;
-    faq.questions.forEach((element) => {
-      count += element.accordions.length;
-    });
-    return count;
-  }
+  useEffect(() => {
+    announce(searchText);
+  }, [searchText]);
 
-  function countQuestions() {
-    let count = 0;
-    const questionList = document.querySelectorAll('#id-list-faq section');
-    if (questionList) {
-      questionList.forEach((element) => {
-        const list = element.querySelector('.collapse-div');
-        if (list) {
-          count += list.childElementCount;
-        }
-      });
-    }
-    console.log(count);
-    return count;
-  }
+  // function countInitQuestions() {
+  //   let count = 0;
+  //   faq.questions.forEach((element) => {
+  //     count += element.accordions.length;
+  //   });
+  //   return count;
+  // }
+
+  // function countQuestions() {
+  //   let count = 0;
+  //   const questionList = document.querySelectorAll('#id-list-faq section');
+  //   if (questionList) {
+  //     questionList.forEach((element) => {
+  //       const list = element.querySelector('.collapse-div');
+  //       if (list) {
+  //         count += list.childElementCount;
+  //       }
+  //     });
+  //   }
+  //   console.log(count);
+  //   return count;
+  // }
 
   const handleChange = (event) => {
     setInputValue(event.target.value);
@@ -96,7 +102,11 @@ export const FaqPage = () => {
         setQuestions(faq.questions);
       }
     }
-    setquestNum(countQuestions());
+    if (!questions.length) {
+      setSearchText('Nessun risultato');
+    }
+    setSearchText('Risultati mostrati in pagina');
+    // setquestNum(countQuestions());
   };
 
   function getAccordionsFiltered(question, input) {
@@ -148,9 +158,9 @@ export const FaqPage = () => {
   }, [filterId]);
 
   const resetInput = () => {
-    setInputValue('')
-    setQuestions(faq.questions)
-  }
+    setInputValue('');
+    setQuestions(faq.questions);
+  };
 
   return (
     <>
@@ -181,10 +191,11 @@ export const FaqPage = () => {
                   value={inputValue}
                   onChange={handleChange}
                 />
-                {inputValue.length > 0 && 
-                <button className="reset-btn" onClick={resetInput}>
-                  <span className="sr-only">Il campo svuota l'input</span>
-                </button>}
+                {inputValue.length > 0 && (
+                  <button className="reset-btn" onClick={resetInput}>
+                    <span className="sr-only">Il campo svuota l'input</span>
+                  </button>
+                )}
               </div>
             </Col>
           </Row>
@@ -200,9 +211,9 @@ export const FaqPage = () => {
               aria-label="Lista domande frequenti"
               aria-describedby="numberfaq"
             >
-              <span className="sr-only" id="numberfaq" aria-live="assertive">
+              {/* <span className="sr-only" id="numberfaq" aria-live="assertive">
                 Numero faq filtrate {questNum}
-              </span>
+              </span> */}
               {questions.map((question) => (
                 <QuestionSection
                   key={question.title}
@@ -213,7 +224,11 @@ export const FaqPage = () => {
                   }}
                 />
               ))}
-              {!questions.length && <p className={classes.noResults} role="alert">{faq.noResults}</p>}
+              {!questions.length && (
+                <p className={classes.noResults} role="alert">
+                  {faq.noResults}
+                </p>
+              )}
             </Col>
           </Row>
         </Container>
