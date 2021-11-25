@@ -36,9 +36,9 @@ export const Totop = () => {
   }, []);
   return (
     <>
-      <button aria-hidden="true" data-attribute="back-to-top" className={classes.totop} onClick={() => goToTop()}>
+      <a href="#" aria-hidden="true" data-attribute="back-to-top" className="back-to-top back-to-top-small shadow">
         <Icon color="white" icon="it-arrow-up" />
-      </button>
+      </a>
     </>
   );
 };
