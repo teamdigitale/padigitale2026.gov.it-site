@@ -34,6 +34,11 @@ const useStyles = createUseStyles({
     '.focus-a11y-contrast:focus': {
       border: '2px solid #ff9900', // This is used for a11y high contrast compliance
     },
+    'body': {
+      '& .grecaptcha-badge': {
+        display: 'none !important'
+      }
+    }
   },
 });
 

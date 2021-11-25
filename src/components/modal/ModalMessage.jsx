@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect, useContext, useRef } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { createUseStyles } from 'react-jss';
 import {
@@ -15,9 +15,9 @@ import {
 import Select from 'react-select';
 import { graphql, useStaticQuery } from 'gatsby';
 import content from '../../../contents/opportunity-page/opportunity.yml';
-import links from '../../../contents/links.yml';
 import notificationsLabel from '../../../contents/notifications.yml';
 import { GlobalStateContext } from '../../context/globalContext';
+import { loadReCaptcha, ReCaptcha } from 'react-recaptcha-v3';
 
 const {
   success: successLabels,
@@ -234,7 +234,8 @@ const query = graphql`
   query {
     site {
       siteMetadata {
-        apiUrl
+        apiUrl,
+        captchaKey,
       }
     }
   }
@@ -246,11 +247,18 @@ export const ModalMessage = () => {
   const [selectValue, setSelectValue] = useState(null);
   const [textareaState, setTextareaState] = useState('not-active');
   const [enteState, setEnteState] = useState('');
+  const [token, setToken] = useState('');
   const {
     site: {
-      siteMetadata: { apiUrl },
+      siteMetadata: { apiUrl, captchaKey },
     },
   } = useStaticQuery(query);
+
+  useEffect(() => {
+    loadReCaptcha(captchaKey);
+  }, []);
+
+  const reCaptchaRef = useRef(null);
 
   const setFocusStyleOnSelect = () => {
     const selectInputArr = document.querySelectorAll('.modal .select input');
@@ -293,11 +301,8 @@ export const ModalMessage = () => {
   };
 
   const {
-    register,
     control,
     handleSubmit,
-    watch,
-    trigger,
     formState: { errors },
   } = useForm();
 
@@ -334,6 +339,10 @@ export const ModalMessage = () => {
       }
     });
 
+    data['captcha'] = token;
+
+    console.log(data);
+
     const spinner = document.querySelector('.spinner');
     spinner.classList.remove('hidden');
 
@@ -354,7 +363,7 @@ export const ModalMessage = () => {
     };
     closeNotification.addEventListener('click', closeNotificationHandler);
 
-    fetch(`${apiUrl}/users`, {
+    fetch(`${apiUrl}/messages`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -404,25 +413,15 @@ export const ModalMessage = () => {
 
   const {
     selectRepresent,
-    selectInQuanto,
     selectMessage,
     modalMessageTitle,
-    modalMessageSubtitle,
-    updatesLabel,
-    updatesInfo,
-    mandatoryAdvise,
     requiredLabel,
     emailValidationLabel,
     emailLabel,
     representLabel,
     selectPlaceholder,
-    enteValidationLabel,
-    enteTypeLabel,
-    enteNameLabel,
-    inQuantoLabel,
     directContactLabel,
     directContactInfo,
-    addMessageLabel,
     messageSelectLabel,
     messageLabel,
     sendButtonLabel,
@@ -513,7 +512,10 @@ export const ModalMessage = () => {
                           aria-required="true"
                           {...field}
                         />
-                        <span className={classes.errorLabel} id="error-address2">
+                        <span
+                          className={classes.errorLabel}
+                          id="error-address2"
+                        >
                           {errors.address && errors.address.message}
                         </span>
                       </>
@@ -612,11 +614,17 @@ export const ModalMessage = () => {
             privacy
           </p>
           <div className="d-flex">
-            <Button color="primary" type="submit" form="updates-form">
+            <Button color="primary" type="submit" form="message-form">
               {sendButtonLabel}
             </Button>
             <img className={classes.spinner} src="/assets/spinner.gif"></img>
           </div>
+          <ReCaptcha
+            ref={(ref) => (reCaptchaRef.current = ref)}
+            sitekey={captchaKey}
+            action="action_name"
+            verifyCallback={(captcha) => setToken(captcha)}
+          />
         </ModalFooter>
       </Modal>
       <div className="container test-docs">
