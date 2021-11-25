@@ -1,14 +1,15 @@
-import React, { useState, useContext } from 'react';
-import content from '../../contents/home-page/home.yml';
+import React, { useState, useContext, useEffect } from 'react';
+import { announce } from '@react-aria/live-announcer';
 import { createUseStyles } from 'react-jss';
+import content from '../../contents/home-page/home.yml';
 import opportunityContent from '../../contents/opportunity-page/opportunity.yml';
-import { BeneficiariesSection } from './opportunity/BeneficiariesSection';
-import { SupportSection } from './faq/SupportSection';
 import { HeroImageBackground } from '../components/hero/HeroImageBackground';
 import { ModalUpdatesButton } from '../components/modal/ModalUpdatesButton';
 import { SEO } from '../components/SEO';
 import seo from '../../contents/seo.yml';
 import { GlobalStateContext } from '../context/globalContext';
+import { SupportSection } from './faq/SupportSection';
+import { BeneficiariesSection } from './opportunity/BeneficiariesSection';
 
 const { title: seoTitle, description: seoDescription } = seo.opportunityPage;
 
@@ -24,6 +25,11 @@ const useStyles = createUseStyles({
 export const OpportunityPage = (props) => {
   const classes = useStyles();
   const [{}, dispatch] = useContext(GlobalStateContext);
+
+  useEffect(() => {
+    announce('Pagina caricata ' + opportunityContent.name);
+  }, []);
+
   return (
     <>
       <SEO title={seoTitle} description={seoDescription} />

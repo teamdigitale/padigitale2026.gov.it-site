@@ -4,7 +4,6 @@ import '@fontsource/titillium-web/latin.css';
 import '@fontsource/lora/latin.css';
 import 'bootstrap-italia/dist/css/bootstrap-italia.min.css';
 import { createUseStyles } from 'react-jss';
-import { announce } from '@react-aria/live-announcer';
 import { SEO } from '../components/SEO';
 import labels from '../../contents/labels.yml';
 import { ModalUpdates } from '../components/modal/ModalUpdates';
@@ -49,9 +48,6 @@ export const Layout = ({ children }) => {
     setModalIsOpenMessage(!modalIsOpenMessage);
   };
 
-  useEffect(() => {
-    announce('Pagina caricata');
-  }, []);
   return (
     <>
       <SEO />

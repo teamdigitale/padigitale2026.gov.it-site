@@ -1,5 +1,6 @@
 import React, { useContext, useEffect } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
+import { announce } from '@react-aria/live-announcer';
 import { Hero } from '../components/hero/Hero';
 import { TextChunk } from '../components/TextChunk';
 import { Breadcrumb } from '../components/Breadcrumb';
@@ -12,9 +13,7 @@ const { title: seoTitle, description: seoDescription } = seo.privacyPage;
 
 const query = graphql`
   query {
-    textChunk: markdownRemark(
-      fields: { slug: { eq: "privacy-page/privacy" } }
-    ) {
+    textChunk: markdownRemark(fields: { slug: { eq: "privacy-page/privacy" } }) {
       html
     }
   }
@@ -26,6 +25,10 @@ export const PrivacyPolicyPage = () => {
   } = useStaticQuery(query);
 
   const [{}, dispatch] = useContext(GlobalStateContext);
+
+  useEffect(() => {
+    announce('Pagina caricata Privacy - PA digitale 2026');
+  }, []);
 
   return (
     <>

@@ -51,41 +51,19 @@ export const FaqPage = () => {
   const [isMobile, setIsMobile] = useState();
   // const [questNum, setquestNum] = useState(countInitQuestions());
   const [{}, dispatch] = useContext(GlobalStateContext);
-  const [searchText, setSearchText] = useState('Risultati mostrati a schermo');
+  const [searchText, setSearchText] = useState('');
 
   useEffect(() => {
     setIsMobile(window.innerWidth < 992);
     window.addEventListener('resize', () => {
       setIsMobile(window.innerWidth < 992);
     });
+    announce('Pagina caricata ' + faq.name);
   }, []);
 
   useEffect(() => {
-    announce(searchText);
+    announce(searchText, 'assertive');
   }, [searchText]);
-
-  // function countInitQuestions() {
-  //   let count = 0;
-  //   faq.questions.forEach((element) => {
-  //     count += element.accordions.length;
-  //   });
-  //   return count;
-  // }
-
-  // function countQuestions() {
-  //   let count = 0;
-  //   const questionList = document.querySelectorAll('#id-list-faq section');
-  //   if (questionList) {
-  //     questionList.forEach((element) => {
-  //       const list = element.querySelector('.collapse-div');
-  //       if (list) {
-  //         count += list.childElementCount;
-  //       }
-  //     });
-  //   }
-  //   console.log(count);
-  //   return count;
-  // }
 
   const handleChange = (event) => {
     setInputValue(event.target.value);
@@ -105,7 +83,7 @@ export const FaqPage = () => {
     if (!questions.length) {
       setSearchText('Nessun risultato');
     }
-    setSearchText('Risultati mostrati in pagina');
+    setSearchText('Il numero di FAQ presenti in pagina è stato aggiornato');
     // setquestNum(countQuestions());
   };
 

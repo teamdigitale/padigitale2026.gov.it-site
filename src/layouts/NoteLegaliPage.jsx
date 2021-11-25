@@ -1,5 +1,6 @@
 import React, { useContext, useEffect } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
+import { announce } from '@react-aria/live-announcer';
 import { Hero } from '../components/hero/Hero';
 import { TextChunk } from '../components/TextChunk';
 import { Breadcrumb } from '../components/Breadcrumb';
@@ -22,6 +23,10 @@ export const NoteLegaliPage = () => {
   const {
     textChunk: { html: textChunk },
   } = useStaticQuery(query);
+
+  useEffect(() => {
+    announce('Pagina caricata ' + seoTitle);
+  }, []);
 
   const [{}, dispatch] = useContext(GlobalStateContext);
   return (

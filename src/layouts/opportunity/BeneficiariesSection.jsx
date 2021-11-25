@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { createUseStyles } from 'react-jss';
 import Select from 'react-select';
+import { announce } from '@react-aria/live-announcer';
 import { Section } from 'design-react-kit';
 import { AccordionButtonFull } from '../../components/AccordionButtonFull';
 import { beneficiaries, selectBeneficiaries } from '../../../contents/opportunity-page/opportunity.yml';
@@ -101,6 +102,7 @@ export const BeneficiariesSection = (props) => {
   const [initialSelectValue, setInitialSelectValue] = useState(selectBeneficiaries[0]);
   const [isOpen, setIsOpen] = useState(false);
   const [filterIsAll, setFilterIsAll] = useState(true);
+  const [searchText, setSearchText] = useState('');
   const handleChange = (selectedOption) => setSelectValue(selectedOption);
   const handleOpen = () => setIsOpen(true);
   const handleClose = () => setIsOpen(false);
@@ -153,6 +155,17 @@ export const BeneficiariesSection = (props) => {
       }
     }
   }, [selectValue]);
+
+  useEffect(() => {
+    if (!accordions.length) {
+      setSearchText('Nessun risultato');
+    }
+    setSearchText('Il numero di misure presenti in pagina è stato aggiornato');
+  }, [accordions]);
+
+  useEffect(() => {
+    announce(searchText, 'assertive');
+  }, [searchText]);
 
   return (
     <>
