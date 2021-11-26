@@ -20,6 +20,7 @@
     "@fontsource/lora": "^4.5.0",
     "@fontsource/titillium-web": "^4.5.0",
     "@react-aria/live-announcer": "^3.0.1",
+    "@react-aria/ssr": "^3.1.0",
     "@react-aria/tabs": "^3.0.2",
     "bootstrap-italia": "^1.4.3",
     "classnames": "^2.3.1",
