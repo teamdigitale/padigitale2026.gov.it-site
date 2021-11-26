@@ -102,7 +102,6 @@ export const BeneficiariesSection = (props) => {
   const [initialSelectValue, setInitialSelectValue] = useState(selectBeneficiaries[0]);
   const [isOpen, setIsOpen] = useState(false);
   const [filterIsAll, setFilterIsAll] = useState(true);
-  const [searchText, setSearchText] = useState('');
   const handleChange = (selectedOption) => setSelectValue(selectedOption);
   const handleOpen = () => setIsOpen(true);
   const handleClose = () => setIsOpen(false);
@@ -153,19 +152,12 @@ export const BeneficiariesSection = (props) => {
         setFilterIsAll(true);
         setAccordions(beneficiaries);
       }
+      if (!accordions.length) {
+        announce('Nessun risultato');
+      }
+      announce('Il numero di misure presenti in pagina è stato aggiornato');
     }
-  }, [selectValue]);
-
-  useEffect(() => {
-    if (!accordions.length) {
-      setSearchText('Nessun risultato');
-    }
-    setSearchText('Il numero di misure presenti in pagina è stato aggiornato');
-  }, [accordions]);
-
-  useEffect(() => {
-    announce(searchText, 'assertive');
-  }, [searchText]);
+  }, [selectValue, accordions.length]);
 
   return (
     <>

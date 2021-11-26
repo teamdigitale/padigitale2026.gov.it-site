@@ -51,7 +51,6 @@ export const FaqPage = () => {
   const [isMobile, setIsMobile] = useState();
   // const [questNum, setquestNum] = useState(countInitQuestions());
   const [{}, dispatch] = useContext(GlobalStateContext);
-  const [searchText, setSearchText] = useState('');
 
   useEffect(() => {
     setIsMobile(window.innerWidth < 992);
@@ -60,10 +59,6 @@ export const FaqPage = () => {
     });
     announce('Pagina caricata ' + faq.name);
   }, []);
-
-  useEffect(() => {
-    announce(searchText, 'assertive');
-  }, [searchText]);
 
   const handleChange = (event) => {
     setInputValue(event.target.value);
@@ -80,10 +75,13 @@ export const FaqPage = () => {
         setQuestions(faq.questions);
       }
     }
-    if (!questions.length) {
-      setSearchText('Nessun risultato');
+    if (questions.length === 0) {
+      console.log(questions);
+      announce('Nessun risultato');
+    } else {
+      announce('Numero di FAQ in pagina aggiornato');
     }
-    setSearchText('Il numero di FAQ presenti in pagina è stato aggiornato');
+
     // setquestNum(countQuestions());
   };
 
