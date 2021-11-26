@@ -341,8 +341,6 @@ export const ModalMessage = () => {
 
     data['captcha'] = token;
 
-    console.log(data);
-
     const spinner = document.querySelector('.spinner');
     spinner.classList.remove('hidden');
 
