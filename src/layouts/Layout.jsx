@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import '@fontsource/titillium-web/latin.css';
 import '@fontsource/lora/latin.css';
-import { SSRProvider } from '@react-aria/ssr';
 import 'bootstrap-italia/dist/css/bootstrap-italia.min.css';
 import { createUseStyles } from 'react-jss';
 import { SEO } from '../components/SEO';
@@ -52,28 +51,26 @@ export const Layout = ({ children }) => {
 
   return (
     <>
-      <SSRProvider>
-        <SEO />
-        <a className="sr-only sr-only-focusable" href="#menu-principale-anchor">
-          Menù principale
-        </a>
-        <a className="sr-only sr-only-focusable" href="#content">
-          {goToMainContent}
-        </a>
-        <a className="sr-only sr-only-focusable" href="#footer">
-          {goToFooter}
-        </a>
-        <GlobalStateContextProvider>
-          <Header toggleModal={toggleModal} />
-          <main className="text-info text-break" tabIndex="-1" id="content">
-            {children}
-            <ModalUpdates initialState={modalIsOpen} handleToggle={toggleModal} />
-            <ModalMessage initialState={modalIsOpenMessage} handleToggle={toggleModalMessage} />
-            <Totop />
-          </main>
-          <Footer />
-        </GlobalStateContextProvider>
-      </SSRProvider>
+      <SEO />
+      <a className="sr-only sr-only-focusable" href="#menu-principale-anchor">
+        Menù principale
+      </a>
+      <a className="sr-only sr-only-focusable" href="#content">
+        {goToMainContent}
+      </a>
+      <a className="sr-only sr-only-focusable" href="#footer">
+        {goToFooter}
+      </a>
+      <GlobalStateContextProvider>
+        <Header toggleModal={toggleModal} />
+        <main className="text-info text-break" tabIndex="-1" id="content">
+          {children}
+          <ModalUpdates initialState={modalIsOpen} handleToggle={toggleModal} />
+          <ModalMessage initialState={modalIsOpenMessage} handleToggle={toggleModalMessage} />
+          <Totop />
+        </main>
+        <Footer />
+      </GlobalStateContextProvider>
     </>
   );
 };
