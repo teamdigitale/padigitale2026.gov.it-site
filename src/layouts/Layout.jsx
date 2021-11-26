@@ -9,6 +9,7 @@ import labels from '../../contents/labels.yml';
 import { ModalUpdates } from '../components/modal/ModalUpdates';
 import { GlobalStateContextProvider } from '../context/globalContext';
 import { ModalMessage } from '../components/modal/ModalMessage';
+import { Totop } from '../components/totop';
 import { Header } from './Header';
 import { Footer } from './Footer';
 
@@ -66,6 +67,7 @@ export const Layout = ({ children }) => {
           {children}
           <ModalUpdates initialState={modalIsOpen} handleToggle={toggleModal} />
           <ModalMessage initialState={modalIsOpenMessage} handleToggle={toggleModalMessage} />
+          <Totop />
         </main>
         <Footer />
       </GlobalStateContextProvider>

@@ -117,7 +117,7 @@ export const HeroImage = ({
               <Link
                 ariaLabel={secondButtonAriaLabel}
                 className="btn text-uppercase mx-4 ml-lg-0 my-3 my-md-0 btn-outline-primary"
-                to="/come-funziona"
+                to="/come-funziona#beneficiari"
                 onClick={() => dispatch({ type: 'SET:HOW_SECTION_ID', payload: { howId: 'beneficiari' } })}
               >
                 {secondButtonLabel}
