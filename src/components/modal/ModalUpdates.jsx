@@ -351,14 +351,14 @@ export const ModalUpdates = () => {
 
             titleElement.innerHTML = `${successLabels.icon} ${successLabels.title}`;
             descriptionElement.innerHTML = successLabels.description;
-            announce('Inviato con successo');
+            // announce('Inviato con successo');
             setTimeout(() => {
               notificationElement.classList.remove('show');
             }, 5000);
           } else {
             notificationElement.classList.add('show');
             notificationElement.classList.add('error');
-            announce("Errore nell'invio");
+            // announce("Errore nell'invio");
             if (data.message.includes('already exists')) {
               titleElement.innerHTML = `${errorLabels.icon} ${errorAddressLabel.title}`;
               descriptionElement.innerHTML = errorAddressLabel.description;
@@ -374,7 +374,7 @@ export const ModalUpdates = () => {
       })
       .then(() => {
         spinner.classList.add('hidden');
-        announce('Invio in corso');
+        // announce('Invio in corso');
       });
   };
 

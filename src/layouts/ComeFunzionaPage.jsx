@@ -33,7 +33,7 @@ export const ComeFunzionaPage = () => {
   }, [howId]);
 
   useEffect(() => {
-    announce('Pagina caricata ' + content.name);
+    // announce('Pagina caricata ' + content.name);
   }, []);
 
   return (

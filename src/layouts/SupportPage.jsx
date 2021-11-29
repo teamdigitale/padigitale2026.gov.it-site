@@ -16,7 +16,7 @@ const {
 
 export const SupportPage = () => {
   useEffect(() => {
-    announce('Pagina caricata ' + content.name);
+    // announce('Pagina caricata ' + content.name);
   }, []);
 
   return (

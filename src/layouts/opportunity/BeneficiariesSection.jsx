@@ -150,9 +150,9 @@ export const BeneficiariesSection = (props) => {
         setAccordions(beneficiaries);
       }
       if (!accordions.length) {
-        announce('Nessun risultato');
+        // announce('Nessun risultato');
       }
-      announce('Il numero di misure presenti in pagina è stato aggiornato');
+      // announce('Il numero di misure presenti in pagina è stato aggiornato');
     }
   }, [selectValue, accordions.length]);
 

@@ -24,7 +24,7 @@ export const NoteLegaliPage = () => {
     textChunk: { html: textChunk },
   } = useStaticQuery(query);
   useEffect(() => {
-    announce('Pagina caricata ' + seoTitle);
+    // announce('Pagina caricata ' + seoTitle);
   }, []);
   const [{}, dispatch] = useContext(GlobalStateContext);
   return (

@@ -19,7 +19,7 @@ const useStyles = createUseStyles({
 export const NotFoundPage = () => {
   const classes = useStyles();
   useEffect(() => {
-    announce('Pagina caricata ' + content.title);
+    // announce('Pagina caricata ' + content.title);
   }, []);
   return (
     <>

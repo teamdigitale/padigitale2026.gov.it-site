@@ -27,7 +27,7 @@ export const OpportunityPage = (props) => {
   const [{}, dispatch] = useContext(GlobalStateContext);
 
   useEffect(() => {
-    announce('Pagina caricata ' + opportunityContent.name);
+    // announce('Pagina caricata ' + opportunityContent.name);
   }, []);
 
   return (

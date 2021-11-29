@@ -28,7 +28,7 @@ export const PrivacyPolicyPage = () => {
 
   const [{}, dispatch] = useContext(GlobalStateContext);
   useEffect(() => {
-    announce('Pagina caricata Privacy - PA digitale 2026');
+    // announce('Pagina caricata Privacy - PA digitale 2026');
   }, []);
   return (
     <>

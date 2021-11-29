@@ -50,7 +50,7 @@ export const IndexPage = () => {
   const [{}, dispatch] = useContext(GlobalStateContext);
 
   useEffect(() => {
-    announce('Pagina caricata ' + name);
+    // announce('Pagina caricata ' + name);
   }, []);
   return (
     <>

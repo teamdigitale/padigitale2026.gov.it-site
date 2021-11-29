@@ -57,7 +57,7 @@ export const FaqPage = () => {
     window.addEventListener('resize', () => {
       setIsMobile(window.innerWidth < 992);
     });
-    announce('Pagina caricata ' + faq.name);
+    // announce('Pagina caricata ' + faq.name);
   }, []);
 
   function countInitQuestions() {
@@ -101,9 +101,9 @@ export const FaqPage = () => {
     setquestNum(countQuestions());
     if (questions.length === 0) {
       console.log(questions);
-      announce('Nessun risultato');
+      // announce('Nessun risultato');
     } else {
-      announce('Numero di FAQ in pagina aggiornato');
+      // announce('Numero di FAQ in pagina aggiornato');
     }
   };
 

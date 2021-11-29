@@ -89,7 +89,7 @@ export const ConfirmPage = ({ location }) => {
   }, [confirm]);
 
   useEffect(() => {
-    announce('Pagina caricata ' + seoTitle);
+    // announce('Pagina caricata ' + seoTitle);
   }, []);
 
   return (
