@@ -307,7 +307,7 @@ export const AccordionButtonFull = (props) => {
           >
             <Card>
               <CardBody>
-                <div className={classes.description}>{description}</div>
+                <div className={classes.description} dangerouslySetInnerHTML={{ __html: description }}></div>
                 <div className={classes.stalls}>
                   Platea potenziale: <span>{stalls}</span>
                 </div>
