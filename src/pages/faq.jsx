@@ -14,6 +14,5 @@ const Page = () => {
   return(
     <FaqPage />
   )
-  /*test*/
 };
 export default Page;
