@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
+/* import { graphql, useStaticQuery } from 'gatsby'; */
 import PropTypes from 'prop-types';
 import '@fontsource/titillium-web/latin.css';
 import '@fontsource/lora/latin.css';
@@ -46,7 +46,7 @@ const useStyles = createUseStyles({
   },
 });
 
-const query = graphql`
+/* const query = graphql`
   query {
     site {
       siteMetadata {
@@ -54,15 +54,16 @@ const query = graphql`
       }
     }
   }
-`;
+`; */
 
 export const Layout = ({ children }) => {
+  const captchaKey = "6LflElQdAAAAAFITc7x2dAiW0ky1P1Zzti6_IVK0";
   useStyles();
-  const {
+  /* const {
     site: {
       siteMetadata: { captchaKey },
     },
-  } = useStaticQuery(query);
+  } = useStaticQuery(query); */
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const toggleModal = () => {
     setModalIsOpen(!modalIsOpen);
