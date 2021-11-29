@@ -1,6 +1,6 @@
 import React, { useEffect, useContext } from 'react';
 import content from '../../contents/home-page/home.yml';
-import { announce } from '@react-aria/live-announcer';
+// import { announce } from '@react-aria/live-announcer';
 import { createUseStyles } from 'react-jss';
 import opportunityContent from '../../contents/opportunity-page/opportunity.yml';
 import { BeneficiariesSection } from './opportunity/BeneficiariesSection';

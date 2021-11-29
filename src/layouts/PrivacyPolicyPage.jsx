@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import { Hero } from '../components/hero/Hero';
 import { TextChunk } from '../components/TextChunk';
 import { Breadcrumb } from '../components/Breadcrumb';
-import { announce } from '@react-aria/live-announcer';
+// import { announce } from '@react-aria/live-announcer';
 import content from '../../contents/privacy-page/privacy.yml';
 import seo from '../../contents/seo.yml';
 import { SEO } from '../components/SEO';

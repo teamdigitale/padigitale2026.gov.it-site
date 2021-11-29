@@ -4,7 +4,7 @@ import { useForm, Controller } from 'react-hook-form';
 import { createUseStyles } from 'react-jss';
 import { Row, Col, Modal, ModalBody, ModalFooter, Button, Input, FormGroup, Label } from 'design-react-kit';
 import Select from 'react-select';
-import { announce } from '@react-aria/live-announcer';
+// import { announce } from '@react-aria/live-announcer';
 import { graphql, useStaticQuery } from 'gatsby';
 import content from '../../../contents/opportunity-page/opportunity.yml';
 import links from '../../../contents/links.yml';

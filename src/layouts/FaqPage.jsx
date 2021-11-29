@@ -11,7 +11,7 @@ import { SideNavigation } from './faq/SideNavigation';
 import { QuestionSection } from './faq/QuestionSection';
 import { SupportSection } from './faq/SupportSection';
 import { HeroSupport } from './support/Hero';
-import { announce } from '@react-aria/live-announcer';
+// import { announce } from '@react-aria/live-announcer';
 
 const { title: seoTitle, description: seoDescription } = seo.faqPage;
 
