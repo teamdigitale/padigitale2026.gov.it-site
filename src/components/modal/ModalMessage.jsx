@@ -17,7 +17,10 @@ import { graphql, useStaticQuery } from 'gatsby';
 import content from '../../../contents/opportunity-page/opportunity.yml';
 import notificationsLabel from '../../../contents/notifications.yml';
 import { GlobalStateContext } from '../../context/globalContext';
-import { loadReCaptcha, ReCaptcha } from 'react-recaptcha-v3';
+import {
+  GoogleReCaptchaProvider,
+  useGoogleReCaptcha,
+} from 'react-google-recaptcha-v3';
 
 const {
   success: successLabels,
@@ -234,31 +237,25 @@ const query = graphql`
   query {
     site {
       siteMetadata {
-        apiUrl,
-        captchaKey,
+        apiUrl
+        captchaKey
       }
     }
   }
 `;
 
 export const ModalMessage = () => {
+  const { executeRecaptcha } = useGoogleReCaptcha();
   const [{ modalStateMessage }, dispatch] = useContext(GlobalStateContext);
   const textareaMaxLength = 160;
   const [selectValue, setSelectValue] = useState(null);
   const [textareaState, setTextareaState] = useState('not-active');
   const [enteState, setEnteState] = useState('');
-  const [token, setToken] = useState('');
   const {
     site: {
-      siteMetadata: { apiUrl, captchaKey },
+      siteMetadata: { apiUrl },
     },
   } = useStaticQuery(query);
-
-  useEffect(() => {
-    loadReCaptcha(captchaKey);
-  }, []);
-
-  const reCaptchaRef = useRef(null);
 
   const setFocusStyleOnSelect = () => {
     const selectInputArr = document.querySelectorAll('.modal .select input');
@@ -326,6 +323,7 @@ export const ModalMessage = () => {
   useEffect(() => {}, [selectValue]);
 
   const onSubmit = async (data, event) => {
+    const token = await executeRecaptcha();
     Object.keys(data).map(function (key, index) {
       if (data[key] == undefined) {
         delete data[key];
@@ -361,7 +359,7 @@ export const ModalMessage = () => {
     };
     closeNotification.addEventListener('click', closeNotificationHandler);
 
-    fetch(`${apiUrl}/messages`, {
+    fetch(` https://padigitale2026-api-5lsw2j6et-dip-trasformazione-digitale.vercel.app/api/messages`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -387,7 +385,7 @@ export const ModalMessage = () => {
             notificationElement.classList.add('show');
             notificationElement.classList.add('error');
 
-            if (data.message.includes('already exists')) {
+            if (data.message.includes('already exists') || data.success == false) {
               titleElement.innerHTML = `${errorLabels.icon} ${errorAddressLabel.title}`;
               descriptionElement.innerHTML = errorAddressLabel.description;
             } else {
@@ -617,12 +615,6 @@ export const ModalMessage = () => {
             </Button>
             <img className={classes.spinner} src="/assets/spinner.gif"></img>
           </div>
-          <ReCaptcha
-            ref={(ref) => (reCaptchaRef.current = ref)}
-            sitekey={captchaKey}
-            action="action_name"
-            verifyCallback={(captcha) => setToken(captcha)}
-          />
         </ModalFooter>
       </Modal>
       <div className="container test-docs">
