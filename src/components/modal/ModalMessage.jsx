@@ -238,7 +238,6 @@ const query = graphql`
     site {
       siteMetadata {
         apiUrl
-        captchaKey
       }
     }
   }
