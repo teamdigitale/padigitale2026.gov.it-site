@@ -359,7 +359,7 @@ export const ModalMessage = () => {
     };
     closeNotification.addEventListener('click', closeNotificationHandler);
 
-    fetch(` https://padigitale2026-api-5lsw2j6et-dip-trasformazione-digitale.vercel.app/api/messages`, {
+    fetch(`${apiUrl}/messages`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
