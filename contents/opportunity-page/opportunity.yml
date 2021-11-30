@@ -55,15 +55,12 @@ beneficiaries:
       - label: Aziende Ospedaliere
         value: aziende-ospedaliere
     description: Garantire che i sistemi, i dataset e le applicazioni della PA siano ospitati in data center altamente affidabili e con elevati standard di qualità per sicurezza, prestazioni, scalabilità, interoperabilità europea ed efficienza energetica. La misura prevede la creazione di un'infrastruttura cloud sul territorio nazionale all'avanguardia denominata "Polo Strategico Nazionale”.
-    
     <strong>Vantaggi per la PA</strong>
     Grazie alla costituzione del Polo Strategico Nazionale, le amministrazioni possono:
-    <ul>
-      <li>beneficiare delle più alte garanzie di affidabilità, resilienza e indipendenza;</li>
-      <li>garantire il rispetto dei requisiti in materia di sicurezza previsti dalla norma e di abilitare la migrazione verso tipologie di servizi cloud IaaS e PaaS;</li>
-      <li>migliorare l’efficienza energetica delle infrastrutture e avere maggiore sostenibilità ambientale grazie alla dismissione dei data center meno efficienti;</li>
-      <li>avere significativi risparmi della spesa pubblica nella gestione dei data center che possono essere reinvestiti nello sviluppo di nuovi servizi</li>
-    </ul>
+    - beneficiare delle più alte garanzie di affidabilità, resilienza e indipendenza;
+    - garantire il rispetto dei requisiti in materia di sicurezza previsti dalla norma e di abilitare la migrazione verso tipologie di servizi cloud IaaS e PaaS;
+    - migliorare l’efficienza energetica delle infrastrutture e avere maggiore sostenibilità ambientale grazie alla dismissione dei data center meno efficienti;
+    - avere significativi risparmi della spesa pubblica nella gestione dei data center che possono essere reinvestiti nello sviluppo di nuovi servizi.
     stalls: '280 enti'
     accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
