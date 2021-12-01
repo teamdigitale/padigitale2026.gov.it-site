@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-// import { announce } from '@react-aria/live-announcer';
+import { announce } from '@react-aria/live-announcer';
 import content from '../../contents/support-page/support.yml';
 import { HeroSupport } from './support/Hero';
 import { FAQPreview } from './support/FAQPreview';
@@ -16,7 +16,7 @@ const {
 
 export const SupportPage = () => {
   useEffect(() => {
-    // announce('Pagina caricata ' + content.name);
+    announce('Pagina caricata ' + content.name);
   }, []);
 
   return (
