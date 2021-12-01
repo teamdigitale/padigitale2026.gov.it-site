@@ -246,7 +246,7 @@ const query = graphql`
 export const ModalMessage = () => {
   const { executeRecaptcha } = useGoogleReCaptcha();
   const [{ modalStateMessage }, dispatch] = useContext(GlobalStateContext);
-  const textareaMaxLength = 160;
+  const textareaMaxLength = 300;
   const [selectValue, setSelectValue] = useState(null);
   const [textareaState, setTextareaState] = useState('not-active');
   const [enteState, setEnteState] = useState('');
