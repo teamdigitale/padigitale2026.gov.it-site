@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'gatsby';
 import { createUseStyles } from 'react-jss';
-// import { announce } from '@react-aria/live-announcer';
+import { announce } from '@react-aria/live-announcer';
 import { Hero } from '../components/hero/Hero';
 import { SEO } from '../components/SEO';
 import content from '../../contents/not-found-page/not-found.yml';
@@ -19,7 +19,7 @@ const useStyles = createUseStyles({
 export const NotFoundPage = () => {
   const classes = useStyles();
   useEffect(() => {
-    // announce('Pagina caricata ' + content.title);
+    announce('Pagina caricata ' + content.title);
   }, []);
   return (
     <>

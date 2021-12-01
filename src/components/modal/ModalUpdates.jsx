@@ -4,7 +4,7 @@ import { useForm, Controller } from 'react-hook-form';
 import { createUseStyles } from 'react-jss';
 import { Row, Col, Modal, ModalBody, ModalFooter, Button, Input, FormGroup, Label } from 'design-react-kit';
 import Select from 'react-select';
-// import { announce } from '@react-aria/live-announcer';
+import { announce } from '@react-aria/live-announcer';
 import { graphql, useStaticQuery } from 'gatsby';
 import content from '../../../contents/opportunity-page/opportunity.yml';
 import links from '../../../contents/links.yml';
@@ -351,14 +351,14 @@ export const ModalUpdates = () => {
 
             titleElement.innerHTML = `${successLabels.icon} ${successLabels.title}`;
             descriptionElement.innerHTML = successLabels.description;
-            // announce('Inviato con successo');
+            announce('Inviato con successo');
             setTimeout(() => {
               notificationElement.classList.remove('show');
             }, 5000);
           } else {
             notificationElement.classList.add('show');
             notificationElement.classList.add('error');
-            // announce("Errore nell'invio");
+            announce("Errore nell'invio");
             if (data.message.includes('already exists')) {
               titleElement.innerHTML = `${errorLabels.icon} ${errorAddressLabel.title}`;
               descriptionElement.innerHTML = errorAddressLabel.description;
@@ -374,7 +374,7 @@ export const ModalUpdates = () => {
       })
       .then(() => {
         spinner.classList.add('hidden');
-        // announce('Invio in corso');
+        announce('Invio in corso');
       });
   };
 

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { createUseStyles } from 'react-jss';
 import Select from 'react-select';
-// import { announce } from '@react-aria/live-announcer';
+import { announce } from '@react-aria/live-announcer';
 import { Section } from 'design-react-kit';
 import { AccordionButtonFull } from '../../components/AccordionButtonFull';
 import { beneficiaries, selectBeneficiaries } from '../../../contents/opportunity-page/opportunity.yml';
@@ -150,9 +150,9 @@ export const BeneficiariesSection = (props) => {
         setAccordions(beneficiaries);
       }
       if (!accordions.length) {
-        // announce('Nessun risultato');
+        announce('Nessun risultato');
       }
-      // announce('Il numero di misure presenti in pagina è stato aggiornato');
+      announce('Il numero di misure presenti in pagina è stato aggiornato');
     }
   }, [selectValue, accordions.length]);
 

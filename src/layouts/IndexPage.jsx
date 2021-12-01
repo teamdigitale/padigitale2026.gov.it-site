@@ -22,7 +22,7 @@ import labels from '../../contents/labels.yml';
 import { SupportSection } from './faq/SupportSection';
 import { OpportunitySection } from './home/OpportunitySection';
 import { GlobalStateContext } from '../context/globalContext';
-// import { announce } from '@react-aria/live-announcer';
+import { announce } from '@react-aria/live-announcer';
 
 const { title: seoTitle, description: seoDescription } = seo.homePage;
 const { ariaLabel, headerTitle, headerSubtitle } = labels;
@@ -50,7 +50,7 @@ export const IndexPage = () => {
   const [{}, dispatch] = useContext(GlobalStateContext);
 
   useEffect(() => {
-    // announce('Pagina caricata ' + name);
+    announce('Pagina caricata ' + name);
   }, []);
   return (
     <>
