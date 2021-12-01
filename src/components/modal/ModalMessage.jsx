@@ -384,7 +384,7 @@ export const ModalMessage = () => {
             notificationElement.classList.add('show');
             notificationElement.classList.add('error');
 
-            if (data.success == false) {
+            if (data.success === false) {
               titleElement.innerHTML = `${errorLabels.icon} ${errorAddressLabel.title}`;
               descriptionElement.innerHTML = errorAddressLabel.description;
             } else {
