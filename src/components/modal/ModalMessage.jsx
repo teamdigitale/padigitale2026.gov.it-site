@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect, useContext, useRef } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { createUseStyles } from 'react-jss';
 import {
@@ -15,9 +15,12 @@ import {
 import Select from 'react-select';
 import { graphql, useStaticQuery } from 'gatsby';
 import content from '../../../contents/opportunity-page/opportunity.yml';
-import links from '../../../contents/links.yml';
 import notificationsLabel from '../../../contents/notifications.yml';
 import { GlobalStateContext } from '../../context/globalContext';
+import {
+  GoogleReCaptchaProvider,
+  useGoogleReCaptcha,
+} from 'react-google-recaptcha-v3';
 
 const {
   success: successLabels,
@@ -241,6 +244,7 @@ const query = graphql`
 `;
 
 export const ModalMessage = () => {
+  const { executeRecaptcha } = useGoogleReCaptcha();
   const [{ modalStateMessage }, dispatch] = useContext(GlobalStateContext);
   const textareaMaxLength = 160;
   const [selectValue, setSelectValue] = useState(null);
@@ -293,11 +297,8 @@ export const ModalMessage = () => {
   };
 
   const {
-    register,
     control,
     handleSubmit,
-    watch,
-    trigger,
     formState: { errors },
   } = useForm();
 
@@ -321,6 +322,7 @@ export const ModalMessage = () => {
   useEffect(() => {}, [selectValue]);
 
   const onSubmit = async (data, event) => {
+    const token = await executeRecaptcha();
     Object.keys(data).map(function (key, index) {
       if (data[key] == undefined) {
         delete data[key];
@@ -333,6 +335,8 @@ export const ModalMessage = () => {
         data[key] = data[key]?.value;
       }
     });
+
+    data['captcha'] = token;
 
     const spinner = document.querySelector('.spinner');
     spinner.classList.remove('hidden');
@@ -354,7 +358,7 @@ export const ModalMessage = () => {
     };
     closeNotification.addEventListener('click', closeNotificationHandler);
 
-    fetch(`${apiUrl}/users`, {
+    fetch(`${apiUrl}/messages`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -380,7 +384,7 @@ export const ModalMessage = () => {
             notificationElement.classList.add('show');
             notificationElement.classList.add('error');
 
-            if (data.message.includes('already exists')) {
+            if (data.success === false) {
               titleElement.innerHTML = `${errorLabels.icon} ${errorAddressLabel.title}`;
               descriptionElement.innerHTML = errorAddressLabel.description;
             } else {
@@ -404,25 +408,15 @@ export const ModalMessage = () => {
 
   const {
     selectRepresent,
-    selectInQuanto,
     selectMessage,
     modalMessageTitle,
-    modalMessageSubtitle,
-    updatesLabel,
-    updatesInfo,
-    mandatoryAdvise,
     requiredLabel,
     emailValidationLabel,
     emailLabel,
     representLabel,
     selectPlaceholder,
-    enteValidationLabel,
-    enteTypeLabel,
-    enteNameLabel,
-    inQuantoLabel,
     directContactLabel,
     directContactInfo,
-    addMessageLabel,
     messageSelectLabel,
     messageLabel,
     sendButtonLabel,
@@ -513,7 +507,10 @@ export const ModalMessage = () => {
                           aria-required="true"
                           {...field}
                         />
-                        <span className={classes.errorLabel} id="error-address2">
+                        <span
+                          className={classes.errorLabel}
+                          id="error-address2"
+                        >
                           {errors.address && errors.address.message}
                         </span>
                       </>
@@ -612,7 +609,7 @@ export const ModalMessage = () => {
             privacy
           </p>
           <div className="d-flex">
-            <Button color="primary" type="submit" form="updates-form">
+            <Button color="primary" type="submit" form="message-form">
               {sendButtonLabel}
             </Button>
             <img className={classes.spinner} src="/assets/spinner.gif"></img>
