@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { createUseStyles } from 'react-jss';
 import Select from 'react-select';
+import { announce } from '@react-aria/live-announcer';
 import { Section } from 'design-react-kit';
 import { AccordionButtonFull } from '../../components/AccordionButtonFull';
 import { beneficiaries, selectBeneficiaries } from '../../../contents/opportunity-page/opportunity.yml';
@@ -112,9 +113,9 @@ export const BeneficiariesSection = (props) => {
 
   useEffect(() => {
     if (sectionId) {
-      document.querySelector('#' + sectionId).scrollIntoView({
-        behavior: 'smooth',
-      });
+      const item = document.querySelector('#' + sectionId);
+      item.setAttribute('tabindex', '-1');
+      item.focus();
     }
   }, [sectionId]);
 
@@ -122,9 +123,12 @@ export const BeneficiariesSection = (props) => {
     if (props.externalFilter) {
       setInitialSelectValue(props.externalFilter);
       setSelectValue(props.externalFilter);
-      document.querySelector('#filter-beneficiaries').scrollIntoView({
+      const item = document.querySelector('#filter-beneficiaries');
+      item.scrollIntoView(true, {
         behavior: 'smooth',
       });
+      item.querySelector('[role="list"]').firstChild.setAttribute('tabindex', '-1');
+      item.querySelector('[role="list"]').firstChild.focus();
     }
   }, [props.externalFilter]);
 
@@ -145,8 +149,12 @@ export const BeneficiariesSection = (props) => {
         setFilterIsAll(true);
         setAccordions(beneficiaries);
       }
+      if (!accordions.length) {
+        announce('Nessun risultato');
+      }
+      announce('Il numero di misure presenti in pagina è stato aggiornato');
     }
-  }, [selectValue]);
+  }, [selectValue, accordions.length]);
 
   return (
     <>
@@ -156,7 +164,12 @@ export const BeneficiariesSection = (props) => {
         </h3>
         <div className="container mt-5 px-3" id="filter-beneficiaries">
           <div className={classes.selectWrapper}>
-            <label htmlFor="beneficiaries">Beneficiari</label>
+            <label htmlFor="beneficiaries">
+              Beneficiari
+              <span id="select-desk" className="sr-only">
+                Ad ogni selezione il numero di beneficari presenti in pagina verrà aggiornato.
+              </span>
+            </label>
             <Select
               styles={customStyles}
               isSearchable={false}
@@ -171,6 +184,9 @@ export const BeneficiariesSection = (props) => {
               aria-label="Scegli una opzione"
             />
           </div>
+          <span className="sr-only" aria-live="assertive">
+            Elementi in pagina: {accordions.length}
+          </span>
           <div role="list">
             {accordions.map((item, i) => (
               <React.Fragment key={item.title}>

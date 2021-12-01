@@ -6,11 +6,12 @@ import faq from '../../contents/faq-page/faq.yml';
 import { SEO } from '../components/SEO';
 import seo from '../../contents/seo.yml';
 import { ModalUpdates } from '../components/modal/ModalUpdates';
+import { GlobalStateContext } from '../context/globalContext';
 import { SideNavigation } from './faq/SideNavigation';
 import { QuestionSection } from './faq/QuestionSection';
 import { SupportSection } from './faq/SupportSection';
 import { HeroSupport } from './support/Hero';
-import { GlobalStateContext } from '../context/globalContext';
+import { announce } from '@react-aria/live-announcer';
 
 const { title: seoTitle, description: seoDescription } = seo.faqPage;
 
@@ -20,16 +21,35 @@ const useStyles = createUseStyles({
     color: '#33485C',
     margin: '0.833rem 0',
   },
+  inputContainer: {
+    position: 'relative',
+    '& .reset-btn': {
+      background: 'transparent',
+      border: '0',
+      position: 'absolute',
+      top: '15px',
+      right: '10px',
+      backgroundImage: 'url("../assets/close-black.svg")',
+      backgroundRepeat: 'no-repeat',
+      width: '1.1rem',
+      height: '1.1rem'
+    }
+  },
   inputWrap: {
     backgroundImage: 'url("../assets/icon-search.svg")',
+    '&:focus': {
+      outline: '2px solid #ff9900',
+    },
   },
 });
+
 export const FaqPage = () => {
   const classes = useStyles();
   const [inputValue, setInputValue] = useState('');
   const [filterId, setFilterId] = useState('all');
   const [questions, setQuestions] = useState(faq.questions);
   const [isMobile, setIsMobile] = useState();
+  const [questNum, setquestNum] = useState(countInitQuestions());
   const [{}, dispatch] = useContext(GlobalStateContext);
 
   useEffect(() => {
@@ -37,7 +57,31 @@ export const FaqPage = () => {
     window.addEventListener('resize', () => {
       setIsMobile(window.innerWidth < 992);
     });
+    announce('Pagina caricata ' + faq.name);
   }, []);
+
+  function countInitQuestions() {
+    let count = 0;
+    faq.questions.forEach((element) => {
+      count += element.accordions.length;
+    });
+    return count;
+  }
+
+  function countQuestions() {
+    let count = 0;
+    const questionList = document.querySelectorAll('#id-list-faq section');
+    if (questionList) {
+      questionList.forEach((element) => {
+        const list = element.querySelector('.collapse-div');
+        if (list) {
+          count += list.childElementCount;
+        }
+      });
+    }
+    console.log(count);
+    return count;
+  }
 
   const handleChange = (event) => {
     setInputValue(event.target.value);
@@ -49,22 +93,24 @@ export const FaqPage = () => {
       }
     } else {
       if (isMobile) {
-        filterId !== 'all'
-          ? setQuestions(getQuestionsMobile(faq.questions))
-          : setQuestions(faq.questions);
+        filterId !== 'all' ? setQuestions(getQuestionsMobile(faq.questions)) : setQuestions(faq.questions);
       } else {
         setQuestions(faq.questions);
       }
+    }
+    setquestNum(countQuestions());
+    if (questions.length === 0) {
+      console.log(questions);
+      announce('Nessun risultato');
+    } else {
+      announce('Numero di FAQ in pagina aggiornato');
     }
   };
 
   function getAccordionsFiltered(question, input) {
     const regexp = new RegExp(input, 'i');
     return question.accordions.filter(
-      (accordion) =>
-        regexp.test(accordion.title) ||
-        regexp.test(accordion.content) ||
-        regexp.test(accordion.linkLabel)
+      (accordion) => regexp.test(accordion.title) || regexp.test(accordion.content) || regexp.test(accordion.linkLabel)
     );
   }
 
@@ -98,16 +144,9 @@ export const FaqPage = () => {
   useEffect(() => {
     if (filterId) {
       if (filterId === 'all') {
-        inputValue
-          ? setQuestions(getNewQuestions(inputValue))
-          : setQuestions(faq.questions);
+        inputValue ? setQuestions(getNewQuestions(inputValue)) : setQuestions(faq.questions);
       } else {
-        if (
-          !getAccordionsFiltered(
-            getQuestionsMobile(faq.questions)[0],
-            inputValue
-          ).length
-        ) {
+        if (!getAccordionsFiltered(getQuestionsMobile(faq.questions)[0], inputValue).length) {
           setQuestions(filterAccordions);
         } else {
           setQuestions(getQuestionsMobile(faq.questions));
@@ -115,6 +154,11 @@ export const FaqPage = () => {
       }
     }
   }, [filterId]);
+
+  const resetInput = () => {
+    setInputValue('')
+    setQuestions(faq.questions)
+  }
 
   return (
     <>
@@ -130,25 +174,43 @@ export const FaqPage = () => {
           </h3>
           <Row>
             <Col lg={9} className="offset-lg-3 px-lg-3">
-              <Input
-                className={classes.inputWrap}
-                type="text"
-                label="Cerca nelle domande frequenti"
-                id="faq-search"
-                value={inputValue}
-                onChange={handleChange}
-              />
+              <div role="search" className={classes.inputContainer} aria-label="Nelle domande frequenti">
+                <div id="searchbox-desk" className="sr-only">
+                  Ad ogni digitazione il numero di domande frequenti presenti in pagina verrà aggiornato.
+                </div>
+                <Input
+                  className={inputValue.length > 0 ? '' : classes.inputWrap}
+                  type="text"
+                  label="Cerca nelle domande frequenti"
+                  id="faq-search"
+                  role="searchbox"
+                  aria-describedby="searchbox-desk"
+                  aria-controls="id-list-faq"
+                  value={inputValue}
+                  onChange={handleChange}
+                />
+                {inputValue.length > 0 && 
+                <button className="reset-btn" onClick={resetInput}>
+                  <span className="sr-only">Il campo svuota l'input</span>
+                </button>}
+              </div>
             </Col>
           </Row>
           <Row>
             <Col lg={3}>
-              <SideNavigation
-                getFilter={setFilterId}
-                activeList={questions}
-                searchValue={inputValue}
-              />
+              <SideNavigation getFilter={setFilterId} activeList={questions} searchValue={inputValue} />
             </Col>
-            <Col lg={9} className="px-lg-3">
+            <Col
+              lg={9}
+              className="px-lg-3"
+              id="id-list-faq"
+              role="region"
+              aria-label="Lista domande frequenti"
+              aria-describedby="numberfaq"
+            >
+              <span className="sr-only" id="numberfaq" aria-live="assertive">
+                Numero faq filtrate {questNum}
+              </span>
               {questions.map((question) => (
                 <QuestionSection
                   key={question.title}
@@ -159,9 +221,7 @@ export const FaqPage = () => {
                   }}
                 />
               ))}
-              {!questions.length && (
-                <p className={classes.noResults}>{faq.noResults}</p>
-              )}
+              {!questions.length && <p className={classes.noResults} role="alert">{faq.noResults}</p>}
             </Col>
           </Row>
         </Container>
@@ -170,7 +230,7 @@ export const FaqPage = () => {
         supportList={faq.support.cards}
         title={faq.support.title}
         handleToggle={() => {
-          dispatch({ type: 'SET:TOGGLE_MODAL' });
+          dispatch({ type: 'SET:TOGGLE_MODAL_MESSAGE' });
         }}
       />
     </>

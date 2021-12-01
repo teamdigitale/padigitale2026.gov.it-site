@@ -145,8 +145,8 @@ const useStyle = createUseStyles({
       '&:focus': {
         outline: '2px solid #ff9900',
         boxShadow: 'none',
-      }
-    }
+      },
+    },
   },
   linkListWrapperCustom: {
     '& ul li:not(:first-child)': {
@@ -222,7 +222,13 @@ const SlimHeader = () => {
   return (
     <HeaderReactKit type="slim" theme="light">
       <HeaderContent>
-        <HeaderBrand href="https://innovazione.gov.it/" target="_blank" className={classes.headerLink} rel="noreferrer">
+        <HeaderBrand
+          href="https://innovazione.gov.it/"
+          target="_blank"
+          className={classes.headerLink}
+          rel="noreferrer"
+          aria-label={externalLinks.dipartimento.ariaLabel}
+        >
           {externalLinks.dipartimento.label}
         </HeaderBrand>
         <HeaderLinkZone aria-label="Siti esterni correlati">
@@ -274,7 +280,7 @@ const SlimHeader = () => {
           href={externalLinks.italiaDigitale.linkTo}
           target="_blank"
         >
-          <img className="d-none d-lg-block" src="/assets/eu-flag.svg" alt={externalLinks.eu.ariaLabel}></img>
+          <img className="d-none d-lg-block" src="/assets/eu-flag.svg" alt={externalLinks.eu.label}></img>
         </ExternalLink>
       </HeaderContent>
     </HeaderReactKit>
@@ -290,12 +296,8 @@ const CenterHeader = () => {
           <Link to="/">
             <div className="it-brand-text pr-0">
               <div className="d-md-flex align-items-center">
-                <img
-                  className="icon repubblica-logo"
-                  src="/assets/repubblica-logo-blue.svg"
-                  alt="Logo Repubblica Italiana"
-                />
-                <img className="icon site-logo" src="/assets/site-logo.svg" alt="Logo PA digitale 2026" />
+                <img className="icon repubblica-logo" src="/assets/repubblica-logo-blue.svg" alt="" />
+                <img className="icon site-logo" src="/assets/site-logo.svg" alt="" />
                 <div className="d-none d-lg-inline-block">
                   <h1 className="h3 mb-0">{headerTitle}</h1>
                   <div className={classes.subtitle}>{headerSubtitle}</div>
@@ -310,12 +312,12 @@ const CenterHeader = () => {
 };
 
 const NavHeader = () => {
-  const [{activeItem}, dispatch] = useContext(GlobalStateContext);
+  const [{ activeItem }, dispatch] = useContext(GlobalStateContext);
   const [isOpen, setIsOpen] = useState(false);
   const closeMenu = () => setIsOpen(false);
   const toogleMenu = () => setIsOpen(!isOpen);
   const classes = useStyle();
-  
+
   return (
     <HeaderReactKit type="navbar" theme="light" className={classes.noShadow}>
       <HeaderContent
@@ -324,6 +326,8 @@ const NavHeader = () => {
         /* aria-label={ariaLabel.menu} */
         aria-labelledby="menu-principale"
         className="px-2"
+        id="menu-principale-anchor"
+        tabIndex="-1"
       >
         <h2 id="menu-principale" className="sr-only">
           Menu principale
@@ -342,10 +346,8 @@ const NavHeader = () => {
           <div className={classes.menuWrapper}>
             <Nav navbar className={classes.navbarNav}>
               <li className={classes.offCanvasWrapper}>
-                <a href="/" tabIndex="-1">
-                  <img className="icon" src="/assets/site-logo.svg" alt="Vai alla pagina principale" />
-                </a>
                 <a href="/" className={classes.offCanvasTitle}>
+                  <img className="icon" src="/assets/site-logo.svg" alt="Vai alla pagina principale" />
                   {headerTitle}
                 </a>
               </li>
@@ -378,6 +380,7 @@ const NavHeader = () => {
               </NavItem>
               <NavItem className={classes.updatesBtn} active>
                 <Button
+                  aria-label="Ricevi aggiornamenti (Apri modale e compila il modulo)"
                   className="nav-link modal-button"
                   onClick={() => {
                     closeMenu();

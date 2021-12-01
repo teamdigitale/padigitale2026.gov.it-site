@@ -1,17 +1,32 @@
-/* eslint-disable max-lines-per-function */
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect, useContext, useRef } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { createUseStyles } from 'react-jss';
-import { Row, Col, Modal, ModalBody, ModalFooter, Button, Input, FormGroup, Label } from 'design-react-kit';
+import {
+  Row,
+  Col,
+  Modal,
+  ModalBody,
+  ModalFooter,
+  Button,
+  Input,
+  FormGroup,
+  Label,
+} from 'design-react-kit';
 import Select from 'react-select';
-import { announce } from '@react-aria/live-announcer';
 import { graphql, useStaticQuery } from 'gatsby';
 import content from '../../../contents/opportunity-page/opportunity.yml';
-import links from '../../../contents/links.yml';
 import notificationsLabel from '../../../contents/notifications.yml';
 import { GlobalStateContext } from '../../context/globalContext';
+import {
+  GoogleReCaptchaProvider,
+  useGoogleReCaptcha,
+} from 'react-google-recaptcha-v3';
 
-const { success: successLabels, error: errorLabels, errorAddress: errorAddressLabel } = notificationsLabel;
+const {
+  success: successLabels,
+  error: errorLabels,
+  errorAddress: errorAddressLabel,
+} = notificationsLabel;
 
 const useStyles = createUseStyles({
   modalUpdatesContainer: {
@@ -169,10 +184,10 @@ const useStyles = createUseStyles({
     color: '#33485C',
     fontWeight: '600',
   },
-  enteContainer: {
-    '&.hidden': {
-      display: 'none',
-    },
+  maxLengthLabel: {
+    fontSize: '0.778rem',
+    color: '#808080',
+    marginLeft: '0.444rem',
   },
   errorLabel: {
     fontSize: '0.778rem',
@@ -228,10 +243,10 @@ const query = graphql`
   }
 `;
 
-// eslint-disable-next-line sonarjs/cognitive-complexity
-export const ModalUpdates = () => {
-  const [{ modalState }, dispatch] = useContext(GlobalStateContext);
-  const textareaMaxLength = 160;
+export const ModalMessage = () => {
+  const { executeRecaptcha } = useGoogleReCaptcha();
+  const [{ modalStateMessage }, dispatch] = useContext(GlobalStateContext);
+  const textareaMaxLength = 300;
   const [selectValue, setSelectValue] = useState(null);
   const [textareaState, setTextareaState] = useState('not-active');
   const [enteState, setEnteState] = useState('');
@@ -258,12 +273,14 @@ export const ModalUpdates = () => {
   };
 
   const setListenersToSelectOptions = () => {
-    const representSelectOptions = document.querySelector('#represent-select');
+    const representSelectOptions = document.querySelector('#represent-select2');
     const config = { childList: true, subtree: true };
     const setObserver = (mutationsList) => {
       for (const mutation of mutationsList) {
         if (mutation.type === 'childList') {
-          let value = representSelectOptions.querySelector('div[class*="singleValue"]');
+          let value = representSelectOptions.querySelector(
+            'div[class*="singleValue"]'
+          );
           value ? (value = value.innerHTML) : (value = '');
           let valueSelected = selectRepresent.find((valueObj) => {
             if (value == valueObj.label) {
@@ -280,11 +297,8 @@ export const ModalUpdates = () => {
   };
 
   const {
-    register,
     control,
     handleSubmit,
-    watch,
-    trigger,
     formState: { errors },
   } = useForm();
 
@@ -308,14 +322,21 @@ export const ModalUpdates = () => {
   useEffect(() => {}, [selectValue]);
 
   const onSubmit = async (data, event) => {
+    const token = await executeRecaptcha();
     Object.keys(data).map(function (key, index) {
       if (data[key] == undefined) {
         delete data[key];
       }
-      if (key == 'enteSelect' || key == 'representative' || key == 'messageSelect') {
+      if (
+        key == 'enteSelect' ||
+        key == 'representative' ||
+        key == 'messageSelect'
+      ) {
         data[key] = data[key]?.value;
       }
     });
+
+    data['captcha'] = token;
 
     const spinner = document.querySelector('.spinner');
     spinner.classList.remove('hidden');
@@ -323,9 +344,13 @@ export const ModalUpdates = () => {
     const notificationElement = document.querySelector('.notification');
     const titleElement = notificationElement.querySelector('h5');
     const descriptionElement = notificationElement.querySelector('p');
-    const modalCloseBtn = event.target.closest('.modal-content').querySelector('.modal-header .btn');
+    const modalCloseBtn = event.target
+      .closest('.modal-content')
+      .querySelector('.modal-header .btn');
 
-    const closeNotification = notificationElement.querySelector('.notification-close');
+    const closeNotification = notificationElement.querySelector(
+      '.notification-close'
+    );
 
     const closeNotificationHandler = (event) => {
       event.target.closest('.notification').classList.remove('show');
@@ -333,7 +358,7 @@ export const ModalUpdates = () => {
     };
     closeNotification.addEventListener('click', closeNotificationHandler);
 
-    fetch(`${apiUrl}/users`, {
+    fetch(`${apiUrl}/messages`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -351,15 +376,15 @@ export const ModalUpdates = () => {
 
             titleElement.innerHTML = `${successLabels.icon} ${successLabels.title}`;
             descriptionElement.innerHTML = successLabels.description;
-            announce('Inviato con successo');
+
             setTimeout(() => {
               notificationElement.classList.remove('show');
             }, 5000);
           } else {
             notificationElement.classList.add('show');
             notificationElement.classList.add('error');
-            announce("Errore nell'invio");
-            if (data.message.includes('already exists')) {
+
+            if (data.success === false) {
               titleElement.innerHTML = `${errorLabels.icon} ${errorAddressLabel.title}`;
               descriptionElement.innerHTML = errorAddressLabel.description;
             } else {
@@ -374,7 +399,6 @@ export const ModalUpdates = () => {
       })
       .then(() => {
         spinner.classList.add('hidden');
-        announce('Invio in corso');
       });
   };
 
@@ -384,24 +408,15 @@ export const ModalUpdates = () => {
 
   const {
     selectRepresent,
-    selectInQuanto,
     selectMessage,
-    modalUpdatesTitle,
-    updatesLabel,
-    updatesInfo,
-    mandatoryAdvise,
+    modalMessageTitle,
     requiredLabel,
     emailValidationLabel,
     emailLabel,
     representLabel,
     selectPlaceholder,
-    enteValidationLabel,
-    enteTypeLabel,
-    enteNameLabel,
-    inQuantoLabel,
     directContactLabel,
     directContactInfo,
-    addMessageLabel,
     messageSelectLabel,
     messageLabel,
     sendButtonLabel,
@@ -410,56 +425,63 @@ export const ModalUpdates = () => {
   return (
     <>
       <Modal
-        isOpen={modalState}
+        isOpen={modalStateMessage}
         toggle={() => {
-          dispatch({ type: 'SET:TOGGLE_MODAL' });
+          dispatch({ type: 'SET:TOGGLE_MODAL_MESSAGE' });
         }}
-        labelledBy="updates-modal"
+        labelledBy="message-modal"
         className={classes.modalUpdatesContainer}
         onOpened={() => {
           setFocusStyleOnSelect();
           setListenersToSelectOptions();
         }}
       >
-        <div id="updates-modal" className="modal-header">
-          <h5 className="modal-title">{modalUpdatesTitle}</h5>
+        <div id="message-modal" className="modal-header">
+          <h5 className="modal-title">{modalMessageTitle}</h5>
           <Button
             type="button"
             className={classes.close}
-            aria-label="Chiudi"
+            aria-label="Close"
             onClick={() => {
-              dispatch({ type: 'SET:TOGGLE_MODAL' });
+              dispatch({ type: 'SET:TOGGLE_MODAL_MESSAGE' });
             }}
           >
             <span>Chiudi</span>
-            <img src="/assets/icon-close.svg" alt="chiudi modale" aria-hidden="true" />
+            <img
+              src="/assets/icon-close.svg"
+              alt="chiudi modale"
+              aria-hidden="true"
+            />
           </Button>
         </div>
         <ModalBody className={classes.modalBody}>
-          <form onSubmit={handleSubmit(onSubmit, onError)} id="updates-form" aria-describedby="mandatory-label">
+          <form
+            onSubmit={handleSubmit(onSubmit, onError)}
+            id="message-form"
+            aria-describedby="mandatory-label"
+          >
             <fieldset>
               <legend>
                 <Row>
                   <Col xs={12}>
-                    <img src="/assets/icon-updates.svg" alt="" />
+                    <img src="/assets/icon-chat.svg" alt="" />
                   </Col>
                 </Row>
                 <Row className="mt-3">
                   <Col xs={12}>
-                    <span className={classes.modalLabel}>{updatesLabel}</span>
+                    <span className={classes.modalLabel}>
+                      {directContactLabel}
+                    </span>
                   </Col>
                 </Row>
                 <Row className="mt-2">
                   <Col xs={12}>
-                    <p dangerouslySetInnerHTML={{ __html: updatesInfo }}></p>
+                    <p
+                      dangerouslySetInnerHTML={{ __html: directContactInfo }}
+                    ></p>
                   </Col>
                 </Row>
               </legend>
-              <Row className="mt-5">
-                <Col xs={12}>
-                  <p id="mandatory-label" dangerouslySetInnerHTML={{ __html: mandatoryAdvise }}></p>
-                </Col>
-              </Row>
               <Row className="mt-5">
                 <Col xs={12}>
                   <Controller
@@ -481,12 +503,14 @@ export const ModalUpdates = () => {
                           aria-describedby="mandatory-label"
                           aria-labelledby={errors.address && 'error-address'}
                           type="text"
-                          id="address"
+                          id="address2"
                           aria-required="true"
-                          autocomplete="email"
                           {...field}
                         />
-                        <span className={classes.errorLabel} id="error-address">
+                        <span
+                          className={classes.errorLabel}
+                          id="error-address2"
+                        >
                           {errors.address && errors.address.message}
                         </span>
                       </>
@@ -496,9 +520,7 @@ export const ModalUpdates = () => {
               </Row>
               <Row className="mt-5">
                 <Col xs={12} lg={6}>
-                  <label htmlFor="represent-select-input" className={classes.selectLabel}>
-                    {representLabel}
-                  </label>
+                  <span className={classes.selectLabel}>{representLabel}</span>
                   <Controller
                     control={control}
                     name="representative"
@@ -506,155 +528,104 @@ export const ModalUpdates = () => {
                     render={({ field: { onChange, value } }) => (
                       <Select
                         value={value}
-                        id="represent-select"
-                        inputId="represent-select-input"
+                        id="represent-select2"
                         onChange={onChange}
                         options={selectRepresent}
                         placeholder={selectPlaceholder}
                         aria-label={selectPlaceholder}
                         aria-describedby="mandatory-label"
                         aria-invalid={errors.representative && 'true'}
-                        aria-labelledby={errors.representative && 'error-represent'}
-                        className={`select ${errors.representative && ' is-invalid'}`}
+                        aria-labelledby={
+                          errors.representative && 'error-represent'
+                        }
+                        className={`select ${
+                          errors.representative && ' is-invalid'
+                        }`}
                       />
                     )}
                   />
                 </Col>
               </Row>
-              <span className={classes.errorLabel} id="error-represent">
-                {errors.represent ? requiredLabel : ''}
-              </span>
-              <div className={`${classes.enteContainer} ${enteState == 'other' ? '' : 'hidden'}`}>
-                <Row className="mt-5">
-                  <Col xs={12}>
-                    <Controller
-                      name="enteType"
-                      control={control}
-                      rules={{
-                        required: {
-                          value: enteState == 'other' ? true : false,
-                          message: requiredLabel,
-                        },
-                        pattern: {
-                          value: /^[a-zA-Z ]*$/i,
-                          message: enteValidationLabel,
-                        },
-                      }}
-                      render={({ field }) => (
-                        <>
-                          <Input
-                            invalid={errors.enteType}
-                            label={enteTypeLabel}
-                            type="text"
-                            aria-describedby="mandatory-label"
-                            aria-labelledby={errors.enteType && 'error-enteType'}
-                            aria-required={enteState == 'other' ? true : ''}
-                            aria-invalid={errors.enteType && 'true'}
-                            {...field}
-                            id="enteType"
-                          />
-                          <span className={classes.errorLabel} id="error-enteType">
-                            {errors.enteType && errors.enteType.message}
-                          </span>
-                        </>
-                      )}
-                    />
-                  </Col>
-                </Row>
-              </div>
               <Row className="mt-5">
-                <Col xs={12}>
+                <Col xs={12} lg={6}>
+                  <label className={classes.selectLabel}>
+                    {messageSelectLabel}
+                  </label>
                   <Controller
-                    name="ente"
                     control={control}
-                    rules={{
-                      required: {
-                        value: true,
-                        message: requiredLabel,
-                      },
-                      pattern: {
-                        value: /^[a-zA-Zàèéìòù]*$/i,
-                        message: enteValidationLabel,
-                      },
-                    }}
-                    render={({ field }) => (
-                      <>
-                        <Input
-                          invalid={errors.ente}
-                          label={enteNameLabel}
-                          type="text"
-                          aria-describedby="mandatory-label"
-                          aria-required="true"
-                          aria-labelledby={errors.ente && 'error-enteName'}
-                          aria-invalid={errors.ente && 'true'}
-                          {...field}
-                          id="enteName"
-                        />
-                        <span className={classes.errorLabel} id="error-enteName">
-                          {errors.ente && errors.ente.message}
-                        </span>
-                      </>
+                    name="messageSelect"
+                    render={({ field: { onChange, value } }) => (
+                      <Select
+                        id="message-select"
+                        onChange={onChange}
+                        options={selectMessage}
+                        placeholder={selectPlaceholder}
+                        aria-label={selectPlaceholder}
+                      />
                     )}
                   />
                 </Col>
               </Row>
-              <div className={`${classes.enteContainer} ${enteState == 'public-administration' ? '' : 'hidden'}`}>
-                <Row className="mt-5">
-                  <Col xs={12} lg={6}>
-                    <label htmlFor="enteSelect-input" className={classes.selectLabel}>
-                      {inQuantoLabel}
-                    </label>
-                    <Controller
-                      control={control}
-                      name="enteSelect"
-                      rules={{
-                        required: {
-                          value: enteState == 'public-administration' ? true : false,
-                          message: requiredLabel,
-                        },
-                      }}
-                      render={({ field: { onChange, value } }) => (
-                        <Select
-                          value={value}
-                          id="enteSelect"
-                          inputId="enteSelect-input"
-                          onChange={onChange}
-                          options={selectInQuanto}
-                          aria-describedby="mandatory-label"
-                          placeholder={selectPlaceholder}
-                          aria-label={selectPlaceholder}
-                          aria-invalid={errors.enteSelect && 'true'}
-                          aria-labelledby={errors.enteSelect && 'error-enteSelect'}
-                          className={`${errors.enteSelect && 'select is-invalid'}`}
-                        />
-                      )}
-                    />
-                  </Col>
-                </Row>
-                <span className={classes.errorLabel} id="error-enteSelect">
-                  {errors.enteSelect ? requiredLabel : ''}
-                </span>
-              </div>
+              <Row className="mt-5">
+                <Col xs={12}>
+                  <div>
+                    <div className="form-group">
+                      <Controller
+                        name="message"
+                        control={control}
+                        render={({ field }) => (
+                          <textarea
+                            onFocus={textareaFocusHandler}
+                            onBlur={textareaFocusOutHandler}
+                            onInput={textareaInputHandler}
+                            rows="3"
+                            maxLength={textareaMaxLength}
+                            {...field}
+                            id="message"
+                          ></textarea>
+                        )}
+                      />
+                      <label
+                        className={textareaState == 'active' ? 'active' : ''}
+                        htmlFor="message"
+                      >
+                        {messageLabel}
+                      </label>
+                      <span className={classes.maxLengthLabel}>
+                        Massimo{' '}
+                        <span id="max-length-number">{textareaMaxLength}</span>{' '}
+                        caratteri
+                      </span>
+                    </div>
+                  </div>
+                </Col>
+              </Row>
             </fieldset>
           </form>
         </ModalBody>
         <ModalFooter className="justify-content-center flex-column align-items-start justify-content-md-start px-0 py-0 mt-5">
           <p className={classes.modalFooterLabel}>
-            Cliccando su INVIA dichiaro di aver letto e compreso l'informativa privacy
+            Cliccando su INVIA dichiaro di aver letto e compreso l'informativa
+            privacy
           </p>
           <div className="d-flex">
-            <Button color="primary" type="submit" form="updates-form">
+            <Button color="primary" type="submit" form="message-form">
               {sendButtonLabel}
             </Button>
-            <img className={classes.spinner} src="/assets/spinner.gif" alt=""></img>
+            <img className={classes.spinner} src="/assets/spinner.gif"></img>
           </div>
         </ModalFooter>
       </Modal>
       <div className="container test-docs">
         <div className="row">
           <div className="col-12 col-md-6">
-            <div className={classes.notification} role="alert" aria-labelledby="not2dms-title" id="not2dms">
-              <h5 id="not2dms-title">
+            <div
+              className={classes.notification}
+              role="alert"
+              aria-labelledby="not2dms-title"
+              id="not2dms2"
+            >
+              <h5 id="not2dms-title2">
                 notifiche
                 <svg className="icon" role="img" aria-label=""></svg>
               </h5>
@@ -683,7 +654,13 @@ export const ModalUpdates = () => {
                     transform="rotate(45 17.3242 0.5)"
                     fill="#5C6F82"
                   />
-                  <rect y="1.56055" width="1.49987" height="24.4978" transform="rotate(-45 0 1.56055)" fill="#5C6F82" />
+                  <rect
+                    y="1.56055"
+                    width="1.49987"
+                    height="24.4978"
+                    transform="rotate(-45 0 1.56055)"
+                    fill="#5C6F82"
+                  />
                 </svg>
               </button>
             </div>

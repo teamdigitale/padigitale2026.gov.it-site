@@ -125,6 +125,7 @@ export const ComeFunzionaCarousel = ({ content, title, subtitle }) => {
                 }}
                 mobileNavigation
                 sideDesktopNavigation
+                id="how-carousel"
               />
             </Col>
           </Row>

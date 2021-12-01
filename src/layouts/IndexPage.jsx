@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect } from 'react';
 import {
   name,
   heroMain,
@@ -22,6 +22,7 @@ import labels from '../../contents/labels.yml';
 import { SupportSection } from './faq/SupportSection';
 import { OpportunitySection } from './home/OpportunitySection';
 import { GlobalStateContext } from '../context/globalContext';
+import { announce } from '@react-aria/live-announcer';
 
 const { title: seoTitle, description: seoDescription } = seo.homePage;
 const { ariaLabel, headerTitle, headerSubtitle } = labels;
@@ -46,7 +47,11 @@ const useStyles = createUseStyles({
 
 export const IndexPage = () => {
   const classes = useStyles();
-  const [{ modalState }, dispatch] = useContext(GlobalStateContext);
+  const [{}, dispatch] = useContext(GlobalStateContext);
+
+  useEffect(() => {
+    announce('Pagina caricata ' + name);
+  }, []);
   return (
     <>
       <SEO title={seoTitle} description={seoDescription} />
@@ -99,10 +104,9 @@ export const IndexPage = () => {
         supportList={support.cards}
         title={support.title}
         buttonLabel={support.buttonLabel}
-        initialState={modalState}
         handleToggle={() => {
           dispatch({
-            type: 'SET:TOGGLE_MODAL',
+            type: 'SET:TOGGLE_MODAL_MESSAGE',
           });
         }}
       />

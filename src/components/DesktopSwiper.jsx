@@ -15,10 +15,22 @@ const useStyles = createUseStyles({
   },
   bullet: {
     composes: 'swiper-pagination-bullet p-2',
+    opacity: '1',
+    backgroundColor: 'rgba(0, 0, 0, .2)',
+    '&:focus': {
+      outline: 'none',
+      borderColor: '#0066CC',
+      boxShadow: '0 0 0 2px #0066CC',
+    },
   },
   activeBullet: {
     composes: 'swiper-pagination-bullet-active',
     backgroundColor: '#0066CC',
+    '&:focus': {
+      outline: 'none',
+      borderColor: '#f90',
+      boxShadow: '0 0 0 2px #f90',
+    },
   },
   navigationBtn: {
     backgroundColor: 'transparent',
@@ -59,6 +71,7 @@ export const DesktopSwiper = ({
   navigation,
   className,
   title,
+  idCarousel,
 }) => {
   const classes = useStyles();
   const [paginationId, setPaginationId] = useState(null);
@@ -93,15 +106,18 @@ export const DesktopSwiper = ({
               clickable: true,
               bulletClass: classes.bullet,
               bulletActiveClass: classes.activeBullet,
+              bulletElement: 'button',
             }}
             navigation={{
               prevEl: `[data-prev-navigation-id=${prevBtnId}]`,
               nextEl: `[data-next-navigation-id=${nextBtnId}]`,
               hiddenClass: classes.disabledNavBtn,
             }}
+            aria-roledescription="carousel"
+            id={`Carousel-${idCarousel}`}
           >
             {slides.map((slide, k) => (
-              <SwiperSlide className={classes.swiperSlide} key={k}>
+              <SwiperSlide role="group" aria-roledescription="slide" className={classes.swiperSlide} key={k}>
                 {slide}
               </SwiperSlide>
             ))}
@@ -129,10 +145,11 @@ export const DesktopSwiper = ({
             type="button"
             data-prev-navigation-id={prevBtnId}
             aria-label={`Vai alla slide precedente di ${title}`}
+            aria-controls={`Carousel-${idCarousel}`}
           >
             <Icon
               color="primary"
-              aria-label={`Vai alla slide precedente di ${title}`}
+              aria-label={`slide precedente`}
               role="img"
               icon="it-arrow-left-circle"
               size="lg"
@@ -144,10 +161,11 @@ export const DesktopSwiper = ({
             type="button"
             data-next-navigation-id={nextBtnId}
             aria-label={`Vai alla slide successiva di ${title}`}
+            aria-controls={`Carousel-${idCarousel}`}
           >
             <Icon
               color="primary"
-              aria-label={`Vai alla slide successiva di ${title}`}
+              aria-label={`slide successiva`}
               icon="it-arrow-right-circle"
               size="lg"
               role="img"
@@ -163,10 +181,11 @@ export const DesktopSwiper = ({
             type="button"
             data-prev-navigation-id={prevBtnId}
             aria-label={`Vai alla slide precedente di ${title}`}
+            aria-controls={`Carousel-${idCarousel}`}
           >
             <Icon
               color="primary"
-              aria-label={`Vai alla slide precedente di ${title}`}
+              aria-label={`slide precedente`}
               icon="it-arrow-left-circle"
               size="lg"
               role="img"
@@ -178,15 +197,15 @@ export const DesktopSwiper = ({
             type="button"
             data-next-navigation-id={nextBtnId}
             aria-label={`Vai alla slide successiva di ${title}`}
+            aria-controls={`Carousel-${idCarousel}`}
           >
             <Icon
               color="primary"
               icon="it-arrow-right-circle"
               size="lg"
               role="img"
-              aria-label="Vai alla slide successiva"
               focusable="false"
-              aria-label={`Vai alla slide successiva di ${title}`}
+              aria-label={`slide successiva`}
             />
           </button>
         </div>
@@ -203,4 +222,5 @@ DesktopSwiper.propTypes = {
   desktopNavigation: PropTypes.bool,
   navigation: PropTypes.bool,
   className: PropTypes.any,
+  id: PropTypes.string,
 };

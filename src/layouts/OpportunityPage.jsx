@@ -1,5 +1,6 @@
-import React, { useState, useContext } from 'react';
+import React, { useEffect, useContext } from 'react';
 import content from '../../contents/home-page/home.yml';
+import { announce } from '@react-aria/live-announcer';
 import { createUseStyles } from 'react-jss';
 import opportunityContent from '../../contents/opportunity-page/opportunity.yml';
 import { BeneficiariesSection } from './opportunity/BeneficiariesSection';
@@ -23,7 +24,12 @@ const useStyles = createUseStyles({
 
 export const OpportunityPage = (props) => {
   const classes = useStyles();
-  const [{ modalState }, dispatch] = useContext(GlobalStateContext);
+  const [{}, dispatch] = useContext(GlobalStateContext);
+
+  useEffect(() => {
+    announce('Pagina caricata ' + opportunityContent.name);
+  }, []);
+
   return (
     <>
       <SEO title={seoTitle} description={seoDescription} />
@@ -63,10 +69,9 @@ export const OpportunityPage = (props) => {
         supportList={support.cards}
         title={support.title}
         buttonLabel={support.buttonLabel}
-        initialState={modalState}
         handleToggle={() => {
           dispatch({
-            type: 'SET:TOGGLE_MODAL',
+            type: 'SET:TOGGLE_MODAL_MESSAGE',
           });
         }}
       />

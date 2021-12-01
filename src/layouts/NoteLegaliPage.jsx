@@ -6,15 +6,14 @@ import { Breadcrumb } from '../components/Breadcrumb';
 import content from '../../contents/note-legali-page/note-legali.yml';
 import seo from '../../contents/seo.yml';
 import { SEO } from '../components/SEO';
+import { announce } from '@react-aria/live-announcer';
 import { GlobalStateContext } from '../context/globalContext';
 
 const { title: seoTitle, description: seoDescription } = seo.noteLegaliPage;
 
 const query = graphql`
   query {
-    textChunk: markdownRemark(
-      fields: { slug: { eq: "note-legali-page/note-legali" } }
-    ) {
+    textChunk: markdownRemark(fields: { slug: { eq: "note-legali-page/note-legali" } }) {
       html
     }
   }
@@ -24,7 +23,9 @@ export const NoteLegaliPage = () => {
   const {
     textChunk: { html: textChunk },
   } = useStaticQuery(query);
-
+  useEffect(() => {
+    announce('Pagina caricata ' + seoTitle);
+  }, []);
   const [{}, dispatch] = useContext(GlobalStateContext);
   return (
     <>

@@ -10,6 +10,7 @@ import { HeroHowItWorks } from '../components/hero/HeroHowItWorks';
 import seo from '../../contents/seo.yml';
 import { Involved } from './come-funziona/Involved';
 import { Beneficiaries } from './come-funziona/Beneficiaries';
+import { announce } from '@react-aria/live-announcer';
 import { SupportSection } from './faq/SupportSection';
 import { GlobalStateContext } from '../context/globalContext';
 
@@ -22,12 +23,18 @@ export const ComeFunzionaPage = () => {
     if (howId) {
       const element = document.querySelector('#' + howId);
       const elDistanceToTop = window.pageYOffset + element.getBoundingClientRect().top;
-      window.scrollTo(0, elDistanceToTop)
+      window.scrollTo(0, elDistanceToTop);
+      element.setAttribute('tabindex', '-1');
+      element.focus();
       return () => {
         dispatch({ type: 'SET:HOW_SECTION_ID' });
       };
     }
   }, [howId]);
+
+  useEffect(() => {
+    announce('Pagina caricata ' + content.name);
+  }, []);
 
   return (
     <>
@@ -74,7 +81,7 @@ export const ComeFunzionaPage = () => {
         buttonLabel={support.buttonLabel}
         handleToggle={() => {
           dispatch({
-            type: 'SET:TOGGLE_MODAL',
+            type: 'SET:TOGGLE_MODAL_MESSAGE',
           });
         }}
       />
