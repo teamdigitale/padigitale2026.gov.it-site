@@ -10,6 +10,7 @@ import { HeroHowItWorks } from '../components/hero/HeroHowItWorks';
 import seo from '../../contents/seo.yml';
 import { Involved } from './come-funziona/Involved';
 import { Beneficiaries } from './come-funziona/Beneficiaries';
+import { announce } from '@react-aria/live-announcer';
 import { SupportSection } from './faq/SupportSection';
 import { GlobalStateContext } from '../context/globalContext';
 
@@ -30,6 +31,10 @@ export const ComeFunzionaPage = () => {
       };
     }
   }, [howId]);
+
+  useEffect(() => {
+    announce('Pagina caricata ' + content.name);
+  }, []);
 
   return (
     <>

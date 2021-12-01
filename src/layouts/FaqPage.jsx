@@ -11,6 +11,7 @@ import { SideNavigation } from './faq/SideNavigation';
 import { QuestionSection } from './faq/QuestionSection';
 import { SupportSection } from './faq/SupportSection';
 import { HeroSupport } from './support/Hero';
+import { announce } from '@react-aria/live-announcer';
 
 const { title: seoTitle, description: seoDescription } = seo.faqPage;
 
@@ -56,6 +57,7 @@ export const FaqPage = () => {
     window.addEventListener('resize', () => {
       setIsMobile(window.innerWidth < 992);
     });
+    announce('Pagina caricata ' + faq.name);
   }, []);
 
   function countInitQuestions() {
@@ -97,6 +99,12 @@ export const FaqPage = () => {
       }
     }
     setquestNum(countQuestions());
+    if (questions.length === 0) {
+      console.log(questions);
+      announce('Nessun risultato');
+    } else {
+      announce('Numero di FAQ in pagina aggiornato');
+    }
   };
 
   function getAccordionsFiltered(question, input) {
