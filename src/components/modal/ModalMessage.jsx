@@ -23,7 +23,7 @@ import {
 } from 'react-google-recaptcha-v3';
 
 const {
-  success: successLabels,
+  successMessage: successLabels,
   error: errorLabels,
   errorAddress: errorAddressLabel,
 } = notificationsLabel;
