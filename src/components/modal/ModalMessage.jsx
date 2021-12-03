@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext, useRef } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { createUseStyles } from 'react-jss';
+import { announce } from '@react-aria/live-announcer';
 import {
   Row,
   Col,
@@ -319,6 +320,7 @@ export const ModalMessage = () => {
   const textareaInputHandler = (event) => {
     const number = document.querySelector('#max-length-number');
     number.innerHTML = textareaMaxLength - parseInt(event.target.value.length);
+    announce('Numero di caratteri rimanenti: ' + number.innerHTML);
   };
 
   const classes = useStyles();
@@ -403,6 +405,7 @@ export const ModalMessage = () => {
       })
       .then(() => {
         spinner.classList.add('hidden');
+        announce('Invio in corso')
       });
   };
 
