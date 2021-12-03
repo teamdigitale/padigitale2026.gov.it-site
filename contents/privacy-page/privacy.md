@@ -1,4 +1,4 @@
-Privacy policy
+Informativa privacy
 --------------
 
 [padigitale2026.gov.it](https://padigitale2026.gov.it/){class="text-decoration-none font-weight-semibold"} è gestito dalla Presidenza del Consiglio dei Ministri - Dipartimento per la Trasformazione Digitale.
