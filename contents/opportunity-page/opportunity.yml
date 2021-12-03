@@ -136,6 +136,8 @@ beneficiaries:
     title: Esperienza dei servizi pubblici
     money: '613 <span>milioni di euro<span>'
     tags:
+      - value: citta-metropolitane
+        label: "Città metropolitane"
       - value: comuni
         label: Comuni
       - value: scuole
