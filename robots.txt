@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://padigitale2026.gov.it/sitemap/sitemap-index.xml
