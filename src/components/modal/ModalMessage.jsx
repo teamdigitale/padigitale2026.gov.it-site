@@ -21,6 +21,10 @@ import {
   GoogleReCaptchaProvider,
   useGoogleReCaptcha,
 } from 'react-google-recaptcha-v3';
+import links from '../../../contents/links.yml';
+
+
+const { privacy } = links.internalLinks;
 
 const {
   successMessage: successLabels,
@@ -605,8 +609,7 @@ export const ModalMessage = () => {
         </ModalBody>
         <ModalFooter className="justify-content-center flex-column align-items-start justify-content-md-start px-0 py-0 mt-5">
           <p className={classes.modalFooterLabel}>
-            Cliccando su INVIA dichiaro di aver letto e compreso l'informativa
-            privacy
+            Cliccando su INVIA dichiaro di aver letto e compreso <a target="_blank" href={privacy.linkTo}>l'informativa privacy</a>
           </p>
           <div className="d-flex">
             <Button color="primary" type="submit" form="message-form">
