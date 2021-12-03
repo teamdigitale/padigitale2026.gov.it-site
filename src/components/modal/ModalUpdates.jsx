@@ -626,7 +626,7 @@ export const ModalUpdates = () => {
                         message: requiredLabel,
                       },
                       pattern: {
-                        value: /^[a-zA-Zàèéìòù]*$/i,
+                        value: /^[a-zA-Zàèéìòù ]*$/i,
                         message: enteValidationLabel,
                       },
                     }}
