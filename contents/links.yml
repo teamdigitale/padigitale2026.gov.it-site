@@ -27,8 +27,8 @@ internalLinks:
     linkTo: /glossario/
     label: Glossario
   privacy:
-    linkTo: /privacy-policy/
-    label: Privacy policy
+    linkTo: /informativa-privacy/
+    label: Informativa privacy
   credits:
     linkTo: /crediti/
     label: Crediti
@@ -85,7 +85,7 @@ externalLinks:
   a11y:
     label: Dichiarazione di accessibilità
     linkTo: https://form.agid.gov.it/view/817ae2b8-a1c7-409b-91ba-92cbbe26a885/
-    ariaLabel: 'Dichiarazione di accessibilità (link esterno)'
+    ariaLabel: 'Dichiarazione di accessibilità (Collegamento esterno - Apre su nuova scheda)'
   italiaDigitale:
     label: Italia digitale 2026
     linkTo: 'https://innovazione.gov.it/dipartimento/focus/italia-digitale-2026/'

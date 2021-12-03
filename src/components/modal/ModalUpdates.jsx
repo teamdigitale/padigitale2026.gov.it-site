@@ -2,7 +2,17 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { createUseStyles } from 'react-jss';
-import { Row, Col, Modal, ModalBody, ModalFooter, Button, Input, FormGroup, Label } from 'design-react-kit';
+import {
+  Row,
+  Col,
+  Modal,
+  ModalBody,
+  ModalFooter,
+  Button,
+  Input,
+  FormGroup,
+  Label,
+} from 'design-react-kit';
 import Select from 'react-select';
 import { announce } from '@react-aria/live-announcer';
 import { graphql, useStaticQuery } from 'gatsby';
@@ -11,7 +21,13 @@ import links from '../../../contents/links.yml';
 import notificationsLabel from '../../../contents/notifications.yml';
 import { GlobalStateContext } from '../../context/globalContext';
 
-const { success: successLabels, error: errorLabels, errorAddress: errorAddressLabel } = notificationsLabel;
+const {
+  success: successLabels,
+  error: errorLabels,
+  errorAddress: errorAddressLabel,
+} = notificationsLabel;
+
+const { privacy } = links.internalLinks;
 
 const useStyles = createUseStyles({
   modalUpdatesContainer: {
@@ -263,7 +279,9 @@ export const ModalUpdates = () => {
     const setObserver = (mutationsList) => {
       for (const mutation of mutationsList) {
         if (mutation.type === 'childList') {
-          let value = representSelectOptions.querySelector('div[class*="singleValue"]');
+          let value = representSelectOptions.querySelector(
+            'div[class*="singleValue"]'
+          );
           value ? (value = value.innerHTML) : (value = '');
           let valueSelected = selectRepresent.find((valueObj) => {
             if (value == valueObj.label) {
@@ -312,7 +330,11 @@ export const ModalUpdates = () => {
       if (data[key] == undefined) {
         delete data[key];
       }
-      if (key == 'enteSelect' || key == 'representative' || key == 'messageSelect') {
+      if (
+        key == 'enteSelect' ||
+        key == 'representative' ||
+        key == 'messageSelect'
+      ) {
         data[key] = data[key]?.value;
       }
     });
@@ -323,9 +345,13 @@ export const ModalUpdates = () => {
     const notificationElement = document.querySelector('.notification');
     const titleElement = notificationElement.querySelector('h5');
     const descriptionElement = notificationElement.querySelector('p');
-    const modalCloseBtn = event.target.closest('.modal-content').querySelector('.modal-header .btn');
+    const modalCloseBtn = event.target
+      .closest('.modal-content')
+      .querySelector('.modal-header .btn');
 
-    const closeNotification = notificationElement.querySelector('.notification-close');
+    const closeNotification = notificationElement.querySelector(
+      '.notification-close'
+    );
 
     const closeNotificationHandler = (event) => {
       event.target.closest('.notification').classList.remove('show');
@@ -432,11 +458,19 @@ export const ModalUpdates = () => {
             }}
           >
             <span>Chiudi</span>
-            <img src="/assets/icon-close.svg" alt="chiudi modale" aria-hidden="true" />
+            <img
+              src="/assets/icon-close.svg"
+              alt="chiudi modale"
+              aria-hidden="true"
+            />
           </Button>
         </div>
         <ModalBody className={classes.modalBody}>
-          <form onSubmit={handleSubmit(onSubmit, onError)} id="updates-form" aria-describedby="mandatory-label">
+          <form
+            onSubmit={handleSubmit(onSubmit, onError)}
+            id="updates-form"
+            aria-describedby="mandatory-label"
+          >
             <fieldset>
               <legend>
                 <Row>
@@ -457,7 +491,10 @@ export const ModalUpdates = () => {
               </legend>
               <Row className="mt-5">
                 <Col xs={12}>
-                  <p id="mandatory-label" dangerouslySetInnerHTML={{ __html: mandatoryAdvise }}></p>
+                  <p
+                    id="mandatory-label"
+                    dangerouslySetInnerHTML={{ __html: mandatoryAdvise }}
+                  ></p>
                 </Col>
               </Row>
               <Row className="mt-5">
@@ -496,7 +533,10 @@ export const ModalUpdates = () => {
               </Row>
               <Row className="mt-5">
                 <Col xs={12} lg={6}>
-                  <label htmlFor="represent-select-input" className={classes.selectLabel}>
+                  <label
+                    htmlFor="represent-select-input"
+                    className={classes.selectLabel}
+                  >
                     {representLabel}
                   </label>
                   <Controller
@@ -514,8 +554,12 @@ export const ModalUpdates = () => {
                         aria-label={selectPlaceholder}
                         aria-describedby="mandatory-label"
                         aria-invalid={errors.representative && 'true'}
-                        aria-labelledby={errors.representative && 'error-represent'}
-                        className={`select ${errors.representative && ' is-invalid'}`}
+                        aria-labelledby={
+                          errors.representative && 'error-represent'
+                        }
+                        className={`select ${
+                          errors.representative && ' is-invalid'
+                        }`}
                       />
                     )}
                   />
@@ -524,7 +568,11 @@ export const ModalUpdates = () => {
               <span className={classes.errorLabel} id="error-represent">
                 {errors.represent ? requiredLabel : ''}
               </span>
-              <div className={`${classes.enteContainer} ${enteState == 'other' ? '' : 'hidden'}`}>
+              <div
+                className={`${classes.enteContainer} ${
+                  enteState == 'other' ? '' : 'hidden'
+                }`}
+              >
                 <Row className="mt-5">
                   <Col xs={12}>
                     <Controller
@@ -547,13 +595,18 @@ export const ModalUpdates = () => {
                             label={enteTypeLabel}
                             type="text"
                             aria-describedby="mandatory-label"
-                            aria-labelledby={errors.enteType && 'error-enteType'}
+                            aria-labelledby={
+                              errors.enteType && 'error-enteType'
+                            }
                             aria-required={enteState == 'other' ? true : ''}
                             aria-invalid={errors.enteType && 'true'}
                             {...field}
                             id="enteType"
                           />
-                          <span className={classes.errorLabel} id="error-enteType">
+                          <span
+                            className={classes.errorLabel}
+                            id="error-enteType"
+                          >
                             {errors.enteType && errors.enteType.message}
                           </span>
                         </>
@@ -573,7 +626,7 @@ export const ModalUpdates = () => {
                         message: requiredLabel,
                       },
                       pattern: {
-                        value: /^[a-zA-Zàèéìòù]*$/i,
+                        value: /^[a-zA-Zàèéìòù ]*$/i,
                         message: enteValidationLabel,
                       },
                     }}
@@ -590,7 +643,10 @@ export const ModalUpdates = () => {
                           {...field}
                           id="enteName"
                         />
-                        <span className={classes.errorLabel} id="error-enteName">
+                        <span
+                          className={classes.errorLabel}
+                          id="error-enteName"
+                        >
                           {errors.ente && errors.ente.message}
                         </span>
                       </>
@@ -598,10 +654,17 @@ export const ModalUpdates = () => {
                   />
                 </Col>
               </Row>
-              <div className={`${classes.enteContainer} ${enteState == 'public-administration' ? '' : 'hidden'}`}>
+              <div
+                className={`${classes.enteContainer} ${
+                  enteState == 'public-administration' ? '' : 'hidden'
+                }`}
+              >
                 <Row className="mt-5">
                   <Col xs={12} lg={6}>
-                    <label htmlFor="enteSelect-input" className={classes.selectLabel}>
+                    <label
+                      htmlFor="enteSelect-input"
+                      className={classes.selectLabel}
+                    >
                       {inQuantoLabel}
                     </label>
                     <Controller
@@ -609,7 +672,8 @@ export const ModalUpdates = () => {
                       name="enteSelect"
                       rules={{
                         required: {
-                          value: enteState == 'public-administration' ? true : false,
+                          value:
+                            enteState == 'public-administration' ? true : false,
                           message: requiredLabel,
                         },
                       }}
@@ -624,8 +688,12 @@ export const ModalUpdates = () => {
                           placeholder={selectPlaceholder}
                           aria-label={selectPlaceholder}
                           aria-invalid={errors.enteSelect && 'true'}
-                          aria-labelledby={errors.enteSelect && 'error-enteSelect'}
-                          className={`${errors.enteSelect && 'select is-invalid'}`}
+                          aria-labelledby={
+                            errors.enteSelect && 'error-enteSelect'
+                          }
+                          className={`${
+                            errors.enteSelect && 'select is-invalid'
+                          }`}
                         />
                       )}
                     />
@@ -640,20 +708,32 @@ export const ModalUpdates = () => {
         </ModalBody>
         <ModalFooter className="justify-content-center flex-column align-items-start justify-content-md-start px-0 py-0 mt-5">
           <p className={classes.modalFooterLabel}>
-            Cliccando su INVIA dichiaro di aver letto e compreso l'informativa privacy
+            Cliccando su INVIA dichiaro di aver letto e compreso{' '}
+            <a target="_blank" href={privacy.linkTo}>
+              l'informativa privacy
+            </a>
           </p>
           <div className="d-flex">
             <Button color="primary" type="submit" form="updates-form">
               {sendButtonLabel}
             </Button>
-            <img className={classes.spinner} src="/assets/spinner.gif" alt=""></img>
+            <img
+              className={classes.spinner}
+              src="/assets/spinner.gif"
+              alt=""
+            ></img>
           </div>
         </ModalFooter>
       </Modal>
       <div className="container test-docs">
         <div className="row">
           <div className="col-12 col-md-6">
-            <div className={classes.notification} role="alert" aria-labelledby="not2dms-title" id="not2dms">
+            <div
+              className={classes.notification}
+              role="alert"
+              aria-labelledby="not2dms-title"
+              id="not2dms"
+            >
               <h5 id="not2dms-title">
                 notifiche
                 <svg className="icon" role="img" aria-label=""></svg>
@@ -683,7 +763,13 @@ export const ModalUpdates = () => {
                     transform="rotate(45 17.3242 0.5)"
                     fill="#5C6F82"
                   />
-                  <rect y="1.56055" width="1.49987" height="24.4978" transform="rotate(-45 0 1.56055)" fill="#5C6F82" />
+                  <rect
+                    y="1.56055"
+                    width="1.49987"
+                    height="24.4978"
+                    transform="rotate(-45 0 1.56055)"
+                    fill="#5C6F82"
+                  />
                 </svg>
               </button>
             </div>

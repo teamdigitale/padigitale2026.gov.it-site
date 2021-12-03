@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext, useRef } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { createUseStyles } from 'react-jss';
+import { announce } from '@react-aria/live-announcer';
 import {
   Row,
   Col,
@@ -21,9 +22,13 @@ import {
   GoogleReCaptchaProvider,
   useGoogleReCaptcha,
 } from 'react-google-recaptcha-v3';
+import links from '../../../contents/links.yml';
+
+
+const { privacy } = links.internalLinks;
 
 const {
-  success: successLabels,
+  successMessage: successLabels,
   error: errorLabels,
   errorAddress: errorAddressLabel,
 } = notificationsLabel;
@@ -315,6 +320,7 @@ export const ModalMessage = () => {
   const textareaInputHandler = (event) => {
     const number = document.querySelector('#max-length-number');
     number.innerHTML = textareaMaxLength - parseInt(event.target.value.length);
+    announce('Numero di caratteri rimanenti: ' + number.innerHTML);
   };
 
   const classes = useStyles();
@@ -399,6 +405,7 @@ export const ModalMessage = () => {
       })
       .then(() => {
         spinner.classList.add('hidden');
+        announce('Invio in corso')
       });
   };
 
@@ -605,8 +612,7 @@ export const ModalMessage = () => {
         </ModalBody>
         <ModalFooter className="justify-content-center flex-column align-items-start justify-content-md-start px-0 py-0 mt-5">
           <p className={classes.modalFooterLabel}>
-            Cliccando su INVIA dichiaro di aver letto e compreso l'informativa
-            privacy
+            Cliccando su INVIA dichiaro di aver letto e compreso <a target="_blank" href={privacy.linkTo}>l'informativa privacy</a>
           </p>
           <div className="d-flex">
             <Button color="primary" type="submit" form="message-form">
