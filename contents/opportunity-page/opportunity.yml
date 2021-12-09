@@ -148,15 +148,7 @@ beneficiaries:
         label: Università
       - value: 'enti-diritto'
         label: 'Enti per il diritto allo studio, agenzie, consorzi'
-    description: |
-      Facilitare l’implementazione dello “Sportello Digitale Unico” (Single Digital Gateway), ovvero supportare l’attuazione del regolamento europeo che ha l’obiettivo di uniformare l’accesso ai servizi digitali in tutto i Paesi membri dell'UE.
-      <p><strong></strong></p>
-      <p><strong>Vantaggi per la PA</strong><strong></strong></p>
-      <ul>
-      <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">possibilit&agrave; di usufruire dell&rsquo;attivit&agrave; di accompagnamento per la reingegnerizzazione dei servizi secondo i requisiti del</span><a href="https://eur-lex.europa.eu/legal-content/IT/TXT/PDF/?uri=CELEX:32018R1724&amp;from=EN"><span style="font-weight: 400;"> Regolamento Europeo UE 1724/2018</span></a><span style="font-weight: 400;">;</span></li>
-      <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">disponibilit&agrave; di processi e strumenti che consentono l&rsquo;ottimizzazione della gestione operativa attraverso l&rsquo;interoperabilit&agrave; e la definizione di nuovi servizi in tempi rapidi e a basso costo;</span></li>
-      <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">opportunit&agrave; di avviare progetti di gestione del cambiamento in ottica di trasformazione digitale. </span></li>
-      </ul>
+    description: Facilitare l’implementazione dello “Sportello Digitale Unico” (Single Digital Gateway), ovvero supportare l’attuazione del regolamento europeo che ha l’obiettivo di uniformare l’accesso ai servizi digitali in tutto i Paesi membri dell'UE.
     stalls: '230 enti'
     accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
