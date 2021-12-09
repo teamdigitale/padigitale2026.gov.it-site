@@ -201,14 +201,14 @@ beneficiaries:
       - value: altre-pa-locali
         label: Altre PAL
     description: |
-      "Migliorare l'accessibilità dei servizi pubblici digitali attraverso la diffusione di strumenti e strategie condivise: da test di usabilità ad attività di comunicazione e disseminazione passando per lo sviluppo di kit dedicati e altro."
+      Migliorare l'accessibilità dei servizi pubblici digitali attraverso la diffusione di strumenti e strategie condivise: da test di usabilità ad attività di comunicazione e disseminazione passando per lo sviluppo di kit dedicati e altro.
       <p><strong></strong></p>
       <p><strong>Vantaggi per la PA</strong><strong></strong></p>
       <ul>
-      <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">strumenti (webkit)&nbsp; utili nella progettazione ed implementazione dei servizi digitali;</span></li>
-      <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">iniziative formative finalizzate ad aumentare le competenze in materia da parte degli operatori pubblici;</span></li>
-      <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">supporto tecnico specialistico;&nbsp;</span></li>
-      <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">tecnologie assistive necessarie alle postazioni di lavoro dei lavoratori con disabilità</span></li>
+      <li aria-level="1"><span>accesso a strumenti (webkit) utili nella progettazione ed implementazione dei servizi digitali;</span></li>
+      <li aria-level="1"><span>partecipazione a iniziative formative finalizzate ad aumentare le competenze in materia da parte degli operatori pubblici;</span></li>
+      <li aria-level="1"><span>accesso a supporto tecnico specialistico;&nbsp;</span></li>
+      <li aria-level="1"><span>implementazione di tecnologie assistive necessarie alle postazioni di lavoro dei lavoratori con disabilit&agrave;.</span><span></span></li>
       </ul>
     stalls: '55 enti'
     accessSectionId: presentazione-progetto
