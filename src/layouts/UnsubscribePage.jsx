@@ -45,7 +45,8 @@ const initState = {
 
 export const UnsubscribePage = ({ location }) => {
   const params = new URLSearchParams(location.search);
-  const jwt = params.get('jwt');
+  const address = params.get('address');
+  const uuid = params.get('uuid');
   const {
     site: {
       siteMetadata: { apiUrl },
@@ -54,24 +55,18 @@ export const UnsubscribePage = ({ location }) => {
   const [state, dispatch] = useReducer(reducer, initState);
 
   const unsubscribe = useCallback(async () => {
-    if (jwt && !jwt.match(/(^[\w-]*\.[\w-]*\.[\w-]*$)/)) {
-      dispatch({
-        type: ERROR,
-        payload: `jwt not present or it seems it is not a valid jwt, ${jwt}`,
-      });
-      return;
-    }
-    const { address, uuid } = jwt_decode(jwt);
     const options = {
       crossDomain: true,
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ jwt }),
     };
     try {
-      const response = await fetch(`${apiUrl}/users/${address}/${uuid}/unsubscribe`, options);
+      const response = await fetch(
+        `${apiUrl}/users/${address}/${uuid}/unsubscribe`,
+        options
+      );
       const { status } = response;
       const message = await response.json();
       if (status >= 200 && status <= 299) {
@@ -82,7 +77,7 @@ export const UnsubscribePage = ({ location }) => {
     } catch (error) {
       dispatch({ type: ERROR, payload: error });
     }
-  }, [apiUrl, jwt]);
+  }, [apiUrl]);
 
   useEffect(() => {
     unsubscribe();
@@ -108,8 +103,15 @@ export const UnsubscribePage = ({ location }) => {
         {state.status === ERROR && (
           <div className="text-center text-primary">
             <div className="display-3">{content[state.status].title}</div>
-            <div className="my-4 text-dark" dangerouslySetInnerHTML={{ __html: content[state.status].body }} />
-            <Button type="button" className="btn text-uppercase btn-danger" onClick={unsubscribe}>
+            <div
+              className="my-4 text-dark"
+              dangerouslySetInnerHTML={{ __html: content[state.status].body }}
+            />
+            <Button
+              type="button"
+              className="btn text-uppercase btn-danger"
+              onClick={unsubscribe}
+            >
               {content[state.status].button}
             </Button>
           </div>
@@ -117,7 +119,10 @@ export const UnsubscribePage = ({ location }) => {
         {state.status === SUCCESS && (
           <div className="text-center text-primary">
             <div className="display-3">{content[state.status].title}</div>
-            <div className="my-4 text-dark" dangerouslySetInnerHTML={{ __html: content[state.status].body }} />
+            <div
+              className="my-4 text-dark"
+              dangerouslySetInnerHTML={{ __html: content[state.status].body }}
+            />
             <Link to="/" className="btn text-uppercase btn-primary">
               {content[state.status].button}
             </Link>
