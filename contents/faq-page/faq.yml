@@ -18,6 +18,9 @@ sidebar:
   - sectionTitle: Erogazione delle risorse
     sectionId: erogazione
     sectionActive: false
+  - sectionTitle: Supporto tecnico
+    sectionId: supporto-tecnico
+    sectionActive: false
 questions:
   - title: Generali
     description: La strategia di ripresa economica e gli interventi previsti per il rilancio digitale del Paese
@@ -110,6 +113,17 @@ questions:
         content: L’erogazione dei contributi seguirà alcuni step che possono prevedere un’anticipazione e delle tranches, fino al saldo, erogate “a rimborso”. Anche in questo caso si prevedono procedure semplici per il trasferimento dei fondi e il costante supporto all’amministrazione destinataria delle risorse per assicurare uno spedito ed efficace trasferimento dei fondi.
       - title: Dove sarà gestita la rendicontazione dei progetti?
         content: Attraverso questo sito, le amministrazioni potranno accedere ad un’area riservata. In questa sezione, potranno seguire tutta la gestione amministrativa dei singoli progetti. Con l’avvio degli avvisi avranno infatti la possibilità di fare richiesta per i fondi, rendicontare l'avanzare dei loro progetti, ricevere comunicazioni dedicate e inviare documentazioni ufficiali.
+- title: Supporto tecnico
+    description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
+    sectionId: supporto-tecnico
+    accordions:
+      - title: "Non ho ricevuto l'email di verifica: come posso finalizzare l’iscrizione agli aggiornamenti di PA Digitale 2026?" 
+        content: "Se non trovi l’email che contiene il link per verificare l’indirizzo di posta sul quale vuoi ricevere gli aggiornamenti della piattaforma, ti consigliamo di:"<ul><li>"controllare che l’email non si trovi nelle cartelle “spam”, “posta indesiderata”, “cestino”;"</li><li>"assicurarti di cercare l’email nell’account di posta elettronica che hai indicato nel modulo di iscrizione;"</li><li>se non hai ricevuto alcuna email, scrivici tramite il modulo di supporto.</li></ul>
+        linkLabel: Scrivici
+        link: 'https://padigitale2026.gov.it/supporto'
+        ariaLabel: Vai al modulo di supporto 
+      - title: Come posso annullare la mia iscrizione agli aggiornamenti? 
+        content: Se desideri interrompere la ricezione di comunicazioni e aggiornamenti da PA Digitale 2026, usa il link “Annulla iscrizione” presente nella sezione finale di ogni email.
 noResults: Nessun risultato trovato
 support:
   tag: Supporto
@@ -118,3 +132,4 @@ support:
     - title: Contatti
       description: Compila il modulo per inviarci i tuoi suggerimenti o per avere chiarimenti sull'iniziativa
       isModal: true
+      
