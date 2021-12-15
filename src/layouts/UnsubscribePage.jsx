@@ -2,14 +2,21 @@ import React, { useCallback, useEffect, useReducer } from 'react';
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import PropTypes from 'prop-types';
 import { Button } from 'design-react-kit';
-import jwt_decode from 'jwt-decode';
 import { Hero } from '../components/hero/Hero';
 import { SEO } from '../components/SEO';
-import { announce } from '@react-aria/live-announcer';
 import content from '../../contents/unsubscribe-page/unsubscribe.yml';
 import seo from '../../contents/seo.yml';
+import { createUseStyles } from 'react-jss';
 
 const { title: seoTitle, description: seoDescription } = seo.unsubscribePage;
+
+const useStyles = createUseStyles({
+  title: {
+    fontSize: '27px',
+    fontWeight: '700',
+    color: '#33485C',
+  },
+});
 
 const query = graphql`
   query {
@@ -22,13 +29,17 @@ const query = graphql`
 `;
 
 // use custom hook
+const INITIAL = 'initial';
 const LOADING = 'loading';
 const SUCCESS = 'success';
 const ERROR = 'error';
 
 const reducer = (state, { type, payload }) => {
+  if (type === INITIAL) {
+    return { status: INITIAL };
+  }
   if (type === LOADING) {
-    return { status: LOADING };
+    return { status: LOADING, data: payload };
   }
   if (type === ERROR) {
     return { status: ERROR, data: payload };
@@ -40,10 +51,11 @@ const reducer = (state, { type, payload }) => {
 };
 
 const initState = {
-  status: LOADING,
+  status: INITIAL,
 };
 
 export const UnsubscribePage = ({ location }) => {
+  const classes = useStyles();
   const params = new URLSearchParams(location.search);
   const address = params.get('address');
   const uuid = params.get('uuid');
@@ -55,6 +67,7 @@ export const UnsubscribePage = ({ location }) => {
   const [state, dispatch] = useReducer(reducer, initState);
 
   const unsubscribe = useCallback(async () => {
+    dispatch({ type: LOADING, payload: {} });
     const options = {
       crossDomain: true,
       method: 'PATCH',
@@ -79,25 +92,46 @@ export const UnsubscribePage = ({ location }) => {
     }
   }, [apiUrl]);
 
-  useEffect(() => {
-    unsubscribe();
-  }, [unsubscribe]);
-
-  useEffect(() => {
-    announce('Pagina caricata ' + seoTitle);
-  }, []);
-
   return (
     <>
       <SEO title={seoTitle} description={seoDescription} />
       <h1 className="sr-only">{seoTitle}</h1>
       <Hero>
+        {state.status === INITIAL && (
+          <div className="text-center text-primary">
+            <div className={classes.title}>
+              Annullare l'iscrizione agli aggiornamenti?
+            </div>
+            <div className="my-4 text-dark">
+              Annullando l’iscrizione non riceverai ulteriori comunicazioni
+              <br></br>o aggiornamenti da PA Digitale 2026
+            </div>
+            <Button
+              onClick={unsubscribe}
+              type="button"
+              className="btn text-uppercase btn-primary"
+              aria-label={`Annulla iscrizione`}
+              color="primary"
+            >
+              Annulla Iscrizione
+            </Button>
+          </div>
+        )}
         {state.status === LOADING && (
+          <div className="progress-spinner progress-spinner-active mx-auto mt-5">
+            <span className="sr-only">Caricamento...</span>
+          </div>
+        )}
+        {state.status === SUCCESS && (
           <div className="text-center text-primary">
             <div className="display-3">{content[state.status].title}</div>
-            <div className="progress-spinner progress-spinner-active mx-auto mt-5">
-              <span className="sr-only">Caricamento...</span>
-            </div>
+            <div
+              className="my-4 text-dark"
+              dangerouslySetInnerHTML={{ __html: content[state.status].body }}
+            />
+            <Link to="/" className="btn text-uppercase btn-primary">
+              {content[state.status].button}
+            </Link>
           </div>
         )}
         {state.status === ERROR && (
@@ -114,18 +148,6 @@ export const UnsubscribePage = ({ location }) => {
             >
               {content[state.status].button}
             </Button>
-          </div>
-        )}
-        {state.status === SUCCESS && (
-          <div className="text-center text-primary">
-            <div className="display-3">{content[state.status].title}</div>
-            <div
-              className="my-4 text-dark"
-              dangerouslySetInnerHTML={{ __html: content[state.status].body }}
-            />
-            <Link to="/" className="btn text-uppercase btn-primary">
-              {content[state.status].button}
-            </Link>
           </div>
         )}
       </Hero>
