@@ -1,0 +1,10 @@
+loading:
+  title: Attendi l'annullamento
+error:
+  title: Errore nella conferma
+  body: "Abbiamo riscontrato un problema tecnico: per favore riprova inviando nuovamente la richiesta."
+  button: Riprova
+success:
+  title: Iscrizione aggiornamenti annullata
+  body: "Hai annullato l'iscrizione: non riceverai ulteriori comunicazioni<br> o aggiornamenti da PA Digitale 2026"
+  button: Torna alla Homepage

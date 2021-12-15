@@ -28,4 +28,7 @@ supportPage:
 confirmPage:
   title: Conferma Email - PA digitale 2026
   description: Conferma la tua email per ricevere agli aggiornamenti dalla piattaforma PA Digitale 2026
+unsubscribePage:
+  title: Annulla iscrizione Email - PA digitale 2026
+  description: Annulla la tua email per ricevere agli aggiornamenti dalla piattaforma PA Digitale 2026
   
