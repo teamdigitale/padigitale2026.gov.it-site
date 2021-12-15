@@ -54,7 +54,17 @@ beneficiaries:
         value: asl
       - label: Aziende Ospedaliere
         value: aziende-ospedaliere
-    description: Garantire che i sistemi, i dataset e le applicazioni della PA siano ospitati in data center altamente affidabili e con elevati standard di qualità per sicurezza, prestazioni, scalabilità, interoperabilità europea ed efficienza energetica. La misura prevede la creazione di un'infrastruttura cloud sul territorio nazionale all'avanguardia denominata "Polo Strategico Nazionale”.
+    description: |
+      Garantire che i sistemi, i dataset e le applicazioni della PA siano ospitati in data center altamente affidabili e con elevati standard di qualità per sicurezza, prestazioni, scalabilità, interoperabilità europea ed efficienza energetica. La misura prevede la creazione di un'infrastruttura cloud sul territorio nazionale all'avanguardia denominata "Polo Strategico Nazionale”.
+      <p><strong></strong></p>     
+      <p><strong>Vantaggi per la PA</strong><strong></strong></p>
+      <p><span style="font-weight: 400;">Grazie alla costituzione del Polo Strategico Nazionale, le amministrazioni possono:</span></p>
+      <ul>
+      <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">beneficiare delle pi&ugrave; alte garanzie di affidabilit&agrave;, resilienza e indipendenza;</span></li>
+      <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">garantire il rispetto dei requisiti in materia di sicurezza previsti dalla norma e di abilitare la migrazione verso tipologie di servizi cloud IaaS e PaaS;</span></li>
+      <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">migliorare l&rsquo;efficienza energetica delle infrastrutture e avere maggiore sostenibilit&agrave; ambientale grazie alla dismissione dei data center meno efficienti;</span></li>
+      <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">avere significativi risparmi della spesa pubblica nella gestione dei data center che possono essere reinvestiti nello sviluppo di nuovi servizi.</span></li>
+      </ul>
     stalls: '280 enti'
     accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
@@ -73,7 +83,16 @@ beneficiaries:
         value: asl
       - label: Aziende Ospedaliere
         value: aziende-ospedaliere
-    description: Implementare un programma di supporto e incentivo per migrare sistemi, dati e applicazioni delle pubbliche amministrazioni locali verso servizi cloud qualificati.
+    description: |
+      Implementare un programma di supporto e incentivo per migrare sistemi, dati e applicazioni delle pubbliche amministrazioni locali verso servizi cloud qualificati.
+      <p><strong></strong></p>
+      <p><strong>Vantaggi per la PA</strong><strong></strong></p>
+      <ul>
+      <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">l&rsquo;adozione del cloud da parte della Pubblica Amministrazione </span><b>migliora la qualit&agrave; dei servizi erogati e la sicurezza di servizi e processi</b><span style="font-weight: 400;">;&nbsp;</span></li>
+      <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">il cloud abilita il settore pubblico ad offrire </span><span style="font-weight: 400;">servizi efficaci per cittadini ed imprese oltre che per i dipendenti della stessa PA;</span></li>
+      <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">l&rsquo;utilizzo di soluzioni in cloud permette alle amministrazioni di beneficiare di risparmi significativi da reinvestire nello sviluppo di nuovi servizi, maggiore trasparenza sui costi e sull&rsquo;utilizzo dei servizi, agilit&agrave; e scalabilit&agrave; nella gestione delle infrastrutture;</span></li>
+      <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">la migrazione al cloud prevede un miglioramento dell&rsquo;efficienza energetica delle infrastrutture della PA e maggiore sostenibilit&agrave; ambientale grazie alla dismissione dei data center meno efficienti. </span></li>
+      </ul>
     stalls: '16,600 enti'
     accessSectionId: soluzioni-standard
     accessLabel: Soluzioni Standard
@@ -98,7 +117,11 @@ beneficiaries:
         label: Province autonome
       - value: universita
         label: Università
-    description: Sviluppare una Piattaforma Digitale Nazionale Dati (PDND) per garantire l'interoperabilità dei dati pubblici, permettendo così agli enti di erogare servizi in modo sicuro, più veloce ed efficace e ai cittadini di non fornire nuovamente informazioni che la PA già possiede.
+    description: |
+      Sviluppare una Piattaforma Digitale Nazionale Dati (PDND) per garantire l'interoperabilità dei dati pubblici, permettendo così agli enti di erogare servizi in modo sicuro, più veloce ed efficace e ai cittadini di non fornire nuovamente informazioni che la PA già possiede.
+      <p><strong></strong></p>
+      <p><strong>Vantaggi per la PA</strong><strong></strong></p>
+      <p><strong><span style="font-weight: 400;">Per fornire servizi digitali a cittadini e imprese, gli enti devono scambiarsi informazioni in modo efficiente e sicuro. La Piattaforma semplifica questo scambio permettendo agli enti pubblici di accedere alle informazioni in possesso di altri enti: in questo modo la Pubblica Amministrazione non chieder&agrave; al cittadino o all&rsquo;impresa dati gi&agrave; in suo possesso, applicando il principio </span><i><span style="font-weight: 400;">Once Only.</span></i></strong></p>
     stalls: '170 enti'
     accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
@@ -142,7 +165,15 @@ beneficiaries:
         label: Comuni
       - value: scuole
         label: Scuole
-    description: Migliorare l'esperienza dei servizi pubblici digitali definendo e promuovendo l’adozione di modelli collaudati e riutilizzabili per la creazione di siti internet e l’erogazione di servizi pubblici digitali.
+    description: |
+      Migliorare l'esperienza dei servizi pubblici digitali definendo e promuovendo l’adozione di modelli collaudati e riutilizzabili per la creazione di siti internet e l’erogazione di servizi pubblici digitali.
+      <p><strong></strong></p>
+      <p><strong>Vantaggi per la PA</strong><strong></strong></p>
+      <ul>
+      <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">rafforzamento della fiducia nelle istituzioni da parte dei cittadini. Servizi digitali di qualit&agrave; possono colmare sia il digital divide che le disparit&agrave; di accesso;</span></li>
+      <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">opportunit&agrave; per tutte le PA, anche quelle con meno risorse, di poter garantire un&rsquo;esperienza d&rsquo;uso semplice, efficace, trasparente e accessibile;</span></li>
+      <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">risparmio di risorse, automatizzando e riusando soluzioni gi&agrave; collaudate, chiavi in mano.</span></li>
+      </ul>
     stalls: '16,500 enti'
     accessSectionId: soluzioni-standard
     accessLabel: Soluzioni standard
@@ -161,7 +192,16 @@ beneficiaries:
         label: Province autonome
       - value: altre-pa-locali
         label: Altre PAL
-    description: "Migliorare l'accessibilità dei servizi pubblici digitali attraverso la diffusione di strumenti e strategie condivise: da test di usabilità ad attività di comunicazione e disseminazione passando per lo sviluppo di kit dedicati e altro."
+    description: |
+      Migliorare l'accessibilità dei servizi pubblici digitali attraverso la diffusione di strumenti e strategie condivise: da test di usabilità ad attività di comunicazione e disseminazione passando per lo sviluppo di kit dedicati e altro.
+      <p><strong></strong></p>
+      <p><strong>Vantaggi per la PA</strong><strong></strong></p>
+      <ul>
+      <li aria-level="1"><span>accesso a strumenti (webkit) utili nella progettazione ed implementazione dei servizi digitali;</span></li>
+      <li aria-level="1"><span>partecipazione a iniziative formative finalizzate ad aumentare le competenze in materia da parte degli operatori pubblici;</span></li>
+      <li aria-level="1"><span>accesso a supporto tecnico specialistico;&nbsp;</span></li>
+      <li aria-level="1"><span>implementazione di tecnologie assistive necessarie alle postazioni di lavoro dei lavoratori con disabilit&agrave;.</span><span></span></li>
+      </ul>
     stalls: '55 enti'
     accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
@@ -192,7 +232,12 @@ beneficiaries:
         label: Enti di ricerca pubblica
       - value: consorzi-ricerca
         label: Consorzi interuniversitari di ricerca
-    description: Accelerare l'adozione di pagoPA, la piattaforma digitale per i pagamenti verso le Pubbliche Amministrazioni, e dell’app IO quale principale punto di contatto tra Enti e cittadini per la fruizione dei servizi pubblici digitali.
+    description: |
+      Accelerare l'adozione di pagoPA, la piattaforma digitale per i pagamenti verso le Pubbliche Amministrazioni, e dell’app IO quale principale punto di contatto tra Enti e cittadini per la fruizione dei servizi pubblici digitali.
+      <p><strong></strong></p>
+      <p><strong>Vantaggi per la PA</strong><strong></strong></p>
+      <p><span style="font-weight: 400;">pagoPA consente alle Pubbliche Amministrazioni di gestire gli incassi in modo centralizzato ed efficiente, offrendo sistemi automatici di rendicontazione e riconciliazione con un significativo risparmio in termini di risorse, tempi e costi e assicurando un servizio migliore ai cittadini.</span></p>
+      <p><span style="font-weight: 400;">IO permette alle diverse PA, locali o nazionali, di raccogliere tutti i servizi, le comunicazioni e i relativi documenti in un unico luogo e di interfacciarsi in modo semplice, rapido e sicuro con i cittadini.</span></p>
     stalls: '17,500 enti'
     accessSectionId: soluzioni-standard
     accessLabel: Soluzioni Standard
@@ -227,7 +272,12 @@ beneficiaries:
         label: Enti di ricerca pubblica
       - value: consorzi-ricerca
         label: Consorzi interuniversitari di ricerca
-    description: Favorire l'adozione dell’identità digitale (Sistema Pubblico di Identità Digitale, SPID e Carta d'Identità Elettronica, CIE) e dell'Anagrafe nazionale della popolazione residente (ANPR).
+    description: |
+      Favorire l'adozione dell’identità digitale (Sistema Pubblico di Identità Digitale, SPID e Carta d'Identità Elettronica, CIE) e dell'Anagrafe nazionale della popolazione residente (ANPR).
+      <p><strong></strong></p>
+      <p><strong>Vantaggi per la PA</strong><strong></strong></p>
+      <p><span style="font-weight: 400;">Le soluzioni di identit&agrave; digitale SPID e CIE consentono alle amministrazioni di abbandonare i diversi sistemi di autenticazione gestiti localmente, permettendo di risparmiare risorse (in termini di lavoro e costo necessari per il rilascio e la manutenzione delle credenziali) ed offrire un accesso sicuro e veloce ed omogeneo ai servizi online su tutto il territorio nazionale.</span></p>
+      <p><span style="font-weight: 400;">Con ANPR le amministrazioni potranno dialogare in maniera efficiente tra di loro, avendo&nbsp; a disposizione un punto di riferimento unico di dati e informazioni anagrafiche, dal quale poter reperire informazioni certe e sicure per poter erogare servizi integrati e pi&ugrave; efficienti per i cittadini. Per la Pubblica Amministrazione significa guadagnare in efficienza superando le precedenti frammentazioni, ottimizzare le risorse, semplificare e automatizzare le operazioni relative ai servizi anagrafici, consultare o estrarre dati, monitorare le attivit&agrave; ed effettuare analisi e statistiche</span></p>
     stalls: '10,300 enti'
     accessSectionId: soluzioni-standard
     accessLabel: Soluzioni Standard
@@ -242,7 +292,11 @@ beneficiaries:
         label: PA Centrali
       - value: comuni
         label: Comuni
-    description: Sviluppare e implementare la Piattaforma notifiche digitali degli atti pubblici, l’infrastruttura che le PA utilizzeranno per la notificazione di atti amministrativi a valore legale verso persone fisiche e giuridiche, contribuendo ad una riduzione di costi e tempo per cittadini ed enti. 
+    description: |
+      Sviluppare e implementare la Piattaforma notifiche digitali degli atti pubblici, l’infrastruttura che le PA utilizzeranno per la notificazione di atti amministrativi a valore legale verso persone fisiche e giuridiche, contribuendo ad una riduzione di costi e tempo per cittadini ed enti. 
+      <p><strong></strong></p>
+      <p><strong>Vantaggi per la PA</strong><strong></strong></p>
+      <p><span style="font-weight: 400;">Accedere a un sistema di notifica digitale permetter&agrave; alla PA di abbattere le spese vive legate all&rsquo;attuale processo di notifica (stampa cartacea e spedizione degli atti), anche in caso di inadempimento da parte del cittadino. La certezza delle notifiche, inoltre, consente di ridurre una cospicua parte del contenzioso e i relativi costi di gestione. </span></p>
     stalls: '7,900 enti'
     accessSectionId: soluzioni-standard
     accessLabel: Soluzioni standard
@@ -255,7 +309,13 @@ beneficiaries:
     tags:
       - value: citta-metropolitane
         label: "Città metropolitane"
-    description: "Promuovere l'adozione di Mobility as a Service (MaaS) nei comuni per digitalizzare il trasporto locale e fornire ai cittadini un'esperienza di mobilità integrata: dalla pianificazione del viaggio ai pagamenti."
+    description: |
+      Promuovere l'adozione di Mobility as a Service (MaaS) nei comuni per digitalizzare il trasporto locale e fornire ai cittadini un'esperienza di mobilità integrata: dalla pianificazione del viaggio ai pagamenti.
+      <p><strong></strong></p>
+      <p><strong>Vantaggi per la PA</strong><strong></strong></p>
+      <p><span style="font-weight: 400;">Ogni Pubblica Amministrazione avr&agrave; la possibilit&agrave; di allocare ed ottimizzare in modo efficiente le risorse destinate alla mobilit&agrave; potenziando interventi di pianificazione territoriale secondo i reali bisogni dei cittadini.</span></p>
+      <p><span style="font-weight: 400;">L'utilizzo di soluzioni di Mobility as a Service (MaaS) miglioreranno i sistemi di trasporto, ridurranno il traffico urbano, gli incidenti stradali e, grazie ad un minore utilizzo dell&rsquo;auto privata, vi sar&agrave; un&rsquo;importante diminuzione dei consumi energetici, delle emissioni e dell&rsquo;inquinamento.&nbsp;</span></p>
+      <p><span style="font-weight: 400;">La PA potr&agrave; quindi raggiungere obiettivi di sostenibilit&agrave; economica, ambientale e sociale per l&rsquo;intera collettivit&agrave;.</span></p>
     stalls: '10 enti'
     accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
@@ -268,7 +328,15 @@ beneficiaries:
     tags:
       - value: pa-centrali
         label: PA Centrali
-    description: Rafforzare le difese della Pubblica Amministrazione italiana per proteggerla dalle minacce informatiche, come frodi, ricatti e attacchi terroristici e tutti i rischi posti dalla criminalità informatica.
+    description: |
+      Rafforzare le difese della Pubblica Amministrazione italiana per proteggerla dalle minacce informatiche, come frodi, ricatti e attacchi terroristici e tutti i rischi posti dalla criminalità informatica.
+      <p><strong></strong></p>
+      <p><strong>Vantaggi per la PA</strong><strong></strong></p>
+      <p><span style="font-weight: 400;">La sicurezza riveste un&rsquo;importanza fondamentale per assicurare la disponibilit&agrave;, l&rsquo;integrit&agrave;, la riservatezza delle informazioni, dei servizi offerti e della resilienza della complessa macchina amministrativa. Un&rsquo;adeguata politica di controllo e gestione del rischio informatico consente di fornire servizi digitali a cittadini, imprese e professionisti sicuri e senza interruzioni. La misura, in particolare, permette di raggiungere obiettivi importanti, tra cui:</span></p>
+      <ul>
+      <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">conservare in tutta sicurezza i dati di Comuni, Province, Regioni,</span></li>
+      <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">abilitare una gestione e un monitoraggio efficienti del rischio informatico.</span></li>
+      </ul>
     stalls: '6 enti'
     accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
@@ -294,7 +362,11 @@ beneficiaries:
     tags:
       - value: 'enti-servizio-civile'
         label: 'Enti iscritti all’albo del servizio civile'
-    description: Sviluppare l'iniziativa “Servizio civile digitale”, finalizzata, tra le altre cose, alla formazione di circa 9.700 volontari e al coinvolgimento di 1 milione di cittadini beneficiari di attività di facilitazione digitale e di educazione digitale.
+    description: |
+      Sviluppare l'iniziativa “Servizio civile digitale”, finalizzata, tra le altre cose, alla formazione di circa 9.700 volontari e al coinvolgimento di 1 milione di cittadini beneficiari di attività di facilitazione digitale e di educazione digitale.
+      <p></p>
+      <p><strong>Vantaggi per la PA</strong></p>
+      <p><span style="font-weight: 400;">Una cittadinanza in grado di utilizzare consapevolmente le possibilit&agrave; offerte dalle tecnologie digitali consente all&rsquo;amministrazione di pubblica di erogare servizi anche in modalit&agrave; digitale, migliorando quindi la qualit&agrave; dell&rsquo;offerta e il rapporto tra cittadini e istituzioni.</span></p>
     stalls: '100 enti'
     accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
@@ -309,7 +381,11 @@ beneficiaries:
         label: Regioni
       - value: province-autonome
         label: Province autonome
-    description: Ampliare l’esperienza dei "Centri di facilitazione digitale", punti di accesso fisici, solitamente situati in biblioteche, scuole e centri sociali, che forniscono ai cittadini formazione sia di persona che online sulle competenze digitali al fine di supportare l’inclusione digitale.
+    description: |
+      Ampliare l’esperienza dei "Centri di facilitazione digitale", punti di accesso fisici, solitamente situati in biblioteche, scuole e centri sociali, che forniscono ai cittadini formazione sia di persona che online sulle competenze digitali al fine di supportare l’inclusione digitale.
+      <p><strong></strong></p>
+      <p><strong>Vantaggi per la PA</strong><strong></strong></p>
+      <p><span style="font-weight: 400;">L&rsquo;iniziativa consentir&agrave; di sviluppare e potenziare le capacit&agrave; digitali anche in un&rsquo;amministrazione pubblica, incluse le scuole, in modo da abilitare l&rsquo;evoluzione del servizio seguendo le esigenze della cittadinanza e offrire un servizio di assistenza rivolto anche alle categorie svantaggiate.</span></p>
     stalls: '21 enti'
     accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
