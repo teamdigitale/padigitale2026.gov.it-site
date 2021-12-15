@@ -50,10 +50,6 @@ const reducer = (state, { type, payload }) => {
   return state;
 };
 
-const initState = {
-  status: INITIAL,
-};
-
 export const UnsubscribePage = ({ location }) => {
   const classes = useStyles();
   const params = new URLSearchParams(location.search);
@@ -64,6 +60,14 @@ export const UnsubscribePage = ({ location }) => {
       siteMetadata: { apiUrl },
     },
   } = useStaticQuery(query);
+
+  let initState = {};
+
+  if (uuid && address) {
+    initState.status = INITIAL;
+  } else {
+    initState.status = ERROR;
+  }
   const [state, dispatch] = useReducer(reducer, initState);
 
   const unsubscribe = useCallback(async () => {
@@ -122,8 +126,10 @@ export const UnsubscribePage = ({ location }) => {
         )}
         {state.status === SUCCESS && (
           <div className="text-center text-primary">
-            <div className={classes.title}
-            dangerouslySetInnerHTML={{ __html: content[state.status].title }}></div>
+            <div
+              className={classes.title}
+              dangerouslySetInnerHTML={{ __html: content[state.status].title }}
+            ></div>
             <div
               className="my-4 text-dark"
               dangerouslySetInnerHTML={{ __html: content[state.status].body }}
