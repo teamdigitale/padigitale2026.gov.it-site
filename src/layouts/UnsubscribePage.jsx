@@ -99,13 +99,11 @@ export const UnsubscribePage = ({ location }) => {
       <Hero>
         {state.status === INITIAL && (
           <div className="text-center text-primary">
-            <div className={classes.title}>
-              Annullare l'iscrizione agli aggiornamenti?
-            </div>
-            <div className="my-4 text-dark">
-              Annullando l’iscrizione non riceverai ulteriori comunicazioni
-              <br></br>o aggiornamenti da PA Digitale 2026
-            </div>
+            <div className={classes.title}>{content[state.status].title}</div>
+            <div
+              className="my-4 text-dark"
+              dangerouslySetInnerHTML={{ __html: content[state.status].body }}
+            ></div>
             <Button
               onClick={unsubscribe}
               type="button"
@@ -113,7 +111,7 @@ export const UnsubscribePage = ({ location }) => {
               aria-label={`Annulla iscrizione`}
               color="primary"
             >
-              Annulla Iscrizione
+              {content[state.status].button}
             </Button>
           </div>
         )}
@@ -124,7 +122,8 @@ export const UnsubscribePage = ({ location }) => {
         )}
         {state.status === SUCCESS && (
           <div className="text-center text-primary">
-            <div className="display-3">{content[state.status].title}</div>
+            <div className={classes.title}
+            dangerouslySetInnerHTML={{ __html: content[state.status].title }}></div>
             <div
               className="my-4 text-dark"
               dangerouslySetInnerHTML={{ __html: content[state.status].body }}
