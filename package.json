@@ -1,6 +1,6 @@
 {
   "name": "padigitale2026",
-  "version": "1.3.0",
+  "version": "1.4.1",
   "description": "Sito https://padigitale2026.gov.it/",
   "main": "src/pages/index.js",
   "repository": "git@github.com:teamdigitale/padigitale2026.gov.it-site.git",
