@@ -29,7 +29,7 @@ const useStyles = createUseStyles({
   },
   button: {
     composes: 'btn text-uppercase btn-primary mb-5',
-    width: '11.111rem',
+    minWidth: '11.111rem',
   },
 });
 
