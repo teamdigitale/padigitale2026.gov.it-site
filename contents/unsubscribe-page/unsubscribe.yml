@@ -3,10 +3,10 @@ initial:
   body: Annullando l’iscrizione non riceverai ulteriori comunicazioni<br>o aggiornamenti da PA Digitale 2026
   button: Annulla Iscrizione
 error:
-  title: Errore nella conferma
-  body: "Abbiamo riscontrato un problema tecnico: per favore riprova inviando nuovamente la richiesta."
+  title: Errore nella conferma <svg role="img" focusable="false" aria-label="errore" class="icon" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M27.3337 8.53341V19.6001L19.467 27.3334H8.53366L0.666992 19.6001V8.53341L8.53366 0.666748H19.467L27.3337 8.53341ZM13.3337 5.60008V16.9334H14.9337V5.60008H13.3337ZM14.8003 22.4001H13.2003V20.0001H14.8003V22.4001ZM18.9337 2.00008L26.0003 9.06675V19.0667L18.9337 26.0001H9.06699L2.00033 19.0667V9.06675L9.06699 2.00008H18.9337Z" fill="#D1344C"/></svg>
+  body: "Abbiamo riscontrato un problema tecnico: per favore riprova<br> inviando nuovamente la richiesta."
   button: Riprova
 success:
   title: Iscrizione aggiornamenti annullata <svg role="img" focusable="false" aria-label="successo" class="icon" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M14.0003 27.3334C6.63653 27.3334 0.666992 21.3639 0.666992 14.0001C0.666992 6.63628 6.63653 0.666748 14.0003 0.666748C17.5365 0.666748 20.9279 2.07151 23.4284 4.57199C25.9289 7.07248 27.3337 10.4639 27.3337 14.0001C27.3337 21.3639 21.3641 27.3334 14.0003 27.3334ZM20.8003 8.53341L21.7337 9.46675L11.3337 19.6001L5.06699 13.4667L6.00033 12.5334L11.3337 17.7334L20.8003 8.53341ZM14.0003 2.00008C20.6277 2.00008 26.0003 7.37266 26.0003 14.0001C26.0003 20.6275 20.6277 26.0001 14.0003 26.0001C7.37291 26.0001 2.00033 20.6275 2.00033 14.0001C2.00033 7.37266 7.37291 2.00008 14.0003 2.00008Z" fill="#008255"/></svg>
-  body: "Hai annullato l'iscrizione: non riceverai ulteriori comunicazioni<br> o aggiornamenti da PA Digitale 2026"
+  body: "Hai annullato l'iscrizione: non riceverai ulteriori comunicazioni<br>o aggiornamenti da PA Digitale 2026"
   button: Torna alla Homepage

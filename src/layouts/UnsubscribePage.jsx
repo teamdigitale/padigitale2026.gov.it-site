@@ -12,9 +12,24 @@ const { title: seoTitle, description: seoDescription } = seo.unsubscribePage;
 
 const useStyles = createUseStyles({
   title: {
-    fontSize: '27px',
+    fontSize: '1.5rem',
     fontWeight: '700',
     color: '#33485C',
+    marginTop: '1.04rem',
+
+    '& svg': {
+      marginLeft: '8px',
+    },
+  },
+  bodyText: {
+    fontSize: '1rem',
+    color: '#33485C',
+    lineHeight: '1.389rem',
+    margin: '20px 0 30px 0',
+  },
+  button: {
+    composes: 'btn text-uppercase btn-primary mb-5',
+    width: '11.111rem',
   },
 });
 
@@ -61,14 +76,19 @@ export const UnsubscribePage = ({ location }) => {
     },
   } = useStaticQuery(query);
 
-  let initState = {};
+  let initState = {
+    status: LOADING,
+  };
 
-  if (uuid && address) {
-    initState.status = INITIAL;
-  } else {
-    initState.status = ERROR;
-  }
   const [state, dispatch] = useReducer(reducer, initState);
+
+  useEffect(() => {
+    if (!uuid || !address) {
+      dispatch({ type: ERROR, payload: {} });
+    } else {
+      dispatch({ type: INITIAL, payload: {} });
+    }
+  }, [(uuid, address)]);
 
   const unsubscribe = useCallback(async () => {
     dispatch({ type: LOADING, payload: {} });
@@ -105,13 +125,13 @@ export const UnsubscribePage = ({ location }) => {
           <div className="text-center text-primary">
             <div className={classes.title}>{content[state.status].title}</div>
             <div
-              className="my-4 text-dark"
+              className={classes.bodyText}
               dangerouslySetInnerHTML={{ __html: content[state.status].body }}
             ></div>
             <Button
               onClick={unsubscribe}
               type="button"
-              className="btn text-uppercase btn-primary"
+              className={classes.button}
               aria-label={`Annulla iscrizione`}
               color="primary"
             >
@@ -131,25 +151,29 @@ export const UnsubscribePage = ({ location }) => {
               dangerouslySetInnerHTML={{ __html: content[state.status].title }}
             ></div>
             <div
-              className="my-4 text-dark"
+              className={classes.bodyText}
               dangerouslySetInnerHTML={{ __html: content[state.status].body }}
             />
-            <Link to="/" className="btn text-uppercase btn-primary">
+            <Link to="/" className={classes.button}>
               {content[state.status].button}
             </Link>
           </div>
         )}
         {state.status === ERROR && (
           <div className="text-center text-primary">
-            <div className="display-3">{content[state.status].title}</div>
             <div
-              className="my-4 text-dark"
+              className={classes.title}
+              dangerouslySetInnerHTML={{ __html: content[state.status].title }}
+            ></div>
+            <div
+              className={classes.bodyText}
               dangerouslySetInnerHTML={{ __html: content[state.status].body }}
             />
             <Button
               type="button"
-              className="btn text-uppercase btn-danger"
+              className={classes.button}
               onClick={unsubscribe}
+              color="primary"
             >
               {content[state.status].button}
             </Button>
