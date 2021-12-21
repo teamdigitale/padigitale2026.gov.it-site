@@ -1,17 +1,15 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { Container, Input, Row, Col } from 'design-react-kit';
 import { createUseStyles } from 'react-jss';
-import content from '../../contents/home-page/home.yml';
+import { announce } from '@react-aria/live-announcer';
 import faq from '../../contents/faq-page/faq.yml';
 import { SEO } from '../components/SEO';
 import seo from '../../contents/seo.yml';
-import { ModalUpdates } from '../components/modal/ModalUpdates';
 import { GlobalStateContext } from '../context/globalContext';
 import { SideNavigation } from './faq/SideNavigation';
 import { QuestionSection } from './faq/QuestionSection';
 import { SupportSection } from './faq/SupportSection';
 import { HeroSupport } from './support/Hero';
-import { announce } from '@react-aria/live-announcer';
 
 const { title: seoTitle, description: seoDescription } = seo.faqPage;
 
@@ -43,6 +41,7 @@ const useStyles = createUseStyles({
   },
 });
 
+// eslint-disable-next-line sonarjs/cognitive-complexity
 export const FaqPage = () => {
   const classes = useStyles();
   const [inputValue, setInputValue] = useState('');

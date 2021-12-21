@@ -1,18 +1,17 @@
 import React, { useEffect, useContext } from 'react';
+import { announce } from '@react-aria/live-announcer';
 import { support } from '../../contents/home-page/home.yml';
 import content from '../../contents/come-funziona/come-funziona.yml';
 import { SEO } from '../components/SEO';
 // import { ComeFunzionaCarousel } from '../components/carousel/ComeFunzionaCarousel';
-import { Tab } from '../components/Tab';
 import { TabAdobe } from '../components/TabAdobe';
 import { Timeline } from '../components/carousel/Timeline';
 import { HeroHowItWorks } from '../components/hero/HeroHowItWorks';
 import seo from '../../contents/seo.yml';
+import { GlobalStateContext } from '../context/globalContext';
 import { Involved } from './come-funziona/Involved';
 import { Beneficiaries } from './come-funziona/Beneficiaries';
-import { announce } from '@react-aria/live-announcer';
 import { SupportSection } from './faq/SupportSection';
-import { GlobalStateContext } from '../context/globalContext';
 
 const { title: seoTitle, description: seoDescription } = seo.comeFunzionaPage;
 
@@ -70,11 +69,7 @@ export const ComeFunzionaPage = () => {
       />
       <Timeline content={content.timeline} title="Il calendario" />
       <Beneficiaries item={content.beneficiaries} />
-      <Involved
-        title={content.involved.title}
-        category={content.involved.category}
-        cards={content.involved.cards}
-      />
+      <Involved title={content.involved.title} category={content.involved.category} cards={content.involved.cards} />
       <SupportSection
         supportList={support.cards}
         title={support.title}
