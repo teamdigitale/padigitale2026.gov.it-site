@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { createUseStyles } from 'react-jss';
 import { Link } from 'gatsby';
+import PropTypes from 'prop-types';
 import { HeroCategory } from '../../components/hero/HeroCategory';
 import { HeroTitle } from '../../components/hero/HeroTitle';
 import { HeroBody } from '../../components/hero/HeroBody';
@@ -12,6 +13,7 @@ import { GlobalStateContext } from '../../context/globalContext';
 
 const useStyles = createUseStyles({
   btnPrimaryLight: {
+    // eslint-disable-next-line sonarjs/no-duplicate-string
     backgroundColor: 'var(--white)',
     color: 'var(--primary)',
   },
@@ -76,7 +78,6 @@ export const HeroImage = ({
   firstButtonHref,
   firstButtonLabel,
   firstButtonAriaLabel,
-  secondButtonHref,
   secondButtonLabel,
   secondButtonAriaLabel,
   imageUrl,
@@ -84,7 +85,7 @@ export const HeroImage = ({
   heroTitleId,
 }) => {
   const classes = useStyles();
-  const [state, dispatch] = useContext(GlobalStateContext);
+  const [, dispatch] = useContext(GlobalStateContext);
 
   return (
     <Hero Tag="section" ariaLabelledBy={heroTitleId}>
@@ -118,7 +119,12 @@ export const HeroImage = ({
                 ariaLabel={secondButtonAriaLabel}
                 className="btn text-uppercase mx-4 ml-lg-0 my-3 my-md-0 btn-outline-primary"
                 to="/come-funziona#beneficiari"
-                onClick={() => dispatch({ type: 'SET:HOW_SECTION_ID', payload: { howId: 'beneficiari' } })}
+                onClick={() =>
+                  dispatch({
+                    type: 'SET:HOW_SECTION_ID',
+                    payload: { howId: 'beneficiari' },
+                  })
+                }
               >
                 {secondButtonLabel}
               </Link>
@@ -133,4 +139,20 @@ export const HeroImage = ({
       </div>
     </Hero>
   );
+};
+
+HeroImage.propTypes = {
+  category: PropTypes.any,
+  title: PropTypes.any,
+  body: PropTypes.any,
+  firstInternal: PropTypes.any,
+  firstButtonHref: PropTypes.any,
+  firstButtonLabel: PropTypes.any,
+  firstButtonAriaLabel: PropTypes.any,
+  secondButtonHref: PropTypes.any,
+  secondButtonLabel: PropTypes.any,
+  secondButtonAriaLabel: PropTypes.any,
+  imageUrl: PropTypes.any,
+  imageAlt: PropTypes.any,
+  heroTitleId: PropTypes.any,
 };

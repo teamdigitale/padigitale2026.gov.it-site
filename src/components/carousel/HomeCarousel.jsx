@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { createUseStyles } from 'react-jss';
-import { Row, Col, Card, CardBody, CardTitle, CardText, Button } from 'design-react-kit';
+import { Row, Col, Card, CardBody, CardTitle, CardText } from 'design-react-kit';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import { DesktopSwiper } from '../DesktopSwiper';
