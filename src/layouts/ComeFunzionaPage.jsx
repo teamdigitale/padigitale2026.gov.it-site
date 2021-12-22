@@ -3,7 +3,6 @@ import { announce } from '@react-aria/live-announcer';
 import { support } from '../../contents/home-page/home.yml';
 import content from '../../contents/come-funziona/come-funziona.yml';
 import { SEO } from '../components/SEO';
-// import { ComeFunzionaCarousel } from '../components/carousel/ComeFunzionaCarousel';
 import { TabAdobe } from '../components/TabAdobe';
 import { Timeline } from '../components/carousel/Timeline';
 import { HeroHowItWorks } from '../components/hero/HeroHowItWorks';

@@ -1,5 +1,6 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
+import PropTypes from 'prop-types';
 
 const useStyles = createUseStyles({
   paragraph: {
@@ -14,4 +15,8 @@ const useStyles = createUseStyles({
 export const HeroParagraph = ({ text }) => {
   const classes = useStyles();
   return <p className={classes.paragraph} dangerouslySetInnerHTML={{ __html: text }}></p>;
+};
+
+HeroParagraph.propTypes = {
+  text: PropTypes.any,
 };

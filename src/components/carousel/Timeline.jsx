@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { createUseStyles } from 'react-jss';
 import { Row, Col } from 'design-react-kit';
 import PropTypes from 'prop-types';
@@ -133,7 +133,6 @@ const useStyles = createUseStyles({
 
 export const Timeline = ({ content, title }) => {
   const classes = useStyles();
-  // const [activeSlide, setActiveSlide] = useState(0);
 
   useEffect(() => {
     const timeline = document.querySelector('.swiper');
