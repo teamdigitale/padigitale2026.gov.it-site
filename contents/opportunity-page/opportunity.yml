@@ -69,7 +69,7 @@ beneficiaries:
     accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
     moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: 'https://italiadomani.gov.it/it/investimenti/infrastrutture-digitali.html'
+    moreInfoLink: 'https://italiadomani.gov.it/it/Interventi/investimenti/infrastrutture-digitali.html'
   - number: 1.2
     id: abili-faci-migr
     title: Abilitazione e facilitazione migrazione al Cloud
@@ -97,7 +97,7 @@ beneficiaries:
     accessSectionId: soluzioni-standard
     accessLabel: Soluzioni Standard
     moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: 'https://italiadomani.gov.it/it/investimenti/abilitazione-e-facilitazione-migrazione-al-cloud.html'
+    moreInfoLink: 'https://italiadomani.gov.it/it/Interventi/investimenti/abilitazione-e-facilitazione-migrazione-al-cloud.html'
   - number: 1.3.1
     id: piatt-dig-naz
     title: Piattaforma Digitale Nazionale Dati
@@ -126,7 +126,7 @@ beneficiaries:
     accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
     moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: 'https://italiadomani.gov.it/it/investimenti/dati-e-interoperabilita.html'
+    moreInfoLink: 'https://italiadomani.gov.it/it/Interventi/investimenti/dati-e-interoperabilita.html'
   - number: 1.3.2
     id: sport-digi-unic
     title: Sportello Digitale Unico
@@ -153,7 +153,7 @@ beneficiaries:
     accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
     moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: 'https://italiadomani.gov.it/it/investimenti/dati-e-interoperabilita.html'
+    moreInfoLink: 'https://italiadomani.gov.it/it/Interventi/investimenti/dati-e-interoperabilita.html'
   - number: 1.4.1
     id: esp-serv-pubb
     title: Esperienza dei servizi pubblici
@@ -178,7 +178,7 @@ beneficiaries:
     accessSectionId: soluzioni-standard
     accessLabel: Soluzioni standard
     moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: 'https://italiadomani.gov.it/it/investimenti/servizi-digitali-e-cittadinanza-digitale.html'
+    moreInfoLink: 'https://italiadomani.gov.it/it/Interventi/investimenti/servizi-digitali-e-cittadinanza-digitale.html'
   - number: 1.4.2
     id: access
     title: Accessibilità
@@ -206,7 +206,7 @@ beneficiaries:
     accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
     moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: 'https://italiadomani.gov.it/it/investimenti/servizi-digitali-e-cittadinanza-digitale.html'
+    moreInfoLink: 'https://italiadomani.gov.it/it/Interventi/investimenti/servizi-digitali-e-cittadinanza-digitale.html'
   - number: 1.4.3
     id: adoz-pago
     title: Adozione PagoPA e app IO
@@ -242,7 +242,7 @@ beneficiaries:
     accessSectionId: soluzioni-standard
     accessLabel: Soluzioni Standard
     moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: 'https://italiadomani.gov.it/content/sogei-ng/it/it/investimenti/servizi-digitali-e-cittadinanza-digitale.html'
+    moreInfoLink: 'https://italiadomani.gov.it/it/Interventi/investimenti/servizi-digitali-e-cittadinanza-digitale.html'
   - number: 1.4.4
     id: adoz-id
     title: Adozione identità digitale
@@ -282,7 +282,7 @@ beneficiaries:
     accessSectionId: soluzioni-standard
     accessLabel: Soluzioni Standard
     moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: 'https://italiadomani.gov.it/it/investimenti/servizi-digitali-e-cittadinanza-digitale.html'
+    moreInfoLink: 'https://italiadomani.gov.it/it/Interventi/investimenti/servizi-digitali-e-cittadinanza-digitale.html'
   - number: 1.4.5
     id: digi-avvisi
     title: Digitalizzazione degli avvisi pubblici
@@ -301,7 +301,7 @@ beneficiaries:
     accessSectionId: soluzioni-standard
     accessLabel: Soluzioni standard
     moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: 'https://italiadomani.gov.it/it/investimenti/servizi-digitali-e-cittadinanza-digitale.html'
+    moreInfoLink: 'https://italiadomani.gov.it/it/Interventi/investimenti/servizi-digitali-e-cittadinanza-digitale.html'
   - number: 1.4.6
     id: maas
     title: MaaS
@@ -320,7 +320,7 @@ beneficiaries:
     accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
     moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: 'https://italiadomani.gov.it/it/investimenti/servizi-digitali-e-cittadinanza-digitale.html'
+    moreInfoLink: 'https://italiadomani.gov.it/it/Interventi/investimenti/servizi-digitali-e-cittadinanza-digitale.html'
   - number: 1.5
     id: cyber
     title: Cybersecurity
@@ -341,7 +341,7 @@ beneficiaries:
     accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
     moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: 'https://italiadomani.gov.it/it/investimenti/cybersecurity-sicurezza-informatica.html'
+    moreInfoLink: 'https://italiadomani.gov.it/it/Interventi/investimenti/cybersecurity-sicurezza-informatica.html'
   - number: 1.6
     id: digi-gran-amm
     title: Digitalizzazione grandi amministrazioni centrali
@@ -354,7 +354,7 @@ beneficiaries:
     accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
     moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: 'https://italiadomani.gov.it/it/investimenti/digitalizzazione-delle-grandi-amministrazioni-centrali.html'
+    moreInfoLink: 'https://italiadomani.gov.it/it/Interventi/investimenti/digitalizzazione-delle-grandi-amministrazioni-centrali.html'
   - number: 1.7.1
     id: servi-civi
     title: Servizio civile digitale
@@ -371,7 +371,7 @@ beneficiaries:
     accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
     moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: 'https://italiadomani.gov.it/it/investimenti/competenze-digitali-di-base.html'
+    moreInfoLink: 'https://italiadomani.gov.it/it/Interventi/investimenti/competenze-digitali-di-base.html'
   - number: 1.7.2
     id: centri-facili
     title: Centri di facilitazione digitale
@@ -390,7 +390,7 @@ beneficiaries:
     accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
     moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: 'https://italiadomani.gov.it/it/investimenti/competenze-digitali-di-base.html'
+    moreInfoLink: 'https://italiadomani.gov.it/it/Interventi/investimenti/competenze-digitali-di-base.html'
 modal:
   selectRepresent:
     - value: public-administration

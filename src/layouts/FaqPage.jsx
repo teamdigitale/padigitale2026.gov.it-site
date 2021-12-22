@@ -81,7 +81,6 @@ export const FaqPage = () => {
         }
       });
     }
-    console.log(count);
     return count;
   }
 
@@ -102,7 +101,6 @@ export const FaqPage = () => {
     }
     setquestNum(countQuestions());
     if (questions.length === 0) {
-      console.log(questions);
       announce('Nessun risultato');
     } else {
       announce('Numero di FAQ in pagina aggiornato');
