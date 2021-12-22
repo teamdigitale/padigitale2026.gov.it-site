@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable max-lines-per-function */
 import React, { useState, useEffect, useContext } from 'react';
 import { useForm, Controller } from 'react-hook-form';
@@ -545,7 +546,7 @@ export const ModalMessage = () => {
                           ></textarea>
                         )}
                       />
-                      <label className={textareaState == 'active' ? 'active' : ''} htmlFor="message">
+                      <label className={textareaState === 'active' ? 'active' : ''} htmlFor="message">
                         {messageLabel}
                       </label>
                       <span className={classes.maxLengthLabel}>

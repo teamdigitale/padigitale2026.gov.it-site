@@ -222,5 +222,7 @@ DesktopSwiper.propTypes = {
   desktopNavigation: PropTypes.bool,
   navigation: PropTypes.bool,
   className: PropTypes.any,
+  title: PropTypes.any,
+  idCarousel: PropTypes.any,
   id: PropTypes.string,
 };

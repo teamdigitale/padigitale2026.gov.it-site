@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable max-lines-per-function */
 import React, { useState, useEffect, useContext } from 'react';
 import PropTypes from 'prop-types';
@@ -235,7 +236,6 @@ const query = graphql`
 export const ModalUpdates = () => {
   const [{ modalState }, dispatch] = useContext(GlobalStateContext);
   const [selectValue] = useState(null);
-  const [] = useState('not-active');
   const [enteState, setEnteState] = useState('');
   const {
     site: {
@@ -268,7 +268,7 @@ export const ModalUpdates = () => {
           let value = representSelectOptions.querySelector('div[class*="singleValue"]');
           value ? (value = value.innerHTML) : (value = '');
           let valueSelected = selectRepresent.find((valueObj) => {
-            if (value == valueObj.label) {
+            if (value === valueObj.label) {
               return valueObj;
             }
           });
@@ -292,8 +292,9 @@ export const ModalUpdates = () => {
   useEffect(() => {}, [selectValue]);
 
   const onSubmit = async (data, event) => {
+    console.log(data);
     Object.keys(data).map(function (key) {
-      if (data[key] == undefined) {
+      if (data[key] === undefined) {
         delete data[key];
       }
       if (key === 'enteSelect' || key === 'representative' || key === 'messageSelect') {
@@ -502,7 +503,7 @@ export const ModalUpdates = () => {
               <span className={classes.errorLabel} id="error-represent">
                 {errors.represent ? requiredLabel : ''}
               </span>
-              <div className={`${classes.enteContainer} ${enteState == 'other' ? '' : 'hidden'}`}>
+              <div className={`${classes.enteContainer} ${enteState === 'other' ? '' : 'hidden'}`}>
                 <Row className="mt-5">
                   <Col xs={12}>
                     <Controller
@@ -510,7 +511,7 @@ export const ModalUpdates = () => {
                       control={control}
                       rules={{
                         required: {
-                          value: enteState == 'other' ? true : false,
+                          value: enteState === 'other' ? true : false,
                           message: requiredLabel,
                         },
                         pattern: {
@@ -526,7 +527,7 @@ export const ModalUpdates = () => {
                             type="text"
                             aria-describedby="mandatory-label"
                             aria-labelledby={errors.enteType && 'error-enteType'}
-                            aria-required={enteState == 'other' ? true : ''}
+                            aria-required={enteState === 'other' ? true : ''}
                             aria-invalid={errors.enteType && 'true'}
                             {...field}
                             id="enteType"
@@ -587,7 +588,7 @@ export const ModalUpdates = () => {
                       name="enteSelect"
                       rules={{
                         required: {
-                          value: enteState == 'public-administration' ? true : false,
+                          value: enteState === 'public-administration' ? true : false,
                           message: requiredLabel,
                         },
                       }}
