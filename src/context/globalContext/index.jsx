@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 import React, { createContext, useReducer, useState, useEffect } from 'react';
 
 const initialState = { sectionId: null, faqId: null, modalState: false };
