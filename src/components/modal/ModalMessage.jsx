@@ -1,37 +1,20 @@
-import React, { useState, useEffect, useContext, useRef } from 'react';
+/* eslint-disable max-lines-per-function */
+import React, { useState, useEffect, useContext } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { createUseStyles } from 'react-jss';
 import { announce } from '@react-aria/live-announcer';
-import {
-  Row,
-  Col,
-  Modal,
-  ModalBody,
-  ModalFooter,
-  Button,
-  Input,
-  FormGroup,
-  Label,
-} from 'design-react-kit';
+import { Row, Col, Modal, ModalBody, ModalFooter, Button, Input } from 'design-react-kit';
 import Select from 'react-select';
 import { graphql, useStaticQuery } from 'gatsby';
+import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 import content from '../../../contents/opportunity-page/opportunity.yml';
 import notificationsLabel from '../../../contents/notifications.yml';
 import { GlobalStateContext } from '../../context/globalContext';
-import {
-  GoogleReCaptchaProvider,
-  useGoogleReCaptcha,
-} from 'react-google-recaptcha-v3';
 import links from '../../../contents/links.yml';
-
 
 const { privacy } = links.internalLinks;
 
-const {
-  successMessage: successLabels,
-  error: errorLabels,
-  errorAddress: errorAddressLabel,
-} = notificationsLabel;
+const { successMessage: successLabels, error: errorLabels, errorAddress: errorAddressLabel } = notificationsLabel;
 
 const useStyles = createUseStyles({
   modalUpdatesContainer: {
@@ -248,13 +231,14 @@ const query = graphql`
   }
 `;
 
+// eslint-disable-next-line sonarjs/cognitive-complexity
 export const ModalMessage = () => {
   const { executeRecaptcha } = useGoogleReCaptcha();
   const [{ modalStateMessage }, dispatch] = useContext(GlobalStateContext);
   const textareaMaxLength = 300;
-  const [selectValue, setSelectValue] = useState(null);
+  const [selectValue] = useState(null);
   const [textareaState, setTextareaState] = useState('not-active');
-  const [enteState, setEnteState] = useState('');
+  const [, setEnteState] = useState('');
   const {
     site: {
       siteMetadata: { apiUrl },
@@ -283,12 +267,10 @@ export const ModalMessage = () => {
     const setObserver = (mutationsList) => {
       for (const mutation of mutationsList) {
         if (mutation.type === 'childList') {
-          let value = representSelectOptions.querySelector(
-            'div[class*="singleValue"]'
-          );
+          let value = representSelectOptions.querySelector('div[class*="singleValue"]');
           value ? (value = value.innerHTML) : (value = '');
           let valueSelected = selectRepresent.find((valueObj) => {
-            if (value == valueObj.label) {
+            if (value === valueObj.label) {
               return valueObj;
             }
           });
@@ -307,19 +289,19 @@ export const ModalMessage = () => {
     formState: { errors },
   } = useForm();
 
-  const textareaFocusHandler = (event) => {
+  const textareaFocusHandler = () => {
     setTextareaState('active');
   };
 
   const textareaFocusOutHandler = (event) => {
-    if (event.target.value == '') {
+    if (event.target.value === '') {
       setTextareaState('');
     }
   };
 
   const textareaInputHandler = (event) => {
     const number = document.querySelector('#max-length-number');
-    number.innerHTML = textareaMaxLength - parseInt(event.target.value.length);
+    number.innerHTML = textareaMaxLength - parseInt(event.target.value.length, 10);
     announce('Numero di caratteri rimanenti: ' + number.innerHTML);
   };
 
@@ -329,15 +311,11 @@ export const ModalMessage = () => {
 
   const onSubmit = async (data, event) => {
     const token = await executeRecaptcha();
-    Object.keys(data).map(function (key, index) {
-      if (data[key] == undefined) {
+    Object.keys(data).map(function (key) {
+      if (data[key] === undefined) {
         delete data[key];
       }
-      if (
-        key == 'enteSelect' ||
-        key == 'representative' ||
-        key == 'messageSelect'
-      ) {
+      if (key === 'enteSelect' || key === 'representative' || key === 'messageSelect') {
         data[key] = data[key]?.value;
       }
     });
@@ -350,13 +328,9 @@ export const ModalMessage = () => {
     const notificationElement = document.querySelector('.notification');
     const titleElement = notificationElement.querySelector('h5');
     const descriptionElement = notificationElement.querySelector('p');
-    const modalCloseBtn = event.target
-      .closest('.modal-content')
-      .querySelector('.modal-header .btn');
+    const modalCloseBtn = event.target.closest('.modal-content').querySelector('.modal-header .btn');
 
-    const closeNotification = notificationElement.querySelector(
-      '.notification-close'
-    );
+    const closeNotification = notificationElement.querySelector('.notification-close');
 
     const closeNotificationHandler = (event) => {
       event.target.closest('.notification').classList.remove('show');
@@ -405,7 +379,7 @@ export const ModalMessage = () => {
       })
       .then(() => {
         spinner.classList.add('hidden');
-        announce('Invio in corso')
+        announce('Invio in corso');
       });
   };
 
@@ -454,19 +428,11 @@ export const ModalMessage = () => {
             }}
           >
             <span>Chiudi</span>
-            <img
-              src="/assets/icon-close.svg"
-              alt="chiudi modale"
-              aria-hidden="true"
-            />
+            <img src="/assets/icon-close.svg" alt="chiudi modale" aria-hidden="true" />
           </Button>
         </div>
         <ModalBody className={classes.modalBody}>
-          <form
-            onSubmit={handleSubmit(onSubmit, onError)}
-            id="message-form"
-            aria-describedby="mandatory-label"
-          >
+          <form onSubmit={handleSubmit(onSubmit, onError)} id="message-form" aria-describedby="mandatory-label">
             <fieldset>
               <legend>
                 <Row>
@@ -476,16 +442,12 @@ export const ModalMessage = () => {
                 </Row>
                 <Row className="mt-3">
                   <Col xs={12}>
-                    <span className={classes.modalLabel}>
-                      {directContactLabel}
-                    </span>
+                    <span className={classes.modalLabel}>{directContactLabel}</span>
                   </Col>
                 </Row>
                 <Row className="mt-2">
                   <Col xs={12}>
-                    <p
-                      dangerouslySetInnerHTML={{ __html: directContactInfo }}
-                    ></p>
+                    <p dangerouslySetInnerHTML={{ __html: directContactInfo }}></p>
                   </Col>
                 </Row>
               </legend>
@@ -514,10 +476,7 @@ export const ModalMessage = () => {
                           aria-required="true"
                           {...field}
                         />
-                        <span
-                          className={classes.errorLabel}
-                          id="error-address2"
-                        >
+                        <span className={classes.errorLabel} id="error-address2">
                           {errors.address && errors.address.message}
                         </span>
                       </>
@@ -542,12 +501,8 @@ export const ModalMessage = () => {
                         aria-label={selectPlaceholder}
                         aria-describedby="mandatory-label"
                         aria-invalid={errors.representative && 'true'}
-                        aria-labelledby={
-                          errors.representative && 'error-represent'
-                        }
-                        className={`select ${
-                          errors.representative && ' is-invalid'
-                        }`}
+                        aria-labelledby={errors.representative && 'error-represent'}
+                        className={`select ${errors.representative && ' is-invalid'}`}
                       />
                     )}
                   />
@@ -555,13 +510,11 @@ export const ModalMessage = () => {
               </Row>
               <Row className="mt-5">
                 <Col xs={12} lg={6}>
-                  <label className={classes.selectLabel}>
-                    {messageSelectLabel}
-                  </label>
+                  <label className={classes.selectLabel}>{messageSelectLabel}</label>
                   <Controller
                     control={control}
                     name="messageSelect"
-                    render={({ field: { onChange, value } }) => (
+                    render={({ field: { onChange } }) => (
                       <Select
                         id="message-select"
                         onChange={onChange}
@@ -592,16 +545,11 @@ export const ModalMessage = () => {
                           ></textarea>
                         )}
                       />
-                      <label
-                        className={textareaState == 'active' ? 'active' : ''}
-                        htmlFor="message"
-                      >
+                      <label className={textareaState == 'active' ? 'active' : ''} htmlFor="message">
                         {messageLabel}
                       </label>
                       <span className={classes.maxLengthLabel}>
-                        Massimo{' '}
-                        <span id="max-length-number">{textareaMaxLength}</span>{' '}
-                        caratteri
+                        Massimo <span id="max-length-number">{textareaMaxLength}</span> caratteri
                       </span>
                     </div>
                   </div>
@@ -612,7 +560,10 @@ export const ModalMessage = () => {
         </ModalBody>
         <ModalFooter className="justify-content-center flex-column align-items-start justify-content-md-start px-0 py-0 mt-5">
           <p className={classes.modalFooterLabel}>
-            Cliccando su INVIA dichiaro di aver letto e compreso <a target="_blank" href={privacy.linkTo}>l'informativa privacy</a>
+            Cliccando su INVIA dichiaro di aver letto e compreso{' '}
+            <a target="_blank" href={privacy.linkTo} rel="noreferrer">
+              l'informativa privacy
+            </a>
           </p>
           <div className="d-flex">
             <Button color="primary" type="submit" form="message-form">
@@ -625,12 +576,7 @@ export const ModalMessage = () => {
       <div className="container test-docs">
         <div className="row">
           <div className="col-12 col-md-6">
-            <div
-              className={classes.notification}
-              role="alert"
-              aria-labelledby="not2dms-title"
-              id="not2dms2"
-            >
+            <div className={classes.notification} role="alert" aria-labelledby="not2dms-title" id="not2dms2">
               <h5 id="not2dms-title2">
                 notifiche
                 <svg className="icon" role="img" aria-label=""></svg>
@@ -660,13 +606,7 @@ export const ModalMessage = () => {
                     transform="rotate(45 17.3242 0.5)"
                     fill="#5C6F82"
                   />
-                  <rect
-                    y="1.56055"
-                    width="1.49987"
-                    height="24.4978"
-                    transform="rotate(-45 0 1.56055)"
-                    fill="#5C6F82"
-                  />
+                  <rect y="1.56055" width="1.49987" height="24.4978" transform="rotate(-45 0 1.56055)" fill="#5C6F82" />
                 </svg>
               </button>
             </div>

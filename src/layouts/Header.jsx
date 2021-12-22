@@ -1,5 +1,6 @@
 import { Link } from 'gatsby';
 import React, { useState, useContext } from 'react';
+import PropTypes from 'prop-types';
 import {
   Collapse,
   Header as HeaderReactKit,
@@ -9,7 +10,6 @@ import {
   Icon,
   Nav,
   NavItem,
-  HeaderToggler,
   HeaderBrand,
   LinkListItem,
   LinkList,
@@ -42,6 +42,7 @@ const useStyle = createUseStyles({
       color: '#0059b3',
     },
     '& li:not(:first-child)': {
+      // eslint-disable-next-line sonarjs/no-duplicate-string
       borderLeft: '1px solid rgba(0,89,179,.2)',
     },
   },
@@ -409,3 +410,8 @@ export const Header = (props) => (
     </Headers>
   </header>
 );
+
+Header.propTypes = {
+  showKit: PropTypes.any,
+  toggleModal: PropTypes.any,
+};
