@@ -5,15 +5,14 @@ import '@fontsource/titillium-web/latin.css';
 import '@fontsource/lora/latin.css';
 import 'bootstrap-italia/dist/css/bootstrap-italia.min.css';
 import { createUseStyles } from 'react-jss';
+import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 import { SEO } from '../components/SEO';
 import labels from '../../contents/labels.yml';
 import { ModalUpdates } from '../components/modal/ModalUpdates';
 import { GlobalStateContextProvider } from '../context/globalContext';
 import { ModalMessage } from '../components/modal/ModalMessage';
-import { Totop } from '../components/totop';
 import { Header } from './Header';
 import { Footer } from './Footer';
-import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 
 const { goToMainContent, goToFooter } = labels;
 
@@ -87,14 +86,8 @@ export const Layout = ({ children }) => {
           <Header toggleModal={toggleModal} />
           <main className="text-info text-break" tabIndex="-1" id="content">
             {children}
-            <ModalUpdates
-              initialState={modalIsOpen}
-              handleToggle={toggleModal}
-            />
-            <ModalMessage
-              initialState={modalIsOpenMessage}
-              handleToggle={toggleModalMessage}
-            />
+            <ModalUpdates initialState={modalIsOpen} handleToggle={toggleModal} />
+            <ModalMessage initialState={modalIsOpenMessage} handleToggle={toggleModalMessage} />
           </main>
           <Footer />
         </GlobalStateContextProvider>

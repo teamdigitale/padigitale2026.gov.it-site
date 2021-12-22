@@ -38,4 +38,6 @@ Hero.propTypes = {
   yPaddingXLScreen: PropTypes.bool,
   children: PropTypes.node.isRequired,
   className: PropTypes.any,
+  ariaLabelledBy: PropTypes.any,
+  Tag: PropTypes.any,
 };
