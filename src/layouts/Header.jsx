@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/no-duplicate-string */
 import { Link } from 'gatsby';
 import React, { useState, useContext } from 'react';
 import PropTypes from 'prop-types';

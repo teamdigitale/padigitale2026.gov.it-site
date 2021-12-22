@@ -1,5 +1,7 @@
+/* eslint-disable no-undef */
 /* eslint-disable no-underscore-dangle */
 import React, { createContext, useReducer, useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 
 const initialState = { sectionId: null, faqId: null, modalState: false };
 
@@ -47,4 +49,8 @@ export const GlobalStateContextProvider = ({ children }) => {
       {children}
     </GlobalStateContext.Provider>
   );
+};
+
+GlobalStateContextProvider.propTypes = {
+  children: PropTypes.any,
 };
