@@ -1,3 +1,6 @@
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable no-undef */
 import React, { useState, useEffect, useContext } from 'react';
 import { Container, Input, Row, Col } from 'design-react-kit';
 import { createUseStyles } from 'react-jss';
@@ -30,8 +33,8 @@ const useStyles = createUseStyles({
       backgroundImage: 'url("../assets/close-black.svg")',
       backgroundRepeat: 'no-repeat',
       width: '1.1rem',
-      height: '1.1rem'
-    }
+      height: '1.1rem',
+    },
   },
   inputWrap: {
     backgroundImage: 'url("../assets/icon-search.svg")',
@@ -49,7 +52,7 @@ export const FaqPage = () => {
   const [questions, setQuestions] = useState(faq.questions);
   const [isMobile, setIsMobile] = useState();
   const [questNum, setquestNum] = useState(countInitQuestions());
-  const [{}, dispatch] = useContext(GlobalStateContext);
+  const [, dispatch] = useContext(GlobalStateContext);
 
   useEffect(() => {
     setIsMobile(window.innerWidth < 992);
@@ -152,12 +155,12 @@ export const FaqPage = () => {
         }
       }
     }
-  }, [filterId]);
+  }, [filterId, getNewQuestions, getQuestionsMobile, inputValue]);
 
   const resetInput = () => {
-    setInputValue('')
-    setQuestions(faq.questions)
-  }
+    setInputValue('');
+    setQuestions(faq.questions);
+  };
 
   return (
     <>
@@ -188,10 +191,11 @@ export const FaqPage = () => {
                   value={inputValue}
                   onChange={handleChange}
                 />
-                {inputValue.length > 0 && 
-                <button className="reset-btn" onClick={resetInput}>
-                  <span className="sr-only">Il campo svuota l'input</span>
-                </button>}
+                {inputValue.length > 0 && (
+                  <button className="reset-btn" onClick={resetInput}>
+                    <span className="sr-only">Il campo svuota l'input</span>
+                  </button>
+                )}
               </div>
             </Col>
           </Row>
@@ -220,7 +224,11 @@ export const FaqPage = () => {
                   }}
                 />
               ))}
-              {!questions.length && <p className={classes.noResults} role="alert">{faq.noResults}</p>}
+              {!questions.length && (
+                <p className={classes.noResults} role="alert">
+                  {faq.noResults}
+                </p>
+              )}
             </Col>
           </Row>
         </Container>

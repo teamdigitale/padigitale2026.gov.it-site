@@ -29,7 +29,7 @@ export const ComeFunzionaPage = () => {
         dispatch({ type: 'SET:HOW_SECTION_ID' });
       };
     }
-  }, [howId]);
+  }, [howId, dispatch]);
 
   useEffect(() => {
     announce('Pagina caricata ' + content.name);
