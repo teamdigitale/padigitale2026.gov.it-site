@@ -25,7 +25,6 @@ export const NoteLegaliPage = () => {
   useEffect(() => {
     announce('Pagina caricata ' + seoTitle);
   }, []);
-  // const [{}, dispatch] = useContext(GlobalStateContext);
   return (
     <>
       <SEO title={seoTitle} description={seoDescription} />

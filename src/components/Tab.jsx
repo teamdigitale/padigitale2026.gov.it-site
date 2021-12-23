@@ -353,10 +353,10 @@ export const Tab = ({ tabContent, sideDesktopNavigation, mobileNavigation, title
 };
 
 Tab.propTypes = {
-  tabContent: PropTypes.any,
+  tabContent: PropTypes.object,
   sideDesktopNavigation: PropTypes.bool,
   mobileNavigation: PropTypes.bool,
-  title: PropTypes.any,
-  subtitle: PropTypes.any,
-  sectionId: PropTypes.any,
+  title: PropTypes.string,
+  subtitle: PropTypes.string,
+  sectionId: PropTypes.string,
 };

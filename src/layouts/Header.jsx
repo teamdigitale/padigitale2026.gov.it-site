@@ -43,7 +43,6 @@ const useStyle = createUseStyles({
       color: '#0059b3',
     },
     '& li:not(:first-child)': {
-      // eslint-disable-next-line sonarjs/no-duplicate-string
       borderLeft: '1px solid rgba(0,89,179,.2)',
     },
   },
@@ -406,13 +405,12 @@ export const Header = (props) => (
       <SlimHeader />
       <div className="it-nav-wrapper">
         <CenterHeader />
-        <NavHeader showKit={props.showKit} toggleModal={props.toggleModal} />
+        <NavHeader toggleModal={props.toggleModal} />
       </div>
     </Headers>
   </header>
 );
 
 Header.propTypes = {
-  showKit: PropTypes.any,
-  toggleModal: PropTypes.any,
+  toggleModal: PropTypes.func,
 };

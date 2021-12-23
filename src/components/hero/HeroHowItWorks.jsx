@@ -235,8 +235,8 @@ export const HeroHowItWorks = ({ title, body, image, list }) => {
 };
 
 HeroHowItWorks.propTypes = {
-  title: PropTypes.any,
-  body: PropTypes.any,
-  image: PropTypes.any,
-  list: PropTypes.any,
+  title: PropTypes.string,
+  body: PropTypes.string,
+  image: PropTypes.string,
+  list: PropTypes.array,
 };

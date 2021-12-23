@@ -22,8 +22,6 @@ export const PrivacyPolicyPage = () => {
   const {
     textChunk: { html: textChunk },
   } = useStaticQuery(query);
-
-  // const [{}, dispatch] = useContext(GlobalStateContext);
   useEffect(() => {
     announce('Pagina caricata Privacy - PA digitale 2026');
   }, []);

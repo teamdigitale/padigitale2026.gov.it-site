@@ -8,10 +8,10 @@ export const HeroButton = ({ classButton, href, label, ariaLabel, rel, target })
 );
 
 HeroButton.propTypes = {
-  classButton: PropTypes.any,
-  href: PropTypes.any,
-  label: PropTypes.any,
-  ariaLabel: PropTypes.any,
-  rel: PropTypes.any,
-  target: PropTypes.any,
+  classButton: PropTypes.string,
+  href: PropTypes.string,
+  label: PropTypes.string.isRequired,
+  ariaLabel: PropTypes.string,
+  rel: PropTypes.string,
+  target: PropTypes.string,
 };

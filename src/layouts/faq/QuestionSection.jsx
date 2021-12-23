@@ -203,7 +203,7 @@ export const QuestionSection = (props) => {
 };
 
 QuestionSection.propTypes = {
-  item: PropTypes.any,
+  item: PropTypes.object.isRequired,
   inputText: PropTypes.string,
-  handleToggle: PropTypes.any,
+  handleToggle: PropTypes.func,
 };
