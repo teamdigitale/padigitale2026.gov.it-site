@@ -1,7 +1,8 @@
 import React, { useContext } from 'react';
 import { Button, Collapse, Card, CardBody } from 'design-react-kit';
 import { createUseStyles } from 'react-jss';
-import { Link, navigate } from 'gatsby';
+import { navigate } from 'gatsby';
+import PropTypes from 'prop-types';
 import { GlobalStateContext } from '../context/globalContext';
 import { ExternalLink } from './ExternalLink';
 
@@ -267,7 +268,7 @@ export const AccordionButtonFull = (props) => {
     moreInfoLink,
   } = props.data;
 
-  const [state, dispatch] = useContext(GlobalStateContext);
+  const [, dispatch] = useContext(GlobalStateContext);
 
   const eventHandler = () => {
     props.handleToggle(props.id);
@@ -341,4 +342,21 @@ export const AccordionButtonFull = (props) => {
       </div>
     </>
   );
+};
+
+AccordionButtonFull.propTypes = {
+  id: PropTypes.number,
+  number: PropTypes.string,
+  title: PropTypes.string,
+  money: PropTypes.string,
+  tags: PropTypes.array,
+  description: PropTypes.string,
+  stalls: PropTypes.string,
+  accessLabel: PropTypes.string,
+  accessSectionId: PropTypes.string,
+  moreInfoLabel: PropTypes.string,
+  moreInfoLink: PropTypes.string,
+  data: PropTypes.object,
+  active: PropTypes.number,
+  handleToggle: PropTypes.func,
 };

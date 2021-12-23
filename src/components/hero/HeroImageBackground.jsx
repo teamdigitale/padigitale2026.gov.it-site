@@ -1,5 +1,6 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
+import PropTypes from 'prop-types';
 import { Row, Col, Hero } from 'design-react-kit';
 import { HeroTitle } from './HeroTitle';
 import { HeroBackground } from './HeroBackground';
@@ -15,7 +16,7 @@ const useStyles = createUseStyles({
     objectPosition: 'right',
     '@media (max-width: 992px)': {
       objectPosition: 'center',
-    }
+    },
   },
   heroTitle: {
     composes: 'no_doc title-hero',
@@ -102,7 +103,7 @@ const useStyles = createUseStyles({
     },
     '&.it-hero-wrapper .it-hero-text-wrapper .it-btn-container': {
       position: 'relative',
-    }
+    },
   },
   buttonContainer: {
     composes: 'it-btn-container',
@@ -142,7 +143,7 @@ const useStyles = createUseStyles({
     '@media (max-width: 992px)': {
       position: 'relative',
     },
-  }
+  },
 });
 
 export const HeroImageBackground = ({
@@ -202,4 +203,21 @@ export const HeroImageBackground = ({
       </div>
     </Hero>
   );
+};
+
+HeroImageBackground.propTypes = {
+  title: PropTypes.string,
+  body: PropTypes.string,
+  theme: PropTypes.string,
+  image: PropTypes.string,
+  firstButtonLabel: PropTypes.string,
+  firstButtonAriaLabel: PropTypes.string,
+  firstButtonClass: PropTypes.string,
+  firstButtonHref: PropTypes.string,
+  secondButtonLabel: PropTypes.string,
+  secondButtonClass: PropTypes.string,
+  secondButtonHref: PropTypes.string,
+  overlap: PropTypes.bool,
+  noButton: PropTypes.bool,
+  titleId: PropTypes.string,
 };

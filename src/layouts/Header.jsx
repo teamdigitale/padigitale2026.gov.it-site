@@ -1,5 +1,7 @@
+/* eslint-disable sonarjs/no-duplicate-string */
 import { Link } from 'gatsby';
 import React, { useState, useContext } from 'react';
+import PropTypes from 'prop-types';
 import {
   Collapse,
   Header as HeaderReactKit,
@@ -9,7 +11,6 @@ import {
   Icon,
   Nav,
   NavItem,
-  HeaderToggler,
   HeaderBrand,
   LinkListItem,
   LinkList,
@@ -404,8 +405,12 @@ export const Header = (props) => (
       <SlimHeader />
       <div className="it-nav-wrapper">
         <CenterHeader />
-        <NavHeader showKit={props.showKit} toggleModal={props.toggleModal} />
+        <NavHeader toggleModal={props.toggleModal} />
       </div>
     </Headers>
   </header>
 );
+
+Header.propTypes = {
+  toggleModal: PropTypes.func,
+};

@@ -1,12 +1,12 @@
-import React, { useCallback, useEffect, useReducer } from 'react';
+import React, { useCallback, useReducer, useEffect } from 'react';
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import PropTypes from 'prop-types';
 import { Button } from 'design-react-kit';
+import { createUseStyles } from 'react-jss';
 import { Hero } from '../components/hero/Hero';
 import { SEO } from '../components/SEO';
 import content from '../../contents/unsubscribe-page/unsubscribe.yml';
 import seo from '../../contents/seo.yml';
-import { createUseStyles } from 'react-jss';
 
 const { title: seoTitle, description: seoDescription } = seo.unsubscribePage;
 
@@ -76,7 +76,7 @@ export const UnsubscribePage = ({ location }) => {
     },
   } = useStaticQuery(query);
 
-  let initState = {
+  const initState = {
     status: LOADING,
   };
 
@@ -88,7 +88,7 @@ export const UnsubscribePage = ({ location }) => {
     } else {
       dispatch({ type: INITIAL, payload: {} });
     }
-  }, [(uuid, address)]);
+  }, [address, uuid]);
 
   const unsubscribe = useCallback(async () => {
     dispatch({ type: LOADING, payload: {} });
@@ -100,10 +100,7 @@ export const UnsubscribePage = ({ location }) => {
       },
     };
     try {
-      const response = await fetch(
-        `${apiUrl}/users/${address}/${uuid}/unsubscribe`,
-        options
-      );
+      const response = await fetch(`${apiUrl}/users/${address}/${uuid}/unsubscribe`, options);
       const { status } = response;
       const message = await response.json();
       if (status >= 200 && status <= 299) {
@@ -114,7 +111,7 @@ export const UnsubscribePage = ({ location }) => {
     } catch (error) {
       dispatch({ type: ERROR, payload: error });
     }
-  }, [apiUrl]);
+  }, [apiUrl, address, uuid]);
 
   return (
     <>
@@ -124,10 +121,7 @@ export const UnsubscribePage = ({ location }) => {
         {state.status === INITIAL && (
           <div className="text-center text-primary">
             <div className={classes.title}>{content[state.status].title}</div>
-            <div
-              className={classes.bodyText}
-              dangerouslySetInnerHTML={{ __html: content[state.status].body }}
-            ></div>
+            <div className={classes.bodyText} dangerouslySetInnerHTML={{ __html: content[state.status].body }}></div>
             <Button
               onClick={unsubscribe}
               type="button"
@@ -146,14 +140,8 @@ export const UnsubscribePage = ({ location }) => {
         )}
         {state.status === SUCCESS && (
           <div className="text-center text-primary">
-            <div
-              className={classes.title}
-              dangerouslySetInnerHTML={{ __html: content[state.status].title }}
-            ></div>
-            <div
-              className={classes.bodyText}
-              dangerouslySetInnerHTML={{ __html: content[state.status].body }}
-            />
+            <div className={classes.title} dangerouslySetInnerHTML={{ __html: content[state.status].title }}></div>
+            <div className={classes.bodyText} dangerouslySetInnerHTML={{ __html: content[state.status].body }} />
             <Link to="/" className={classes.button}>
               {content[state.status].button}
             </Link>
@@ -161,20 +149,9 @@ export const UnsubscribePage = ({ location }) => {
         )}
         {state.status === ERROR && (
           <div className="text-center text-primary">
-            <div
-              className={classes.title}
-              dangerouslySetInnerHTML={{ __html: content[state.status].title }}
-            ></div>
-            <div
-              className={classes.bodyText}
-              dangerouslySetInnerHTML={{ __html: content[state.status].body }}
-            />
-            <Button
-              type="button"
-              className={classes.button}
-              onClick={unsubscribe}
-              color="primary"
-            >
+            <div className={classes.title} dangerouslySetInnerHTML={{ __html: content[state.status].title }}></div>
+            <div className={classes.bodyText} dangerouslySetInnerHTML={{ __html: content[state.status].body }} />
+            <Button type="button" className={classes.button} onClick={unsubscribe} color="primary">
               {content[state.status].button}
             </Button>
           </div>

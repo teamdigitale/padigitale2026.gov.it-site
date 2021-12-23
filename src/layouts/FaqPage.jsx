@@ -1,17 +1,18 @@
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable no-undef */
 import React, { useState, useEffect, useContext } from 'react';
 import { Container, Input, Row, Col } from 'design-react-kit';
 import { createUseStyles } from 'react-jss';
-import content from '../../contents/home-page/home.yml';
+import { announce } from '@react-aria/live-announcer';
 import faq from '../../contents/faq-page/faq.yml';
 import { SEO } from '../components/SEO';
 import seo from '../../contents/seo.yml';
-import { ModalUpdates } from '../components/modal/ModalUpdates';
 import { GlobalStateContext } from '../context/globalContext';
 import { SideNavigation } from './faq/SideNavigation';
 import { QuestionSection } from './faq/QuestionSection';
 import { SupportSection } from './faq/SupportSection';
 import { HeroSupport } from './support/Hero';
-import { announce } from '@react-aria/live-announcer';
 
 const { title: seoTitle, description: seoDescription } = seo.faqPage;
 
@@ -32,8 +33,8 @@ const useStyles = createUseStyles({
       backgroundImage: 'url("../assets/close-black.svg")',
       backgroundRepeat: 'no-repeat',
       width: '1.1rem',
-      height: '1.1rem'
-    }
+      height: '1.1rem',
+    },
   },
   inputWrap: {
     backgroundImage: 'url("../assets/icon-search.svg")',
@@ -43,6 +44,7 @@ const useStyles = createUseStyles({
   },
 });
 
+// eslint-disable-next-line sonarjs/cognitive-complexity
 export const FaqPage = () => {
   const classes = useStyles();
   const [inputValue, setInputValue] = useState('');
@@ -50,7 +52,7 @@ export const FaqPage = () => {
   const [questions, setQuestions] = useState(faq.questions);
   const [isMobile, setIsMobile] = useState();
   const [questNum, setquestNum] = useState(countInitQuestions());
-  const [{}, dispatch] = useContext(GlobalStateContext);
+  const [, dispatch] = useContext(GlobalStateContext);
 
   useEffect(() => {
     setIsMobile(window.innerWidth < 992);
@@ -79,7 +81,6 @@ export const FaqPage = () => {
         }
       });
     }
-    console.log(count);
     return count;
   }
 
@@ -100,7 +101,6 @@ export const FaqPage = () => {
     }
     setquestNum(countQuestions());
     if (questions.length === 0) {
-      console.log(questions);
       announce('Nessun risultato');
     } else {
       announce('Numero di FAQ in pagina aggiornato');
@@ -153,12 +153,12 @@ export const FaqPage = () => {
         }
       }
     }
-  }, [filterId]);
+  }, [filterId, getNewQuestions, getQuestionsMobile, inputValue]);
 
   const resetInput = () => {
-    setInputValue('')
-    setQuestions(faq.questions)
-  }
+    setInputValue('');
+    setQuestions(faq.questions);
+  };
 
   return (
     <>
@@ -189,10 +189,11 @@ export const FaqPage = () => {
                   value={inputValue}
                   onChange={handleChange}
                 />
-                {inputValue.length > 0 && 
-                <button className="reset-btn" onClick={resetInput}>
-                  <span className="sr-only">Il campo svuota l'input</span>
-                </button>}
+                {inputValue.length > 0 && (
+                  <button className="reset-btn" onClick={resetInput}>
+                    <span className="sr-only">Il campo svuota l'input</span>
+                  </button>
+                )}
               </div>
             </Col>
           </Row>
@@ -221,7 +222,11 @@ export const FaqPage = () => {
                   }}
                 />
               ))}
-              {!questions.length && <p className={classes.noResults} role="alert">{faq.noResults}</p>}
+              {!questions.length && (
+                <p className={classes.noResults} role="alert">
+                  {faq.noResults}
+                </p>
+              )}
             </Col>
           </Row>
         </Container>

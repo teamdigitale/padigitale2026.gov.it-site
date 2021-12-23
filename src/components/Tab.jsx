@@ -163,6 +163,7 @@ const useStyles = createUseStyles({
 });
 
 // eslint-disable-next-line max-lines-per-function
+// eslint-disable-next-line sonarjs/cognitive-complexity
 export const Tab = ({ tabContent, sideDesktopNavigation, mobileNavigation, title, subtitle, sectionId }) => {
   const classes = useStyles();
   const [tabActive, setTabActive] = useState(0);
@@ -352,7 +353,10 @@ export const Tab = ({ tabContent, sideDesktopNavigation, mobileNavigation, title
 };
 
 Tab.propTypes = {
-  tabContent: PropTypes.any,
+  tabContent: PropTypes.object,
   sideDesktopNavigation: PropTypes.bool,
   mobileNavigation: PropTypes.bool,
+  title: PropTypes.string,
+  subtitle: PropTypes.string,
+  sectionId: PropTypes.string,
 };

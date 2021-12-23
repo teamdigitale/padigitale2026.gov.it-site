@@ -3,7 +3,6 @@ import { createUseStyles } from 'react-jss';
 import PropTypes from 'prop-types';
 import { Row, Col, Hero } from 'design-react-kit';
 import { HeroTitle } from './HeroTitle';
-import { HeroBackground } from './HeroBackground';
 import { HeroParagraph } from './HeroParagraph';
 import { HeroCategory } from './HeroCategory';
 
@@ -73,7 +72,7 @@ const useStyles = createUseStyles({
       fontFamily: 'Titillium Web,Geneva,Tahoma,sans-serif',
       fontSize: '1.333rem',
       '@media (max-width: 991px)': {
-        fontSize: '1.25rem'
+        fontSize: '1.25rem',
       },
     },
     '& .container .it-hero-text-wrapper .btn': {
@@ -108,16 +107,9 @@ const useStyles = createUseStyles({
   },
 });
 
-export const HeroImageBackgroundFull = ({
-  category,
-  title,
-  body,
-  image,
-  imageMobile,
-  overlap,
-}) => {
+export const HeroImageBackgroundFull = ({ category, title, body, overlap }) => {
   const classes = useStyles();
-  const [isMobile, setIsMobile] = useState();
+  const [, setIsMobile] = useState();
 
   useEffect(() => {
     setIsMobile(window.innerWidth < 992);
@@ -149,10 +141,10 @@ export const HeroImageBackgroundFull = ({
 };
 
 HeroImageBackgroundFull.propTypes = {
-  category: PropTypes.any,
-  title: PropTypes.any,
-  body: PropTypes.any,
-  image: PropTypes.any,
-  imageMobile: PropTypes.any,
+  category: PropTypes.string,
+  title: PropTypes.string,
+  body: PropTypes.string,
+  image: PropTypes.string,
+  imageMobile: PropTypes.string,
   overlap: PropTypes.bool,
 };

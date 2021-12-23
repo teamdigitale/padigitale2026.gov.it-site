@@ -1,6 +1,7 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
 import { createUseStyles } from 'react-jss';
+import PropTypes from 'prop-types';
 import { Row, Col } from 'design-react-kit';
 
 const useStyle = createUseStyles({
@@ -41,4 +42,8 @@ export const SupportBanner = ({ text }) => {
       </div>
     </React.Fragment>
   );
+};
+
+SupportBanner.propTypes = {
+  text: PropTypes.string,
 };

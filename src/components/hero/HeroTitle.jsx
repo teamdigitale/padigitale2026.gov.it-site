@@ -18,5 +18,6 @@ HeroTitle.propTypes = {
   className: PropTypes.string,
   linkTo: PropTypes.string,
   Tag: PropTypes.string,
+  id: PropTypes.string,
   title: PropTypes.string.isRequired,
 };

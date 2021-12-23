@@ -1,4 +1,6 @@
 import React, { useContext, useEffect } from 'react';
+import { createUseStyles } from 'react-jss';
+import { announce } from '@react-aria/live-announcer';
 import {
   name,
   heroMain,
@@ -16,16 +18,14 @@ import { HeroImage } from '../components/hero/HeroImage';
 import { HeroCarousel } from '../components/carousel/Carousel';
 import { HomeCarousel } from '../components/carousel/HomeCarousel';
 import { SEO } from '../components/SEO';
-import { createUseStyles } from 'react-jss';
 import seo from '../../contents/seo.yml';
 import labels from '../../contents/labels.yml';
+import { GlobalStateContext } from '../context/globalContext';
 import { SupportSection } from './faq/SupportSection';
 import { OpportunitySection } from './home/OpportunitySection';
-import { GlobalStateContext } from '../context/globalContext';
-import { announce } from '@react-aria/live-announcer';
 
 const { title: seoTitle, description: seoDescription } = seo.homePage;
-const { ariaLabel, headerTitle, headerSubtitle } = labels;
+const { headerTitle, headerSubtitle } = labels;
 
 const useStyles = createUseStyles({
   mobileTitle: {
@@ -47,7 +47,7 @@ const useStyles = createUseStyles({
 
 export const IndexPage = () => {
   const classes = useStyles();
-  const [{}, dispatch] = useContext(GlobalStateContext);
+  const [, dispatch] = useContext(GlobalStateContext);
 
   useEffect(() => {
     announce('Pagina caricata ' + name);

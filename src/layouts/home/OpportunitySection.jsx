@@ -1,8 +1,8 @@
-import React, { useContext } from 'react';
-import { Section, Row, Col, Card, CardBody, CardTitle, Button } from 'design-react-kit';
+import React from 'react';
+import { Row, Col, Card, CardBody, CardTitle } from 'design-react-kit';
 import { createUseStyles } from 'react-jss';
-import { Link, navigate } from 'gatsby';
-import { GlobalStateContext } from '../../context/globalContext';
+import { Link } from 'gatsby';
+import PropTypes from 'prop-types';
 
 const useStyle = createUseStyles({
   section: {
@@ -86,14 +86,13 @@ const useStyle = createUseStyles({
     },
     '&:hover': {
       textDecoration: 'underline',
-    }
+    },
   },
 });
 
 export const OpportunitySection = (props) => {
   const classes = useStyle();
   const { title, list } = props;
-  const [state, dispatch] = useContext(GlobalStateContext);
 
   return (
     <div className={classes.section}>
@@ -125,4 +124,9 @@ export const OpportunitySection = (props) => {
       </section>
     </div>
   );
+};
+
+OpportunitySection.propTypes = {
+  title: PropTypes.string,
+  list: PropTypes.array,
 };
