@@ -242,7 +242,7 @@ export const SideNavigation = (props) => {
 };
 
 SideNavigation.propTypes = {
-  activeList: PropTypes.any,
+  activeList: PropTypes.array,
   searchValue: PropTypes.string,
   getFilter: PropTypes.func,
 };

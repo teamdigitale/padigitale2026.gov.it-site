@@ -133,5 +133,5 @@ export const Beneficiaries = (props) => {
 };
 
 Beneficiaries.propTypes = {
-  item: PropTypes.any,
+  item: PropTypes.object,
 };

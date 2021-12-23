@@ -2,6 +2,7 @@
 /* eslint-disable max-lines-per-function */
 import React, { useState, useEffect, useContext } from 'react';
 import { useForm, Controller } from 'react-hook-form';
+import PropTypes from 'prop-types';
 import { createUseStyles } from 'react-jss';
 import { announce } from '@react-aria/live-announcer';
 import { Row, Col, Modal, ModalBody, ModalFooter, Button, Input } from 'design-react-kit';
@@ -616,4 +617,9 @@ export const ModalMessage = () => {
       </div>
     </>
   );
+};
+
+ModalMessage.propTypes = {
+  handleToggle: PropTypes.func,
+  initialState: PropTypes.bool,
 };

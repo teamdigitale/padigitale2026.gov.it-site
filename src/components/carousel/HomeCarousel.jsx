@@ -197,6 +197,6 @@ export const HomeCarousel = ({ content, title }) => {
 };
 
 HomeCarousel.propTypes = {
-  content: PropTypes.any,
-  title: PropTypes.any,
+  content: PropTypes.array.isRequired,
+  title: PropTypes.string,
 };

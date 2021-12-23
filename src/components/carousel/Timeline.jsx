@@ -206,6 +206,6 @@ export const Timeline = ({ content, title }) => {
 };
 
 Timeline.propTypes = {
-  content: PropTypes.any,
-  title: PropTypes.any,
+  content: PropTypes.object,
+  title: PropTypes.string,
 };

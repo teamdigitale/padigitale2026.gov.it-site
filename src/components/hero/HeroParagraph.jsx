@@ -18,5 +18,5 @@ export const HeroParagraph = ({ text }) => {
 };
 
 HeroParagraph.propTypes = {
-  text: PropTypes.any,
+  text: PropTypes.string,
 };

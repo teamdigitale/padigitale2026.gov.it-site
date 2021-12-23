@@ -127,6 +127,6 @@ export const OpportunitySection = (props) => {
 };
 
 OpportunitySection.propTypes = {
-  title: PropTypes.any,
-  list: PropTypes.any,
+  title: PropTypes.string,
+  list: PropTypes.array,
 };

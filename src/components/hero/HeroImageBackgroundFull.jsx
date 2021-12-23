@@ -141,10 +141,10 @@ export const HeroImageBackgroundFull = ({ category, title, body, overlap }) => {
 };
 
 HeroImageBackgroundFull.propTypes = {
-  category: PropTypes.any,
-  title: PropTypes.any,
-  body: PropTypes.any,
-  image: PropTypes.any,
-  imageMobile: PropTypes.any,
+  category: PropTypes.string,
+  title: PropTypes.string,
+  body: PropTypes.string,
+  image: PropTypes.string,
+  imageMobile: PropTypes.string,
   overlap: PropTypes.bool,
 };

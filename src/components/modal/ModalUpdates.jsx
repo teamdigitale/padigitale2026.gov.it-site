@@ -677,20 +677,6 @@ export const ModalUpdates = () => {
 };
 
 ModalUpdates.propTypes = {
-  selectRepresent: PropTypes.any,
-  selectInQuanto: PropTypes.any,
-  modalUpdatesTitle: PropTypes.any,
-  updatesLabel: PropTypes.any,
-  updatesInfo: PropTypes.any,
-  mandatoryAdvise: PropTypes.any,
-  requiredLabel: PropTypes.any,
-  emailValidationLabel: PropTypes.any,
-  emailLabel: PropTypes.any,
-  representLabel: PropTypes.any,
-  selectPlaceholder: PropTypes.any,
-  enteValidationLabel: PropTypes.any,
-  enteTypeLabel: PropTypes.any,
-  enteNameLabel: PropTypes.any,
-  inQuantoLabel: PropTypes.any,
-  sendButtonLabel: PropTypes.any,
+  handleToggle: PropTypes.func,
+  initialState: PropTypes.bool,
 };

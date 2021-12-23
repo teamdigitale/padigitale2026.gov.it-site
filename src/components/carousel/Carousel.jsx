@@ -165,6 +165,6 @@ export const HeroCarousel = ({ content, title }) => {
 };
 
 HeroCarousel.propTypes = {
-  content: PropTypes.any,
-  title: PropTypes.any,
+  content: PropTypes.array.isRequired,
+  title: PropTypes.string,
 };

@@ -182,8 +182,8 @@ export const SupportSection = (props) => {
 };
 
 SupportSection.propTypes = {
-  title: PropTypes.any,
-  supportList: PropTypes.any,
-  buttonLabel: PropTypes.any,
-  handleToggle: PropTypes.any,
+  title: PropTypes.string,
+  supportList: PropTypes.array,
+  buttonLabel: PropTypes.string,
+  handleToggle: PropTypes.func,
 };

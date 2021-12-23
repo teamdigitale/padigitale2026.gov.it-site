@@ -101,8 +101,8 @@ export const ModalUpdatesButton = ({ label, buttonLabel, hasTitle, handleToggle 
 };
 
 ModalUpdatesButton.propTypes = {
-  label: PropTypes.any,
-  buttonLabel: PropTypes.any,
-  hasTitle: PropTypes.any,
-  handleToggle: PropTypes.any,
+  label: PropTypes.string,
+  buttonLabel: PropTypes.string.isRequired,
+  hasTitle: PropTypes.bool,
+  handleToggle: PropTypes.func.isRequired,
 };

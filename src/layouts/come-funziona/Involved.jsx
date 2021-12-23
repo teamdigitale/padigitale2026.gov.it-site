@@ -103,7 +103,7 @@ export const Involved = (props) => {
 };
 
 Involved.propTypes = {
-  category: PropTypes.any,
-  title: PropTypes.any,
-  cards: PropTypes.any,
+  category: PropTypes.string,
+  title: PropTypes.string,
+  cards: PropTypes.array,
 };

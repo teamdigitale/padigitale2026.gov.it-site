@@ -52,5 +52,5 @@ export const GlobalStateContextProvider = ({ children }) => {
 };
 
 GlobalStateContextProvider.propTypes = {
-  children: PropTypes.any,
+  children: PropTypes.array,
 };
