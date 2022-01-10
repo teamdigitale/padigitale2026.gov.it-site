@@ -5,7 +5,10 @@ import Select from 'react-select';
 import PropTypes from 'prop-types';
 import { announce } from '@react-aria/live-announcer';
 import { AccordionButtonFull } from '../../components/AccordionButtonFull';
-import { beneficiaries, selectBeneficiaries } from '../../../contents/opportunity-page/opportunity.yml';
+import {
+  beneficiaries,
+  selectBeneficiaries,
+} from '../../../contents/opportunity-page/opportunity.yml';
 import { GlobalStateContext } from '../../context/globalContext';
 
 const useStyles = createUseStyles({
@@ -100,13 +103,15 @@ export const BeneficiariesSection = (props) => {
   const [accordions, setAccordions] = useState(beneficiaries);
   const [indexOpen, setIndexOpen] = useState(-1);
   const [selectValue, setSelectValue] = useState(null);
-  const [initialSelectValue, setInitialSelectValue] = useState(selectBeneficiaries[0]);
+  const [initialSelectValue, setInitialSelectValue] = useState(
+    selectBeneficiaries[0]
+  );
   const [isOpen, setIsOpen] = useState(false);
   const [filterIsAll, setFilterIsAll] = useState(true);
   const handleChange = (selectedOption) => setSelectValue(selectedOption);
   const handleOpen = () => setIsOpen(true);
   const handleClose = () => setIsOpen(false);
-  const [{ sectionId }] = useContext(GlobalStateContext);
+  const [{ sectionId, sectionIndex }] = useContext(GlobalStateContext);
 
   const setActiveAccordion = (i) => {
     indexOpen === i ? setIndexOpen(-1) : setIndexOpen(i);
@@ -117,6 +122,7 @@ export const BeneficiariesSection = (props) => {
       const item = document.querySelector('#' + sectionId);
       item.setAttribute('tabindex', '-1');
       item.focus();
+      item.querySelector('h4').click();
     }
   }, [sectionId]);
 
@@ -128,7 +134,9 @@ export const BeneficiariesSection = (props) => {
       item.scrollIntoView(true, {
         behavior: 'smooth',
       });
-      item.querySelector('[role="list"]').firstChild.setAttribute('tabindex', '-1');
+      item
+        .querySelector('[role="list"]')
+        .firstChild.setAttribute('tabindex', '-1');
       item.querySelector('[role="list"]').firstChild.focus();
     }
   }, [props.externalFilter]);
@@ -138,7 +146,9 @@ export const BeneficiariesSection = (props) => {
       if (selectValue.value !== 'tutti') {
         const filteredList = [];
         for (let index = 0; index < beneficiaries.length; index++) {
-          const element = beneficiaries[index].tags.filter((tag) => tag.value === selectValue.value);
+          const element = beneficiaries[index].tags.filter(
+            (tag) => tag.value === selectValue.value
+          );
           if (element.length) {
             filteredList.push(beneficiaries[index]);
           }
@@ -168,7 +178,8 @@ export const BeneficiariesSection = (props) => {
             <label htmlFor="beneficiaries">
               Beneficiari
               <span id="select-desk" className="sr-only">
-                Ad ogni selezione il numero di beneficari presenti in pagina verrà aggiornato.
+                Ad ogni selezione il numero di beneficari presenti in pagina
+                verrà aggiornato.
               </span>
             </label>
             <Select
@@ -181,7 +192,9 @@ export const BeneficiariesSection = (props) => {
               onMenuClose={handleClose}
               options={selectBeneficiaries}
               placeholder={false}
-              className={(isOpen ? 'is-open' : '', filterIsAll ? '' : 'not-all')}
+              className={
+                (isOpen ? 'is-open' : '', filterIsAll ? '' : 'not-all')
+              }
               aria-label="Scegli una opzione"
             />
           </div>
@@ -191,7 +204,12 @@ export const BeneficiariesSection = (props) => {
           <div role="list">
             {accordions.map((item, i) => (
               <React.Fragment key={item.title}>
-                <AccordionButtonFull data={item} handleToggle={setActiveAccordion} id={i} active={indexOpen} />
+                <AccordionButtonFull
+                  data={item}
+                  handleToggle={setActiveAccordion}
+                  id={i}
+                  active={indexOpen}
+                />
               </React.Fragment>
             ))}
           </div>

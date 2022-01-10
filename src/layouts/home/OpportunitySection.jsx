@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Row, Col, Card, CardBody, CardTitle } from 'design-react-kit';
 import { createUseStyles } from 'react-jss';
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
+import { GlobalStateContext } from '../../context/globalContext';
 
 const useStyle = createUseStyles({
   section: {
@@ -93,6 +94,7 @@ const useStyle = createUseStyles({
 export const OpportunitySection = (props) => {
   const classes = useStyle();
   const { title, list } = props;
+  const [state, dispatch] = useContext(GlobalStateContext);
 
   return (
     <div className={classes.section}>
@@ -104,7 +106,16 @@ export const OpportunitySection = (props) => {
           {list.map((item) => (
             <Col md="6" key={item.title} className="px-md-3" role="listitem">
               <Card spacing className={classes.cardWrapper}>
-                <Link to={`/misure#` + item.id} className={classes.oppButton}>
+                <Link
+                  to={`/misure#` + item.id}
+                  className={classes.oppButton}
+                  onClick={() => {
+                    dispatch({
+                      type: 'SET:SECTION_OPPORTUNITY_ID',
+                      payload: { sectionId: item.id },
+                    });
+                  }}
+                >
                   <CardBody tag="span" className="d-block">
                     <CardTitle tag="span" className={classes.cardTitle}>
                       <span className="sr-only">vai alla misura </span>
