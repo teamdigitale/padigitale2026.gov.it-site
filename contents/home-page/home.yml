@@ -86,13 +86,13 @@ heroCarouselNews:
   - id: 1
     category: Comunicato stampa
     title: MaaS: 13 Comuni capoluogo di Città metropolitane hanno presentato progetti
-    description: 'Si avvia ora la fase di selezione dei progetti pilota per i servizi “Mobility as a Service for Italy”'
+    description: Si avvia ora la fase di selezione dei progetti pilota per i servizi “Mobility as a Service for Italy”
     source: 'Fonte: innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/comunicati-stampa/13-comuni-capoluogo-di-citta-metropolitane-hanno-presentato-progetti-per-nuove-soluzioni-di-mobilita/'
   - id: 2
     category: Novità
     title: Cloud PA: selezionato il progetto PSN, gara prevista nelle prossime settimane
-    description: 'La proposta del raggruppamento di imprese Tim, CDP, Leonardo e Sogei è stata selezionata e sarà messa a gara'
+    description: La proposta del raggruppamento di imprese Tim, CDP, Leonardo e Sogei è stata selezionata e sarà messa a gara
     source: 'Fonte: innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/articoli/cloud-pa-selezionato-il-progetto-psn-gara-prevista-nelle-prossime-settimane/'
   - id: 3
