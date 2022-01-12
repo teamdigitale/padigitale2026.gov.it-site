@@ -71,6 +71,7 @@ const useStyles = createUseStyles({
 });
 
 export const HeroImage = ({
+  ctaContainer,
   category,
   title,
   body,
@@ -93,45 +94,54 @@ export const HeroImage = ({
         <div className="col-lg-6 offset-lg-1 p-0 mt-3 mt-lg-0 pr-lg-5">
           <div className="text-center text-lg-left">
             <HeroCategory title={category} className={classes.heroCategory} />
-            <HeroTitle Tag="h4" id={heroTitleId} title={title} className={classes.heroTitle} />
+            <HeroTitle
+              Tag="h4"
+              id={heroTitleId}
+              title={title}
+              className={classes.heroTitle}
+            />
             <HeroBody html={body} />
           </div>
-          <HeroCtaContainer>
-            {firstInternal ? (
-              <Link
-                className="btn text-uppercase mx-4 ml-lg-0 my-3 my-md-0 btn-primary"
-                to={firstButtonHref}
-                aria-label={firstButtonAriaLabel}
-              >
-                {firstButtonLabel}
-              </Link>
-            ) : (
-              <ExternalLink
-                linkTo={firstButtonHref}
-                ariaLabel={firstButtonAriaLabel}
-                className="btn text-uppercase mx-4 ml-lg-0 my-3 my-md-0 btn-primary"
-              >
-                {firstButtonLabel}
-              </ExternalLink>
-            )}
-            {secondButtonLabel ? (
-              <Link
-                ariaLabel={secondButtonAriaLabel}
-                className="btn text-uppercase mx-4 ml-lg-0 my-3 my-md-0 btn-outline-primary"
-                to="/come-funziona#beneficiari"
-                onClick={() =>
-                  dispatch({
-                    type: 'SET:HOW_SECTION_ID',
-                    payload: { howId: 'beneficiari' },
-                  })
-                }
-              >
-                {secondButtonLabel}
-              </Link>
-            ) : (
-              ''
-            )}
-          </HeroCtaContainer>
+          {ctaContainer ? (
+            <HeroCtaContainer>
+              {firstInternal ? (
+                <Link
+                  className="btn text-uppercase mx-4 ml-lg-0 my-3 my-md-0 btn-primary"
+                  to={firstButtonHref}
+                  aria-label={firstButtonAriaLabel}
+                >
+                  {firstButtonLabel}
+                </Link>
+              ) : (
+                <ExternalLink
+                  linkTo={firstButtonHref}
+                  ariaLabel={firstButtonAriaLabel}
+                  className="btn text-uppercase mx-4 ml-lg-0 my-3 my-md-0 btn-primary"
+                >
+                  {firstButtonLabel}
+                </ExternalLink>
+              )}
+              {secondButtonLabel ? (
+                <Link
+                  ariaLabel={secondButtonAriaLabel}
+                  className="btn text-uppercase mx-4 ml-lg-0 my-3 my-md-0 btn-outline-primary"
+                  to="/come-funziona#beneficiari"
+                  onClick={() =>
+                    dispatch({
+                      type: 'SET:HOW_SECTION_ID',
+                      payload: { howId: 'beneficiari' },
+                    })
+                  }
+                >
+                  {secondButtonLabel}
+                </Link>
+              ) : (
+                ''
+              )}
+            </HeroCtaContainer>
+          ) : (
+            ''
+          )}
         </div>
         <HeroGraphic className="col-lg-5 d-flex justify-content-sm-center">
           <img className="graphic-image" src={imageUrl} alt={imageAlt} />

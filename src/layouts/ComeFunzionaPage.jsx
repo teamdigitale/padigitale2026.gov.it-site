@@ -5,6 +5,7 @@ import content from '../../contents/come-funziona/come-funziona.yml';
 import { SEO } from '../components/SEO';
 import { TabAdobe } from '../components/TabAdobe';
 import { Timeline } from '../components/carousel/Timeline';
+import { ProjectsCards } from '../components/ProjectsCards';
 import { HeroHowItWorks } from '../components/hero/HeroHowItWorks';
 import seo from '../../contents/seo.yml';
 import { GlobalStateContext } from '../context/globalContext';
@@ -20,7 +21,8 @@ export const ComeFunzionaPage = () => {
   useEffect(() => {
     if (howId) {
       const element = document.querySelector('#' + howId);
-      const elDistanceToTop = window.pageYOffset + element.getBoundingClientRect().top;
+      const elDistanceToTop =
+        window.pageYOffset + element.getBoundingClientRect().top;
       window.scrollTo(0, elDistanceToTop);
       element.setAttribute('tabindex', '-1');
       element.focus();
@@ -48,7 +50,7 @@ export const ComeFunzionaPage = () => {
         image="come-funziona-hero.svg"
         list={content.hero.list}
       />
-      <TabAdobe
+      {/* <TabAdobe
         tabContent={content.pacchettiTabs}
         sideDesktopNavigation
         mobileNavigation
@@ -65,10 +67,15 @@ export const ComeFunzionaPage = () => {
         subtitle={content.presentazioneTabs.subtitle}
         sectionId="presentazione-progetto"
         ariaLabel="Tabs della presentazione progetti"
-      />
+      /> */}
+      <ProjectsCards />
       <Timeline content={content.timeline} title="Il calendario" />
       <Beneficiaries item={content.beneficiaries} />
-      <Involved title={content.involved.title} category={content.involved.category} cards={content.involved.cards} />
+      <Involved
+        title={content.involved.title}
+        category={content.involved.category}
+        cards={content.involved.cards}
+      />
       <SupportSection
         supportList={support.cards}
         title={support.title}
