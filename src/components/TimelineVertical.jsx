@@ -132,45 +132,53 @@ export const TimelineVertical = ({}) => {
       );
 
       const addHeightIndicator = (sectionHeight) => {
-        /* sectionHeight = sectionHeight + 34; */
-        const indicatorHeight =
-          scrollIndicator.clientHeight + sectionHeight;
+        sectionHeight = sectionHeight + 36;
+        const indicatorHeight = scrollIndicator.clientHeight + sectionHeight;
         scrollIndicator.style.height = indicatorHeight + 'px';
       };
 
       const subtractHeightIndicator = (sectionHeight) => {
-        sectionHeight = sectionHeight - 34;
-        const indicatorHeight =
-          scrollIndicator.clientHeight - sectionHeight / 2;
+        console.log(sectionHeight);
+        sectionHeight = sectionHeight + 36;
+        const indicatorHeight = scrollIndicator.clientHeight - sectionHeight;
         scrollIndicator.style.height = indicatorHeight + 'px';
       };
 
       entries.forEach((entry) => {
         if (scrollingDirection === 'down') {
-          addHeightIndicator(entry.target.clientHeight);
           const activeNumber = document.querySelector(
             '.timeline-number.active'
           );
-          console.log(activeNumber);
           const activeNumberIndex =
-            activeNumber &&
-            activeNumber
-              .closest('.timeline-point-section')
-              .getAttribute('data-index');
-          const sectionsLength = document.querySelectorAll(
-            '.timeline-point-section'
-          ).length;
-          if (activeNumberIndex == sectionsLength - 1) {
-            scrollIndicator.style.height = '100%';
+            activeNumber && activeNumber.getAttribute('data-index');
+          if (entry.isIntersecting && entry.intersectionRatio > 0.8) {
+            addHeightIndicator(entry.target.clientHeight);
+          }
+          if (activeNumber) {
+            const sectionsLength = document.querySelectorAll(
+              '.timeline-point-section'
+            ).length;
+            if (activeNumberIndex == sectionsLength - 1) {
+              scrollIndicator.style.height = '100%';
+            }
           }
         } else {
           const activeNumber = document.querySelector(
             '.timeline-number.active'
           );
-          if (!activeNumber) {
-            scrollIndicator.style.height = '0px';
+          if (activeNumber) {
+            const numberIndex = activeNumber.getAttribute('data-index');
+            const sectionsLength = document.querySelectorAll(
+              '.timeline-point-section'
+            ).length;
+            if (numberIndex == sectionsLength - 1) {
+              subtractHeightIndicator(entry.target.clientHeight - 100);
+            } else if (numberIndex == 0) {
+              scrollIndicator.style.height = '0px';
+            } else {
+              subtractHeightIndicator(entry.target.clientHeight);
+            }
           }
-          subtractHeightIndicator(entry.target.clientHeight);
         }
         if (entry.isIntersecting && entry.intersectionRatio > 0.8) {
           const currentNumber = entry.target.querySelector('.timeline-number');
@@ -213,7 +221,7 @@ export const TimelineVertical = ({}) => {
                 <div className={classes.scrollIndicatorActive}></div>
               </div>
               <div className={classes.timelinePointSection} data-index="0">
-                <div className={classes.timelineNumber}>
+                <div className={classes.timelineNumber} data-index="0">
                   <span>1</span>
                 </div>
                 <div className={classes.pointHeader}>
@@ -263,7 +271,7 @@ export const TimelineVertical = ({}) => {
                 </Row>
               </div>
               <div className={classes.timelinePointSection} data-index="1">
-                <div className={classes.timelineNumber}>
+                <div className={classes.timelineNumber} data-index="1">
                   <span>1</span>
                 </div>
                 <div className={classes.pointHeader}>
@@ -313,7 +321,7 @@ export const TimelineVertical = ({}) => {
                 </Row>
               </div>
               <div className={classes.timelinePointSection} data-index="2">
-                <div className={classes.timelineNumber}>
+                <div className={classes.timelineNumber} data-index="2">
                   <span>1</span>
                 </div>
                 <div className={classes.pointHeader}>
