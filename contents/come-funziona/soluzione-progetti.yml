@@ -6,22 +6,31 @@ hero:
 verticalTimeline:
   - index: 0
     title: 'Richiesta dei fondi'
+    headerImage: '/assets/gears.svg'
     headerParagraph: "Presentando i progetti è possibile candidare la propria PA beneficiando di un iter di selezione trasparente."
     littleTitlel: 'Presentazione di progetti'
     bodyParagraphl: "Le amministrazioni potranno accedere alle risorsedel PNRR candidandosi ad appositi avvisi pubblici, attraverso un percorso guidato per la presentazionedi progetti. Alla conclusione della fase di selezione, saranno individuate le amministrazioni ammesse a finanziamento. Per l'attuazione di specifiche misure invece le amministrazioni interessate saranno coinvolte direttamente attraverso appositi accordi."
+    leftImage: '/assets/icons-come-funziona/computer-chart.svg'
     littleTtitler: 'Tempi rapidi'
     bodyParagraphr: 'Dei criteri di valutazione automatici consentiranno una valutazione dei progetti più rapida. L’intento è quello di accostare ad un’analisi oggettiva delle proposte, delle modalità di candidatura che facilitino tempi rapidi e certezza procedurale.'
+    rightImage: '/assets/icons-come-funziona/clock.svg'
   - index: 1
     title: 'Richiesta dei fondi 2'
+    headerImage: '/assets/gears.svg'
     headerParagraph: 'Presentando i progetti è possibile candidare la propria PA beneficiando di un iter di selezione trasparente.'
     littleTitlel: 'Presentazione di progetti'
     bodyParagraphl: "Le amministrazioni potranno accedere alle risorsedel PNRR candidandosi ad appositi avvisi pubblici, attraverso un percorso guidato per la presentazionedi progetti. Alla conclusione della fase di selezione, saranno individuate le amministrazioni ammesse a finanziamento. Per l'attuazione di specifiche misure invece le amministrazioni interessate saranno coinvolte direttamente attraverso appositi accordi."
+    leftImage: '/assets/icons-come-funziona/computer-chart.svg'
     littleTtitler: 'Tempi rapidi'
     bodyParagraphr: 'Dei criteri di valutazione automatici consentiranno una valutazione dei progetti più rapida. L’intento è quello di accostare ad un’analisi oggettiva delle proposte, delle modalità di candidatura che facilitino tempi rapidi e certezza procedurale.'
+    rightImage: '/assets/icons-come-funziona/clock.svg'
   - index: 2
     title: 'Richiesta dei fondi 3'
+    headerImage: '/assets/gears.svg'
     headerParagraph: "Presentando i progetti è possibile candidare la propria PA beneficiando di un iter di selezione trasparente."
     littleTitlel: 'Presentazione di progetti'
     bodyParagraphl: "Le amministrazioni potranno accedere alle risorsedel PNRR candidandosi ad appositi avvisi pubblici, attraverso un percorso guidato per la presentazionedi progetti. Alla conclusione della fase di selezione, saranno individuate le amministrazioni ammesse a finanziamento. Per l'attuazione di specifiche misure invece le amministrazioni interessate saranno coinvolte direttamente attraverso appositi accordi."
+    leftImage: '/assets/icons-come-funziona/computer-chart.svg'
     littleTtitler: 'Tempi rapidi'
     bodyParagraphr: 'Dei criteri di valutazione automatici consentiranno una valutazione dei progetti più rapida. L’intento è quello di accostare ad un’analisi oggettiva delle proposte, delle modalità di candidatura che facilitino tempi rapidi e certezza procedurale.'
+    rightImage: '/assets/icons-come-funziona/clock.svg'

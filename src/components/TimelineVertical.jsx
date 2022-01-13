@@ -212,7 +212,7 @@ export const TimelineVertical = ({ item }) => {
                     <span>{parseInt(elem.index , 10 ) + 1}</span>
                   </div>
                   <div className={classes.pointHeader}>
-                    <img src="/assets/gears.svg" alt=""></img>
+                    <img src={elem.headerImage} alt=""></img>
                     <div className={classes.headerInfo}>
                       <h4 className={classes.headerTitle}>{elem.title}</h4>
                       <p className={classes.headerParagraph}>
@@ -222,14 +222,14 @@ export const TimelineVertical = ({ item }) => {
                   </div>
                   <Row>
                     <Col xs="12" lg="6" className="mb-3 mb-lg-0 pr-4">
-                      <img src="/assets/icons-come-funziona/computer-chart.svg" alt=""></img>
+                      <img src={elem.leftImage} alt=""></img>
                       <span className={classes.littleTitle}>{elem.littleTitlel}</span>
                       <p className={classes.bodyParagraph}>
                         {elem.bodyParagraphl}
                       </p>
                     </Col>
                     <Col xs="12" lg="6" className="mb-3 mb-lg-0 pl-4">
-                      <img src="/assets/icons-come-funziona/clock.svg" alt=""></img>
+                      <img src={elem.rightImage} alt=""></img>
                       <span className={classes.littleTitle}>{elem.littleTitler}</span>
                       <p className={classes.bodyParagraph}>
                         {elem.bodyParagraphr}
@@ -239,117 +239,6 @@ export const TimelineVertical = ({ item }) => {
                 </div>
               ))}
 
-              {/* <div className={classes.timelinePointSection} data-index="0">
-                <div className={classes.timelineNumber} data-index="0">
-                  <span>1</span>
-                </div>
-                <div className={classes.pointHeader}>
-                  <img src="/assets/gears.svg" alt=""></img>
-                  <div className={classes.headerInfo}>
-                    <h4 className={classes.headerTitle}>Richiesta dei fondi</h4>
-                    <p className={classes.headerParagraph}>
-                      Presentando i progetti è possibile candidare la propria PA beneficiando di un iter di selezione
-                      trasparente.
-                    </p>
-                  </div>
-                </div>
-                <Row>
-                  <Col xs="12" lg="6" className="mb-3 mb-lg-0 pr-4">
-                    <img src="/assets/icons-come-funziona/computer-chart.svg" alt=""></img>
-                    <span className={classes.littleTitle}>Presentazione di progetti</span>
-                    <p className={classes.bodyParagraph}>
-                      Le amministrazioni potranno accedere alle risorsedel PNRR candidandosi ad appositi avvisi
-                      pubblici, attraverso un percorso guidato per la presentazionedi progetti. Alla conclusione della
-                      fase di selezione, saranno individuate le amministrazioni ammesse a finanziamento. Per
-                      l'attuazione di specifiche misure invece le amministrazioni interessate saranno coinvolte
-                      direttamente attraverso appositi accordi.
-                    </p>
-                  </Col>
-                  <Col xs="12" lg="6" className="mb-3 mb-lg-0 pl-4">
-                    <img src="/assets/icons-come-funziona/clock.svg" alt=""></img>
-                    <span className={classes.littleTitle}>Tempi rapidi</span>
-                    <p className={classes.bodyParagraph}>
-                      Dei criteri di valutazione automatici consentiranno una valutazione dei progetti più rapida.
-                      L’intento è quello di accostare ad un’analisi oggettiva delle proposte, delle modalità di
-                      candidatura che facilitino tempi rapidi e certezza procedurale.
-                    </p>
-                  </Col>
-                </Row>
-              </div>
-              <div className={classes.timelinePointSection} data-index="1">
-                <div className={classes.timelineNumber} data-index="1">
-                  <span>1</span>
-                </div>
-                <div className={classes.pointHeader}>
-                  <img src="/assets/gears.svg" alt=""></img>
-                  <div className={classes.headerInfo}>
-                    <h4 className={classes.headerTitle}>Richiesta dei fondi</h4>
-                    <p className={classes.headerParagraph}>
-                      Presentando i progetti è possibile candidare la propria PA beneficiando di un iter di selezione
-                      trasparente.
-                    </p>
-                  </div>
-                </div>
-                <Row>
-                  <Col xs="12" lg="6" className="mb-3 mb-lg-0 pr-4">
-                    <img src="/assets/icons-come-funziona/computer-chart.svg" alt=""></img>
-                    <span className={classes.littleTitle}>Presentazione di progetti</span>
-                    <p className={classes.bodyParagraph}>
-                      Le amministrazioni potranno accedere alle risorsedel PNRR candidandosi ad appositi avvisi
-                      pubblici, attraverso un percorso guidato per la presentazionedi progetti. Alla conclusione della
-                      fase di selezione, saranno individuate le amministrazioni ammesse a finanziamento. Per
-                      l'attuazione di specifiche misure invece le amministrazioni interessate saranno coinvolte
-                      direttamente attraverso appositi accordi.
-                    </p>
-                  </Col>
-                  <Col xs="12" lg="6" className="mb-3 mb-lg-0 pl-4">
-                    <img src="/assets/icons-come-funziona/clock.svg" alt=""></img>
-                    <span className={classes.littleTitle}>Tempi rapidi</span>
-                    <p className={classes.bodyParagraph}>
-                      Dei criteri di valutazione automatici consentiranno una valutazione dei progetti più rapida.
-                      L’intento è quello di accostare ad un’analisi oggettiva delle proposte, delle modalità di
-                      candidatura che facilitino tempi rapidi e certezza procedurale.
-                    </p>
-                  </Col>
-                </Row>
-              </div>
-              <div className={classes.timelinePointSection} data-index="2">
-                <div className={classes.timelineNumber} data-index="2">
-                  <span>1</span>
-                </div>
-                <div className={classes.pointHeader}>
-                  <img src="/assets/gears.svg" alt=""></img>
-                  <div className={classes.headerInfo}>
-                    <h4 className={classes.headerTitle}>Richiesta dei fondi</h4>
-                    <p className={classes.headerParagraph}>
-                      Presentando i progetti è possibile candidare la propria PA beneficiando di un iter di selezione
-                      trasparente.
-                    </p>
-                  </div>
-                </div>
-                <Row>
-                  <Col xs="12" lg="6" className="mb-3 mb-lg-0 pr-4">
-                    <img src="/assets/icons-come-funziona/computer-chart.svg" alt=""></img>
-                    <span className={classes.littleTitle}>Presentazione di progetti</span>
-                    <p className={classes.bodyParagraph}>
-                      Le amministrazioni potranno accedere alle risorsedel PNRR candidandosi ad appositi avvisi
-                      pubblici, attraverso un percorso guidato per la presentazionedi progetti. Alla conclusione della
-                      fase di selezione, saranno individuate le amministrazioni ammesse a finanziamento. Per
-                      l'attuazione di specifiche misure invece le amministrazioni interessate saranno coinvolte
-                      direttamente attraverso appositi accordi.
-                    </p>
-                  </Col>
-                  <Col xs="12" lg="6" className="mb-3 mb-lg-0 pl-4">
-                    <img src="/assets/icons-come-funziona/clock.svg" alt=""></img>
-                    <span className={classes.littleTitle}>Tempi rapidi</span>
-                    <p className={classes.bodyParagraph}>
-                      Dei criteri di valutazione automatici consentiranno una valutazione dei progetti più rapida.
-                      L’intento è quello di accostare ad un’analisi oggettiva delle proposte, delle modalità di
-                      candidatura che facilitino tempi rapidi e certezza procedurale.
-                    </p>
-                  </Col>
-                </Row>
-              </div> */}
             </div>
           </Col>
         </Row>
