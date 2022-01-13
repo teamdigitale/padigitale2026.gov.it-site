@@ -85,7 +85,7 @@ opportunity:
 heroCarouselNews:
   - id: 1
     category: Comunicato stampa
-    title: MaaS: 13 Comuni capoluogo di Città metropolitane hanno presentato progetti
+    title: "MaaS: 13 Comuni capoluogo di Città metropolitane hanno presentato progetti"
     description: Si avvia ora la fase di selezione dei progetti pilota per i servizi “Mobility as a Service for Italy”
     source: 'Fonte: innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/comunicati-stampa/13-comuni-capoluogo-di-citta-metropolitane-hanno-presentato-progetti-per-nuove-soluzioni-di-mobilita/'
