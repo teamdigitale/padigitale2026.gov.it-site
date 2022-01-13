@@ -40,7 +40,7 @@ const query = graphql`
 export const SolutionProjects = ({ location }) => {
   const classes = useStyles();
 
-  const { hero } = content;
+  const { hero, verticalTimeline } = content;
 
   const [, dispatch] = useContext(GlobalStateContext);
 
@@ -73,7 +73,7 @@ export const SolutionProjects = ({ location }) => {
         imageUrl="/assets/projects-solution-big.svg"
         imageAlt=""
       />
-      <TimelineVertical/>
+      <TimelineVertical item={verticalTimeline} />
       <ProjectsCards />
     </>
   );

@@ -1,5 +1,27 @@
 title: Come funziona - PA digitale 2026
 name: Come Funziona - PA digitale 2026
 hero:
-  title: 'Presentazione progetti'
+  title: "Presentazione progetti"
   body: Per le misure con una platea ristrettadi beneficiari (fino a  1.000 PA), è previstauna modalità di accesso attraversola presentazione di progetti, sempre ispirata ai principi della semplicità e della riduzione degli oneri amministrativi.
+verticalTimeline:
+  - index: 0
+    title: 'Richiesta dei fondi'
+    headerParagraph: "Presentando i progetti è possibile candidare la propria PA beneficiando di un iter di selezione trasparente."
+    littleTitlel: 'Presentazione di progetti'
+    bodyParagraphl: "Le amministrazioni potranno accedere alle risorsedel PNRR candidandosi ad appositi avvisi pubblici, attraverso un percorso guidato per la presentazionedi progetti. Alla conclusione della fase di selezione, saranno individuate le amministrazioni ammesse a finanziamento. Per l'attuazione di specifiche misure invece le amministrazioni interessate saranno coinvolte direttamente attraverso appositi accordi."
+    littleTtitler: 'Tempi rapidi'
+    bodyParagraphr: 'Dei criteri di valutazione automatici consentiranno una valutazione dei progetti più rapida. L’intento è quello di accostare ad un’analisi oggettiva delle proposte, delle modalità di candidatura che facilitino tempi rapidi e certezza procedurale.'
+  - index: 1
+    title: 'Richiesta dei fondi 2'
+    headerParagraph: 'Presentando i progetti è possibile candidare la propria PA beneficiando di un iter di selezione trasparente.'
+    littleTitlel: 'Presentazione di progetti'
+    bodyParagraphl: "Le amministrazioni potranno accedere alle risorsedel PNRR candidandosi ad appositi avvisi pubblici, attraverso un percorso guidato per la presentazionedi progetti. Alla conclusione della fase di selezione, saranno individuate le amministrazioni ammesse a finanziamento. Per l'attuazione di specifiche misure invece le amministrazioni interessate saranno coinvolte direttamente attraverso appositi accordi."
+    littleTtitler: 'Tempi rapidi'
+    bodyParagraphr: 'Dei criteri di valutazione automatici consentiranno una valutazione dei progetti più rapida. L’intento è quello di accostare ad un’analisi oggettiva delle proposte, delle modalità di candidatura che facilitino tempi rapidi e certezza procedurale.'
+  - index: 2
+    title: 'Richiesta dei fondi 3'
+    headerParagraph: "Presentando i progetti è possibile candidare la propria PA beneficiando di un iter di selezione trasparente."
+    littleTitlel: 'Presentazione di progetti'
+    bodyParagraphl: "Le amministrazioni potranno accedere alle risorsedel PNRR candidandosi ad appositi avvisi pubblici, attraverso un percorso guidato per la presentazionedi progetti. Alla conclusione della fase di selezione, saranno individuate le amministrazioni ammesse a finanziamento. Per l'attuazione di specifiche misure invece le amministrazioni interessate saranno coinvolte direttamente attraverso appositi accordi."
+    littleTtitler: 'Tempi rapidi'
+    bodyParagraphr: 'Dei criteri di valutazione automatici consentiranno una valutazione dei progetti più rapida. L’intento è quello di accostare ad un’analisi oggettiva delle proposte, delle modalità di candidatura che facilitino tempi rapidi e certezza procedurale.'
