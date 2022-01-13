@@ -1,12 +1,12 @@
 title: Come funziona - PA digitale 2026
 name: Come Funziona - PA digitale 2026
 hero:
-  title: "Presentazione progetti"
-  body: Per le misure con una platea ristrettadi beneficiari (fino a  1.000 PA), è previstauna modalità di accesso attraversola presentazione di progetti, sempre ispirata ai principi della semplicità e della riduzione degli oneri amministrativi.
+  title: "Soluzioni standard"
+  body: Per le misure con una platea ambia di beneficiari (oltre 1.000 PA), è prevista una modalità di accesso per soluzioni standard. Un percorso semplificato e guidato che va dalla richiesta dei finanziamenti all'erogazione dei fondi.
 verticalTimeline:
   - index: 0
     title: 'Richiesta dei fondi'
-    icon: '/assets/icons-come-funziona/gears.svg'
+    icon: '/assets/gears.svg'
     headerParagraph: "Soluzioni a misura di PA per semplificare la richiesta di finanziamenti e ridurre gli oneri amministrativi per tutta la PA."
     iconl: '/assets/icons-come-funziona/box.svg'
     iconr: '/assets/icons-come-funziona/multi-box.svg'
@@ -16,7 +16,7 @@ verticalTimeline:
     bodyParagraphr: 'Per semplificare l’accesso ai fondi del PNRR le amministrazioni potranno - <strong>con un’unica candidatura</strong> - accedere a pacchetti multimisura, che includono, per esempio, sia finanziamenti per la migrazione al cloud che per il miglioramento dei siti web.'
   - index: 1
     title: 'Realizzazione delle iniziative'
-    icon: '/assets/icons-come-funziona/shuttle.svg'
+    icon: '/assets/shuttle.svg'
     headerParagraph: 'Un portale dedicato e un team di supporto sul territorio. L’importanza di accompagnare le amministrazioni con competenze e strumenti.'
     iconl: '/assets/icons-come-funziona/computer.svg'
     iconr: '/assets/icons-come-funziona/italia-pin.svg'
@@ -26,7 +26,7 @@ verticalTimeline:
     bodyParagraphr: 'Per sostenere la transizione digitale dei singoli Enti, nasce un team dedicato: il <strong>Transformation Office</strong>. Questa struttura, che sarà anche dislocata sul territorio con referenti locali, è parte del Dipartimento per la trasformazione digitale, e farà da ponte con amministrazioni locali e fornitori IT della PA, con <strong>assistenza informativa e tecnica.</strong>'
   - index: 2
     title: 'Erogazione dei fondi'
-    icon: '/assets/icons-come-funziona/paper-plane.svg'
+    icon: '/assets/paper-plane.svg'
     headerParagraph: "Processi per l'erogazione dei fondi più semplici, per mettere al centro l'importanza dei risultati da raggiungere."
     iconl: '/assets/icons-come-funziona/online.svg'
     iconr: '/assets/icons-come-funziona/document-check.svg'

@@ -95,6 +95,9 @@ const useStyle = createUseStyles({
     fontSize: '1rem',
     lineHeight: '28px',
   },
+  littleIcon: {
+    height: '48px',
+  }
 });
 
 export const TimelineVertical = ({ item }) => {
@@ -127,7 +130,9 @@ export const TimelineVertical = ({ item }) => {
     };
 
     const observerCallback = (entries, observer) => {
-      const scrollIndicator = document.querySelector('.scroll-indicator-active');
+      const scrollIndicator = document.querySelector(
+        '.scroll-indicator-active'
+      );
 
       const addHeightIndicator = (sectionHeight) => {
         sectionHeight = sectionHeight + 36;
@@ -144,22 +149,31 @@ export const TimelineVertical = ({ item }) => {
 
       entries.forEach((entry) => {
         if (scrollingDirection === 'down') {
-          const activeNumber = document.querySelector('.timeline-number.active');
-          const activeNumberIndex = activeNumber && activeNumber.getAttribute('data-index');
+          const activeNumber = document.querySelector(
+            '.timeline-number.active'
+          );
+          const activeNumberIndex =
+            activeNumber && activeNumber.getAttribute('data-index');
           if (entry.isIntersecting && entry.intersectionRatio > 0.8) {
             addHeightIndicator(entry.target.clientHeight);
           }
           if (activeNumber) {
-            const sectionsLength = document.querySelectorAll('.timeline-point-section').length;
+            const sectionsLength = document.querySelectorAll(
+              '.timeline-point-section'
+            ).length;
             if (activeNumberIndex == sectionsLength - 1) {
               scrollIndicator.style.height = '100%';
             }
           }
         } else {
-          const activeNumber = document.querySelector('.timeline-number.active');
+          const activeNumber = document.querySelector(
+            '.timeline-number.active'
+          );
           if (activeNumber) {
             const numberIndex = activeNumber.getAttribute('data-index');
-            const sectionsLength = document.querySelectorAll('.timeline-point-section').length;
+            const sectionsLength = document.querySelectorAll(
+              '.timeline-point-section'
+            ).length;
             if (numberIndex == sectionsLength - 1) {
               subtractHeightIndicator(entry.target.clientHeight - 100);
             } else if (numberIndex == 0) {
@@ -178,7 +192,10 @@ export const TimelineVertical = ({ item }) => {
         }
       });
     };
-    const observer = new IntersectionObserver(observerCallback, observerOptions);
+    const observer = new IntersectionObserver(
+      observerCallback,
+      observerOptions
+    );
     sections.forEach((sec) => observer.observe(sec));
     const sectionsLength = sections.length;
 
@@ -207,38 +224,57 @@ export const TimelineVertical = ({ item }) => {
                 <div className={classes.scrollIndicatorActive}></div>
               </div>
               {item.map((elem, k) => (
-                <div className={classes.timelinePointSection} data-index={elem.index} key={k}>
-                  <div className={classes.timelineNumber} data-index={elem.index}>
-                    <span>{parseInt(elem.index , 10 ) + 1}</span>
+                <div
+                  className={classes.timelinePointSection}
+                  data-index={elem.index}
+                  key={k}
+                >
+                  <div
+                    className={classes.timelineNumber}
+                    data-index={elem.index}
+                  >
+                    <span>{parseInt(elem.index, 10) + 1}</span>
                   </div>
                   <div className={classes.pointHeader}>
-                    <img src={elem.headerImage} alt=""></img>
+                    <img src={elem.icon} alt=""></img>
                     <div className={classes.headerInfo}>
                       <h4 className={classes.headerTitle}>{elem.title}</h4>
-                      <p className={classes.headerParagraph}>
-                        {elem.headerParagraph}
-                      </p>
+                      <p
+                        className={classes.headerParagraph}
+                        dangerouslySetInnerHTML={{
+                          __html: elem.headerParagraph,
+                        }}
+                      ></p>
                     </div>
                   </div>
                   <Row>
                     <Col xs="12" lg="6" className="mb-3 mb-lg-0 pr-4">
-                      <img src={elem.leftImage} alt=""></img>
-                      <span className={classes.littleTitle}>{elem.littleTitlel}</span>
-                      <p className={classes.bodyParagraph}>
-                        {elem.bodyParagraphl}
-                      </p>
+                      <img className={classes.littleIcon} src={elem.iconl} alt=""></img>
+                      <span className={classes.littleTitle}>
+                        {elem.littleTitlel}
+                      </span>
+                      <p
+                        className={classes.bodyParagraph}
+                        dangerouslySetInnerHTML={{
+                          __html: elem.bodyParagraphl,
+                        }}
+                      ></p>
                     </Col>
                     <Col xs="12" lg="6" className="mb-3 mb-lg-0 pl-4">
-                      <img src={elem.rightImage} alt=""></img>
-                      <span className={classes.littleTitle}>{elem.littleTitler}</span>
-                      <p className={classes.bodyParagraph}>
-                        {elem.bodyParagraphr}
-                      </p>
+                      <img className={classes.littleIcon} src={elem.iconr} alt=""></img>
+                      <span className={classes.littleTitle}>
+                        {elem.littleTitler}
+                      </span>
+                      <p
+                        className={classes.bodyParagraph}
+                        dangerouslySetInnerHTML={{
+                          __html: elem.bodyParagraphr,
+                        }}
+                      ></p>
                     </Col>
                   </Row>
                 </div>
               ))}
-
             </div>
           </Col>
         </Row>

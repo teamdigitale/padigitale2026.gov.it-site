@@ -104,7 +104,7 @@ export const ProjectsCards = () => {
                     ristretta di beneficiari (fino a 1.000 PA).
                   </p>
                 </div>
-                <img src="/assets/standard-solution.svg" alt=""></img>
+                <img src="/assets/projects-solution.svg" alt=""></img>
               </div>
               <div className={classes.cardFooter}>
                 <Link to="/soluzione-progetti" className="btn text-uppercase btn-primary">

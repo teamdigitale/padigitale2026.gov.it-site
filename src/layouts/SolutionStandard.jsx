@@ -64,13 +64,13 @@ export const SolutionStandard = ({ location }) => {
           <span className="separator"></span>
         </BreadcrumbItem>
         <BreadcrumbItem active className={classes.breadcrumbItemActive}>
-          <a href="#">Presentazione progetti</a>
+          <a href="#">Soluzioni standard</a>
         </BreadcrumbItem>
       </Breadcrumb>
       <HeroImage
         title={hero.title}
         body={hero.body}
-        imageUrl="/assets/projects-solution-big.svg"
+        imageUrl="/assets/standard-solution-big.svg"
         imageAlt=""
       />
       <TimelineVertical item={verticalTimeline} />

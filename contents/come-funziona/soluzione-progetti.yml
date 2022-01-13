@@ -1,36 +1,36 @@
 title: Come funziona - PA digitale 2026
 name: Come Funziona - PA digitale 2026
 hero:
-  title: "Presentazione progetti"
-  body: Per le misure con una platea ristrettadi beneficiari (fino a  1.000 PA), è previstauna modalità di accesso attraversola presentazione di progetti, sempre ispirata ai principi della semplicità e della riduzione degli oneri amministrativi.
+  title: 'Presentazione progetti'
+  body: Per le misure con <strong>una platea ristrettadi beneficiari</strong> (fino a  1.000 PA), è previstauna modalità di accesso attraversola <strong>presentazione di progetti</strong>, sempre ispirata ai principi della <strong>semplicità</strong> e della <strong>riduzione degli oneri amministrativi</strong>.
 verticalTimeline:
   - index: 0
     title: 'Richiesta dei fondi'
-    headerImage: '/assets/gears.svg'
-    headerParagraph: "Presentando i progetti è possibile candidare la propria PA beneficiando di un iter di selezione trasparente."
-    littleTitlel: 'Presentazione di progetti'
-    bodyParagraphl: "Le amministrazioni potranno accedere alle risorsedel PNRR candidandosi ad appositi avvisi pubblici, attraverso un percorso guidato per la presentazionedi progetti. Alla conclusione della fase di selezione, saranno individuate le amministrazioni ammesse a finanziamento. Per l'attuazione di specifiche misure invece le amministrazioni interessate saranno coinvolte direttamente attraverso appositi accordi."
-    leftImage: '/assets/icons-come-funziona/computer-chart.svg'
-    littleTtitler: 'Tempi rapidi'
-    bodyParagraphr: 'Dei criteri di valutazione automatici consentiranno una valutazione dei progetti più rapida. L’intento è quello di accostare ad un’analisi oggettiva delle proposte, delle modalità di candidatura che facilitino tempi rapidi e certezza procedurale.'
-    rightImage: '/assets/icons-come-funziona/clock.svg'
+    icon: '/assets/gears.svg'
+    headerParagraph: 'Presentando i progetti è possibile candidare la propria PA beneficiando di un <strong>iter di selezione trasparente.</strong>'
+    iconl: '/assets/icons-come-funziona/computer-chart.svg'
+    iconr: '/assets/icons-come-funziona/clock.svg'
+    littleTitlel: 'PRESENTAZIONE DI PROGETTI'
+    bodyParagraphl: "Le amministrazioni potranno accedere alle risorse del PNRR candidandosi ad appositi <strong>avvisi pubblici</strong>, attraverso un <strong>percorso guidato per la presentazione di progetti.</strong> Alla conclusione della fase di selezione, saranno individuate le amministrazioni ammesse a finanziamento. <strong>Per l'attuazione di specifiche misure</strong> invece le amministrazioni interessate saranno coinvolte direttamente attraverso appositi accordi."
+    littleTitler: 'TEMPI RAPIDI'
+    bodyParagraphr: "Dei <strong>criteri di valutazione automatici</strong> consentiranno una valutazione dei progetti più rapida. L’intento è quello di <strong>accostare ad un’analisi oggettiva delle proposte</strong>, delle <strong>modalità di candidatura che facilitino tempi rapidi e certezza procedurale.</strong>"
   - index: 1
-    title: 'Richiesta dei fondi 2'
-    headerImage: '/assets/gears.svg'
-    headerParagraph: 'Presentando i progetti è possibile candidare la propria PA beneficiando di un iter di selezione trasparente.'
-    littleTitlel: 'Presentazione di progetti'
-    bodyParagraphl: "Le amministrazioni potranno accedere alle risorsedel PNRR candidandosi ad appositi avvisi pubblici, attraverso un percorso guidato per la presentazionedi progetti. Alla conclusione della fase di selezione, saranno individuate le amministrazioni ammesse a finanziamento. Per l'attuazione di specifiche misure invece le amministrazioni interessate saranno coinvolte direttamente attraverso appositi accordi."
-    leftImage: '/assets/icons-come-funziona/computer-chart.svg'
-    littleTtitler: 'Tempi rapidi'
-    bodyParagraphr: 'Dei criteri di valutazione automatici consentiranno una valutazione dei progetti più rapida. L’intento è quello di accostare ad un’analisi oggettiva delle proposte, delle modalità di candidatura che facilitino tempi rapidi e certezza procedurale.'
-    rightImage: '/assets/icons-come-funziona/clock.svg'
+    title: 'Realizzazione delle iniziative'
+    icon: '/assets/shuttle.svg'
+    headerParagraph: "Un portale dedicato e un team di supporto sul territorio per accompagnare le amministrazioni con strumenti e competenze. "
+    iconl: '/assets/icons-come-funziona/computer.svg'
+    iconr: '/assets/icons-come-funziona/italia-pin.svg'
+    littleTitlel: 'UN PORTALE DEDICATO'
+    bodyParagraphl: "“Prossima PA” <strong>accompagnerà gli Enti con risorse e informazioni</strong> lungo tutto il percorso di attuazione delle misure previste dal PNRR: dalla prima fase informativa, che precede l’avvio degli avvisi, al momento dell’accesso ai fondi e fino all’implementazione stessa delle iniziative. I <strong>fornitori saranno scelti dalla PA</strong> anche avvalendosi di fornitori certificati attraverso strumenti Consip."
+    littleTitler: 'UN TEAM  SUL TERRITORIO'
+    bodyParagraphr: "Attraverso “Prossima PA” le amministrazioni potranno <strong>accedere ad un’area riservata</strong>, per seguire la gestione amministrativa delle singole iniziative finanziate attraverso l’azione del Dipartimento per la trasformazione digitale. Con l’avvio degli avvisi avranno infatti la possibilità non solo di fare <strong>richiesta per i fondi</strong>, ma anche di <strong>produrre i dati relativi all’avanzamento dei progetti, ricevere comunicazioni dedicate e inviare documentazioni ufficiali per l’erogazione delle risorse.</strong>"
   - index: 2
-    title: 'Richiesta dei fondi 3'
-    headerImage: '/assets/gears.svg'
-    headerParagraph: "Presentando i progetti è possibile candidare la propria PA beneficiando di un iter di selezione trasparente."
-    littleTitlel: 'Presentazione di progetti'
-    bodyParagraphl: "Le amministrazioni potranno accedere alle risorsedel PNRR candidandosi ad appositi avvisi pubblici, attraverso un percorso guidato per la presentazionedi progetti. Alla conclusione della fase di selezione, saranno individuate le amministrazioni ammesse a finanziamento. Per l'attuazione di specifiche misure invece le amministrazioni interessate saranno coinvolte direttamente attraverso appositi accordi."
-    leftImage: '/assets/icons-come-funziona/computer-chart.svg'
-    littleTtitler: 'Tempi rapidi'
-    bodyParagraphr: 'Dei criteri di valutazione automatici consentiranno una valutazione dei progetti più rapida. L’intento è quello di accostare ad un’analisi oggettiva delle proposte, delle modalità di candidatura che facilitino tempi rapidi e certezza procedurale.'
-    rightImage: '/assets/icons-come-funziona/clock.svg'
+    title: 'Erogazione dei fondi'
+    icon: '/assets/paper-plane.svg'
+    headerParagraph: "Processi per l'erogazione dei fondi più semplici, per mettere al centro l'importanza dei risultati da raggiungere."
+    iconl: '/assets/icons-come-funziona/document-check.svg'
+    iconr: '/assets/icons-come-funziona/box-cash.svg'
+    littleTitlel: 'SPESE RICONOSCIUTE'
+    bodyParagraphl: "Le amministrazioni dovranno <strong>implementare</strong>, con il proprio personale o attraverso l’acquisto di servizi e forniture, <strong>il progetto in tutte le sue componenti</strong> effettuando le spese previste per la realizzazione delle attività: impegno delle risorse, svolgimento delle procedure di gara per l’acquisizione di lavori/servizi/forniture a seconda della tipologia di progetto, esecuzione dei pagamenti ai fornitori"
+    littleTitler: 'RENDICONTAZIONE ED EROGAZIONE DEI FONDI'
+    bodyParagraphr: "L’erogazione dei contributi seguirà alcuni <strong>step che possono prevedere un’anticipazione e delle tranches, fino al saldo, erogate “a rimborso” delle spese sostenute</strong>. In questo caso sarà necessario presentare tutta la documentazione che giustifica e dimostra l’esecuzione della singola spesa. Anche in questo caso si prevedono procedure semplici per il trasferimento dei fondi e il costante supporto all’amministrazione destinataria delle risorse per assicurare uno spedito ed efficace trasferimento dei fondi"
