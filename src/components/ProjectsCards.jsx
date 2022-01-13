@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import { createUseStyles } from 'react-jss';
 import { Link } from 'gatsby';
 import { Container, Row, Col, Icon } from 'design-react-kit';
-import classNames from 'classnames';
 
 const useStyles = createUseStyles({
   projectsCardSection: {
@@ -88,7 +87,7 @@ export const ProjectsCards = () => {
                 <img src="/assets/standard-solution.svg" alt=""></img>
               </div>
               <div className={classes.cardFooter}>
-                <Link to="#" className="btn text-uppercase btn-primary">
+                <Link to="/soluzione-standard" className="btn text-uppercase btn-primary">
                   Scopri di più
                 </Link>
               </div>
