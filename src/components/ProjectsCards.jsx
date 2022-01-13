@@ -30,11 +30,22 @@ const useStyles = createUseStyles({
       lineHeight: '1.4',
     },
   },
+  cardModality: {
+    fontSize: '0.889rem',
+    fontWeight: '600',
+    color: '#33485C',
+    marginBottom: '0.778rem',
+    display: 'block',
+    textTransform: 'uppercase',
+  },
   card: {
     borderRadius: '4px',
+    background: '#FFFFFF',
     boxShadow: '0px 0px 80px rgba(0, 43, 85, 0.1)',
     width: '100%',
     padding: '1.556rem 1.333rem',
+  },
+  cardBody: {
     display: 'flex',
     alignItems: 'center',
   },
@@ -45,15 +56,6 @@ const useStyles = createUseStyles({
   cardText: {
     fontSize: '0.889rem',
     lineHeight: '1.333rem',
-  },
-  cardLink: {
-    textDecoration: 'none',
-    color: '#33485C',
-
-    '&:hover': {
-      textDecoration: 'none',
-      color: '#33485C',
-    },
   },
 });
 export const ProjectsCards = () => {
@@ -73,8 +75,9 @@ export const ProjectsCards = () => {
         </Row>
         <Row>
           <Col xs="12" lg="5" className="offset-lg-1 mb-3 mb-lg-0">
-            <Link to="#" className={classes.cardLink}>
-              <div className={classes.card}>
+            <span className={classes.cardModality}>Modalità 1</span>
+            <div className={classes.card}>
+              <div className={classes.cardBody}>
                 <div>
                   <h4 className={classes.cardTitle}>Soluzioni standard</h4>
                   <p className={classes.cardText}>
@@ -84,11 +87,17 @@ export const ProjectsCards = () => {
                 </div>
                 <img src="/assets/standard-solution.svg" alt=""></img>
               </div>
-            </Link>
+              <div className={classes.cardFooter}>
+                <Link to="#" className="btn text-uppercase btn-primary">
+                  Scopri di più
+                </Link>
+              </div>
+            </div>
           </Col>
           <Col xs="12" lg="5">
-            <Link to="#" className={classes.cardLink}>
-              <div className={classes.card}>
+            <span className={classes.cardModality}>Modalità 2</span>
+            <div className={classes.card}>
+              <div className={classes.cardBody}>
                 <div>
                   <h4 className={classes.cardTitle}>Presentazioni progetti</h4>
                   <p className={classes.cardText}>
@@ -96,9 +105,14 @@ export const ProjectsCards = () => {
                     ristretta di beneficiari (fino a 1.000 PA).
                   </p>
                 </div>
-                <img src="/assets/projects-solution.svg" alt=""></img>
+                <img src="/assets/standard-solution.svg" alt=""></img>
               </div>
-            </Link>
+              <div className={classes.cardFooter}>
+                <Link to="/soluzione-progetti" className="btn text-uppercase btn-primary">
+                  Scopri di più
+                </Link>
+              </div>
+            </div>
           </Col>
         </Row>
       </div>
