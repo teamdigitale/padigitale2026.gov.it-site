@@ -84,30 +84,36 @@ opportunity:
       id: centri-facili
 heroCarouselNews:
   - id: 1
-    category: Avviso Pubblico
-    title: Mobility as a Service for Italy, parte l'Avviso Pubblico
-    description: "L'Avviso Pubblico permetterà di selezionare i primi tre progetti pilota che parteciperanno alla sperimentazione di servizi Mobility as a Service (MaaS)"
+    category: Comunicato stampa
+    title: "MaaS: 13 Comuni capoluogo di Città metropolitane hanno presentato progetti"
+    description: Si avvia ora la fase di selezione dei progetti pilota per i servizi “Mobility as a Service for Italy”
     source: 'Fonte: innovazione.gov.it'
-    linkTo: 'https://innovazione.gov.it/notizie/avvisi-pubblici/mobility-as-a-service-for-italy/'
+    linkTo: 'https://innovazione.gov.it/notizie/comunicati-stampa/13-comuni-capoluogo-di-citta-metropolitane-hanno-presentato-progetti-per-nuove-soluzioni-di-mobilita/'
   - id: 2
+    category: Novità
+    title: "Cloud PA: selezionato il progetto PSN, gara prevista nelle prossime settimane"
+    description: La proposta del raggruppamento di imprese Tim, CDP, Leonardo e Sogei è stata selezionata e sarà messa a gara
+    source: 'Fonte: innovazione.gov.it'
+    linkTo: 'https://innovazione.gov.it/notizie/articoli/cloud-pa-selezionato-il-progetto-psn-gara-prevista-nelle-prossime-settimane/'
+  - id: 3
     category: Novità
     title: Nasce PA digitale 2026, il punto di accesso alle risorse per la transizione digitale della PA
     description: 'La piattaforma consentirà alle amministrazioni di richiedere i fondi del PNRR dedicati al digitale, rendicontare i progetti e ricevere assistenza'
     source: 'Fonte: innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/articoli/nasce-pa-digitale-2026-il-punto-di-accesso-risorse-transizione-digitale-pa-pnrr/'
-  - id: 3
+  - id: 4
     category: Novità
     title: Dal 15 novembre certificati anagrafici online e gratuiti per i cittadini
     description: Accedendo all'Anagrafe nazionale, per la prima volta i cittadini italiani potranno scaricare i certificati anagrafici online in maniera autonoma
     source: 'Fonte: innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/articoli/dal-15-novembre-certificati-anagrafici-online-e-gratuiti-per-i-cittadini/'
-  - id: 4
+  - id: 5
     category: Comunicato stampa
     title: 'DL PNRR: 250 milioni per le competenze digitali degli italiani'
     description: Tutte le novità introdotte dal Decreto per l'attuazione del PNRR
     source: 'Fonte: innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/comunicati-stampa/dl-pnrr-250-milioni-per-le-competenze-digitali-degli-italiani/'
-  - id: 5
+  - id: 6
     category: Notizia
     title: Cloud Italia, presentati gli indirizzi strategici per la Pubblica Amministrazione
     description: 'Le sfide della strategia: assicurare l’autonomia tecnologica del Paese, garantire il controllo sui dati e aumentare la resilienza dei servizi digitali'
