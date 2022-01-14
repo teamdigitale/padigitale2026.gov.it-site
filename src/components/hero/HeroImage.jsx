@@ -93,7 +93,7 @@ export const HeroImage = ({
       <div className={classes.heroImage}>
         <div className="col-lg-6 offset-lg-1 p-0 mt-3 mt-lg-0 pr-lg-5">
           <div className="text-center text-lg-left">
-            <HeroCategory title={category} className={classes.heroCategory} />
+            {category ? <HeroCategory title={category} className={classes.heroCategory} /> : ''}
             <HeroTitle Tag="h4" id={heroTitleId} title={title} className={classes.heroTitle} />
             <HeroBody html={body} />
           </div>

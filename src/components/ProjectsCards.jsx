@@ -65,9 +65,9 @@ export const ProjectsCards = (item) => {
     <div className={classes.projectsCardSection}>
       <div className="container pl-3 pr-0">
         <Row className="mb-5">
-          <Col xs="12" lg="6" id="beneficiari" className="offset-lg-1">
+          <Col xs="12" lg="6" id="beneficiari-pc" className="offset-lg-1">
             <h3 className={classes.category}>{projectsCardsItem.littleTitle}</h3>
-            <h4 className={classes.title} id="beneficiaries-title">
+            <h4 className={classes.title} id="beneficiaries-title-pc">
               {projectsCardsItem.title}
             </h4>
           </Col>
