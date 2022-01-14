@@ -286,7 +286,7 @@ export const AccordionButtonFull = (props) => {
         ></Button>
         <div className={classes.cardWrapper}>
           <div className={classes.cardHeader}>
-            <h4 className={classes.cardTitle}>
+            <h4 className={classes.cardTitle} onClick={eventHandler}>
               <span>{number}</span> {title}
             </h4>
             <div className={classes.cardHeaderValue} dangerouslySetInnerHTML={{ __html: money }} />
@@ -317,7 +317,10 @@ export const AccordionButtonFull = (props) => {
                   <button
                     className={classes.accessLink}
                     onClick={() => {
-                      dispatch({ type: 'SET:HOW_SECTION_ID', payload: { howId: accessSectionId } });
+                      dispatch({
+                        type: 'SET:HOW_SECTION_ID',
+                        payload: { howId: accessSectionId },
+                      });
                       navigate('/come-funziona');
                     }}
                   >
