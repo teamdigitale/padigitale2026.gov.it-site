@@ -6,7 +6,6 @@ import { DesktopSwiper } from '../DesktopSwiper';
 
 const useStyles = createUseStyles({
   timelineSection: {
-    backgroundColor: '#F0F6FC',
     padding: '3.125rem 0 4.5rem 0',
     overflow: 'hidden',
     '@media (min-width: 992px)': {

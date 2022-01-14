@@ -73,6 +73,7 @@ export const IndexPage = () => {
       <HomeCarousel content={homeCarousel} />
       <OpportunitySection title={opportunity.title} list={opportunity.cards} />
       <HeroImage
+        ctaContainer={true}
         category={heroPnrr.category}
         title={heroPnrr.title}
         body={heroPnrr.body}

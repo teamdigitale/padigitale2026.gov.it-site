@@ -3,8 +3,8 @@ import { announce } from '@react-aria/live-announcer';
 import { support } from '../../contents/home-page/home.yml';
 import content from '../../contents/come-funziona/come-funziona.yml';
 import { SEO } from '../components/SEO';
-import { TabAdobe } from '../components/TabAdobe';
 import { Timeline } from '../components/carousel/Timeline';
+import { ProjectsCards } from '../components/ProjectsCards';
 import { HeroHowItWorks } from '../components/hero/HeroHowItWorks';
 import seo from '../../contents/seo.yml';
 import { GlobalStateContext } from '../context/globalContext';
@@ -48,24 +48,7 @@ export const ComeFunzionaPage = () => {
         image="come-funziona-hero.svg"
         list={content.hero.list}
       />
-      <TabAdobe
-        tabContent={content.pacchettiTabs}
-        sideDesktopNavigation
-        mobileNavigation
-        title={content.pacchettiTabs.title}
-        subtitle={content.pacchettiTabs.subtitle}
-        sectionId="soluzioni-standard"
-        ariaLabel="Tabs delle soluzioni standard"
-      />
-      <TabAdobe
-        tabContent={content.presentazioneTabs}
-        sideDesktopNavigation
-        mobileNavigation
-        title={content.presentazioneTabs.title}
-        subtitle={content.presentazioneTabs.subtitle}
-        sectionId="presentazione-progetto"
-        ariaLabel="Tabs della presentazione progetti"
-      />
+      <ProjectsCards item={content.projectsCardsItem} />
       <Timeline content={content.timeline} title="Il calendario" />
       <Beneficiaries item={content.beneficiaries} />
       <Involved title={content.involved.title} category={content.involved.category} cards={content.involved.cards} />

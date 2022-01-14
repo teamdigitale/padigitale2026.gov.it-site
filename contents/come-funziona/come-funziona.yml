@@ -207,3 +207,14 @@ presentazioneTabs:
           title: Rendicontazione ed erogazione dei fondi
           image: Erogazione.svg
           description: L’erogazione dei contributi seguirà alcuni <strong>step che possono prevedere un’anticipazione e delle tranches, fino al saldo, erogate “a rimborso”</strong>. In questo caso sarà necessario presentare tutta la documentazione che giustifica l’esecuzione della singola spesa. Anche in questo caso si prevedono procedure semplici per il trasferimento dei fondi e il costante supporto all’amministrazione destinataria delle risorse per assicurare uno spedito ed efficace trasferimento dei fondi.
+projectsCardsItem:
+  littleTitle: LE MODALITÀ DI ACCESSO
+  title: Due modalità alternative per accedere alle risorse per la transizione digitale
+  modalityLeft: Modalità 1
+  cardTitleLeft: Soluzioni standard
+  cardTextLeft: La modalità di accesso prevista per le misure con una platea ampia di beneficiari (oltre 1.000 PA).
+  buttonLabelLeft: Scopri di più
+  modalityRight: Modalità 2
+  cardTitleRight: Presentazioni progetti
+  cardTextRight: La modalità di accesso prevista per le misure con una platea ristretta di beneficiari (fino a 1.000 PA).
+  buttonLabelRight: Scopri di più

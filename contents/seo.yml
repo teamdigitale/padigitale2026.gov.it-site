@@ -31,4 +31,7 @@ confirmPage:
 unsubscribePage:
   title: Annulla iscrizione Email - PA digitale 2026
   description: Annulla la tua email per ricevere agli aggiornamenti dalla piattaforma PA Digitale 2026
+projectsSolutionPage:
+  title: Presentazione progetti - PA digitale 2026
+  description: Per le misure con una platea ristrettadi beneficiari (fino a  1.000 PA), è previstauna modalità di accesso attraversola presentazione di progetti, sempre ispirata ai principi della semplicità e della riduzione degli oneri amministrativi.
   
