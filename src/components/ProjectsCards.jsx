@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React from 'react';
 import { createUseStyles } from 'react-jss';
 import { Link } from 'gatsby';
-import { Container, Row, Col, Icon } from 'design-react-kit';
+import { Row, Col } from 'design-react-kit';
 
 const useStyles = createUseStyles({
   projectsCardSection: {
@@ -67,8 +67,7 @@ export const ProjectsCards = () => {
           <Col xs="12" lg="6" id="beneficiari" className="offset-lg-1">
             <h3 className={classes.category}>Le modalità di accesso</h3>
             <h4 className={classes.title} id="beneficiaries-title">
-              Due modalità alternative per accedere alle risorse per la
-              transizione digitale
+              Due modalità alternative per accedere alle risorse per la transizione digitale
             </h4>
           </Col>
         </Row>
@@ -80,8 +79,7 @@ export const ProjectsCards = () => {
                 <div>
                   <h4 className={classes.cardTitle}>Soluzioni standard</h4>
                   <p className={classes.cardText}>
-                    La modalità di accesso prevista per le misure con una platea
-                    ampia di beneficiari (oltre 1.000 PA).
+                    La modalità di accesso prevista per le misure con una platea ampia di beneficiari (oltre 1.000 PA).
                   </p>
                 </div>
                 <img src="/assets/standard-solution.svg" alt=""></img>
@@ -100,8 +98,8 @@ export const ProjectsCards = () => {
                 <div>
                   <h4 className={classes.cardTitle}>Presentazioni progetti</h4>
                   <p className={classes.cardText}>
-                    La modalità di accesso prevista per le misure con una platea
-                    ristretta di beneficiari (fino a 1.000 PA).
+                    La modalità di accesso prevista per le misure con una platea ristretta di beneficiari (fino a 1.000
+                    PA).
                   </p>
                 </div>
                 <img src="/assets/projects-solution.svg" alt=""></img>

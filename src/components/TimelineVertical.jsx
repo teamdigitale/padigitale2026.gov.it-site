@@ -1,6 +1,8 @@
+/* eslint-disable eqeqeq */
 import React, { useEffect } from 'react';
 import { createUseStyles } from 'react-jss';
 import { Row, Col } from 'design-react-kit';
+import PropTypes from 'prop-types';
 
 const useStyle = createUseStyles({
   timelineVertical: {
@@ -97,28 +99,12 @@ const useStyle = createUseStyles({
   },
   littleIcon: {
     height: '48px',
-  }
+  },
 });
 
 export const TimelineVertical = ({ item }) => {
+  // eslint-disable-next-line sonarjs/cognitive-complexity
   useEffect(() => {
-    /* const scrollHandler = () => {
-      const scrollIndicator = document.querySelector(
-        '.scroll-indicator-active'
-      );
-
-      const winScroll =
-        document.body.scrollTop || document.documentElement.scrollTop;
-      const height =
-        document.documentElement.scrollHeight -
-        document.documentElement.clientHeight;
-      const scrolled = (winScroll / height) * 100;
-      if (scrollIndicator && winScroll) {
-        scrollIndicator.style.height = scrolled + '%';
-      }
-    };
-    window.addEventListener('scroll', scrollHandler); */
-
     const sections = document.querySelectorAll('.timeline-point-section');
 
     const observerOptions = {
@@ -129,57 +115,43 @@ export const TimelineVertical = ({ item }) => {
       delay: 100,
     };
 
-    const observerCallback = (entries, observer) => {
-      const scrollIndicator = document.querySelector(
-        '.scroll-indicator-active'
-      );
+    const observerCallback = (entries) => {
+      const scrollIndicator = document.querySelector('.scroll-indicator-active');
 
       const addHeightIndicator = (sectionHeight) => {
-        sectionHeight = sectionHeight + 36;
         const indicatorHeight = scrollIndicator.clientHeight + sectionHeight;
         scrollIndicator.style.height = indicatorHeight + 'px';
       };
 
       const subtractHeightIndicator = (sectionHeight) => {
-        console.log(sectionHeight);
-        sectionHeight = sectionHeight + 36;
         const indicatorHeight = scrollIndicator.clientHeight - sectionHeight;
         scrollIndicator.style.height = indicatorHeight + 'px';
       };
 
       entries.forEach((entry) => {
         if (scrollingDirection === 'down') {
-          const activeNumber = document.querySelector(
-            '.timeline-number.active'
-          );
-          const activeNumberIndex =
-            activeNumber && activeNumber.getAttribute('data-index');
+          const activeNumber = document.querySelector('.timeline-number.active');
+          const activeNumberIndex = activeNumber && activeNumber.getAttribute('data-index');
           if (entry.isIntersecting && entry.intersectionRatio > 0.8) {
-            addHeightIndicator(entry.target.clientHeight);
+            addHeightIndicator(entry.target.clientHeight + 36);
           }
           if (activeNumber) {
-            const sectionsLength = document.querySelectorAll(
-              '.timeline-point-section'
-            ).length;
+            const sectionsLength = sections.length;
             if (activeNumberIndex == sectionsLength - 1) {
               scrollIndicator.style.height = '100%';
             }
           }
         } else {
-          const activeNumber = document.querySelector(
-            '.timeline-number.active'
-          );
+          const activeNumber = document.querySelector('.timeline-number.active');
           if (activeNumber) {
             const numberIndex = activeNumber.getAttribute('data-index');
-            const sectionsLength = document.querySelectorAll(
-              '.timeline-point-section'
-            ).length;
+            const sectionsLength = sections.length;
             if (numberIndex == sectionsLength - 1) {
-              subtractHeightIndicator(entry.target.clientHeight - 100);
+              subtractHeightIndicator(entry.target.clientHeight + 36 - 100);
             } else if (numberIndex == 0) {
               scrollIndicator.style.height = '0px';
             } else {
-              subtractHeightIndicator(entry.target.clientHeight);
+              subtractHeightIndicator(entry.target.clientHeight + 36);
             }
           }
         }
@@ -192,12 +164,8 @@ export const TimelineVertical = ({ item }) => {
         }
       });
     };
-    const observer = new IntersectionObserver(
-      observerCallback,
-      observerOptions
-    );
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
     sections.forEach((sec) => observer.observe(sec));
-    const sectionsLength = sections.length;
 
     let scrollingDirection = '';
     let lastScrollTop = 0;
@@ -224,15 +192,8 @@ export const TimelineVertical = ({ item }) => {
                 <div className={classes.scrollIndicatorActive}></div>
               </div>
               {item.map((elem, k) => (
-                <div
-                  className={classes.timelinePointSection}
-                  data-index={elem.index}
-                  key={k}
-                >
-                  <div
-                    className={classes.timelineNumber}
-                    data-index={elem.index}
-                  >
+                <div className={classes.timelinePointSection} data-index={elem.index} key={k}>
+                  <div className={classes.timelineNumber} data-index={elem.index}>
                     <span>{parseInt(elem.index, 10) + 1}</span>
                   </div>
                   <div className={classes.pointHeader}>
@@ -250,9 +211,7 @@ export const TimelineVertical = ({ item }) => {
                   <Row>
                     <Col xs="12" lg="6" className="mb-3 mb-lg-0 pr-4">
                       <img className={classes.littleIcon} src={elem.iconl} alt=""></img>
-                      <span className={classes.littleTitle}>
-                        {elem.littleTitlel}
-                      </span>
+                      <span className={classes.littleTitle}>{elem.littleTitlel}</span>
                       <p
                         className={classes.bodyParagraph}
                         dangerouslySetInnerHTML={{
@@ -262,9 +221,7 @@ export const TimelineVertical = ({ item }) => {
                     </Col>
                     <Col xs="12" lg="6" className="mb-3 mb-lg-0 pl-4">
                       <img className={classes.littleIcon} src={elem.iconr} alt=""></img>
-                      <span className={classes.littleTitle}>
-                        {elem.littleTitler}
-                      </span>
+                      <span className={classes.littleTitle}>{elem.littleTitler}</span>
                       <p
                         className={classes.bodyParagraph}
                         dangerouslySetInnerHTML={{
@@ -281,4 +238,8 @@ export const TimelineVertical = ({ item }) => {
       </div>
     </>
   );
+};
+
+TimelineVertical.propTypes = {
+  item: PropTypes.array,
 };

@@ -1,5 +1,4 @@
 import React, { useEffect, useContext } from 'react';
-import { graphql, Link, useStaticQuery } from 'gatsby';
 import { createUseStyles } from 'react-jss';
 import { Breadcrumb, BreadcrumbItem } from 'design-react-kit';
 import content from '../../contents/come-funziona/soluzione-standard.yml';
@@ -27,17 +26,7 @@ const useStyles = createUseStyles({
   },
 });
 
-const query = graphql`
-  query {
-    site {
-      siteMetadata {
-        apiUrl
-      }
-    }
-  }
-`;
-
-export const SolutionStandard = ({ location }) => {
+export const SolutionStandard = () => {
   const classes = useStyles();
 
   const { hero, verticalTimeline } = content;
@@ -67,12 +56,7 @@ export const SolutionStandard = ({ location }) => {
           <a href="#">Soluzioni standard</a>
         </BreadcrumbItem>
       </Breadcrumb>
-      <HeroImage
-        title={hero.title}
-        body={hero.body}
-        imageUrl="/assets/standard-solution-big.svg"
-        imageAlt=""
-      />
+      <HeroImage title={hero.title} body={hero.body} imageUrl="/assets/standard-solution-big.svg" imageAlt="" />
       <TimelineVertical item={verticalTimeline} />
       <ProjectsCards />
     </>
