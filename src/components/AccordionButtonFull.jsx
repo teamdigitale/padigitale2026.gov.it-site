@@ -289,10 +289,7 @@ export const AccordionButtonFull = (props) => {
             <h4 className={classes.cardTitle} onClick={eventHandler}>
               <span>{number}</span> {title}
             </h4>
-            <div
-              className={classes.cardHeaderValue}
-              dangerouslySetInnerHTML={{ __html: money }}
-            />
+            <div className={classes.cardHeaderValue} dangerouslySetInnerHTML={{ __html: money }} />
             <div className={classes.cardTags}>
               <p className="tag-title">Beneficiari</p>
               <div role="list" className="tag-wrapper">
@@ -311,10 +308,7 @@ export const AccordionButtonFull = (props) => {
           >
             <Card>
               <CardBody>
-                <div
-                  className={classes.description}
-                  dangerouslySetInnerHTML={{ __html: description }}
-                ></div>
+                <div className={classes.description} dangerouslySetInnerHTML={{ __html: description }}></div>
                 <div className={classes.stalls}>
                   Platea potenziale: <span>{stalls}</span>
                 </div>
