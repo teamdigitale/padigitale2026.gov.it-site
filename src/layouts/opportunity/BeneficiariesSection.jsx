@@ -117,6 +117,7 @@ export const BeneficiariesSection = (props) => {
       const item = document.querySelector('#' + sectionId);
       item.setAttribute('tabindex', '-1');
       item.focus();
+      item.querySelector('h4').click();
     }
   }, [sectionId]);
 
