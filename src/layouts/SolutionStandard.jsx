@@ -4,6 +4,7 @@ import { Breadcrumb, BreadcrumbItem } from 'design-react-kit';
 import content from '../../contents/come-funziona/soluzione-standard.yml';
 import { SEO } from '../components/SEO';
 import seo from '../../contents/seo.yml';
+import contentHowItWorks from '../../contents/come-funziona/come-funziona.yml';
 import { GlobalStateContext } from '../context/globalContext';
 import { HeroImage } from '../components/hero/HeroImage';
 import { TimelineVertical } from '../components/TimelineVertical';
@@ -30,7 +31,7 @@ export const SolutionStandard = () => {
   const classes = useStyles();
 
   const { hero, verticalTimeline } = content;
-
+  const { projectsCardsItem } = contentHowItWorks;
   const [, dispatch] = useContext(GlobalStateContext);
 
   useEffect(() => {
@@ -58,7 +59,7 @@ export const SolutionStandard = () => {
       </Breadcrumb>
       <HeroImage title={hero.title} body={hero.body} imageUrl="/assets/standard-solution-big.svg" imageAlt="" />
       <TimelineVertical item={verticalTimeline} />
-      <ProjectsCards />
+      <ProjectsCards item={projectsCardsItem} />
     </>
   );
 };

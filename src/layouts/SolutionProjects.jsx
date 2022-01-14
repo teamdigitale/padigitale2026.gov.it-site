@@ -2,6 +2,7 @@ import React, { useEffect, useContext } from 'react';
 import { createUseStyles } from 'react-jss';
 import { Breadcrumb, BreadcrumbItem } from 'design-react-kit';
 import content from '../../contents/come-funziona/soluzione-progetti.yml';
+import contentHowItWorks from '../../contents/come-funziona/come-funziona.yml';
 import { SEO } from '../components/SEO';
 import seo from '../../contents/seo.yml';
 import { GlobalStateContext } from '../context/globalContext';
@@ -30,7 +31,7 @@ export const SolutionProjects = () => {
   const classes = useStyles();
 
   const { hero, verticalTimeline } = content;
-
+  const { projectsCardsItem } = contentHowItWorks;
   const [, dispatch] = useContext(GlobalStateContext);
 
   useEffect(() => {
@@ -58,7 +59,7 @@ export const SolutionProjects = () => {
       </Breadcrumb>
       <HeroImage title={hero.title} body={hero.body} imageUrl="/assets/projects-solution-big.svg" imageAlt="" />
       <TimelineVertical item={verticalTimeline} />
-      <ProjectsCards />
+      <ProjectsCards item={projectsCardsItem} />
     </>
   );
 };

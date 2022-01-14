@@ -57,56 +57,52 @@ const useStyles = createUseStyles({
     lineHeight: '1.333rem',
   },
 });
-export const ProjectsCards = () => {
+export const ProjectsCards = (item) => {
   const classes = useStyles();
+  const projectsCardsItem = item.item;
 
   return (
     <div className={classes.projectsCardSection}>
       <div className="container pl-3 pr-0">
         <Row className="mb-5">
           <Col xs="12" lg="6" id="beneficiari" className="offset-lg-1">
-            <h3 className={classes.category}>Le modalità di accesso</h3>
+            <h3 className={classes.category}>{projectsCardsItem.littleTitle}</h3>
             <h4 className={classes.title} id="beneficiaries-title">
-              Due modalità alternative per accedere alle risorse per la transizione digitale
+              {projectsCardsItem.title}
             </h4>
           </Col>
         </Row>
         <Row>
           <Col xs="12" lg="5" className="offset-lg-1 mb-3 mb-lg-0">
-            <span className={classes.cardModality}>Modalità 1</span>
+            <span className={classes.cardModality}>{projectsCardsItem.modalityLeft}</span>
             <div className={classes.card}>
               <div className={classes.cardBody}>
                 <div>
-                  <h4 className={classes.cardTitle}>Soluzioni standard</h4>
-                  <p className={classes.cardText}>
-                    La modalità di accesso prevista per le misure con una platea ampia di beneficiari (oltre 1.000 PA).
-                  </p>
+                  <h4 className={classes.cardTitle}>{projectsCardsItem.cardTitleLeft}</h4>
+                  <p className={classes.cardText}>{projectsCardsItem.cardTextLeft}</p>
                 </div>
                 <img src="/assets/standard-solution.svg" alt=""></img>
               </div>
               <div className={classes.cardFooter}>
                 <Link to="/soluzione-standard" className="btn text-uppercase btn-primary">
-                  Scopri di più
+                  {projectsCardsItem.buttonLabelLeft}
                 </Link>
               </div>
             </div>
           </Col>
           <Col xs="12" lg="5">
-            <span className={classes.cardModality}>Modalità 2</span>
+            <span className={classes.cardModality}>{projectsCardsItem.modalityRight}</span>
             <div className={classes.card}>
               <div className={classes.cardBody}>
                 <div>
-                  <h4 className={classes.cardTitle}>Presentazioni progetti</h4>
-                  <p className={classes.cardText}>
-                    La modalità di accesso prevista per le misure con una platea ristretta di beneficiari (fino a 1.000
-                    PA).
-                  </p>
+                  <h4 className={classes.cardTitle}>{projectsCardsItem.cardTitleRight}</h4>
+                  <p className={classes.cardText}>{projectsCardsItem.cardTextRight}</p>
                 </div>
                 <img src="/assets/projects-solution.svg" alt=""></img>
               </div>
               <div className={classes.cardFooter}>
                 <Link to="/soluzione-progetti" className="btn text-uppercase btn-primary">
-                  Scopri di più
+                  {projectsCardsItem.buttonLabelRight}
                 </Link>
               </div>
             </div>

@@ -48,7 +48,7 @@ export const ComeFunzionaPage = () => {
         image="come-funziona-hero.svg"
         list={content.hero.list}
       />
-      <ProjectsCards />
+      <ProjectsCards item={content.projectsCardsItem} />
       <Timeline content={content.timeline} title="Il calendario" />
       <Beneficiaries item={content.beneficiaries} />
       <Involved title={content.involved.title} category={content.involved.category} cards={content.involved.cards} />
