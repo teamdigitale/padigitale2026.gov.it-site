@@ -160,7 +160,6 @@ export const TimelineVertical = ({ item }) => {
           const activeNumberIndex = activeNumber && activeNumber.getAttribute('data-index');
           if (isMobile) {
             if (entry.isIntersecting && entry.intersectionRatio > 0.6 && entry.intersectionRatio < 0.7) {
-              console.log(entry);
               addHeightIndicator(entry.target.clientHeight + 36);
             }
           } else {
