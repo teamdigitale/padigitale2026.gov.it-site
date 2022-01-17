@@ -1,3 +1,5 @@
+/* eslint-disable sonarjs/no-duplicate-string */
+/* eslint-disable complexity */
 /* eslint-disable eqeqeq */
 import React, { useEffect } from 'react';
 import { createUseStyles } from 'react-jss';
@@ -17,6 +19,11 @@ const useStyle = createUseStyles({
     width: '4px',
     height: 'calc(100% - 190px)',
     background: '#C5E1F9',
+    '@media (max-width: 992px)': {
+      left: '31px',
+      top: '0',
+      height: 'calc(100% - 72px)',
+    },
   },
   scrollIndicatorActive: {
     composes: 'scroll-indicator-active',
@@ -30,6 +37,9 @@ const useStyle = createUseStyles({
     composes: 'timeline-point-section',
     marginBottom: '2rem',
     position: 'relative',
+    '@media (max-width: 992px)': {
+      marginLeft: '4.444rem',
+    },
   },
   timelineNumber: {
     composes: 'timeline-number',
@@ -46,6 +56,9 @@ const useStyle = createUseStyles({
     left: '-57px',
     top: '72px',
     transition: '.2s ease',
+    '@media (max-width: 992px)': {
+      top: '0',
+    },
     '&.active': {
       background: '#0066CC',
       transition: '.2s ease',
@@ -72,10 +85,21 @@ const useStyle = createUseStyles({
     display: 'flex',
     alignItems: 'center',
     marginBottom: '5.556rem',
+    '@media (max-width: 992px)': {
+      flexDirection: 'column-reverse',
+      marginBottom: '2.333rem',
+      '& img': {
+        width: '134px',
+        height: '134px',
+      },
+    },
   },
   headerInfo: {
     marginLeft: '6.111rem',
     maxWidth: '330px',
+    '@media (max-width: 992px)': {
+      marginLeft: '0',
+    },
   },
   headerTitle: {
     fontSize: '1.778rem',
@@ -110,10 +134,12 @@ export const TimelineVertical = ({ item }) => {
     const observerOptions = {
       root: null,
       rootMargin: '0px',
-      threshold: [0.8],
+      threshold: [0.6, 0.8],
       trackVisibility: true,
       delay: 100,
     };
+
+    const isMobile = window.innerWidth < 992;
 
     const observerCallback = (entries) => {
       const scrollIndicator = document.querySelector('.scroll-indicator-active');
@@ -132,8 +158,15 @@ export const TimelineVertical = ({ item }) => {
         if (scrollingDirection === 'down') {
           const activeNumber = document.querySelector('.timeline-number.active');
           const activeNumberIndex = activeNumber && activeNumber.getAttribute('data-index');
-          if (entry.isIntersecting && entry.intersectionRatio > 0.8) {
-            addHeightIndicator(entry.target.clientHeight + 36);
+          if (isMobile) {
+            if (entry.isIntersecting && entry.intersectionRatio > 0.6 && entry.intersectionRatio < 0.7) {
+              console.log(entry);
+              addHeightIndicator(entry.target.clientHeight + 36);
+            }
+          } else {
+            if (entry.isIntersecting && entry.intersectionRatio > 0.8) {
+              addHeightIndicator(entry.target.clientHeight + 36);
+            }
           }
           if (activeNumber) {
             const sectionsLength = sections.length;
@@ -146,21 +179,41 @@ export const TimelineVertical = ({ item }) => {
           if (activeNumber) {
             const numberIndex = activeNumber.getAttribute('data-index');
             const sectionsLength = sections.length;
-            if (numberIndex == sectionsLength - 1) {
-              subtractHeightIndicator(entry.target.clientHeight + 36 - 100);
-            } else if (numberIndex == 0) {
-              scrollIndicator.style.height = '0px';
+            if (isMobile) {
+              if (numberIndex == sectionsLength - 1) {
+                subtractHeightIndicator(entry.target.clientHeight + 36 - 20);
+              } else if (numberIndex == 0) {
+                scrollIndicator.style.height = '0px';
+              } else {
+                subtractHeightIndicator(entry.target.clientHeight + 36);
+              }
             } else {
-              subtractHeightIndicator(entry.target.clientHeight + 36);
+              if (numberIndex == sectionsLength - 1) {
+                subtractHeightIndicator(entry.target.clientHeight + 36 - 100);
+              } else if (numberIndex == 0) {
+                scrollIndicator.style.height = '0px';
+              } else {
+                subtractHeightIndicator(entry.target.clientHeight + 36);
+              }
             }
           }
         }
-        if (entry.isIntersecting && entry.intersectionRatio > 0.8) {
-          const currentNumber = entry.target.querySelector('.timeline-number');
-          currentNumber.classList.add('active');
+        if (isMobile) {
+          if (entry.isIntersecting && entry.intersectionRatio > 0.6 && entry.intersectionRatio < 0.7) {
+            const currentNumber = entry.target.querySelector('.timeline-number');
+            currentNumber.classList.add('active');
+          } else {
+            const allNumbers = entry.target.querySelector('.timeline-number');
+            allNumbers.classList.remove('active');
+          }
         } else {
-          const allNumbers = entry.target.querySelector('.timeline-number');
-          allNumbers.classList.remove('active');
+          if (entry.isIntersecting && entry.intersectionRatio > 0.8) {
+            const currentNumber = entry.target.querySelector('.timeline-number');
+            currentNumber.classList.add('active');
+          } else {
+            const allNumbers = entry.target.querySelector('.timeline-number');
+            allNumbers.classList.remove('active');
+          }
         }
       });
     };
@@ -170,13 +223,13 @@ export const TimelineVertical = ({ item }) => {
     let scrollingDirection = '';
     let lastScrollTop = 0;
     const getScrollDirection = () => {
-      const st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
+      const st = window.pageYOffset || document.documentElement.scrollTop;
       if (st > lastScrollTop) {
         scrollingDirection = 'down';
       } else {
         scrollingDirection = 'up';
       }
-      lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+      lastScrollTop = st <= 0 ? 0 : st;
     };
     window.addEventListener('scroll', getScrollDirection);
   }, []);
@@ -208,28 +261,30 @@ export const TimelineVertical = ({ item }) => {
                       ></p>
                     </div>
                   </div>
-                  <Row>
-                    <Col xs="12" lg="6" className="mb-3 mb-lg-0 pr-4">
-                      <img className={classes.littleIcon} src={elem.iconl} alt=""></img>
-                      <span className={classes.littleTitle}>{elem.littleTitlel}</span>
-                      <p
-                        className={classes.bodyParagraph}
-                        dangerouslySetInnerHTML={{
-                          __html: elem.bodyParagraphl,
-                        }}
-                      ></p>
-                    </Col>
-                    <Col xs="12" lg="6" className="mb-3 mb-lg-0 pl-4">
-                      <img className={classes.littleIcon} src={elem.iconr} alt=""></img>
-                      <span className={classes.littleTitle}>{elem.littleTitler}</span>
-                      <p
-                        className={classes.bodyParagraph}
-                        dangerouslySetInnerHTML={{
-                          __html: elem.bodyParagraphr,
-                        }}
-                      ></p>
-                    </Col>
-                  </Row>
+                  <div className="container">
+                    <Row>
+                      <Col xs="12" lg="6" className="mb-3 mb-lg-0 pr-0 pr-lg-4">
+                        <img className={classes.littleIcon} src={elem.iconl} alt=""></img>
+                        <span className={classes.littleTitle}>{elem.littleTitlel}</span>
+                        <p
+                          className={classes.bodyParagraph}
+                          dangerouslySetInnerHTML={{
+                            __html: elem.bodyParagraphl,
+                          }}
+                        ></p>
+                      </Col>
+                      <Col xs="12" lg="6" className="mb-3mb-lg-0 pl-0 pl-lg-4">
+                        <img className={classes.littleIcon} src={elem.iconr} alt=""></img>
+                        <span className={classes.littleTitle}>{elem.littleTitler}</span>
+                        <p
+                          className={classes.bodyParagraph}
+                          dangerouslySetInnerHTML={{
+                            __html: elem.bodyParagraphr,
+                          }}
+                        ></p>
+                      </Col>
+                    </Row>
+                  </div>
                 </div>
               ))}
             </div>

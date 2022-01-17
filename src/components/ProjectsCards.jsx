@@ -63,8 +63,8 @@ export const ProjectsCards = (item) => {
 
   return (
     <div className={classes.projectsCardSection}>
-      <div className="container pl-3 pr-0">
-        <Row className="mb-5">
+      <div className="container pl-lg-3 pl-0 pr-0">
+        <Row className="mb-5 ml-0 mr-0">
           <Col xs="12" lg="6" id="beneficiari-pc" className="offset-lg-1">
             <h3 className={classes.category}>{projectsCardsItem.littleTitle}</h3>
             <h4 className={classes.title} id="beneficiaries-title-pc">
@@ -72,7 +72,7 @@ export const ProjectsCards = (item) => {
             </h4>
           </Col>
         </Row>
-        <Row>
+        <Row className="ml-0 mr-0">
           <Col xs="12" lg="5" className="offset-lg-1 mb-3 mb-lg-0">
             <span className={classes.cardModality}>{projectsCardsItem.modalityLeft}</span>
             <div className={classes.card}>
