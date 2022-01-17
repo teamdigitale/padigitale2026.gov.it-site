@@ -43,6 +43,9 @@ const useStyles = createUseStyles({
     boxShadow: '0px 0px 80px rgba(0, 43, 85, 0.1)',
     width: '100%',
     padding: '1.556rem 1.333rem',
+    '@media (max-width: 992px)': {
+      padding: '1.667rem 1.333rem',
+    },
   },
   cardBody: {
     display: 'flex',
@@ -51,6 +54,14 @@ const useStyles = createUseStyles({
       flexDirection: 'column-reverse',
       alignItems: 'center',
       textAlign: 'center',
+      '& img': {
+        marginBottom: '1.111rem',
+      },
+      '&>div': {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+      },
     },
   },
   cardTitle: {
@@ -65,6 +76,8 @@ const useStyles = createUseStyles({
     lineHeight: '1.333rem',
     '@media (max-width: 992px)': {
       fontSize: '0.889rem',
+      maxWidth: '80%',
+      marginBottom: '1.667rem',
     },
   },
   cardFooter: {

@@ -35,7 +35,7 @@ const useStyle = createUseStyles({
   },
   timelinePointSection: {
     composes: 'timeline-point-section',
-    marginBottom: '2rem',
+    marginBottom: '4.444rem',
     position: 'relative',
     '@media (max-width: 992px)': {
       marginLeft: '4.444rem',
@@ -116,6 +116,7 @@ const useStyle = createUseStyles({
     fontSize: '0.778',
     fontWeight: '600',
     textTransform: 'uppercase',
+    marginBottom: '0.444rem',
   },
   bodyParagraph: {
     fontSize: '1rem',
@@ -160,11 +161,11 @@ export const TimelineVertical = ({ item }) => {
           const activeNumberIndex = activeNumber && activeNumber.getAttribute('data-index');
           if (isMobile) {
             if (entry.isIntersecting && entry.intersectionRatio > 0.6 && entry.intersectionRatio < 0.7) {
-              addHeightIndicator(entry.target.clientHeight + 36);
+              addHeightIndicator(entry.target.clientHeight + 80);
             }
           } else {
             if (entry.isIntersecting && entry.intersectionRatio > 0.8) {
-              addHeightIndicator(entry.target.clientHeight + 36);
+              addHeightIndicator(entry.target.clientHeight + 80);
             }
           }
           if (activeNumber) {
@@ -180,19 +181,19 @@ export const TimelineVertical = ({ item }) => {
             const sectionsLength = sections.length;
             if (isMobile) {
               if (numberIndex == sectionsLength - 1) {
-                subtractHeightIndicator(entry.target.clientHeight + 36 - 20);
+                subtractHeightIndicator(entry.target.clientHeight + 80 - 20);
               } else if (numberIndex == 0) {
                 scrollIndicator.style.height = '0px';
               } else {
-                subtractHeightIndicator(entry.target.clientHeight + 36);
+                subtractHeightIndicator(entry.target.clientHeight + 80);
               }
             } else {
               if (numberIndex == sectionsLength - 1) {
-                subtractHeightIndicator(entry.target.clientHeight + 36 - 100);
+                subtractHeightIndicator(entry.target.clientHeight + 80 - 100);
               } else if (numberIndex == 0) {
                 scrollIndicator.style.height = '0px';
               } else {
-                subtractHeightIndicator(entry.target.clientHeight + 36);
+                subtractHeightIndicator(entry.target.clientHeight + 80);
               }
             }
           }
