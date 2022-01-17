@@ -47,14 +47,32 @@ const useStyles = createUseStyles({
   cardBody: {
     display: 'flex',
     alignItems: 'center',
+    '@media (max-width: 992px)': {
+      flexDirection: 'column-reverse',
+      alignItems: 'center',
+      textAlign: 'center',
+    },
   },
   cardTitle: {
     fontSize: '1.556rem',
     fontWeight: '700',
+    '@media (max-width: 992px)': {
+      marginTop: '1.167rem',
+    },
   },
   cardText: {
     fontSize: '0.889rem',
     lineHeight: '1.333rem',
+    '@media (max-width: 992px)': {
+      fontSize: '0.889rem',
+    },
+  },
+  cardFooter: {
+    '@media (max-width: 992px)': {
+      display: 'flex',
+      width: '100%',
+      justifyContent: 'center',
+    },
   },
 });
 export const ProjectsCards = (item) => {
