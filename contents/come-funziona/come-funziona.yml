@@ -5,13 +5,6 @@ hero:
   body: A seconda della tipologia di misura e di PA, sarà possibile accedere alle risorse o attraverso delle soluzioni standard o attraverso la presentazione di progetti.
   list:
     - listItems:
-      title: MODALITÀ DI ACCESSO
-      items:
-        - item: Soluzioni standard
-          anchor: soluzioni-standard
-        - item: Presentazione progetti
-          anchor: presentazione-progetto
-    - listItems:
       title: APPROFONDISCI
       items:
         - item: Il calendario

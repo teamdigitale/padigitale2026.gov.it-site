@@ -63,6 +63,7 @@ const useStyles = createUseStyles({
     alignItems: 'center',
     justifyContent: 'center',
     transform: 'translateX(-15%)',
+    boxShadow: '0px 0px 4px rgba(0, 0, 0, 0.1)',
   },
   timelineStepsActive: {
     height: '45px',
@@ -74,6 +75,7 @@ const useStyles = createUseStyles({
     alignItems: 'center',
     justifyContent: 'center',
     transform: 'translateX(-15%)',
+    boxShadow: '0px 0px 4px rgba(0, 0, 0, 0.1)',
   },
   timelineCard: {
     marginTop: '1.875rem',

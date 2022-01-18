@@ -67,11 +67,16 @@ const useStyles = createUseStyles({
         margin: '0 auto 2.5rem',
       },
     },
+    '&.hero-small .hero-body': {
+      fontSize: '1rem',
+      textAlign: 'left',
+    },
   },
 });
 
 export const HeroImage = ({
   ctaContainer,
+  smallText,
   category,
   title,
   body,
@@ -90,7 +95,7 @@ export const HeroImage = ({
 
   return (
     <Hero Tag="section" ariaLabelledBy={heroTitleId}>
-      <div className={classes.heroImage}>
+      <div className={`${classes.heroImage} ${smallText ? 'hero-small': ''}`}>
         <div className="col-lg-6 offset-lg-1 p-0 mt-3 mt-lg-0 pr-lg-5">
           <div className="text-center text-lg-left">
             {category ? <HeroCategory title={category} className={classes.heroCategory} /> : ''}
@@ -148,6 +153,7 @@ export const HeroImage = ({
 
 HeroImage.propTypes = {
   ctaContainer: PropTypes.bool,
+  smallText: PropTypes.bool,
   category: PropTypes.string,
   title: PropTypes.string,
   body: PropTypes.string,

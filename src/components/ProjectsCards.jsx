@@ -43,6 +43,7 @@ const useStyles = createUseStyles({
     boxShadow: '0px 0px 80px rgba(0, 43, 85, 0.1)',
     width: '100%',
     padding: '1.556rem 1.333rem',
+    minHeight: '260px',
     '@media (max-width: 992px)': {
       padding: '1.667rem 1.333rem',
     },
@@ -78,6 +79,8 @@ const useStyles = createUseStyles({
   cardText: {
     fontSize: '0.889rem',
     lineHeight: '1.333rem',
+    paddingRight: '1.667rem',
+    marginBottom: '1.889rem',
     '@media (max-width: 992px)': {
       fontSize: '0.889rem',
       maxWidth: '80%',
