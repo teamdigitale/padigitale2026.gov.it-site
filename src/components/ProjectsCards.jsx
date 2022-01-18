@@ -51,7 +51,7 @@ const useStyles = createUseStyles({
     display: 'flex',
     alignItems: 'center',
     '& img': {
-      marginLeft: '2.222rem',
+      marginLeft: '1.111rem',
     },
     '@media (max-width: 992px)': {
       flexDirection: 'column-reverse',
