@@ -94,6 +94,11 @@ const useStyles = createUseStyles({
       justifyContent: 'center',
     },
   },
+  columnCard: {
+    '@media (max-width: 992px)': {
+      padding: '0 1rem',
+    },
+  },
 });
 export const ProjectsCards = (item) => {
   const classes = useStyles();
@@ -111,7 +116,7 @@ export const ProjectsCards = (item) => {
           </Col>
         </Row>
         <Row className="ml-0 mr-0">
-          <Col xs="12" lg="5" className="offset-lg-1 mb-3 mb-lg-0">
+          <Col xs="12" lg="5" className={`${classes.columnCard} offset-lg-1 mb-3 mb-lg-0`}>
             <span className={classes.cardModality}>{projectsCardsItem.modalityLeft}</span>
             <div className={classes.card}>
               <div className={classes.cardBody}>
@@ -128,7 +133,7 @@ export const ProjectsCards = (item) => {
               </div>
             </div>
           </Col>
-          <Col xs="12" lg="5">
+          <Col xs="12" lg="5" className={classes.columnCard}>
             <span className={classes.cardModality}>{projectsCardsItem.modalityRight}</span>
             <div className={classes.card}>
               <div className={classes.cardBody}>
