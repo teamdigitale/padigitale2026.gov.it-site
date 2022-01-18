@@ -10,13 +10,12 @@ import { HeroImage } from '../components/hero/HeroImage';
 import { TimelineVertical } from '../components/TimelineVertical';
 import { ProjectsCards } from '../components/ProjectsCards';
 
-const { title: seoTitle, description: seoDescription } =
-  seo.projectsSolutionPage;
+const { title: seoTitle, description: seoDescription } = seo.projectsSolutionPage;
 
 const useStyles = createUseStyles({
   breadcrumb: {
     '@media (min-width: 991px)': {
-      marginLeft: '0.722rem'
+      marginLeft: '0.722rem',
     },
   },
   breadcrumbItem: {

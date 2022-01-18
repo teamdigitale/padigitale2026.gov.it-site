@@ -91,6 +91,7 @@ const useStyle = createUseStyles({
       '& img': {
         width: '134px',
         height: '134px',
+        marginLeft: '-1.667rem',
       },
     },
   },

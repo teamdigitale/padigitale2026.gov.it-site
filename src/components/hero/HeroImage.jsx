@@ -29,6 +29,7 @@ const useStyles = createUseStyles({
     },
   },
   heroTitle: {
+    composes: 'hero-title',
     color: '#33485C',
     fontSize: '2rem',
     lineHeight: '1.25',
@@ -68,8 +69,16 @@ const useStyles = createUseStyles({
       },
     },
     '&.hero-small .hero-body': {
-      fontSize: '1rem',
-      textAlign: 'left',
+      '@media (max-width: 992px)': {
+        fontSize: '1rem',
+        textAlign: 'left',
+      },
+    },
+    '&.hero-small .hero-title': {
+      '@media (max-width: 992px)': {
+        display: 'block',
+        textAlign: 'left',
+      },
     },
   },
 });
@@ -95,7 +104,7 @@ export const HeroImage = ({
 
   return (
     <Hero Tag="section" ariaLabelledBy={heroTitleId}>
-      <div className={`${classes.heroImage} ${smallText ? 'hero-small': ''}`}>
+      <div className={`${classes.heroImage} ${smallText ? 'hero-small' : ''}`}>
         <div className="col-lg-6 offset-lg-1 p-0 mt-3 mt-lg-0 pr-lg-5">
           <div className="text-center text-lg-left">
             {category ? <HeroCategory title={category} className={classes.heroCategory} /> : ''}
