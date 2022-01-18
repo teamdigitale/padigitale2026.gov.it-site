@@ -21,9 +21,9 @@ verticalTimeline:
     iconl: '/assets/icons-come-funziona/computer.svg'
     iconr: '/assets/icons-come-funziona/italia-pin.svg'
     littleTitlel: 'UN PORTALE DEDICATO'
-    bodyParagraphl: "“Prossima PA” <strong>accompagnerà gli Enti con risorse e informazioni</strong> lungo tutto il percorso di attuazione delle misure previste dal PNRR: dalla prima fase informativa, che precede l’avvio degli avvisi, al momento dell’accesso ai fondi e fino all’implementazione stessa delle iniziative. I <strong>fornitori saranno scelti dalla PA</strong> anche avvalendosi di fornitori certificati attraverso strumenti Consip."
+    bodyParagraphl: "“PA digitale 2026” <strong>accompagnerà gli Enti con risorse e strumenti</strong> lungo tutto il percorso di attuazione delle misure previste dal PNRR: dalla prima fase informativa, che precede l’avvio degli avvisi, al momento dell’accesso ai fondi e fino all’implementazione stessa dei progetti. I fornitori saranno <strong>scelti dalla PA</strong> anche avvalendosi di fornitori certificati attraverso strumenti Consip."
     littleTitler: 'UN TEAM  SUL TERRITORIO'
-    bodyParagraphr: "Attraverso “Prossima PA” le amministrazioni potranno <strong>accedere ad un’area riservata</strong>, per seguire la gestione amministrativa delle singole iniziative finanziate attraverso l’azione del Dipartimento per la trasformazione digitale. Con l’avvio degli avvisi avranno infatti la possibilità non solo di fare <strong>richiesta per i fondi</strong>, ma anche di <strong>produrre i dati relativi all’avanzamento dei progetti, ricevere comunicazioni dedicate e inviare documentazioni ufficiali per l’erogazione delle risorse.</strong>"
+    bodyParagraphr: "Attraverso “PA digitale 2026” le amministrazioni potranno <strong>accedere ad un’area riservata</strong>, per seguire la gestione amministrativa delle singole iniziative finanziate attraverso l’azione del Dipartimento per la trasformazione digitale. Con l’avvio degli avvisi avranno infatti la possibilità non solo di fare <strong>richiesta per i fondi</strong>, ma anche di <strong>produrre i dati relativi all’avanzamento dei progetti, ricevere comunicazioni dedicate e inviare documentazioni ufficiali per l’erogazione delle risorse</strong>"
   - index: 2
     title: 'Erogazione dei fondi'
     icon: '/assets/paper-plane.svg'

@@ -50,12 +50,16 @@ const useStyles = createUseStyles({
   cardBody: {
     display: 'flex',
     alignItems: 'center',
+    '& img': {
+      marginLeft: '2.222rem',
+    },
     '@media (max-width: 992px)': {
       flexDirection: 'column-reverse',
       alignItems: 'center',
       textAlign: 'center',
       '& img': {
         marginBottom: '1.111rem',
+        marginLeft: '0',
       },
       '&>div': {
         display: 'flex',
