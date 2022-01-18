@@ -80,6 +80,11 @@ const useStyles = createUseStyles({
         textAlign: 'left',
       },
     },
+    '&.hero-small .graphic-image': {
+      '@media (max-width: 992px)': {
+        width: '220px',
+      },
+    },
   },
 });
 
