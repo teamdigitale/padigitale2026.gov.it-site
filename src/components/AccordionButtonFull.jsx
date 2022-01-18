@@ -83,13 +83,14 @@ const useStyles = createUseStyles({
       },
     },
     '& .tag': {
+      background: '#F0F6FC',
       padding: '2px 16px',
-      borderRadius: '12px',
-      border: '1px solid #E6E9F2',
+      borderRadius: '4px',
       fontSize: '0.778rem',
       fontWeight: '600',
       marginBottom: '0.444rem',
       marginRight: '0.444rem',
+      color: '#33485C',
       '&:last-child': {
         marginRight: '0',
       },
