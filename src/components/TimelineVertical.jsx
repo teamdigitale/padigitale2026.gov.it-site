@@ -91,6 +91,7 @@ const useStyle = createUseStyles({
       '& img': {
         width: '134px',
         height: '134px',
+        marginLeft: '-1.667rem',
       },
     },
   },
@@ -109,6 +110,9 @@ const useStyle = createUseStyles({
   headerParagraph: {
     fontSize: '0.889rem',
     lineHeight: '24px',
+    '@media (max-width: 992px)': {
+      marginBottom: '1.667rem',
+    },
   },
   littleTitle: {
     display: 'block',

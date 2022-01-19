@@ -29,6 +29,7 @@ const useStyles = createUseStyles({
     },
   },
   heroTitle: {
+    composes: 'hero-title',
     color: '#33485C',
     fontSize: '2rem',
     lineHeight: '1.25',
@@ -67,11 +68,29 @@ const useStyles = createUseStyles({
         margin: '0 auto 2.5rem',
       },
     },
+    '&.hero-small .hero-body': {
+      '@media (max-width: 992px)': {
+        fontSize: '1rem',
+        textAlign: 'left',
+      },
+    },
+    '&.hero-small .hero-title': {
+      '@media (max-width: 992px)': {
+        display: 'block',
+        textAlign: 'left',
+      },
+    },
+    '&.hero-small .graphic-image': {
+      '@media (max-width: 992px)': {
+        width: '220px',
+      },
+    },
   },
 });
 
 export const HeroImage = ({
   ctaContainer,
+  smallText,
   category,
   title,
   body,
@@ -90,8 +109,8 @@ export const HeroImage = ({
 
   return (
     <Hero Tag="section" ariaLabelledBy={heroTitleId}>
-      <div className={classes.heroImage}>
-        <div className="col-lg-6 offset-lg-1 p-0 mt-3 mt-lg-0 pr-lg-5">
+      <div className={`${classes.heroImage} ${smallText ? 'hero-small' : ''}`}>
+        <div className="col-lg-6 offset-lg-1 p-lg-0 mt-3 mt-lg-0 pr-lg-5">
           <div className="text-center text-lg-left">
             {category ? <HeroCategory title={category} className={classes.heroCategory} /> : ''}
             <HeroTitle Tag="h4" id={heroTitleId} title={title} className={classes.heroTitle} />
@@ -148,6 +167,7 @@ export const HeroImage = ({
 
 HeroImage.propTypes = {
   ctaContainer: PropTypes.bool,
+  smallText: PropTypes.bool,
   category: PropTypes.string,
   title: PropTypes.string,
   body: PropTypes.string,

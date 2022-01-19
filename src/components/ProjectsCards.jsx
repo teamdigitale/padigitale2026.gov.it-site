@@ -43,6 +43,7 @@ const useStyles = createUseStyles({
     boxShadow: '0px 0px 80px rgba(0, 43, 85, 0.1)',
     width: '100%',
     padding: '1.556rem 1.333rem',
+    minHeight: '260px',
     '@media (max-width: 992px)': {
       padding: '1.667rem 1.333rem',
     },
@@ -50,12 +51,17 @@ const useStyles = createUseStyles({
   cardBody: {
     display: 'flex',
     alignItems: 'center',
+    '& img': {
+      marginLeft: '1.111rem',
+    },
     '@media (max-width: 992px)': {
       flexDirection: 'column-reverse',
       alignItems: 'center',
       textAlign: 'center',
       '& img': {
         marginBottom: '1.111rem',
+        marginLeft: '0',
+        width: '7.778rem',
       },
       '&>div': {
         display: 'flex',
@@ -74,10 +80,13 @@ const useStyles = createUseStyles({
   cardText: {
     fontSize: '0.889rem',
     lineHeight: '1.333rem',
+    paddingRight: '1.667rem',
+    marginBottom: '1.889rem',
     '@media (max-width: 992px)': {
-      fontSize: '0.889rem',
+      fontSize: '1rem',
       maxWidth: '80%',
       marginBottom: '1.667rem',
+      paddingRight: '0',
     },
   },
   cardFooter: {
@@ -85,6 +94,17 @@ const useStyles = createUseStyles({
       display: 'flex',
       width: '100%',
       justifyContent: 'center',
+    },
+  },
+  columnCard: {
+    composes: 'column-card',
+    '@media (max-width: 992px)': {
+      padding: '0 1rem',
+    },
+    '& + .column-card': {
+      '@media (max-width: 992px)': {
+        marginTop: '2.222rem',
+      },
     },
   },
 });
@@ -96,7 +116,7 @@ export const ProjectsCards = (item) => {
     <div className={classes.projectsCardSection}>
       <div className="container pl-lg-3 pl-0 pr-0">
         <Row className="mb-5 ml-0 mr-0">
-          <Col xs="12" lg="6" id="beneficiari-pc" className="offset-lg-1">
+          <Col xs="12" lg="6" id="beneficiari-pc" className={`${classes.columnCard} offset-lg-1`}>
             <h3 className={classes.category}>{projectsCardsItem.littleTitle}</h3>
             <h4 className={classes.title} id="beneficiaries-title-pc">
               {projectsCardsItem.title}
@@ -104,7 +124,7 @@ export const ProjectsCards = (item) => {
           </Col>
         </Row>
         <Row className="ml-0 mr-0">
-          <Col xs="12" lg="5" className="offset-lg-1 mb-3 mb-lg-0">
+          <Col xs="12" lg="5" className={`${classes.columnCard} offset-lg-1 mb-3 mb-lg-0`}>
             <span className={classes.cardModality}>{projectsCardsItem.modalityLeft}</span>
             <div className={classes.card}>
               <div className={classes.cardBody}>
@@ -121,7 +141,7 @@ export const ProjectsCards = (item) => {
               </div>
             </div>
           </Col>
-          <Col xs="12" lg="5">
+          <Col xs="12" lg="5" className={classes.columnCard}>
             <span className={classes.cardModality}>{projectsCardsItem.modalityRight}</span>
             <div className={classes.card}>
               <div className={classes.cardBody}>
