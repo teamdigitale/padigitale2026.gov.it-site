@@ -48,13 +48,13 @@ const useStyles = createUseStyles({
     composes: 'row align-items-center',
     '@media (min-width: 768px)': {
       flexWrap: 'nowrap !important',
-      '& .hero-graphic-img':  {
-        order: 2
-      }
+      '& .hero-graphic-img': {
+        order: 2,
+      },
     },
     '@media (min-width: 991.99px)': {
       padding: '2.222rem 0',
-      flexDirection: 'row'
+      flexDirection: 'row',
     },
     '& .hero-category': {
       color: '#33485C',

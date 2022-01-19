@@ -58,10 +58,10 @@ const useStyle = createUseStyles({
     transition: '.2s ease',
     '@media (max-width: 992px)': {
       top: '0',
-      left: '-66px'
+      left: '-66px',
     },
     '@media (max-width: 574px)': {
-      left: '-57px'
+      left: '-57px',
     },
     '&.active': {
       background: '#0066CC',
