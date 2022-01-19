@@ -61,6 +61,7 @@ const useStyles = createUseStyles({
       '& img': {
         marginBottom: '1.111rem',
         marginLeft: '0',
+        width: '7.778rem',
       },
       '&>div': {
         display: 'flex',
@@ -82,9 +83,10 @@ const useStyles = createUseStyles({
     paddingRight: '1.667rem',
     marginBottom: '1.889rem',
     '@media (max-width: 992px)': {
-      fontSize: '0.889rem',
+      fontSize: '1rem',
       maxWidth: '80%',
       marginBottom: '1.667rem',
+      paddingRight: '0',
     },
   },
   cardFooter: {
@@ -95,8 +97,14 @@ const useStyles = createUseStyles({
     },
   },
   columnCard: {
+    composes: 'column-card',
     '@media (max-width: 992px)': {
       padding: '0 1rem',
+    },
+    '& + .column-card': {
+      '@media (max-width: 992px)': {
+        marginTop: '2.222rem',
+      },
     },
   },
 });
@@ -108,7 +116,7 @@ export const ProjectsCards = (item) => {
     <div className={classes.projectsCardSection}>
       <div className="container pl-lg-3 pl-0 pr-0">
         <Row className="mb-5 ml-0 mr-0">
-          <Col xs="12" lg="6" id="beneficiari-pc" className="offset-lg-1">
+          <Col xs="12" lg="6" id="beneficiari-pc" className={`${classes.columnCard} offset-lg-1`}>
             <h3 className={classes.category}>{projectsCardsItem.littleTitle}</h3>
             <h4 className={classes.title} id="beneficiaries-title-pc">
               {projectsCardsItem.title}

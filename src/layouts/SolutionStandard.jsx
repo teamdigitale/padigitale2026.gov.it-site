@@ -21,13 +21,14 @@ const useStyles = createUseStyles({
   breadcrumbItem: {
     '& a': {
       color: '#5B6F82',
+      fontWeight: '700',
+      textDecoration: 'underline',
     },
   },
   breadcrumbItemActive: {
     '& a': {
       color: '#5B6F82',
       textDecoration: 'none',
-      fontWeight: '700',
     },
   },
 });
