@@ -46,8 +46,15 @@ const useStyles = createUseStyles({
   },
   heroImage: {
     composes: 'row align-items-center',
-    '@media (min-width: 992px)': {
+    '@media (min-width: 768px)': {
+      flexWrap: 'nowrap !important',
+      '& .hero-graphic-img':  {
+        order: 2
+      }
+    },
+    '@media (min-width: 991.99px)': {
       padding: '2.222rem 0',
+      flexDirection: 'row'
     },
     '& .hero-category': {
       color: '#33485C',
@@ -63,7 +70,7 @@ const useStyles = createUseStyles({
       },
     },
     '& .graphic-image': {
-      '@media (max-width: 991px)': {
+      '@media (max-width: 767px)': {
         maxWidth: '15.6rem',
         margin: '0 auto 2.5rem',
       },
@@ -157,7 +164,7 @@ export const HeroImage = ({
             ''
           )}
         </div>
-        <HeroGraphic className="col-lg-5 d-flex justify-content-sm-center">
+        <HeroGraphic className="col-lg-5 d-flex justify-content-sm-center hero-graphic-img">
           <img className="graphic-image" src={imageUrl} alt={imageAlt} />
         </HeroGraphic>
       </div>

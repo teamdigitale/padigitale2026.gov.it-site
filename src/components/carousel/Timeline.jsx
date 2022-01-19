@@ -9,7 +9,7 @@ const useStyles = createUseStyles({
     padding: '3.125rem 0 4.5rem 0',
     overflow: 'hidden',
     '@media (min-width: 992px)': {
-      padding: '2.222rem 0 3.889rem 0',
+      padding: '5.333rem 0 3.889rem 0',
     },
     '& .swiper': {
       margin: '0 -1.111rem',
@@ -130,9 +130,40 @@ const useStyles = createUseStyles({
       },
     },
   },
+  columnCard: {
+    composes: 'column-card',
+    '@media (max-width: 992px)': {
+      padding: '0 1rem',
+    },
+    '& + .column-card': {
+      '@media (max-width: 992px)': {
+        marginTop: '2.222rem',
+      },
+    },
+  },
+  category: {
+    fontSize: '0.875rem',
+    fontWeight: '600',
+    color: '#33485C',
+    textTransform: 'uppercase',
+    marginBottom: '0.556rem',
+    '@media (min-width: 992px)': {
+      fontSize: '0.889rem',
+    },
+  },
+  title: {
+    fontWeight: '700',
+    fontSize: '1.5rem',
+    color: '#33485C',
+    lineHeight: '1.36',
+    '@media (min-width: 992px)': {
+      fontSize: '1.778rem',
+      lineHeight: '1.4',
+    },
+  },
 });
 
-export const Timeline = ({ content, title }) => {
+export const Timeline = ({ content }) => {
   const classes = useStyles();
 
   useEffect(() => {
@@ -174,10 +205,11 @@ export const Timeline = ({ content, title }) => {
     <>
       <div className={classes.timelineSection}>
         <div className="container">
-          {title ? (
-            <Row>
-              <Col xs="12" lg="4" className="offset-lg-1" id="calendario">
-                <h3 className={classes.timelineTitle}>{title}</h3>
+          {content.category ? (
+            <Row className="mb-5 ml-0 mr-0">
+              <Col xs="12" lg="5" id="timeline-pc" className={`${classes.columnCard} offset-lg-1`}>
+                <h3 className={classes.category}>{content.category}</h3>
+                <h4 className={classes.title} id="timeline-title-pc">{content.title}</h4>
               </Col>
             </Row>
           ) : (
@@ -187,7 +219,7 @@ export const Timeline = ({ content, title }) => {
             <Col xs="12" lg="10" className="offset-lg-1 position-relative">
               <div className={classes.line}></div>
               <DesktopSwiper
-                title={title}
+                title={content.category}
                 slides={slides}
                 breakpoints={{
                   slidesPerView: 1,

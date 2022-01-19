@@ -58,6 +58,10 @@ const useStyle = createUseStyles({
     transition: '.2s ease',
     '@media (max-width: 992px)': {
       top: '0',
+      left: '-66px'
+    },
+    '@media (max-width: 574px)': {
+      left: '-57px'
     },
     '&.active': {
       background: '#0066CC',
@@ -85,7 +89,7 @@ const useStyle = createUseStyles({
     display: 'flex',
     alignItems: 'center',
     marginBottom: '5.556rem',
-    '@media (max-width: 992px)': {
+    '@media (max-width: 767px)': {
       flexDirection: 'column-reverse',
       marginBottom: '2.333rem',
       '& img': {
@@ -96,9 +100,9 @@ const useStyle = createUseStyles({
     },
   },
   headerInfo: {
-    marginLeft: '6.111rem',
+    marginLeft: '4.111rem',
     maxWidth: '330px',
-    '@media (max-width: 992px)': {
+    '@media (max-width: 767px)': {
       marginLeft: '0',
     },
   },
