@@ -9,7 +9,7 @@ const useStyles = createUseStyles({
     padding: '3.125rem 0 4.5rem 0',
     overflow: 'hidden',
     '@media (min-width: 992px)': {
-      padding: '5.333rem 0 3.889rem 0',
+      padding: '5.333rem 0 2.5rem 0',
     },
     '& .swiper': {
       margin: '0 -1.111rem',

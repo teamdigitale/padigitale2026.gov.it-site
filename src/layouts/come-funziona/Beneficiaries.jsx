@@ -40,7 +40,7 @@ const useStyle = createUseStyles({
     '& .category-title': {
       fontSize: '1.556rem',
       letterSpacing: '-0.26px',
-      lineHeight: '1.4',
+      lineHeight: '1.2',
       fontWeight: '600',
       color: '#004080',
       marginBottom: '0',

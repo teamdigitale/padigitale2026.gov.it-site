@@ -246,7 +246,7 @@ export const TimelineVertical = ({ item }) => {
   return (
     <>
       <div className="container">
-        <Row className="mb-5">
+        <Row className="mb-5 mt-md-5">
           <Col xs="12" lg="11" className="offset-lg-1 mb-3 mb-lg-0">
             <div className={classes.timelineVertical}>
               <div className={classes.scrollIndicator}>
