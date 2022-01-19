@@ -101,7 +101,7 @@ const useStyle = createUseStyles({
   },
   headerInfo: {
     marginLeft: '4.111rem',
-    maxWidth: '330px',
+    maxWidth: '450px',
     '@media (max-width: 767px)': {
       marginLeft: '0',
     },
