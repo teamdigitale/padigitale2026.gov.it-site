@@ -58,6 +58,10 @@ const useStyle = createUseStyles({
     transition: '.2s ease',
     '@media (max-width: 992px)': {
       top: '0',
+      left: '-66px',
+    },
+    '@media (max-width: 574px)': {
+      left: '-57px',
     },
     '&.active': {
       background: '#0066CC',
@@ -85,7 +89,7 @@ const useStyle = createUseStyles({
     display: 'flex',
     alignItems: 'center',
     marginBottom: '5.556rem',
-    '@media (max-width: 992px)': {
+    '@media (max-width: 767px)': {
       flexDirection: 'column-reverse',
       marginBottom: '2.333rem',
       '& img': {
@@ -96,9 +100,9 @@ const useStyle = createUseStyles({
     },
   },
   headerInfo: {
-    marginLeft: '6.111rem',
-    maxWidth: '330px',
-    '@media (max-width: 992px)': {
+    marginLeft: '4.111rem',
+    maxWidth: '450px',
+    '@media (max-width: 767px)': {
       marginLeft: '0',
     },
   },
@@ -242,7 +246,7 @@ export const TimelineVertical = ({ item }) => {
   return (
     <>
       <div className="container">
-        <Row className="mb-5">
+        <Row className="mb-5 mt-md-5">
           <Col xs="12" lg="11" className="offset-lg-1 mb-3 mb-lg-0">
             <div className={classes.timelineVertical}>
               <div className={classes.scrollIndicator}>

@@ -98,9 +98,6 @@ const useStyles = createUseStyles({
   },
   columnCard: {
     composes: 'column-card',
-    '@media (max-width: 992px)': {
-      padding: '0 1rem',
-    },
     '& + .column-card': {
       '@media (max-width: 992px)': {
         marginTop: '2.222rem',
@@ -114,7 +111,7 @@ export const ProjectsCards = (item) => {
 
   return (
     <div className={classes.projectsCardSection}>
-      <div className="container pl-lg-3 pl-0 pr-0">
+      <div className="container pl-lg-2 pr-lg-2 pl-3 pr-3">
         <Row className="mb-5 ml-0 mr-0">
           <Col xs="12" lg="6" id="beneficiari-pc" className={`${classes.columnCard} offset-lg-1`}>
             <h3 className={classes.category}>{projectsCardsItem.littleTitle}</h3>

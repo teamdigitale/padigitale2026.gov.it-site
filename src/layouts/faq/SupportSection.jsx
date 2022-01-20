@@ -127,7 +127,7 @@ export const SupportSection = (props) => {
             <Col className={classes.layout}>
               <Row>
                 {supportList.map((card) => (
-                  <Col key={card.title} md={5} lg={3} className={classes.colCard}>
+                  <Col key={card.title} md={5} lg={4} xl={3} className={classes.colCard}>
                     {card.isModal ? (
                       <div
                         role="button"
