@@ -132,9 +132,6 @@ const useStyles = createUseStyles({
   },
   columnCard: {
     composes: 'column-card',
-    '@media (max-width: 992px)': {
-      padding: '0 1rem',
-    },
     '& + .column-card': {
       '@media (max-width: 992px)': {
         marginTop: '2.222rem',
@@ -204,7 +201,7 @@ export const Timeline = ({ content }) => {
   return (
     <>
       <div className={classes.timelineSection}>
-        <div className="container">
+        <div className="container pl-lg-2 pr-lg-2 pl-3 pr-3">
           {content.category ? (
             <Row className="mb-5 ml-0 mr-0">
               <Col xs="12" lg="5" id="timeline-pc" className={`${classes.columnCard} offset-lg-1`}>

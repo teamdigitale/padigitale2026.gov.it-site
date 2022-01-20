@@ -189,7 +189,7 @@ export const HeroHowItWorks = ({ title, body, image, list }) => {
   return (
     <Hero className="position-relative">
       <div className={`${classes.heroWrapper} bg-white`}>
-        <Container className="pl-3 pr-0">
+        <Container className="pl-lg-2 pr-lg-2 pl-3 pr-3">
           <Row className="m-0">
             <Col xs="12" lg="11" className="offset-lg-1 px-0">
               <div className={`${classes.contentWrapper} bg-white d-flex flex-column`}>

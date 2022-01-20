@@ -84,7 +84,7 @@ export const Beneficiaries = (props) => {
 
   return (
     <>
-      <Container tag="section" aria-labelledby="beneficiaries-title" className="px-3 pt-5">
+      <Container tag="section" aria-labelledby="beneficiaries-title" className="pl-lg-2 pr-lg-2 pl-3 pr-3 pt-5">
         <Row>
           <Col className="offset-lg-1">
             <Row>
