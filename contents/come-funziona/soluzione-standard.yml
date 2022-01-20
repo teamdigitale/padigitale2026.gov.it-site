@@ -10,9 +10,9 @@ verticalTimeline:
     headerParagraph: "Soluzioni a misura di PA per semplificare la richiesta di finanziamenti e ridurre gli oneri amministrativi per tutta la PA."
     iconl: '/assets/icons-come-funziona/box.svg'
     iconr: '/assets/icons-come-funziona/multi-box.svg'
-    littleTitlel: 'PACCHETTI STANDARD'
+    littleTitlel: 'SOLUZIONI STANDARD'
     bodyParagraphl: "Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti."
-    littleTitler: 'PACCHETTI MULTIMISURA'
+    littleTitler: 'SOLUZIONI MULTIMISURA'
     bodyParagraphr: 'Per semplificare l’accesso ai fondi del PNRR le amministrazioni potranno - <strong>con un’unica candidatura</strong> - accedere a pacchetti multimisura, che includono, per esempio, sia finanziamenti per la migrazione al cloud che per il miglioramento dei siti web.'
   - index: 1
     title: 'Realizzazione delle iniziative'
