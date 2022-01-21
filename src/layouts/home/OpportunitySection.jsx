@@ -94,7 +94,7 @@ const useStyle = createUseStyles({
 export const OpportunitySection = (props) => {
   const classes = useStyle();
   const { title, list } = props;
-  const [dispatch] = useContext(GlobalStateContext);
+  const [, dispatch] = useContext(GlobalStateContext);
 
   return (
     <div className={classes.section}>
