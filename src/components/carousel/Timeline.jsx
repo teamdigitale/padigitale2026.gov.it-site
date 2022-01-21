@@ -200,7 +200,7 @@ export const Timeline = ({ content }) => {
 
   return (
     <>
-      <div className={classes.timelineSection}>
+      <div className={classes.timelineSection} id="calendario">
         <div className="container pl-lg-2 pr-lg-2 pl-3 pr-3">
           {content.category ? (
             <Row className="mb-5 ml-0 mr-0">
