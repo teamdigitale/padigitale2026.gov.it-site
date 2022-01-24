@@ -92,7 +92,7 @@ per la protezione dei dati personali.
 Questa sezione fornisce informazioni dettagliate sull'uso dei cookie, su come
 sono utilizzati dal sito e su come gestirli, in attuazione dell’art. 122 del
 decreto legislativo 30 giugno 2003, n. 196, nonché nel rispetto delle
-“[Linee guida cookie e altri strumenti di tracciamento](https://www.garanteprivacy.it/web/guest/home/docweb/-/docweb-display/docweb/9677876)”{class="text-decoration-none font-weight-semibold", rel='noreferrer', target='\_blank', aria-label='Linee guida cookie e altri strumenti di tracciamento (collegamento esterno)'}
+“[Linee guida cookie e altri strumenti di tracciamento](https://www.garanteprivacy.it/web/guest/home/docweb/-/docweb-display/docweb/9677876){class="text-decoration-none font-weight-semibold", rel='noreferrer', target='\_blank', aria-label='Linee guida cookie e altri strumenti di tracciamento (collegamento esterno)'}”
 emanate dal Garante per la protezione dei dati personali con provvedimento del
 10 giugno 2021.
 
