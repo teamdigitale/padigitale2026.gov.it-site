@@ -12,8 +12,8 @@ verticalTimeline:
     iconr: '/assets/icons-come-funziona/multi-box.svg'
     littleTitlel: 'SOLUZIONI STANDARD'
     bodyParagraphl: "Ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso <strong>soluzioni standard</strong>, ciascuna con un valore economico predefinito. <strong>Non sarà necessario scrivere e presentare progetti</strong> per ricevere finanziamenti."
-    littleTitler: 'SOLUZIONI MULTIMISURA'
-    bodyParagraphr: 'Per semplificare l’accesso ai fondi del PNRR le amministrazioni potranno - <strong>con un’unica candidatura</strong> - accedere a pacchetti multimisura, che includono, per esempio, sia finanziamenti per la migrazione al cloud che per il miglioramento dei siti web.'
+    littleTitler: 'REGISTRAZIONE UNICA'
+    bodyParagraphr: 'Per semplificare l’accesso ai fondi del PNRR le amministrazioni potranno accedere - con <strong>un’unica registrazione</strong> - a più misure, richiedendo, per esempio, sia finanziamenti per la migrazione al cloud che per il miglioramento dei siti web.'
   - index: 1
     title: 'Realizzazione delle iniziative'
     icon: '/assets/shuttle.svg'
