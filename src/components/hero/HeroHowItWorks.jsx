@@ -1,10 +1,11 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
 import { Row, Col, Hero, Container } from 'design-react-kit';
+import { Link } from 'gatsby';
+import PropTypes from 'prop-types';
 import { HeroTitle } from './HeroTitle';
 import { HeroBackground } from './HeroBackground';
 import { HeroParagraph } from './HeroParagraph';
-import { Link } from 'gatsby';
 
 const useStyles = createUseStyles({
   heroImg: {
@@ -188,7 +189,7 @@ export const HeroHowItWorks = ({ title, body, image, list }) => {
   return (
     <Hero className="position-relative">
       <div className={`${classes.heroWrapper} bg-white`}>
-        <Container className="pl-3 pr-0">
+        <Container className="pl-lg-2 pr-lg-2 pl-3 pr-3">
           <Row className="m-0">
             <Col xs="12" lg="11" className="offset-lg-1 px-0">
               <div className={`${classes.contentWrapper} bg-white d-flex flex-column`}>
@@ -231,4 +232,11 @@ export const HeroHowItWorks = ({ title, body, image, list }) => {
       <HeroBackground image={image} className={`${classes.heroImg} d-none d-lg-block`} />
     </Hero>
   );
+};
+
+HeroHowItWorks.propTypes = {
+  title: PropTypes.string,
+  body: PropTypes.string,
+  image: PropTypes.string,
+  list: PropTypes.array,
 };

@@ -1,7 +1,8 @@
+/* eslint-disable sonarjs/no-duplicate-string */
 import React, { useState, useEffect, useContext } from 'react';
 import { Accordion, AccordionHeader, AccordionBody, Button } from 'design-react-kit';
 import { createUseStyles } from 'react-jss';
-import { element } from 'prop-types';
+import PropTypes from 'prop-types';
 import { GlobalStateContext } from '../../context/globalContext';
 import { ExternalLink } from '../../components/ExternalLink';
 
@@ -93,7 +94,7 @@ const useStyles = createUseStyles({
 
 export const QuestionSection = (props) => {
   const classes = useStyles();
-  const { title, description, accordions, sectionId } = props.item;
+  const { title, accordions, sectionId } = props.item;
   const { handleToggle } = props;
   const { inputText } = props;
 
@@ -145,7 +146,7 @@ export const QuestionSection = (props) => {
     } else {
       setAccordionList(accordions);
     }
-  }, [inputText]);
+  }, [inputText, accordions]);
 
   useEffect(() => {
     if (faqId) {
@@ -160,7 +161,9 @@ export const QuestionSection = (props) => {
   return (
     <>
       <section id={sectionId} className={classes.section} aria-labelledby={sectionId + '-headings'}>
-        <h4 id={sectionId + '-headings'} className={classes.sectionTitle}>{title}</h4>
+        <h4 id={sectionId + '-headings'} className={classes.sectionTitle}>
+          {title}
+        </h4>
         <Accordion>
           {accordionList.map((accordion, i) => (
             <div key={accordion.title} className={classes.accordionWrapper}>
@@ -197,4 +200,10 @@ export const QuestionSection = (props) => {
       </section>
     </>
   );
+};
+
+QuestionSection.propTypes = {
+  item: PropTypes.object.isRequired,
+  inputText: PropTypes.string,
+  handleToggle: PropTypes.func,
 };

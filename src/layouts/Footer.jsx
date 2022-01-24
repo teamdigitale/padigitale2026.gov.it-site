@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'gatsby';
 import { createUseStyles } from 'react-jss';
 import links from '../../contents/links.yml';
@@ -88,7 +88,7 @@ const useStyle = createUseStyles({
     },
   },
   logoImg: {
-    height: '2.667rem',
+    height: '3rem',
     '&.logo-gov': {
       height: '3.556rem',
     },
@@ -157,7 +157,7 @@ const MainFooter = () => {
           <div className="logos">
             <div className="d-flex align-items-center">
               <ExternalLink linkTo={eu.linkTo} ariaLabel={eu.ariaLabel} className={classes.footerLogo}>
-                <img className={classes.logoImg} src="/assets/eu-flag.svg" alt="Unione Europea" />
+                <img className={classes.logoImg} src="/assets/logo-eu.svg" alt="Unione Europea" />
               </ExternalLink>
               <ExternalLink linkTo={repubblica.linkTo} ariaLabel={repubblica.ariaLabel} className={classes.footerLogo}>
                 <img

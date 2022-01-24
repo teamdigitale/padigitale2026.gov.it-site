@@ -216,11 +216,13 @@ export const DesktopSwiper = ({
 
 DesktopSwiper.propTypes = {
   slides: PropTypes.arrayOf(PropTypes.node).isRequired,
-  breakpoints: PropTypes.any,
+  breakpoints: PropTypes.object,
   pagination: PropTypes.bool,
   mobilePagination: PropTypes.bool,
   desktopNavigation: PropTypes.bool,
   navigation: PropTypes.bool,
-  className: PropTypes.any,
+  className: PropTypes.string,
+  title: PropTypes.string,
+  idCarousel: PropTypes.string,
   id: PropTypes.string,
 };

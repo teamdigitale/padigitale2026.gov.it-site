@@ -33,6 +33,6 @@ export const HeroBackground = ({ image, className }) => {
 };
 
 HeroBackground.propTypes = {
-  image: PropTypes.any,
-  className: PropTypes.any,
+  image: PropTypes.string,
+  className: PropTypes.string,
 };

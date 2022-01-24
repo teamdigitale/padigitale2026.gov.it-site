@@ -1,6 +1,5 @@
 /* eslint-disable prettier/prettier */
-import React, { useState, useContext } from 'react';
-import { StaticImage } from 'gatsby-plugin-image';
+import React, { useContext } from 'react';
 import { createUseStyles } from 'react-jss';
 import { Button } from 'design-react-kit';
 import { HeroTitle } from '../../components/hero/HeroTitle';
@@ -12,7 +11,7 @@ import content from '../../../contents/support-page/support.yml';
 import { GlobalStateContext } from '../../context/globalContext';
 
 const {
-  heroAssistance: { title, body, btnText, altImg },
+  heroAssistance: { title, body, btnText },
 } = content;
 
 const useStyle = createUseStyles({
@@ -38,7 +37,7 @@ const useStyle = createUseStyles({
 
 export const Assistance = () => {
   const classes = useStyle();
-  const [{ modalState }, dispatch] = useContext(GlobalStateContext);
+  const [, dispatch] = useContext(GlobalStateContext);
 
   return (
     <React.Fragment>

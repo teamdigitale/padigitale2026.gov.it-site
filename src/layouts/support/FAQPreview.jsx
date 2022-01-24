@@ -93,7 +93,7 @@ const useStyle = createUseStyles({
 
 export const FAQPreview = () => {
   const classes = useStyle();
-  const [{}, dispatch] = useContext(GlobalStateContext);
+  const [, dispatch] = useContext(GlobalStateContext);
 
   const cards = faqSection.faqPreviewCards.map((card) => (
     <Col key={card.id} xs="12" lg="4">

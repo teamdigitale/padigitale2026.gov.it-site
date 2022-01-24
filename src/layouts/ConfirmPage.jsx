@@ -3,9 +3,9 @@ import { graphql, Link, useStaticQuery } from 'gatsby';
 import PropTypes from 'prop-types';
 import { Button } from 'design-react-kit';
 import jwt_decode from 'jwt-decode';
+import { announce } from '@react-aria/live-announcer';
 import { Hero } from '../components/hero/Hero';
 import { SEO } from '../components/SEO';
-import { announce } from '@react-aria/live-announcer';
 import content from '../../contents/confirm-page/confirm.yml';
 import seo from '../../contents/seo.yml';
 

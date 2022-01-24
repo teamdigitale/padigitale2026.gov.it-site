@@ -15,5 +15,5 @@ export const HeroCategory = ({ title }) => {
 };
 
 HeroCategory.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
 };

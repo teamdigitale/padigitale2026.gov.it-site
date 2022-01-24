@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { createUseStyles } from 'react-jss';
 import { Container, Row, Col, Button } from 'design-react-kit';
 
@@ -97,4 +98,11 @@ export const ModalUpdatesButton = ({ label, buttonLabel, hasTitle, handleToggle 
       </Container>
     </>
   );
+};
+
+ModalUpdatesButton.propTypes = {
+  label: PropTypes.string,
+  buttonLabel: PropTypes.string.isRequired,
+  hasTitle: PropTypes.bool,
+  handleToggle: PropTypes.func.isRequired,
 };

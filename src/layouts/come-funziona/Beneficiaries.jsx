@@ -2,6 +2,7 @@ import React from 'react';
 import { createUseStyles } from 'react-jss';
 import { Container, Row, Col } from 'design-react-kit';
 import { Link } from 'gatsby';
+import PropTypes from 'prop-types';
 
 const useStyle = createUseStyles({
   involvedSection: {
@@ -39,7 +40,7 @@ const useStyle = createUseStyles({
     '& .category-title': {
       fontSize: '1.556rem',
       letterSpacing: '-0.26px',
-      lineHeight: '1.4',
+      lineHeight: '1.2',
       fontWeight: '600',
       color: '#004080',
       marginBottom: '0',
@@ -83,7 +84,7 @@ export const Beneficiaries = (props) => {
 
   return (
     <>
-      <Container tag="section" aria-labelledby="beneficiaries-title" className="px-3 pt-5">
+      <Container tag="section" aria-labelledby="beneficiaries-title" className="pl-lg-2 pr-lg-2 pl-3 pr-3 pt-5">
         <Row>
           <Col className="offset-lg-1">
             <Row>
@@ -129,4 +130,8 @@ export const Beneficiaries = (props) => {
       </Container>
     </>
   );
+};
+
+Beneficiaries.propTypes = {
+  item: PropTypes.object,
 };

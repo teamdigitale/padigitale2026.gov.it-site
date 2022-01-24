@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { createUseStyles } from 'react-jss';
 import { Row, Col } from 'design-react-kit';
 import PropTypes from 'prop-types';
@@ -6,11 +6,10 @@ import { DesktopSwiper } from '../DesktopSwiper';
 
 const useStyles = createUseStyles({
   timelineSection: {
-    backgroundColor: '#F0F6FC',
     padding: '3.125rem 0 4.5rem 0',
     overflow: 'hidden',
     '@media (min-width: 992px)': {
-      padding: '2.222rem 0 3.889rem 0',
+      padding: '5.333rem 0 2.5rem 0',
     },
     '& .swiper': {
       margin: '0 -1.111rem',
@@ -64,6 +63,7 @@ const useStyles = createUseStyles({
     alignItems: 'center',
     justifyContent: 'center',
     transform: 'translateX(-15%)',
+    boxShadow: '0px 0px 4px rgba(0, 0, 0, 0.1)',
   },
   timelineStepsActive: {
     height: '45px',
@@ -75,6 +75,7 @@ const useStyles = createUseStyles({
     alignItems: 'center',
     justifyContent: 'center',
     transform: 'translateX(-15%)',
+    boxShadow: '0px 0px 4px rgba(0, 0, 0, 0.1)',
   },
   timelineCard: {
     marginTop: '1.875rem',
@@ -129,11 +130,38 @@ const useStyles = createUseStyles({
       },
     },
   },
+  columnCard: {
+    composes: 'column-card',
+    '& + .column-card': {
+      '@media (max-width: 992px)': {
+        marginTop: '2.222rem',
+      },
+    },
+  },
+  category: {
+    fontSize: '0.875rem',
+    fontWeight: '600',
+    color: '#33485C',
+    textTransform: 'uppercase',
+    marginBottom: '0.556rem',
+    '@media (min-width: 992px)': {
+      fontSize: '0.889rem',
+    },
+  },
+  title: {
+    fontWeight: '700',
+    fontSize: '1.5rem',
+    color: '#33485C',
+    lineHeight: '1.36',
+    '@media (min-width: 992px)': {
+      fontSize: '1.778rem',
+      lineHeight: '1.4',
+    },
+  },
 });
 
-export const Timeline = ({ content, title }) => {
+export const Timeline = ({ content }) => {
   const classes = useStyles();
-  // const [activeSlide, setActiveSlide] = useState(0);
 
   useEffect(() => {
     const timeline = document.querySelector('.swiper');
@@ -172,12 +200,15 @@ export const Timeline = ({ content, title }) => {
 
   return (
     <>
-      <div className={classes.timelineSection}>
-        <div className="container">
-          {title ? (
-            <Row>
-              <Col xs="12" lg="4" className="offset-lg-1" id="calendario">
-                <h3 className={classes.timelineTitle}>{title}</h3>
+      <div className={classes.timelineSection} id="calendario">
+        <div className="container pl-lg-2 pr-lg-2 pl-3 pr-3">
+          {content.category ? (
+            <Row className="mb-5 ml-0 mr-0">
+              <Col xs="12" lg="5" id="timeline-pc" className={`${classes.columnCard} offset-lg-1`}>
+                <h3 className={classes.category}>{content.category}</h3>
+                <h4 className={classes.title} id="timeline-title-pc">
+                  {content.title}
+                </h4>
               </Col>
             </Row>
           ) : (
@@ -187,7 +218,7 @@ export const Timeline = ({ content, title }) => {
             <Col xs="12" lg="10" className="offset-lg-1 position-relative">
               <div className={classes.line}></div>
               <DesktopSwiper
-                title={title}
+                title={content.category}
                 slides={slides}
                 breakpoints={{
                   slidesPerView: 1,
@@ -207,6 +238,6 @@ export const Timeline = ({ content, title }) => {
 };
 
 Timeline.propTypes = {
-  content: PropTypes.any,
-  title: PropTypes.any,
+  content: PropTypes.object,
+  title: PropTypes.string,
 };

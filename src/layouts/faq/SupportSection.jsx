@@ -1,5 +1,6 @@
 import React from 'react';
-import { Section, Card, CardBody, CardText, CardTitle, Button, Row, Col } from 'design-react-kit';
+import { Card, CardBody, CardText, CardTitle, Row, Col } from 'design-react-kit';
+import PropTypes from 'prop-types';
 import { createUseStyles } from 'react-jss';
 import { Link } from 'gatsby';
 
@@ -8,6 +9,7 @@ const useStyles = createUseStyles({
     composes: 'offset-lg-1 px-3',
     '& a': {
       '&:focus': {
+        // eslint-disable-next-line sonarjs/no-duplicate-string
         outline: '2px solid #ff9900',
         boxShadow: 'none',
       },
@@ -125,7 +127,7 @@ export const SupportSection = (props) => {
             <Col className={classes.layout}>
               <Row>
                 {supportList.map((card) => (
-                  <Col key={card.title} md={5} lg={3} className={classes.colCard}>
+                  <Col key={card.title} md={5} lg={4} xl={3} className={classes.colCard}>
                     {card.isModal ? (
                       <div
                         role="button"
@@ -177,4 +179,11 @@ export const SupportSection = (props) => {
       </section>
     </>
   );
+};
+
+SupportSection.propTypes = {
+  title: PropTypes.string,
+  supportList: PropTypes.array,
+  buttonLabel: PropTypes.string,
+  handleToggle: PropTypes.func,
 };

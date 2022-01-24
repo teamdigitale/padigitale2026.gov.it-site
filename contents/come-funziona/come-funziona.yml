@@ -5,13 +5,6 @@ hero:
   body: A seconda della tipologia di misura e di PA, sarà possibile accedere alle risorse o attraverso delle soluzioni standard o attraverso la presentazione di progetti.
   list:
     - listItems:
-      title: MODALITÀ DI ACCESSO
-      items:
-        - item: Soluzioni standard
-          anchor: soluzioni-standard
-        - item: Presentazione progetti
-          anchor: presentazione-progetto
-    - listItems:
       title: APPROFONDISCI
       items:
         - item: Il calendario
@@ -93,6 +86,8 @@ involved:
       image: '/assets/consip-logo.svg'
       text: <strong>Consip</strong> è la centrale acquisti della Pubblica Amministrazione. Per il PNRR <strong>mette a disposizione strumenti per agevolare la realizzazione degli interventi</strong>, semplificando il processo di acquisto delle PA attraverso contratti quadro o piattaforme per la negoziazione.
 timeline:
+  category: "Il Calendario"
+  title: "Le fasi per la transizione digitale della PA"
   cards:
     - id: 1
       active: false
@@ -207,3 +202,14 @@ presentazioneTabs:
           title: Rendicontazione ed erogazione dei fondi
           image: Erogazione.svg
           description: L’erogazione dei contributi seguirà alcuni <strong>step che possono prevedere un’anticipazione e delle tranches, fino al saldo, erogate “a rimborso”</strong>. In questo caso sarà necessario presentare tutta la documentazione che giustifica l’esecuzione della singola spesa. Anche in questo caso si prevedono procedure semplici per il trasferimento dei fondi e il costante supporto all’amministrazione destinataria delle risorse per assicurare uno spedito ed efficace trasferimento dei fondi.
+projectsCardsItem:
+  littleTitle: LE MODALITÀ DI ACCESSO
+  title: Due modalità alternative per accedere alle risorse per la transizione digitale
+  modalityLeft: Modalità 1
+  cardTitleLeft: Soluzioni standard
+  cardTextLeft: La modalità di accesso prevista per le misure con una platea ampia di beneficiari (oltre 1.000 PA).
+  buttonLabelLeft: Scopri di più
+  modalityRight: Modalità 2
+  cardTitleRight: Presentazioni progetti
+  cardTextRight: La modalità di accesso prevista per le misure con una platea ristretta di beneficiari (fino a 1.000 PA).
+  buttonLabelRight: Scopri di più

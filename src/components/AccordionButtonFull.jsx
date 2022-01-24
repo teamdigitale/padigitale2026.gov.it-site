@@ -1,7 +1,8 @@
 import React, { useContext } from 'react';
 import { Button, Collapse, Card, CardBody } from 'design-react-kit';
 import { createUseStyles } from 'react-jss';
-import { Link, navigate } from 'gatsby';
+import { navigate } from 'gatsby';
+import PropTypes from 'prop-types';
 import { GlobalStateContext } from '../context/globalContext';
 import { ExternalLink } from './ExternalLink';
 
@@ -82,13 +83,14 @@ const useStyles = createUseStyles({
       },
     },
     '& .tag': {
+      background: '#F0F6FC',
       padding: '2px 16px',
-      borderRadius: '12px',
-      border: '1px solid #E6E9F2',
+      borderRadius: '4px',
       fontSize: '0.778rem',
       fontWeight: '600',
       marginBottom: '0.444rem',
       marginRight: '0.444rem',
+      color: '#33485C',
       '&:last-child': {
         marginRight: '0',
       },
@@ -267,7 +269,7 @@ export const AccordionButtonFull = (props) => {
     moreInfoLink,
   } = props.data;
 
-  const [state, dispatch] = useContext(GlobalStateContext);
+  const [, dispatch] = useContext(GlobalStateContext);
 
   const eventHandler = () => {
     props.handleToggle(props.id);
@@ -285,7 +287,7 @@ export const AccordionButtonFull = (props) => {
         ></Button>
         <div className={classes.cardWrapper}>
           <div className={classes.cardHeader}>
-            <h4 className={classes.cardTitle}>
+            <h4 className={classes.cardTitle} onClick={eventHandler}>
               <span>{number}</span> {title}
             </h4>
             <div className={classes.cardHeaderValue} dangerouslySetInnerHTML={{ __html: money }} />
@@ -316,7 +318,10 @@ export const AccordionButtonFull = (props) => {
                   <button
                     className={classes.accessLink}
                     onClick={() => {
-                      dispatch({ type: 'SET:HOW_SECTION_ID', payload: { howId: accessSectionId } });
+                      dispatch({
+                        type: 'SET:HOW_SECTION_ID',
+                        payload: { howId: accessSectionId },
+                      });
                       navigate('/come-funziona');
                     }}
                   >
@@ -341,4 +346,21 @@ export const AccordionButtonFull = (props) => {
       </div>
     </>
   );
+};
+
+AccordionButtonFull.propTypes = {
+  id: PropTypes.number,
+  number: PropTypes.string,
+  title: PropTypes.string,
+  money: PropTypes.string,
+  tags: PropTypes.array,
+  description: PropTypes.string,
+  stalls: PropTypes.string,
+  accessLabel: PropTypes.string,
+  accessSectionId: PropTypes.string,
+  moreInfoLabel: PropTypes.string,
+  moreInfoLink: PropTypes.string,
+  data: PropTypes.object,
+  active: PropTypes.number,
+  handleToggle: PropTypes.func,
 };

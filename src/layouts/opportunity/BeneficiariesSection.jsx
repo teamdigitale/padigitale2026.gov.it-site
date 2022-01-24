@@ -1,8 +1,9 @@
+/* eslint-disable sonarjs/cognitive-complexity */
 import React, { useState, useEffect, useContext } from 'react';
 import { createUseStyles } from 'react-jss';
 import Select from 'react-select';
+import PropTypes from 'prop-types';
 import { announce } from '@react-aria/live-announcer';
-import { Section } from 'design-react-kit';
 import { AccordionButtonFull } from '../../components/AccordionButtonFull';
 import { beneficiaries, selectBeneficiaries } from '../../../contents/opportunity-page/opportunity.yml';
 import { GlobalStateContext } from '../../context/globalContext';
@@ -116,6 +117,7 @@ export const BeneficiariesSection = (props) => {
       const item = document.querySelector('#' + sectionId);
       item.setAttribute('tabindex', '-1');
       item.focus();
+      item.querySelector('h4').click();
     }
   }, [sectionId]);
 
@@ -198,4 +200,8 @@ export const BeneficiariesSection = (props) => {
       </div>
     </>
   );
+};
+
+BeneficiariesSection.propTypes = {
+  externalFilter: PropTypes.any,
 };
