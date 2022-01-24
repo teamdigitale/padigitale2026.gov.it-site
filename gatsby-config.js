@@ -4,7 +4,7 @@ module.exports = {
     hostname: 'padigitale2026.gov.it',
     siteUrl: 'https://padigitale2026.gov.it/',
     apiUrl: 'https://api.padigitale2026.gov.it/api',
-    captchaKey: '6LflElQdAAAAAFITc7x2dAiW0ky1P1Zzti6_IVK0',
+    captchaKey: '6Ldj-g4eAAAAAN0ee9NiyA28zbF6TD8cjjFxaOX0',
   },
   plugins: [
     'gatsby-plugin-sitemap',
