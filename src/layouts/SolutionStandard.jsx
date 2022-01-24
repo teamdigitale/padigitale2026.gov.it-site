@@ -59,11 +59,11 @@ export const SolutionStandard = () => {
           <Col xs="12">
             <Breadcrumb className={classes.breadcrumb}>
               <BreadcrumbItem className={classes.breadcrumbItem}>
-                <a href="#">Come funziona</a>
+                <a href="/come-funziona">Come funziona</a>
                 <span className="separator"></span>
               </BreadcrumbItem>
               <BreadcrumbItem active className={classes.breadcrumbItemActive}>
-                <a href="#">Soluzioni standard</a>
+                <a href="/soluzione-standard">Soluzioni standard</a>
               </BreadcrumbItem>
             </Breadcrumb>
           </Col>
