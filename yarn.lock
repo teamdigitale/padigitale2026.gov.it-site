@@ -4351,7 +4351,7 @@ cross-fetch@3.1.4:
   resolved "https://registry.npmjs.org/cross-fetch/-/cross-fetch-3.1.4.tgz"
   integrity sha512-1eAtFWdIubi6T4XPy6ei9iUFoKpUkIF971QLN8lIvvvwueI65+Nw5haMNKUwfJxabqlIIDODJKGrQ66gxC0PbQ==
   dependencies:
-    node-fetch "2.6.1"
+    node-fetch "2.6.7"
 
 cross-spawn@7.0.3, cross-spawn@^7.0.2, cross-spawn@^7.0.3:
   version "7.0.3"
@@ -6903,7 +6903,7 @@ graphql-compose@~7.25.0:
   integrity sha512-TPXTe1BoQkMjp/MH93yA0SQo8PiXxJAv6Eo6K/+kpJELM9l2jZnd5PCduweuXFcKv+nH973wn/VYzYKDMQ9YoQ==
   dependencies:
     graphql-type-json "0.3.2"
-    object-path "0.11.5"
+    object-path "0.11.8"
 
 graphql-config@^3.0.2:
   version "3.4.1"
@@ -8681,7 +8681,7 @@ mdast-util-to-hast@^3.0.4:
     detab "^2.0.0"
     mdast-util-definitions "^1.2.0"
     mdurl "^1.0.1"
-    trim "0.0.1"
+    trim "0.0.3"
     trim-lines "^1.0.0"
     unist-builder "^1.0.1"
     unist-util-generated "^1.1.0"
@@ -10989,7 +10989,7 @@ remark-parse@^6.0.0, remark-parse@^6.0.3:
     parse-entities "^1.1.0"
     repeat-string "^1.5.4"
     state-toggle "^1.0.0"
-    trim "0.0.1"
+    trim "0.0.3"
     trim-trailing-lines "^1.0.0"
     unherit "^1.0.4"
     unist-util-remove-position "^1.0.0"
