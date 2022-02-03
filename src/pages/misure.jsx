@@ -8,10 +8,20 @@ const Page = ({ location }) => {
   const [, dispatch] = useContext(GlobalStateContext);
 
   useEffect(() => {
+    const currentHash = location.hash?.split('#')[1];
+    if (currentHash !== null) {
+      const filter = {
+        label: '',
+        value: '',
+      };
+      filter.label = currentHash.charAt(0).toUpperCase() + currentHash.slice(1);
+      filter.value = currentHash;
+      setFilter(filter);
+    }
     if (location.state !== null) {
       setFilter(location.state.filter);
     }
-  }, [location.state]);
+  }, [location.state, location.hash]);
 
   useEffect(() => {
     dispatch({ type: 'SET:ACTIVE_HEADER', payload: { activeItem: 'misure' } });
