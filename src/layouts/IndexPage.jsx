@@ -62,6 +62,8 @@ export const IndexPage = () => {
           headers: {
             'Content-Type': 'application/json',
             'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS',
+            'Access-Control-Allow-Header': 'Origin, Content-Type, X-Auth-Token',
           },
           body: JSON.stringify({
             client_id: '3MVG9T992fY2Y4vvuDterr0IKBuN1MfrKcCDNLm1FVyfzfXm2FWIWEb91n4T09r4CxYFObiwXc1cFajAsEfEG',
