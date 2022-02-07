@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><md:EntityDescriptor entityID="https://padigitale2026.gov.it/saml2/metadata.xml" validUntil="2032-02-03T16:10:55.331Z" ID="_50ec6cf310e60779f11454fce93395eedeb208ca" xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:spid="https://spid.gov.it/saml-extensions">
-   <ds:Signature><ds:SignedInfo><ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256" /><ds:Reference URI="#_50ec6cf310e60779f11454fce93395eedeb208ca"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" /><ds:DigestValue>KcwhB/9JOCfG9mfkeNP65i9d1Josbg0kcef7OU05/RU=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue>NVIGc4NpxDiioJukQbqKvog5CBtJftN+cyQCQ7bIq6L/7cHQwY55kPy7uNDovO+p7pCZXy40fkzX
-b/68M3F+E4mszs5ZHxXig+MwkNepDE8dlt/6jyv42fyyUt7+P66fcXzjFnw9PaaMkp2JCuoLLwW/
-tefvHP5JfbVpxQMxXJWd4PNNJ+HeJrmMyx8HwO+6HMEBqkU/UJP+WW4p4krjbT5BXsIg4Zdved0t
-+wiS3qGB0gvYpH1lOxkvefTwiGAeMC+YxSRforXaF2o5UlbW9frYebVO1pLnh8dFQWAT/R4LB1D1
-S3YqaZeeEoanIhrpMzQbeacpKYswjQe3IwKCsQ==</ds:SignatureValue><ds:KeyInfo><ds:KeyValue><ds:RSAKeyValue><ds:Modulus>iZGdwPDnzERbOB0gr4Nu2g1I4JKrY3POukpKyHkkH9TBVtzetH61txFqySWyUdxqGWl81R4fVXp4
+<?xml version="1.0" encoding="UTF-8"?><md:EntityDescriptor entityID="https://padigitale2026.gov.it/saml2/metadata.xml" validUntil="2032-02-07T11:01:08.774Z" ID="_261e7c9ade6fc59a074ad5946771ccf9403a12b2" xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:spid="https://spid.gov.it/saml-extensions">
+   <ds:Signature><ds:SignedInfo><ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256" /><ds:Reference URI="#_261e7c9ade6fc59a074ad5946771ccf9403a12b2"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" /><ds:DigestValue>C6Mj9WebW+ZgJ+jmTyiKAOHQsjD0JUj3UnkSFZICaqk=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue>P0gZw7f1PkbOqu6LaPP8Y07+g4coDikckPyVXrEAKsu2buDvQMxCMOUPpPkYKADDGzm6bqZpjhr3
+0LSQkb7mH74sfHPViwQImLFtIrrueUwDjPTLehWNKnpIAv4917n/M07HERL/hEsa0rXWbg/8mTp6
+c01205k15QwoE1ZqSpcHPTga5UOIA+rUPJQeWeA/vnHvLPv9fxB4Zl0PKWRAFy0qxiWpVGZ82MKK
+T4D+B3ErUwWSTvhc+seOm6QfuDbVmonGP663+UF2llcPdytBcyl811ygYjvNpN85WTATYSXWBz5e
+onkBsq+LisjK2zd3Q9/HGolOEK5Vz1k/U4tH3A==</ds:SignatureValue><ds:KeyInfo><ds:KeyValue><ds:RSAKeyValue><ds:Modulus>iZGdwPDnzERbOB0gr4Nu2g1I4JKrY3POukpKyHkkH9TBVtzetH61txFqySWyUdxqGWl81R4fVXp4
 PwMfGsN6bBnDcryxF3LJjTw74MTOe246ww78m4hRCpPHj5MECWzP6O/tfiG5zTj/uQsEpvuaDWxL
 4hEIOaBouOBPX6Ae0YIIn9TItXhnuFp6GHzxsbxbjwnemK2bc/n7SG8jOfTmdZWkzkBetTmpsU9q
 ExM4NT2aalsX5kSya4pbaNLLwWCS/nfdSkGL4dMplybi/SxukADAy4e8zYnDIwJ0dXkL0cK+tLs3
@@ -67,7 +67,7 @@ gDSALNZoiphPhsyaLN5rkEuwPSqp6afD6zphnxO101MeBOnDkjxK4XhMdP45vTLs
       <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
       <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://padigitale2026--dev2.my.salesforce.com" index="0" isDefault="true" />
       <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dev2-padigitale2026.cs162.force.com/login" index="1" />
-	  <md:AttributeConsumingService index="0" isDefault="true">
+      <md:AttributeConsumingService index="0" isDefault="true">
          <md:ServiceName xml:lang="it" xmlns:xml="http://www.w3.org/XML/1998/namespace">MITD</md:ServiceName>
          <md:RequestedAttribute Name="fiscalNumber" isRequired="true" />
 		 <md:RequestedAttribute Name="name" />
@@ -102,7 +102,7 @@ gDSALNZoiphPhsyaLN5rkEuwPSqp6afD6zphnxO101MeBOnDkjxK4XhMdP45vTLs
    <md:ContactPerson contactType="other">
       <md:Extensions>
          <spid:Public />
-		 <spid:IPACode>PA:IT-PCM_AA1D3A2</spid:IPACode>
+		 <spid:IPACode>PA:IT-PCM</spid:IPACode>
       </md:Extensions>
       <md:EmailAddress>itcrowd@teamdigitale.governo.it</md:EmailAddress>
    </md:ContactPerson>
