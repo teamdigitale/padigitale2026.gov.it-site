@@ -84,41 +84,41 @@ opportunity:
       id: centri-facili
 heroCarouselNews:
   - id: 1
+    category: Approfondimento
+    title: "Le misure per una PA protagonista della transizione digitale"
+    description: Disponibile un approfondimento sulle quattordici misure del PNRR di PA digitale 2026
+    source: 'Fonte: innovazione.gov.it'
+    linkTo: 'https://innovazione.gov.it/notizie/articoli/le-misure-per-una-pa-protagonista-della-transizione-digitale/'
+  - id: 2
     category: Novità
     title: "Pubblicato il bando per il Polo Strategico Nazionale"
     description: Al via la gara europea per la gestione dei servizi cloud per la Pubblica Amministrazione. Scade il 16 marzo il termine per presentare le offerte
     source: 'Fonte: innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/articoli/pubblicato-il-bando-per-il-polo-strategico-nazionale/'
-  - id: 2
+  - id: 3
     category: Comunicato stampa
     title: "Anagrafe digitale: al via il cambio di residenza online"
     description: Attiva da febbraio la prima fase di applicazione, che verrà estesa in tutta Italia
     source: 'Fonte: innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/articoli/anagrafe-digitale-al-via-il-cambio-di-residenza-online/'
-  - id: 3
+  - id: 4
     category: Novità
     title: "Servizio civile digitale: al via il nuovo Avviso per gli enti"
     description: Il servizio civile digitale espande il suo bacino di intervento con la pubblicazione del nuovo avviso per gli Enti
     source: 'Fonte: innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/articoli/servizio-civile-digitale-al-via-il-nuovo-avviso-per-gli-enti/'
-  - id: 4
+  - id: 5
     category: Novità
     title: "Cloud PA: online gli atti per classificare dati e servizi e qualificare i servizi delle PA"
     description: Prende il via il percorso di adozione della Strategia Cloud Italia che le amministrazioni italiane dovranno seguire nei prossimi mesi
     source: 'Fonte: innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/articoli/cloud-pa-online-gli-atti-per-classificare-dati-e-servizi-e-qualificare-i-servizi/'  
-  - id: 5
+  - id: 6
     category: Comunicato stampa
     title: "MaaS: 13 Comuni capoluogo di Città metropolitane hanno presentato progetti"
     description: Si avvia ora la fase di selezione dei progetti pilota per i servizi “Mobility as a Service for Italy”
     source: 'Fonte: innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/comunicati-stampa/13-comuni-capoluogo-di-citta-metropolitane-hanno-presentato-progetti-per-nuove-soluzioni-di-mobilita/'
-  - id: 6
-    category: Novità
-    title: Nasce PA digitale 2026, il punto di accesso alle risorse per la transizione digitale della PA
-    description: 'La piattaforma consentirà alle amministrazioni di richiedere i fondi del PNRR dedicati al digitale, rendicontare i progetti e ricevere assistenza'
-    source: 'Fonte: innovazione.gov.it'
-    linkTo: 'https://innovazione.gov.it/notizie/articoli/nasce-pa-digitale-2026-il-punto-di-accesso-risorse-transizione-digitale-pa-pnrr/'
 support:
   tag: Supporto
   title: Scrivici per chiarimenti o per contribuire con le tue idee al progetto
