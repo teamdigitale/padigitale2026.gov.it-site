@@ -61,6 +61,7 @@ export const IndexPage = () => {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*',
           },
           body: JSON.stringify({
             client_id: '3MVG9T992fY2Y4vvuDterr0IKBuN1MfrKcCDNLm1FVyfzfXm2FWIWEb91n4T09r4CxYFObiwXc1cFajAsEfEG',
