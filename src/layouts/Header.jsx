@@ -81,6 +81,25 @@ const useStyle = createUseStyles({
   },
   topListLink: {
     composes: 'border-0 p-0 mr-0',
+    '& .list-item': {
+      display: 'inline-flex',
+      alignItems: 'center',
+    },
+    '& .list-item-link': {
+      display: 'inline-flex',
+      padding: '0',
+      alignItems: 'center',
+      '& img': {
+        maxHeight: '32px',
+        '&.eu-logo': {
+          marginLeft: '32px',
+        },
+        '&.user-logo': {
+          maxHeight: '24px',
+          marginRight: '10px',
+        },
+      },
+    },
   },
   headerCenterWrapper: {
     height: 'auto',
@@ -270,19 +289,40 @@ const SlimHeader = () => {
                   aria-label="Italia domani - PNRR (Collegamento esterno - Apre su nuova scheda)"
                 >
                   {externalLinks.pnrr.label}
+                  <ExternalLink
+                    className="list-item-link"
+                    linkTo={externalLinks.eu.linkTo}
+                    ariaLabel={externalLinks.eu.ariaLabel}
+                    href={externalLinks.italiaDigitale.linkTo}
+                    target="_blank"
+                  >
+                    <img
+                      className="d-none d-lg-block eu-logo"
+                      src="/assets/eu-flag.svg"
+                      alt={externalLinks.eu.label}
+                    ></img>
+                  </ExternalLink>
+                </LinkListItem>
+                <LinkListItem>
+                  <ExternalLink
+                    className="list-item-link"
+                    linkTo={externalLinks.eu.linkTo}
+                    ariaLabel={externalLinks.eu.ariaLabel}
+                    href={externalLinks.italiaDigitale.linkTo}
+                    target="_blank"
+                  >
+                    <img
+                      className="d-none d-lg-block user-logo"
+                      src="/assets/user-icon.svg"
+                      alt={externalLinks.eu.label}
+                    ></img>
+                    <span>Accedi</span>
+                  </ExternalLink>
                 </LinkListItem>
               </LinkList>
             </div>
           </Collapse>
         </HeaderLinkZone>
-        <ExternalLink
-          linkTo={externalLinks.eu.linkTo}
-          ariaLabel={externalLinks.eu.ariaLabel}
-          href={externalLinks.italiaDigitale.linkTo}
-          target="_blank"
-        >
-          <img className="d-none d-lg-block" src="/assets/eu-flag.svg" alt={externalLinks.eu.label}></img>
-        </ExternalLink>
       </HeaderContent>
     </HeaderReactKit>
   );
@@ -360,6 +400,11 @@ const NavHeader = () => {
                 >
                   <span className="font-weight-semibold">{internalLinks.opportunity.label}</span>
                 </Link>
+              </NavItem>
+              <NavItem active>
+                <ExternalLink to="#" className="nav-link">
+                  <span className="font-weight-semibold">Gli avvisi</span>
+                </ExternalLink>
               </NavItem>
               <NavItem>
                 <Link

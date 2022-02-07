@@ -8,8 +8,10 @@ import {
   heroPnrr,
   opportunity,
   heroCarouselNews,
+  noticesCarouselArchive,
   homeCarousel,
   heroCarouselNewsTitle,
+  noticesCarouselTitle,
   support,
 } from '../../contents/home-page/home.yml';
 import { HeroImageBackground } from '../components/hero/HeroImageBackground';
@@ -21,6 +23,7 @@ import { SEO } from '../components/SEO';
 import seo from '../../contents/seo.yml';
 import labels from '../../contents/labels.yml';
 import { GlobalStateContext } from '../context/globalContext';
+import { NoticesCarousel } from '../components/carousel/NoticesCarousel';
 import { SupportSection } from './faq/SupportSection';
 import { OpportunitySection } from './home/OpportunitySection';
 
@@ -46,6 +49,7 @@ const useStyles = createUseStyles({
 });
 
 export const IndexPage = () => {
+  console.log(noticesCarouselArchive);
   const classes = useStyles();
   const [, dispatch] = useContext(GlobalStateContext);
 
@@ -71,6 +75,7 @@ export const IndexPage = () => {
         overlap={true}
       />
       <HomeCarousel content={homeCarousel} />
+      <NoticesCarousel content={noticesCarouselArchive} title={noticesCarouselTitle} />
       <OpportunitySection title={opportunity.title} list={opportunity.cards} />
       <HeroImage
         ctaContainer={true}
