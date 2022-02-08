@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><md:EntityDescriptor entityID="https://padigitale2026.gov.it/saml2/metadata.xml" validUntil="2032-02-07T11:01:08.774Z" ID="_261e7c9ade6fc59a074ad5946771ccf9403a12b2" xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:spid="https://spid.gov.it/saml-extensions">
-   <ds:Signature><ds:SignedInfo><ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256" /><ds:Reference URI="#_261e7c9ade6fc59a074ad5946771ccf9403a12b2"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" /><ds:DigestValue>C6Mj9WebW+ZgJ+jmTyiKAOHQsjD0JUj3UnkSFZICaqk=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue>P0gZw7f1PkbOqu6LaPP8Y07+g4coDikckPyVXrEAKsu2buDvQMxCMOUPpPkYKADDGzm6bqZpjhr3
-0LSQkb7mH74sfHPViwQImLFtIrrueUwDjPTLehWNKnpIAv4917n/M07HERL/hEsa0rXWbg/8mTp6
-c01205k15QwoE1ZqSpcHPTga5UOIA+rUPJQeWeA/vnHvLPv9fxB4Zl0PKWRAFy0qxiWpVGZ82MKK
-T4D+B3ErUwWSTvhc+seOm6QfuDbVmonGP663+UF2llcPdytBcyl811ygYjvNpN85WTATYSXWBz5e
-onkBsq+LisjK2zd3Q9/HGolOEK5Vz1k/U4tH3A==</ds:SignatureValue><ds:KeyInfo><ds:KeyValue><ds:RSAKeyValue><ds:Modulus>iZGdwPDnzERbOB0gr4Nu2g1I4JKrY3POukpKyHkkH9TBVtzetH61txFqySWyUdxqGWl81R4fVXp4
+<?xml version="1.0" encoding="UTF-8"?><md:EntityDescriptor entityID="https://padigitale2026.gov.it/saml2/metadata.xml" validUntil="2032-02-07T11:01:08.774Z" ID="_8af2481137b86c3339581b24233891614c85421a" xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:spid="https://spid.gov.it/saml-extensions">
+   <ds:Signature><ds:SignedInfo><ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256" /><ds:Reference URI="#_8af2481137b86c3339581b24233891614c85421a"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" /><ds:DigestValue>0CbLxaQlse8yT0wM2YYmrKleLn1749hrLP50DteR+CQ=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue>EDMXrlbxfbbMPYPc2eN4Brrid33MoLbZY2N9yZb2KVGEuaSN0ypcpStjjnsNF5PoMEbBeRMaQ6ga
+BIL/fictmXnB0XhDRfl3HIt0aKIpzLmFGAlMpUP5JCtoa5DOgwfZISCw2xO+gPduLf9dz95N0Hk3
+y92ZOcsarVIiyWxfs9j8EjPBcQAbJQocAlNTtSMcfMWN9SC9jqhOuSUswYJv9t3s64ctDuarQ9jf
+2Z9o75v1FKRqFPdplxmH9ed9w2x2EudhKy1v5NjAS5meEsZ5yqce3vdMSfzvK0+AyAROhVLTSQRo
+/Uai7vUZw4OSTh3vfuCkmlvqPzFzwt8dbzeqtQ==</ds:SignatureValue><ds:KeyInfo><ds:KeyValue><ds:RSAKeyValue><ds:Modulus>iZGdwPDnzERbOB0gr4Nu2g1I4JKrY3POukpKyHkkH9TBVtzetH61txFqySWyUdxqGWl81R4fVXp4
 PwMfGsN6bBnDcryxF3LJjTw74MTOe246ww78m4hRCpPHj5MECWzP6O/tfiG5zTj/uQsEpvuaDWxL
 4hEIOaBouOBPX6Ae0YIIn9TItXhnuFp6GHzxsbxbjwnemK2bc/n7SG8jOfTmdZWkzkBetTmpsU9q
 ExM4NT2aalsX5kSya4pbaNLLwWCS/nfdSkGL4dMplybi/SxukADAy4e8zYnDIwJ0dXkL0cK+tLs3
@@ -102,7 +102,7 @@ gDSALNZoiphPhsyaLN5rkEuwPSqp6afD6zphnxO101MeBOnDkjxK4XhMdP45vTLs
    <md:ContactPerson contactType="other">
       <md:Extensions>
          <spid:Public />
-		 <spid:IPACode>PA:IT-PCM</spid:IPACode>
+		 <spid:IPACode>PA:IT-PCM_AA1D3A2</spid:IPACode>
       </md:Extensions>
       <md:EmailAddress>itcrowd@teamdigitale.governo.it</md:EmailAddress>
    </md:ContactPerson>
