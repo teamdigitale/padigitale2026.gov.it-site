@@ -66,11 +66,11 @@ export const IndexPage = () => {
             'Access-Control-Allow-Header': 'Origin, Content-Type, X-Auth-Token',
           },
           body: JSON.stringify({
-            client_id: '3MVG9T992fY2Y4vvuDterr0IKBuN1MfrKcCDNLm1FVyfzfXm2FWIWEb91n4T09r4CxYFObiwXc1cFajAsEfEG',
-            client_secret: '3D7215A370F65C25E7853820838CE012D5B1EBBDA5E850095BCB8644780E446E',
-            username: 'giuseppe.galati@accenture.com.intdev2',
-            password: 'Salesforce01!FuY9BHxHWrFMWCqeaAoNxSehF',
-            grant_type: 'password',
+            client_id: '',
+            client_secret: '',
+            username: '',
+            password: '',
+            grant_type: '',
           }),
         }).then((res) => res.json());
         console.log(loginInfo);
