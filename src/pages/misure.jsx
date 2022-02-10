@@ -9,7 +9,7 @@ const Page = ({ location }) => {
 
   useEffect(() => {
     const currentHash = location.hash?.split('#')[1];
-    if (currentHash !== null) {
+    if (currentHash && currentHash !== null) {
       const filter = {
         label: '',
         value: '',
