@@ -66,6 +66,7 @@ beneficiaries:
       <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">avere significativi risparmi della spesa pubblica nella gestione dei data center che possono essere reinvestiti nello sviluppo di nuovi servizi.</span></li>
       </ul>
     stalls: '280 enti'
+    solutionType: '/soluzione-progetti'
     accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
     moreInfoLabel: 'Leggi di più su Italia Domani'
@@ -94,6 +95,7 @@ beneficiaries:
       <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">la migrazione al cloud prevede un miglioramento dell&rsquo;efficienza energetica delle infrastrutture della PA e maggiore sostenibilit&agrave; ambientale grazie alla dismissione dei data center meno efficienti. </span></li>
       </ul>
     stalls: '16,600 enti'
+    solutionType: '/soluzione-standard'
     accessSectionId: soluzioni-standard
     accessLabel: Soluzioni Standard
     moreInfoLabel: 'Leggi di più su Italia Domani'
@@ -123,6 +125,7 @@ beneficiaries:
       <p><strong>Vantaggi per la PA</strong><strong></strong></p>
       <p><strong><span style="font-weight: 400;">Per fornire servizi digitali a cittadini e imprese, gli enti devono scambiarsi informazioni in modo efficiente e sicuro. La Piattaforma semplifica questo scambio permettendo agli enti pubblici di accedere alle informazioni in possesso di altri enti: in questo modo la Pubblica Amministrazione non chieder&agrave; al cittadino o all&rsquo;impresa dati gi&agrave; in suo possesso, applicando il principio </span><i><span style="font-weight: 400;">Once Only.</span></i></strong></p>
     stalls: '170 enti'
+    solutionType: '/soluzione-progetti'
     accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
     moreInfoLabel: 'Leggi di più su Italia Domani'
@@ -150,6 +153,7 @@ beneficiaries:
         label: 'Enti per il diritto allo studio, agenzie, consorzi'
     description: Facilitare l’implementazione dello “Sportello Digitale Unico” (Single Digital Gateway), ovvero supportare l’attuazione del regolamento europeo che ha l’obiettivo di uniformare l’accesso ai servizi digitali in tutto i Paesi membri dell'UE.
     stalls: '230 enti'
+    solutionType: '/soluzione-progetti'
     accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
     moreInfoLabel: 'Leggi di più su Italia Domani'
@@ -175,6 +179,7 @@ beneficiaries:
       <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">risparmio di risorse, automatizzando e riusando soluzioni gi&agrave; collaudate, chiavi in mano.</span></li>
       </ul>
     stalls: '16,500 enti'
+    solutionType: '/soluzione-standard'
     accessSectionId: soluzioni-standard
     accessLabel: Soluzioni standard
     moreInfoLabel: 'Leggi di più su Italia Domani'
@@ -203,6 +208,7 @@ beneficiaries:
       <li aria-level="1"><span>implementazione di tecnologie assistive necessarie alle postazioni di lavoro dei lavoratori con disabilit&agrave;.</span><span></span></li>
       </ul>
     stalls: '55 enti'
+    solutionType: '/soluzione-progetti'
     accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
     moreInfoLabel: 'Leggi di più su Italia Domani'
@@ -239,6 +245,7 @@ beneficiaries:
       <p><span style="font-weight: 400;">pagoPA consente alle Pubbliche Amministrazioni di gestire gli incassi in modo centralizzato ed efficiente, offrendo sistemi automatici di rendicontazione e riconciliazione con un significativo risparmio in termini di risorse, tempi e costi e assicurando un servizio migliore ai cittadini.</span></p>
       <p><span style="font-weight: 400;">IO permette alle diverse PA, locali o nazionali, di raccogliere tutti i servizi, le comunicazioni e i relativi documenti in un unico luogo e di interfacciarsi in modo semplice, rapido e sicuro con i cittadini.</span></p>
     stalls: '17,500 enti'
+    solutionType: '/soluzione-standard'
     accessSectionId: soluzioni-standard
     accessLabel: Soluzioni Standard
     moreInfoLabel: 'Leggi di più su Italia Domani'
@@ -279,6 +286,7 @@ beneficiaries:
       <p><span style="font-weight: 400;">Le soluzioni di identit&agrave; digitale SPID e CIE consentono alle amministrazioni di abbandonare i diversi sistemi di autenticazione gestiti localmente, permettendo di risparmiare risorse (in termini di lavoro e costo necessari per il rilascio e la manutenzione delle credenziali) ed offrire un accesso sicuro e veloce ed omogeneo ai servizi online su tutto il territorio nazionale.</span></p>
       <p><span style="font-weight: 400;">Con ANPR le amministrazioni potranno dialogare in maniera efficiente tra di loro, avendo&nbsp; a disposizione un punto di riferimento unico di dati e informazioni anagrafiche, dal quale poter reperire informazioni certe e sicure per poter erogare servizi integrati e pi&ugrave; efficienti per i cittadini. Per la Pubblica Amministrazione significa guadagnare in efficienza superando le precedenti frammentazioni, ottimizzare le risorse, semplificare e automatizzare le operazioni relative ai servizi anagrafici, consultare o estrarre dati, monitorare le attivit&agrave; ed effettuare analisi e statistiche</span></p>
     stalls: '10,300 enti'
+    solutionType: '/soluzione-standard'
     accessSectionId: soluzioni-standard
     accessLabel: Soluzioni Standard
     moreInfoLabel: 'Leggi di più su Italia Domani'
@@ -298,6 +306,7 @@ beneficiaries:
       <p><strong>Vantaggi per la PA</strong><strong></strong></p>
       <p><span style="font-weight: 400;">Accedere a un sistema di notifica digitale permetter&agrave; alla PA di abbattere le spese vive legate all&rsquo;attuale processo di notifica (stampa cartacea e spedizione degli atti), anche in caso di inadempimento da parte del cittadino. La certezza delle notifiche, inoltre, consente di ridurre una cospicua parte del contenzioso e i relativi costi di gestione. </span></p>
     stalls: '7,900 enti'
+    solutionType: '/soluzione-standard'
     accessSectionId: soluzioni-standard
     accessLabel: Soluzioni standard
     moreInfoLabel: 'Leggi di più su Italia Domani'
@@ -317,6 +326,7 @@ beneficiaries:
       <p><span style="font-weight: 400;">L'utilizzo di soluzioni di Mobility as a Service (MaaS) miglioreranno i sistemi di trasporto, ridurranno il traffico urbano, gli incidenti stradali e, grazie ad un minore utilizzo dell&rsquo;auto privata, vi sar&agrave; un&rsquo;importante diminuzione dei consumi energetici, delle emissioni e dell&rsquo;inquinamento.&nbsp;</span></p>
       <p><span style="font-weight: 400;">La PA potr&agrave; quindi raggiungere obiettivi di sostenibilit&agrave; economica, ambientale e sociale per l&rsquo;intera collettivit&agrave;.</span></p>
     stalls: '10 enti'
+    solutionType: '/soluzione-progetti'
     accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
     moreInfoLabel: 'Leggi di più su Italia Domani'
@@ -338,6 +348,7 @@ beneficiaries:
       <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">abilitare una gestione e un monitoraggio efficienti del rischio informatico.</span></li>
       </ul>
     stalls: '6 enti'
+    solutionType: '/soluzione-progetti'
     accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
     moreInfoLabel: 'Leggi di più su Italia Domani'
@@ -351,6 +362,7 @@ beneficiaries:
         label: PA Centrali
     description: Digitalizzare le grandi amministrazioni centrali, a partire dai processi fondamentali per semplificare l’erogazione di servizi al cittadino, aumentando allo stesso tempo l'efficienza dell’apparato pubblico.
     stalls: '7 enti'
+    solutionType: '/soluzione-progetti'
     accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
     moreInfoLabel: 'Leggi di più su Italia Domani'
@@ -368,6 +380,7 @@ beneficiaries:
       <p><strong>Vantaggi per la PA</strong></p>
       <p><span style="font-weight: 400;">Una cittadinanza in grado di utilizzare consapevolmente le possibilit&agrave; offerte dalle tecnologie digitali consente all&rsquo;amministrazione di pubblica di erogare servizi anche in modalit&agrave; digitale, migliorando quindi la qualit&agrave; dell&rsquo;offerta e il rapporto tra cittadini e istituzioni.</span></p>
     stalls: '100 enti'
+    solutionType: '/soluzione-progetti'
     accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
     moreInfoLabel: 'Leggi di più su Italia Domani'
@@ -387,6 +400,7 @@ beneficiaries:
       <p><strong>Vantaggi per la PA</strong><strong></strong></p>
       <p><span style="font-weight: 400;">L&rsquo;iniziativa consentir&agrave; di sviluppare e potenziare le capacit&agrave; digitali anche in un&rsquo;amministrazione pubblica, incluse le scuole, in modo da abilitare l&rsquo;evoluzione del servizio seguendo le esigenze della cittadinanza e offrire un servizio di assistenza rivolto anche alle categorie svantaggiate.</span></p>
     stalls: '21 enti'
+    solutionType: '/soluzione-progetti'
     accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
     moreInfoLabel: 'Leggi di più su Italia Domani'
