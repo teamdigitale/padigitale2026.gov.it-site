@@ -36,7 +36,7 @@ const Page = ({ location }) => {
       dispatch({ type: 'SET:ACTIVE_HEADER' });
     };
   }, [dispatch]);
-  return <OpportunityPage filter={filter} hash={currentHash} />;
+  return <OpportunityPage filter={filter} />;
 };
 
 Page.propTypes = {
