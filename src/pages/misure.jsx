@@ -4,24 +4,17 @@ import { OpportunityPage } from '../layouts/OpportunityPage';
 import { GlobalStateContext } from '../context/globalContext';
 
 const Page = ({ location }) => {
-  const [filter, setFilter] = useState(null);
+  const [{ sectionId }] = useContext(GlobalStateContext);
+  const [filter] = useState(null);
   const [, dispatch] = useContext(GlobalStateContext);
+  const currentHash = location.hash?.split('#')[1];
 
-  useEffect(() => {
-    const currentHash = location.hash?.split('#')[1];
-    if (currentHash) {
-      const filter = {
-        label: '',
-        value: '',
-      };
-      filter.label = currentHash.charAt(0).toUpperCase() + currentHash.slice(1);
-      filter.value = currentHash;
-      setFilter(filter);
-    }
-    if (location.state !== null) {
-      setFilter(location.state.filter);
-    }
-  }, [location.state, location.hash]);
+  if (!sectionId) {
+    dispatch({
+      type: 'SET:SECTION_OPPORTUNITY_ID',
+      payload: { sectionId: currentHash },
+    });
+  }
 
   useEffect(() => {
     dispatch({ type: 'SET:ACTIVE_HEADER', payload: { activeItem: 'misure' } });
@@ -29,7 +22,7 @@ const Page = ({ location }) => {
       dispatch({ type: 'SET:ACTIVE_HEADER' });
     };
   }, [dispatch]);
-  return <OpportunityPage filter={filter} />;
+  return <OpportunityPage filter={filter} hash={currentHash} />;
 };
 
 Page.propTypes = {
