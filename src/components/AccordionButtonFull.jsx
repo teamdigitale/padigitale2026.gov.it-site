@@ -263,6 +263,7 @@ export const AccordionButtonFull = (props) => {
     tags,
     description,
     stalls,
+    solutionType,
     accessLabel,
     accessSectionId,
     moreInfoLabel,
@@ -322,7 +323,7 @@ export const AccordionButtonFull = (props) => {
                         type: 'SET:HOW_SECTION_ID',
                         payload: { howId: accessSectionId },
                       });
-                      navigate('/come-funziona');
+                      navigate(solutionType);
                     }}
                   >
                     <span className="sr-only">Vai alla sezione </span>
