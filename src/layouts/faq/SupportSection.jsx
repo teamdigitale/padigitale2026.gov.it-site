@@ -146,7 +146,7 @@ export const SupportSection = (props) => {
                         </Card>
                       </div>
                     ) : (
-                      <Link to="/faq" className={classes.cleanLink}>
+                      <Link to="/supporto/faq" className={classes.cleanLink}>
                         <Card teaser noWrapper className={classes.cardWrapper}>
                           <CardBody>
                             <CardTitle tag="h5" className={classes.cardTitle}>
