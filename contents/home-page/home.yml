@@ -84,7 +84,7 @@ opportunity:
       id: centri-facili
 heroCarouselNews:
   - id: 1
-    category: Avvis pubblico
+    category: Avviso pubblico
     title: "Milano, Napoli e Roma città capofila per il progetto Mobility as a Service for Italy"
     description: Pubblicata la graduatoria dell’avviso pubblico. Nei prossimi mesi un nuovo bando per ampliare l’iniziativa
     source: 'Fonte: innovazione.gov.it'
