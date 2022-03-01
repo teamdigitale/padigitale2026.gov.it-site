@@ -39,41 +39,31 @@ contributions:
 heroCarouselNewsTitle: Notizie e aggiornamenti
 noticesCarouselTitle: Avvisi pubblici in primo piano
 noticesCarouselArchive:
-  totalSize: 2
-  done: true
-  records:
-  - attributes:
-      type: FinestraTemporale__c
-      url: "/services/data/v53.0/sobjects/FinestraTemporale__c/a0K5t000000ms2AEAQ"
-    Id: a0K5t000000ms2AEAQ
-    DataInizio__c: '2022-01-29'
-    DataFine__c: '2022-01-31'
-    Bando__r:
-      attributes:
-        type: outfunds__Funding_Program__c
-        url: "/services/data/v53.0/sobjects/outfunds__Funding_Program__c/a015t0000028YHiAAM"
-      Name: Montaggio telecamere
-      outfunds__Parent_Funding_Program__r:
-        attributes:
-          type: outfunds__Funding_Program__c
-          url: "/services/data/v53.0/sobjects/outfunds__Funding_Program__c/a015t0000028Wx4AAE"
-        Name: 1.2 Abilitazione e facilitazione migrazione al Cloud
-  - attributes:
-      type: FinestraTemporale__c
-      url: "/services/data/v53.0/sobjects/FinestraTemporale__c/a0K5t000000msPSEAY"
-    Id: a0K5t000000msPSEAY
-    DataInizio__c: '2022-01-31'
-    DataFine__c: '2022-01-31'
-    Bando__r:
-      attributes:
-        type: outfunds__Funding_Program__c
-        url: "/services/data/v53.0/sobjects/outfunds__Funding_Program__c/a015t0000028hFFAAY"
-      Name: BackOffice 1
-      outfunds__Parent_Funding_Program__r:
-        attributes:
-          type: outfunds__Funding_Program__c
-          url: "/services/data/v53.0/sobjects/outfunds__Funding_Program__c/a015t0000028Wx4AAE"
-        Name: 1.2 Abilitazione e facilitazione migrazione al Cloud
+- dataFine: '2022-02-28'
+  titolo: Comuni capoluogo di Città metropolitane hanno presentato progetti
+  codiceBando: a015t0000029a6uAAA
+  dataInizio: '2022-02-07'
+  nomeDellaMisura: 1.2 Abilitazione e facilitazione migrazione al Cloud
+- dataFine: '2022-02-28'
+  titolo: Test report
+  codiceBando: a017Y00000QN2NjQAL
+  dataInizio: '2022-02-22'
+  nomeDellaMisura: 1.4.4 Adozione identità digitale
+- dataFine: '2022-02-28'
+  titolo: 1.4.3 Adozione PagoPA e AppIO
+  codiceBando: a015t0000028X0CAAU
+  dataInizio: '2022-02-23'
+  nomeDellaMisura: Test report
+- dataFine: '2022-02-28'
+  Titolo: SDM
+  codiceBando: a017Y00000QN8zlQAD
+  dataInizio: '2022-02-19'
+  nomeDellaMisura: 1.2 Abilitazione e facilitazione migrazione al Cloud
+- dataFine: '2022-03-08'
+  titolo: Avviso 3
+  codiceBando: a015t0000029bipAAA
+  dataInizio: '2022-02-08'
+  nomeDellaMisura: 1.2 Abilitazione e facilitazione migrazione al Cloud
 opportunity: 
   title: Le misure
   cards: 

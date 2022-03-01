@@ -53,7 +53,7 @@ export const IndexPage = () => {
   const classes = useStyles();
   const [, dispatch] = useContext(GlobalStateContext);
 
-  useEffect(() => {
+  /* useEffect(() => {
     announce('Pagina caricata ' + name);
     (async () => {
       try {
@@ -78,7 +78,7 @@ export const IndexPage = () => {
         console.log(error);
       }
     })();
-  }, []);
+  }, []); */
   return (
     <>
       <SEO title={seoTitle} description={seoDescription} />

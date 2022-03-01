@@ -113,19 +113,19 @@ const useStyles = createUseStyles({
 
 export const NoticesCarousel = ({ content, title }) => {
   const classes = useStyles();
-  const records = content.records;
+  const records = content;
   const slides = records.map((element) => (
     <>
-      <Card key={element.id} className={classes.heroCards} spacing noWrapper>
-        <ExternalLink >
+      <Card key={element.codiceBando} className={classes.heroCards} spacing noWrapper>
+        <ExternalLink>
           <CardBody>
             <span className={classes.dueDate}>
-              CHIUSURA CANDIDATURA <span className={classes.dueDateDigit}>{element.DataFine__c}</span>
+              CHIUSURA CANDIDATURA <span className={classes.dueDateDigit}>{element.dataFine}</span>
             </span>
             <CardTitle tag="h4" className={classes.noticeLabel}>
-              {element.Bando__r.outfunds__Parent_Funding_Program__r.Name}
+              {element.titolo}
             </CardTitle>
-            <p className={classes.noticeInfo}>{element.Bando__r.Name}</p>
+            <p className={classes.noticeInfo}>{element.nomeDellaMisura}</p>
           </CardBody>
         </ExternalLink>
       </Card>
