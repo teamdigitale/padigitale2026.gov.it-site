@@ -53,6 +53,7 @@ export const IndexPage = () => {
   const classes = useStyles();
   const [, dispatch] = useContext(GlobalStateContext);
 
+  // API rest to get SF TOKEN
   /* useEffect(() => {
     announce('Pagina caricata ' + name);
     (async () => {
