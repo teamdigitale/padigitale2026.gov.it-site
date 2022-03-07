@@ -149,7 +149,7 @@ export const ProjectsCards = (item) => {
                 <img src="/assets/projects-solution.svg" alt=""></img>
               </div>
               <div className={classes.cardFooter}>
-                <Link to="/come-funziona/soluzione-progetti" className="btn text-uppercase btn-primary">
+                <Link to="/come-funziona/presentazione-progetti" className="btn text-uppercase btn-primary">
                   {projectsCardsItem.buttonLabelRight}
                 </Link>
               </div>
