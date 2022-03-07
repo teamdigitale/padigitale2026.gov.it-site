@@ -1,6 +1,8 @@
 # Informativa privacy
 
 [padigitale2026.gov.it](https://padigitale2026.gov.it/){class="text-decoration-none font-weight-semibold"}
+è gestito dalla Presidenza del Consiglio dei Ministri - Dipartimento per la Trasformazione Digitale.
+
 A norma degli articoli 13 e 14 del Regolamento UE 2016/679 (GDPR) vogliamo
 fornirti un'informativa semplice e chiara su come trattiamo i dati personali che
 ci fornisci direttamente o di cui comunque potremo venire in possesso tramite
