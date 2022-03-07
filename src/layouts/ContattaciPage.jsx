@@ -145,7 +145,7 @@ export const ContattaciPage = () => {
         if (mutation.type === 'childList') {
           let value = representSelectOptions.querySelector('div[class*="singleValue"]');
           value ? (value = value.innerHTML) : (value = '');
-          let valueSelected = selectAmbito.find((valueObj) => {
+          let valueSelected = selectArgument.find((valueObj) => {
             if (value === valueObj.label) {
               return valueObj;
             }
@@ -230,9 +230,15 @@ export const ContattaciPage = () => {
 
     console.log(data);
 
+    const formData = new FormData();
+    Object.keys(data).forEach((key) => {
+      const value = data[key];
+      formData.append(key, value);
+    });
+
     fetch(`https://padigitale2026--dev3.my.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8`, {
       method: 'POST',
-      params: data,
+      body: formData,
       headers: {
         'Access-Control-Allow-Origin': '*',
       },
@@ -363,11 +369,13 @@ export const ContattaciPage = () => {
   };
 
   const {
-    selectAmbito,
+    selectArgument,
+    selectMeasure,
     requiredLabel,
     emailValidationLabel,
     emailLabel,
-    ambitoLabel,
+    argumentLabel,
+    measureLabel,
     selectPlaceholder,
     directContactLabel,
     directContactInfo,
@@ -383,19 +391,19 @@ export const ContattaciPage = () => {
       <div className="container">
         <Row>
           <Col xs="12">
-            <form onSubmit={handleSubmit(onSubmit, onError)} id="message-form" aria-describedby="mandatory-label">
-              {/* <form
-              action="https://padigitale2026--dev3.my.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8"
+            {/* <form onSubmit={handleSubmit(onSubmit, onError)} id="message-form" aria-describedby="mandatory-label"> */}
+            <form
+              action="https://padigitale2026--dev1.my.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8"
               method="POST"
               id="message-form"
-            > */}
+            >
               <input
                 type="hidden"
                 name="captcha_settings"
                 value='{"keyname":"TestDev3","fallback":"true","orgId":"00D7Y0000001SdJ","ts":""}'
               />
-              <input type="hidden" name="orgid" value="00D7Y0000001SdJ" />
-              <input type="hidden" name="retURL" value="http://www.google.com" />
+              <input type="hidden" name="orgid" value="00D3N0000004K3l" />
+              <input type="hidden" name="retURL" value="http://" />
               <fieldset>
                 <legend>
                   <Row>
@@ -418,24 +426,21 @@ export const ContattaciPage = () => {
                   <Col xs={12}>
                     <div>
                       <div className="form-group">
-                        <textarea
-                          onFocus={textareaFocusHandler}
-                          onBlur={textareaFocusOutHandler}
-                          onInput={textareaInputHandler}
-                          rows="3"
-                          maxLength={textareaMaxLength}
+                        <Input
+                          /* invalid={errors.address}
+                        aria-invalid={errors.address && 'true'} */
+                          aria-describedby="mandatory-label"
+                          aria-labelledby={errors.address && 'error-address'}
+                          type="text"
+                          label={nameLabel}
                           id="00N7Y000008tqdH"
                           name="00N7Y000008tqdH"
-                          wrap="soft"
-                          data-type="name"
-                          required="true"
-                          onInvalid={customInvalid}
-                        ></textarea>
-                        <label className={textareaNameState === 'active' ? 'active' : ''} htmlFor="name">
-                          {nameLabel}
-                        </label>
-                        <span className={classes.maxLengthLabel}>
-                          Massimo <span className="max-length-number">{textareaMaxLength}</span> caratteri
+                          maxlength="255"
+                          size="20"
+                          aria-required="true"
+                        />
+                        <span className={classes.errorLabel} id="error-address3">
+                          {errors.address && errors.address.message}
                         </span>
                       </div>
                     </div>
@@ -445,8 +450,8 @@ export const ContattaciPage = () => {
                   <Col xs={12}>
                     <div className="form-group">
                       <Input
-                        invalid={errors.address}
-                        aria-invalid={errors.address && 'true'}
+                        /* invalid={errors.address}
+                        aria-invalid={errors.address && 'true'} */
                         label={emailLabel}
                         aria-describedby="mandatory-label"
                         aria-labelledby={errors.address && 'error-address'}
@@ -465,12 +470,29 @@ export const ContattaciPage = () => {
                 </Row>
                 <Row className="mt-5">
                   <Col xs={12} lg={6}>
-                    <span className={classes.selectLabel}>{ambitoLabel}</span>
+                    <span className={classes.selectLabel}>{argumentLabel}</span>
                     <Select
-                      id="00N7Y000008tqdC"
-                      name="00N7Y000008tqdC"
-                      title="Ambito"
-                      options={selectAmbito}
+                      id="00N3N00000GCzFR"
+                      name="00N3N00000GCzFR"
+                      title="Argomento"
+                      options={selectArgument}
+                      placeholder={selectPlaceholder}
+                      aria-label={selectPlaceholder}
+                      aria-describedby="mandatory-label"
+                      aria-invalid={errors.representative && 'true'}
+                      aria-labelledby={errors.representative && 'error-represent'}
+                      className={`select ${errors.representative && ' is-invalid'}`}
+                    />
+                  </Col>
+                </Row>
+                <Row className="mt-5">
+                  <Col xs={12} lg={6}>
+                    <span className={classes.selectLabel}>{measureLabel}</span>
+                    <Select
+                      id="00N3N00000GCzFW"
+                      name="00N3N00000GCzFW"
+                      title="Misura"
+                      options={selectMeasure}
                       placeholder={selectPlaceholder}
                       aria-label={selectPlaceholder}
                       aria-describedby="mandatory-label"
@@ -484,22 +506,20 @@ export const ContattaciPage = () => {
                   <Col xs={12}>
                     <div>
                       <div className="form-group">
-                        <textarea
-                          onFocus={textareaFocusHandler}
-                          onBlur={textareaFocusOutHandler}
-                          onInput={textareaInputHandler}
-                          rows="3"
-                          maxLength={textareaMaxLength}
+                        <Input
+                          /* invalid={errors.address}
+                        aria-invalid={errors.address && 'true'} */
+                          label={objectLabel}
+                          aria-describedby="mandatory-label"
+                          aria-labelledby={errors.address && 'error-address'}
                           id="00N7Y000008tqdR"
                           name="00N7Y000008tqdR"
+                          type="text"
                           wrap="soft"
-                          data-type="object"
-                        ></textarea>
-                        <label className={textareaObjectState === 'active' ? 'active' : ''} htmlFor="object">
-                          {objectLabel}
-                        </label>
-                        <span className={classes.maxLengthLabel}>
-                          Massimo <span className="max-length-number">{textareaMaxLength}</span> caratteri
+                          aria-required="true"
+                        />
+                        <span className={classes.errorLabel} id="error-address4">
+                          {errors.address && errors.address.message}
                         </span>
                       </div>
                     </div>
@@ -553,22 +573,15 @@ export const ContattaciPage = () => {
                 </Row>
               </fieldset>
 
-              <button type="submit" name="submit" form="message-form" className="btn btn-primary">
+              {/* <button type="submit" name="submit" form="message-form" className="btn btn-primary">
+                INVIA
+              </button> */}
+              <button type="submit" name="submit">
                 INVIA
               </button>
             </form>
           </Col>
         </Row>
-        {/* <Row>
-          <Col xs="12">
-            <div className="d-flex">
-              <Button color="primary" type="submit" form="message-form">
-                {sendButtonLabel}
-              </Button>
-              <img className={classes.spinner} src="/assets/spinner.gif"></img>
-            </div>
-          </Col>
-        </Row> */}
       </div>
     </>
   );

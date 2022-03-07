@@ -399,17 +399,34 @@ modal:
       label: Fornitore IT
     - value: other
       label: Altro
-  selectAmbito:
+  selectArgument:
     - value: ""
-      label: --None--
-    - value: Amministrativo
-      label: Amministrativo
-    - value: Piattaforma
-      label: Malfunzionamenti Sistema
-    - value: Procedurale
-      label: Procedurale
-    - value: Tecnico
-      label: Tecnico
+      label: --Nessuno--
+    - value: Accesso portale
+      label: Accesso portale
+    - value: Iscrizione newsletter
+      label: Iscrizione newsletter
+    - value: Misure
+      label: Misure
+    - value: Avvisi/bandi
+      label: Avvisi/bandi
+    - value: Enti beneficiari
+      label: Enti beneficiari
+    - value: Spese ammissibili
+      label: Spese ammissibili
+    - value: Generale
+      label: Generale
+  selectMeasure:
+    - value: ""
+      label: --Nessuno--
+    - value: 1.2 Abilitazione e facilitazione migrazione al Cloud
+      label: 1.2 Abilitazione e facilitazione migrazione al Cloud
+    - value: 1.4.1 Esperienza dei servizi pubblici
+      label: 1.4.1 Esperienza dei servizi pubblici
+    - value: 1.4.4 Adozione identità digitale
+      label: 1.4.4 Adozione identità digitale
+    - value: 1.4.5 Digitalizzazione degli avvisi pubblici
+      label: 1.4.5 Digitalizzazione degli avvisi pubblici
   selectInQuanto:
     - value: dirigente-administration
       label: Dirigente dell’amministrazione
@@ -440,7 +457,8 @@ modal:
   requiredLabel: Questo campo è richiesto
   emailLabel: EMAIL*
   emailValidationLabel: Per favore inserisci un'indirizzo email valido.
-  ambitoLabel: Ambito*
+  argumentLabel: Argomento*
+  measureLabel: Misura*
   selectPlaceholder: Scegli una voce dall’elenco
   enteValidationLabel: Per favore inserisci una denominazione ente valida.
   enteTypeLabel: TIPO DI ENTE/STRUTTURA*
