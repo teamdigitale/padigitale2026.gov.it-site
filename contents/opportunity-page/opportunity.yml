@@ -399,6 +399,17 @@ modal:
       label: Fornitore IT
     - value: other
       label: Altro
+  selectAmbito:
+    - value: ""
+      label: --None--
+    - value: Amministrativo
+      label: Amministrativo
+    - value: Piattaforma
+      label: Malfunzionamenti Sistema
+    - value: Procedurale
+      label: Procedurale
+    - value: Tecnico
+      label: Tecnico
   selectInQuanto:
     - value: dirigente-administration
       label: Dirigente dell’amministrazione
@@ -429,7 +440,7 @@ modal:
   requiredLabel: Questo campo è richiesto
   emailLabel: EMAIL*
   emailValidationLabel: Per favore inserisci un'indirizzo email valido.
-  representLabel: RAPPRESENTO*
+  ambitoLabel: Ambito*
   selectPlaceholder: Scegli una voce dall’elenco
   enteValidationLabel: Per favore inserisci una denominazione ente valida.
   enteTypeLabel: TIPO DI ENTE/STRUTTURA*
@@ -438,9 +449,14 @@ modal:
   directContactLabel: CONTATTO DIRETTO
   directContactInfo: Un <strong>Team dedicato</strong> è a tua disposizione per <strong>ricevere<br>chiarimenti</strong> sugli investimenti o approfondire alcuni temi
   addMessageLabel: Voglio aggiungere un messaggio
+  nameLabel: Nome richiedente:*
+  objectLabel: Oggetto:*
   messageSelectLabel: ARGOMENTO MESSAGGIO
-  messageLabel: TESTO MESSAGGIO
+  descriptionLabel: Descrizione:*
+  telLabel: Contatto telefonico:*
   radioGroupLabel: DICHIARO
+  representLabel: RAPPRESENTO*
+  messageLabel: TESTO MESSAGGIO
   comunicationRadio: Acconsento a essere contattato per comunicazioni specifiche*
   privacyRadio: Ho letto e compreso
   privacyRadioLinkLabel: l’informativa privacy
