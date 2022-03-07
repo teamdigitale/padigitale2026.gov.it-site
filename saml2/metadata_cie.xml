@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?><md:EntityDescriptor entityID="https://padigitale2026--collaudo.my.salesforce.com" validUntil="2032-03-04T15:46:27.391Z" ID="_53d699389c213cfff09e924e89bfc390c7041439" xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:cie="https://www.cartaidentita.interno.gov.it/saml-extensions">
+   <ds:Signature><ds:SignedInfo><ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256" /><ds:Reference URI="#_53d699389c213cfff09e924e89bfc390c7041439"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" /><ds:DigestValue>buqXTRqFV0iMUyIu8YhDfqYvsEGF1Je9G8QraSUd/dc=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue>iYI+OJL3wJnoCD39A4rYDGCblOGWspy7pUFF2vW4Ah1FBf8D8JavhOVoleCT/bCmHcdpnouKimy9
++dlKJBMgWgChcwRL7ov2FqE5UQnLTrwR6LVkx6CJ3aG4vUUjU5c+3XTxit5odold0un7FlNB8wyH
+KZFXO5DBNXgisxE/yGjhp9gbBQR55iN/MJfyULDAysRf64irk0W4BwDvxPFIVzQAaX1LajXegOKs
+/3aOHYDDZP/hTOxAuSjrQZg04swG1TXOwywgH/LRj4jqYKkjiDvqLMwh8jxE0QcfQiHttrZ2Q537
+I3RNUjX11iE77YXnPbinfC3cGpZuL7iQ7L9BNw==</ds:SignatureValue><ds:KeyInfo><ds:KeyValue><ds:RSAKeyValue><ds:Modulus>t5yyPD0I5UsE7/PhkYfMAqe1odBIXUfa5OU072HxrW6BeAeJlhikfXW8lgDfsQCweFS4vn/4W0qF
+3R6QmJF1SxJK9UzLX2+ft1xGFf7cagUxeL0GBTcI5yBhjmFPUec9urYRRjq9kWBfnIYrncj2So/+
+wNrdmnQiIPq8M9+ygFYAOL2yCVRYwZ3pZNwmv9LjUMwlMycKxx3f24cnj3biMFvLM2SADt50VpWD
+IsFQN5FwZfgAWyMJVOG+j3zNemiNYQ6kJVn/cCx+WtVRtollNva2JbLm8Po4Kp8PZW3/+W+e8Fjf
+ZCyydUvNidcU0IKBJQmLB7MoH4/Lx+k97j9nSQ==</ds:Modulus><ds:Exponent>AQAB</ds:Exponent></ds:RSAKeyValue></ds:KeyValue><ds:X509Data><ds:X509Certificate>MIIErDCCA5SgAwIBAgIOAX8hIWCDAAAAAHhthEIwDQYJKoZIhvcNAQELBQAwgZAxKDAmBgNVBAMM
+H1NlbGZTaWduZWRDZXJ0XzEwSmFuMjAyMl8xNTI5MjQxGDAWBgNVBAsMDzAwRDNOMDAwMDAwOGxT
+ejEXMBUGA1UECgwOU2FsZXNmb3JjZS5jb20xFjAUBgNVBAcMDVNhbiBGcmFuY2lzY28xCzAJBgNV
+BAgMAkNBMQwwCgYDVQQGEwNVU0EwHhcNMjIwMjIyMTExMTQ5WhcNMjMwMjIyMDAwMDAwWjCBkDEo
+MCYGA1UEAwwfU2VsZlNpZ25lZENlcnRfMTBKYW4yMDIyXzE1MjkyNDEYMBYGA1UECwwPMDBEM04w
+MDAwMDA4bFN6MRcwFQYDVQQKDA5TYWxlc2ZvcmNlLmNvbTEWMBQGA1UEBwwNU2FuIEZyYW5jaXNj
+bzELMAkGA1UECAwCQ0ExDDAKBgNVBAYTA1VTQTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoC
+ggEBALecsjw9COVLBO/z4ZGHzAKntaHQSF1H2uTlNO9h8a1ugXgHiZYYpH11vJYA37EAsHhUuL5/
++FtKhd0ekJiRdUsSSvVMy19vn7dcRhX+3GoFMXi9BgU3COcgYY5hT1HnPbq2EUY6vZFgX5yGK53I
+9kqP/sDa3Zp0IiD6vDPfsoBWADi9sglUWMGd6WTcJr/S41DMJTMnCscd39uHJ4924jBbyzNkgA7e
+dFaVgyLBUDeRcGX4AFsjCVThvo98zXpojWEOpCVZ/3AsflrVUbaJZTb2tiWy5vD6OCqfD2Vt//lv
+nvBY32QssnVLzYnXFNCCgSUJiwezKB+Py8fpPe4/Z0kCAwEAAaOCAQAwgf0wHQYDVR0OBBYEFG6H
+MLaJntU3gV8F3Vw0PIjsEzImMA8GA1UdEwEB/wQFMAMBAf8wgcoGA1UdIwSBwjCBv4AUbocwtome
+1TeBXwXdXDQ8iOwTMiahgZakgZMwgZAxKDAmBgNVBAMMH1NlbGZTaWduZWRDZXJ0XzEwSmFuMjAy
+Ml8xNTI5MjQxGDAWBgNVBAsMDzAwRDNOMDAwMDAwOGxTejEXMBUGA1UECgwOU2FsZXNmb3JjZS5j
+b20xFjAUBgNVBAcMDVNhbiBGcmFuY2lzY28xCzAJBgNVBAgMAkNBMQwwCgYDVQQGEwNVU0GCDgF/
+ISFggwAAAAB4bYRCMA0GCSqGSIb3DQEBCwUAA4IBAQBnKcU+NXE/CWkXPE55m9aZcyiyOLbcol3D
+JM/0KazNxzO/eKNikogHc4l8Stqm5k1seYqmsS7RKxIf+tLhOV+OHN7EzGYOD15U1TVdAyssTrX9
+yIaTyU6+ap49bQD1aztftF0dP2mmW+rJ5VmWNG8sJkgRMD1xMChJIbKjcDtAEFAUkQURlYDxJC+J
+Y5d27HvonKVEp7sXjnv20Ft7XpmSrMLE/6ZyNfP/apAuOAUIxDReYUjfYR4aBlcc37MFvL57JYzP
+MLpB0G9eZE6XhkfenxguHhdS/3W6txEA/23HRAp4XR7pKMAaAiujwd7fDG+62wGORWqxabC24rVr
+tNhK</ds:X509Certificate></ds:X509Data></ds:KeyInfo></ds:Signature><md:SPSSODescriptor AuthnRequestsSigned="true" WantAssertionsSigned="true" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+      <md:KeyDescriptor use="signing">
+         <ds:KeyInfo>
+            <ds:X509Data>
+               <ds:X509Certificate>MIIErDCCA5SgAwIBAgIOAX8hIWCDAAAAAHhthEIwDQYJKoZIhvcNAQELBQAwgZAx
+KDAmBgNVBAMMH1NlbGZTaWduZWRDZXJ0XzEwSmFuMjAyMl8xNTI5MjQxGDAWBgNV
+BAsMDzAwRDNOMDAwMDAwOGxTejEXMBUGA1UECgwOU2FsZXNmb3JjZS5jb20xFjAU
+BgNVBAcMDVNhbiBGcmFuY2lzY28xCzAJBgNVBAgMAkNBMQwwCgYDVQQGEwNVU0Ew
+HhcNMjIwMjIyMTExMTQ5WhcNMjMwMjIyMDAwMDAwWjCBkDEoMCYGA1UEAwwfU2Vs
+ZlNpZ25lZENlcnRfMTBKYW4yMDIyXzE1MjkyNDEYMBYGA1UECwwPMDBEM04wMDAw
+MDA4bFN6MRcwFQYDVQQKDA5TYWxlc2ZvcmNlLmNvbTEWMBQGA1UEBwwNU2FuIEZy
+YW5jaXNjbzELMAkGA1UECAwCQ0ExDDAKBgNVBAYTA1VTQTCCASIwDQYJKoZIhvcN
+AQEBBQADggEPADCCAQoCggEBALecsjw9COVLBO/z4ZGHzAKntaHQSF1H2uTlNO9h
+8a1ugXgHiZYYpH11vJYA37EAsHhUuL5/+FtKhd0ekJiRdUsSSvVMy19vn7dcRhX+
+3GoFMXi9BgU3COcgYY5hT1HnPbq2EUY6vZFgX5yGK53I9kqP/sDa3Zp0IiD6vDPf
+soBWADi9sglUWMGd6WTcJr/S41DMJTMnCscd39uHJ4924jBbyzNkgA7edFaVgyLB
+UDeRcGX4AFsjCVThvo98zXpojWEOpCVZ/3AsflrVUbaJZTb2tiWy5vD6OCqfD2Vt
+//lvnvBY32QssnVLzYnXFNCCgSUJiwezKB+Py8fpPe4/Z0kCAwEAAaOCAQAwgf0w
+HQYDVR0OBBYEFG6HMLaJntU3gV8F3Vw0PIjsEzImMA8GA1UdEwEB/wQFMAMBAf8w
+gcoGA1UdIwSBwjCBv4AUbocwtome1TeBXwXdXDQ8iOwTMiahgZakgZMwgZAxKDAm
+BgNVBAMMH1NlbGZTaWduZWRDZXJ0XzEwSmFuMjAyMl8xNTI5MjQxGDAWBgNVBAsM
+DzAwRDNOMDAwMDAwOGxTejEXMBUGA1UECgwOU2FsZXNmb3JjZS5jb20xFjAUBgNV
+BAcMDVNhbiBGcmFuY2lzY28xCzAJBgNVBAgMAkNBMQwwCgYDVQQGEwNVU0GCDgF/
+ISFggwAAAAB4bYRCMA0GCSqGSIb3DQEBCwUAA4IBAQBnKcU+NXE/CWkXPE55m9aZ
+cyiyOLbcol3DJM/0KazNxzO/eKNikogHc4l8Stqm5k1seYqmsS7RKxIf+tLhOV+O
+HN7EzGYOD15U1TVdAyssTrX9yIaTyU6+ap49bQD1aztftF0dP2mmW+rJ5VmWNG8s
+JkgRMD1xMChJIbKjcDtAEFAUkQURlYDxJC+JY5d27HvonKVEp7sXjnv20Ft7XpmS
+rMLE/6ZyNfP/apAuOAUIxDReYUjfYR4aBlcc37MFvL57JYzPMLpB0G9eZE6Xhkfe
+nxguHhdS/3W6txEA/23HRAp4XR7pKMAaAiujwd7fDG+62wGORWqxabC24rVrtNhK</ds:X509Certificate>
+            </ds:X509Data>
+         </ds:KeyInfo>
+      </md:KeyDescriptor>
+      <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://padigitale2026--collaudo.my.salesforce.com/services/auth/sp/saml2/logout" />
+      <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://padigitale2026--collaudo.my.salesforce.com/services/auth/sp/saml2/logout" />
+      <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://collaudo-padigitale2026.cs128.force.com/services/auth/sp/saml2/logout" />
+      <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://collaudo-padigitale2026.cs128.force.com/services/auth/sp/saml2/logout" />
+      <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://collaudo-padigitale2026.cs128.force.com/padigitale2026/services/auth/sp/saml2/logout" />
+      <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://collaudo-padigitale2026.cs128.force.com/padigitale2026/services/auth/sp/saml2/logout" />
+      <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+      <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://padigitale2026--collaudo.my.salesforce.com" index="0" isDefault="true" />
+      <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://collaudo-padigitale2026.cs128.force.com/login" index="1" />
+      <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://collaudo-padigitale2026.cs128.force.com/padigitale2026/login" index="2" />
+      <md:AttributeConsumingService index="0" isDefault="true">
+         <md:ServiceName xml:lang="it" xmlns:xml="http://www.w3.org/XML/1998/namespace">MITD</md:ServiceName>
+         <md:RequestedAttribute Name="fiscalNumber" isRequired="true" />
+		 <md:RequestedAttribute Name="name" />
+		 <md:RequestedAttribute Name="familyName" />
+		 <md:RequestedAttribute Name="dateOfBirth" />
+      </md:AttributeConsumingService>
+	  <md:AttributeConsumingService index="1" isDefault="true">
+         <md:ServiceName xml:lang="it" xmlns:xml="http://www.w3.org/XML/1998/namespace">MITD Portal</md:ServiceName>
+         <md:RequestedAttribute Name="fiscalNumber" isRequired="true" />
+		 <md:RequestedAttribute Name="name" />
+		 <md:RequestedAttribute Name="familyName" />
+		 <md:RequestedAttribute Name="dateOfBirth" />
+      </md:AttributeConsumingService>
+	   <md:AttributeConsumingService index="2" isDefault="true">
+         <md:ServiceName xml:lang="it" xmlns:xml="http://www.w3.org/XML/1998/namespace">MITD Portal VFP</md:ServiceName>
+         <md:RequestedAttribute Name="fiscalNumber" isRequired="true" />
+		 <md:RequestedAttribute Name="name" />
+		 <md:RequestedAttribute Name="familyName" />
+		 <md:RequestedAttribute Name="dateOfBirth" />
+      </md:AttributeConsumingService>
+   </md:SPSSODescriptor>
+   <md:Organization>
+    <md:OrganizationName xml:lang="it" xmlns:xml="http://www.w3.org/XML/1998/namespace">Dipartimento per la trasformazione digitale</md:OrganizationName>
+    <md:OrganizationDisplayName xml:lang="it" xmlns:xml="http://www.w3.org/XML/1998/namespace">Dipartimento per la trasformazione digitale</md:OrganizationDisplayName>
+    <md:OrganizationURL xml:lang="it" xmlns:xml="http://www.w3.org/XML/1998/namespace">https://innovazione.gov.it/dipartimento/</md:OrganizationURL>
+  </md:Organization>
+  <md:ContactPerson contactType="administrative">
+    <md:Extensions>
+      <cie:Public />
+          <cie:IPACode>PA:IT-PCM_AA1D3A2</cie:IPACode>
+          <cie:Municipality>H501</cie:Municipality>
+		  <cie:Province>RM</cie:Province>
+	</md:Extensions>
+	<md:Company>Public Administration</md:Company>
+    <md:EmailAddress>itcrowd@teamdigitale.governo.it</md:EmailAddress>
+  </md:ContactPerson>
+</md:EntityDescriptor>
