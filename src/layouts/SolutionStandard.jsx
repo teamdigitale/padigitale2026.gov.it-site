@@ -63,7 +63,7 @@ export const SolutionStandard = () => {
                 <span className="separator"></span>
               </BreadcrumbItem>
               <BreadcrumbItem active className={classes.breadcrumbItemActive}>
-                <a href="/come-funziona/soluzione-standard">Soluzioni standard</a>
+                <a href="/come-funziona/soluzioni-standard">Soluzioni standard</a>
               </BreadcrumbItem>
             </Breadcrumb>
           </Col>
