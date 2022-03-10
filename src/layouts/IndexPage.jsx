@@ -3,7 +3,7 @@ import { createUseStyles } from 'react-jss';
 import { announce } from '@react-aria/live-announcer';
 import {
   name,
-  heroMain,
+  heroMainBanner,
   heroDigital,
   heroPnrr,
   opportunity,
@@ -49,7 +49,6 @@ const useStyles = createUseStyles({
 });
 
 export const IndexPage = () => {
-  console.log(noticesCarouselArchive);
   const classes = useStyles();
   const [, dispatch] = useContext(GlobalStateContext);
 
@@ -90,46 +89,51 @@ export const IndexPage = () => {
       <div className="sr-only">
         <h2>{name}</h2>
       </div>
-      <HeroImageBackgroundFull
-        category={heroMain.category}
-        title={heroMain.title}
-        body={heroMain.body}
-        image="hero-home.png"
-        imageMobile="hero-home-mobile.png"
-        overlap={true}
+      <HeroImage
+        dark={true}
+        mainHero={true}
+        ctaContainer={true}
+        title={heroMainBanner.title}
+        body={heroMainBanner.body}
+        imageUrl="/assets/icona-home-banner.svg"
+        imageAlt=""
+        firstInternal={true}
+        firstButtonHref="/come-funziona"
+        firstButtonLabel={heroMainBanner.firstButtonLabel}
+        firstButtonAriaLabel={heroMainBanner.firstButtonAriaLabel}
+        heroTitleId="home-hero-title"
       />
-      <HomeCarousel content={homeCarousel} />
       <NoticesCarousel content={noticesCarouselArchive} title={noticesCarouselTitle} />
-      <OpportunitySection title={opportunity.title} list={opportunity.cards} />
+      <HeroImage
+        light={true}
+        ctaContainer={true}
+        category={heroPnrr.category}
+        title={heroPnrr.title}
+        body={heroPnrr.body}
+        imageUrl="/assets/home-candidature.svg"
+        imageAlt=""
+        outlineBtn={true}
+        firstInternal={true}
+        firstButtonHref="/come-funziona"
+        firstButtonLabel={heroPnrr.firstButtonLabel}
+        firstButtonAriaLabel={heroPnrr.firstButtonAriaLabel}
+        heroTitleId="home-hero-title"
+      />
+      <HeroCarousel content={heroCarouselNews} title={heroCarouselNewsTitle} />
       <HeroImage
         ctaContainer={true}
         category={heroPnrr.category}
         title={heroPnrr.title}
         body={heroPnrr.body}
-        imageUrl="/assets/come-funziona-home.svg"
+        imageUrl="/assets/Classificazione_Dati_e_Servizi.svg"
         imageAlt=""
+        outlineBtn={true}
         firstInternal={true}
         firstButtonHref="/come-funziona"
         firstButtonLabel={heroPnrr.firstButtonLabel}
         firstButtonAriaLabel={heroPnrr.firstButtonAriaLabel}
-        secondButtonLabel={heroPnrr.secondButtonLabel}
-        secondButtonAriaLabel={heroPnrr.secondButtonAriaLabel}
-        secondButtonHref="/come-funziona"
         heroTitleId="home-hero-title"
       />
-      <HeroImageBackground
-        title={heroDigital.title}
-        body={heroDigital.body}
-        theme="bg-blue"
-        image="italy-blue.webp"
-        firstButtonLabel={heroDigital.firstButtonLabel}
-        firstButtonAriaLabel={heroDigital.firstButtonAriaLabel}
-        firstButtonClass="btn-light"
-        firstButtonHref={heroDigital.linkTo}
-        overlap={true}
-        titleId="home-italia-digitale"
-      />
-      <HeroCarousel content={heroCarouselNews} title={heroCarouselNewsTitle} />
       <SupportSection
         supportList={support.cards}
         title={support.title}

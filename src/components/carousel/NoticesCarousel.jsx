@@ -62,11 +62,12 @@ const useStyles = createUseStyles({
     color: '#33485C',
     fontSize: '1.556rem',
     whiteSpace: 'nowrap',
+    fontWeight: '600',
     margin: 0,
   },
   noticesSection: {
     backgroundColor: '#fff',
-    padding: '1.111rem 0 4rem',
+    padding: '3rem 0 4rem',
     '& .swiper': {
       margin: '0 -1.111rem',
       '@media (max-width: 992px)': {

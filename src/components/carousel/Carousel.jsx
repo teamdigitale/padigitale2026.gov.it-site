@@ -1,6 +1,13 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
-import { Row, Col, Card, CardBody, CardTitle, CardText } from 'design-react-kit';
+import {
+  Row,
+  Col,
+  Card,
+  CardBody,
+  CardTitle,
+  CardText,
+} from 'design-react-kit';
 import PropTypes from 'prop-types';
 import { DesktopSwiper } from '../DesktopSwiper';
 import { ExternalLink } from '../ExternalLink';
@@ -70,14 +77,14 @@ const useStyles = createUseStyles({
     },
   },
   heroCarouselTitle: {
-    color: '#fff',
+    color: '#33485C',
     fontSize: '1.556rem',
+    fontWeight: '600',
     whiteSpace: 'nowrap',
-    backgroundColor: '#0066CC',
   },
   newsUpdateSection: {
     backgroundColor: '#fff',
-    padding: '1.111rem 0 4rem',
+    padding: '6rem 0 4rem',
     '& .swiper': {
       margin: '0 -1.111rem',
       '@media (max-width: 992px)': {
@@ -94,13 +101,33 @@ const useStyles = createUseStyles({
     '& .swiper-slider': {
       padding: '1.111rem',
     },
-    '& .swiper-pagination.swiper-pagination-bullets .swiper-pagination-bullet': {
-      margin: '0 0.889rem',
-    },
+    '& .swiper-pagination.swiper-pagination-bullets .swiper-pagination-bullet':
+      {
+        margin: '0 0.889rem',
+      },
   },
   heroLink: {
     textDecoration: 'none',
     marginTop: 'auto',
+  },
+  titleLink: {
+    fontSize: '1rem',
+    color: '#33485C',
+    fontWeight: '600',
+    textDecoration: 'none',
+    '&:hover': {
+      textDecoration: 'underline'
+    },
+    '& .source': {
+      display: 'flex',
+      alignItems: 'center',
+      '@media (max-width: 992px)': {
+        marginTop: '0.5rem',
+      },
+    },
+    '& img': {
+      marginLeft: '0.5rem'
+    }
   },
 });
 // const carousel = React.createRef();
@@ -137,10 +164,26 @@ export const HeroCarousel = ({ content, title }) => {
         <section className="container" aria-labelledby="news-home-carousel">
           {title ? (
             <Row>
-              <Col xs="12" lg="4">
-                <h3 id="news-home-carousel" className={classes.heroCarouselTitle}>
+              <Col xs="12" lg="6">
+                <h3
+                  id="news-home-carousel"
+                  className={classes.heroCarouselTitle}
+                >
                   {title}
                 </h3>
+              </Col>
+              <Col xs="12" lg="6" className="d-lg-flex justify-content-end">
+                <ExternalLink
+                  linkTo="/"
+                  alt=""
+                  className={classes.titleLink}
+                  ariaLabel={`titolo (Collegamento sito esterno apre su nuova scheda)`}
+                >
+                  <div className="source">
+                    Scopri tutto su innovazione.gov.it
+                    <img src={`/assets/external-link.svg`} alt="" />
+                  </div>
+                </ExternalLink>
               </Col>
             </Row>
           ) : (
