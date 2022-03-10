@@ -13,12 +13,12 @@ const useStyles = createUseStyles({
     width: '100%',
     '@media (min-width: 992px)': {
       position: 'absolute',
-      right: '0',
+      right: '122px',
       top: '95px',
-      maxWidth: '480px',
+      maxWidth: '350px',
     },
     '@media (min-width: 1200px)': {
-      maxWidth: '580px',
+      maxWidth: '350px',
     },
   },
   heroTitle: {

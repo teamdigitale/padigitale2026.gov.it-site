@@ -140,7 +140,7 @@ const useStyle = createUseStyles({
       '&.active': {
         backgroundColor: 'rgba(0,102,204,0.06)',
         borderLeft: '4px solid #0073E6',
-      },
+      }
     },
     '& .modal-button': {
       '&:focus': {
@@ -148,6 +148,9 @@ const useStyle = createUseStyles({
         boxShadow: 'none',
       },
     },
+    '& .nav-item.r-nav': {
+      marginLeft: 'auto',
+    }
   },
   linkListWrapperCustom: {
     '& ul li:not(:first-child)': {
@@ -354,15 +357,6 @@ const NavHeader = () => {
               </li>
               <NavItem active>
                 <Link
-                  to={internalLinks.opportunity.linkTo}
-                  className={activeItem === 'misure' ? 'nav-link active' : 'nav-link'}
-                  onClick={closeMenu}
-                >
-                  <span className="font-weight-semibold">{internalLinks.opportunity.label}</span>
-                </Link>
-              </NavItem>
-              <NavItem>
-                <Link
                   to={internalLinks.howitworks.linkTo}
                   className={activeItem === 'come-funziona' ? 'nav-link active' : 'nav-link'}
                   onClick={closeMenu}
@@ -372,6 +366,33 @@ const NavHeader = () => {
               </NavItem>
               <NavItem>
                 <Link
+                  to={internalLinks.opportunity.linkTo}
+                  className={activeItem === 'misure' ? 'nav-link active' : 'nav-link'}
+                  onClick={closeMenu}
+                >
+                  <span className="font-weight-semibold">{internalLinks.opportunity.label}</span>
+                </Link>
+              </NavItem>
+              <NavItem>
+                <Link
+                  to={internalLinks.avvisi.linkTo}
+                  className={activeItem === 'avvisi' ? 'nav-link active' : 'nav-link'}
+                  onClick={closeMenu}
+                >
+                  <span className="font-weight-semibold">{internalLinks.avvisi.label}</span>
+                </Link>
+              </NavItem>
+              <NavItem>
+                <Link
+                  to={internalLinks.comePartecipare.linkTo}
+                  className={activeItem === 'come-partecipare' ? 'nav-link active' : 'nav-link'}
+                  onClick={closeMenu}
+                >
+                  <span className="font-weight-semibold">{internalLinks.comePartecipare.label}</span>
+                </Link>
+              </NavItem>
+              <NavItem className="r-nav">
+                <Link
                   to={internalLinks.support.linkTo}
                   className={activeItem === 'supporto' ? 'nav-link active' : 'nav-link'}
                   onClick={closeMenu}
@@ -379,7 +400,7 @@ const NavHeader = () => {
                   <span className="font-weight-semibold">{internalLinks.support.label}</span>
                 </Link>
               </NavItem>
-              <NavItem className={classes.updatesBtn} active>
+              {/* <NavItem className={classes.updatesBtn} active>
                 <Button
                   aria-label="Ricevi aggiornamenti (Apri modale e compila il modulo)"
                   className="nav-link modal-button"
@@ -390,7 +411,7 @@ const NavHeader = () => {
                 >
                   <span className="font-weight-semibold">{internalLinks.updates.label}</span>
                 </Button>
-              </NavItem>
+              </NavItem> */}
             </Nav>
           </div>
         </HeaderNav>

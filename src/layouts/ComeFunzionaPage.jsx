@@ -47,14 +47,14 @@ export const ComeFunzionaPage = () => {
         body={content.hero.body}
         theme="bg-white"
         smallText="true"
-        image="come-funziona-hero.svg"
+        image="frame.svg"
         list={content.hero.list}
       />
       <ProjectsCards item={content.projectsCardsItem} />
+      <Involved title={content.involved.title} category={content.involved.category} cards={content.involved.cards} />
       <Timeline content={content.timeline} title="Il calendario" />
       <Beneficiaries item={content.beneficiaries} />
-      <Involved title={content.involved.title} category={content.involved.category} cards={content.involved.cards} />
-      <SupportSection
+      {/* <SupportSection
         supportList={support.cards}
         title={support.title}
         buttonLabel={support.buttonLabel}
@@ -63,7 +63,7 @@ export const ComeFunzionaPage = () => {
             type: 'SET:TOGGLE_MODAL_MESSAGE',
           });
         }}
-      />
+      /> */}
     </>
   );
 };
