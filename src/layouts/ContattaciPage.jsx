@@ -401,6 +401,8 @@ export const ContattaciPage = () => {
         <Row>
           <Col xs="12">
             {/* <form onSubmit={handleSubmit(onSubmit, onError)} id="message-form" aria-describedby="mandatory-label"> */}
+
+            <div className="g-recaptcha" data-sitekey="6LfW56weAAAAAIWHJnwlQ2lHNRCcd04QLYQyamww"></div>
             <form
               action="https://padigitale2026--dev1.my.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8"
               method="POST"
@@ -449,7 +451,6 @@ export const ContattaciPage = () => {
               <input type="hidden" name="origin" value="Area pubblica" />
               <input type="hidden" name="recordType" value="0127Y00000229Rc" />
               <input type="submit" name="submit" />
-              <div className="g-recaptcha" data-sitekey="6LfW56weAAAAAIWHJnwlQ2lHNRCcd04QLYQyamww"></div>
             </form>
           </Col>
         </Row>
