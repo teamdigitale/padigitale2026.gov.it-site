@@ -188,7 +188,7 @@ export const HeroCarousel = ({ content, title }) => {
             }}
             pagination
             title={title}
-            id="news-carousel"
+            idCarousel="news-carousel"
           />
         </section>
       </div>
