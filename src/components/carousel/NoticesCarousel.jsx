@@ -159,7 +159,7 @@ export const NoticesCarousel = ({ content, title }) => {
             }}
             pagination
             title={title}
-            id="news-carousel"
+            id="notices-carousel"
           />
         </section>
       </div>
