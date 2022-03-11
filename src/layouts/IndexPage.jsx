@@ -5,7 +5,6 @@ import {
   heroMainBanner,
   heroPnrr,
   heroCarouselNews,
-  noticesCarouselArchive,
   heroCarouselNewsTitle,
   noticesCarouselTitle,
   support,
@@ -44,19 +43,21 @@ export const IndexPage = () => {
   const classes = useStyles();
   const [, dispatch] = useContext(GlobalStateContext);
 
-  const [newsList, setNewsList] = useState([])
+  const [newsList, setNewsList] = useState([]);
 
   useEffect(() => {
     (async () => {
       try {
         await fetch(`https://raw.githubusercontent.com/tuxolino/testapi/main/data/NC002.json`)
-        .then((res) => res.json())
-        .then((data) => { setNewsList(data.windows) })
+          .then((res) => res.json())
+          .then((data) => {
+            setNewsList(data.windows);
+          });
       } catch (error) {
         console.log(error);
       }
     })();
-  }, [])
+  }, []);
 
   // API rest to get SF TOKEN
   /* useEffect(() => {

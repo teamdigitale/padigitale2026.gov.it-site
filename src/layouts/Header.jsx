@@ -304,20 +304,20 @@ const SlimHeader = () => {
                   </ExternalLink>
                 </LinkListItem>
                 {/* <LinkListItem> */}
-                  <ExternalLink
-                    className="list-item-link"
-                    linkTo={externalLinks.eu.linkTo}
-                    ariaLabel={externalLinks.eu.ariaLabel}
-                    href={externalLinks.italiaDigitale.linkTo}
-                    target="_blank"
-                  >
-                    <img
-                      className="d-none d-lg-block user-logo"
-                      src="/assets/user-icon.svg"
-                      alt={externalLinks.eu.label}
-                    ></img>
-                    <span>Accedi</span>
-                  </ExternalLink>
+                <ExternalLink
+                  className="list-item-link"
+                  linkTo={externalLinks.eu.linkTo}
+                  ariaLabel={externalLinks.eu.ariaLabel}
+                  href={externalLinks.italiaDigitale.linkTo}
+                  target="_blank"
+                >
+                  <img
+                    className="d-none d-lg-block user-logo"
+                    src="/assets/user-icon.svg"
+                    alt={externalLinks.eu.label}
+                  ></img>
+                  <span>Accedi</span>
+                </ExternalLink>
                 {/* </LinkListItem> */}
               </LinkList>
             </div>

@@ -126,7 +126,9 @@ export const NoticesCarousel = ({ content, title }) => {
             <span className={classes.dueDate}>
               CANDIDATURE <span className={classes.dueDateDigit}>Fino al {element.dataFine}</span>
             </span>
-            <CardTitle tag="h4" className={classes.noticeLabel}>{element.nomeDellaMisura}</CardTitle>
+            <CardTitle tag="h4" className={classes.noticeLabel}>
+              {element.nomeDellaMisura}
+            </CardTitle>
             <p className={classes.noticeInfo}>{element.titolo}</p>
           </CardBody>
         </ExternalLink>
