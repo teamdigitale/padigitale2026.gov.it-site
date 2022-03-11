@@ -9,13 +9,16 @@ const useStyles = createUseStyles({
   heroCards: {
     composes: 'card-bg rounded',
     height: '100%',
+    border: '0.5px solid #979797',
+    boxShadow: '0px 0px 80px rgba(0, 43, 85, 0.05)',
     '&.card.card-bg': {
+      borderRight: '0.5px solid #979797',
       '@media (max-width: 992px)': {
         marginLeft: '0',
       },
     },
     '& .card-body': {
-      boxShadow: '0px 0px 20px rgb(0 43 85 / 4%);',
+      // boxShadow: '0px 0px 20px rgb(0 43 85 / 4%);',
       display: 'flex',
       flexDirection: 'column',
       '& .category': {
@@ -121,12 +124,10 @@ export const NoticesCarousel = ({ content, title }) => {
         <ExternalLink>
           <CardBody>
             <span className={classes.dueDate}>
-              CHIUSURA CANDIDATURA <span className={classes.dueDateDigit}>{element.dataFine}</span>
+              CANDIDATURE <span className={classes.dueDateDigit}>Fino al {element.dataFine}</span>
             </span>
-            <CardTitle tag="h4" className={classes.noticeLabel}>
-              {element.titolo}
-            </CardTitle>
-            <p className={classes.noticeInfo}>{element.nomeDellaMisura}</p>
+            <CardTitle tag="h4" className={classes.noticeLabel}>{element.nomeDellaMisura}</CardTitle>
+            <p className={classes.noticeInfo}>{element.titolo}</p>
           </CardBody>
         </ExternalLink>
       </Card>

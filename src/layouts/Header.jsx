@@ -303,7 +303,7 @@ const SlimHeader = () => {
                     ></img>
                   </ExternalLink>
                 </LinkListItem>
-                <LinkListItem>
+                {/* <LinkListItem> */}
                   <ExternalLink
                     className="list-item-link"
                     linkTo={externalLinks.eu.linkTo}
@@ -318,7 +318,7 @@ const SlimHeader = () => {
                     ></img>
                     <span>Accedi</span>
                   </ExternalLink>
-                </LinkListItem>
+                {/* </LinkListItem> */}
               </LinkList>
             </div>
           </Collapse>

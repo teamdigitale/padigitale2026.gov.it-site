@@ -1,6 +1,5 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { createUseStyles } from 'react-jss';
-// import { announce } from '@react-aria/live-announcer';
 import {
   name,
   heroMainBanner,
@@ -11,18 +10,14 @@ import {
   noticesCarouselTitle,
   support,
 } from '../../contents/home-page/home.yml';
-// import { HeroImageBackground } from '../components/hero/HeroImageBackground';
-// import { HeroImageBackgroundFull } from '../components/hero/HeroImageBackgroundFull';
 import { HeroImage } from '../components/hero/HeroImage';
 import { HeroCarousel } from '../components/carousel/Carousel';
-// import { HomeCarousel } from '../components/carousel/HomeCarousel';
 import { SEO } from '../components/SEO';
 import seo from '../../contents/seo.yml';
 import labels from '../../contents/labels.yml';
 import { GlobalStateContext } from '../context/globalContext';
 import { NoticesCarousel } from '../components/carousel/NoticesCarousel';
 import { SupportSection } from './faq/SupportSection';
-// import { OpportunitySection } from './home/OpportunitySection';
 
 const { title: seoTitle, description: seoDescription } = seo.homePage;
 const { headerTitle, headerSubtitle } = labels;
@@ -48,6 +43,20 @@ const useStyles = createUseStyles({
 export const IndexPage = () => {
   const classes = useStyles();
   const [, dispatch] = useContext(GlobalStateContext);
+
+  const [newsList, setNewsList] = useState([])
+
+  useEffect(() => {
+    (async () => {
+      try {
+        await fetch(`https://raw.githubusercontent.com/tuxolino/testapi/main/data/NC002.json`)
+        .then((res) => res.json())
+        .then((data) => { setNewsList(data.windows) })
+      } catch (error) {
+        console.log(error);
+      }
+    })();
+  }, [])
 
   // API rest to get SF TOKEN
   /* useEffect(() => {
@@ -100,7 +109,7 @@ export const IndexPage = () => {
         firstButtonAriaLabel={heroMainBanner.firstButtonAriaLabel}
         heroTitleId="home-hero-title"
       />
-      <NoticesCarousel content={noticesCarouselArchive} title={noticesCarouselTitle} />
+      <NoticesCarousel content={newsList} title={noticesCarouselTitle} />
       <HeroImage
         light={true}
         ctaContainer={true}
@@ -114,7 +123,7 @@ export const IndexPage = () => {
         firstButtonHref="/come-funziona"
         firstButtonLabel={heroPnrr.firstButtonLabel}
         firstButtonAriaLabel={heroPnrr.firstButtonAriaLabel}
-        heroTitleId="home-hero-title"
+        heroTitleId="home-hero-title-candidature"
       />
       <HeroCarousel content={heroCarouselNews} title={heroCarouselNewsTitle} />
       <HeroImage
@@ -129,7 +138,7 @@ export const IndexPage = () => {
         firstButtonHref="/come-funziona"
         firstButtonLabel={heroPnrr.firstButtonLabel}
         firstButtonAriaLabel={heroPnrr.firstButtonAriaLabel}
-        heroTitleId="home-hero-title"
+        heroTitleId="home-hero-title-classificazione"
       />
       <SupportSection
         supportList={support.cards}
