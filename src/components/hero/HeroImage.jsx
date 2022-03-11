@@ -145,7 +145,11 @@ export const HeroImage = ({
   const [, dispatch] = useContext(GlobalStateContext);
 
   return (
-    <Hero Tag="section" ariaLabelledBy={heroTitleId} className={`${dark ? classes.heroSectionDark : ''} ${light ? classes.heroSectionLight : ''}`}>
+    <Hero
+      Tag="section"
+      ariaLabelledBy={heroTitleId}
+      className={`${dark ? classes.heroSectionDark : ''} ${light ? classes.heroSectionLight : ''}`}
+    >
       <div className={`${classes.heroImage} ${smallText ? 'hero-small' : ''} ${mainHero ? 'hero-main' : ''}`}>
         <div className="col-lg-6 offset-lg-1 p-lg-0 mt-3 mt-lg-0 pr-lg-5">
           <div className="text-center text-lg-left">
@@ -156,7 +160,13 @@ export const HeroImage = ({
           {ctaContainer ? (
             <HeroCtaContainer>
               {firstInternal ? (
-                <Link className={`btn text-uppercase mx-4 ml-lg-0 my-3 my-md-0 btn-primary ${outlineBtn ? classes.outlineBtn : ''}`} to={firstButtonHref} aria-label={firstButtonAriaLabel} >
+                <Link
+                  className={`btn text-uppercase mx-4 ml-lg-0 my-3 my-md-0 btn-primary ${
+                    outlineBtn ? classes.outlineBtn : ''
+                  }`}
+                  to={firstButtonHref}
+                  aria-label={firstButtonAriaLabel}
+                >
                   {firstButtonLabel}
                 </Link>
               ) : (
