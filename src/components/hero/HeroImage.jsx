@@ -29,10 +29,10 @@ const useStyles = createUseStyles({
     },
   },
   heroSectionDark: {
-    backgroundColor: '#0066CC'
+    backgroundColor: '#0066CC',
   },
   heroSectionLight: {
-    backgroundColor: '#F0F6FC'
+    backgroundColor: '#F0F6FC',
   },
   heroTitle: {
     composes: 'hero-title',
@@ -53,7 +53,7 @@ const useStyles = createUseStyles({
   outlineBtn: {
     backgroundColor: '#fff',
     border: '1px solid #06c',
-    color: '#06c'
+    color: '#06c',
   },
   heroImage: {
     composes: 'row align-items-center',
@@ -105,18 +105,18 @@ const useStyles = createUseStyles({
     },
     '&.hero-main .hero-title': {
       fontSize: '2.222rem',
-      color: '#fff'
+      color: '#fff',
     },
     '&.hero-main .hero-body': {
-      color: '#fff'
+      color: '#fff',
     },
     '&.hero-main .btn': {
       backgroundColor: '#fff',
       color: '#0066CC',
       fontWeight: 'bold',
       '&:hover': {
-        color: '#004d99'
-      }
+        color: '#004d99',
+      },
     },
   },
 });
@@ -156,11 +156,7 @@ export const HeroImage = ({
           {ctaContainer ? (
             <HeroCtaContainer>
               {firstInternal ? (
-                <Link
-                  className={`btn text-uppercase mx-4 ml-lg-0 my-3 my-md-0 btn-primary ${outlineBtn ? classes.outlineBtn : ''}`}
-                  to={firstButtonHref}
-                  aria-label={firstButtonAriaLabel}
-                >
+                <Link className={`btn text-uppercase mx-4 ml-lg-0 my-3 my-md-0 btn-primary ${outlineBtn ? classes.outlineBtn : ''}`} to={firstButtonHref} aria-label={firstButtonAriaLabel} >
                   {firstButtonLabel}
                 </Link>
               ) : (
@@ -218,4 +214,8 @@ HeroImage.propTypes = {
   imageUrl: PropTypes.string,
   imageAlt: PropTypes.string,
   heroTitleId: PropTypes.string,
+  mainHero: PropTypes.bool,
+  dark: PropTypes.bool,
+  light: PropTypes.bool,
+  outlineBtn: PropTypes.bool,
 };

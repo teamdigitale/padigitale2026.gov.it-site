@@ -1,13 +1,6 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
-import {
-  Row,
-  Col,
-  Card,
-  CardBody,
-  CardTitle,
-  CardText,
-} from 'design-react-kit';
+import { Row,Col,Card,CardBody,CardTitle,CardText} from 'design-react-kit';
 import PropTypes from 'prop-types';
 import { DesktopSwiper } from '../DesktopSwiper';
 import { ExternalLink } from '../ExternalLink';
@@ -101,10 +94,9 @@ const useStyles = createUseStyles({
     '& .swiper-slider': {
       padding: '1.111rem',
     },
-    '& .swiper-pagination.swiper-pagination-bullets .swiper-pagination-bullet':
-      {
-        margin: '0 0.889rem',
-      },
+    '& .swiper-pagination.swiper-pagination-bullets .swiper-pagination-bullet': {
+      margin: '0 0.889rem',
+    },
   },
   heroLink: {
     textDecoration: 'none',
@@ -116,7 +108,7 @@ const useStyles = createUseStyles({
     fontWeight: '600',
     textDecoration: 'none',
     '&:hover': {
-      textDecoration: 'underline'
+      textDecoration: 'underline',
     },
     '& .source': {
       display: 'flex',
@@ -126,8 +118,8 @@ const useStyles = createUseStyles({
       },
     },
     '& img': {
-      marginLeft: '0.5rem'
-    }
+      marginLeft: '0.5rem',
+    },
   },
 });
 // const carousel = React.createRef();
@@ -165,10 +157,7 @@ export const HeroCarousel = ({ content, title }) => {
           {title ? (
             <Row>
               <Col xs="12" lg="6">
-                <h3
-                  id="news-home-carousel"
-                  className={classes.heroCarouselTitle}
-                >
+                <h3 id="news-home-carousel" className={classes.heroCarouselTitle}>
                   {title}
                 </h3>
               </Col>

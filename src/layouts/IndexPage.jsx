@@ -1,31 +1,28 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import { createUseStyles } from 'react-jss';
-import { announce } from '@react-aria/live-announcer';
+// import { announce } from '@react-aria/live-announcer';
 import {
   name,
   heroMainBanner,
-  heroDigital,
   heroPnrr,
-  opportunity,
   heroCarouselNews,
   noticesCarouselArchive,
-  homeCarousel,
   heroCarouselNewsTitle,
   noticesCarouselTitle,
   support,
 } from '../../contents/home-page/home.yml';
-import { HeroImageBackground } from '../components/hero/HeroImageBackground';
-import { HeroImageBackgroundFull } from '../components/hero/HeroImageBackgroundFull';
+// import { HeroImageBackground } from '../components/hero/HeroImageBackground';
+// import { HeroImageBackgroundFull } from '../components/hero/HeroImageBackgroundFull';
 import { HeroImage } from '../components/hero/HeroImage';
 import { HeroCarousel } from '../components/carousel/Carousel';
-import { HomeCarousel } from '../components/carousel/HomeCarousel';
+// import { HomeCarousel } from '../components/carousel/HomeCarousel';
 import { SEO } from '../components/SEO';
 import seo from '../../contents/seo.yml';
 import labels from '../../contents/labels.yml';
 import { GlobalStateContext } from '../context/globalContext';
 import { NoticesCarousel } from '../components/carousel/NoticesCarousel';
 import { SupportSection } from './faq/SupportSection';
-import { OpportunitySection } from './home/OpportunitySection';
+// import { OpportunitySection } from './home/OpportunitySection';
 
 const { title: seoTitle, description: seoDescription } = seo.homePage;
 const { headerTitle, headerSubtitle } = labels;
