@@ -3,9 +3,9 @@
 /* eslint-disable sonarjs/cognitive-complexity */
 /* eslint-disable max-lines-per-function */
 /* eslint-disable arrow-body-style */
-import React, { useState, useEffect, useContext } from 'react';
-import { useForm, Controller } from 'react-hook-form';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import { Helmet } from 'react-helmet';
 import { createUseStyles } from 'react-jss';
 import { announce } from '@react-aria/live-announcer';
 import { Row, Col, Button, Input } from 'design-react-kit';
@@ -121,6 +121,21 @@ export const ContattaciPage = () => {
     },
   } = useStaticQuery(query);
 
+  useEffect(() => {
+    const timeStamp = () => {
+      const response = document.getElementById('g-recaptcha-response');
+      if (response == null || response.value.trim() === '') {
+        const elems = JSON.parse(document.getElementsByName('captcha_settings')[0].value);
+        elems['ts'] = JSON.stringify(new Date().getTime());
+        document.getElementsByName('captcha_settings')[0].value = JSON.stringify(elems);
+        document.getElementsByName('submit')[0].disabled = true;
+      } else {
+        document.getElementsByName('submit')[0].disabled = false;
+      }
+    };
+    setInterval(timeStamp, 500);
+  }, []);
+
   const setFocusStyleOnSelect = () => {
     const selectInputArr = document.querySelectorAll('.select input');
     selectInputArr.forEach((input) => {
@@ -158,12 +173,6 @@ export const ContattaciPage = () => {
     const observer = new MutationObserver(setObserver);
     observer.observe(representSelectOptions, config);
   };
-
-  const {
-    control,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
 
   const textareaFocusHandler = (event) => {
     const currentTextarea = event.target;
@@ -213,7 +222,7 @@ export const ContattaciPage = () => {
 
   useEffect(() => {}, [selectValue]);
 
-  const onSubmit = async () => {
+  /* const onSubmit = async () => {
     const data = {};
     const inputArr = document.querySelectorAll('input');
     const textareaArr = document.querySelectorAll('textarea');
@@ -248,7 +257,7 @@ export const ContattaciPage = () => {
         const status = response.status;
         setTimeout(() => {
           if (status >= 200 && status <= 299) {
-            /* notificationElement.classList.add('show');
+            notificationElement.classList.add('show');
             notificationElement.classList.add('success');
 
             titleElement.innerHTML = `${successLabels.icon} ${successLabels.title}`;
@@ -256,9 +265,9 @@ export const ContattaciPage = () => {
 
             setTimeout(() => {
               notificationElement.classList.remove('show');
-            }, 5000); */
+            }, 5000);
           } else {
-            /*  notificationElement.classList.add('show');
+             notificationElement.classList.add('show');
             notificationElement.classList.add('error');
 
             if (data.success === false) {
@@ -267,7 +276,7 @@ export const ContattaciPage = () => {
             } else {
               titleElement.innerHTML = `${errorLabels.icon} ${errorLabels.title}`;
               descriptionElement.innerHTML = errorLabels.description;
-            } */
+            }
           }
         }, 500);
       })
@@ -278,13 +287,13 @@ export const ContattaciPage = () => {
         announce('Invio in corso');
       });
 
-    /* const inputValueArr = Array.prototype.slice.call(inputArr).map((input) => {
+    const inputValueArr = Array.prototype.slice.call(inputArr).map((input) => {
       return input.value;
     });
     const inputNameArr = Array.prototype.slice.call(inputArr).map((input) => {
       return input.name;
-    }); */
-    /* 
+    });
+    
     console.log(data);
     console.log(event);
     const token = await executeRecaptcha();
@@ -355,12 +364,12 @@ export const ContattaciPage = () => {
       .then(() => {
         spinner.classList.add('hidden');
         announce('Invio in corso');
-      }); */
-  };
+      });
+  }; */
 
-  const onError = async (data) => {
+  /* const onError = async (data) => {
     console.log('error', data);
-  };
+  }; */
 
   const customInvalid = (event) => {
     const currentTarget = event.target;
@@ -395,193 +404,56 @@ export const ContattaciPage = () => {
             <form
               action="https://padigitale2026--dev1.my.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8"
               method="POST"
-              id="message-form"
             >
               <input
                 type="hidden"
                 name="captcha_settings"
-                value='{"keyname":"TestDev3","fallback":"true","orgId":"00D7Y0000001SdJ","ts":""}'
+                value='{"keyname":"TestDev3","fallback":"true","orgId":"00D3N0000004K3l","ts":""}'
               />
+              <input type="hidden" name="debugEmail" value="mattia.g.puggioni@accenture.com" />
+              <input type="hidden" name="debug" value={1} />
               <input type="hidden" name="orgid" value="00D3N0000004K3l" />
               <input type="hidden" name="retURL" value="http://" />
-              <fieldset>
-                <legend>
-                  <Row>
-                    <Col xs={12}>
-                      <img src="/assets/icon-chat.svg" alt="" />
-                    </Col>
-                  </Row>
-                  <Row className="mt-3">
-                    <Col xs={12}>
-                      <span className={classes.modalLabel}>{directContactLabel}</span>
-                    </Col>
-                  </Row>
-                  <Row className="mt-2">
-                    <Col xs={12}>
-                      <p dangerouslySetInnerHTML={{ __html: directContactInfo }}></p>
-                    </Col>
-                  </Row>
-                </legend>
-                <Row className="mt-5">
-                  <Col xs={12}>
-                    <div>
-                      <div className="form-group">
-                        <Input
-                          /* invalid={errors.address}
-                        aria-invalid={errors.address && 'true'} */
-                          aria-describedby="mandatory-label"
-                          aria-labelledby={errors.address && 'error-address'}
-                          type="text"
-                          label={nameLabel}
-                          id="00N7Y000008tqdH"
-                          name="00N7Y000008tqdH"
-                          maxlength="255"
-                          size="20"
-                          aria-required="true"
-                        />
-                        <span className={classes.errorLabel} id="error-address3">
-                          {errors.address && errors.address.message}
-                        </span>
-                      </div>
-                    </div>
-                  </Col>
-                </Row>
-                <Row className="mt-5">
-                  <Col xs={12}>
-                    <div className="form-group">
-                      <Input
-                        /* invalid={errors.address}
-                        aria-invalid={errors.address && 'true'} */
-                        label={emailLabel}
-                        aria-describedby="mandatory-label"
-                        aria-labelledby={errors.address && 'error-address'}
-                        type="text"
-                        id="00N7Y000008tqdM"
-                        name="00N7Y000008tqdM"
-                        maxlength="80"
-                        size="20"
-                        aria-required="true"
-                      />
-                      <span className={classes.errorLabel} id="error-address2">
-                        {errors.address && errors.address.message}
-                      </span>
-                    </div>
-                  </Col>
-                </Row>
-                <Row className="mt-5">
-                  <Col xs={12} lg={6}>
-                    <span className={classes.selectLabel}>{argumentLabel}</span>
-                    <Select
-                      id="00N3N00000GCzFR"
-                      name="00N3N00000GCzFR"
-                      title="Argomento"
-                      options={selectArgument}
-                      placeholder={selectPlaceholder}
-                      aria-label={selectPlaceholder}
-                      aria-describedby="mandatory-label"
-                      aria-invalid={errors.representative && 'true'}
-                      aria-labelledby={errors.representative && 'error-represent'}
-                      className={`select ${errors.representative && ' is-invalid'}`}
-                    />
-                  </Col>
-                </Row>
-                <Row className="mt-5">
-                  <Col xs={12} lg={6}>
-                    <span className={classes.selectLabel}>{measureLabel}</span>
-                    <Select
-                      id="00N3N00000GCzFW"
-                      name="00N3N00000GCzFW"
-                      title="Misura"
-                      options={selectMeasure}
-                      placeholder={selectPlaceholder}
-                      aria-label={selectPlaceholder}
-                      aria-describedby="mandatory-label"
-                      aria-invalid={errors.representative && 'true'}
-                      aria-labelledby={errors.representative && 'error-represent'}
-                      className={`select ${errors.representative && ' is-invalid'}`}
-                    />
-                  </Col>
-                </Row>
-                <Row className="mt-5">
-                  <Col xs={12}>
-                    <div>
-                      <div className="form-group">
-                        <Input
-                          /* invalid={errors.address}
-                        aria-invalid={errors.address && 'true'} */
-                          label={objectLabel}
-                          aria-describedby="mandatory-label"
-                          aria-labelledby={errors.address && 'error-address'}
-                          id="00N7Y000008tqdR"
-                          name="00N7Y000008tqdR"
-                          type="text"
-                          wrap="soft"
-                          aria-required="true"
-                        />
-                        <span className={classes.errorLabel} id="error-address4">
-                          {errors.address && errors.address.message}
-                        </span>
-                      </div>
-                    </div>
-                  </Col>
-                </Row>
-                <Row className="mt-5">
-                  <Col xs={12}>
-                    <div>
-                      <div className="form-group">
-                        <textarea
-                          onFocus={textareaFocusHandler}
-                          onBlur={textareaFocusOutHandler}
-                          onInput={textareaInputHandler}
-                          rows="3"
-                          maxLength={textareaMaxLength}
-                          id="00N7Y000008tqdW"
-                          name="00N7Y000008tqdW"
-                          data-type="description"
-                        ></textarea>
-                        <label className={textareaDescriptionState === 'active' ? 'active' : ''} htmlFor="description">
-                          {descriptionLabel}
-                        </label>
-                        <span className={classes.maxLengthLabel}>
-                          Massimo <span className="max-length-number">{textareaMaxLength}</span> caratteri
-                        </span>
-                      </div>
-                    </div>
-                  </Col>
-                </Row>
-                <Row className="mt-5">
-                  <Col xs={12}>
-                    <Input
-                      invalid={errors.tel}
-                      aria-invalid={errors.tel && 'true'}
-                      label={telLabel}
-                      aria-describedby="mandatory-label"
-                      aria-labelledby={errors.tel && 'error-tel'}
-                      type="text"
-                      id="00N7Y000008tqdb"
-                      maxlength="40"
-                      name="00N7Y000008tqdb"
-                      size="20"
-                      aria-required="true"
-                      pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$"
-                      onInvalid={customInvalid}
-                    />
-                    <span className={classes.errorLabel} id="error-tel2">
-                      {errors.tel && errors.tel.message}
-                    </span>
-                  </Col>
-                </Row>
-              </fieldset>
-
-              {/* <button type="submit" name="submit" form="message-form" className="btn btn-primary">
-                INVIA
-              </button> */}
-              <button type="submit" name="submit">
-                INVIA
-              </button>
+              Nome richiedente:
+              <input id="00N7Y000008tqdH" maxLength="255" name="00N7Y000008tqdH" size="20" type="text" />
+              Email:
+              <input id="00N7Y000008tqdM" maxLength="80" name="00N7Y000008tqdM" size="20" type="text" />
+              Argomento:
+              <select id="00N3N00000GCzFR" name="00N3N00000GCzFR" title="Argomento">
+                <option value="">--Nessuno--</option>
+                <option value="Accesso portale">Accesso portale</option>
+                <option value="Iscrizione newsletter">Iscrizione newsletter</option>
+                <option value="Misure">Misure</option>
+                <option value="Avvisi/bandi">Avvisi/bandi</option>
+                <option value="Enti beneficiari">Enti beneficiari</option>
+                <option value="Spese ammissibili">Spese ammissibili</option>
+                <option value="Generale">Generale</option>
+              </select>
+              Misura:
+              <select id="00N3N00000GCzFW" name="00N3N00000GCzFW" title="Misura">
+                <option value="">--Nessuno--</option>
+                <option value="1.2 Abilitazione e facilitazione migrazione al Cloud">
+                  1.2 Abilitazione e facilitazione migrazione al Cloud
+                </option>
+                <option value="1.4.1 Esperienza dei servizi pubblici">1.4.1 Esperienza dei servizi pubblici</option>
+                <option value="1.4.4 Adozione identità digitale">1.4.4 Adozione identità digitale</option>
+                <option value="1.4.5 Digitalizzazione degli avvisi pubblici">
+                  1.4.5 Digitalizzazione degli avvisi pubblici
+                </option>
+              </select>
+              Oggetto: <input id="00N7Y000008tqdR" name="00N7Y000008tqdR" type="text" wrap="soft" />
+              Descrizione:<textarea id="00N7Y000008tqdW" name="00N7Y000008tqdW" type="text" wrap="soft"></textarea>
+              Contatto telefonico:
+              <input id="00N7Y000008tqdb" maxLength="40" name="00N7Y000008tqdb" size="20" type="text" />
+              <input type="hidden" id="external" name="external" value="1" />
+              <input type="hidden" name="origin" value="Area pubblica" />
+              <input type="hidden" name="recordType" value="0127Y00000229Rc" />
+              <input type="submit" name="submit" />
+              <div className="g-recaptcha" data-sitekey="6LfW56weAAAAAIWHJnwlQ2lHNRCcd04QLYQyamww"></div>
             </form>
           </Col>
         </Row>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
       </div>
     </>
   );
