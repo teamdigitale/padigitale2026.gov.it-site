@@ -6,14 +6,11 @@
 /* eslint-disable max-lines-per-function */
 /* eslint-disable arrow-body-style */
 import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
-import { Helmet } from 'react-helmet';
 import { createUseStyles } from 'react-jss';
 import { announce } from '@react-aria/live-announcer';
-import { Row, Col, Button, Input } from 'design-react-kit';
+import { Row, Col, Input } from 'design-react-kit';
 import Select from 'react-select';
 import { graphql, useStaticQuery } from 'gatsby';
-import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 import ReCAPTCHA from 'react-google-recaptcha';
 import content from '../../contents/opportunity-page/opportunity.yml';
 import notificationsLabel from '../../contents/notifications.yml';
