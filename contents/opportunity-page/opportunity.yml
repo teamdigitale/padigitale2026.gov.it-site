@@ -400,8 +400,6 @@ modal:
     - value: other
       label: Altro
   selectArgument:
-    - value: ""
-      label: --Nessuno--
     - value: Accesso portale
       label: Accesso portale
     - value: Iscrizione newsletter
@@ -417,8 +415,6 @@ modal:
     - value: Generale
       label: Generale
   selectMeasure:
-    - value: ""
-      label: --Nessuno--
     - value: 1.2 Abilitazione e facilitazione migrazione al Cloud
       label: 1.2 Abilitazione e facilitazione migrazione al Cloud
     - value: 1.4.1 Esperienza dei servizi pubblici
