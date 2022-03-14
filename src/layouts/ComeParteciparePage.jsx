@@ -9,13 +9,16 @@ import faq from '../../contents/faq-page/faq.yml';
 import { SEO } from '../components/SEO';
 import seo from '../../contents/seo.yml';
 import { GlobalStateContext } from '../context/globalContext';
-import content from '../../contents/faq-page/faq.yml';
+import content from '../../contents/come-partecipare/come-partecipare.yml';
+import { TimelineVertical } from '../components/TimelineVertical';
 import { SideNavigation } from './faq/SideNavigation';
 import { QuestionSection } from './faq/QuestionSection';
 import { SupportSection } from './faq/SupportSection';
 import { HeroSupport } from './support/Hero';
 
 const { title: seoTitle, description: seoDescription } = seo.faqPage;
+
+const { sidebar, verticalTimeline } = content;
 
 const useStyles = createUseStyles({
   noResults: {
@@ -46,7 +49,7 @@ const useStyles = createUseStyles({
 });
 
 // eslint-disable-next-line sonarjs/cognitive-complexity
-export const FaqPage = () => {
+export const ComeParteciparePage = () => {
   const classes = useStyles();
   const [inputValue, setInputValue] = useState('');
   const [filterId, setFilterId] = useState('all');
@@ -174,37 +177,8 @@ export const FaqPage = () => {
             Sezione domande frequenti
           </h3>
           <Row>
-            <Col lg={9} className="offset-lg-3 px-lg-3">
-              <div role="search" className={classes.inputContainer} aria-label="Nelle domande frequenti">
-                <div id="searchbox-desk" className="sr-only">
-                  Ad ogni digitazione il numero di domande frequenti presenti in pagina verrà aggiornato.
-                </div>
-                <Input
-                  className={inputValue.length > 0 ? '' : classes.inputWrap}
-                  type="text"
-                  label="Cerca nelle domande frequenti"
-                  id="faq-search"
-                  role="searchbox"
-                  aria-describedby="searchbox-desk"
-                  aria-controls="id-list-faq"
-                  onChange={handleChange}
-                />
-                {inputValue.length > 0 && (
-                  <button className="reset-btn" onClick={resetInput}>
-                    <span className="sr-only">Il campo svuota l'input</span>
-                  </button>
-                )}
-              </div>
-            </Col>
-          </Row>
-          <Row>
             <Col lg={3}>
-              <SideNavigation
-                getFilter={setFilterId}
-                activeList={questions}
-                searchValue={inputValue}
-                list={content.sidebar}
-              />
+              <SideNavigation getFilter={setFilterId} activeList={questions} searchValue={inputValue} list={sidebar} />
             </Col>
             <Col
               lg={9}
@@ -214,35 +188,11 @@ export const FaqPage = () => {
               aria-label="Lista domande frequenti"
               aria-describedby="numberfaq"
             >
-              <span className="sr-only" id="numberfaq" aria-live="assertive">
-                Numero faq filtrate {questNum}
-              </span>
-              {questions.map((question) => (
-                <QuestionSection
-                  key={question.title}
-                  item={question}
-                  inputText={inputValue}
-                  handleToggle={() => {
-                    dispatch({ type: 'SET:TOGGLE_MODAL' });
-                  }}
-                />
-              ))}
-              {!questions.length && (
-                <p className={classes.noResults} role="alert">
-                  {faq.noResults}
-                </p>
-              )}
+              <TimelineVertical item={verticalTimeline} />
             </Col>
           </Row>
         </Container>
       </div>
-      <SupportSection
-        supportList={faq.support.cards}
-        title={faq.support.title}
-        handleToggle={() => {
-          dispatch({ type: 'SET:TOGGLE_MODAL_MESSAGE' });
-        }}
-      />
     </>
   );
 };
