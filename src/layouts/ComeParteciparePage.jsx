@@ -10,7 +10,7 @@ import { SEO } from '../components/SEO';
 import seo from '../../contents/seo.yml';
 import { GlobalStateContext } from '../context/globalContext';
 import content from '../../contents/come-partecipare/come-partecipare.yml';
-import { TimelineVertical } from '../components/TimelineVertical';
+import { TimelineVerticalCards } from '../components/TimelineVerticalCards';
 import { SideNavigation } from './faq/SideNavigation';
 import { QuestionSection } from './faq/QuestionSection';
 import { SupportSection } from './faq/SupportSection';
@@ -188,7 +188,7 @@ export const ComeParteciparePage = () => {
               aria-label="Lista domande frequenti"
               aria-describedby="numberfaq"
             >
-              <TimelineVertical item={verticalTimeline} />
+              <TimelineVerticalCards item={verticalTimeline} />
             </Col>
           </Row>
         </Container>
