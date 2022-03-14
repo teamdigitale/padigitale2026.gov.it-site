@@ -211,6 +211,14 @@ const useStyle = createUseStyles({
     composes: 'font-weight-bold',
     cursor: 'pointer',
   },
+  mainHeader: {
+    '& .it-header-slim-wrapper-content': {
+      padding: '0',
+    },
+    '& .it-header-center-content-wrapper': {
+      padding: '0',
+    },
+  },
 });
 
 const SlimHeader = () => {
@@ -326,7 +334,7 @@ const NavHeader = () => {
         megamenu
         /* aria-label={ariaLabel.menu} */
         aria-labelledby="menu-principale"
-        className="px-2"
+        className="px-0"
         id="menu-principale-anchor"
         tabIndex="-1"
       >
@@ -399,17 +407,21 @@ const NavHeader = () => {
   );
 };
 
-export const Header = (props) => (
-  <header id="mainTop">
-    <Headers>
-      <SlimHeader />
-      <div className="it-nav-wrapper">
-        <CenterHeader />
-        <NavHeader toggleModal={props.toggleModal} />
-      </div>
-    </Headers>
-  </header>
-);
+export const Header = (props) => {
+  const classes = useStyle();
+
+  return (
+    <header id="mainTop" className={classes.mainHeader}>
+      <Headers>
+        <SlimHeader />
+        <div className="it-nav-wrapper">
+          <CenterHeader />
+          <NavHeader toggleModal={props.toggleModal} />
+        </div>
+      </Headers>
+    </header>
+  );
+};
 
 Header.propTypes = {
   toggleModal: PropTypes.func,
