@@ -331,9 +331,9 @@ const SlimHeader = () => {
         </ExternalLink>
         <ExternalLink
           className={classes.login}
-          linkTo={externalLinks.eu.linkTo}
+          linkTo="#"
           ariaLabel={externalLinks.eu.ariaLabel}
-          href={externalLinks.italiaDigitale.linkTo}
+          href="#"
           target="_blank"
         >
           <img src="/assets/user-icon.svg" alt={externalLinks.eu.label}></img>
