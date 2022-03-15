@@ -1,6 +1,6 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
-import { Row, Col, Hero, Container } from 'design-react-kit';
+import { Row, Col, Hero, Container, Breadcrumb, BreadcrumbItem } from 'design-react-kit';
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import { HeroTitle } from './HeroTitle';
@@ -175,9 +175,26 @@ const useStyles = createUseStyles({
       textDecoration: 'underline',
     },
   },
+  breadWhite: {
+    '& a': {
+      color: 'white',
+    },
+    '& .breadcrumb-item': {
+      textDecoration: 'underline',
+      fontWeight: '700',
+      '&.active': {
+        textDecoration: 'none',
+        fontWeight: '400',
+        '&::before': {
+          color: 'white',
+          fontWeight: '700'
+        }
+      }
+    }
+  }
 });
 
-export const HeroHowItWorks = ({ title, body, image, list }) => {
+export const HeroHowToDo = ({ title, body, image, list }) => {
   const classes = useStyles();
 
   const scrollIntoView = (id) => {
@@ -188,11 +205,20 @@ export const HeroHowItWorks = ({ title, body, image, list }) => {
 
   return (
     <Hero className="position-relative">
-      <div className={`${classes.heroWrapper} bg-white`}>
+      <div className={`${classes.heroWrapper}`}>
         <Container className="pl-lg-2 pr-lg-2 pl-3 pr-3">
           <Row className="m-0">
             <Col xs="12" lg="11" className="offset-lg-1 px-0">
-              <div className={`${classes.contentWrapper} bg-white d-flex flex-column`}>
+              <Breadcrumb className={classes.breadWhite}>
+                <BreadcrumbItem>
+                  <a href='#'>Home</a>
+                  <span className='separator'></span>
+                </BreadcrumbItem>
+                <BreadcrumbItem active>
+                  <a href='#'>Current section</a>
+                </BreadcrumbItem>
+              </Breadcrumb>
+              <div className={`${classes.contentWrapper} d-flex flex-column`}>
                 <Row className="m-0">
                   <Col lg={6} xs={12} className="pr-3">
                     <div className={classes.textWrapper}>
@@ -217,7 +243,7 @@ export const HeroHowItWorks = ({ title, body, image, list }) => {
                             ))}
                           </div>
                         </div>
-                      )) : '' }
+                      )) : ''}
                     </div>
                   </Col>
                   <Col xs={12} lg={6} className="d-flex d-lg-none mt-4 mt-lg-0 justify-content-center">
@@ -234,7 +260,7 @@ export const HeroHowItWorks = ({ title, body, image, list }) => {
   );
 };
 
-HeroHowItWorks.propTypes = {
+HeroHowToDo.propTypes = {
   title: PropTypes.string,
   body: PropTypes.string,
   image: PropTypes.string,

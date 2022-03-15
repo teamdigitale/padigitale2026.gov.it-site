@@ -19,6 +19,9 @@ opportunityPage:
 comeFunzionaPage:
   title: Come Funziona - PA digitale 2026
   description: Scopri le modalità per accedere ai fondi del PNRR per la digitalizzazione della Pubblica Amministrazione attraverso la piattaforma PA Digitale 2026
+comeFarePage:
+  title: Come Fare - PA digitale 2026
+  description: Scopri le modalità per accedere ai fondi del PNRR per la digitalizzazione della Pubblica Amministrazione attraverso la piattaforma PA Digitale 2026
 faqPage:
   title: Domande Frequenti - PA digitale 2026
   description: Domande frequenti su PA Digitale 2026, la piattaforma per richiedere i fondi del PNRR dedicati alla transizione digitale delle pubbliche amministrazioni
