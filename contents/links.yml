@@ -1,11 +1,19 @@
 internalLinks:
+  initiative:
+    linkTo: '/iniziativa'
+    label: L'iniziativa
+    linkTop: '/#mainTop'
   opportunity:
     linkTo: '/misure'
-    label: Le misure
+    label: Misure
     linkTop: '/#mainTop'
-  howitworks:
-    linkTo: '/come-funziona'
-    label: Come funziona
+  notices:
+    linkTo: '/avvisi'
+    label: Avvisi
+    linkTop: '#mainTop'
+  howToPartecipate:
+    linkTo: '/come-partecipare'
+    label: Come partecipare
     linkTop: '#mainTop'
   support:
     linkTo: '/supporto'
