@@ -232,19 +232,19 @@ const useStyle = createUseStyles({
     },
     '&:hover': {
       '& span': {
-        textDecoration: 'underline'
+        textDecoration: 'underline',
       },
     },
     '& img': {
       marginRight: '0.555rem',
       '&.mobile': {
-        display: 'none'
+        display: 'none',
       },
       '@media (max-width: 992px)': {
         display: 'none',
         '&.mobile': {
-          display: 'block'
-        }
+          display: 'block',
+        },
       },
     },
     '& span': {
@@ -256,7 +256,7 @@ const useStyle = createUseStyles({
         display: 'none',
       },
     },
-  }
+  },
 });
 
 const SlimHeader = () => {
@@ -370,7 +370,7 @@ const CenterHeader = () => {
 };
 
 const NavHeader = () => {
-  const [{ activeItem }, dispatch] = useContext(GlobalStateContext);
+  const [{ activeItem }] = useContext(GlobalStateContext);
   const [isOpen, setIsOpen] = useState(false);
   const closeMenu = () => setIsOpen(false);
   const toogleMenu = () => setIsOpen(!isOpen);
