@@ -1,0 +1,152 @@
+import React from 'react';
+import { createUseStyles } from 'react-jss';
+import { Container, Row, Col } from 'design-react-kit';
+import { Link } from 'gatsby';
+import PropTypes from 'prop-types';
+
+const useStyle = createUseStyles({
+  involvedSection: {
+    backgroundColor: '#ffffff',
+    padding: '4rem 0',
+  },
+  category: {
+    fontSize: '0.875rem',
+    fontWeight: '600',
+    color: '#33485C',
+    textTransform: 'uppercase',
+    marginBottom: '0.556rem',
+    '@media (min-width: 992px)': {
+      fontSize: '0.889rem',
+    },
+  },
+  title: {
+    fontWeight: '700',
+    fontSize: '1.5rem',
+    color: '#33485C',
+    lineHeight: '1.36',
+    marginBottom: '0',
+    '@media (min-width: 992px)': {
+      fontSize: '1.778rem',
+      lineHeight: '1.4',
+    },
+  },
+  headCategory: {
+    marginTop: '2rem',
+    marginBottom: '0.444rem',
+    '@media (min-width: 992px)': {
+      marginTop: '3rem',
+      display: 'flex',
+      alignItems: 'flex-end',
+    },
+    '& .category-title': {
+      fontSize: '1.556rem',
+      letterSpacing: '-0.26px',
+      lineHeight: '1.2',
+      fontWeight: '600',
+      color: '#004080',
+      marginBottom: '0',
+      marginTop: '1rem',
+      '@media (min-width: 992px)': {
+        marginLeft: '1.4rem',
+        marginTop: '0',
+      },
+    },
+  },
+  linkItem: {
+    display: 'block',
+    textDecoration: 'none',
+    position: 'relative',
+    padding: '0.889rem 0',
+    borderBottom: '1px solid #E6E9F2',
+    '&:last-child': {
+      borderBottom: '0',
+    },
+    '& p': {
+      fontSize: '1.25rem',
+      fontWeight: '600',
+      lineHeight: '1',
+      marginBottom: '0',
+      '@media (min-width: 768px)': {
+        fontSize: '1.111rem',
+      },
+    },
+  },
+  beneficiariesList: {
+    paddingLeft: '0',
+    '& li': {
+      listStyleType: 'none',
+    },
+  },
+  keypointsContainer: {
+    paddingTop: '4.444rem',
+    paddingBottom: '1.667rem',
+  },
+  keypointNumber: {
+    color: '#06c',
+    fontWeight: '700',
+    fontSize: '2.222rem',
+    marginBottom: '0.556rem',
+    lineHeight: '1',
+  },
+  keypointTitle: {
+    color: '#33485C',
+    fontWeight: '600',
+    fontSize: '1.111rem',
+    marginBottom: '0.556rem',
+  },
+  keypointDesc: {
+    color: '#33485C',
+    lineHeight: '25px',
+    '@media(min-width: 992px)': {
+      maxWidth: '260px',
+    },
+  },
+  keypointImage: {
+    height: '6.278rem'
+  },
+  keypointsBg: {
+    backgroundColor: '#F0F6FC',
+  }
+});
+
+export const Keypoints = (props) => {
+  const classes = useStyle();
+  const { title, category, list } = props.item;
+
+  return (
+    <>
+      <div className={classes.keypointsBg}>
+        <Container tag="section" aria-labelledby="keypoints-title" className={`${classes.keypointsContainer} pl-lg-2 pr-lg-2 pl-3 pr-3`} 
+        /*className="pl-lg-2 pr-lg-2 pl-3 pr-3"*/>
+          <Row>
+            <Col>
+              <Row>
+                <Col xs="12" lg="5" id="keypoints" className='mb-5'>
+                  <h3 className={classes.category}>{category}</h3>
+                  <h4 className={classes.title} id="keypoints-title">
+                    {title}
+                  </h4>
+                </Col>
+              </Row>
+            </Col>
+          </Row>
+          <Row>
+            {list ? list.map((listItem) =>
+              <Col xs="12" md="6" lg="3" className="mb-5 mb-lg-0">
+                <div className={classes.keypointNumber}>{listItem.number}.</div>
+                {/* <img className={classes.keypointImage} src={`/assets/come-fare/${listItem.image}`} alt="" /> */}
+                <div className={classes.keypointTitle}>{listItem.title}</div>
+                <div className={classes.keypointDesc}>{listItem.desc}</div>
+              </Col>
+            )
+              : ''}
+          </Row>
+        </Container>
+      </div>
+    </>
+  );
+};
+
+Keypoints.propTypes = {
+  item: PropTypes.object,
+};

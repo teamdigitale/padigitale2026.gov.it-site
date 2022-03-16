@@ -34,6 +34,7 @@ const useStyles = createUseStyles({
   contentWrapper: {
     composes: 'it-hero-text-wrapper',
     display: 'flex',
+    paddingBottom: '4.444rem !important',
   },
   heroWrapper: {
     composes: 'it-hero-wrapper',
@@ -194,7 +195,7 @@ const useStyles = createUseStyles({
   }
 });
 
-export const HeroHowToDo = ({ title, body, image, list }) => {
+export const HeroHowToDo = ({ title, body, image, imageMob, list }) => {
   const classes = useStyles();
 
   const scrollIntoView = (id) => {
@@ -208,7 +209,7 @@ export const HeroHowToDo = ({ title, body, image, list }) => {
       <div className={`${classes.heroWrapper}`}>
         <Container className="pl-lg-2 pr-lg-2 pl-3 pr-3">
           <Row className="m-0">
-            <Col xs="12" lg="11" className="offset-lg-1 px-0">
+            <Col xs="12" lg="11" className="px-0">
               <Breadcrumb className={classes.breadWhite}>
                 <BreadcrumbItem>
                   <a href='#'>Home</a>
@@ -225,7 +226,7 @@ export const HeroHowToDo = ({ title, body, image, list }) => {
                       <HeroTitle title={title} className={classes.heroTitle} />
                       <HeroParagraph text={body} />
                     </div>
-                    <div className={classes.listWrapper}>
+                    {/* <div className={classes.listWrapper}>
                       {list ? list.map((listItem) => (
                         <div key={listItem.title} className={classes.list}>
                           <span className={classes.listTitle}>{listItem.title}</span>
@@ -244,10 +245,10 @@ export const HeroHowToDo = ({ title, body, image, list }) => {
                           </div>
                         </div>
                       )) : ''}
-                    </div>
+                    </div> */}
                   </Col>
                   <Col xs={12} lg={6} className="d-flex d-lg-none mt-4 mt-lg-0 justify-content-center">
-                    <HeroBackground image={image} className={classes.heroImg} />
+                    <HeroBackground image={imageMob} className={classes.heroImg} />
                   </Col>
                 </Row>
               </div>
