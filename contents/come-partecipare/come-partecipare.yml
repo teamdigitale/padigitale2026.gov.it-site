@@ -27,21 +27,21 @@ sidebar:
 verticalTimeline:
   - index: 0
     title: 'Accedi tramite identità digitale'
-    icon: '/assets/gears.svg'
+    icon: '/assets/pc-card.svg'
     headerParagraph: "Se sei il rappresentante legale dell’amministrazione, o una persona incaricata, <strong>accedi tramite identità digitale SPID o CIE</strong> alla piattaforma."
     sectionId: 'digital-identity'
   - index: 1
     title: 'Seleziona l’amministrazione '
-    icon: '/assets/shuttle.svg'
+    icon: '/assets/goals-card.svg'
     headerParagraph: 'Dopo l’accesso ti verrà richiesto di inserire un’email istituzionale e di <strong>selezionare da una lista la tua amministrazione mediante il nome della PA o il codice IPA.</strong>'
     sectionId: 'select-administration'
   - index: 2
     title: 'Verifica i dati della PA su IPA'
-    icon: '/assets/shuttle.svg'
+    icon: '/assets/lens-card.svg'
     headerParagraph: 'Alcune informazioni sull’amministrazione, tra cui il <strong>nome del responsabile legale della PA e gli indirizzi PEC</strong>, vengono caricati dalla banca dati IPA. Se i dati caricati automaticamente non dovessero essere corretti, dovrai aggiornarli su IPA.'
     sectionId: 'verify-data'
   - index: 3
     title: 'Conferma la registrazione'
-    icon: '/assets/shuttle.svg'
+    icon: '/assets/mail-card.svg'
     headerParagraph: 'Una volta selezionato l’indirizzo PEC più appropriato a ricevere le comunicazioni da PA digitale 2026, dovrai <strong>confermare l’attivazione del profilo della PA e del suo rappresentante legale</strong> mediante un link di verifica ricevuto via PEC.'
     sectionId: 'confirm-subscription'

@@ -47,7 +47,7 @@ const useStyle = createUseStyles({
     '&:nth-child(even)': {
       '& img': {
         order: '2',
-        marginRight: '5.556rem',
+        marginRight: '4.375rem',
         marginLeft: '0',
         '@media (max-width: 991px)': {
           order: '0',
@@ -73,6 +73,12 @@ const useStyle = createUseStyles({
             top: '-310px',
             left: '50%',
             transform: 'translateX(-50%)',
+          },
+        },
+        '& .header-info': {
+          marginRight: '6.111rem',
+          '@media (max-width: 991px)': {
+            marginRight: '0',
           },
         },
       },
@@ -125,7 +131,7 @@ const useStyle = createUseStyles({
   pointHeader: {
     display: 'flex',
     alignItems: 'center',
-    paddingLeft: '1.444rem',
+    padding: '0 1.444rem',
     overflow: 'hidden',
     position: 'relative',
     composes: 'point-header',
@@ -167,8 +173,9 @@ const useStyle = createUseStyles({
     },
   },
   headerInfo: {
-    marginRight: '6.111rem',
+    marginRight: '0',
     maxWidth: '450px',
+    composes: 'header-info',
     '@media (max-width: 991px)': {
       margin: '0',
       textAlign: 'center',
@@ -232,7 +239,7 @@ export const TimelineVerticalCards = ({ item }) => {
     <>
       <div className="container position-relative">
         <Totop />
-        <Row className="mb-5 mt-md-5">
+        <Row>
           <Col xs="11" className="offset-lg-1 mb-3 mb-lg-0">
             <div className={classes.timelineVertical}>
               <div className={classes.scrollIndicator}>

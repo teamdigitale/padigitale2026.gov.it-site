@@ -18,6 +18,12 @@ const useStyle = createUseStyles({
     top: '35px',
     left: '100%',
     marginRight: '-75px',
+    '@media (max-width: 1099px)': {
+      marginRight: '0',
+    },
+    '@media (max-width: 991px)': {
+      top: '75px',
+    },
   },
 });
 

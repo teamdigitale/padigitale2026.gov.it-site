@@ -2,7 +2,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-undef */
 import React, { useState, useEffect, useContext } from 'react';
-import { Container } from 'design-react-kit';
+import { Container, Row, Col } from 'design-react-kit';
 import { createUseStyles } from 'react-jss';
 import { announce } from '@react-aria/live-announcer';
 import faq from '../../contents/faq-page/faq.yml';
@@ -25,6 +25,7 @@ const useStyles = createUseStyles({
     display: 'flex',
     '@media (max-width: 991px)': {
       flexDirection: 'column',
+      border: 'none',
     },
     '& .content-container': {
       '@media (min-width: 992px)': {
@@ -57,10 +58,17 @@ const useStyles = createUseStyles({
       outline: '2px solid #ff9900',
     },
   },
+  contentTitle: {
+    fontSize: '1.688rem',
+    fontWeight: '700',
+  },
+  contentParagraph: {
+    fontSize: '1.125rem',
+  },
 });
 
 // eslint-disable-next-line sonarjs/cognitive-complexity
-export const ComeParteciparePage = () => {
+export const CreaProfiloPage = () => {
   const classes = useStyles();
   const [inputValue, setInputValue] = useState('');
   const [filterId, setFilterId] = useState('all');
@@ -165,8 +173,40 @@ export const ComeParteciparePage = () => {
               aria-label="Lista domande frequenti"
               aria-describedby="numberfaq"
             >
+              <Container>
+                <section id="intro">
+                  <h4 className={`${classes.contentTitle} mt-4`}>Crea il profilo della tua amministrazione</h4>
+                  <p className={`${classes.contentParagraph} mb-0`}>
+                    Il processo di attivazione della PA prevede <strong>quattro passaggi</strong>:
+                  </p>
+                </section>
+              </Container>
               <TimelineVerticalCards item={verticalTimeline} />
-              <HeroVideo />
+              <Container>
+                <p className={`${classes.contentParagraph} mb-5`}>
+                  Ti raccomandiamo quindi di verificare fin da subito l’accuratezza delle informazioni presenti su{' '}
+                  <a href="" className="d-inline-flex align-items-center">
+                    IPA <img src="/assets/external-link.svg" alt="" />
+                  </a>
+                  .
+                </p>
+              </Container>
+              <section id="watch-video">
+                <HeroVideo />
+              </section>
+              <Container>
+                <section id="to-read-more">
+                  <Row>
+                    <Col xs={12} lg={6}>
+                      <a href="#" className={classes.cardReadMore}>
+                        <img className={classes.clip} src="/assets/clip.svg"></img>
+                        <span className={classes.cardTitle}>Banda ultra larga</span>
+                        <span className={classes.cardInfo}>Scarica il PDF (3.7MB)</span>
+                      </a>
+                    </Col>
+                  </Row>
+                </section>
+              </Container>
             </div>
           </div>
         </Container>

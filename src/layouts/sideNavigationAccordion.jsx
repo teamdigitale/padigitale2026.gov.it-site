@@ -84,6 +84,9 @@ const useStyles = createUseStyles({
     '& .collapse-div': {
       borderBottom: '0',
       background: '#fff',
+      '@media (max-width: 991px)': {
+        border: 'none',
+      },
     },
     '& .collapse-body': {
       padding: '0',
