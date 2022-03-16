@@ -113,7 +113,7 @@ export const SideNavigation = (props) => {
     } else {
       if (!isMobile) {
         removeActive();
-        setActiveLinkOnChanges(list);
+        setActiveLinkOnChanges(content.sidebar);
         removeDisabled();
       }
     }
@@ -123,9 +123,9 @@ export const SideNavigation = (props) => {
 
   function disableLinks() {
     if (searchValue && searchValue.length >= 3) {
-      const activeItems = list.filter((el) => activeList.some((f) => f.sectionId === el.sectionId));
+      const activeItems = content.sidebar.filter((el) => activeList.some((f) => f.sectionId === el.sectionId));
 
-      const disabledItems = list.filter((ad) => activeList.every((fd) => fd.sectionId !== ad.sectionId));
+      const disabledItems = content.sidebar.filter((ad) => activeList.every((fd) => fd.sectionId !== ad.sectionId));
 
       if (!isMobile) {
         removeActive();
@@ -140,7 +140,7 @@ export const SideNavigation = (props) => {
     } else {
       if (!isMobile) {
         removeActive();
-        setActiveLinkOnChanges(list);
+        setActiveLinkOnChanges(content.sidebar);
       }
       removeDisabled();
     }

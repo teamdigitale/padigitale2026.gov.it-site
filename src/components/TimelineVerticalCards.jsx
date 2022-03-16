@@ -5,6 +5,7 @@ import React, { useEffect } from 'react';
 import { createUseStyles } from 'react-jss';
 import { Row, Col } from 'design-react-kit';
 import PropTypes from 'prop-types';
+import { Totop } from '../components/Totop';
 
 const useStyle = createUseStyles({
   timelineVertical: {
@@ -30,7 +31,7 @@ const useStyle = createUseStyles({
     background: 'linear-gradient(0deg, #0073E6 0%, #004080 100%)',
     width: '100%',
     height: '0',
-    transition: '1s ease',
+    transition: '.3s ease',
     maxHeight: '100%',
   },
   timelinePointSection: {
@@ -46,6 +47,12 @@ const useStyle = createUseStyles({
     '&:nth-child(even)': {
       '& img': {
         order: '2',
+        marginRight: '5.556rem',
+        marginLeft: '0',
+        '@media (max-width: 991px)': {
+          order: '0',
+          margin: '0 0 1.111rem 0',
+        },
       },
       '& .point-header': {
         '& .circle': {
@@ -59,6 +66,14 @@ const useStyle = createUseStyles({
           transform: 'translateY(-50%)',
           zIndex: '-9',
           borderRadius: '50%',
+          '@media (max-width: 991px)': {
+            right: 'unset',
+            width: '140%',
+            height: '420px',
+            top: '-310px',
+            left: '50%',
+            transform: 'translateX(-50%)',
+          },
         },
       },
     },
@@ -126,34 +141,48 @@ const useStyle = createUseStyles({
       zIndex: '-9',
       borderRadius: '50%',
     },
-    '@media (max-width: 767px)': {
-      flexDirection: 'column-reverse',
+    '& img': {
+      maxWidth: '130px',
+      marginRight: '5rem',
+      marginLeft: '3.611rem',
+    },
+    '@media (max-width: 991px)': {
+      flexDirection: 'column',
       marginBottom: '2.333rem',
+      padding: '1.444rem',
+      justifyContent: 'center',
       '& img': {
         width: '134px',
         height: '134px',
-        marginLeft: '-1.667rem',
+        margin: '0 0 1.111rem 0',
+      },
+      '& .circle': {
+        right: 'unset',
+        width: '140%',
+        height: '420px',
+        top: '-310px',
+        left: '50%',
+        transform: 'translateX(-50%)',
       },
     },
   },
   headerInfo: {
     marginRight: '6.111rem',
     maxWidth: '450px',
-    '@media (max-width: 767px)': {
-      marginLeft: '0',
+    '@media (max-width: 991px)': {
+      margin: '0',
+      textAlign: 'center',
     },
   },
   headerTitle: {
-    fontSize: '1.778rem',
+    fontSize: '1.5rem',
     fontWeight: '700',
     color: '#33485C',
+    marginBottom: '1.111rem',
   },
   headerParagraph: {
-    fontSize: '0.889rem',
+    fontSize: '1rem',
     lineHeight: '24px',
-    '@media (max-width: 992px)': {
-      marginBottom: '1.667rem',
-    },
   },
   littleTitle: {
     display: 'block',
@@ -176,9 +205,8 @@ export const TimelineVerticalCards = ({ item }) => {
   // eslint-disable-next-line sonarjs/cognitive-complexity
   useEffect(() => {
     const sectionsContainer = document.querySelector('.timeline-vertical');
-    const sections = sectionsContainer.querySelectorAll('.timeline-point-section');
 
-    const scrollIndicatorHandler = (event) => {
+    const scrollIndicatorHandler = () => {
       const timelineYpos = sectionsContainer.getBoundingClientRect();
       let top = timelineYpos.top;
       let bottom = timelineYpos.bottom;
@@ -193,7 +221,6 @@ export const TimelineVerticalCards = ({ item }) => {
         }
         const partialValue = bottom - top;
         const percentageScroll = 100 - (100 * partialValue) / sectionsContainerHeight;
-        console.log(percentageScroll);
         scrollIndicator.style.height = `${percentageScroll}%`;
       }
     };
@@ -203,7 +230,8 @@ export const TimelineVerticalCards = ({ item }) => {
 
   return (
     <>
-      <div className="container">
+      <div className="container position-relative">
+        <Totop />
         <Row className="mb-5 mt-md-5">
           <Col xs="11" className="offset-lg-1 mb-3 mb-lg-0">
             <div className={classes.timelineVertical}>

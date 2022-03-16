@@ -2,7 +2,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-undef */
 import React, { useState, useEffect, useContext } from 'react';
-import { Container, Input, Row, Col } from 'design-react-kit';
+import { Container } from 'design-react-kit';
 import { createUseStyles } from 'react-jss';
 import { announce } from '@react-aria/live-announcer';
 import faq from '../../contents/faq-page/faq.yml';
@@ -11,9 +11,8 @@ import seo from '../../contents/seo.yml';
 import { GlobalStateContext } from '../context/globalContext';
 import content from '../../contents/come-partecipare/come-partecipare.yml';
 import { TimelineVerticalCards } from '../components/TimelineVerticalCards';
-import { SideNavigation } from './faq/SideNavigation';
-import { QuestionSection } from './faq/QuestionSection';
-import { SupportSection } from './faq/SupportSection';
+import { HeroVideo } from '../components/HeroVideo';
+import { SideNavigationAccordion } from './SideNavigationAccordion';
 import { HeroSupport } from './support/Hero';
 
 const { title: seoTitle, description: seoDescription } = seo.faqPage;
@@ -21,6 +20,18 @@ const { title: seoTitle, description: seoDescription } = seo.faqPage;
 const { sidebar, verticalTimeline } = content;
 
 const useStyles = createUseStyles({
+  navigationContainer: {
+    borderTop: '1px solid #A9B9C3',
+    display: 'flex',
+    '@media (max-width: 991px)': {
+      flexDirection: 'column',
+    },
+    '& .content-container': {
+      '@media (min-width: 992px)': {
+        borderLeft: '1px solid #d9dadb',
+      },
+    },
+  },
   noResults: {
     textAlign: 'center',
     color: '#33485C',
@@ -111,23 +122,6 @@ export const ComeParteciparePage = () => {
     }
   };
 
-  function getAccordionsFiltered(question, input) {
-    const regexp = new RegExp(input, 'i');
-    return question.accordions.filter(
-      (accordion) => regexp.test(accordion.title) || regexp.test(accordion.content) || regexp.test(accordion.linkLabel)
-    );
-  }
-
-  function getNewQuestions(inputValue) {
-    const newQuest = [];
-    faq.questions.forEach((question) => {
-      if (getAccordionsFiltered(question, inputValue).length) {
-        newQuest.push(question);
-      }
-    });
-    return newQuest;
-  }
-
   function getQuestionsMobile(items) {
     const filteredQuestions = [];
     items.forEach((question) => {
@@ -145,25 +139,6 @@ export const ComeParteciparePage = () => {
     }
   }, [isMobile]);
 
-  useEffect(() => {
-    if (filterId) {
-      if (filterId === 'all') {
-        inputValue ? setQuestions(getNewQuestions(inputValue)) : setQuestions(faq.questions);
-      } else {
-        if (!getAccordionsFiltered(getQuestionsMobile(faq.questions)[0], inputValue).length) {
-          setQuestions(filterAccordions);
-        } else {
-          setQuestions(getQuestionsMobile(faq.questions));
-        }
-      }
-    }
-  }, [filterId, getNewQuestions, getQuestionsMobile, inputValue]);
-
-  const resetInput = () => {
-    setInputValue('');
-    setQuestions(faq.questions);
-  };
-
   return (
     <>
       <SEO title={seoTitle} description={seoDescription} />
@@ -172,25 +147,28 @@ export const ComeParteciparePage = () => {
       </div>
       <HeroSupport title={faq.hero.title} subtitle={faq.hero.subtitle} />
       <div className="docs py-4 py-md-5">
-        <Container className="px-3">
-          <h3 id="question-section" className="sr-only">
-            Sezione domande frequenti
-          </h3>
-          <Row>
-            <Col lg={3}>
-              <SideNavigation getFilter={setFilterId} activeList={questions} searchValue={inputValue} list={sidebar} />
-            </Col>
-            <Col
-              lg={9}
-              className="px-lg-3"
+        <Container>
+          <div className={classes.navigationContainer}>
+            <h3 id="question-section" className="sr-only">
+              Sezione domande frequenti
+            </h3>
+            <SideNavigationAccordion
+              getFilter={setFilterId}
+              activeList={questions}
+              searchValue={inputValue}
+              list={sidebar}
+            />
+            <div
+              className="pl-lg-3 content-container"
               id="id-list-faq"
               role="region"
               aria-label="Lista domande frequenti"
               aria-describedby="numberfaq"
             >
               <TimelineVerticalCards item={verticalTimeline} />
-            </Col>
-          </Row>
+              <HeroVideo />
+            </div>
+          </div>
         </Container>
       </div>
     </>
