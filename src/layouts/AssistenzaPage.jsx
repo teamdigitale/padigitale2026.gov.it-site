@@ -253,21 +253,6 @@ export const AssistenzaPage = () => {
   } = useStaticQuery(query);
 
   useEffect(() => {
-    const timeStamp = () => {
-      const response = document.getElementById('g-recaptcha-response');
-      if (response == null || response.value.trim() === '') {
-        const elems = JSON.parse(document.getElementsByName('captcha_settings')[0].value);
-        elems['ts'] = JSON.stringify(new Date().getTime());
-        document.getElementsByName('captcha_settings')[0].value = JSON.stringify(elems);
-        document.getElementsByName('submit')[0].disabled = true;
-      } else {
-        document.getElementsByName('submit')[0].disabled = false;
-      }
-    };
-    setInterval(timeStamp, 500);
-  }, []);
-
-  useEffect(() => {
     const form = document.querySelector('#assistance-form');
     const inputArr = form.querySelectorAll('[required]:not(select)');
     const selectArr = form.querySelectorAll('select[required]');
@@ -331,7 +316,14 @@ export const AssistenzaPage = () => {
   const classes = useStyles();
 
   function onChange(value) {
-    console.log('Captcha value:', value);
+    if (value == null || value.trim() === '') {
+      const elems = JSON.parse(document.getElementsByName('captcha_settings')[0].value);
+      elems['ts'] = JSON.stringify(new Date().getTime());
+      document.getElementsByName('captcha_settings')[0].value = JSON.stringify(elems);
+      document.getElementsByName('submit')[0].disabled = true;
+    } else {
+      document.getElementsByName('submit')[0].disabled = false;
+    }
   }
 
   const handleArgument = (element) => {
@@ -512,7 +504,7 @@ export const AssistenzaPage = () => {
         errorLabel.classList.add('error-label');
         errorLabel.innerHTML = emailValidationLabel;
         currentTarget.classList.add('is-invalid');
-      };
+      }
       if (currentPattern) {
         const patternRegExp = new RegExp(currentPattern);
         if (patternRegExp.test(currentValue)) {
@@ -752,6 +744,7 @@ export const AssistenzaPage = () => {
                     sitekey="6LfW56weAAAAAIWHJnwlQ2lHNRCcd04QLYQyamww"
                     onChange={onChange}
                     className={`${formFilled ? '' : 'd-none'}`}
+                    id="captcha-container"
                   />
                 </Col>
               </Row>
@@ -763,7 +756,7 @@ export const AssistenzaPage = () => {
                   </a>
                 </p>
                 <div className="d-flex">
-                  <input type="submit" name="submit" value={sendButtonLabel} className="btn btn-primary" />
+                  <input type="submit" name="submit" disabled value={sendButtonLabel} className="btn btn-primary" />
                   <img className={classes.spinner} src="/assets/spinner.gif"></img>
                 </div>
               </div>
