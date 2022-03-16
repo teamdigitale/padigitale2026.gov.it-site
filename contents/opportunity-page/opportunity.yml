@@ -68,8 +68,7 @@ beneficiaries:
     stalls: '280 enti'
     accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
-    moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: 'https://italiadomani.gov.it/it/Interventi/investimenti/infrastrutture-digitali.html'
+    updates: Il 28 gennaio 2022 è stato <a href="https://innovazione.gov.it/notizie/articoli/pubblicato-il-bando-per-il-polo-strategico-nazionale/">pubblicato il bando</a> per la realizzazione del Polo Strategico Nazionale (PSN). La proposta per la creazione del Polo, su cui si basa la gara, è stata individuata dal Dipartimento per la trasformazione digitale a dicembre 2021 secondo il modello di partenariato pubblico privato. La procedura è affidata a Difesa Servizi S.p.A., società in house del Ministero della Difesa, in qualità di centrale di committenza. 
   - number: 1.2
     id: abili-faci-migr
     title: Abilitazione e facilitazione migrazione al Cloud
@@ -152,8 +151,8 @@ beneficiaries:
     stalls: '230 enti'
     accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
-    moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: 'https://italiadomani.gov.it/it/Interventi/investimenti/dati-e-interoperabilita.html'
+    updates: Il Dipartimento per la trasformazione digitale ha siglato un <a href="https://www.agid.gov.it/it/agenzia/stampa-e-comunicazione/notizie/2022/02/21/pa-digitale-2026-i-progetti-sportello-digitale-unico-accessibilita-entrano-vivo" target="_blank" aria-label="Leggi di più sull'accordo di collaborazione con AgID (Collegamento esterno - Apre su nuova scheda)">accordo di collaborazione con AgID</a>, in quanto soggetto attuatore, per l’implementazione della misure. La Corte dei Conti ha registrato l’accordo rendendolo pienamente operativo. Per tutti gli aggiornamenti visita la <a href="https://www.agid.gov.it/it/agenzia/attuazione-misure-pnrr" target="_blank" aria-label="sezione dedicata del sito AgID (Collegamento esterno - Apre su nuova scheda)">sezione dedicata del sito AgID</a>.
+
   - number: 1.4.1
     id: esp-serv-pubb
     title: Esperienza dei servizi pubblici
@@ -207,6 +206,8 @@ beneficiaries:
     accessLabel: Presentazione Progetto
     moreInfoLabel: 'Leggi di più su Italia Domani'
     moreInfoLink: 'https://italiadomani.gov.it/it/Interventi/investimenti/servizi-digitali-e-cittadinanza-digitale.html'
+    updates: Il Dipartimento per la trasformazione digitale ha siglato un <a href="https://www.agid.gov.it/it/agenzia/stampa-e-comunicazione/notizie/2022/02/21/pa-digitale-2026-i-progetti-sportello-digitale-unico-accessibilita-entrano-vivo" target="_blank" aria-label="Leggi di più sull'accordo di collaborazione con AgID (Collegamento esterno - Apre su nuova scheda)">accordo di collaborazione con AgID</a>, in quanto soggetto attuatore, per l’implementazione della misure. La Corte dei Conti ha registrato l’accordo rendendolo pienamente operativo. Per tutti gli aggiornamenti visita la <a href="https://www.agid.gov.it/it/agenzia/attuazione-misure-pnrr" target="_blank" aria-label="sezione dedicata del sito AgID (Collegamento esterno - Apre su nuova scheda)">sezione dedicata del sito AgID</a>.
+
   - number: 1.4.3
     id: adoz-pago
     title: Adozione PagoPA e app IO
@@ -319,8 +320,7 @@ beneficiaries:
     stalls: '10 enti'
     accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
-    moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: 'https://italiadomani.gov.it/it/Interventi/investimenti/servizi-digitali-e-cittadinanza-digitale.html'
+    updates: <a href="https://innovazione.gov.it/notizie/avvisi-pubblici/mobility-as-a-service-for-italy/" target="_blank" aria-label="Leggi di più sull'avviso pubblico del 22 Novembre 2021 (Collegamento esterno - Apre su nuova scheda)">L’avviso pubblico del 22 novembre 2021</a> ha portato alla selezione di Milano, Napoli e Roma come città capofila per il progetto Mobility as a Service for Italy. Nei prossimi mesi sarà pubblicato un <a href="https://innovazione.gov.it/notizie/articoli/milano-napoli-e-roma-citta-capofila-per-il-progetto-mobility-as-a-service/" target="_blank" aria-label="Leggi di più sul nuovo bando per ampliare l'iniziativa (Collegamento esterno - Apre su nuova scheda)">nuovo bando per ampliare l’iniziativa</a>.
   - number: 1.5
     id: cyber
     title: Cybersecurity
@@ -340,8 +340,8 @@ beneficiaries:
     stalls: '6 enti'
     accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
-    moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: 'https://italiadomani.gov.it/it/Interventi/investimenti/cybersecurity-sicurezza-informatica.html'
+    updates: La Corte dei Conte ha registrato l'accordo tra il Dipartimento per la trasformazione digitale e l'Agenzia per la cybersicurezza, rendendo l'Agenzia soggetto attuatore della misura. Per tutti gli aggiornamenti visita la <a href="https://www.acn.gov.it/pnrr" target="_blank" aria-label="Leggi di più sulla pagina dedicata sul sito dell'Agenzia(Collegamento esterno - Apre su nuova scheda)">pagina dedicata sul sito dell'Agenzia</a>. 
+
   - number: 1.6
     id: digi-gran-amm
     title: Digitalizzazione grandi amministrazioni centrali
@@ -353,8 +353,7 @@ beneficiaries:
     stalls: '7 enti'
     accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
-    moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: 'https://italiadomani.gov.it/it/Interventi/investimenti/digitalizzazione-delle-grandi-amministrazioni-centrali.html'
+    updates: Il Dipartimento per la trasformazione digitale ha stretto accordi di collaborazione con tutte le grandi amministrazioni coinvolte dalla misura&#58; INPS, Ministero della Giustizia, INAIL, Ministero dell’Interno, Ministero delle Difesa, Guardia di Finanza e Consiglio di Stato. Gli accordi sono stati registrati dalla Corte dei Conti, dando ufficialmente il via all’implementazione delle singole iniziative. Per maggiori informazioni visita <a href="https://innovazione.gov.it/notizie/articoli/la-svolta-digitale-delle-grandi-amministrazioni-centrali/" target="_blank" aria-label="Leggi di più (Collegamento esterno - Apre su nuova scheda)">innovazione.gov.it</a>.
   - number: 1.7.1
     id: servi-civi
     title: Servizio civile digitale
@@ -370,8 +369,7 @@ beneficiaries:
     stalls: '100 enti'
     accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
-    moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: 'https://italiadomani.gov.it/it/Interventi/investimenti/competenze-digitali-di-base.html'
+    updates: Il Dipartimento per la trasformazione digitale della Presidenza del Consiglio dei ministri, ha individuato il Dipartimento per le politiche giovanili e il Servizio Civile Universale quale Soggetto attuatore della misura. Il 26 gennaio il Dipartimento ha quindi <a href="https://innovazione.gov.it/notizie/articoli/servizio-civile-digitale-al-via-il-nuovo-avviso-per-gli-enti/" target="_blank" aria-label="Leggi di più (Collegamento esterno - Apre su nuova scheda)">pubblicato il primo avviso pubblico per gli enti</a>. 
   - number: 1.7.2
     id: centri-facili
     title: Centri di facilitazione digitale

@@ -146,33 +146,6 @@ const useStyles = createUseStyles({
         textTransform: 'lowercase',
       },
     },
-    '& .access': {
-      fontSize: '0.778rem',
-      lineHeight: '1.4',
-      letterSpacing: '0.5px',
-      textTransform: 'uppercase',
-      display: 'flex',
-      alignItems: 'baseline',
-      marginBottom: '1rem',
-      '& span': {
-        flexShrink: '0',
-        marginRight: '0.313rem',
-      },
-      '& a': {
-        fontSize: '1.125rem',
-        lineHeight: '1',
-        fontWeight: '600',
-        color: '#0066CC',
-        textTransform: 'capitalize',
-        textDecoration: 'none',
-        '@media (min-width: 992px)': {
-          fontSize: '1rem',
-        },
-        '&:hover': {
-          textDecoration: 'underline',
-        },
-      },
-    },
   },
   linkAccordion: {
     textAlign: 'right',
@@ -251,6 +224,39 @@ const useStyles = createUseStyles({
   stalls: {
     marginBottom: '1rem',
   },
+  moreInfo: {
+    composes: 'info-row',
+    fontSize: '0.778rem',
+    lineHeight: '1.4',
+    letterSpacing: '0.5px',
+    textTransform: 'uppercase',
+    display: 'flex',
+    alignItems: 'baseline',
+    '& + .info-row': {
+      marginTop: '15px',
+    },
+    '& .label-info': {
+      flexBasis: '9.4rem',
+      flexShrink: '0',
+      marginRight: '1rem',
+    },
+    '& .value-info': {
+      fontSize: '0.88rem',
+      fontWeight: 600,
+      lineHeight: '1.25',
+      '&.access': {
+        color: '#06c',
+      },
+      '&.updates': {
+        fontWeight: 'normal',
+        lineHeight: '1.5',
+        textTransform: 'none',
+        '& a': {
+          fontWeight: '600',
+        }
+      }
+    },
+  }
 });
 
 export const AccordionButtonFull = (props) => {
@@ -267,8 +273,9 @@ export const AccordionButtonFull = (props) => {
     accessSectionId,
     moreInfoLabel,
     moreInfoLink,
+    updates,
   } = props.data;
-
+  
   const [, dispatch] = useContext(GlobalStateContext);
 
   const eventHandler = () => {
@@ -310,27 +317,20 @@ export const AccordionButtonFull = (props) => {
             <Card>
               <CardBody>
                 <div className={classes.description} dangerouslySetInnerHTML={{ __html: description }}></div>
-                <div className={classes.stalls}>
-                  Platea potenziale: <span>{stalls}</span>
+                <div className={classes.moreInfo}>
+                  <span className="label-info">Platea potenziale</span>
+                  <span className="value-info">{stalls}</span>
                 </div>
-                <div className="access">
-                  <span>Modalità di accesso:</span>{' '}
-                  <button
-                    className={classes.accessLink}
-                    onClick={() => {
-                      dispatch({
-                        type: 'SET:HOW_SECTION_ID',
-                        payload: { howId: accessSectionId },
-                      });
-                      navigate('/come-funziona');
-                    }}
-                  >
-                    <span className="sr-only">Vai alla sezione </span>
-                    <span>{accessLabel}</span>
-                    <span className="sr-only"> della pagina come funziona</span>
-                  </button>
+                <div className={classes.moreInfo}>
+                  <span className="label-info">Modalità di accesso</span>
+                  <span className="value-info access">{accessLabel}</span>
                 </div>
-                <div className={classes.linkAccordion}>
+                {updates && 
+                <div className={classes.moreInfo}>
+                  <span className="label-info">Aggiornamenti</span>
+                  <span className="value-info updates" dangerouslySetInnerHTML={{ __html: updates }}></span>
+                </div>}
+                {/* <div className={classes.linkAccordion}>
                   <ExternalLink
                     linkTo={moreInfoLink}
                     ariaLabel={`${moreInfoLabel}, ${title}, (Collegamento esterno - Apre su nuova scheda)`}
@@ -338,7 +338,7 @@ export const AccordionButtonFull = (props) => {
                     {moreInfoLabel}
                     <img src="/assets/external-icon.svg" alt="" />
                   </ExternalLink>
-                </div>
+                </div> */}
               </CardBody>
             </Card>
           </Collapse>
