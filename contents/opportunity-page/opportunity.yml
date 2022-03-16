@@ -95,8 +95,7 @@ beneficiaries:
     stalls: '16,600 enti'
     accessSectionId: soluzioni-standard
     accessLabel: Soluzioni Standard
-    moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: 'https://italiadomani.gov.it/it/Interventi/investimenti/abilitazione-e-facilitazione-migrazione-al-cloud.html'
+    moreInfoLink: '#'
   - number: 1.3.1
     id: piatt-dig-naz
     title: Piattaforma Digitale Nazionale Dati
@@ -124,8 +123,7 @@ beneficiaries:
     stalls: '170 enti'
     accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
-    moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: 'https://italiadomani.gov.it/it/Interventi/investimenti/dati-e-interoperabilita.html'
+    moreInfoLink: '#'
   - number: 1.3.2
     id: sport-digi-unic
     title: Sportello Digitale Unico
@@ -152,7 +150,6 @@ beneficiaries:
     accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
     updates: Il Dipartimento per la trasformazione digitale ha siglato un <a href="https://www.agid.gov.it/it/agenzia/stampa-e-comunicazione/notizie/2022/02/21/pa-digitale-2026-i-progetti-sportello-digitale-unico-accessibilita-entrano-vivo" target="_blank" aria-label="Leggi di più sull'accordo di collaborazione con AgID (Collegamento esterno - Apre su nuova scheda)">accordo di collaborazione con AgID</a>, in quanto soggetto attuatore, per l’implementazione della misure. La Corte dei Conti ha registrato l’accordo rendendolo pienamente operativo. Per tutti gli aggiornamenti visita la <a href="https://www.agid.gov.it/it/agenzia/attuazione-misure-pnrr" target="_blank" aria-label="sezione dedicata del sito AgID (Collegamento esterno - Apre su nuova scheda)">sezione dedicata del sito AgID</a>.
-
   - number: 1.4.1
     id: esp-serv-pubb
     title: Esperienza dei servizi pubblici
@@ -176,8 +173,7 @@ beneficiaries:
     stalls: '16,500 enti'
     accessSectionId: soluzioni-standard
     accessLabel: Soluzioni standard
-    moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: 'https://italiadomani.gov.it/it/Interventi/investimenti/servizi-digitali-e-cittadinanza-digitale.html'
+    moreInfoLink: '#'
   - number: 1.4.2
     id: access
     title: Accessibilità
@@ -204,10 +200,7 @@ beneficiaries:
     stalls: '55 enti'
     accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
-    moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: 'https://italiadomani.gov.it/it/Interventi/investimenti/servizi-digitali-e-cittadinanza-digitale.html'
     updates: Il Dipartimento per la trasformazione digitale ha siglato un <a href="https://www.agid.gov.it/it/agenzia/stampa-e-comunicazione/notizie/2022/02/21/pa-digitale-2026-i-progetti-sportello-digitale-unico-accessibilita-entrano-vivo" target="_blank" aria-label="Leggi di più sull'accordo di collaborazione con AgID (Collegamento esterno - Apre su nuova scheda)">accordo di collaborazione con AgID</a>, in quanto soggetto attuatore, per l’implementazione della misure. La Corte dei Conti ha registrato l’accordo rendendolo pienamente operativo. Per tutti gli aggiornamenti visita la <a href="https://www.agid.gov.it/it/agenzia/attuazione-misure-pnrr" target="_blank" aria-label="sezione dedicata del sito AgID (Collegamento esterno - Apre su nuova scheda)">sezione dedicata del sito AgID</a>.
-
   - number: 1.4.3
     id: adoz-pago
     title: Adozione PagoPA e app IO
@@ -242,8 +235,7 @@ beneficiaries:
     stalls: '17,500 enti'
     accessSectionId: soluzioni-standard
     accessLabel: Soluzioni Standard
-    moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: 'https://italiadomani.gov.it/it/Interventi/investimenti/servizi-digitali-e-cittadinanza-digitale.html'
+    moreInfoLink: '#'
   - number: 1.4.4
     id: adoz-id
     title: Adozione identità digitale
@@ -282,8 +274,7 @@ beneficiaries:
     stalls: '10,300 enti'
     accessSectionId: soluzioni-standard
     accessLabel: Soluzioni Standard
-    moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: 'https://italiadomani.gov.it/it/Interventi/investimenti/servizi-digitali-e-cittadinanza-digitale.html'
+    moreInfoLink: '#'
   - number: 1.4.5
     id: digi-avvisi
     title: Digitalizzazione degli avvisi pubblici
@@ -301,8 +292,7 @@ beneficiaries:
     stalls: '7,900 enti'
     accessSectionId: soluzioni-standard
     accessLabel: Soluzioni standard
-    moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: 'https://italiadomani.gov.it/it/Interventi/investimenti/servizi-digitali-e-cittadinanza-digitale.html'
+    moreInfoLink: '#'
   - number: 1.4.6
     id: maas
     title: MaaS
@@ -387,8 +377,7 @@ beneficiaries:
     stalls: '21 enti'
     accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
-    moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: 'https://italiadomani.gov.it/it/Interventi/investimenti/competenze-digitali-di-base.html'
+    moreInfoLink: '#'
 modal:
   selectRepresent:
     - value: public-administration

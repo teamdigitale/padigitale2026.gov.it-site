@@ -148,7 +148,7 @@ const useStyles = createUseStyles({
     },
   },
   linkAccordion: {
-    textAlign: 'right',
+    marginTop: '1.5rem',
     '@media (min-width: 992px)': {
       marginTop: '2.222rem',
     },
@@ -256,6 +256,15 @@ const useStyles = createUseStyles({
         }
       }
     },
+    '&.updates': {
+      '@media (max-width: 992px)': {
+        display: 'block',
+        '& .label-info': {
+          display: 'block',
+          marginBottom: '0.888rem'
+        },
+      },
+    }
   }
 });
 
@@ -326,19 +335,18 @@ export const AccordionButtonFull = (props) => {
                   <span className="value-info access">{accessLabel}</span>
                 </div>
                 {updates && 
-                <div className={classes.moreInfo}>
+                <div className={`${classes.moreInfo} updates`}>
                   <span className="label-info">Aggiornamenti</span>
                   <span className="value-info updates" dangerouslySetInnerHTML={{ __html: updates }}></span>
                 </div>}
-                {/* <div className={classes.linkAccordion}>
+                {!updates && 
+                <div className={classes.linkAccordion}>
                   <ExternalLink
+                    className="btn btn-primary"
                     linkTo={moreInfoLink}
                     ariaLabel={`${moreInfoLabel}, ${title}, (Collegamento esterno - Apre su nuova scheda)`}
-                  >
-                    {moreInfoLabel}
-                    <img src="/assets/external-icon.svg" alt="" />
-                  </ExternalLink>
-                </div> */}
+                  >VAI ALL'AVVISO</ExternalLink>
+                </div>}
               </CardBody>
             </Card>
           </Collapse>
