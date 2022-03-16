@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { Button, Collapse, Card, CardBody } from 'design-react-kit';
 import { createUseStyles } from 'react-jss';
-import { navigate } from 'gatsby';
 import PropTypes from 'prop-types';
 import { GlobalStateContext } from '../context/globalContext';
 import { ExternalLink } from './ExternalLink';
@@ -253,39 +252,27 @@ const useStyles = createUseStyles({
         textTransform: 'none',
         '& a': {
           fontWeight: '600',
-        }
-      }
+        },
+      },
     },
     '&.updates': {
       '@media (max-width: 992px)': {
         display: 'block',
         '& .label-info': {
           display: 'block',
-          marginBottom: '0.888rem'
+          marginBottom: '0.888rem',
         },
       },
-    }
-  }
+    },
+  },
 });
 
 export const AccordionButtonFull = (props) => {
   const classes = useStyles();
-  const {
-    id,
-    number,
-    title,
-    money,
-    tags,
-    description,
-    stalls,
-    accessLabel,
-    accessSectionId,
-    moreInfoLabel,
-    moreInfoLink,
-    updates,
-  } = props.data;
-  
-  const [, dispatch] = useContext(GlobalStateContext);
+  const { id, number, title, money, tags, description, stalls, accessLabel, moreInfoLabel, moreInfoLink, updates } =
+    props.data;
+
+  const [,] = useContext(GlobalStateContext);
 
   const eventHandler = () => {
     props.handleToggle(props.id);
@@ -334,19 +321,23 @@ export const AccordionButtonFull = (props) => {
                   <span className="label-info">Modalità di accesso</span>
                   <span className="value-info access">{accessLabel}</span>
                 </div>
-                {updates && 
-                <div className={`${classes.moreInfo} updates`}>
-                  <span className="label-info">Aggiornamenti</span>
-                  <span className="value-info updates" dangerouslySetInnerHTML={{ __html: updates }}></span>
-                </div>}
-                {!updates && 
-                <div className={classes.linkAccordion}>
-                  <ExternalLink
-                    className="btn btn-primary"
-                    linkTo={moreInfoLink}
-                    ariaLabel={`${moreInfoLabel}, ${title}, (Collegamento esterno - Apre su nuova scheda)`}
-                  >VAI ALL'AVVISO</ExternalLink>
-                </div>}
+                {updates && (
+                  <div className={`${classes.moreInfo} updates`}>
+                    <span className="label-info">Aggiornamenti</span>
+                    <span className="value-info updates" dangerouslySetInnerHTML={{ __html: updates }}></span>
+                  </div>
+                )}
+                {!updates && (
+                  <div className={classes.linkAccordion}>
+                    <ExternalLink
+                      className="btn btn-primary"
+                      linkTo={moreInfoLink}
+                      ariaLabel={`${moreInfoLabel}, ${title}, (Collegamento esterno - Apre su nuova scheda)`}
+                    >
+                      VAI ALL&apos;AVVISO
+                    </ExternalLink>
+                  </div>
+                )}
               </CardBody>
             </Card>
           </Collapse>
