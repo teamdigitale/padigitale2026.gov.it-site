@@ -2,22 +2,37 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-undef */
 import React, { useState, useEffect, useContext } from 'react';
-import { Container, Input, Row, Col } from 'design-react-kit';
+import { Container, Row, Col } from 'design-react-kit';
 import { createUseStyles } from 'react-jss';
 import { announce } from '@react-aria/live-announcer';
 import faq from '../../contents/faq-page/faq.yml';
 import { SEO } from '../components/SEO';
 import seo from '../../contents/seo.yml';
 import { GlobalStateContext } from '../context/globalContext';
-import content from '../../contents/faq-page/faq.yml';
-import { SideNavigation } from './faq/SideNavigation';
-import { QuestionSection } from './faq/QuestionSection';
-import { SupportSection } from './faq/SupportSection';
+import content from '../../contents/come-partecipare/come-partecipare.yml';
+import { TimelineVerticalCards } from '../components/TimelineVerticalCards';
+import { HeroVideo } from '../components/HeroVideo';
+import { SideNavigationAccordion } from './SideNavigationAccordion';
 import { HeroSupport } from './support/Hero';
 
 const { title: seoTitle, description: seoDescription } = seo.faqPage;
 
+const { sidebar, verticalTimeline } = content;
+
 const useStyles = createUseStyles({
+  navigationContainer: {
+    borderTop: '1px solid #A9B9C3',
+    display: 'flex',
+    '@media (max-width: 991px)': {
+      flexDirection: 'column',
+      border: 'none',
+    },
+    '& .content-container': {
+      '@media (min-width: 992px)': {
+        borderLeft: '1px solid #d9dadb',
+      },
+    },
+  },
   noResults: {
     textAlign: 'center',
     color: '#33485C',
@@ -43,10 +58,17 @@ const useStyles = createUseStyles({
       outline: '2px solid #ff9900',
     },
   },
+  contentTitle: {
+    fontSize: '1.688rem',
+    fontWeight: '700',
+  },
+  contentParagraph: {
+    fontSize: '1.125rem',
+  },
 });
 
 // eslint-disable-next-line sonarjs/cognitive-complexity
-export const FaqPage = () => {
+export const CreaProfiloPage = () => {
   const classes = useStyles();
   const [inputValue, setInputValue] = useState('');
   const [filterId, setFilterId] = useState('all');
@@ -108,23 +130,6 @@ export const FaqPage = () => {
     }
   };
 
-  function getAccordionsFiltered(question, input) {
-    const regexp = new RegExp(input, 'i');
-    return question.accordions.filter(
-      (accordion) => regexp.test(accordion.title) || regexp.test(accordion.content) || regexp.test(accordion.linkLabel)
-    );
-  }
-
-  function getNewQuestions(inputValue) {
-    const newQuest = [];
-    faq.questions.forEach((question) => {
-      if (getAccordionsFiltered(question, inputValue).length) {
-        newQuest.push(question);
-      }
-    });
-    return newQuest;
-  }
-
   function getQuestionsMobile(items) {
     const filteredQuestions = [];
     items.forEach((question) => {
@@ -142,25 +147,6 @@ export const FaqPage = () => {
     }
   }, [isMobile]);
 
-  useEffect(() => {
-    if (filterId) {
-      if (filterId === 'all') {
-        inputValue ? setQuestions(getNewQuestions(inputValue)) : setQuestions(faq.questions);
-      } else {
-        if (!getAccordionsFiltered(getQuestionsMobile(faq.questions)[0], inputValue).length) {
-          setQuestions(filterAccordions);
-        } else {
-          setQuestions(getQuestionsMobile(faq.questions));
-        }
-      }
-    }
-  }, [filterId, getNewQuestions, getQuestionsMobile, inputValue]);
-
-  const resetInput = () => {
-    setInputValue('');
-    setQuestions(faq.questions);
-  };
-
   return (
     <>
       <SEO title={seoTitle} description={seoDescription} />
@@ -169,80 +155,62 @@ export const FaqPage = () => {
       </div>
       <HeroSupport title={faq.hero.title} subtitle={faq.hero.subtitle} />
       <div className="docs py-4 py-md-5">
-        <Container className="px-3">
-          <h3 id="question-section" className="sr-only">
-            Sezione domande frequenti
-          </h3>
-          <Row>
-            <Col lg={9} className="offset-lg-3 px-lg-3">
-              <div role="search" className={classes.inputContainer} aria-label="Nelle domande frequenti">
-                <div id="searchbox-desk" className="sr-only">
-                  Ad ogni digitazione il numero di domande frequenti presenti in pagina verrà aggiornato.
-                </div>
-                <Input
-                  className={inputValue.length > 0 ? '' : classes.inputWrap}
-                  type="text"
-                  label="Cerca nelle domande frequenti"
-                  id="faq-search"
-                  role="searchbox"
-                  aria-describedby="searchbox-desk"
-                  aria-controls="id-list-faq"
-                  onChange={handleChange}
-                />
-                {inputValue.length > 0 && (
-                  <button className="reset-btn" onClick={resetInput}>
-                    <span className="sr-only">Il campo svuota l'input</span>
-                  </button>
-                )}
-              </div>
-            </Col>
-          </Row>
-          <Row>
-            <Col lg={3}>
-              <SideNavigation
-                getFilter={setFilterId}
-                activeList={questions}
-                searchValue={inputValue}
-                list={content.sidebar}
-              />
-            </Col>
-            <Col
-              lg={9}
-              className="px-lg-3"
+        <Container>
+          <div className={classes.navigationContainer}>
+            <h3 id="question-section" className="sr-only">
+              Sezione domande frequenti
+            </h3>
+            <SideNavigationAccordion
+              getFilter={setFilterId}
+              activeList={questions}
+              searchValue={inputValue}
+              list={sidebar}
+            />
+            <div
+              className="pl-lg-3 content-container"
               id="id-list-faq"
               role="region"
               aria-label="Lista domande frequenti"
               aria-describedby="numberfaq"
             >
-              <span className="sr-only" id="numberfaq" aria-live="assertive">
-                Numero faq filtrate {questNum}
-              </span>
-              {questions.map((question) => (
-                <QuestionSection
-                  key={question.title}
-                  item={question}
-                  inputText={inputValue}
-                  handleToggle={() => {
-                    dispatch({ type: 'SET:TOGGLE_MODAL' });
-                  }}
-                />
-              ))}
-              {!questions.length && (
-                <p className={classes.noResults} role="alert">
-                  {faq.noResults}
+              <Container>
+                <section id="intro">
+                  <h4 className={`${classes.contentTitle} mt-4`}>Crea il profilo della tua amministrazione</h4>
+                  <p className={`${classes.contentParagraph} mb-0`}>
+                    Il processo di attivazione della PA prevede <strong>quattro passaggi</strong>:
+                  </p>
+                </section>
+              </Container>
+              <TimelineVerticalCards item={verticalTimeline} />
+              <Container>
+                <p className={`${classes.contentParagraph} mb-5`}>
+                  Ti raccomandiamo quindi di verificare fin da subito l’accuratezza delle informazioni presenti su{' '}
+                  <a href="" className="d-inline-flex align-items-center">
+                    IPA <img src="/assets/external-link.svg" alt="" />
+                  </a>
+                  .
                 </p>
-              )}
-            </Col>
-          </Row>
+              </Container>
+              <section id="watch-video">
+                <HeroVideo />
+              </section>
+              <Container>
+                <section id="to-read-more">
+                  <Row>
+                    <Col xs={12} lg={6}>
+                      <a href="#" className={classes.cardReadMore}>
+                        <img className={classes.clip} src="/assets/clip.svg"></img>
+                        <span className={classes.cardTitle}>Banda ultra larga</span>
+                        <span className={classes.cardInfo}>Scarica il PDF (3.7MB)</span>
+                      </a>
+                    </Col>
+                  </Row>
+                </section>
+              </Container>
+            </div>
+          </div>
         </Container>
       </div>
-      <SupportSection
-        supportList={faq.support.cards}
-        title={faq.support.title}
-        handleToggle={() => {
-          dispatch({ type: 'SET:TOGGLE_MODAL_MESSAGE' });
-        }}
-      />
     </>
   );
 };

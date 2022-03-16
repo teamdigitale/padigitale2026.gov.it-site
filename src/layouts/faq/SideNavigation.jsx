@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 import { createUseStyles } from 'react-jss';
 import { useState } from 'react';
 import { useEffect } from 'react';
-import content from '../../../contents/faq-page/faq.yml';
 
 const useStyles = createUseStyles({
   wrapper: {
@@ -98,7 +97,7 @@ export const SideNavigation = (props) => {
   const classes = useStyles();
   const [isMobile, setIsMobile] = useState();
   const itemSel = '.sidebar-wrapper .link-list .list-item';
-  const { activeList, searchValue } = props;
+  const { activeList, searchValue, list } = props;
   useEffect(() => {
     setIsMobile(window.innerWidth < 992);
     window.addEventListener('resize', () => {
@@ -207,7 +206,7 @@ export const SideNavigation = (props) => {
             </LinkListItem>
           )}
 
-          {content.sidebar.map((anchor) => (
+          {list.map((anchor) => (
             <React.Fragment key={anchor.sectionId}>
               {anchor.sectionActive ? (
                 <LinkListItem
@@ -245,4 +244,5 @@ SideNavigation.propTypes = {
   activeList: PropTypes.array,
   searchValue: PropTypes.string,
   getFilter: PropTypes.func,
+  list: PropTypes.array,
 };
