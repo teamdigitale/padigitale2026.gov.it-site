@@ -243,7 +243,7 @@ const useStyles = createUseStyles({
   mandatory: {
     fontSize: '16px',
     marginTop: '60px',
-  }
+  },
 });
 
 const query = graphql`
@@ -332,12 +332,9 @@ export const AssistenzaPage = () => {
   const classes = useStyles();
 
   const onChangeCaptcha = (value) => {
-    console.log(value);
     if (value !== null || value.trim() !== '') {
       const elems = JSON.parse(document.getElementsByName('captcha_settings')[0].value);
-      console.log('json', JSON.stringify(new Date().getTime()));
       elems['ts'] = JSON.stringify(new Date().getTime());
-      console.log('ts', elems['ts']);
       document.getElementsByName('captcha_settings')[0].value = JSON.stringify(elems);
       document.getElementsByName('submit')[0].disabled = false;
     }
@@ -537,6 +534,21 @@ export const AssistenzaPage = () => {
     }
   };
 
+  const formHandler = () => {
+    const notificationElement = document.querySelector('.notification');
+    const titleElement = notificationElement.querySelector('h5');
+    const descriptionElement = notificationElement.querySelector('p');
+    notificationElement.classList.add('show');
+    notificationElement.classList.add('success');
+
+    titleElement.innerHTML = `${successLabels.icon} ${successLabels.title}`;
+    descriptionElement.innerHTML = successLabels.description;
+
+    setTimeout(() => {
+      notificationElement.classList.remove('show');
+    }, 5000);
+  };
+
   const {
     selectArgument,
     selectMeasure,
@@ -579,6 +591,7 @@ export const AssistenzaPage = () => {
               className={classes.formMessage}
               id="assistance-form"
               target="formFrame"
+              onSubmit={formHandler}
             >
               <input
                 type="hidden"
@@ -788,6 +801,40 @@ export const AssistenzaPage = () => {
                 </div>
               </div>
             </form>
+            <div className={classes.notification} role="alert" aria-labelledby="not2dms-title" id="not2dms2">
+              <h5 id="not2dms-title2">
+                notifiche
+                <svg className="icon" role="img" aria-label=""></svg>
+              </h5>
+              <p></p>
+              <button
+                type="button"
+                className="btn notification-close"
+                aria-label="Chiudi"
+                aria-describedby="not2dms-title"
+              >
+                <svg
+                  width="19"
+                  height="19"
+                  viewBox="0 0 19 19"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  focusable="false"
+                  role="img"
+                  aria-label="Chiudi"
+                >
+                  <rect
+                    x="17.3242"
+                    y="0.5"
+                    width="1.49987"
+                    height="24.4978"
+                    transform="rotate(45 17.3242 0.5)"
+                    fill="#5C6F82"
+                  />
+                  <rect y="1.56055" width="1.49987" height="24.4978" transform="rotate(-45 0 1.56055)" fill="#5C6F82" />
+                </svg>
+              </button>
+            </div>
           </Col>
         </Row>
         <script src="https://www.google.com/recaptcha/api.js"></script>
