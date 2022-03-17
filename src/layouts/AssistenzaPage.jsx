@@ -10,9 +10,9 @@ import { createUseStyles } from 'react-jss';
 import { announce } from '@react-aria/live-announcer';
 import { Row, Col, Input } from 'design-react-kit';
 import Select from 'react-select';
-import { graphql, useStaticQuery } from 'gatsby';
 import ReCAPTCHA from 'react-google-recaptcha';
 import content from '../../contents/opportunity-page/opportunity.yml';
+import contentAssistance from '../../contents/assistenza/assistenza.yml';
 import notificationsLabel from '../../contents/notifications.yml';
 import errorsLabels from '../../contents/errorsLabels.yml';
 import links from '../../contents/links.yml';
@@ -20,7 +20,6 @@ const { privacy } = links.internalLinks;
 import seo from '../../contents/seo.yml';
 import { SEO } from '../components/SEO';
 import { Breadcrumb } from '../components/Breadcrumb';
-
 
 const { title: seoTitle, description: seoDescription } = seo.assistenzaPage;
 const { successMessage: successLabels, error: errorLabels, errorAddress: errorAddressLabel } = notificationsLabel;
@@ -246,27 +245,12 @@ const useStyles = createUseStyles({
   },
 });
 
-const query = graphql`
-  query {
-    site {
-      siteMetadata {
-        apiUrl
-      }
-    }
-  }
-`;
-
 const optionSelected = new Event('selected');
 
 export const AssistenzaPage = () => {
   const textareaMaxLength = 300;
   const [textareaDescriptionState, setTextareaDescriptionState] = useState('not-active');
   const [formFilled, setFormFilled] = useState(false);
-  const {
-    site: {
-      siteMetadata: { apiUrl },
-    },
-  } = useStaticQuery(query);
 
   useEffect(() => {
     const form = document.querySelector('#assistance-form');
@@ -569,7 +553,7 @@ export const AssistenzaPage = () => {
   return (
     <>
       <SEO title={seoTitle} description={seoDescription} />
-      <Breadcrumb currentPage={content.breadcrumb} />
+      <Breadcrumb currentPage={contentAssistance.breadcrumb} />
       <div className="container">
         <iframe name="formFrame" id="formFrame" className="d-none"></iframe>
         <Row className='mt-5'>
