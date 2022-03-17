@@ -65,6 +65,29 @@ const useStyles = createUseStyles({
   contentParagraph: {
     fontSize: '1.125rem',
   },
+  cardReadMore: {
+    boxShadow: '0px 2px 20px rgba(0, 0, 0, 0.1)',
+    display: 'flex',
+    flexDirection: 'column',
+    padding: '20px 30px 20px 55px',
+    position: 'relative',
+    textDecoration: 'none',
+  },
+  clip: {
+    position: 'absolute',
+    top: '24px',
+    left: '30px',
+  },
+  cardTitle: {
+    fontWeight: '600',
+    color: '#0066CC',
+    fontSize: '1.125rem',
+  },
+  cardInfo: {
+    fontWeight: '600',
+    fontSize: '0.875rem',
+    color: '#33485C'
+  },
 });
 
 // eslint-disable-next-line sonarjs/cognitive-complexity
@@ -191,13 +214,13 @@ export const CreaProfiloPage = () => {
                   .
                 </p>
               </Container>
-              <section id="watch-video">
+              <section id="watch-video" className='mb-5'>
                 <HeroVideo />
               </section>
               <Container>
                 <section id="to-read-more">
                   <Row>
-                    <Col xs={12} lg={6}>
+                    <Col xs={12} lg={4}>
                       <a href="#" className={classes.cardReadMore}>
                         <img className={classes.clip} src="/assets/clip.svg"></img>
                         <span className={classes.cardTitle}>Banda ultra larga</span>

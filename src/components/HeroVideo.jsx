@@ -19,6 +19,9 @@ const useStyle = createUseStyles({
     flexDirection: 'column',
     flexBasis: '45%',
     marginRight: '4.063rem',
+    '@media (max-width: 991px)': {
+      padding: '2rem',
+    },
   },
   videoContainer: {
     flexBasis: '55%',
