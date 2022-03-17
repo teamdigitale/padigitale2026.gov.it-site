@@ -315,16 +315,17 @@ export const AssistenzaPage = () => {
 
   const classes = useStyles();
 
-  function onChange(value) {
-    if (value == null || value.trim() === '') {
+  const onChangeCaptcha = (value) => {
+    console.log(value);
+    if (value !== null || value.trim() !== '') {
       const elems = JSON.parse(document.getElementsByName('captcha_settings')[0].value);
+      console.log('json', JSON.stringify(new Date().getTime()));
       elems['ts'] = JSON.stringify(new Date().getTime());
+      console.log('ts', elems['ts']);
       document.getElementsByName('captcha_settings')[0].value = JSON.stringify(elems);
-      document.getElementsByName('submit')[0].disabled = true;
-    } else {
       document.getElementsByName('submit')[0].disabled = false;
     }
-  }
+  };
 
   const handleArgument = (element) => {
     const argumentInput = document.querySelector('#argument-select-input');
@@ -523,7 +524,6 @@ export const AssistenzaPage = () => {
   const {
     selectArgument,
     selectMeasure,
-    requiredLabel,
     emailValidationLabel,
     emailLabel,
     argumentLabel,
@@ -556,7 +556,7 @@ export const AssistenzaPage = () => {
               <input
                 type="hidden"
                 name="captcha_settings"
-                value='{"keyname":"TestDev3","fallback":"true","orgId":"00D3N0000004K3l","ts":""}'
+                value='{"keyname":"DEV1","fallback":"true","orgId":"00D3N0000004K3l","ts":""}'
               />
               <input type="hidden" name="debugEmail" value="mattia.g.puggioni@accenture.com" />
               <input type="hidden" name="debug" value={1} />
@@ -742,7 +742,7 @@ export const AssistenzaPage = () => {
                 <Col xs={12}>
                   <ReCAPTCHA
                     sitekey="6LfW56weAAAAAIWHJnwlQ2lHNRCcd04QLYQyamww"
-                    onChange={onChange}
+                    onChange={onChangeCaptcha}
                     className={`${formFilled ? '' : 'd-none'}`}
                     id="captcha-container"
                   />
