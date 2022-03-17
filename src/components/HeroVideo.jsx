@@ -39,18 +39,20 @@ export const HeroVideo = () => {
       <div className={classes.heroVideo}>
         <div className={classes.info}>
           <h4>Guarda il video dedicato</h4>
-          <p>Scopri come creare il profilo della tua amministrazione all’interno della piattaforma PA digitale 2026.</p>
+          <p>
+            Scopri come creare il profilo della tua amministrazione all’interno
+            della piattaforma PA digitale 2026.
+          </p>
         </div>
         <div className={classes.videoContainer}>
           <iframe
+            src="https://player.vimeo.com/video/142548770?h=4205667b4f"
             width="100%"
             height="100%"
-            src="https://www.youtube.com/embed/u31qwQUeGuM"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
+            frameBorder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen>
+          </iframe>
         </div>
       </div>
     </>
