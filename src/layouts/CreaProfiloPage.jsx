@@ -2,7 +2,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-undef */
 import React, { useState, useEffect, useContext } from 'react';
-import { Container, Row, Col } from 'design-react-kit';
+import { Breadcrumb, BreadcrumbItem, Container, Row, Col } from 'design-react-kit';
 import { createUseStyles } from 'react-jss';
 import { announce } from '@react-aria/live-announcer';
 import faq from '../../contents/faq-page/faq.yml';
@@ -20,6 +20,25 @@ const { title: seoTitle, description: seoDescription } = seo.faqPage;
 const { sidebar, verticalTimeline } = content;
 
 const useStyles = createUseStyles({
+  breadcrumb: {
+    '@media (min-width: 991px)': {
+      marginLeft: '0.722rem',
+      marginBottom: '90px',
+    },
+  },
+  breadcrumbItem: {
+    '& a': {
+      color: '#06c',
+      fontWeight: '700',
+      textDecoration: 'underline',
+    },
+  },
+  breadcrumbItemActive: {
+    '& a': {
+      color: '#5B6F82',
+      textDecoration: 'none',
+    },
+  },
   navigationContainer: {
     borderTop: '1px solid #A9B9C3',
     display: 'flex',
@@ -88,6 +107,18 @@ const useStyles = createUseStyles({
     fontSize: '0.875rem',
     color: '#33485C'
   },
+  titleUpdate: {
+    fontSize: '48px',
+    fontWeight: '700',
+    color: '#33485C',
+    lineHeight: '48px',
+    marginBottom: '30px',
+  },
+  subtitleUpdate: {
+    fontSize: '24px',
+    color: '#33485C',
+    lineHeight: '28px',
+  }
 });
 
 // eslint-disable-next-line sonarjs/cognitive-complexity
@@ -176,9 +207,37 @@ export const CreaProfiloPage = () => {
       <div className="sr-only">
         <h2>{faq.name}</h2>
       </div>
-      <HeroSupport title={faq.hero.title} subtitle={faq.hero.subtitle} />
+      {/* <HeroSupport title={faq.hero.title} subtitle={faq.hero.subtitle} /> */}
       <div className="docs py-4 py-md-5">
         <Container>
+          <Row>
+            <Col xs={12}>
+              <Breadcrumb className={classes.breadcrumb}>
+                <BreadcrumbItem className={classes.breadcrumbItem}>
+                  <a href="/come-funziona">Home</a>
+                  <span className="separator"></span>
+                </BreadcrumbItem>
+                <BreadcrumbItem active className={classes.breadcrumbItem}>
+                  <a href="/come-funziona/presentazione-progetti">Come partecipare</a>
+                  <span className="separator"></span>
+                </BreadcrumbItem>
+                <BreadcrumbItem active className={classes.breadcrumbItemActive}>
+                  <a href="/come-funziona/presentazione-progetti">Crea il profilo della tua PA</a>
+                </BreadcrumbItem>
+              </Breadcrumb>
+            </Col>
+          </Row>
+          <Row className='mb-5'>
+            <Col xs={12} lg={7}>
+              <div className={classes.titleUpdate}>Crea il profilo della tua PA: identità digitale e dati IPA</div>
+              <div className={classes.subtitleUpdate}>
+                <strong>Per partecipare agli avvisi</strong> è necessario che il <strong>rappresentante legale di un'amministrazione presente su IPA</strong> (Indice dei domini digitali della Pubblica Amministrazione), o una persona incaricata, <strong>avvii la procedura di attivazione della PA sulla piattaforma</strong>.
+              </div>
+            </Col>
+            <Col xs={12} lg={4} className="offset-lg-1 mt-4 mt-lg-0 d-flex justify-content-center align-items-center">
+              <img src={`/assets/profilo.svg`} alt="" />
+            </Col>
+          </Row>
           <div className={classes.navigationContainer}>
             <h3 id="question-section" className="sr-only">
               Sezione domande frequenti
