@@ -97,7 +97,7 @@ export const FAQPreview = () => {
 
   const cards = faqSection.faqPreviewCards.map((card) => (
     <Col key={card.id} xs="12" lg="4">
-      <Link to={`/faq#` + card.faqId} onClick={() => dispatch({ type: 'SET:FAQ_ID', payload: { faqId: card.faqId } })} className={classes.linkCard}>
+      <Link to={`/supporto/faq#` + card.faqId} onClick={() => dispatch({ type: 'SET:FAQ_ID', payload: { faqId: card.faqId } })} className={classes.linkCard}>
         <Card className={classes.faqCard}>
           <CardBody>
             <CardTitle tag="h4">{card.title}</CardTitle>
@@ -114,7 +114,7 @@ export const FAQPreview = () => {
         <div className="container px-3">
           <Row>{cards}</Row>
           <div className={classes.btnWrapper}>
-            <Link to="/faq" className="btn btn-primary text-uppercase">
+            <Link to="/supporto/faq" className="btn btn-primary text-uppercase">
               {faqSection.buttonLabel}
             </Link>
           </div>

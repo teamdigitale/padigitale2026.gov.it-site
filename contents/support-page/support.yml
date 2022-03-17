@@ -3,7 +3,7 @@ mainHero:
   title: Hai bisogno di chiarimenti o supporto?
   description: Consulta le <strong>le domande frequenti</strong> o <strong>scrivici</strong> per ricevere una risposta via email
 faqSection:
-  buttonLink: '/faq'
+  buttonLink: '/supporto/faq'
   buttonLabel: Vai alle domande frequenti
   faqPreviewCards:
     - id: 1
