@@ -186,7 +186,6 @@ export const FaqPage = () => {
                   role="searchbox"
                   aria-describedby="searchbox-desk"
                   aria-controls="id-list-faq"
-                  value={inputValue}
                   onChange={handleChange}
                 />
                 {inputValue.length > 0 && (
