@@ -19,6 +19,8 @@ import links from '../../contents/links.yml';
 const { privacy } = links.internalLinks;
 import seo from '../../contents/seo.yml';
 import { SEO } from '../components/SEO';
+import { Breadcrumb } from '../components/Breadcrumb';
+
 
 const { title: seoTitle, description: seoDescription } = seo.assistenzaPage;
 const { successMessage: successLabels, error: errorLabels, errorAddress: errorAddressLabel } = notificationsLabel;
@@ -228,6 +230,20 @@ const useStyles = createUseStyles({
       display: 'none',
     },
   },
+  titleUpdate: {
+    fontSize: '48px',
+    fontWeight: '700',
+    color: '#33485C',
+  },
+  subtitleUpdate: {
+    fontSize: '24px',
+    color: '#33485C',
+    lineHeight: '28px',
+  },
+  mandatory: {
+    fontSize: '16px',
+    marginTop: '60px',
+  }
 });
 
 const query = graphql`
@@ -541,8 +557,19 @@ export const AssistenzaPage = () => {
   return (
     <>
       <SEO title={seoTitle} description={seoDescription} />
+      <Breadcrumb currentPage={content.breadcrumb} />
       <div className="container">
         <iframe name="formFrame" id="formFrame" className="d-none"></iframe>
+        <Row className='mt-5'>
+          <Col xs={12} lg={5}>
+            <div className={classes.titleUpdate}>Assistenza</div>
+            <div className={classes.subtitleUpdate}>Un team dedicato è a tua disposizione per chiarire dubbi e approfondire temi di interesse. Compila il modulo sottostante e invia la richiesta.</div>
+            <div className={classes.mandatory}>I campi con * sono obbligatori </div>          
+          </Col>
+          <Col xs={12} lg={3} className="offset-lg-3">
+            <img src={`/assets/assistenza.svg`} alt="" />
+          </Col>
+        </Row>
         <Row>
           <Col xs="12">
             {/* <form onSubmit={handleSubmit(onSubmit, onError)} id="message-form" aria-describedby="mandatory-label"> */}
