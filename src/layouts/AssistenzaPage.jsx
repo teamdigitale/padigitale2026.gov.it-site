@@ -139,10 +139,10 @@ const useStyles = createUseStyles({
     '& [class$="-singleValue"]': {
       fontSize: '0.889rem',
       fontWeight: '700',
-      color: '#000',
+      color: '#17324d',
     },
     '& [class$="-placeholder"]': {
-      color: '#767676',
+      color: '#737374',
     },
     '& .select.is-invalid [class$="-control"]': {
       borderColor: '#F83E5A',
@@ -194,13 +194,14 @@ const useStyles = createUseStyles({
   },
   maxLengthLabel: {
     fontSize: '0.778rem',
-    color: '#767676',
+    color: '#737374',
     marginLeft: '0.444rem',
   },
   selectLabel: {
     fontSize: '0.778rem',
     fontWeight: '600',
     color: '#33485C',
+    padding: '0.563rem',
   },
   notification: {
     composes: 'notification with-icon dismissable',
