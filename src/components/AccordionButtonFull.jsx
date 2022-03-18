@@ -334,7 +334,7 @@ export const AccordionButtonFull = (props) => {
                       linkTo={moreInfoLink}
                       ariaLabel={`${moreInfoLabel}, ${title}, (Collegamento esterno - Apre su nuova scheda)`}
                     >
-                      VAI AGLI AVVISO
+                      VAI AGLI AVVISI
                     </ExternalLink>
                   </div>
                 )}
