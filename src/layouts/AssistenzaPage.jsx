@@ -566,7 +566,6 @@ export const AssistenzaPage = () => {
     selectPlaceholder,
     telLabel,
     descriptionLabel,
-    nameLabel,
     objectLabel,
     sendButtonLabel,
   } = content.modal;
