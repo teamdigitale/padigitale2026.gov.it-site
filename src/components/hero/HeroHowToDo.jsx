@@ -211,11 +211,11 @@ export const HeroHowToDo = ({ title, body, image, imageMob }) => {
             <Col xs="12" lg="11" className="px-0">
               <Breadcrumb className={classes.breadWhite}>
                 <BreadcrumbItem>
-                  <a href="#">Home</a>
+                  <a href="/">Home</a>
                   <span className="separator"></span>
                 </BreadcrumbItem>
                 <BreadcrumbItem active>
-                  <a href="#">Current section</a>
+                  <a href="/come-partecipare">Come partecipare</a>
                 </BreadcrumbItem>
               </Breadcrumb>
               <div className={`${classes.contentWrapper} d-flex flex-column`}>

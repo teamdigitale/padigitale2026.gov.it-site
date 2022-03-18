@@ -8,7 +8,7 @@ import { announce } from '@react-aria/live-announcer';
 import faq from '../../contents/faq-page/faq.yml';
 import { SEO } from '../components/SEO';
 import seo from '../../contents/seo.yml';
-import content from '../../contents/come-partecipare/come-partecipare.yml';
+import content from '../../contents/crea-profilo/crea-profilo.yml';
 import { TimelineVerticalCards } from '../components/TimelineVerticalCards';
 import { HeroVideo } from '../components/HeroVideo';
 import { SideNavigationAccordion } from './sideNavigationAccordion';

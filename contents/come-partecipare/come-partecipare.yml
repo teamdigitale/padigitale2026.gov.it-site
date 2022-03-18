@@ -1,47 +1,62 @@
-name: FAQ - PA digitale 2026
+title: Come fare - PA digitale 2026
+name: Come Fare - PA digitale 2026
 hero:
-  title: Domande frequenti
-  subtitle: Esplora le risposte alle domande più frequenti o fai una ricerca per parola chiave
-sidebar:
-  - sectionTitle: "Crea il profilo della tua PA: identità digitale e dati IPA Per approfondire"
-    sectionId: intro
-    sectionActive: true
-  - sectionTitle: 1. Accedi tramite identità digitale
-    sectionId: digital-identity
-    sectionActive: false
-  - sectionTitle: 2. Seleziona l’amministrazione 
-    sectionId: select-administration
-    sectionActive: false
-  - sectionTitle: 3. Verifica i dati della PA su IPA
-    sectionId: verify-data
-    sectionActive: false
-  - sectionTitle: 4. Conferma la registrazione
-    sectionId: confirm-subscription
-    sectionActive: false
-  - sectionTitle: Guarda il video dedicato
-    sectionId: watch-video
-    sectionActive: false
-  - sectionTitle: Per approfondire
-    sectionId: to-read-more
-    sectionActive: false
-verticalTimeline:
-  - index: 0
-    title: 'Accedi tramite identità digitale'
-    icon: '/assets/pc-card.svg'
-    headerParagraph: "Se sei il rappresentante legale dell’amministrazione, o una persona incaricata, <strong>accedi tramite identità digitale SPID o CIE</strong> alla piattaforma."
-    sectionId: 'digital-identity'
-  - index: 1
-    title: 'Seleziona l’amministrazione '
-    icon: '/assets/goals-card.svg'
-    headerParagraph: 'Dopo l’accesso ti verrà richiesto di inserire un’email istituzionale e di <strong>selezionare da una lista la tua amministrazione mediante il nome della PA o il codice IPA.</strong>'
-    sectionId: 'select-administration'
-  - index: 2
-    title: 'Verifica i dati della PA su IPA'
-    icon: '/assets/lens-card.svg'
-    headerParagraph: 'Alcune informazioni sull’amministrazione, tra cui il <strong>nome del responsabile legale della PA e gli indirizzi PEC</strong>, vengono caricati dalla banca dati IPA. Se i dati caricati automaticamente non dovessero essere corretti, dovrai aggiornarli su IPA.'
-    sectionId: 'verify-data'
-  - index: 3
-    title: 'Conferma la registrazione'
-    icon: '/assets/mail-card.svg'
-    headerParagraph: 'Una volta selezionato l’indirizzo PEC più appropriato a ricevere le comunicazioni da PA digitale 2026, dovrai <strong>confermare l’attivazione del profilo della PA e del suo rappresentante legale</strong> mediante un link di verifica ricevuto via PEC.'
-    sectionId: 'confirm-subscription'
+  title: 'Come partecipare a PA digitale 2026'
+  body: Puoi <strong>richiedere i fondi del PNRR dedicati alla transizione digitale,</strong> classificare dati e servizi e rendicontare l’avanzamento dei progetti.
+keypoints:
+  category: 'I punti chiave'
+  title: 'Come fare per'
+  list:
+    - number: "01"
+      image: 'keypoint-1.svg'
+      title: 'Attivare la tua PA'
+      desc: 'Per partecipare agli avvisi pubblici e richiedere i finanziamenti'
+    - number: "02"
+      image: 'keypoint-2.svg'
+      title: 'Candidare una PA agli avvisi'
+      desc: 'Attraverso la creazione e l’invio del documento di candidatura.'
+    - number: "03"
+      image: 'keypoint-3.svg'
+      title: 'Classificare dati e servizi'
+      desc: 'Per abilitare il processo di migrazione delle PA al cloud.'
+    - number: "04"
+      image: 'keypoint-4.svg'
+      title: 'Realizzare progetti'
+      desc: 'Per risolvere dubbi o problemi riguardo la piattaforma e le candidature.'
+sectionFirst:
+  number: '01'
+  title: 'Attivare la tua  PA'
+  text: 'L’attivazione del profilo della PA <strong>è il primo passaggio per partecipare agli avvisi pubblici</strong> e richiedere i finanziamenti per avviare il processo di transizione digitale.</br></br>Il rappresentante legale, o un suo incaricato, può accedere alla piattaforma grazie a SPID o CIE e, attraverso un percorso guidato, completare il processo di attivazione.'
+  button: true
+  image: 'kp-section-1.svg'
+  bottomSection: false
+  BottomImage1: 'bottom-1-1.svg'
+  BottomImage2: 'bottom-1-2.svg'
+  BottomLinkLabel1: Come funziona l'accesso con SPID/CIE
+  BottomLinkLabel2: Cosa può fare il rappresentante legale
+sectionSecond:
+  number: '02'
+  title: 'Candidare una PA agli avvisi'
+  text: In base alla tipologia e agli obiettivi della PA, è possibile identificare gli avvisi pubblici più idonei ad avviare il processo di transizione digitale.<br/><br/>Una volta identificato l'avviso, è possibile candidare una PA attraverso un processo guidato, che permette di <strong>comporre il documento di candidatura e inviarlo tramite la piattaforma.</strong>
+  button: true
+  image: 'kp-section-2.svg'
+  reverse: true
+  bottomSection: false
+  BottomImage1: 'bottom-1-1.svg'
+  BottomImage2: 'bottom-1-2.svg'
+  BottomLinkLabel1: Come funziona l'accesso con SPID/CIE
+  BottomLinkLabel2: Cosa può fare il rappresentante legale
+sectionThird:
+  number: '03'
+  title: 'Classificare dati e servizi'
+  text: La classificazione dei dati e dei servizi è fondamentale per <strong>abilitare il processo di migrazione delle PA al cloud</strong>.</br></br>La classificazione deve essere trasmessa entro il 18 luglio 2022 per identificare la tipologia del cloud di destinazione per i servizi della PA.
+  image: 'kp-section-3.svg'
+  button: true
+  lBlue: true
+sectionFourth:
+  number: '04'
+  title: 'Realizzare i progetti'
+  text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis tempor libero. Lorem ipsum dolor sit amet, consectetur</br></br>Aadipiscing elit. Donec quis tempor libero. Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit amet, consectetur 
+  button: true
+  image: 'kp-section-4.svg'
+  reverse: true

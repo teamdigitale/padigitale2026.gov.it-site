@@ -1,14 +1,14 @@
 import React from 'react';
-import content from '../../contents/come-fare/come-fare.yml';
+import content from '../../contents/come-partecipare/come-partecipare.yml';
 import { SEO } from '../components/SEO';
 import seo from '../../contents/seo.yml';
 import { HeroHowToDo } from '../components/hero/HeroHowToDo';
 import { Keypoints } from './come-fare/Keypoints';
 import { KeypointSection } from './come-fare/KeypointSection';
 
-const { title: seoTitle, description: seoDescription } = seo.comeFarePage;
+const { title: seoTitle, description: seoDescription } = seo.comeParteciparePage;
 
-export const ComeFarePage = () => (
+export const ComeParteciparePage = () => (
   <>
     <SEO title={seoTitle} description={seoDescription} />
     <div className="sr-only">
