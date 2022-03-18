@@ -140,7 +140,7 @@ const useStyles = createUseStyles({
       fontWeight: '700',
       color: '#000',
     },
-    '& [class$="-input"]': {
+    '& [class$="-placeholder"]': {
       color: '#767676',
     },
     '& .select.is-invalid [class$="-control"]': {
@@ -193,7 +193,7 @@ const useStyles = createUseStyles({
   },
   maxLengthLabel: {
     fontSize: '0.778rem',
-    color: '#808080',
+    color: '#767676',
     marginLeft: '0.444rem',
   },
   selectLabel: {
