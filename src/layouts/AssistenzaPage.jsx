@@ -9,7 +9,7 @@
 import React, { useState, useEffect } from 'react';
 import { createUseStyles } from 'react-jss';
 import { announce } from '@react-aria/live-announcer';
-import { Row, Col, Input } from 'design-react-kit';
+import { Row, Col, Input, Breadcrumb, BreadcrumbItem } from 'design-react-kit';
 import Select from 'react-select';
 import ReCAPTCHA from 'react-google-recaptcha';
 import content from '../../contents/opportunity-page/opportunity.yml';
@@ -20,7 +20,6 @@ import links from '../../contents/links.yml';
 const { privacy } = links.internalLinks;
 import seo from '../../contents/seo.yml';
 import { SEO } from '../components/SEO';
-import { Breadcrumb } from '../components/Breadcrumb';
 
 const { title: seoTitle, description: seoDescription } = seo.assistenzaPage;
 const { successMessage: successLabels } = notificationsLabel;
@@ -260,6 +259,24 @@ const useStyles = createUseStyles({
   heroImg: {
     '@media (max-width: 991px)': {
       width: '64%',
+    },
+  },
+  breadcrumb: {
+    '@media (min-width: 991px)': {
+      marginLeft: '0.722rem',
+    },
+  },
+  breadcrumbItem: {
+    '& a': {
+      color: '#5B6F82',
+      fontWeight: '700',
+      textDecoration: 'underline',
+    },
+  },
+  breadcrumbItemActive: {
+    '& a': {
+      color: '#5B6F82',
+      textDecoration: 'none',
     },
   },
 });
@@ -575,7 +592,26 @@ export const AssistenzaPage = () => {
   return (
     <>
       <SEO title={seoTitle} description={seoDescription} />
-      <Breadcrumb currentPage={contentAssistance.breadcrumb} />
+      {/* <Breadcrumb currentPage={contentAssistance.breadcrumb} /> */}
+      <div className="container">
+        <Row>
+          <Col xs="12">
+            <Breadcrumb className={classes.breadcrumb}>
+              <BreadcrumbItem className={classes.breadcrumbItem}>
+                <a href="/">Home</a>
+                <span className="separator"></span>
+              </BreadcrumbItem>
+              <BreadcrumbItem className={classes.breadcrumbItem}>
+                <a href="/supporto">Supporto</a>
+                <span className="separator"></span>
+              </BreadcrumbItem>
+              <BreadcrumbItem active className={classes.breadcrumbItemActive}>
+                <a href="/supporto/assistenza">Assistenza</a>
+              </BreadcrumbItem>
+            </Breadcrumb>
+          </Col>
+        </Row>
+      </div>
       <div className="container px-3">
         <iframe name="formFrame" id="formFrame" className="d-none" title="no-redirect"></iframe>
         <Row className="mt-5">
