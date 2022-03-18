@@ -51,7 +51,9 @@ export const HeroVideo = () => {
             height="100%"
             frameBorder="0"
             allow="autoplay; fullscreen; picture-in-picture"
-            allowfullscreen>
+            allowfullscreen
+            title="video-container"
+            >
           </iframe>
         </div>
       </div>
