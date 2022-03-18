@@ -571,14 +571,14 @@ export const ModalMessage = () => {
             <Button color="primary" type="submit" form="message-form">
               {sendButtonLabel}
             </Button>
-            <img className={classes.spinner} src="/assets/spinner.gif"></img>
+            <img className={classes.spinner} src="/assets/spinner.gif" alt=""></img>
           </div>
         </ModalFooter>
       </Modal>
       <div className="container test-docs">
         <div className="row">
           <div className="col-12 col-md-6">
-            <div className={classes.notification} role="alert" aria-labelledby="not2dms-title" id="not2dms2">
+            {/* <div className={classes.notification} role="alert" aria-labelledby="not2dms-title" id="not2dms2">
               <h5 id="not2dms-title2">
                 notifiche
                 <svg className="icon" role="img" aria-label=""></svg>
@@ -611,7 +611,7 @@ export const ModalMessage = () => {
                   <rect y="1.56055" width="1.49987" height="24.4978" transform="rotate(-45 0 1.56055)" fill="#5C6F82" />
                 </svg>
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

@@ -140,6 +140,9 @@ const useStyles = createUseStyles({
       fontWeight: '700',
       color: '#000',
     },
+    '& [class$="-input"]': {
+      color: '#767676',
+    },
     '& .select.is-invalid [class$="-control"]': {
       borderColor: '#F83E5A',
     },
@@ -559,7 +562,7 @@ export const AssistenzaPage = () => {
       <SEO title={seoTitle} description={seoDescription} />
       <Breadcrumb currentPage={contentAssistance.breadcrumb} />
       <div className="container">
-        <iframe name="formFrame" id="formFrame" className="d-none"></iframe>
+        <iframe name="formFrame" id="formFrame" className="d-none" title="no-redirect"></iframe>
         <Row className="mt-5">
           <Col xs={12} lg={5}>
             <div className={classes.titleUpdate}>Assistenza</div>
@@ -788,7 +791,6 @@ export const AssistenzaPage = () => {
                 </p>
                 <div className="d-flex">
                   <input type="submit" name="submit" disabled value={sendButtonLabel} className="btn btn-primary" />
-                  <img className={classes.spinner} src="/assets/spinner.gif"></img>
                 </div>
               </div>
             </form>
