@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable sonarjs/no-duplicate-string */
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable sonarjs/no-all-duplicated-branches */
@@ -22,7 +23,7 @@ import { SEO } from '../components/SEO';
 import { Breadcrumb } from '../components/Breadcrumb';
 
 const { title: seoTitle, description: seoDescription } = seo.assistenzaPage;
-const { successMessage: successLabels, error: errorLabels, errorAddress: errorAddressLabel } = notificationsLabel;
+const { successMessage: successLabels } = notificationsLabel;
 const { errors } = errorsLabels;
 
 const useStyles = createUseStyles({
