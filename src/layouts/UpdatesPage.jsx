@@ -1,19 +1,19 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable max-lines-per-function */
-import React, { useState, useEffect, useContext } from 'react';
-import PropTypes from 'prop-types';
-import { SEO } from '../components/SEO';
-import seo from '../../contents/seo.yml';
+/* eslint-disable sonarjs/cognitive-complexity */
+import React, { useState, useEffect } from 'react';
+// import PropTypes from 'prop-types';
 import { useForm, Controller } from 'react-hook-form';
 import { createUseStyles } from 'react-jss';
 import { Row, Col, Button, Input } from 'design-react-kit';
 import Select from 'react-select';
 import { announce } from '@react-aria/live-announcer';
 import { graphql, useStaticQuery } from 'gatsby';
+import seo from '../../contents/seo.yml';
+import { SEO } from '../components/SEO';
 import content from '../../contents/opportunity-page/opportunity.yml';
 import links from '../../contents/links.yml';
 import notificationsLabel from '../../contents/notifications.yml';
-import { GlobalStateContext } from '../context/globalContext';
 
 const { success: successLabels, error: errorLabels, errorAddress: errorAddressLabel } = notificationsLabel;
 const { title: seoTitle, description: seoDescription } = seo.supportPage;
@@ -227,7 +227,7 @@ const useStyles = createUseStyles({
     fontSize: '24px',
     color: '#33485C',
     lineHeight: '28px',
-  }
+  },
 });
 
 const query = graphql`
@@ -241,52 +241,51 @@ const query = graphql`
 `;
 
 export const UpdatesPage = () => {
-  const [{ modalState }, dispatch] = useContext(GlobalStateContext);
   const [selectValue] = useState(null);
-  const [enteState, setEnteState] = useState('');
+  const [enteState] = useState('');
   const {
     site: {
       siteMetadata: { apiUrl },
     },
   } = useStaticQuery(query);
 
-  const setFocusStyleOnSelect = () => {
-    const selectInputArr = document.querySelectorAll('.modal .select input');
-    selectInputArr.forEach((input) => {
-      const selectFocusHandler = () => {
-        const currentSelect = input.closest('.select');
-        currentSelect.classList.add('focused');
-      };
-      const selectFocusOutHandler = () => {
-        const currentSelect = input.closest('.select');
-        currentSelect.classList.remove('focused');
-      };
-      input.addEventListener('focus', selectFocusHandler);
-      input.addEventListener('focusout', selectFocusOutHandler);
-    });
-  };
+  // const setFocusStyleOnSelect = () => {
+  //   const selectInputArr = document.querySelectorAll('.modal .select input');
+  //   selectInputArr.forEach((input) => {
+  //     const selectFocusHandler = () => {
+  //       const currentSelect = input.closest('.select');
+  //       currentSelect.classList.add('focused');
+  //     };
+  //     const selectFocusOutHandler = () => {
+  //       const currentSelect = input.closest('.select');
+  //       currentSelect.classList.remove('focused');
+  //     };
+  //     input.addEventListener('focus', selectFocusHandler);
+  //     input.addEventListener('focusout', selectFocusOutHandler);
+  //   });
+  // };
 
-  const setListenersToSelectOptions = () => {
-    const representSelectOptions = document.querySelector('#represent-select');
-    const config = { childList: true, subtree: true };
-    const setObserver = (mutationsList) => {
-      for (const mutation of mutationsList) {
-        if (mutation.type === 'childList') {
-          let value = representSelectOptions.querySelector('div[class*="singleValue"]');
-          value ? (value = value.innerHTML) : (value = '');
-          let valueSelected = selectRepresent.find((valueObj) => {
-            if (value === valueObj.label) {
-              return valueObj;
-            }
-          });
-          valueSelected = valueSelected?.value;
-          setEnteState(valueSelected);
-        }
-      }
-    };
-    const observer = new MutationObserver(setObserver);
-    observer.observe(representSelectOptions, config);
-  };
+  // const setListenersToSelectOptions = () => {
+  //   const representSelectOptions = document.querySelector('#represent-select');
+  //   const config = { childList: true, subtree: true };
+  //   const setObserver = (mutationsList) => {
+  //     for (const mutation of mutationsList) {
+  //       if (mutation.type === 'childList') {
+  //         let value = representSelectOptions.querySelector('div[class*="singleValue"]');
+  //         value ? (value = value.innerHTML) : (value = '');
+  //         let valueSelected = selectRepresent.find((valueObj) => {
+  //           if (value === valueObj.label) {
+  //             return valueObj;
+  //           }
+  //         });
+  //         valueSelected = valueSelected?.value;
+  //         setEnteState(valueSelected);
+  //       }
+  //     }
+  //   };
+  //   const observer = new MutationObserver(setObserver);
+  //   observer.observe(representSelectOptions, config);
+  // };
 
   const {
     control,
@@ -296,7 +295,7 @@ export const UpdatesPage = () => {
 
   const classes = useStyles();
 
-  useEffect(() => { }, [selectValue]);
+  useEffect(() => {}, [selectValue]);
 
   const onSubmit = async (data, event) => {
     console.log(data);
@@ -407,7 +406,9 @@ export const UpdatesPage = () => {
                 <Row>
                   <Col xs={12} lg={5}>
                     <div className={classes.titleUpdate}>Ricevi Aggiornamenti</div>
-                    <div className={classes.subtitleUpdate}>Ricevi materiali e informazioni sulle novità e gli avvisi di Italia digitale 2026.</div>
+                    <div className={classes.subtitleUpdate}>
+                      Ricevi materiali e informazioni sulle novità e gli avvisi di Italia digitale 2026.
+                    </div>
                   </Col>
                   <Col xs={12} lg={3} className="offset-lg-3">
                     <img src={`/assets/updates-icon.svg`} alt="" />
@@ -420,7 +421,7 @@ export const UpdatesPage = () => {
                 </Col>
               </Row>
               <Row className="mt-5">
-                <Col xs={12} lg={4} className='d-lg-flex flex-lg-column justify-content-end'>
+                <Col xs={12} lg={4} className="d-lg-flex flex-lg-column justify-content-end">
                   <Controller
                     name="address"
                     control={control}
@@ -444,7 +445,7 @@ export const UpdatesPage = () => {
                           aria-required="true"
                           autocomplete="email"
                           {...field}
-                          className='mb-0'
+                          className="mb-0"
                         />
                         <span className={classes.errorLabel} id="error-address">
                           {errors.address && errors.address.message}
@@ -453,7 +454,7 @@ export const UpdatesPage = () => {
                     )}
                   />
                 </Col>
-                <Col xs={12} lg={4} className='offset-lg-1'>
+                <Col xs={12} lg={4} className="offset-lg-1">
                   <label htmlFor="represent-select-input" className={classes.selectLabel}>
                     {representLabel}
                   </label>
@@ -609,7 +610,6 @@ export const UpdatesPage = () => {
           <img className={classes.spinner} src="/assets/spinner.gif" alt=""></img>
         </div>
       </div>
-
     </>
   );
 };
