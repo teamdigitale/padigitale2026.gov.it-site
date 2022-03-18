@@ -18,7 +18,11 @@ const useStyles = createUseStyles({
       maxWidth: '350px',
     },
     '@media (min-width: 1200px)': {
-      maxWidth: '350px',
+      maxWidth: '450px',
+      right: '155px',
+    },
+    '@media (max-width: 991px)': {
+      width: '80%',
     },
   },
   heroTitle: {
@@ -147,6 +151,7 @@ const useStyles = createUseStyles({
     },
   },
   listTitle: {
+    composes: 'mb-3',
     fontSize: '0.778rem',
     color: '#33485C',
     fontWeight: '600',
@@ -220,7 +225,7 @@ export const HeroHowItWorks = ({ title, body, image, list }) => {
                       ))}
                     </div>
                   </Col>
-                  <Col xs={12} lg={6} className="d-flex d-lg-none mt-4 mt-lg-0 justify-content-center">
+                  <Col xs={12} lg={6} className="d-flex d-lg-none mt-5 mt-lg-0 justify-content-center">
                     <HeroBackground image={image} className={classes.heroImg} />
                   </Col>
                 </Row>

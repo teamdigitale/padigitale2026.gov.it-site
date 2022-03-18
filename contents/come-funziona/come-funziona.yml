@@ -7,12 +7,12 @@ hero:
     - listItems:
       title: APPROFONDISCI
       items:
-        - item: Il calendario
-          anchor: calendario
-        - item: I beneficiari
-          anchor: beneficiari
-        - item: Gli attori coinvolti
+        - item: Attori coinvolti
           anchor: attori-coinvolti
+        - item: Calendario
+          anchor: calendario
+        - item: Beneficiari
+          anchor: beneficiari
 beneficiaries:
   category: I Beneficiari
   title: La digitalizzazione a misura di territorio

@@ -47,7 +47,7 @@ export const ComeFunzionaPage = () => {
         body={content.hero.body}
         theme="bg-white"
         smallText="true"
-        image="frame.svg"
+        image="iniziativa-hero.svg"
         list={content.hero.list}
       />
       <ProjectsCards item={content.projectsCardsItem} />
