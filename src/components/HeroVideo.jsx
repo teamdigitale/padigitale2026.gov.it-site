@@ -1,6 +1,5 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
-import { Container } from 'design-react-kit';
 
 const useStyle = createUseStyles({
   heroVideo: {
@@ -39,10 +38,7 @@ export const HeroVideo = () => {
       <div className={classes.heroVideo}>
         <div className={classes.info}>
           <h4>Guarda il video dedicato</h4>
-          <p>
-            Scopri come creare il profilo della tua amministrazione all’interno
-            della piattaforma PA digitale 2026.
-          </p>
+          <p>Scopri come creare il profilo della tua amministrazione all'interno della piattaforma PA digitale 2026.</p>
         </div>
         <div className={classes.videoContainer}>
           <iframe
@@ -51,9 +47,8 @@ export const HeroVideo = () => {
             height="100%"
             frameBorder="0"
             allow="autoplay; fullscreen; picture-in-picture"
-            allowfullscreen
-            title="video-container"
-            >
+            allowFullScreen
+            title="video-container">
           </iframe>
         </div>
       </div>

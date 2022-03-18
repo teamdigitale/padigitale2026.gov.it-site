@@ -209,15 +209,14 @@ export const HeroHowItWorks = ({ title, body, image, list }) => {
                                 <Link
                                   to={`/come-funziona#` + item.anchor}
                                   onClick={() => scrollIntoView(item.anchor)}
-                                  className={classes.listItem}
-                                >
+                                  className={classes.listItem}>
                                   {item.item}
                                 </Link>
                               </React.Fragment>
                             ))}
                           </div>
                         </div>
-                      )) : '' }
+                      )) : ''}
                     </div>
                   </Col>
                   <Col xs={12} lg={6} className="d-flex d-lg-none mt-4 mt-lg-0 justify-content-center">
