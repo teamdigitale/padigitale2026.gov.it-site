@@ -1,7 +1,6 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
 import { Row, Col, Hero, Container, Breadcrumb, BreadcrumbItem } from 'design-react-kit';
-import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import { HeroTitle } from './HeroTitle';
 import { HeroBackground } from './HeroBackground';
@@ -189,20 +188,20 @@ const useStyles = createUseStyles({
         '&::before': {
           color: 'white',
           fontWeight: '700'
-        }
-      }
-    }
-  }
+        },
+      },
+    },
+  },
 });
 
-export const HeroHowToDo = ({ title, body, image, imageMob, list }) => {
+export const HeroHowToDo = ({ title, body, image, imageMob/*, list */ }) => {
   const classes = useStyles();
 
-  const scrollIntoView = (id) => {
-    const item = document.querySelector('#' + id);
-    item.setAttribute('tabindex', '-1');
-    item.focus();
-  };
+  // const scrollIntoView = (id) => {
+  //   const item = document.querySelector('#' + id);
+  //   item.setAttribute('tabindex', '-1');
+  //   item.focus();
+  // };
 
   return (
     <Hero className="position-relative">
@@ -212,11 +211,11 @@ export const HeroHowToDo = ({ title, body, image, imageMob, list }) => {
             <Col xs="12" lg="11" className="px-0">
               <Breadcrumb className={classes.breadWhite}>
                 <BreadcrumbItem>
-                  <a href='#'>Home</a>
-                  <span className='separator'></span>
+                  <a href="#">Home</a>
+                  <span className="separator"></span>
                 </BreadcrumbItem>
                 <BreadcrumbItem active>
-                  <a href='#'>Current section</a>
+                  <a href="#">Current section</a>
                 </BreadcrumbItem>
               </Breadcrumb>
               <div className={`${classes.contentWrapper} d-flex flex-column`}>
@@ -265,5 +264,6 @@ HeroHowToDo.propTypes = {
   title: PropTypes.string,
   body: PropTypes.string,
   image: PropTypes.string,
+  imageMob: PropTypes.string,
   list: PropTypes.array,
 };
