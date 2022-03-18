@@ -465,7 +465,7 @@ modal:
   updatesInfo: Lascia i tuoi contatti per ricevere <strong>materiali e <br>informazioni</strong> sulle novità e gli avvisi di Italia digitale 2026
   mandatoryAdvise: I campi con * sono obbligatori
   requiredLabel: Questo campo è richiesto
-  emailLabel: EMAIL*
+  emailLabel: Email*
   emailValidationLabel: Per favore inserisci un'indirizzo email valido.
   argumentLabel: Argomento*
   measureLabel: Misura*
@@ -480,8 +480,8 @@ modal:
   nameLabel: Nome richiedente:*
   objectLabel: Oggetto:*
   messageSelectLabel: ARGOMENTO MESSAGGIO
-  descriptionLabel: Descrizione:*
-  telLabel: Contatto telefonico:*
+  descriptionLabel: Testo messaggio:*
+  telLabel: "Contatto telefonico:"
   radioGroupLabel: DICHIARO
   representLabel: RAPPRESENTO*
   messageLabel: TESTO MESSAGGIO

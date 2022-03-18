@@ -103,12 +103,11 @@ const useStyles = createUseStyles({
     },
     '& [class$="-control"]': {
       border: 'none',
-      borderBottom: '2px solid #5c6f82',
+      borderBottom: '1px solid #5c6f82',
       borderRadius: '0',
       boxShadow: 'none',
     },
     '& [class$="-ValueContainer"]': {
-      paddingLeft: '1.333rem',
       fontSize: '0.889rem',
       color: '#808080',
     },
@@ -164,8 +163,11 @@ const useStyles = createUseStyles({
     '& .form-group': {
       margin: '0',
     },
+    '& .form-group label': {
+      color: '#17324d',
+      textTransform: 'uppercase',
+    },
     '& .form-group input[type="text"]': {
-      paddingLeft: '1.333rem',
       fontSize: '0.889rem',
       '&:focus': {
         border: '2px solid #f90',
@@ -200,8 +202,10 @@ const useStyles = createUseStyles({
   selectLabel: {
     fontSize: '0.778rem',
     fontWeight: '600',
-    color: '#33485C',
-    padding: '0.563rem',
+    color: '#17324d',
+    padding: '0 0.563rem',
+    textTransform: 'uppercase',
+    marginBottom: '0',
   },
   notification: {
     composes: 'notification with-icon dismissable',
@@ -235,18 +239,28 @@ const useStyles = createUseStyles({
     },
   },
   titleUpdate: {
-    fontSize: '48px',
+    fontSize: '3rem',
     fontWeight: '700',
     color: '#33485C',
+    '@media (max-width: 991px)': {
+      fontSize: '2.25rem',
+    },
   },
   subtitleUpdate: {
-    fontSize: '24px',
+    fontSize: '1.5rem',
     color: '#33485C',
     lineHeight: '28px',
+    '@media (max-width: 991px)': {
+      fontSize: '1.125rem',
+    },
   },
   mandatory: {
-    fontSize: '16px',
-    marginTop: '60px',
+    fontSize: '1rem',
+  },
+  heroImg: {
+    '@media (max-width: 991px)': {
+      width: '64%',
+    },
   },
 });
 
@@ -563,19 +577,23 @@ export const AssistenzaPage = () => {
     <>
       <SEO title={seoTitle} description={seoDescription} />
       <Breadcrumb currentPage={contentAssistance.breadcrumb} />
-      <div className="container">
+      <div className="container px-3">
         <iframe name="formFrame" id="formFrame" className="d-none" title="no-redirect"></iframe>
         <Row className="mt-5">
-          <Col xs={12} lg={5}>
+          <Col xs={12} md={6} lg={5}>
             <div className={classes.titleUpdate}>Assistenza</div>
             <div className={classes.subtitleUpdate}>
               Un team dedicato è a tua disposizione per chiarire dubbi e approfondire temi di interesse. Compila il
               modulo sottostante e invia la richiesta.
             </div>
-            <div className={classes.mandatory}>I campi con * sono obbligatori </div>
           </Col>
-          <Col xs={12} lg={3} className="offset-lg-3">
-            <img src={`/assets/assistenza.svg`} alt="" />
+          <Col xs={12} md={6} lg={3} className="offset-lg-3 d-flex justify-content-center">
+            <img src={`/assets/assistenza.svg`} alt="" className={classes.heroImg} />
+          </Col>
+        </Row>
+        <Row>
+          <Col xs={12}>
+            <div className={classes.mandatory}>I campi con * sono obbligatori </div>
           </Col>
         </Row>
         <Row>
@@ -598,26 +616,7 @@ export const AssistenzaPage = () => {
               <input type="hidden" name="debug" value={1} />
               <input type="hidden" name="orgid" value="00D3N0000004K3l" />
               <Row className="mt-5">
-                <Col xs={12} md={4}>
-                  <Input
-                    /* invalid={errors.address}
-                    aria-invalid={errors.address && 'true'} */
-                    label={nameLabel}
-                    size="20"
-                    maxLength="255"
-                    aria-describedby="mandatory-label"
-                    /* aria-labelledby={errors.address && 'error-address'} */
-                    type="text"
-                    id="00N7Y000008tqdH"
-                    name="00N7Y000008tqdH"
-                    aria-required="true"
-                    required={true}
-                    onInvalid={customInvalid}
-                  />
-                </Col>
-              </Row>
-              <Row className="mt-5">
-                <Col xs={12} md={4}>
+                <Col xs={12} md={6} lg={4}>
                   <Input
                     /* invalid={errors.address}
                     aria-invalid={errors.address && 'true'} */
@@ -634,7 +633,7 @@ export const AssistenzaPage = () => {
                     required={true}
                   />
                 </Col>
-                <Col xs={12} md={4} className="offset-lg-1">
+                <Col xs={12} md={6} lg={4} className="offset-lg-1 mt-5 mt-md-0">
                   <Input
                     /* invalid={errors.address}
                     aria-invalid={errors.address && 'true'} */
@@ -646,8 +645,6 @@ export const AssistenzaPage = () => {
                     type="text"
                     id="00N7Y000008tqdb"
                     name="00N7Y000008tqdb"
-                    aria-required="true"
-                    required={true}
                     pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$"
                     onInvalid={customInvalid}
                   />
@@ -690,7 +687,7 @@ export const AssistenzaPage = () => {
                     </select>
                   </div>
                 </Col>
-                <Col xs={12} md={6} lg={4} className="offset-lg-1">
+                <Col xs={12} md={6} lg={4} className="offset-lg-1 mt-5 mt-md-0">
                   <div className="select-wrapper">
                     <label htmlFor="measure-select-input" className={classes.selectLabel}>
                       {measureLabel}
@@ -766,7 +763,7 @@ export const AssistenzaPage = () => {
                       {descriptionLabel}
                     </label>
                     <span className={classes.maxLengthLabel}>
-                      Massimo <span className="max-length-number">{textareaMaxLength}</span> caratteri
+                      <span className="max-length-number">{textareaMaxLength}</span> caratteri a disposizione
                     </span>
                   </div>
                 </Col>
@@ -774,12 +771,12 @@ export const AssistenzaPage = () => {
               <input type="hidden" id="external" name="external" value="1" />
               <input type="hidden" name="origin" value="Area pubblica" />
               <input type="hidden" name="recordType" value="0127Y00000229Rc" />
-              <Row className="mt-5">
+              <Row>
                 <Col xs={12}>
                   <ReCAPTCHA
                     sitekey="6LfW56weAAAAAIWHJnwlQ2lHNRCcd04QLYQyamww"
                     onChange={onChangeCaptcha}
-                    className={`${formFilled ? '' : 'd-none'}`}
+                    className={`${formFilled ? '' : 'd-none mt-5'}`}
                     id="captcha-container"
                   />
                 </Col>
