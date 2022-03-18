@@ -712,10 +712,10 @@ export const AssistenzaPage = () => {
                       required={true}
                       onInvalid={customInvalid}
                     >
-                      <option value="Accesso portale">Accesso portale</option>
-                      <option value="Iscrizione newsletter">Iscrizione newsletter</option>
+                      <option value="Accesso al portale">Accesso al portale</option>
+                      <option value="Iscrizione alla newsletter">Iscrizione alla newsletter</option>
                       <option value="Misure">Misure</option>
-                      <option value="Avvisi/bandi">Avvisi/bandi</option>
+                      <option value="Avvisi">Avvisi</option>
                       <option value="Enti beneficiari">Enti beneficiari</option>
                       <option value="Spese ammissibili">Spese ammissibili</option>
                       <option value="Generale">Generale</option>

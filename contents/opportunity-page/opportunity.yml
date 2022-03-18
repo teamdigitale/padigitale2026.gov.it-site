@@ -414,14 +414,14 @@ modal:
     - value: other
       label: Altro
   selectArgument:
-    - value: Accesso portale
-      label: Accesso portale
-    - value: Iscrizione newsletter
-      label: Iscrizione newsletter
+    - value: Accesso al portale
+      label: Accesso al portale
+    - value: Iscrizione alla newsletter
+      label: Iscrizione alla newsletter
     - value: Misure
       label: Misure
-    - value: Avvisi/bandi
-      label: Avvisi/bandi
+    - value: Avvisi
+      label: Avvisi
     - value: Enti beneficiari
       label: Enti beneficiari
     - value: Spese ammissibili
@@ -429,14 +429,36 @@ modal:
     - value: Generale
       label: Generale
   selectMeasure:
+    - value: Tutte
+      label: Tutte
+    - value: 1.1 Infrastrutture digitali
+      label: 1.1 Infrastrutture digitali
     - value: 1.2 Abilitazione e facilitazione migrazione al Cloud
       label: 1.2 Abilitazione e facilitazione migrazione al Cloud
+    - value: 1.3.1 Piattaforma Digitale Nazionale Dati
+      label: 1.3.1 Piattaforma Digitale Nazionale Dati
+    - value: 1.3.2 Sportello Digitale Unico
+      label: 1.3.2 Sportello Digitale Unico
     - value: 1.4.1 Esperienza dei servizi pubblici
       label: 1.4.1 Esperienza dei servizi pubblici
+    - value: 1.4.2 Accessibilità
+      label: 1.4.2 Accessibilità
+    - value: 1.4.3 Adozione PagoPA e app IO
+      label: 1.4.3 Adozione PagoPA e app IO
     - value: 1.4.4 Adozione identità digitale
       label: 1.4.4 Adozione identità digitale
     - value: 1.4.5 Digitalizzazione degli avvisi pubblici
       label: 1.4.5 Digitalizzazione degli avvisi pubblici
+    - value: 1.4.6 MaaS
+      label: 1.4.6 MaaS
+    - value: 1.5 Cybersecurity
+      label: 1.5 Cybersecurity
+    - value: 1.6 Digitalizzazione grandi amministrazioni centrali
+      label: 1.6 Digitalizzazione grandi amministrazioni centrali
+    - value: 1.7.1 Servizio civile digitale
+      label: 1.7.1 Servizio civile digitale
+    - value: 1.7.2 Centri di facilitazione digitale
+      label: 1.7.2 Centri di facilitazione digitale
   selectInQuanto:
     - value: dirigente-administration
       label: Dirigente dell’amministrazione
