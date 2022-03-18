@@ -28,10 +28,8 @@ const useStyle = createUseStyles({
 });
 
 export const Totop = () => {
-  // eslint-disable-next-line sonarjs/cognitive-complexity
   useEffect(() => {
     const sectionsContainer = document.querySelector('.timeline-vertical');
-    // const sections = sectionsContainer.querySelectorAll('.timeline-point-section');
 
     const scrollIndicatorHandler = () => {
       const timelineYpos = sectionsContainer.getBoundingClientRect();

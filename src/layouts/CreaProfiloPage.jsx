@@ -1,14 +1,13 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-undef */
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Breadcrumb, BreadcrumbItem, Container, Row, Col } from 'design-react-kit';
 import { createUseStyles } from 'react-jss';
 import { announce } from '@react-aria/live-announcer';
 import faq from '../../contents/faq-page/faq.yml';
 import { SEO } from '../components/SEO';
 import seo from '../../contents/seo.yml';
-import { GlobalStateContext } from '../context/globalContext';
 import content from '../../contents/come-partecipare/come-partecipare.yml';
 import { TimelineVerticalCards } from '../components/TimelineVerticalCards';
 import { HeroVideo } from '../components/HeroVideo';
@@ -124,10 +123,8 @@ const useStyles = createUseStyles({
 export const CreaProfiloPage = () => {
   const classes = useStyles();
   const [inputValue, setInputValue] = useState('');
-  const [filterId, setFilterId] = useState('all');
   const [questions, setQuestions] = useState(faq.questions);
   const [isMobile, setIsMobile] = useState();
-  const [, setquestNum] = useState(countInitQuestions());
   // const [, dispatch] = useContext(GlobalStateContext);
 
   useEffect(() => {
@@ -137,28 +134,6 @@ export const CreaProfiloPage = () => {
     });
     announce('Pagina caricata ' + faq.name);
   }, []);
-
-  function countInitQuestions() {
-    let count = 0;
-    faq.questions.forEach((element) => {
-      count += element.accordions.length;
-    });
-    return count;
-  }
-
-  function countQuestions() {
-    let count = 0;
-    const questionList = document.querySelectorAll('#id-list-faq section');
-    if (questionList) {
-      questionList.forEach((element) => {
-        const list = element.querySelector('.collapse-div');
-        if (list) {
-          count += list.childElementCount;
-        }
-      });
-    }
-    return count;
-  }
 
   // const handleChange = (event) => {
   //   setInputValue(event.target.value);
@@ -182,16 +157,6 @@ export const CreaProfiloPage = () => {
   //     announce('Numero di FAQ in pagina aggiornato');
   //   }
   // };
-
-  function getQuestionsMobile(items) {
-    const filteredQuestions = [];
-    items.forEach((question) => {
-      if (question.sectionId === filterId) {
-        filteredQuestions.push(question);
-      }
-    });
-    return filteredQuestions;
-  }
 
   useEffect(() => {
     if (!isMobile) {
@@ -230,7 +195,10 @@ export const CreaProfiloPage = () => {
             <Col xs={12} lg={7}>
               <div className={classes.titleUpdate}>Crea il profilo della tua PA: identità digitale e dati IPA</div>
               <div className={classes.subtitleUpdate}>
-                <strong>Per partecipare agli avvisi</strong> è necessario che il <strong>rappresentante legale di un'amministrazione presente su IPA</strong> (Indice dei domini digitali della Pubblica Amministrazione), o una persona incaricata, <strong>avvii la procedura di attivazione della PA sulla piattaforma</strong>.
+                <strong>Per partecipare agli avvisi</strong> è necessario che il{' '}
+                <strong>rappresentante legale di un'amministrazione presente su IPA</strong> (Indice dei domini digitali
+                della Pubblica Amministrazione), o una persona incaricata,{' '}
+                <strong>avvii la procedura di attivazione della PA sulla piattaforma</strong>.
               </div>
             </Col>
             <Col xs={12} lg={4} className="offset-lg-1 mt-4 mt-lg-0 d-flex justify-content-center align-items-center">
@@ -241,12 +209,7 @@ export const CreaProfiloPage = () => {
             <h3 id="question-section" className="sr-only">
               Sezione domande frequenti
             </h3>
-            <SideNavigationAccordion
-              getFilter={setFilterId}
-              activeList={questions}
-              searchValue={inputValue}
-              list={sidebar}
-            />
+            <SideNavigationAccordion activeList={questions} searchValue={inputValue} list={sidebar} />
             <div
               className="pl-lg-3 content-container"
               id="id-list-faq"

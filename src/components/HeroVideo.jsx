@@ -38,7 +38,9 @@ export const HeroVideo = () => {
       <div className={classes.heroVideo}>
         <div className={classes.info}>
           <h4>Guarda il video dedicato</h4>
-          <p>Scopri come creare il profilo della tua amministrazione all&apos;interno della piattaforma PA digitale 2026.</p>
+          <p>
+            Scopri come creare il profilo della tua amministrazione all&apos;interno della piattaforma PA digitale 2026.
+          </p>
         </div>
         <div className={classes.videoContainer}>
           <iframe
@@ -48,8 +50,8 @@ export const HeroVideo = () => {
             frameBorder="0"
             allow="autoplay; fullscreen; picture-in-picture"
             allowFullScreen
-            title="video-container">
-          </iframe>
+            title="video-container"
+          ></iframe>
         </div>
       </div>
     </>

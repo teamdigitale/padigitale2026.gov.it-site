@@ -1,3 +1,5 @@
+/* eslint-disable sonarjs/cognitive-complexity */
+/* eslint-disable max-lines-per-function */
 import React from 'react';
 import { createUseStyles } from 'react-jss';
 import { Container, Row, Col, Button } from 'design-react-kit';
@@ -89,16 +91,31 @@ const useStyle = createUseStyles({
 
 export const KeypointSection = (props) => {
   const classes = useStyle();
-  const { title, number, text, button, image, linkLabel, reverse, lBlue, bottomSection, BottomImage1, BottomImage2, BottomLinkLabel1, BottomLinkLabel2 } = props.item;
+  const {
+    title,
+    number,
+    text,
+    button,
+    image,
+    linkLabel,
+    reverse,
+    lBlue,
+    bottomSection,
+    BottomImage1,
+    BottomImage2,
+    BottomLinkLabel1,
+    BottomLinkLabel2,
+  } = props.item;
 
   return (
     <>
       {lBlue ? (
         <div className={classes.bgLightBlue}>
           <Container
-            tag="section" aria-labelledby="keypoints-section-title"
+            tag="section"
+            aria-labelledby="keypoints-section-title"
             className={`${classes.keypointSection} pl-lg-2 pr-lg-2 pl-3 pr-3`}
-          /* className="pl-lg-2 pr-lg-2 pl-3 pr-3" */
+            /* className="pl-lg-2 pr-lg-2 pl-3 pr-3" */
           >
             {/* <Row>
               <Col xs="8" md="6" lg="4" className="mt-3 mt-lg-0 mb-4 mb-lg-0 d-lg-none">
@@ -122,46 +139,70 @@ export const KeypointSection = (props) => {
                     {title}
                   </h4>
                   <p className={classes.paragraph} dangerouslySetInnerHTML={{ __html: text }}></p>
-                  {button ?
-                    <Button color='primary' outline aria-label={`Dettaglio punto chiave ${number} ${title}`}>
+                  {button ? (
+                    <Button color="primary" outline aria-label={`Dettaglio punto chiave ${number} ${title}`}>
                       SCOPRI DI PIÚ
                     </Button>
-                    :
+                  ) : (
                     ''
-                  }
-                  {linkLabel ?
+                  )}
+                  {linkLabel ? (
                     <a href="#" className={classes.keypointSectionLink}>
                       {linkLabel}
                     </a>
-                    :
+                  ) : (
                     ''
-                  }
+                  )}
                 </Col>
-                <Col xs="8" md="6" lg="4" className="offset-lg-1 mt-3 mt-lg-0 order-0 order-lg-1 mb-5 mb-lg-0 d-lg-flex align-items-center">
+                <Col
+                  xs="8"
+                  md="6"
+                  lg="4"
+                  className="offset-lg-1 mt-3 mt-lg-0 order-0 order-lg-1 mb-5 mb-lg-0 d-lg-flex align-items-center"
+                >
                   <img className={classes.keypointSectionImage} src={`/assets/come-fare/${image}`} alt="" />
                 </Col>
               </Row>
-            )
-              :
+            ) : (
               <Row>
-                <Col xs="8" md="6" lg="4" className="offset-lg-1 mt-3 mt-lg-0 mb-5 mb-lg-0 d-lg-flex align-items-center">
+                <Col
+                  xs="8"
+                  md="6"
+                  lg="4"
+                  className="offset-lg-1 mt-3 mt-lg-0 mb-5 mb-lg-0 d-lg-flex align-items-center"
+                >
                   <img className={classes.keypointSectionImage} src={`/assets/come-fare/${image}`} alt="" />
                 </Col>
                 <Col xs="12" lg="5" className="offset-lg-1">
                   <h3 className={classes.keypointSectionNumber}>{number}</h3>
-                  <h4 id={`keypoint-section-title-${number}`} className={classes.keypointSectionTitle}>{title}</h4>
+                  <h4 id={`keypoint-section-title-${number}`} className={classes.keypointSectionTitle}>
+                    {title}
+                  </h4>
                   <p className={classes.paragraph} dangerouslySetInnerHTML={{ __html: text }}></p>
-                  {button ? <Button color='primary' outline aria-label={`Dettaglio punto chiave ${number} ${title}`}>SCOPRI DI PIÚ</Button> : ''}
-                  {linkLabel ? <a href="#" className={classes.keypointSectionLink}>{linkLabel}</a> : ''}
+                  {button ? (
+                    <Button color="primary" outline aria-label={`Dettaglio punto chiave ${number} ${title}`}>
+                      SCOPRI DI PIÚ
+                    </Button>
+                  ) : (
+                    ''
+                  )}
+                  {linkLabel ? (
+                    <a href="#" className={classes.keypointSectionLink}>
+                      {linkLabel}
+                    </a>
+                  ) : (
+                    ''
+                  )}
                 </Col>
               </Row>
-            }
+            )}
           </Container>
         </div>
-      )
-        :
-        <Container tag="section" aria-labelledby={`keypoint-section-title-${number}`}
-          /*className="pl-lg-2 pr-lg-2 pl-3 pr-3"*/
+      ) : (
+        <Container
+          tag="section"
+          aria-labelledby={`keypoint-section-title-${number}`}
+          /* className="pl-lg-2 pr-lg-2 pl-3 pr-3" */
           className={`${classes.keypointSection} pl-lg-2 pr-lg-2 pl-3 pr-3`}
         >
           {/* <Row>
@@ -178,71 +219,133 @@ export const KeypointSection = (props) => {
                 <h4 id={`keypoint-section-title-${number}`} className={classes.keypointSectionTitle}>{title}</h4></Col>
             }
           </Row> */}
-          {!reverse ?
+          {!reverse ? (
             <React.Fragment>
               <Row>
                 <Col xs="12" lg="5" className="offset-lg-1 order-1 order-lg-0">
                   <h3 className={classes.keypointSectionNumber}>{number}</h3>
-                  <h4 id={`keypoint-section-title-${number}`} className={classes.keypointSectionTitle}>{title}</h4>
+                  <h4 id={`keypoint-section-title-${number}`} className={classes.keypointSectionTitle}>
+                    {title}
+                  </h4>
                   <p className={classes.paragraph} dangerouslySetInnerHTML={{ __html: text }}></p>
-                  {button ? <Button color='primary' outline aria-label={`Dettaglio punto chiave ${number} ${title}`}>SCOPRI DI PIÚ</Button> : ''}
-                  {linkLabel ? <a href="#" className={classes.keypointSectionLink}>{linkLabel}</a> : ''}
+                  {button ? (
+                    <Button color="primary" outline aria-label={`Dettaglio punto chiave ${number} ${title}`}>
+                      SCOPRI DI PIÚ
+                    </Button>
+                  ) : (
+                    ''
+                  )}
+                  {linkLabel ? (
+                    <a href="#" className={classes.keypointSectionLink}>
+                      {linkLabel}
+                    </a>
+                  ) : (
+                    ''
+                  )}
                 </Col>
-                <Col xs="8" md="6" lg="4" className="offset-lg-1 mt-3 mt-lg-0 order-0 order-lg-1 mb-5 mb-lg-0 d-lg-flex align-items-center">
+                <Col
+                  xs="8"
+                  md="6"
+                  lg="4"
+                  className="offset-lg-1 mt-3 mt-lg-0 order-0 order-lg-1 mb-5 mb-lg-0 d-lg-flex align-items-center"
+                >
                   <img className={classes.keypointSectionImage} src={`/assets/come-fare/${image}`} alt="" />
                 </Col>
               </Row>
-              {bottomSection ?
+              {bottomSection ? (
                 <Row>
                   <Col xs="12" lg="8" className={classes.bottomSection}>
                     <div className={classes.BottomImgSectionWrapper}>
-                      <img className={classes.keypointBottomSectionImage} src={`/assets/come-fare/${BottomImage1}`} alt="" />
-                      <a href="#" className={classes.keypointSectionLink}>{BottomLinkLabel1}</a>
+                      <img
+                        className={classes.keypointBottomSectionImage}
+                        src={`/assets/come-fare/${BottomImage1}`}
+                        alt=""
+                      />
+                      <a href="#" className={classes.keypointSectionLink}>
+                        {BottomLinkLabel1}
+                      </a>
                     </div>
                     <div className={classes.BottomImgSectionWrapper}>
-                      <img className={classes.keypointBottomSectionImage} src={`/assets/come-fare/${BottomImage2}`} alt="" />
-                      <a href="#" className={classes.keypointSectionLink}>{BottomLinkLabel2}</a>
+                      <img
+                        className={classes.keypointBottomSectionImage}
+                        src={`/assets/come-fare/${BottomImage2}`}
+                        alt=""
+                      />
+                      <a href="#" className={classes.keypointSectionLink}>
+                        {BottomLinkLabel2}
+                      </a>
                     </div>
                   </Col>
                 </Row>
-                :
+              ) : (
                 ''
-              }
+              )}
             </React.Fragment>
-            :
+          ) : (
             <React.Fragment>
               <Row>
-                <Col xs="8" md="6" lg="4" className="offset-lg-1 mt-3 mt-lg-0 mb-5 mb-lg-0 d-lg-flex align-items-center">
+                <Col
+                  xs="8"
+                  md="6"
+                  lg="4"
+                  className="offset-lg-1 mt-3 mt-lg-0 mb-5 mb-lg-0 d-lg-flex align-items-center"
+                >
                   <img className={classes.keypointSectionImage} src={`/assets/come-fare/${image}`} alt="" />
                 </Col>
                 <Col xs="12" lg="5" className="offset-lg-1">
                   <h3 className={classes.keypointSectionNumber}>{number}</h3>
-                  <h4 id={`keypoint-section-title-${number}`} className={classes.keypointSectionTitle}>{title}</h4>
+                  <h4 id={`keypoint-section-title-${number}`} className={classes.keypointSectionTitle}>
+                    {title}
+                  </h4>
                   <p className={classes.paragraph} dangerouslySetInnerHTML={{ __html: text }}></p>
-                  {button ? <Button color='primary' outline aria-label={`Dettaglio punto chiave ${number} ${title}`}>SCOPRI DI PIÚ</Button> : ''}
-                  {linkLabel ? <a href="#" className={classes.keypointSectionLink}>{linkLabel}</a> : ''}
+                  {button ? (
+                    <Button color="primary" outline aria-label={`Dettaglio punto chiave ${number} ${title}`}>
+                      SCOPRI DI PIÚ
+                    </Button>
+                  ) : (
+                    ''
+                  )}
+                  {linkLabel ? (
+                    <a href="#" className={classes.keypointSectionLink}>
+                      {linkLabel}
+                    </a>
+                  ) : (
+                    ''
+                  )}
                 </Col>
               </Row>
-              {bottomSection ?
+              {bottomSection ? (
                 <Row>
                   <Col xs="12" lg="8" className={classes.bottomSectionReverse}>
                     <div className={classes.BottomImgSectionWrapper}>
-                      <img className={classes.keypointBottomSectionImage} src={`/assets/come-fare/${BottomImage1}`} alt="" />
-                      <a href="#" className={classes.keypointSectionLink}>{BottomLinkLabel1}</a>
+                      <img
+                        className={classes.keypointBottomSectionImage}
+                        src={`/assets/come-fare/${BottomImage1}`}
+                        alt=""
+                      />
+                      <a href="#" className={classes.keypointSectionLink}>
+                        {BottomLinkLabel1}
+                      </a>
                     </div>
                     <div className={classes.BottomImgSectionWrapper}>
-                      <img className={classes.keypointBottomSectionImage} src={`/assets/come-fare/${BottomImage2}`} alt="" />
-                      <a href="#" className={classes.keypointSectionLink}>{BottomLinkLabel2}</a>
+                      <img
+                        className={classes.keypointBottomSectionImage}
+                        src={`/assets/come-fare/${BottomImage2}`}
+                        alt=""
+                      />
+                      <a href="#" className={classes.keypointSectionLink}>
+                        {BottomLinkLabel2}
+                      </a>
                     </div>
                   </Col>
                 </Row>
-                :
+              ) : (
                 ''
-              }
+              )}
             </React.Fragment>
-          }
+          )}
         </Container>
-      }
+      )}
     </>
   );
 };

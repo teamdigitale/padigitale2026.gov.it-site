@@ -194,7 +194,7 @@ const useStyles = createUseStyles({
   },
 });
 
-export const HeroHowToDo = ({ title, body, image, imageMob /*,list */ }) => {
+export const HeroHowToDo = ({ title, body, image, imageMob }) => {
   const classes = useStyles();
 
   // const scrollIntoView = (id) => {

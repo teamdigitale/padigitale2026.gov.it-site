@@ -1,7 +1,7 @@
+/* eslint-disable react/jsx-key */
 import React from 'react';
 import { createUseStyles } from 'react-jss';
 import { Container, Row, Col } from 'design-react-kit';
-import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 
 const useStyle = createUseStyles({
@@ -102,11 +102,11 @@ const useStyle = createUseStyles({
     },
   },
   keypointImage: {
-    height: '6.278rem'
+    height: '6.278rem',
   },
   keypointsBg: {
     backgroundColor: '#F0F6FC',
-  }
+  },
 });
 
 export const Keypoints = (props) => {
@@ -116,12 +116,16 @@ export const Keypoints = (props) => {
   return (
     <>
       <div className={classes.keypointsBg}>
-        <Container tag="section" aria-labelledby="keypoints-title" className={`${classes.keypointsContainer} pl-lg-2 pr-lg-2 pl-3 pr-3`} 
-        /*className="pl-lg-2 pr-lg-2 pl-3 pr-3"*/>
+        <Container
+          tag="section"
+          aria-labelledby="keypoints-title"
+          className={`${classes.keypointsContainer} pl-lg-2 pr-lg-2 pl-3 pr-3`}
+          /* className="pl-lg-2 pr-lg-2 pl-3 pr-3" */
+        >
           <Row>
             <Col>
               <Row>
-                <Col xs="12" lg="5" id="keypoints" className='mb-5'>
+                <Col xs="12" lg="5" id="keypoints" className="mb-5">
                   <h3 className={classes.category}>{category}</h3>
                   <h4 className={classes.title} id="keypoints-title">
                     {title}
@@ -131,14 +135,15 @@ export const Keypoints = (props) => {
             </Col>
           </Row>
           <Row>
-            {list ? list.map((listItem) =>
-              <Col xs="12" md="6" lg="3" className="mb-5 mb-lg-0">
-                <div className={classes.keypointNumber}>{listItem.number}.</div>
-                {/* <img className={classes.keypointImage} src={`/assets/come-fare/${listItem.image}`} alt="" /> */}
-                <div className={classes.keypointTitle}>{listItem.title}</div>
-                <div className={classes.keypointDesc}>{listItem.desc}</div>
-              </Col>
-            )
+            {list
+              ? list.map((listItem) => (
+                  <Col xs="12" md="6" lg="3" className="mb-5 mb-lg-0">
+                    <div className={classes.keypointNumber}>{listItem.number}.</div>
+                    {/* <img className={classes.keypointImage} src={`/assets/come-fare/${listItem.image}`} alt="" /> */}
+                    <div className={classes.keypointTitle}>{listItem.title}</div>
+                    <div className={classes.keypointDesc}>{listItem.desc}</div>
+                  </Col>
+                ))
               : ''}
           </Row>
         </Container>
