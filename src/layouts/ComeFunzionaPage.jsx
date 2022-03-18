@@ -1,6 +1,6 @@
 import React, { useEffect, useContext } from 'react';
 import { announce } from '@react-aria/live-announcer';
-import { support } from '../../contents/home-page/home.yml';
+// import { support } from '../../contents/home-page/home.yml';
 import content from '../../contents/come-funziona/come-funziona.yml';
 import { SEO } from '../components/SEO';
 import { Timeline } from '../components/carousel/Timeline';
@@ -10,7 +10,7 @@ import seo from '../../contents/seo.yml';
 import { GlobalStateContext } from '../context/globalContext';
 import { Involved } from './come-funziona/Involved';
 import { Beneficiaries } from './come-funziona/Beneficiaries';
-import { SupportSection } from './faq/SupportSection';
+// import { SupportSection } from './faq/SupportSection';
 
 const { title: seoTitle, description: seoDescription } = seo.comeFunzionaPage;
 

@@ -140,7 +140,7 @@ const useStyle = createUseStyles({
       '&.active': {
         backgroundColor: 'rgba(0,102,204,0.06)',
         borderLeft: '4px solid #0073E6',
-      }
+      },
     },
     '& .modal-button': {
       '&:focus': {
@@ -150,7 +150,7 @@ const useStyle = createUseStyles({
     },
     '& .nav-item.r-nav': {
       marginLeft: 'auto',
-    }
+    },
   },
   linkListWrapperCustom: {
     '& ul li:not(:first-child)': {
@@ -316,7 +316,7 @@ const CenterHeader = () => {
 };
 
 const NavHeader = () => {
-  const [{ activeItem }, dispatch] = useContext(GlobalStateContext);
+  const [{ activeItem }, ] = useContext(GlobalStateContext);
   const [isOpen, setIsOpen] = useState(false);
   const closeMenu = () => setIsOpen(false);
   const toogleMenu = () => setIsOpen(!isOpen);
