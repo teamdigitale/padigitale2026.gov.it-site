@@ -106,18 +106,18 @@ export const KeypointSection = (props) => {
               {!reverse ?
                 <Col xs="12" lg="5" className="offset-lg-1">
                   <h3 className={classes.keypointSectionNumber}>{number}</h3>
-                  <h4 id="keypoints-section-title" className={classes.keypointSectionTitle}>{title}</h4></Col>
+                  <h4 id={`keypoint-section-title-${number}`} className={classes.keypointSectionTitle}>{title}</h4></Col>
                 :
                 <Col xs="12" lg="5" className="offset-lg-6">
                   <h3 className={classes.keypointSectionNumber}>{number}</h3>
-                  <h4 id="keypoints-section-title" className={classes.keypointSectionTitle}>{title}</h4></Col>
+                  <h4 id={`keypoint-section-title-${number}`} className={classes.keypointSectionTitle}>{title}</h4></Col>
               }
             </Row> */}
             {!reverse ?
               <Row>
                 <Col xs="12" lg="5" className="offset-lg-1 order-1 order-lg-0">
                   <h3 className={classes.keypointSectionNumber}>{number}</h3>
-                  <h4 id="keypoints-section-title" className={classes.keypointSectionTitle}>{title}</h4>
+                  <h4 id={`keypoint-section-title-${number}`} className={classes.keypointSectionTitle}>{title}</h4>
                   <p className={classes.paragraph} dangerouslySetInnerHTML={{ __html: text }}></p>
                   {button ? <Button color='primary' outline aria-label={`Dettaglio punto chiave ${number} ${title}`}>SCOPRI DI PIÚ</Button> : ''}
                   {linkLabel ? <a href="#" className={classes.keypointSectionLink}>{linkLabel}</a> : ''}
@@ -133,7 +133,7 @@ export const KeypointSection = (props) => {
                 </Col>
                 <Col xs="12" lg="5" className="offset-lg-1">
                   <h3 className={classes.keypointSectionNumber}>{number}</h3>
-                  <h4 id="keypoints-section-title" className={classes.keypointSectionTitle}>{title}</h4>
+                  <h4 id={`keypoint-section-title-${number}`} className={classes.keypointSectionTitle}>{title}</h4>
                   <p className={classes.paragraph} dangerouslySetInnerHTML={{ __html: text }}></p>
                   {button ? <Button color='primary' outline aria-label={`Dettaglio punto chiave ${number} ${title}`}>SCOPRI DI PIÚ</Button> : ''}
                   {linkLabel ? <a href="#" className={classes.keypointSectionLink}>{linkLabel}</a> : ''}
@@ -143,7 +143,7 @@ export const KeypointSection = (props) => {
           </Container>
         </div>
         :
-        <Container tag="section" aria-labelledby="keypoints-section-title"
+        <Container tag="section" aria-labelledby={`keypoint-section-title-${number}`}
           /*className="pl-lg-2 pr-lg-2 pl-3 pr-3"*/
           className={`${classes.keypointSection} pl-lg-2 pr-lg-2 pl-3 pr-3`}
         >
@@ -154,11 +154,11 @@ export const KeypointSection = (props) => {
             {!reverse ?
               <Col xs="12" lg="5" className="offset-lg-1">
                 <h3 className={classes.keypointSectionNumber}>{number}</h3>
-                <h4 id="keypoints-section-title" className={classes.keypointSectionTitle}>{title}</h4></Col>
+                <h4 id={`keypoint-section-title-${number}`} className={classes.keypointSectionTitle}>{title}</h4></Col>
               :
               <Col xs="12" lg="5" className="offset-lg-6">
                 <h3 className={classes.keypointSectionNumber}>{number}</h3>
-                <h4 id="keypoints-section-title" className={classes.keypointSectionTitle}>{title}</h4></Col>
+                <h4 id={`keypoint-section-title-${number}`} className={classes.keypointSectionTitle}>{title}</h4></Col>
             }
           </Row> */}
           {!reverse ?
@@ -166,7 +166,7 @@ export const KeypointSection = (props) => {
               <Row>
                 <Col xs="12" lg="5" className="offset-lg-1 order-1 order-lg-0">
                   <h3 className={classes.keypointSectionNumber}>{number}</h3>
-                  <h4 id="keypoints-section-title" className={classes.keypointSectionTitle}>{title}</h4>
+                  <h4 id={`keypoint-section-title-${number}`} className={classes.keypointSectionTitle}>{title}</h4>
                   <p className={classes.paragraph} dangerouslySetInnerHTML={{ __html: text }}></p>
                   {button ? <Button color='primary' outline aria-label={`Dettaglio punto chiave ${number} ${title}`}>SCOPRI DI PIÚ</Button> : ''}
                   {linkLabel ? <a href="#" className={classes.keypointSectionLink}>{linkLabel}</a> : ''}
@@ -200,7 +200,7 @@ export const KeypointSection = (props) => {
                 </Col>
                 <Col xs="12" lg="5" className="offset-lg-1">
                   <h3 className={classes.keypointSectionNumber}>{number}</h3>
-                  <h4 id="keypoints-section-title" className={classes.keypointSectionTitle}>{title}</h4>
+                  <h4 id={`keypoint-section-title-${number}`} className={classes.keypointSectionTitle}>{title}</h4>
                   <p className={classes.paragraph} dangerouslySetInnerHTML={{ __html: text }}></p>
                   {button ? <Button color='primary' outline aria-label={`Dettaglio punto chiave ${number} ${title}`}>SCOPRI DI PIÚ</Button> : ''}
                   {linkLabel ? <a href="#" className={classes.keypointSectionLink}>{linkLabel}</a> : ''}

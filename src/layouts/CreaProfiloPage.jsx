@@ -281,7 +281,7 @@ export const CreaProfiloPage = () => {
                   <Row>
                     <Col xs={12} lg={4}>
                       <a href="#" className={classes.cardReadMore}>
-                        <img className={classes.clip} src="/assets/clip.svg"></img>
+                        <img className={classes.clip} src="/assets/clip.svg" alt=""></img>
                         <span className={classes.cardTitle}>Banda ultra larga</span>
                         <span className={classes.cardInfo}>Scarica il PDF (3.7MB)</span>
                       </a>
