@@ -13,7 +13,6 @@ import { Row, Col, Input, Breadcrumb, BreadcrumbItem } from 'design-react-kit';
 import Select from 'react-select';
 import ReCAPTCHA from 'react-google-recaptcha';
 import content from '../../contents/opportunity-page/opportunity.yml';
-import contentAssistance from '../../contents/assistenza/assistenza.yml';
 import notificationsLabel from '../../contents/notifications.yml';
 import errorsLabels from '../../contents/errorsLabels.yml';
 import links from '../../contents/links.yml';
@@ -380,155 +379,6 @@ export const AssistenzaPage = () => {
     hiddenSelect.dispatchEvent(optionSelected);
   };
 
-  /* const onSubmit = async () => {
-    const data = {};
-    const inputArr = document.querySelectorAll('input');
-    const textareaArr = document.querySelectorAll('textarea');
-    const selectArr = document.querySelectorAll('select');
-    inputArr.forEach((input) => {
-      data[input.name] = input.value;
-    });
-    textareaArr.forEach((textarea) => {
-      data[textarea.name] = textarea.value;
-    });
-    selectArr.forEach((select) => {
-      data[select.name] = select.value;
-    });
-
-    console.log(data);
-
-    const formData = new FormData();
-    Object.keys(data).forEach((key) => {
-      const value = data[key];
-      formData.append(key, value);
-    });
-
-    fetch(`https://padigitale2026--dev3.my.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8`, {
-      method: 'POST',
-      body: formData,
-      headers: {
-        'Access-Control-Allow-Origin': '*',
-      },
-    })
-      .then(async (response) => {
-        const data = await response.json();
-        const status = response.status;
-        setTimeout(() => {
-          if (status >= 200 && status <= 299) {
-            notificationElement.classList.add('show');
-            notificationElement.classList.add('success');
-
-            titleElement.innerHTML = `${successLabels.icon} ${successLabels.title}`;
-            descriptionElement.innerHTML = successLabels.description;
-
-            setTimeout(() => {
-              notificationElement.classList.remove('show');
-            }, 5000);
-          } else {
-             notificationElement.classList.add('show');
-            notificationElement.classList.add('error');
-
-            if (data.success === false) {
-              titleElement.innerHTML = `${errorLabels.icon} ${errorAddressLabel.title}`;
-              descriptionElement.innerHTML = errorAddressLabel.description;
-            } else {
-              titleElement.innerHTML = `${errorLabels.icon} ${errorLabels.title}`;
-              descriptionElement.innerHTML = errorLabels.description;
-            }
-          }
-        }, 500);
-      })
-      .catch((error) => {
-        console.log(error);
-      })
-      .then(() => {
-        announce('Invio in corso');
-      });
-
-    const inputValueArr = Array.prototype.slice.call(inputArr).map((input) => {
-      return input.value;
-    });
-    const inputNameArr = Array.prototype.slice.call(inputArr).map((input) => {
-      return input.name;
-    });
-    
-    console.log(data);
-    console.log(event);
-    const token = await executeRecaptcha();
-    Object.keys(data).map(function (key) {
-      if (data[key] === undefined) {
-        delete data[key];
-      }
-      if (key === 'enteSelect' || key === 'representative' || key === 'messageSelect') {
-        data[key] = data[key]?.value;
-      }
-    });
-
-    data['captcha'] = token;
-
-    const spinner = document.querySelector('.spinner');
-    spinner.classList.remove('hidden');
-
-    const notificationElement = document.querySelector('.notification');
-    const titleElement = notificationElement.querySelector('h5');
-    const descriptionElement = notificationElement.querySelector('p');
-
-    const closeNotification = notificationElement.querySelector('.notification-close');
-
-    const closeNotificationHandler = (event) => {
-      event.target.closest('.notification').classList.remove('show');
-      closeNotification.removeEventListener('click', closeNotificationHandler);
-    };
-    closeNotification.addEventListener('click', closeNotificationHandler);
-
-    fetch(`${apiUrl}/messages`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
-    })
-      .then(async (response) => {
-        const data = await response.json();
-        const status = response.status;
-        setTimeout(() => {
-          if (status >= 200 && status <= 299) {
-            notificationElement.classList.add('show');
-            notificationElement.classList.add('success');
-
-            titleElement.innerHTML = `${successLabels.icon} ${successLabels.title}`;
-            descriptionElement.innerHTML = successLabels.description;
-
-            setTimeout(() => {
-              notificationElement.classList.remove('show');
-            }, 5000);
-          } else {
-            notificationElement.classList.add('show');
-            notificationElement.classList.add('error');
-
-            if (data.success === false) {
-              titleElement.innerHTML = `${errorLabels.icon} ${errorAddressLabel.title}`;
-              descriptionElement.innerHTML = errorAddressLabel.description;
-            } else {
-              titleElement.innerHTML = `${errorLabels.icon} ${errorLabels.title}`;
-              descriptionElement.innerHTML = errorLabels.description;
-            }
-          }
-        }, 500);
-      })
-      .catch((error) => {
-        console.log(error);
-      })
-      .then(() => {
-        spinner.classList.add('hidden');
-        announce('Invio in corso');
-      });
-  }; */
-
-  /* const onError = async (data) => {
-    console.log('error', data);
-  }; */
-
   const customInvalid = (event) => {
     event.preventDefault();
     const currentTarget = event.target;
@@ -592,7 +442,6 @@ export const AssistenzaPage = () => {
   return (
     <>
       <SEO title={seoTitle} description={seoDescription} />
-      {/* <Breadcrumb currentPage={contentAssistance.breadcrumb} /> */}
       <div className="container">
         <Row>
           <Col xs="12">
@@ -633,7 +482,6 @@ export const AssistenzaPage = () => {
         </Row>
         <Row>
           <Col xs="12">
-            {/* <form onSubmit={handleSubmit(onSubmit, onError)} id="message-form" aria-describedby="mandatory-label"> */}
             <form
               action="https://padigitale2026--dev1.my.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8"
               method="POST"
@@ -653,13 +501,10 @@ export const AssistenzaPage = () => {
               <Row className="mt-5">
                 <Col xs={12} md={6} lg={4}>
                   <Input
-                    /* invalid={errors.address}
-                    aria-invalid={errors.address && 'true'} */
                     label={emailLabel}
                     size="20"
                     maxLength="80"
                     aria-describedby="mandatory-label"
-                    /* aria-labelledby={errors.address && 'error-address'} */
                     type="email"
                     id="00N7Y000008tqdM"
                     name="00N7Y000008tqdM"
@@ -670,13 +515,10 @@ export const AssistenzaPage = () => {
                 </Col>
                 <Col xs={12} md={6} lg={4} className="offset-lg-1 mt-5 mt-md-0">
                   <Input
-                    /* invalid={errors.address}
-                    aria-invalid={errors.address && 'true'} */
                     label={telLabel}
                     size="20"
                     maxLength="40"
                     aria-describedby="mandatory-label"
-                    /* aria-labelledby={errors.address && 'error-address'} */
                     type="text"
                     id="00N7Y000008tqdb"
                     name="00N7Y000008tqdb"
@@ -765,11 +607,8 @@ export const AssistenzaPage = () => {
               <Row className="mt-5">
                 <Col xs={12} lg={9}>
                   <Input
-                    /* invalid={errors.address}
-                      aria-invalid={errors.address && 'true'} */
                     label={objectLabel}
                     aria-describedby="mandatory-label"
-                    /* aria-labelledby={errors.address && 'error-address'} */
                     type="text"
                     id="00N7Y000008tqdR"
                     name="00N7Y000008tqdR"

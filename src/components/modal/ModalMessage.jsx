@@ -571,7 +571,7 @@ export const ModalMessage = () => {
             <Button color="primary" type="submit" form="message-form">
               {sendButtonLabel}
             </Button>
-            <img className={classes.spinner} src="/assets/spinner.gif" alt=""></img>
+            <img className={classes.spinner} src="/assets/spinner.gif" alt="spinner"></img>
           </div>
         </ModalFooter>
       </Modal>
