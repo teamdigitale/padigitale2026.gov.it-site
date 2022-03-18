@@ -12,7 +12,7 @@ import { GlobalStateContext } from '../context/globalContext';
 import content from '../../contents/come-partecipare/come-partecipare.yml';
 import { TimelineVerticalCards } from '../components/TimelineVerticalCards';
 import { HeroVideo } from '../components/HeroVideo';
-import { SideNavigationAccordion } from './SideNavigationAccordion';
+import { SideNavigationAccordion } from './sideNavigationAccordion';
 import { HeroSupport } from './support/Hero';
 
 const { title: seoTitle, description: seoDescription } = seo.faqPage;
