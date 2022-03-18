@@ -245,12 +245,16 @@ const useStyles = createUseStyles({
   },
 });
 
-const optionSelected = new Event('selected');
-
 export const AssistenzaPage = () => {
   const textareaMaxLength = 300;
   const [textareaDescriptionState, setTextareaDescriptionState] = useState('not-active');
   const [formFilled, setFormFilled] = useState(false);
+
+  const [optionSelected, setOptionSelected] = useState();
+
+  useEffect(() => {
+    setOptionSelected(new Event('selected'));
+  }, []);
 
   useEffect(() => {
     const form = document.querySelector('#assistance-form');
@@ -556,11 +560,14 @@ export const AssistenzaPage = () => {
       <Breadcrumb currentPage={contentAssistance.breadcrumb} />
       <div className="container">
         <iframe name="formFrame" id="formFrame" className="d-none"></iframe>
-        <Row className='mt-5'>
+        <Row className="mt-5">
           <Col xs={12} lg={5}>
             <div className={classes.titleUpdate}>Assistenza</div>
-            <div className={classes.subtitleUpdate}>Un team dedicato è a tua disposizione per chiarire dubbi e approfondire temi di interesse. Compila il modulo sottostante e invia la richiesta.</div>
-            <div className={classes.mandatory}>I campi con * sono obbligatori </div>          
+            <div className={classes.subtitleUpdate}>
+              Un team dedicato è a tua disposizione per chiarire dubbi e approfondire temi di interesse. Compila il
+              modulo sottostante e invia la richiesta.
+            </div>
+            <div className={classes.mandatory}>I campi con * sono obbligatori </div>
           </Col>
           <Col xs={12} lg={3} className="offset-lg-3">
             <img src={`/assets/assistenza.svg`} alt="" />
