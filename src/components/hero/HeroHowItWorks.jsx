@@ -192,7 +192,9 @@ export const HeroHowItWorks = ({ title, body, image, list }) => {
         <Container className="pl-lg-2 pr-lg-2 pl-3 pr-3">
           <Row className="m-0">
             <Col xs="12" lg="11" className="offset-lg-1 px-0">
-              <div className={`${classes.contentWrapper} bg-white d-flex flex-column`}>
+              <div
+                className={`${classes.contentWrapper} bg-white d-flex flex-column`}
+              >
                 <Row className="m-0">
                   <Col lg={6} xs={12} className="pr-3">
                     <div className={classes.textWrapper}>
@@ -200,26 +202,37 @@ export const HeroHowItWorks = ({ title, body, image, list }) => {
                       <HeroParagraph text={body} />
                     </div>
                     <div className={classes.listWrapper}>
-                      {list ? list.map((listItem) => (
-                        <div key={listItem.title} className={classes.list}>
-                          <span className={classes.listTitle}>{listItem.title}</span>
-                          <div className={classes.listItemsWrapper}>
-                            {listItem.items.map((item) => (
-                              <React.Fragment key={item.item}>
-                                <Link
-                                  to={`/come-funziona#` + item.anchor}
-                                  onClick={() => scrollIntoView(item.anchor)}
-                                  className={classes.listItem}>
-                                  {item.item}
-                                </Link>
-                              </React.Fragment>
-                            ))}
-                          </div>
-                        </div>
-                      )) : ''}
+                      {list
+                        ? list.map((listItem) => (
+                            <div key={listItem.title} className={classes.list}>
+                              <span className={classes.listTitle}>
+                                {listItem.title}
+                              </span>
+                              <div className={classes.listItemsWrapper}>
+                                {listItem.items.map((item) => (
+                                  <React.Fragment key={item.item}>
+                                    <Link
+                                      to={`/come-funziona#` + item.anchor}
+                                      onClick={() =>
+                                        scrollIntoView(item.anchor)
+                                      }
+                                      className={classes.listItem}
+                                    >
+                                      {item.item}
+                                    </Link>
+                                  </React.Fragment>
+                                ))}
+                              </div>
+                            </div>
+                          ))
+                        : ''}
                     </div>
                   </Col>
-                  <Col xs={12} lg={6} className="d-flex d-lg-none mt-4 mt-lg-0 justify-content-center">
+                  <Col
+                    xs={12}
+                    lg={6}
+                    className="d-flex d-lg-none mt-4 mt-lg-0 justify-content-center"
+                  >
                     <HeroBackground image={image} className={classes.heroImg} />
                   </Col>
                 </Row>
@@ -228,7 +241,10 @@ export const HeroHowItWorks = ({ title, body, image, list }) => {
           </Row>
         </Container>
       </div>
-      <HeroBackground image={image} className={`${classes.heroImg} d-none d-lg-block`} />
+      <HeroBackground
+        image={image}
+        className={`${classes.heroImg} d-none d-lg-block`}
+      />
     </Hero>
   );
 };
