@@ -316,7 +316,7 @@ const CenterHeader = () => {
 };
 
 const NavHeader = () => {
-  const [{ activeItem }, ] = useContext(GlobalStateContext);
+  const [{ activeItem }] = useContext(GlobalStateContext);
   const [isOpen, setIsOpen] = useState(false);
   const closeMenu = () => setIsOpen(false);
   const toogleMenu = () => setIsOpen(!isOpen);
