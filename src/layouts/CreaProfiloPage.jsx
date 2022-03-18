@@ -13,7 +13,6 @@ import content from '../../contents/come-partecipare/come-partecipare.yml';
 import { TimelineVerticalCards } from '../components/TimelineVerticalCards';
 import { HeroVideo } from '../components/HeroVideo';
 import { SideNavigationAccordion } from './sideNavigationAccordion';
-import { HeroSupport } from './support/Hero';
 
 const { title: seoTitle, description: seoDescription } = seo.faqPage;
 
@@ -105,7 +104,7 @@ const useStyles = createUseStyles({
   cardInfo: {
     fontWeight: '600',
     fontSize: '0.875rem',
-    color: '#33485C'
+    color: '#33485C',
   },
   titleUpdate: {
     fontSize: '48px',
@@ -118,7 +117,7 @@ const useStyles = createUseStyles({
     fontSize: '24px',
     color: '#33485C',
     lineHeight: '28px',
-  }
+  },
 });
 
 // eslint-disable-next-line sonarjs/cognitive-complexity
@@ -128,8 +127,8 @@ export const CreaProfiloPage = () => {
   const [filterId, setFilterId] = useState('all');
   const [questions, setQuestions] = useState(faq.questions);
   const [isMobile, setIsMobile] = useState();
-  const [questNum, setquestNum] = useState(countInitQuestions());
-  const [, dispatch] = useContext(GlobalStateContext);
+  const [, setquestNum] = useState(countInitQuestions());
+  // const [, dispatch] = useContext(GlobalStateContext);
 
   useEffect(() => {
     setIsMobile(window.innerWidth < 992);
@@ -161,28 +160,28 @@ export const CreaProfiloPage = () => {
     return count;
   }
 
-  const handleChange = (event) => {
-    setInputValue(event.target.value);
-    if (event.target.value.length >= 3) {
-      if (isMobile && filterId !== 'all') {
-        setQuestions(getQuestionsMobile(getNewQuestions(event.target.value)));
-      } else {
-        setQuestions(getNewQuestions(event.target.value));
-      }
-    } else {
-      if (isMobile) {
-        filterId !== 'all' ? setQuestions(getQuestionsMobile(faq.questions)) : setQuestions(faq.questions);
-      } else {
-        setQuestions(faq.questions);
-      }
-    }
-    setquestNum(countQuestions());
-    if (questions.length === 0) {
-      announce('Nessun risultato');
-    } else {
-      announce('Numero di FAQ in pagina aggiornato');
-    }
-  };
+  // const handleChange = (event) => {
+  //   setInputValue(event.target.value);
+  //   if (event.target.value.length >= 3) {
+  //     if (isMobile && filterId !== 'all') {
+  //       setQuestions(getQuestionsMobile(getNewQuestions(event.target.value)));
+  //     } else {
+  //       setQuestions(getNewQuestions(event.target.value));
+  //     }
+  //   } else {
+  //     if (isMobile) {
+  //       filterId !== 'all' ? setQuestions(getQuestionsMobile(faq.questions)) : setQuestions(faq.questions);
+  //     } else {
+  //       setQuestions(faq.questions);
+  //     }
+  //   }
+  //   setquestNum(countQuestions());
+  //   if (questions.length === 0) {
+  //     announce('Nessun risultato');
+  //   } else {
+  //     announce('Numero di FAQ in pagina aggiornato');
+  //   }
+  // };
 
   function getQuestionsMobile(items) {
     const filteredQuestions = [];
@@ -227,7 +226,7 @@ export const CreaProfiloPage = () => {
               </Breadcrumb>
             </Col>
           </Row>
-          <Row className='mb-5'>
+          <Row className="mb-5">
             <Col xs={12} lg={7}>
               <div className={classes.titleUpdate}>Crea il profilo della tua PA: identità digitale e dati IPA</div>
               <div className={classes.subtitleUpdate}>
@@ -273,7 +272,7 @@ export const CreaProfiloPage = () => {
                   .
                 </p>
               </Container>
-              <section id="watch-video" className='mb-5'>
+              <section id="watch-video" className="mb-5">
                 <HeroVideo />
               </section>
               <Container>

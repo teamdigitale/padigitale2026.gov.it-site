@@ -13,7 +13,7 @@ const useStyle = createUseStyles({
     '@media(min-width: 992px)': {
       fontSize: '2.222rem',
       lineHeight: '2.222rem',
-    }
+    },
   },
   keypointSectionNumber: {
     fontSize: '0.889rem',
@@ -36,7 +36,7 @@ const useStyle = createUseStyles({
     marginBottom: '30px',
     '@media(min-width: 992px)': {
       fontSize: '1.333rem',
-    }
+    },
   },
   bgLightBlue: {
     backgroundColor: '#F0F6FC',
@@ -79,12 +79,12 @@ const useStyle = createUseStyles({
       display: 'inline-block',
       marginTop: '15px',
       maxWidth: '250px',
-    }
+    },
   },
   keypointSection: {
     paddingTop: '4.444rem',
     paddingBottom: '4.444rem',
-  }
+  },
 });
 
 export const KeypointSection = (props) => {
@@ -93,11 +93,12 @@ export const KeypointSection = (props) => {
 
   return (
     <>
-      {lBlue ?
+      {lBlue ? (
         <div className={classes.bgLightBlue}>
-          <Container tag="section" aria-labelledby="keypoints-section-title"
+          <Container
+            tag="section" aria-labelledby="keypoints-section-title"
             className={`${classes.keypointSection} pl-lg-2 pr-lg-2 pl-3 pr-3`}
-          /*className="pl-lg-2 pr-lg-2 pl-3 pr-3"*/
+          /* className="pl-lg-2 pr-lg-2 pl-3 pr-3" */
           >
             {/* <Row>
               <Col xs="8" md="6" lg="4" className="mt-3 mt-lg-0 mb-4 mb-lg-0 d-lg-none">
@@ -113,19 +114,34 @@ export const KeypointSection = (props) => {
                   <h4 id={`keypoint-section-title-${number}`} className={classes.keypointSectionTitle}>{title}</h4></Col>
               }
             </Row> */}
-            {!reverse ?
+            {!reverse ? (
               <Row>
                 <Col xs="12" lg="5" className="offset-lg-1 order-1 order-lg-0">
                   <h3 className={classes.keypointSectionNumber}>{number}</h3>
-                  <h4 id={`keypoint-section-title-${number}`} className={classes.keypointSectionTitle}>{title}</h4>
+                  <h4 id={`keypoint-section-title-${number}`} className={classes.keypointSectionTitle}>
+                    {title}
+                  </h4>
                   <p className={classes.paragraph} dangerouslySetInnerHTML={{ __html: text }}></p>
-                  {button ? <Button color='primary' outline aria-label={`Dettaglio punto chiave ${number} ${title}`}>SCOPRI DI PIÚ</Button> : ''}
-                  {linkLabel ? <a href="#" className={classes.keypointSectionLink}>{linkLabel}</a> : ''}
+                  {button ?
+                    <Button color='primary' outline aria-label={`Dettaglio punto chiave ${number} ${title}`}>
+                      SCOPRI DI PIÚ
+                    </Button>
+                    :
+                    ''
+                  }
+                  {linkLabel ?
+                    <a href="#" className={classes.keypointSectionLink}>
+                      {linkLabel}
+                    </a>
+                    :
+                    ''
+                  }
                 </Col>
                 <Col xs="8" md="6" lg="4" className="offset-lg-1 mt-3 mt-lg-0 order-0 order-lg-1 mb-5 mb-lg-0 d-lg-flex align-items-center">
                   <img className={classes.keypointSectionImage} src={`/assets/come-fare/${image}`} alt="" />
                 </Col>
               </Row>
+            )
               :
               <Row>
                 <Col xs="8" md="6" lg="4" className="offset-lg-1 mt-3 mt-lg-0 mb-5 mb-lg-0 d-lg-flex align-items-center">
@@ -142,6 +158,7 @@ export const KeypointSection = (props) => {
             }
           </Container>
         </div>
+      )
         :
         <Container tag="section" aria-labelledby={`keypoint-section-title-${number}`}
           /*className="pl-lg-2 pr-lg-2 pl-3 pr-3"*/

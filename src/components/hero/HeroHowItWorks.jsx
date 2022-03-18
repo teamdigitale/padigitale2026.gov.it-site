@@ -231,7 +231,7 @@ export const HeroHowItWorks = ({ title, body, image, list }) => {
           </Row>
         </Container>
       </div>
-      <HeroBackground image={image} className={`${classes.heroImg} d-none d-lg-block`}/>
+      <HeroBackground image={image} className={`${classes.heroImg} d-none d-lg-block`} />
     </Hero>
   );
 };

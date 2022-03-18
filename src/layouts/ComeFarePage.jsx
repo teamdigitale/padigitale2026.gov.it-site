@@ -6,11 +6,9 @@ import { HeroHowToDo } from '../components/hero/HeroHowToDo';
 import { Keypoints } from './come-fare/Keypoints';
 import { KeypointSection } from './come-fare/KeypointSection';
 
-
 const { title: seoTitle, description: seoDescription } = seo.comeFarePage;
 
 export const ComeFarePage = () => {
-
   return (
     <>
       <SEO title={seoTitle} description={seoDescription} />

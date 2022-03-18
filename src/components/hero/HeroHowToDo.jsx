@@ -187,14 +187,14 @@ const useStyles = createUseStyles({
         fontWeight: '400',
         '&::before': {
           color: 'white',
-          fontWeight: '700'
+          fontWeight: '700',
         },
       },
     },
   },
 });
 
-export const HeroHowToDo = ({ title, body, image, imageMob/*, list */ }) => {
+export const HeroHowToDo = ({ title, body, image, imageMob /*,list */ }) => {
   const classes = useStyles();
 
   // const scrollIntoView = (id) => {
