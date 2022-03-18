@@ -103,7 +103,7 @@ const useStyles = createUseStyles({
       color: '#808080',
     },
     '& [class$="-placeholder"]': {
-      color: '#797979',
+      color: '#767676',
     },
     '& [class$="-indicatorSeparator"]': {
       display: 'none',
