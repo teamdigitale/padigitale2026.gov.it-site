@@ -102,6 +102,9 @@ const useStyles = createUseStyles({
       fontSize: '0.889rem',
       color: '#808080',
     },
+    '& [class$="-placeholder"]': {
+      color: '#797979',
+    },
     '& [class$="-indicatorSeparator"]': {
       display: 'none',
     },
