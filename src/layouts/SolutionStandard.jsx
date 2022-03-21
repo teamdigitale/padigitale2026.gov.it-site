@@ -10,7 +10,7 @@ import { HeroImage } from '../components/hero/HeroImage';
 import { TimelineVertical } from '../components/TimelineVertical';
 import { ProjectsCards } from '../components/ProjectsCards';
 
-const { title: seoTitle, description: seoDescription } = seo.projectsSolutionPage;
+const { title: seoTitle, description: seoDescription } = seo.standardSolutionPage;
 
 const useStyles = createUseStyles({
   breadcrumb: {

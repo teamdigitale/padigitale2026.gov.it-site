@@ -1,9 +1,7 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Button, Collapse, Card, CardBody } from 'design-react-kit';
 import { createUseStyles } from 'react-jss';
-import { navigate } from 'gatsby';
 import PropTypes from 'prop-types';
-import { GlobalStateContext } from '../context/globalContext';
 import { ExternalLink } from './ExternalLink';
 
 const useStyles = createUseStyles({
@@ -146,36 +144,9 @@ const useStyles = createUseStyles({
         textTransform: 'lowercase',
       },
     },
-    '& .access': {
-      fontSize: '0.778rem',
-      lineHeight: '1.4',
-      letterSpacing: '0.5px',
-      textTransform: 'uppercase',
-      display: 'flex',
-      alignItems: 'baseline',
-      marginBottom: '1rem',
-      '& span': {
-        flexShrink: '0',
-        marginRight: '0.313rem',
-      },
-      '& a': {
-        fontSize: '1.125rem',
-        lineHeight: '1',
-        fontWeight: '600',
-        color: '#0066CC',
-        textTransform: 'capitalize',
-        textDecoration: 'none',
-        '@media (min-width: 992px)': {
-          fontSize: '1rem',
-        },
-        '&:hover': {
-          textDecoration: 'underline',
-        },
-      },
-    },
   },
   linkAccordion: {
-    textAlign: 'right',
+    marginTop: '1.5rem',
     '@media (min-width: 992px)': {
       marginTop: '2.222rem',
     },
@@ -251,25 +222,54 @@ const useStyles = createUseStyles({
   stalls: {
     marginBottom: '1rem',
   },
+  moreInfo: {
+    composes: 'info-row',
+    fontSize: '0.778rem',
+    lineHeight: '1.4',
+    letterSpacing: '0.5px',
+    textTransform: 'uppercase',
+    display: 'flex',
+    alignItems: 'baseline',
+    '& + .info-row': {
+      marginTop: '15px',
+    },
+    '& .label-info': {
+      flexBasis: '9.4rem',
+      flexShrink: '0',
+      marginRight: '1rem',
+    },
+    '& .value-info': {
+      fontSize: '0.88rem',
+      fontWeight: 600,
+      lineHeight: '1.25',
+      '&.access': {
+        color: '#06c',
+      },
+      '&.updates': {
+        fontWeight: 'normal',
+        lineHeight: '1.5',
+        textTransform: 'none',
+        '& a': {
+          fontWeight: '600',
+        },
+      },
+    },
+    '&.updates': {
+      '@media (max-width: 992px)': {
+        display: 'block',
+        '& .label-info': {
+          display: 'block',
+          marginBottom: '0.888rem',
+        },
+      },
+    },
+  },
 });
 
 export const AccordionButtonFull = (props) => {
   const classes = useStyles();
-  const {
-    id,
-    number,
-    title,
-    money,
-    tags,
-    description,
-    stalls,
-    accessLabel,
-    accessSectionId,
-    moreInfoLabel,
-    moreInfoLink,
-  } = props.data;
-
-  const [, dispatch] = useContext(GlobalStateContext);
+  const { id, number, title, money, tags, description, stalls, accessLabel, moreInfoLabel, moreInfoLink, updates } =
+    props.data;
 
   const eventHandler = () => {
     props.handleToggle(props.id);
@@ -310,35 +310,31 @@ export const AccordionButtonFull = (props) => {
             <Card>
               <CardBody>
                 <div className={classes.description} dangerouslySetInnerHTML={{ __html: description }}></div>
-                <div className={classes.stalls}>
-                  Platea potenziale: <span>{stalls}</span>
+                <div className={classes.moreInfo}>
+                  <span className="label-info">Platea potenziale</span>
+                  <span className="value-info">{stalls}</span>
                 </div>
-                <div className="access">
-                  <span>Modalità di accesso:</span>{' '}
-                  <button
-                    className={classes.accessLink}
-                    onClick={() => {
-                      dispatch({
-                        type: 'SET:HOW_SECTION_ID',
-                        payload: { howId: accessSectionId },
-                      });
-                      navigate('/come-funziona');
-                    }}
-                  >
-                    <span className="sr-only">Vai alla sezione </span>
-                    <span>{accessLabel}</span>
-                    <span className="sr-only"> della pagina come funziona</span>
-                  </button>
+                <div className={classes.moreInfo}>
+                  <span className="label-info">Modalità di accesso</span>
+                  <span className="value-info access">{accessLabel}</span>
                 </div>
-                <div className={classes.linkAccordion}>
-                  <ExternalLink
-                    linkTo={moreInfoLink}
-                    ariaLabel={`${moreInfoLabel}, ${title}, (Collegamento esterno - Apre su nuova scheda)`}
-                  >
-                    {moreInfoLabel}
-                    <img src="/assets/external-icon.svg" alt="" />
-                  </ExternalLink>
-                </div>
+                {updates && (
+                  <div className={`${classes.moreInfo} updates`}>
+                    <span className="label-info">Aggiornamenti</span>
+                    <span className="value-info updates" dangerouslySetInnerHTML={{ __html: updates }}></span>
+                  </div>
+                )}
+                {!updates && (
+                  <div className={classes.linkAccordion}>
+                    <ExternalLink
+                      className="btn btn-primary"
+                      linkTo={moreInfoLink}
+                      ariaLabel={`${moreInfoLabel}, ${title}, (Collegamento esterno - Apre su nuova scheda)`}
+                    >
+                      VAI AGLI AVVISI
+                    </ExternalLink>
+                  </div>
+                )}
               </CardBody>
             </Card>
           </Collapse>
