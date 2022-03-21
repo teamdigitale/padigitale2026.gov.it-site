@@ -245,7 +245,7 @@ const useStyles = createUseStyles({
     },
   },
   subtitleUpdate: {
-    fontSize: '1.5rem',
+    fontSize: '1.333rem',
     color: '#33485C',
     lineHeight: '28px',
     '@media (max-width: 991px)': {
@@ -254,6 +254,10 @@ const useStyles = createUseStyles({
   },
   mandatory: {
     fontSize: '1rem',
+    marginTop: '6.25rem',
+    '@media (min-width: 991px)': {
+      marginTop: '6.25rem',
+    },
   },
   heroImg: {
     '@media (max-width: 991px)': {
@@ -325,7 +329,7 @@ export const AssistenzaPage = () => {
       noSelectValue = Array.prototype.slice.call(selectArr).find((select) => {
         return select.value === '';
       });
-      noSelectValue ? (noSelectValue = true) : (noSelectValue = false);
+      noSelectValue ? (noSelectValue = false) : (noSelectValue = true);
       setFormFilled(!noInputValue && !noSelectValue);
     };
 
@@ -475,7 +479,12 @@ export const AssistenzaPage = () => {
               modulo sottostante e invia la richiesta.
             </div>
           </Col>
-          <Col xs={12} md={6} lg={3} className="offset-lg-3 d-flex justify-content-center">
+          <Col
+            xs={12}
+            md={6}
+            lg={3}
+            className="offset-lg-2 d-flex justify-content-sm-end justify-content-lg-center mt-5 mt-md-0"
+          >
             <img src={`/assets/assistenza.svg`} alt="" className={classes.heroImg} />
           </Col>
         </Row>
@@ -654,7 +663,7 @@ export const AssistenzaPage = () => {
                   <ReCAPTCHA
                     sitekey="6LfW56weAAAAAIWHJnwlQ2lHNRCcd04QLYQyamww"
                     onChange={onChangeCaptcha}
-                    className={`${formFilled ? '' : 'd-none mt-5'}`}
+                    className={`${formFilled ? ' mt-5' : 'd-none'}`}
                     id="captcha-container"
                   />
                 </Col>

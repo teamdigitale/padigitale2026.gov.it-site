@@ -500,10 +500,10 @@ modal:
   directContactInfo: Un <strong>Team dedicato</strong> è a tua disposizione per <strong>ricevere<br>chiarimenti</strong> sugli investimenti o approfondire alcuni temi
   addMessageLabel: Voglio aggiungere un messaggio
   nameLabel: Nome richiedente:*
-  objectLabel: Oggetto:*
+  objectLabel: Oggetto*
   messageSelectLabel: ARGOMENTO MESSAGGIO
-  descriptionLabel: Testo messaggio:*
-  telLabel: "Contatto telefonico:"
+  descriptionLabel: Testo messaggio*
+  telLabel: "Contatto telefonico"
   radioGroupLabel: DICHIARO
   representLabel: RAPPRESENTO*
   messageLabel: TESTO MESSAGGIO
