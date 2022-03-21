@@ -13,7 +13,7 @@ import { TimelineVerticalCards } from '../components/TimelineVerticalCards';
 import { HeroVideo } from '../components/HeroVideo';
 import { SideNavigationAccordion } from './sideNavigationAccordion';
 
-const { title: seoTitle, description: seoDescription } = seo.faqPage;
+const { title: seoTitle, description: seoDescription } = seo.creaProfiloPage;
 
 const { sidebar, verticalTimeline } = content;
 

@@ -37,4 +37,7 @@ unsubscribePage:
 projectsSolutionPage:
   title: Presentazione progetti - PA digitale 2026
   description: Per le misure con una platea ristrettadi beneficiari (fino a  1.000 PA), è previstauna modalità di accesso attraversola presentazione di progetti, sempre ispirata ai principi della semplicità e della riduzione degli oneri amministrativi.
+creaProfiloPage:
+  title: Crea profilo - PA digitale 2026
+  description: Per partecipare agli avvisi è necessario che il rappresentante legale di un'amministrazione presente su IPA (Indice dei domini digitali della Pubblica Amministrazione), o una persona incaricata, avvii la procedura di attivazione della PA sulla piattaforma.
   
