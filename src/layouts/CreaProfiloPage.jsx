@@ -11,7 +11,7 @@ import seo from '../../contents/seo.yml';
 import content from '../../contents/crea-profilo/crea-profilo.yml';
 import { TimelineVerticalCards } from '../components/TimelineVerticalCards';
 import { HeroVideo } from '../components/HeroVideo';
-import { Totop } from '../components/Totop';
+/* import { Totop } from '../components/Totop'; */
 import { SideNavigationAccordion } from './sideNavigationAccordion';
 
 const { title: seoTitle, description: seoDescription } = seo.creaProfiloPage;
