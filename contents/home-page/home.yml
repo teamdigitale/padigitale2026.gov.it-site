@@ -122,41 +122,53 @@ opportunity:
       id: centri-facili
 heroCarouselNews:
   - id: 1
-    category: Comunicato stampa
-    title: "MaaS: 13 Comuni capoluogo di Città metropolitane hanno presentato progetti"
-    description: Si avvia ora la fase di selezione dei progetti pilota per i servizi “Mobility as a Service for Italy”
+    category: Avviso pubblico
+    title: "Milano, Napoli e Roma città capofila per il progetto Mobility as a Service for Italy"
+    description: Pubblicata la graduatoria dell’avviso pubblico. Nei prossimi mesi un nuovo bando per ampliare l’iniziativa
     source: 'Fonte: innovazione.gov.it'
-    linkTo: 'https://innovazione.gov.it/notizie/comunicati-stampa/13-comuni-capoluogo-di-citta-metropolitane-hanno-presentato-progetti-per-nuove-soluzioni-di-mobilita/'
+    linkTo: 'https://innovazione.gov.it/notizie/articoli/milano-napoli-e-roma-citta-capofila-per-il-progetto-mobility-as-a-service/'
   - id: 2
-    category: Novità
-    title: "Cloud PA: selezionato il progetto PSN, gara prevista nelle prossime settimane"
-    description: La proposta del raggruppamento di imprese Tim, CDP, Leonardo e Sogei è stata selezionata e sarà messa a gara
+    category: Approfondimento
+    title: "Cosa servirà alle PA per partecipare agli avvisi pubblici"
+    description: Come funzionerà la registrazione e di cosa avranno bisogno le amministrazioni nelle diverse fasi progettuali
     source: 'Fonte: innovazione.gov.it'
-    linkTo: 'https://innovazione.gov.it/notizie/articoli/cloud-pa-selezionato-il-progetto-psn-gara-prevista-nelle-prossime-settimane/'
+    linkTo: 'https://innovazione.gov.it/notizie/articoli/pa-digitale-2026-cosa-servira-alle-pa-per-partecipare-agli-avvisi-pubblici/'
   - id: 3
     category: Novità
-    title: Nasce PA digitale 2026, il punto di accesso alle risorse per la transizione digitale della PA
-    description: 'La piattaforma consentirà alle amministrazioni di richiedere i fondi del PNRR dedicati al digitale, rendicontare i progetti e ricevere assistenza'
+    title: "La svolta digitale delle grandi amministrazioni centrali"
+    description: Grazie al PNRR, un piano di interventi per ridisegnare e digitalizzare alcuni servizi fondamentali della PA
     source: 'Fonte: innovazione.gov.it'
-    linkTo: 'https://innovazione.gov.it/notizie/articoli/nasce-pa-digitale-2026-il-punto-di-accesso-risorse-transizione-digitale-pa-pnrr/'
+    linkTo: 'https://innovazione.gov.it/notizie/articoli/la-svolta-digitale-delle-grandi-amministrazioni-centrali/'
   - id: 4
     category: Novità
-    title: Dal 15 novembre certificati anagrafici online e gratuiti per i cittadini
-    description: Accedendo all'Anagrafe nazionale, per la prima volta i cittadini italiani potranno scaricare i certificati anagrafici online in maniera autonoma
-    source: 'Fonte: innovazione.gov.it'
-    linkTo: 'https://innovazione.gov.it/notizie/articoli/dal-15-novembre-certificati-anagrafici-online-e-gratuiti-per-i-cittadini/'
+    title: "I progetti Sportello Digitale Unico e accessibilità entrano nel vivo"
+    description: AgID al lavoro su due importanti misure del PNRR sulla digitalizzazione della Pubblica amministrazione
+    source: 'Fonte: agid.gov.it'
+    linkTo: 'https://www.agid.gov.it/it/agenzia/stampa-e-comunicazione/notizie/2022/02/21/pa-digitale-2026-i-progetti-sportello-digitale-unico-accessibilita-entrano-vivo'
   - id: 5
-    category: Comunicato stampa
-    title: 'DL PNRR: 250 milioni per le competenze digitali degli italiani'
-    description: Tutte le novità introdotte dal Decreto per l'attuazione del PNRR
+    category: Approfondimento
+    title: "Le misure per una PA protagonista della transizione digitale"
+    description: Disponibile un approfondimento sulle quattordici misure del PNRR di PA digitale 2026
     source: 'Fonte: innovazione.gov.it'
-    linkTo: 'https://innovazione.gov.it/notizie/comunicati-stampa/dl-pnrr-250-milioni-per-le-competenze-digitali-degli-italiani/'
+    linkTo: 'https://innovazione.gov.it/notizie/articoli/le-misure-per-una-pa-protagonista-della-transizione-digitale/'
   - id: 6
-    category: Notizia
-    title: Cloud Italia, presentati gli indirizzi strategici per la Pubblica Amministrazione
-    description: 'Le sfide della strategia: assicurare l’autonomia tecnologica del Paese, garantire il controllo sui dati e aumentare la resilienza dei servizi digitali'
+    category: Novità
+    title: "Pubblicato il bando per il Polo Strategico Nazionale"
+    description: Al via la gara europea per la gestione dei servizi cloud per la Pubblica Amministrazione. Scade il 16 marzo il termine per presentare le offerte
     source: 'Fonte: innovazione.gov.it'
-    linkTo: 'https://innovazione.gov.it/notizie/articoli/cloud-italia-presentati-gli-indirizzi-strategici-per-la-pubblica-amministrazione/ '
+    linkTo: 'https://innovazione.gov.it/notizie/articoli/pubblicato-il-bando-per-il-polo-strategico-nazionale/'
+  - id: 7
+    category: Comunicato stampa
+    title: "Anagrafe digitale: al via il cambio di residenza online"
+    description: Attiva da febbraio la prima fase di applicazione, che verrà estesa in tutta Italia
+    source: 'Fonte: innovazione.gov.it'
+    linkTo: 'https://innovazione.gov.it/notizie/articoli/anagrafe-digitale-al-via-il-cambio-di-residenza-online/'
+  - id: 8
+    category: Avvis pubblico
+    title: "Servizio civile digitale: al via il nuovo Avviso per gli enti"
+    description: Il servizio civile digitale espande il suo bacino di intervento con la pubblicazione del nuovo avviso per gli Enti
+    source: 'Fonte: innovazione.gov.it'
+    linkTo: 'https://innovazione.gov.it/notizie/articoli/servizio-civile-digitale-al-via-il-nuovo-avviso-per-gli-enti/'
 support:
   tag: Supporto
   title: Scrivici per chiarimenti o per contribuire con le tue idee al progetto

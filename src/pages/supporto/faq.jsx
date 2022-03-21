@@ -1,6 +1,6 @@
 import React, { useEffect, useContext } from 'react';
-import { FaqPage } from '../layouts/FaqPage';
-import { GlobalStateContext } from '../context/globalContext';
+import { FaqPage } from '../../layouts/FaqPage';
+import { GlobalStateContext } from '../../context/globalContext';
 
 const Page = () => {
   const [, dispatch] = useContext(GlobalStateContext);

@@ -20,13 +20,15 @@ export const ComeFunzionaPage = () => {
   useEffect(() => {
     if (howId) {
       const element = document.querySelector('#' + howId);
-      const elDistanceToTop = window.pageYOffset + element.getBoundingClientRect().top;
-      window.scrollTo(0, elDistanceToTop);
-      element.setAttribute('tabindex', '-1');
-      element.focus();
-      return () => {
-        dispatch({ type: 'SET:HOW_SECTION_ID' });
-      };
+      if (element) {
+        const elDistanceToTop = window.pageYOffset + element.getBoundingClientRect().top;
+        window.scrollTo(0, elDistanceToTop);
+        element.setAttribute('tabindex', '-1');
+        element.focus();
+        return () => {
+          dispatch({ type: 'SET:HOW_SECTION_ID' });
+        };
+      }
     }
   }, [howId, dispatch]);
 

@@ -216,6 +216,7 @@ const useStyle = createUseStyles({
     padding: '0',
     backgroundColor: 'transparent',
     boxShadow: 'none',
+    marginRight: '1.2rem',
     '&:focus, &:hover': {
       color: '#0066CC',
       backgroundColor: 'transparent',
@@ -229,6 +230,51 @@ const useStyle = createUseStyles({
   headerLink: {
     composes: 'font-weight-bold',
     cursor: 'pointer',
+  },
+  mainHeader: {
+    '& .it-header-slim-wrapper-content': {
+      padding: '0',
+    },
+    '& .it-header-center-content-wrapper': {
+      padding: '0',
+    },
+  },
+  login: {
+    marginLeft: '1.38rem',
+    backgroundColor: '#0066CC',
+    display: 'flex',
+    alignItems: 'center',
+    padding: '0 1.38rem',
+    height: '100%',
+    '@media (max-width: 992px)': {
+      backgroundColor: 'transparent',
+    },
+    '&:hover': {
+      '& span': {
+        textDecoration: 'underline',
+      },
+    },
+    '& img': {
+      marginRight: '0.555rem',
+      '&.mobile': {
+        display: 'none',
+      },
+      '@media (max-width: 992px)': {
+        display: 'none',
+        '&.mobile': {
+          display: 'block',
+        },
+      },
+    },
+    '& span': {
+      fontSize: '1rem',
+      fontWeight: 'bold',
+      lineHeight: '1.3',
+      color: '#fff',
+      '@media (max-width: 992px)': {
+        display: 'none',
+      },
+    },
   },
 });
 
@@ -323,6 +369,25 @@ const SlimHeader = () => {
             </div>
           </Collapse>
         </HeaderLinkZone>
+        <ExternalLink
+          linkTo={externalLinks.eu.linkTo}
+          ariaLabel={externalLinks.eu.ariaLabel}
+          href={externalLinks.italiaDigitale.linkTo}
+          target="_blank"
+        >
+          <img className="d-none d-lg-block" src="/assets/eu-flag.svg" alt={externalLinks.eu.label}></img>
+        </ExternalLink>
+        <ExternalLink
+          className={classes.login}
+          linkTo="#"
+          ariaLabel={externalLinks.eu.ariaLabel}
+          href="#"
+          target="_blank"
+        >
+          <img src="/assets/user-icon.svg" alt={externalLinks.eu.label}></img>
+          <img className="mobile" src="/assets/user-icon-dark.svg" alt={externalLinks.eu.label}></img>
+          <span>Accedi</span>
+        </ExternalLink>
       </HeaderContent>
     </HeaderReactKit>
   );
@@ -353,7 +418,7 @@ const CenterHeader = () => {
 };
 
 const NavHeader = () => {
-  const [{ activeItem }, dispatch] = useContext(GlobalStateContext);
+  const [{ activeItem }] = useContext(GlobalStateContext);
   const [isOpen, setIsOpen] = useState(false);
   const closeMenu = () => setIsOpen(false);
   const toogleMenu = () => setIsOpen(!isOpen);
@@ -366,7 +431,7 @@ const NavHeader = () => {
         megamenu
         /* aria-label={ariaLabel.menu} */
         aria-labelledby="menu-principale"
-        className="px-2"
+        className="px-0"
         id="menu-principale-anchor"
         tabIndex="-1"
       >
@@ -394,6 +459,15 @@ const NavHeader = () => {
               </li>
               <NavItem active>
                 <Link
+                  to={internalLinks.initiative.linkTo}
+                  className={activeItem === 'iniziativa' ? 'nav-link active' : 'nav-link'}
+                  onClick={closeMenu}
+                >
+                  <span className="font-weight-semibold">{internalLinks.initiative.label}</span>
+                </Link>
+              </NavItem>
+              <NavItem active>
+                <Link
                   to={internalLinks.opportunity.linkTo}
                   className={activeItem === 'misure' ? 'nav-link active' : 'nav-link'}
                   onClick={closeMenu}
@@ -408,14 +482,23 @@ const NavHeader = () => {
               </NavItem>
               <NavItem>
                 <Link
-                  to={internalLinks.howitworks.linkTo}
-                  className={activeItem === 'come-funziona' ? 'nav-link active' : 'nav-link'}
+                  to={internalLinks.notices.linkTo}
+                  className={activeItem === 'avvisi' ? 'nav-link active' : 'nav-link'}
                   onClick={closeMenu}
                 >
-                  <span className="font-weight-semibold">{internalLinks.howitworks.label}</span>
+                  <span className="font-weight-semibold">{internalLinks.notices.label}</span>
                 </Link>
               </NavItem>
               <NavItem>
+                <Link
+                  to={internalLinks.howToPartecipate.linkTo}
+                  className={activeItem === 'avvisi' ? 'nav-link active' : 'nav-link'}
+                  onClick={closeMenu}
+                >
+                  <span className="font-weight-semibold">{internalLinks.howToPartecipate.label}</span>
+                </Link>
+              </NavItem>
+              <NavItem className={classes.updatesBtn}>
                 <Link
                   to={internalLinks.support.linkTo}
                   className={activeItem === 'supporto' ? 'nav-link active' : 'nav-link'}
@@ -424,7 +507,7 @@ const NavHeader = () => {
                   <span className="font-weight-semibold">{internalLinks.support.label}</span>
                 </Link>
               </NavItem>
-              <NavItem className={classes.updatesBtn} active>
+              {/* <NavItem className={classes.updatesBtn} active>
                 <Button
                   aria-label="Ricevi aggiornamenti (Apri modale e compila il modulo)"
                   className="nav-link modal-button"
@@ -435,7 +518,7 @@ const NavHeader = () => {
                 >
                   <span className="font-weight-semibold">{internalLinks.updates.label}</span>
                 </Button>
-              </NavItem>
+              </NavItem> */}
             </Nav>
           </div>
         </HeaderNav>
@@ -444,17 +527,21 @@ const NavHeader = () => {
   );
 };
 
-export const Header = (props) => (
-  <header id="mainTop">
-    <Headers>
-      <SlimHeader />
-      <div className="it-nav-wrapper">
-        <CenterHeader />
-        <NavHeader toggleModal={props.toggleModal} />
-      </div>
-    </Headers>
-  </header>
-);
+export const Header = (props) => {
+  const classes = useStyle();
+
+  return (
+    <header id="mainTop" className={classes.mainHeader}>
+      <Headers>
+        <SlimHeader />
+        <div className="it-nav-wrapper">
+          <CenterHeader />
+          <NavHeader toggleModal={props.toggleModal} />
+        </div>
+      </Headers>
+    </header>
+  );
+};
 
 Header.propTypes = {
   toggleModal: PropTypes.func,
