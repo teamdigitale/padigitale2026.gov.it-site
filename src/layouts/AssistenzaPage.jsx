@@ -261,6 +261,10 @@ const useStyles = createUseStyles({
     },
   },
   breadcrumb: {
+    paddingTop: '1.563rem',
+    '& .breadcrumb': {
+      paddingTop: '0',
+    },
     '@media (min-width: 991px)': {
       marginLeft: '0.722rem',
     },
