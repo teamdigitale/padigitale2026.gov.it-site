@@ -1,22 +1,23 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable max-lines-per-function */
-import React, { useState, useEffect, useContext } from 'react';
+/* eslint-disable sonarjs/cognitive-complexity */
+import React, { useState, useEffect } from 'react';
+// import PropTypes from 'prop-types';
 import { useForm, Controller } from 'react-hook-form';
-import PropTypes from 'prop-types';
 import { createUseStyles } from 'react-jss';
-import { announce } from '@react-aria/live-announcer';
-import { Row, Col, Modal, ModalBody, ModalFooter, Button, Input } from 'design-react-kit';
+import { Row, Col, Button, Input } from 'design-react-kit';
 import Select from 'react-select';
+import { announce } from '@react-aria/live-announcer';
 import { graphql, useStaticQuery } from 'gatsby';
-import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
-import content from '../../../contents/opportunity-page/opportunity.yml';
-import notificationsLabel from '../../../contents/notifications.yml';
-import { GlobalStateContext } from '../../context/globalContext';
-import links from '../../../contents/links.yml';
+import seo from '../../contents/seo.yml';
+import { SEO } from '../components/SEO';
+import content from '../../contents/opportunity-page/opportunity.yml';
+import links from '../../contents/links.yml';
+import notificationsLabel from '../../contents/notifications.yml';
 
+const { success: successLabels, error: errorLabels, errorAddress: errorAddressLabel } = notificationsLabel;
+const { title: seoTitle, description: seoDescription } = seo.supportPage;
 const { privacy } = links.internalLinks;
-
-const { successMessage: successLabels, error: errorLabels, errorAddress: errorAddressLabel } = notificationsLabel;
 
 const useStyles = createUseStyles({
   modalUpdatesContainer: {
@@ -82,12 +83,9 @@ const useStyles = createUseStyles({
       },
     },
   },
-  modalSubtitle: {
-    fontSize: '1rem',
-    color: '#33485C',
-  },
-  modalBody: {
+  formBody: {
     padding: '0',
+    marginBottom: '50px',
     '& p': {
       fontSize: '0.889rem',
       color: '#33485C',
@@ -103,6 +101,9 @@ const useStyles = createUseStyles({
       paddingLeft: '1.333rem',
       fontSize: '0.889rem',
       color: '#808080',
+    },
+    '& [class$="-placeholder"]': {
+      color: '#767676',
     },
     '& [class$="-indicatorSeparator"]': {
       display: 'none',
@@ -169,15 +170,10 @@ const useStyles = createUseStyles({
       color: '#F83E5A !important',
     },
   },
-  modalLabel: {
-    fontSize: '0.778rem',
-    color: '#33485C',
-    fontWeight: '600',
-  },
-  maxLengthLabel: {
-    fontSize: '0.778rem',
-    color: '#808080',
-    marginLeft: '0.444rem',
+  enteContainer: {
+    '&.hidden': {
+      display: 'none',
+    },
   },
   errorLabel: {
     fontSize: '0.778rem',
@@ -210,9 +206,10 @@ const useStyles = createUseStyles({
       borderColor: '#00CF86',
     },
   },
-  modalFooterLabel: {
+  formFooterLabel: {
     composes: 'mb-3',
     fontSize: '0.889rem',
+    color: '#000',
   },
   spinner: {
     composes: 'spinner hidden ml-3',
@@ -220,6 +217,16 @@ const useStyles = createUseStyles({
     '&.hidden': {
       display: 'none',
     },
+  },
+  titleUpdate: {
+    fontSize: '48px',
+    fontWeight: '700',
+    color: '#33485C',
+  },
+  subtitleUpdate: {
+    fontSize: '24px',
+    color: '#33485C',
+    lineHeight: '28px',
   },
 });
 
@@ -233,57 +240,14 @@ const query = graphql`
   }
 `;
 
-// eslint-disable-next-line sonarjs/cognitive-complexity
-export const ModalMessage = () => {
-  const { executeRecaptcha } = useGoogleReCaptcha();
-  const [{ modalStateMessage }, dispatch] = useContext(GlobalStateContext);
-  const textareaMaxLength = 300;
+export const UpdatesPage = () => {
   const [selectValue] = useState(null);
-  const [textareaState, setTextareaState] = useState('not-active');
-  const [, setEnteState] = useState('');
+  const [enteState] = useState('');
   const {
     site: {
       siteMetadata: { apiUrl },
     },
   } = useStaticQuery(query);
-
-  const setFocusStyleOnSelect = () => {
-    const selectInputArr = document.querySelectorAll('.modal .select input');
-    selectInputArr.forEach((input) => {
-      const selectFocusHandler = () => {
-        const currentSelect = input.closest('.select');
-        currentSelect.classList.add('focused');
-      };
-      const selectFocusOutHandler = () => {
-        const currentSelect = input.closest('.select');
-        currentSelect.classList.remove('focused');
-      };
-      input.addEventListener('focus', selectFocusHandler);
-      input.addEventListener('focusout', selectFocusOutHandler);
-    });
-  };
-
-  const setListenersToSelectOptions = () => {
-    const representSelectOptions = document.querySelector('#represent-select2');
-    const config = { childList: true, subtree: true };
-    const setObserver = (mutationsList) => {
-      for (const mutation of mutationsList) {
-        if (mutation.type === 'childList') {
-          let value = representSelectOptions.querySelector('div[class*="singleValue"]');
-          value ? (value = value.innerHTML) : (value = '');
-          let valueSelected = selectRepresent.find((valueObj) => {
-            if (value === valueObj.label) {
-              return valueObj;
-            }
-          });
-          valueSelected = valueSelected?.value;
-          setEnteState(valueSelected);
-        }
-      }
-    };
-    const observer = new MutationObserver(setObserver);
-    observer.observe(representSelectOptions, config);
-  };
 
   const {
     control,
@@ -291,28 +255,12 @@ export const ModalMessage = () => {
     formState: { errors },
   } = useForm();
 
-  const textareaFocusHandler = () => {
-    setTextareaState('active');
-  };
-
-  const textareaFocusOutHandler = (event) => {
-    if (event.target.value === '') {
-      setTextareaState('');
-    }
-  };
-
-  const textareaInputHandler = (event) => {
-    const number = document.querySelector('#max-length-number');
-    number.innerHTML = textareaMaxLength - parseInt(event.target.value.length, 10);
-    announce('Numero di caratteri rimanenti: ' + number.innerHTML);
-  };
-
   const classes = useStyles();
 
   useEffect(() => {}, [selectValue]);
 
   const onSubmit = async (data, event) => {
-    const token = await executeRecaptcha();
+    console.log(data);
     Object.keys(data).map(function (key) {
       if (data[key] === undefined) {
         delete data[key];
@@ -321,8 +269,6 @@ export const ModalMessage = () => {
         data[key] = data[key]?.value;
       }
     });
-
-    data['captcha'] = token;
 
     const spinner = document.querySelector('.spinner');
     spinner.classList.remove('hidden');
@@ -340,7 +286,7 @@ export const ModalMessage = () => {
     };
     closeNotification.addEventListener('click', closeNotificationHandler);
 
-    fetch(`${apiUrl}/messages`, {
+    fetch(`${apiUrl}/users`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -358,15 +304,15 @@ export const ModalMessage = () => {
 
             titleElement.innerHTML = `${successLabels.icon} ${successLabels.title}`;
             descriptionElement.innerHTML = successLabels.description;
-
+            announce('Inviato con successo');
             setTimeout(() => {
               notificationElement.classList.remove('show');
             }, 5000);
           } else {
             notificationElement.classList.add('show');
             notificationElement.classList.add('error');
-
-            if (data.success === false) {
+            announce("Errore nell'invio");
+            if (data.message.includes('already exists')) {
               titleElement.innerHTML = `${errorLabels.icon} ${errorAddressLabel.title}`;
               descriptionElement.innerHTML = errorAddressLabel.description;
             } else {
@@ -389,72 +335,55 @@ export const ModalMessage = () => {
     console.log('error', data);
   };
 
+  useEffect(() => {
+    announce('Pagina caricata ' + content.name);
+  }, []);
+
   const {
     selectRepresent,
-    selectMessage,
-    modalMessageTitle,
+    selectInQuanto,
+    mandatoryAdvise,
     requiredLabel,
     emailValidationLabel,
     emailLabel,
     representLabel,
     selectPlaceholder,
-    directContactLabel,
-    directContactInfo,
-    messageSelectLabel,
-    messageLabel,
+    enteValidationLabel,
+    enteTypeLabel,
+    enteNameLabel,
+    inQuantoLabel,
     sendButtonLabel,
   } = content.modal;
-
   return (
     <>
-      <Modal
-        isOpen={modalStateMessage}
-        toggle={() => {
-          dispatch({ type: 'SET:TOGGLE_MODAL_MESSAGE' });
-        }}
-        labelledBy="message-modal"
-        className={classes.modalUpdatesContainer}
-        onOpened={() => {
-          setFocusStyleOnSelect();
-          setListenersToSelectOptions();
-        }}
-      >
-        <div id="message-modal" className="modal-header">
-          <h5 className="modal-title">{modalMessageTitle}</h5>
-          <Button
-            type="button"
-            className={classes.close}
-            aria-label="Close"
-            onClick={() => {
-              dispatch({ type: 'SET:TOGGLE_MODAL_MESSAGE' });
-            }}
-          >
-            <span>Chiudi</span>
-            <img src="/assets/icon-close.svg" alt="chiudi modale" aria-hidden="true" />
-          </Button>
-        </div>
-        <ModalBody className={classes.modalBody}>
-          <form onSubmit={handleSubmit(onSubmit, onError)} id="message-form" aria-describedby="mandatory-label">
+      <SEO title={seoTitle} description={seoDescription} />
+      <div className="sr-only">
+        <h2>{content.name}</h2>
+      </div>
+      <div className="container mt-5">
+        <div className={classes.formBody}>
+          <form onSubmit={handleSubmit(onSubmit, onError)} id="updates-form" aria-describedby="mandatory-label">
             <fieldset>
               <legend>
                 <Row>
-                  <Col xs={12}>
-                    <img src="/assets/icon-chat.svg" alt="" />
+                  <Col xs={12} lg={5}>
+                    <div className={classes.titleUpdate}>Ricevi Aggiornamenti</div>
+                    <div className={classes.subtitleUpdate}>
+                      Ricevi materiali e informazioni sulle novità e gli avvisi di Italia digitale 2026.
+                    </div>
                   </Col>
-                </Row>
-                <Row className="mt-3">
-                  <Col xs={12}>
-                    <span className={classes.modalLabel}>{directContactLabel}</span>
-                  </Col>
-                </Row>
-                <Row className="mt-2">
-                  <Col xs={12}>
-                    <p dangerouslySetInnerHTML={{ __html: directContactInfo }}></p>
+                  <Col xs={12} lg={3} className="offset-lg-3">
+                    <img src={`/assets/updates-icon.svg`} alt="" />
                   </Col>
                 </Row>
               </legend>
               <Row className="mt-5">
                 <Col xs={12}>
+                  <p id="mandatory-label" dangerouslySetInnerHTML={{ __html: mandatoryAdvise }}></p>
+                </Col>
+              </Row>
+              <Row className="mt-5">
+                <Col xs={12} lg={4} className="d-lg-flex flex-lg-column justify-content-end">
                   <Controller
                     name="address"
                     control={control}
@@ -474,21 +403,23 @@ export const ModalMessage = () => {
                           aria-describedby="mandatory-label"
                           aria-labelledby={errors.address && 'error-address'}
                           type="text"
-                          id="address2"
+                          id="address"
                           aria-required="true"
+                          autocomplete="email"
                           {...field}
+                          className="mb-0"
                         />
-                        <span className={classes.errorLabel} id="error-address2">
+                        <span className={classes.errorLabel} id="error-address">
                           {errors.address && errors.address.message}
                         </span>
                       </>
                     )}
                   />
                 </Col>
-              </Row>
-              <Row className="mt-5">
-                <Col xs={12} lg={6}>
-                  <span className={classes.selectLabel}>{representLabel}</span>
+                <Col xs={12} lg={4} className="offset-lg-1">
+                  <label htmlFor="represent-select-input" className={classes.selectLabel}>
+                    {representLabel}
+                  </label>
                   <Controller
                     control={control}
                     name="representative"
@@ -496,7 +427,8 @@ export const ModalMessage = () => {
                     render={({ field: { onChange, value } }) => (
                       <Select
                         value={value}
-                        id="represent-select2"
+                        id="represent-select"
+                        inputId="represent-select-input"
                         onChange={onChange}
                         options={selectRepresent}
                         placeholder={selectPlaceholder}
@@ -510,116 +442,136 @@ export const ModalMessage = () => {
                   />
                 </Col>
               </Row>
+              <span className={classes.errorLabel} id="error-represent">
+                {errors.represent ? requiredLabel : ''}
+              </span>
+              <div className={`${classes.enteContainer} ${enteState === 'other' ? '' : 'hidden'}`}>
+                <Row className="mt-5">
+                  <Col xs={12} lg={9}>
+                    <Controller
+                      name="enteType"
+                      control={control}
+                      rules={{
+                        required: {
+                          value: enteState === 'other' ? true : false,
+                          message: requiredLabel,
+                        },
+                        pattern: {
+                          value: /^\p{L}/u,
+                          message: enteValidationLabel,
+                        },
+                      }}
+                      render={({ field }) => (
+                        <>
+                          <Input
+                            invalid={errors.enteType}
+                            label={enteTypeLabel}
+                            type="text"
+                            aria-describedby="mandatory-label"
+                            aria-labelledby={errors.enteType && 'error-enteType'}
+                            aria-required={enteState === 'other' ? true : ''}
+                            aria-invalid={errors.enteType && 'true'}
+                            {...field}
+                            id="enteType"
+                          />
+                          <span className={classes.errorLabel} id="error-enteType">
+                            {errors.enteType && errors.enteType.message}
+                          </span>
+                        </>
+                      )}
+                    />
+                  </Col>
+                </Row>
+              </div>
               <Row className="mt-5">
-                <Col xs={12} lg={6}>
-                  <label className={classes.selectLabel}>{messageSelectLabel}</label>
+                <Col xs={12} lg={9}>
                   <Controller
+                    name="ente"
                     control={control}
-                    name="messageSelect"
-                    render={({ field: { onChange } }) => (
-                      <Select
-                        id="message-select"
-                        onChange={onChange}
-                        options={selectMessage}
-                        placeholder={selectPlaceholder}
-                        aria-label={selectPlaceholder}
-                      />
+                    rules={{
+                      required: {
+                        value: true,
+                        message: requiredLabel,
+                      },
+                      pattern: {
+                        value: /^\p{L}/u,
+                        message: enteValidationLabel,
+                      },
+                    }}
+                    render={({ field }) => (
+                      <>
+                        <Input
+                          invalid={errors.ente}
+                          label={enteNameLabel}
+                          type="text"
+                          aria-describedby="mandatory-label"
+                          aria-required="true"
+                          aria-labelledby={errors.ente && 'error-enteName'}
+                          aria-invalid={errors.ente && 'true'}
+                          {...field}
+                          id="enteName"
+                        />
+                        <span className={classes.errorLabel} id="error-enteName">
+                          {errors.ente && errors.ente.message}
+                        </span>
+                      </>
                     )}
                   />
                 </Col>
               </Row>
-              <Row className="mt-5">
-                <Col xs={12}>
-                  <div>
-                    <div className="form-group">
-                      <Controller
-                        name="message"
-                        control={control}
-                        render={({ field }) => (
-                          <textarea
-                            onFocus={textareaFocusHandler}
-                            onBlur={textareaFocusOutHandler}
-                            onInput={textareaInputHandler}
-                            rows="3"
-                            maxLength={textareaMaxLength}
-                            {...field}
-                            id="message"
-                          ></textarea>
-                        )}
-                      />
-                      <label className={textareaState === 'active' ? 'active' : ''} htmlFor="message">
-                        {messageLabel}
-                      </label>
-                      <span className={classes.maxLengthLabel}>
-                        Massimo <span id="max-length-number">{textareaMaxLength}</span> caratteri
-                      </span>
-                    </div>
-                  </div>
-                </Col>
-              </Row>
+              <div className={`${classes.enteContainer} ${enteState === 'public-administration' ? '' : 'hidden'}`}>
+                <Row className="mt-5">
+                  <Col xs={12} lg={6}>
+                    <label htmlFor="enteSelect-input" className={classes.selectLabel}>
+                      {inQuantoLabel}
+                    </label>
+                    <Controller
+                      control={control}
+                      name="enteSelect"
+                      rules={{
+                        required: {
+                          value: enteState === 'public-administration' ? true : false,
+                          message: requiredLabel,
+                        },
+                      }}
+                      render={({ field: { onChange, value } }) => (
+                        <Select
+                          value={value}
+                          id="enteSelect"
+                          inputId="enteSelect-input"
+                          onChange={onChange}
+                          options={selectInQuanto}
+                          aria-describedby="mandatory-label"
+                          placeholder={selectPlaceholder}
+                          aria-label={selectPlaceholder}
+                          aria-invalid={errors.enteSelect && 'true'}
+                          aria-labelledby={errors.enteSelect && 'error-enteSelect'}
+                          className={`${errors.enteSelect && 'select is-invalid'}`}
+                        />
+                      )}
+                    />
+                  </Col>
+                </Row>
+                <span className={classes.errorLabel} id="error-enteSelect">
+                  {errors.enteSelect ? requiredLabel : ''}
+                </span>
+              </div>
             </fieldset>
           </form>
-        </ModalBody>
-        <ModalFooter className="justify-content-center flex-column align-items-start justify-content-md-start px-0 py-0 mt-5">
-          <p className={classes.modalFooterLabel}>
-            Cliccando su INVIA dichiaro di aver letto e compreso{' '}
-            <a target="_blank" href={privacy.linkTo} rel="noreferrer">
-              l'informativa privacy
-            </a>
-          </p>
-          <div className="d-flex">
-            <Button color="primary" type="submit" form="message-form">
-              {sendButtonLabel}
-            </Button>
-            <img className={classes.spinner} src="/assets/spinner.gif" alt="spinner"></img>
-          </div>
-        </ModalFooter>
-      </Modal>
-      <div className="container test-docs">
-        <div className="row">
-          <div className="col-12 col-md-6">
-            {/* <div className={classes.notification} role="alert" aria-labelledby="not2dms-title" id="not2dms2">
-              <h5 id="not2dms-title2">
-                notifiche
-                <svg className="icon" role="img" aria-label=""></svg>
-              </h5>
-              <p></p>
-              <button
-                type="button"
-                className="btn notification-close"
-                aria-label="Chiudi"
-                aria-describedby="not2dms-title"
-              >
-                <svg
-                  width="19"
-                  height="19"
-                  viewBox="0 0 19 19"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  focusable="false"
-                  role="img"
-                  aria-label="Chiudi"
-                >
-                  <rect
-                    x="17.3242"
-                    y="0.5"
-                    width="1.49987"
-                    height="24.4978"
-                    transform="rotate(45 17.3242 0.5)"
-                    fill="#5C6F82"
-                  />
-                  <rect y="1.56055" width="1.49987" height="24.4978" transform="rotate(-45 0 1.56055)" fill="#5C6F82" />
-                </svg>
-              </button>
-            </div> */}
-          </div>
+        </div>
+        <p className={classes.formFooterLabel}>
+          Cliccando su INVIA dichiaro di aver letto e compreso{' '}
+          <a target="_blank" href={privacy.linkTo} rel="noreferrer">
+            l'informativa privacy
+          </a>
+        </p>
+        <div className="d-flex mb-5">
+          <Button color="primary" type="submit" form="updates-form">
+            {sendButtonLabel}
+          </Button>
+          <img className={classes.spinner} src="/assets/spinner.gif" alt=""></img>
         </div>
       </div>
     </>
   );
-};
-
-ModalMessage.propTypes = {
-  handleToggle: PropTypes.func,
-  initialState: PropTypes.bool,
 };

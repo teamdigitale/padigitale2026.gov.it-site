@@ -68,9 +68,8 @@ beneficiaries:
     stalls: '280 enti'
     solutionType: '/come-funziona/presentazione-progetti'
     accessSectionId: presentazione-progetto
-    accessLabel: Presentazione progetti
-    moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: 'https://italiadomani.gov.it/it/Interventi/investimenti/infrastrutture-digitali.html'
+    accessLabel: Presentazione Progetto
+    updates: Il 28 gennaio 2022 è stato <a href="https://innovazione.gov.it/notizie/articoli/pubblicato-il-bando-per-il-polo-strategico-nazionale/">pubblicato il bando</a> per la realizzazione del Polo Strategico Nazionale (PSN). La proposta per la creazione del Polo, su cui si basa la gara, è stata individuata dal Dipartimento per la trasformazione digitale a dicembre 2021 secondo il modello di partenariato pubblico privato. La procedura è affidata a Difesa Servizi S.p.A., società in house del Ministero della Difesa, in qualità di centrale di committenza. 
   - number: 1.2
     id: abili-faci-migr
     title: Abilitazione e facilitazione migrazione al Cloud
@@ -97,9 +96,8 @@ beneficiaries:
     stalls: '16,600 enti'
     solutionType: '/come-funziona/soluzioni-standard'
     accessSectionId: soluzioni-standard
-    accessLabel: Soluzioni standard
-    moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: 'https://italiadomani.gov.it/it/Interventi/investimenti/abilitazione-e-facilitazione-migrazione-al-cloud.html'
+    accessLabel: Soluzioni Standard
+    moreInfoLink: '#'
   - number: 1.3.1
     id: piatt-dig-naz
     title: Piattaforma Digitale Nazionale Dati
@@ -127,9 +125,8 @@ beneficiaries:
     stalls: '170 enti'
     solutionType: '/come-funziona/presentazione-progetti'
     accessSectionId: presentazione-progetto
-    accessLabel: Presentazione progetti
-    moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: 'https://italiadomani.gov.it/it/Interventi/investimenti/dati-e-interoperabilita.html'
+    accessLabel: Presentazione Progetto
+    moreInfoLink: '#'
   - number: 1.3.2
     id: sport-digi-unic
     title: Sportello Digitale Unico
@@ -155,9 +152,8 @@ beneficiaries:
     stalls: '230 enti'
     solutionType: '/come-funziona/presentazione-progetti'
     accessSectionId: presentazione-progetto
-    accessLabel: Presentazione progetti
-    moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: 'https://italiadomani.gov.it/it/Interventi/investimenti/dati-e-interoperabilita.html'
+    accessLabel: Presentazione Progetto
+    updates: Il Dipartimento per la trasformazione digitale ha siglato un <a href="https://www.agid.gov.it/it/agenzia/stampa-e-comunicazione/notizie/2022/02/21/pa-digitale-2026-i-progetti-sportello-digitale-unico-accessibilita-entrano-vivo" target="_blank" aria-label="Leggi di più sull'accordo di collaborazione con AgID (Collegamento esterno - Apre su nuova scheda)">accordo di collaborazione con AgID</a>, in quanto soggetto attuatore, per l’implementazione della misure. La Corte dei Conti ha registrato l’accordo rendendolo pienamente operativo. Per tutti gli aggiornamenti visita la <a href="https://www.agid.gov.it/it/agenzia/attuazione-misure-pnrr" target="_blank" aria-label="sezione dedicata del sito AgID (Collegamento esterno - Apre su nuova scheda)">sezione dedicata del sito AgID</a>.
   - number: 1.4.1
     id: esp-serv-pubb
     title: Esperienza dei servizi pubblici
@@ -182,8 +178,7 @@ beneficiaries:
     solutionType: '/come-funziona/soluzioni-standard'
     accessSectionId: soluzioni-standard
     accessLabel: Soluzioni standard
-    moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: 'https://italiadomani.gov.it/it/Interventi/investimenti/servizi-digitali-e-cittadinanza-digitale.html'
+    moreInfoLink: '#'
   - number: 1.4.2
     id: access
     title: Accessibilità
@@ -210,9 +205,8 @@ beneficiaries:
     stalls: '55 enti'
     solutionType: '/come-funziona/presentazione-progetti'
     accessSectionId: presentazione-progetto
-    accessLabel: Presentazione progetti
-    moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: 'https://italiadomani.gov.it/it/Interventi/investimenti/servizi-digitali-e-cittadinanza-digitale.html'
+    accessLabel: Presentazione Progetto
+    updates: Il Dipartimento per la trasformazione digitale ha siglato un <a href="https://www.agid.gov.it/it/agenzia/stampa-e-comunicazione/notizie/2022/02/21/pa-digitale-2026-i-progetti-sportello-digitale-unico-accessibilita-entrano-vivo" target="_blank" aria-label="Leggi di più sull'accordo di collaborazione con AgID (Collegamento esterno - Apre su nuova scheda)">accordo di collaborazione con AgID</a>, in quanto soggetto attuatore, per l’implementazione della misure. La Corte dei Conti ha registrato l’accordo rendendolo pienamente operativo. Per tutti gli aggiornamenti visita la <a href="https://www.agid.gov.it/it/agenzia/attuazione-misure-pnrr" target="_blank" aria-label="sezione dedicata del sito AgID (Collegamento esterno - Apre su nuova scheda)">sezione dedicata del sito AgID</a>.
   - number: 1.4.3
     id: adoz-pago
     title: Adozione PagoPA e app IO
@@ -247,9 +241,8 @@ beneficiaries:
     stalls: '17,500 enti'
     solutionType: '/come-funziona/soluzioni-standard'
     accessSectionId: soluzioni-standard
-    accessLabel: Soluzioni standard
-    moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: 'https://italiadomani.gov.it/it/Interventi/investimenti/servizi-digitali-e-cittadinanza-digitale.html'
+    accessLabel: Soluzioni Standard
+    moreInfoLink: '#'
   - number: 1.4.4
     id: adoz-id
     title: Adozione identità digitale
@@ -288,9 +281,8 @@ beneficiaries:
     stalls: '10,300 enti'
     solutionType: '/come-funziona/soluzioni-standard'
     accessSectionId: soluzioni-standard
-    accessLabel: Soluzioni standard
-    moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: 'https://italiadomani.gov.it/it/Interventi/investimenti/servizi-digitali-e-cittadinanza-digitale.html'
+    accessLabel: Soluzioni Standard
+    moreInfoLink: '#'
   - number: 1.4.5
     id: digi-avvisi
     title: Digitalizzazione degli avvisi pubblici
@@ -309,8 +301,7 @@ beneficiaries:
     solutionType: '/come-funziona/soluzioni-standard'
     accessSectionId: soluzioni-standard
     accessLabel: Soluzioni standard
-    moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: 'https://italiadomani.gov.it/it/Interventi/investimenti/servizi-digitali-e-cittadinanza-digitale.html'
+    moreInfoLink: '#'
   - number: 1.4.6
     id: maas
     title: MaaS
@@ -328,9 +319,8 @@ beneficiaries:
     stalls: '10 enti'
     solutionType: '/come-funziona/presentazione-progetti'
     accessSectionId: presentazione-progetto
-    accessLabel: Presentazione progetti
-    moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: 'https://italiadomani.gov.it/it/Interventi/investimenti/servizi-digitali-e-cittadinanza-digitale.html'
+    accessLabel: Presentazione Progetto
+    updates: <a href="https://innovazione.gov.it/notizie/avvisi-pubblici/mobility-as-a-service-for-italy/" target="_blank" aria-label="Leggi di più sull'avviso pubblico del 22 Novembre 2021 (Collegamento esterno - Apre su nuova scheda)">L’avviso pubblico del 22 novembre 2021</a> ha portato alla selezione di Milano, Napoli e Roma come città capofila per il progetto Mobility as a Service for Italy. Nei prossimi mesi sarà pubblicato un <a href="https://innovazione.gov.it/notizie/articoli/milano-napoli-e-roma-citta-capofila-per-il-progetto-mobility-as-a-service/" target="_blank" aria-label="Leggi di più sul nuovo bando per ampliare l'iniziativa (Collegamento esterno - Apre su nuova scheda)">nuovo bando per ampliare l’iniziativa</a>.
   - number: 1.5
     id: cyber
     title: Cybersecurity
@@ -350,9 +340,9 @@ beneficiaries:
     stalls: '6 enti'
     solutionType: '/come-funziona/presentazione-progetti'
     accessSectionId: presentazione-progetto
-    accessLabel: Presentazione progetti
-    moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: 'https://italiadomani.gov.it/it/Interventi/investimenti/cybersecurity-sicurezza-informatica.html'
+    accessLabel: Presentazione Progetto
+    updates: La Corte dei Conte ha registrato l'accordo tra il Dipartimento per la trasformazione digitale e l'Agenzia per la cybersicurezza, rendendo l'Agenzia soggetto attuatore della misura. Per tutti gli aggiornamenti visita la <a href="https://www.acn.gov.it/pnrr" target="_blank" aria-label="Leggi di più sulla pagina dedicata sul sito dell'Agenzia(Collegamento esterno - Apre su nuova scheda)">pagina dedicata sul sito dell'Agenzia</a>. 
+
   - number: 1.6
     id: digi-gran-amm
     title: Digitalizzazione grandi amministrazioni centrali
@@ -364,9 +354,8 @@ beneficiaries:
     stalls: '7 enti'
     solutionType: '/come-funziona/presentazione-progetti'
     accessSectionId: presentazione-progetto
-    accessLabel: Presentazione progetti
-    moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: 'https://italiadomani.gov.it/it/Interventi/investimenti/digitalizzazione-delle-grandi-amministrazioni-centrali.html'
+    accessLabel: Presentazione Progetto
+    updates: Il Dipartimento per la trasformazione digitale ha stretto accordi di collaborazione con tutte le grandi amministrazioni coinvolte dalla misura&#58; INPS, Ministero della Giustizia, INAIL, Ministero dell’Interno, Ministero delle Difesa, Guardia di Finanza e Consiglio di Stato. Gli accordi sono stati registrati dalla Corte dei Conti, dando ufficialmente il via all’implementazione delle singole iniziative. Per maggiori informazioni visita <a href="https://innovazione.gov.it/notizie/articoli/la-svolta-digitale-delle-grandi-amministrazioni-centrali/" target="_blank" aria-label="Leggi di più (Collegamento esterno - Apre su nuova scheda)">innovazione.gov.it</a>.
   - number: 1.7.1
     id: servi-civi
     title: Servizio civile digitale
@@ -382,9 +371,8 @@ beneficiaries:
     stalls: '100 enti'
     solutionType: '/come-funziona/presentazione-progetti'
     accessSectionId: presentazione-progetto
-    accessLabel: Presentazione progetti
-    moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: 'https://italiadomani.gov.it/it/Interventi/investimenti/competenze-digitali-di-base.html'
+    accessLabel: Presentazione Progetto
+    updates: Il Dipartimento per la trasformazione digitale della Presidenza del Consiglio dei ministri, ha individuato il Dipartimento per le politiche giovanili e il Servizio Civile Universale quale Soggetto attuatore della misura. Il 26 gennaio il Dipartimento ha quindi <a href="https://innovazione.gov.it/notizie/articoli/servizio-civile-digitale-al-via-il-nuovo-avviso-per-gli-enti/" target="_blank" aria-label="Leggi di più (Collegamento esterno - Apre su nuova scheda)">pubblicato il primo avviso pubblico per gli enti</a>. 
   - number: 1.7.2
     id: centri-facili
     title: Centri di facilitazione digitale
@@ -402,9 +390,8 @@ beneficiaries:
     stalls: '21 enti'
     solutionType: '/come-funziona/presentazione-progetti'
     accessSectionId: presentazione-progetto
-    accessLabel: Presentazione progetti
-    moreInfoLabel: 'Leggi di più su Italia Domani'
-    moreInfoLink: 'https://italiadomani.gov.it/it/Interventi/investimenti/competenze-digitali-di-base.html'
+    accessLabel: Presentazione Progetto
+    moreInfoLink: '#'
 modal:
   selectRepresent:
     - value: public-administration
@@ -413,6 +400,52 @@ modal:
       label: Fornitore IT
     - value: other
       label: Altro
+  selectArgument:
+    - value: Accesso al portale
+      label: Accesso al portale
+    - value: Iscrizione alla newsletter
+      label: Iscrizione alla newsletter
+    - value: Misure
+      label: Misure
+    - value: Avvisi
+      label: Avvisi
+    - value: Enti beneficiari
+      label: Enti beneficiari
+    - value: Spese ammissibili
+      label: Spese ammissibili
+    - value: Generale
+      label: Generale
+  selectMeasure:
+    - value: Tutte
+      label: Tutte
+    - value: 1.1 Infrastrutture digitali
+      label: 1.1 Infrastrutture digitali
+    - value: 1.2 Abilitazione e facilitazione migrazione al Cloud
+      label: 1.2 Abilitazione e facilitazione migrazione al Cloud
+    - value: 1.3.1 Piattaforma Digitale Nazionale Dati
+      label: 1.3.1 Piattaforma Digitale Nazionale Dati
+    - value: 1.3.2 Sportello Digitale Unico
+      label: 1.3.2 Sportello Digitale Unico
+    - value: 1.4.1 Esperienza dei servizi pubblici
+      label: 1.4.1 Esperienza dei servizi pubblici
+    - value: 1.4.2 Accessibilità
+      label: 1.4.2 Accessibilità
+    - value: 1.4.3 Adozione PagoPA e app IO
+      label: 1.4.3 Adozione PagoPA e app IO
+    - value: 1.4.4 Adozione identità digitale
+      label: 1.4.4 Adozione identità digitale
+    - value: 1.4.5 Digitalizzazione degli avvisi pubblici
+      label: 1.4.5 Digitalizzazione degli avvisi pubblici
+    - value: 1.4.6 MaaS
+      label: 1.4.6 MaaS
+    - value: 1.5 Cybersecurity
+      label: 1.5 Cybersecurity
+    - value: 1.6 Digitalizzazione grandi amministrazioni centrali
+      label: 1.6 Digitalizzazione grandi amministrazioni centrali
+    - value: 1.7.1 Servizio civile digitale
+      label: 1.7.1 Servizio civile digitale
+    - value: 1.7.2 Centri di facilitazione digitale
+      label: 1.7.2 Centri di facilitazione digitale
   selectInQuanto:
     - value: dirigente-administration
       label: Dirigente dell’amministrazione
@@ -441,9 +474,10 @@ modal:
   updatesInfo: Lascia i tuoi contatti per ricevere <strong>materiali e <br>informazioni</strong> sulle novità e gli avvisi di Italia digitale 2026
   mandatoryAdvise: I campi con * sono obbligatori
   requiredLabel: Questo campo è richiesto
-  emailLabel: EMAIL*
+  emailLabel: Email*
   emailValidationLabel: Per favore inserisci un'indirizzo email valido.
-  representLabel: RAPPRESENTO*
+  argumentLabel: Argomento*
+  measureLabel: Misura*
   selectPlaceholder: Scegli una voce dall’elenco
   enteValidationLabel: Per favore inserisci una denominazione ente valida.
   enteTypeLabel: TIPO DI ENTE/STRUTTURA*
@@ -452,9 +486,14 @@ modal:
   directContactLabel: CONTATTO DIRETTO
   directContactInfo: Un <strong>Team dedicato</strong> è a tua disposizione per <strong>ricevere<br>chiarimenti</strong> sugli investimenti o approfondire alcuni temi
   addMessageLabel: Voglio aggiungere un messaggio
+  nameLabel: Nome richiedente:*
+  objectLabel: Oggetto*
   messageSelectLabel: ARGOMENTO MESSAGGIO
-  messageLabel: TESTO MESSAGGIO
+  descriptionLabel: Testo messaggio*
+  telLabel: "Contatto telefonico"
   radioGroupLabel: DICHIARO
+  representLabel: RAPPRESENTO*
+  messageLabel: TESTO MESSAGGIO
   comunicationRadio: Acconsento a essere contattato per comunicazioni specifiche*
   privacyRadio: Ho letto e compreso
   privacyRadioLinkLabel: l’informativa privacy
