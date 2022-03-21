@@ -48,21 +48,24 @@ const useStyle = createUseStyles({
     composes: 'it-footer-small-prints py-4',
     backgroundColor: '#01254C',
     '& a': {
-      color: '#27D1D6',
+      color: '#fff',
     },
   },
   seeMore: {
-    color: '#33485C',
+    color: '#06c',
     textDecoration: 'none',
     fontWeight: 'bold',
     marginTop: '2.5rem',
     display: 'block',
     '&:hover': {
       textDecoration: 'underline',
-      color: '#33485C',
+      color: '#06c',
     },
     '@media (min-width: 1200px)': {
       marginTop: '0',
+    },
+    '&:not(:last-child)': {
+      marginBottom: '20px',
     },
   },
   departmentLogo: {
@@ -98,6 +101,7 @@ const useStyle = createUseStyles({
   },
   listItem: {
     composes: 'list-inline-item',
+    color: '#fff',
     display: 'block',
     '&+.list-inline-item': {
       marginTop: '30px',
@@ -174,24 +178,40 @@ const MainFooter = () => {
               <img src="/assets/dipartimento.svg" alt={dipartimento.label} />
             </ExternalLink>
           </div>
-          <div className="info text-center">
+          <div className="info text-center text-lg-left">
             {activeItem === 'come-funziona' ? (
-              <Link to="/come-funziona#attori-coinvolti" className={classes.seeMore}>
-                Scopri l&apos;iniziativa
-              </Link>
+              <>
+                <Link to="/come-funziona#attori-coinvolti" className={classes.seeMore}>
+                  Scopri l&apos;iniziativa
+                </Link>
+                <Link to="/come-funziona#attori-coinvolti" className={classes.seeMore}>
+                  Ricevi aggiornamenti
+                </Link>
+                <Link to="/come-funziona#attori-coinvolti" className={classes.seeMore}>
+                  L&apos;iniziativa
+                </Link>
+              </>
             ) : (
-              <Link
-                to="/come-funziona#attori-coinvolti"
-                className={classes.seeMore}
-                onClick={() =>
-                  dispatch({
-                    type: 'SET:HOW_SECTION_ID',
-                    payload: { howId: 'attori-coinvolti' },
-                  })
-                }
-              >
-                Scopri l&apos;iniziativa
-              </Link>
+              <>
+                <Link
+                  to="/come-funziona#attori-coinvolti"
+                  className={classes.seeMore}
+                  onClick={() =>
+                    dispatch({
+                      type: 'SET:HOW_SECTION_ID',
+                      payload: { howId: 'attori-coinvolti' },
+                    })
+                  }
+                >
+                  Ricevi aggiornamenti
+                </Link>
+                <Link to="/come-funziona#attori-coinvolti" className={classes.seeMore}>
+                  Scopri l&apos;iniziativa
+                </Link>
+                <Link to="/come-funziona#attori-coinvolti" className={classes.seeMore}>
+                  L&apos;iniziativa
+                </Link>
+              </>
             )}
           </div>
         </div>
