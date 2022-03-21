@@ -703,7 +703,6 @@ export const AssistenzaPage = () => {
             </div>
           </Col>
         </Row>
-        <script src="https://www.google.com/recaptcha/api.js"></script>
       </div>
     </>
   );
