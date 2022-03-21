@@ -249,44 +249,6 @@ export const UpdatesPage = () => {
     },
   } = useStaticQuery(query);
 
-  // const setFocusStyleOnSelect = () => {
-  //   const selectInputArr = document.querySelectorAll('.modal .select input');
-  //   selectInputArr.forEach((input) => {
-  //     const selectFocusHandler = () => {
-  //       const currentSelect = input.closest('.select');
-  //       currentSelect.classList.add('focused');
-  //     };
-  //     const selectFocusOutHandler = () => {
-  //       const currentSelect = input.closest('.select');
-  //       currentSelect.classList.remove('focused');
-  //     };
-  //     input.addEventListener('focus', selectFocusHandler);
-  //     input.addEventListener('focusout', selectFocusOutHandler);
-  //   });
-  // };
-
-  // const setListenersToSelectOptions = () => {
-  //   const representSelectOptions = document.querySelector('#represent-select');
-  //   const config = { childList: true, subtree: true };
-  //   const setObserver = (mutationsList) => {
-  //     for (const mutation of mutationsList) {
-  //       if (mutation.type === 'childList') {
-  //         let value = representSelectOptions.querySelector('div[class*="singleValue"]');
-  //         value ? (value = value.innerHTML) : (value = '');
-  //         let valueSelected = selectRepresent.find((valueObj) => {
-  //           if (value === valueObj.label) {
-  //             return valueObj;
-  //           }
-  //         });
-  //         valueSelected = valueSelected?.value;
-  //         setEnteState(valueSelected);
-  //       }
-  //     }
-  //   };
-  //   const observer = new MutationObserver(setObserver);
-  //   observer.observe(representSelectOptions, config);
-  // };
-
   const {
     control,
     handleSubmit,
