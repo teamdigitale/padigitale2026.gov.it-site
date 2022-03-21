@@ -4,22 +4,21 @@ import { createUseStyles } from 'react-jss';
 const useStyle = createUseStyles({
   heroVideo: {
     display: 'flex',
-    padding: '82px 31px 82px 42px',
-    alignItems: 'center',
+    padding: '82px 0 82px 1.5rem',
+    alignItems: 'flex-start',
+    flexDirection: 'column',
     minHeight: '412px',
-    background: '#F0F6FC',
     '@media (max-width: 991px)': {
       flexDirection: 'column',
-      padding: '0',
+      padding: '82px 0',
     },
   },
   info: {
     display: 'flex',
     flexDirection: 'column',
-    flexBasis: '45%',
-    marginRight: '4.063rem',
-    '@media (max-width: 991px)': {
-      padding: '2rem',
+    '& h4': {
+      fontSize: '1.688rem',
+      fontWeight: '700',
     },
   },
   videoContainer: {

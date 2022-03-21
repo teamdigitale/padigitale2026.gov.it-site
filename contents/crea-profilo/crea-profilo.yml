@@ -3,12 +3,9 @@ hero:
   title: Domande frequenti
   subtitle: Esplora le risposte alle domande più frequenti o fai una ricerca per parola chiave
 sidebar:
-  - sectionTitle: "Crea il profilo della tua PA: identità digitale e dati IPA Per approfondire"
-    sectionId: intro
-    sectionActive: true
   - sectionTitle: 1. Accedi tramite identità digitale
     sectionId: digital-identity
-    sectionActive: false
+    sectionActive: true
   - sectionTitle: 2. Seleziona l’amministrazione 
     sectionId: select-administration
     sectionActive: false

@@ -16,13 +16,14 @@ const useStyle = createUseStyles({
     composes: 'totop',
     cursor: 'pointer',
     top: '35px',
-    left: '100%',
+    left: 'calc(100% - 80px)',
     marginRight: '-75px',
     '@media (max-width: 1099px)': {
       marginRight: '0',
     },
     '@media (max-width: 991px)': {
       top: '75px',
+      marginTop: '40px',
     },
   },
 });

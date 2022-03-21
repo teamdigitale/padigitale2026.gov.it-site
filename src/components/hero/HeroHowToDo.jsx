@@ -34,7 +34,7 @@ const useStyles = createUseStyles({
   contentWrapper: {
     composes: 'it-hero-text-wrapper',
     display: 'flex',
-    paddingBottom: '4.444rem !important',
+    paddingBottom: '5.625rem',
   },
   heroWrapper: {
     composes: 'it-hero-wrapper',
@@ -42,10 +42,10 @@ const useStyles = createUseStyles({
     display: 'flex',
     '&.it-hero-wrapper .it-hero-text-wrapper': {
       '@media (min-width: 992px)': {
-        padding: '5.333rem 0 3.889rem',
+        padding: '5.333rem 0 5.625rem',
       },
       '@media (max-width: 991px)': {
-        padding: '5.333rem 0 3.889rem',
+        padding: '3.75rem 0 3.75rem',
       },
     },
     '&.overlap': {

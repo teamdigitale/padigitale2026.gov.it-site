@@ -84,8 +84,12 @@ const useStyle = createUseStyles({
     },
   },
   keypointSection: {
-    paddingTop: '4.444rem',
-    paddingBottom: '4.444rem',
+    paddingTop: '5.625rem',
+    paddingBottom: '5.625rem',
+    '@media (max-width: 991px)': {
+      paddingTop: '3.75rem',
+      paddingBottom: '3.75rem',
+    },
   },
 });
 

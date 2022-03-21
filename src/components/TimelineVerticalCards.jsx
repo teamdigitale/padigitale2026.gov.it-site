@@ -5,7 +5,6 @@ import React, { useEffect } from 'react';
 import { createUseStyles } from 'react-jss';
 import { Row, Col } from 'design-react-kit';
 import PropTypes from 'prop-types';
-import { Totop } from '../components/Totop';
 
 const useStyle = createUseStyles({
   timelineVertical: {
@@ -49,6 +48,9 @@ const useStyle = createUseStyles({
         order: '2',
         marginRight: '4.375rem',
         marginLeft: '0',
+        '@media (min-width: 992px) and (max-width: 1024px)': {
+          marginRight: '2rem',
+        },
         '@media (max-width: 991px)': {
           order: '0',
           margin: '0 0 1.111rem 0',
@@ -76,7 +78,7 @@ const useStyle = createUseStyles({
           },
         },
         '& .header-info': {
-          marginRight: '6.111rem',
+          marginRight: '2.111rem',
           '@media (max-width: 991px)': {
             marginRight: '0',
           },
@@ -131,7 +133,7 @@ const useStyle = createUseStyles({
   pointHeader: {
     display: 'flex',
     alignItems: 'center',
-    padding: '0 1.444rem',
+    padding: '0 2.5rem',
     overflow: 'hidden',
     position: 'relative',
     composes: 'point-header',
@@ -148,14 +150,19 @@ const useStyle = createUseStyles({
       borderRadius: '50%',
     },
     '& img': {
-      maxWidth: '130px',
+      maxWidth: '160px',
       marginRight: '5rem',
       marginLeft: '3.611rem',
+      '@media (min-width: 992px) and (max-width: 1024px)': {
+        marginRight: '2rem',
+        marginLeft: '2.111rem',
+      },
     },
     '@media (max-width: 991px)': {
       flexDirection: 'column',
       marginBottom: '2.333rem',
       padding: '1.444rem',
+      paddingBottom: '0',
       justifyContent: 'center',
       '& img': {
         width: '134px',
@@ -190,6 +197,9 @@ const useStyle = createUseStyles({
   headerParagraph: {
     fontSize: '1rem',
     lineHeight: '24px',
+    '@media (max-width: 991px)': {
+      marginBottom: 0,
+    },
   },
   littleTitle: {
     display: 'block',
@@ -238,9 +248,8 @@ export const TimelineVerticalCards = ({ item }) => {
   return (
     <>
       <div className="container position-relative">
-        <Totop />
         <Row>
-          <Col xs="11" className="offset-lg-1 mb-3 mb-lg-0">
+          <Col xs={12} lg={11} className="offset-lg-1 mb-3 mb-lg-0">
             <div className={classes.timelineVertical}>
               <div className={classes.scrollIndicator}>
                 <div className={classes.scrollIndicatorActive}></div>

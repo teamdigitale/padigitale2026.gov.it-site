@@ -27,7 +27,6 @@ const useStyles = createUseStyles({
           paddingBottom: '0',
           '& li': {
             '& + li': {
-              marginLeft: '0.555rem',
               '@media (min-width: 992px)': {
                 marginLeft: '0',
               },
@@ -39,12 +38,12 @@ const useStyles = createUseStyles({
               },
             },
             '&:first-child': {
-              marginLeft: '0.833rem',
               '@media (min-width: 992px)': {
                 marginLeft: '0',
               },
             },
             '& a.list-item': {
+              paddingLeft: '0',
               '& span': {
                 marginRight: '0',
                 color: '#0073E6',

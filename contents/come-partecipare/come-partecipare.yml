@@ -56,7 +56,7 @@ sectionThird:
 sectionFourth:
   number: '04'
   title: 'Realizzare i progetti'
-  text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis tempor libero. Lorem ipsum dolor sit amet, consectetur</br></br>Aadipiscing elit. Donec quis tempor libero. Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit amet, consectetur 
+  text: La piattaforma PA digitale 2026 permette di candidare le PA agli avvisi pubblici e di gestire le attività attraverso l’area riservata.<br><br> Qualsiasi dubbio o problema si possa riscontrare, è possibile <strong>trovare le risposte alle domande più comuni e chiedere assistenza dedicata</strong>.
   button: true
   image: 'kp-section-4.svg'
   reverse: true

@@ -78,8 +78,16 @@ const useStyle = createUseStyles({
     },
   },
   keypointsContainer: {
-    paddingTop: '4.444rem',
-    paddingBottom: '1.667rem',
+    paddingTop: '5.625rem',
+    paddingBottom: '5.625rem',
+    '@media (max-width: 991px)': {
+      paddingTop: '3.75rem',
+      paddingBottom: '3.75rem',
+    },
+    '@media (min-width: 768px) and (max-width: 991px)': {
+      paddingTop: '3.75rem',
+      paddingBottom: 'calc(3.75rem - 48px)',
+    },
   },
   keypointNumber: {
     color: '#06c',
@@ -136,8 +144,8 @@ export const Keypoints = (props) => {
           </Row>
           <Row>
             {list
-              ? list.map((listItem) => (
-                  <Col xs="12" md="6" lg="3" className="mb-5 mb-lg-0">
+              ? list.map((listItem, index, array) => (
+                  <Col xs="12" md="6" lg="3" className={`${index + 1 === array.length ? 'mb-lg-0' : 'mb-5 mb-lg-0'}`}>
                     <div className={classes.keypointNumber}>{listItem.number}.</div>
                     {/* <img className={classes.keypointImage} src={`/assets/come-fare/${listItem.image}`} alt="" /> */}
                     <div className={classes.keypointTitle}>{listItem.title}</div>
