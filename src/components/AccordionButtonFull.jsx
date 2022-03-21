@@ -1,8 +1,7 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Button, Collapse, Card, CardBody } from 'design-react-kit';
 import { createUseStyles } from 'react-jss';
 import PropTypes from 'prop-types';
-import { GlobalStateContext } from '../context/globalContext';
 import { ExternalLink } from './ExternalLink';
 
 const useStyles = createUseStyles({
