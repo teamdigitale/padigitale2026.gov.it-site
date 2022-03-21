@@ -58,34 +58,6 @@ export const IndexPage = () => {
       }
     })();
   }, []);
-
-  // API rest to get SF TOKEN
-  /* useEffect(() => {
-    announce('Pagina caricata ' + name);
-    (async () => {
-      try {
-        const loginInfo = await fetch(`https://test.salesforce.com/services/oauth2/token`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin': '*',
-            'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS',
-            'Access-Control-Allow-Header': 'Origin, Content-Type, X-Auth-Token',
-          },
-          body: JSON.stringify({
-            client_id: '',
-            client_secret: '',
-            username: '',
-            password: '',
-            grant_type: '',
-          }),
-        }).then((res) => res.json());
-        console.log(loginInfo);
-      } catch (error) {
-        console.log(error);
-      }
-    })();
-  }, []); */
   return (
     <>
       <SEO title={seoTitle} description={seoDescription} />
