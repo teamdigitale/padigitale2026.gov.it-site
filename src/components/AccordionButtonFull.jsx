@@ -272,8 +272,6 @@ export const AccordionButtonFull = (props) => {
   const { id, number, title, money, tags, description, stalls, accessLabel, moreInfoLabel, moreInfoLink, updates } =
     props.data;
 
-  const [,] = useContext(GlobalStateContext);
-
   const eventHandler = () => {
     props.handleToggle(props.id);
   };
