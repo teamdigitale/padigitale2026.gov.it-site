@@ -9,6 +9,7 @@ import faq from '../../contents/faq-page/faq.yml';
 import { SEO } from '../components/SEO';
 import seo from '../../contents/seo.yml';
 import { GlobalStateContext } from '../context/globalContext';
+import content from '../../contents/faq-page/faq.yml';
 import { SideNavigation } from './faq/SideNavigation';
 import { QuestionSection } from './faq/QuestionSection';
 import { SupportSection } from './faq/SupportSection';
@@ -198,7 +199,12 @@ export const FaqPage = () => {
           </Row>
           <Row>
             <Col lg={3}>
-              <SideNavigation getFilter={setFilterId} activeList={questions} searchValue={inputValue} />
+              <SideNavigation
+                getFilter={setFilterId}
+                activeList={questions}
+                searchValue={inputValue}
+                list={content.sidebar}
+              />
             </Col>
             <Col
               lg={9}
