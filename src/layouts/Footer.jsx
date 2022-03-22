@@ -30,9 +30,12 @@ const useStyle = createUseStyles({
     '& .logos': {
       display: 'flex',
       flexDirection: 'column',
-      alignItems: 'center',
+      alignItems: 'flex-start',
       '@media (min-width: 992px)': {
         flexDirection: 'row',
+      },
+      '@media (max-width: 767px)': {
+        alignItems: 'center',
       },
       '& a': {
         '&:focus': {
@@ -52,14 +55,14 @@ const useStyle = createUseStyles({
     },
   },
   seeMore: {
-    color: '#33485C',
+    color: '#06c',
     textDecoration: 'none',
     fontWeight: 'bold',
     marginTop: '2.5rem',
     display: 'block',
     '&:hover': {
       textDecoration: 'underline',
-      color: '#33485C',
+      color: '#06c',
     },
     '@media (min-width: 1200px)': {
       marginTop: '0',
@@ -98,9 +101,13 @@ const useStyle = createUseStyles({
   },
   listItem: {
     composes: 'list-inline-item',
-    display: 'block',
-    '&+.list-inline-item': {
-      marginTop: '30px',
+    display: 'inline-flex',
+    '@media (max-width: 767px)': {
+      flexDirection: 'column',
+      '&+.list-inline-item': {
+        display: 'flex',
+        marginTop: '30px',
+      },
     },
     '@media (min-width: 992px)': {
       display: 'inline-block',
@@ -152,7 +159,7 @@ const MainFooter = () => {
 
   return (
     <div className={`${classes.mainFooter} it-footer-main`}>
-      <div className="container text-center text-md-left">
+      <div className="container text-center text-md-left px-3">
         <div className={classes.mainWrapper}>
           <div className="logos">
             <div className="d-flex align-items-center">
@@ -174,7 +181,7 @@ const MainFooter = () => {
               <img src="/assets/dipartimento.svg" alt={dipartimento.label} />
             </ExternalLink>
           </div>
-          <div className="info text-center">
+          <div className="info">
             {activeItem === 'come-funziona' ? (
               <Link to="/come-funziona#attori-coinvolti" className={classes.seeMore}>
                 Scopri l&apos;iniziativa

@@ -96,11 +96,17 @@ const useStyles = createUseStyles({
       borderBottom: '2px solid #5c6f82',
       borderRadius: '0',
       boxShadow: 'none',
+      height: '45px',
     },
     '& [class$="-ValueContainer"]': {
+      height: '45px',
       paddingLeft: '1.333rem',
       fontSize: '0.889rem',
       color: '#808080',
+    },
+    '& [class$="-Input"]': {
+      height: '45px',
+      margin: '2px 0',
     },
     '& [class$="-placeholder"]': {
       color: '#767676',
@@ -185,6 +191,8 @@ const useStyles = createUseStyles({
     fontSize: '0.778rem',
     fontWeight: '600',
     color: '#33485C',
+    paddingLeft: '9px',
+    marginBottom: '0',
   },
   notification: {
     composes: 'notification with-icon dismissable',
@@ -219,14 +227,28 @@ const useStyles = createUseStyles({
     },
   },
   titleUpdate: {
-    fontSize: '48px',
+    fontSize: '2.5rem',
     fontWeight: '700',
     color: '#33485C',
+    lineHeight: '48px',
+    marginBottom: '30px',
+    '@media (max-width: 425px)': {
+      fontSize: '2.375rem',
+    },
   },
   subtitleUpdate: {
     fontSize: '24px',
     color: '#33485C',
-    lineHeight: '28px',
+    lineHeight: '30px',
+    '@media (max-width: 425px)': {
+      fontSize: '1.25rem',
+    },
+  },
+  submitContainer: {
+    marginBottom: '12.5rem',
+    '@media (max-width: 991px)': {
+      marginBottom: '6rem',
+    },
   },
 });
 
@@ -360,19 +382,19 @@ export const UpdatesPage = () => {
       <div className="sr-only">
         <h2>{content.name}</h2>
       </div>
-      <div className="container mt-5">
+      <div className="container mt-5 px-3">
         <div className={classes.formBody}>
           <form onSubmit={handleSubmit(onSubmit, onError)} id="updates-form" aria-describedby="mandatory-label">
             <fieldset>
               <legend>
                 <Row>
-                  <Col xs={12} lg={5}>
-                    <div className={classes.titleUpdate}>Ricevi Aggiornamenti</div>
+                  <Col xs={12} lg={6}>
+                    <div className={classes.titleUpdate}>Ricevi aggiornamenti</div>
                     <div className={classes.subtitleUpdate}>
                       Ricevi materiali e informazioni sulle novità e gli avvisi di Italia digitale 2026.
                     </div>
                   </Col>
-                  <Col xs={12} lg={3} className="offset-lg-3">
+                  <Col xs={12} lg={3} className="offset-lg-2 d-flex align-items-center mt-5 mt-lg-0">
                     <img src={`/assets/updates-icon.svg`} alt="" />
                   </Col>
                 </Row>
@@ -416,7 +438,7 @@ export const UpdatesPage = () => {
                     )}
                   />
                 </Col>
-                <Col xs={12} lg={4} className="offset-lg-1">
+                <Col xs={12} lg={4} className="offset-lg-1 mt-4 mt-lg-0">
                   <label htmlFor="represent-select-input" className={classes.selectLabel}>
                     {representLabel}
                   </label>
@@ -565,7 +587,7 @@ export const UpdatesPage = () => {
             l'informativa privacy
           </a>
         </p>
-        <div className="d-flex mb-5">
+        <div className={`${classes.submitContainer} d-flex mt-5`}>
           <Button color="primary" type="submit" form="updates-form">
             {sendButtonLabel}
           </Button>
