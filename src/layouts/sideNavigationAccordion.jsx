@@ -204,15 +204,8 @@ export const SideNavigationAccordion = (props) => {
       sidenavBody.classList.remove('show');
     }
 
-    // document.querySelector(linkTag.getAttribute('href')).scrollIntoView({
-    //   behavior: 'smooth',
-    //   block: 'nearest',
-    // });
-
-    // const sectionName = document.querySelector(linkTag.getAttribute('href').split('#')[1]);
     const section = document.querySelector(linkTag.getAttribute('href'));
     const sectionY = section.getBoundingClientRect().top + window.pageYOffset - 60;
-    console.log(section.getBoundingClientRect());
     window.scrollTo({
       top: sectionY,
       behavior: 'smooth',
@@ -289,6 +282,5 @@ export const SideNavigationAccordion = (props) => {
 SideNavigationAccordion.propTypes = {
   activeList: PropTypes.array,
   searchValue: PropTypes.string,
-  getFilter: PropTypes.func,
   list: PropTypes.array,
 };
