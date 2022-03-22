@@ -276,7 +276,6 @@ export const UpdatesPage = () => {
     const notificationElement = document.querySelector('.notification');
     const titleElement = notificationElement.querySelector('h5');
     const descriptionElement = notificationElement.querySelector('p');
-    const modalCloseBtn = event.target.closest('.modal-content').querySelector('.modal-header .btn');
 
     const closeNotification = notificationElement.querySelector('.notification-close');
 
@@ -298,7 +297,6 @@ export const UpdatesPage = () => {
         const status = response.status;
         setTimeout(() => {
           if (status >= 200 && status <= 299) {
-            modalCloseBtn.click();
             notificationElement.classList.add('show');
             notificationElement.classList.add('success');
 
