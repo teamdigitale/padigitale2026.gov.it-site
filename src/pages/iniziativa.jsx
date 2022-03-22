@@ -6,7 +6,7 @@ const Page = () => {
   const [, dispatch] = useContext(GlobalStateContext);
 
   useEffect(() => {
-    dispatch({ type: 'SET:ACTIVE_HEADER', payload: { activeItem: 'come-funziona' } });
+    dispatch({ type: 'SET:ACTIVE_HEADER', payload: { activeItem: 'iniziativa' } });
     return () => {
       dispatch({ type: 'SET:ACTIVE_HEADER' });
     };
