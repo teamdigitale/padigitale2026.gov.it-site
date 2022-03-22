@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import React, { useContext } from 'react';
+import React from 'react';
 import { createUseStyles } from 'react-jss';
 import { Link } from 'gatsby';
 import { HeroTitle } from '../../components/hero/HeroTitle';
@@ -8,7 +8,6 @@ import { HeroCtaContainer } from '../../components/hero/HeroCtaContainer';
 import { HeroGraphic } from '../../components/hero/HeroGraphic';
 import { Hero } from '../../components/hero/Hero';
 import content from '../../../contents/support-page/support.yml';
-import { GlobalStateContext } from '../../context/globalContext';
 
 const {
   heroAssistance: { title, body, btnText },

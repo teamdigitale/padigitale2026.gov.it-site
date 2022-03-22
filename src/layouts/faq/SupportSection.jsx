@@ -109,7 +109,7 @@ const useStyles = createUseStyles({
 
 export const SupportSection = (props) => {
   const classes = useStyles();
-  const { title, supportList, buttonLabel, handleToggle } = props;
+  const { title, supportList, buttonLabel } = props;
   return (
     <>
       <section className="section section-muted" aria-labelledby="support-section">
@@ -168,5 +168,4 @@ SupportSection.propTypes = {
   title: PropTypes.string,
   supportList: PropTypes.array,
   buttonLabel: PropTypes.string,
-  handleToggle: PropTypes.func,
 };
