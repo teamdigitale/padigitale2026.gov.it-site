@@ -259,7 +259,7 @@ export const UpdatesPage = () => {
 
   useEffect(() => {}, [selectValue]);
 
-  const onSubmit = async (data, event) => {
+  const onSubmit = async (data) => {
     console.log(data);
     Object.keys(data).map(function (key) {
       if (data[key] === undefined) {
