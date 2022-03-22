@@ -191,7 +191,6 @@ export const KeypointSection = (props) => {
         <Container
           tag="section"
           aria-labelledby={`keypoint-section-title-${number}`}
-          /* className="pl-lg-2 pr-lg-2 pl-3 pr-3" */
           className={`${classes.keypointSection} pl-lg-2 pr-lg-2 pl-3 pr-3`}
         >
           {!reverse ? (
