@@ -198,12 +198,6 @@ const useStyles = createUseStyles({
 export const HeroHowToDo = ({ title, body, image, imageMob }) => {
   const classes = useStyles();
 
-  // const scrollIntoView = (id) => {
-  //   const item = document.querySelector('#' + id);
-  //   item.setAttribute('tabindex', '-1');
-  //   item.focus();
-  // };
-
   return (
     <Hero className="position-relative">
       <div className={`${classes.heroWrapper}`}>
@@ -226,26 +220,6 @@ export const HeroHowToDo = ({ title, body, image, imageMob }) => {
                       <HeroTitle title={title} className={classes.heroTitle} />
                       <HeroParagraph text={body} />
                     </div>
-                    {/* <div className={classes.listWrapper}>
-                      {list ? list.map((listItem) => (
-                        <div key={listItem.title} className={classes.list}>
-                          <span className={classes.listTitle}>{listItem.title}</span>
-                          <div className={classes.listItemsWrapper}>
-                            {listItem.items.map((item) => (
-                              <React.Fragment key={item.item}>
-                                <Link
-                                  to={`/come-funziona#` + item.anchor}
-                                  onClick={() => scrollIntoView(item.anchor)}
-                                  className={classes.listItem}
-                                >
-                                  {item.item}
-                                </Link>
-                              </React.Fragment>
-                            ))}
-                          </div>
-                        </div>
-                      )) : ''}
-                    </div> */}
                   </Col>
                   <Col xs={12} lg={6} className="d-flex d-lg-none mt-4 mt-lg-0 justify-content-center">
                     <HeroBackground image={imageMob} className={classes.heroImg} />

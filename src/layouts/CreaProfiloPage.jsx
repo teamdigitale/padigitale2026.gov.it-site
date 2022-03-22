@@ -183,7 +183,6 @@ export const CreaProfiloPage = () => {
       <div className="sr-only">
         <h2>{faq.name}</h2>
       </div>
-      {/* <HeroSupport title={faq.hero.title} subtitle={faq.hero.subtitle} /> */}
       <div className="docs pt-4 pb-5 py-md-5">
         <Container className="px-3">
           <Row>

@@ -119,22 +119,7 @@ export const KeypointSection = (props) => {
             tag="section"
             aria-labelledby="keypoints-section-title"
             className={`${classes.keypointSection} pl-lg-2 pr-lg-2 pl-3 pr-3`}
-            /* className="pl-lg-2 pr-lg-2 pl-3 pr-3" */
           >
-            {/* <Row>
-              <Col xs="8" md="6" lg="4" className="mt-3 mt-lg-0 mb-4 mb-lg-0 d-lg-none">
-                <img className={classes.keypointSectionImage} src={`/assets/come-fare/${image}`} alt="" />
-              </Col>
-              {!reverse ?
-                <Col xs="12" lg="5" className="offset-lg-1">
-                  <h3 className={classes.keypointSectionNumber}>{number}</h3>
-                  <h4 id={`keypoint-section-title-${number}`} className={classes.keypointSectionTitle}>{title}</h4></Col>
-                :
-                <Col xs="12" lg="5" className="offset-lg-6">
-                  <h3 className={classes.keypointSectionNumber}>{number}</h3>
-                  <h4 id={`keypoint-section-title-${number}`} className={classes.keypointSectionTitle}>{title}</h4></Col>
-              }
-            </Row> */}
             {!reverse ? (
               <Row>
                 <Col xs="12" lg="5" className="offset-lg-1 order-1 order-lg-0">
@@ -209,20 +194,6 @@ export const KeypointSection = (props) => {
           /* className="pl-lg-2 pr-lg-2 pl-3 pr-3" */
           className={`${classes.keypointSection} pl-lg-2 pr-lg-2 pl-3 pr-3`}
         >
-          {/* <Row>
-            <Col xs="8" md="6" lg="4" className="mt-3 mt-lg-0 mb-4 mb-lg-0 d-lg-none">
-              <img className={classes.keypointSectionImage} src={`/assets/come-fare/${image}`} alt="" />
-            </Col>
-            {!reverse ?
-              <Col xs="12" lg="5" className="offset-lg-1">
-                <h3 className={classes.keypointSectionNumber}>{number}</h3>
-                <h4 id={`keypoint-section-title-${number}`} className={classes.keypointSectionTitle}>{title}</h4></Col>
-              :
-              <Col xs="12" lg="5" className="offset-lg-6">
-                <h3 className={classes.keypointSectionNumber}>{number}</h3>
-                <h4 id={`keypoint-section-title-${number}`} className={classes.keypointSectionTitle}>{title}</h4></Col>
-            }
-          </Row> */}
           {!reverse ? (
             <React.Fragment>
               <Row>

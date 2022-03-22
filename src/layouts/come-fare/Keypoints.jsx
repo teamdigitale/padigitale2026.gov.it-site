@@ -128,7 +128,6 @@ export const Keypoints = (props) => {
           tag="section"
           aria-labelledby="keypoints-title"
           className={`${classes.keypointsContainer} pl-lg-2 pr-lg-2 pl-3 pr-3`}
-          /* className="pl-lg-2 pr-lg-2 pl-3 pr-3" */
         >
           <Row>
             <Col>
@@ -147,7 +146,6 @@ export const Keypoints = (props) => {
               ? list.map((listItem, index, array) => (
                   <Col xs="12" md="6" lg="3" className={`${index + 1 === array.length ? 'mb-lg-0' : 'mb-5 mb-lg-0'}`}>
                     <div className={classes.keypointNumber}>{listItem.number}.</div>
-                    {/* <img className={classes.keypointImage} src={`/assets/come-fare/${listItem.image}`} alt="" /> */}
                     <div className={classes.keypointTitle}>{listItem.title}</div>
                     <div className={classes.keypointDesc}>{listItem.desc}</div>
                   </Col>
