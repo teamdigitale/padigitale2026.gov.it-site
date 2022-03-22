@@ -19,10 +19,14 @@ const useStyle = createUseStyles({
     width: '4px',
     height: 'calc(100% - 100px)',
     background: '#C5E1F9',
+    display: 'none',
     '@media (max-width: 992px)': {
       left: '31px',
       top: '0',
       height: 'calc(100% - 72px)',
+    },
+    '@media(min-width: 768px)': {
+      display: 'block',
     },
   },
   scrollIndicatorActive: {
@@ -32,6 +36,10 @@ const useStyle = createUseStyles({
     height: '0',
     transition: '.3s ease',
     maxHeight: '100%',
+    display: 'none',
+    '@media(min-width: 768px)': {
+      display: 'block',
+    },
   },
   timelinePointSection: {
     composes: 'timeline-point-section',
@@ -42,6 +50,9 @@ const useStyle = createUseStyles({
     boxShadow: '0px 2px 20px rgba(0, 0, 0, 0.1)',
     '@media (max-width: 992px)': {
       marginLeft: '4.444rem',
+    },
+    '@media (max-width: 767px)': {
+      marginLeft: '0',
     },
     '&:nth-child(even)': {
       '& img': {

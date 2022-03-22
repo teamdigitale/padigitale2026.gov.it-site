@@ -125,11 +125,13 @@ export const SideNavigationAccordion = (props) => {
     if (isMobile) {
       const items = document.querySelectorAll(itemSel);
       items[0].classList.add('active');
+      setCollapseOpen(false);
     } else {
       if (!isMobile) {
         removeActive();
         setActiveLinkOnChanges(list);
         removeDisabled();
+        setCollapseOpen(true);
       }
     }
   }, [isMobile]);
@@ -196,10 +198,15 @@ export const SideNavigationAccordion = (props) => {
 
     document.querySelector(linkTag.getAttribute('href')).scrollIntoView({
       behavior: 'smooth',
+      block: 'start',
     });
 
     if (isMobile) {
-      props.getFilter(linkTag.getAttribute('data-id'));
+      const sidenavBtn = document.querySelector('.sidenav button');
+      const sidenavBody = document.querySelector('.sidenav .collapse');
+      sidenavBtn.classList.remove('collapsed');
+      sidenavBtn.setAttribute('aria-expanded', 'false');
+      sidenavBody.classList.remove('show');
     }
   }
 
