@@ -7,6 +7,10 @@ internalLinks:
     linkTo: '/misure'
     label: Misure
     linkTop: '/#mainTop'
+  howitworks:
+    linkTo: '/come-funziona'
+    label: L'iniziativa
+    linkTop: '#mainTop'
   notices:
     linkTo: '/avvisi'
     label: Avvisi
@@ -18,6 +22,14 @@ internalLinks:
   support:
     linkTo: '/supporto'
     label: Supporto
+    linkTop: '#mainTop'
+  avvisi:
+    linkTo: '/avvisi'
+    label: Avvisi
+    linkTop: '#mainTop'
+  comePartecipare:
+    linkTo: '/come-partecipare'
+    label: Come partecipare
     linkTop: '#mainTop'
   updates:
     linkTo: '/updates'

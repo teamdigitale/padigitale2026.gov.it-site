@@ -1,18 +1,18 @@
 title: Come funziona - PA digitale 2026
 name: Come Funziona - PA digitale 2026
 hero:
-  title: 'La transizione digitale: semplice e a misura di PA'
-  body: A seconda della tipologia di misura e di PA, sarà possibile accedere alle risorse o attraverso delle soluzioni standard o attraverso la presentazione di progetti.
+  title: "PA digitale 2026: scopri l'iniziativa"
+  body: Candida la tua amministrazione agli avvisi pubblici per <strong>richiedere le risorse e avviare il processo di transizione digitale</strong>.
   list:
     - listItems:
       title: APPROFONDISCI
       items:
-        - item: Il calendario
-          anchor: calendario
-        - item: I beneficiari
-          anchor: beneficiari
-        - item: Gli attori coinvolti
+        - item: Attori coinvolti
           anchor: attori-coinvolti
+        - item: Calendario
+          anchor: calendario
+        - item: Beneficiari
+          anchor: beneficiari
 beneficiaries:
   category: I Beneficiari
   title: La digitalizzazione a misura di territorio
@@ -91,19 +91,27 @@ timeline:
   cards:
     - id: 1
       active: false
-      time: Autunno 2021
-      title: Conoscere le opportunità
-      text: 'Le PA hanno accesso a informazioni e materiali per prepararsi ad aderire agli avvisi, la cui pubblicazione è prevista per la primavera del 2022.'
+      time: LUGLIO 2020
+      title: NEXT GENERATION EU
+      text: L’Unione Europea approva un piano da €750 miliardi che ha l'obiettivo di rilanciare l'economia europea dopo la pandemia di COVID-19 e di renderla più verde e digitale.
     - id: 2
       active: false
-      time: Primavera 2022
-      title: Partecipare agli avvisi
-      text: '<strong>I primi avvisi del PNRR dedicati alla transizione digitale della PA sono pubblicati:</strong> un’area riservata ne facilita l’adesione attraverso un modulo online.'
+      time: MAGGIO 2021
+      title: ITALIA DOMANI
+      text: Il Governo italiano presenta “Italia Domani”, il Piano Nazionale di Ripresa e Resilienza (PNRR). Grazie all’integrazione di un Fondo Complementare, il totale degli investimenti previsti è di €222,1 miliardi.
     - id: 3
+      time: Aprile 2021
+      title: ITALIA DIGITALE 2026
+      text: "Con l’approvazione del PNRR, viene definito il piano strategico per la transizione digitale e la connettività del paese: Italia digitale 2026. Degli oltre 13 miliardi di euro, 6,74 sono dedicati alla digitalizzazione della PA."
+    - id: 4
+      time: Novembre 2021
+      title: PA DIGITALE 2026
+      text: L’Unione Europea approva un piano da €750 miliardi che ha l'obiettivo di rilanciare l'economia europea dopo la pandemia di COVID-19 e di renderla più verde e digitale.
+    - id: 5
       active: true
-      time: Estate 2022
-      title: Avviare i progetti
-      text: 'Le amministrazioni possono <strong>avviare i progetti:</strong> un team dedicato accompagna le PA. La rendicontazione degli interventi implementati è totalmente online.'
+      time: Aprile 2022
+      title: PARTONO I PRIMI AVVISI
+      text: Su PA digitale 2026 le PA locali possono accedere attraverso soluzioni standard alle risorse del PNRR.
 pacchettiTabs:
   title: Soluzioni standard
   subtitle: Per le misure con una platea ampia di beneficiari (oltre 1.000 PA), è prevista una modalità di accesso per soluzioni standard. Un percorso semplificato e guidato che va dalla richiesta dei finanziamenti all’erogazione dei fondi.
