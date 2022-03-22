@@ -1,14 +1,13 @@
 /* eslint-disable prettier/prettier */
-import React, { useContext } from 'react';
+import React from 'react';
 import { createUseStyles } from 'react-jss';
-import { Button } from 'design-react-kit';
+import { Link } from 'gatsby';
 import { HeroTitle } from '../../components/hero/HeroTitle';
 import { HeroBody } from '../../components/hero/HeroBody';
 import { HeroCtaContainer } from '../../components/hero/HeroCtaContainer';
 import { HeroGraphic } from '../../components/hero/HeroGraphic';
 import { Hero } from '../../components/hero/Hero';
 import content from '../../../contents/support-page/support.yml';
-import { GlobalStateContext } from '../../context/globalContext';
 
 const {
   heroAssistance: { title, body, btnText },
@@ -37,7 +36,6 @@ const useStyle = createUseStyles({
 
 export const Assistance = () => {
   const classes = useStyle();
-  const [, dispatch] = useContext(GlobalStateContext);
 
   return (
     <React.Fragment>
@@ -47,15 +45,9 @@ export const Assistance = () => {
             <HeroTitle title={title} className={classes.heroTitle} />
             <HeroBody html={body} />
             <HeroCtaContainer>
-              <Button
-                color="primary"
-                className={classes.heroBtn}
-                onClick={() => {
-                  dispatch({ type: 'SET:TOGGLE_MODAL_MESSAGE' });
-                }}
-              >
+              <Link to="/supporto/assistenza" className={`${classes.heroBtn} btn btn-primary`}>
                 {btnText}
-              </Button>
+              </Link>
             </HeroCtaContainer>
           </div>
           <HeroGraphic className="col-lg-6 text-center mt-4 mt-lg-0">

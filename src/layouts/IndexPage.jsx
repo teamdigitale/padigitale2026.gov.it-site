@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { createUseStyles } from 'react-jss';
 import { announce } from '@react-aria/live-announcer';
 import {
@@ -20,7 +20,6 @@ import { HomeCarousel } from '../components/carousel/HomeCarousel';
 import { SEO } from '../components/SEO';
 import seo from '../../contents/seo.yml';
 import labels from '../../contents/labels.yml';
-import { GlobalStateContext } from '../context/globalContext';
 import { SupportSection } from './faq/SupportSection';
 import { OpportunitySection } from './home/OpportunitySection';
 
@@ -47,7 +46,6 @@ const useStyles = createUseStyles({
 
 export const IndexPage = () => {
   const classes = useStyles();
-  const [, dispatch] = useContext(GlobalStateContext);
 
   useEffect(() => {
     announce('Pagina caricata ' + name);
@@ -101,16 +99,7 @@ export const IndexPage = () => {
         titleId="home-italia-digitale"
       />
       <HeroCarousel content={heroCarouselNews} title={heroCarouselNewsTitle} />
-      <SupportSection
-        supportList={support.cards}
-        title={support.title}
-        buttonLabel={support.buttonLabel}
-        handleToggle={() => {
-          dispatch({
-            type: 'SET:TOGGLE_MODAL_MESSAGE',
-          });
-        }}
-      />
+      <SupportSection supportList={support.cards} title={support.title} buttonLabel={support.buttonLabel} />
     </>
   );
 };
