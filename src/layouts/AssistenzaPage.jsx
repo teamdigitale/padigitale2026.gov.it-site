@@ -508,7 +508,6 @@ export const AssistenzaPage = () => {
                 name="captcha_settings"
                 value='{"keyname":"DEV1","fallback":"true","orgId":"00D3N0000004K3l","ts":""}'
               />
-              <input type="hidden" name="debugEmail" value="mattia.g.puggioni@accenture.com" />
               <input type="hidden" name="debug" value={1} />
               <input type="hidden" name="orgid" value="00D3N0000004K3l" />
               <Row className="mt-5">
