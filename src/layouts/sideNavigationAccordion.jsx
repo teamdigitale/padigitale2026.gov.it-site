@@ -196,11 +196,6 @@ export const SideNavigationAccordion = (props) => {
     const linkTag = evt.target.closest('a');
     linkTag.classList.add('active');
 
-    document.querySelector(linkTag.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
-    });
-
     if (isMobile) {
       const sidenavBtn = document.querySelector('.sidenav button');
       const sidenavBody = document.querySelector('.sidenav .collapse');
@@ -208,6 +203,20 @@ export const SideNavigationAccordion = (props) => {
       sidenavBtn.setAttribute('aria-expanded', 'false');
       sidenavBody.classList.remove('show');
     }
+
+    // document.querySelector(linkTag.getAttribute('href')).scrollIntoView({
+    //   behavior: 'smooth',
+    //   block: 'nearest',
+    // });
+
+    // const sectionName = document.querySelector(linkTag.getAttribute('href').split('#')[1]);
+    const section = document.querySelector(linkTag.getAttribute('href'));
+    const sectionY = section.getBoundingClientRect().top + window.pageYOffset - 60;
+    console.log(section.getBoundingClientRect());
+    window.scrollTo({
+      top: sectionY,
+      behavior: 'smooth',
+    });
   }
 
   function removeActive() {
