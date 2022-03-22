@@ -148,6 +148,9 @@ const useStyle = createUseStyles({
         boxShadow: 'none',
       },
     },
+    '& .nav-item.r-nav': {
+      marginLeft: 'auto',
+    },
   },
   linkListWrapperCustom: {
     '& ul li:not(:first-child)': {
