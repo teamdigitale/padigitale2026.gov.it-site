@@ -1,11 +1,5 @@
-/* eslint-disable react/no-unescaped-entities */
-/* eslint-disable sonarjs/no-duplicate-string */
-/* eslint-disable react-hooks/exhaustive-deps */
-/* eslint-disable sonarjs/no-all-duplicated-branches */
-/* eslint-disable sonarjs/no-identical-functions */
-/* eslint-disable sonarjs/cognitive-complexity */
 /* eslint-disable max-lines-per-function */
-/* eslint-disable arrow-body-style */
+/* eslint-disable sonarjs/cognitive-complexity */
 import React, { useState, useEffect } from 'react';
 import { createUseStyles } from 'react-jss';
 import { announce } from '@react-aria/live-announcer';
@@ -14,7 +8,7 @@ import Select from 'react-select';
 import ReCAPTCHA from 'react-google-recaptcha';
 import content from '../../contents/opportunity-page/opportunity.yml';
 import notificationsLabel from '../../contents/notifications.yml';
-import errorsLabels from '../../contents/errorsLabels.yml';
+import labels from '../../contents/labels.yml';
 import links from '../../contents/links.yml';
 const { privacy } = links.internalLinks;
 import seo from '../../contents/seo.yml';
@@ -22,7 +16,7 @@ import { SEO } from '../components/SEO';
 
 const { title: seoTitle, description: seoDescription } = seo.assistenzaPage;
 const { successMessage: successLabels } = notificationsLabel;
-const { errors } = errorsLabels;
+const { errors } = labels;
 
 const useStyles = createUseStyles({
   modalUpdatesContainer: {
@@ -292,6 +286,9 @@ export const AssistenzaPage = () => {
   const textareaMaxLength = 300;
   const [textareaDescriptionState, setTextareaDescriptionState] = useState('not-active');
   const [formFilled, setFormFilled] = useState(false);
+  const isInvalidValue = 'is-invalid';
+  const formGroupValue = '.form-group';
+  const errorLabelValue = 'error-label';
 
   const [optionSelected, setOptionSelected] = useState();
 
@@ -307,17 +304,15 @@ export const AssistenzaPage = () => {
     let noSelectValue = true;
 
     const inputHandler = () => {
-      noInputValue = Array.prototype.slice.call(inputArr).find((input) => {
-        return input.checkValidity() === false;
-      });
+      noInputValue = Array.prototype.slice.call(inputArr).find((input) => input.checkValidity() === false);
       noInputValue ? (noInputValue = true) : (noInputValue = false);
       inputArr.forEach((input) => {
         if (input.checkValidity()) {
-          input.classList.remove('is-invalid');
-          const formGroup = input.closest('.form-group');
+          input.classList.remove(isInvalidValue);
+          const formGroup = input.closest(formGroupValue);
           const errorLabel = formGroup.querySelector('small');
           if (errorLabel) {
-            errorLabel.classList.remove('error-label');
+            errorLabel.classList.remove(errorLabelValue);
             errorLabel.innerHTML = '';
           }
         }
@@ -326,9 +321,7 @@ export const AssistenzaPage = () => {
     };
 
     const selectHandler = () => {
-      noSelectValue = Array.prototype.slice.call(selectArr).find((select) => {
-        return select.value === '';
-      });
+      noSelectValue = Array.prototype.slice.call(selectArr).find((select) => select.value === '');
       noSelectValue ? (noSelectValue = false) : (noSelectValue = true);
       setFormFilled(!noInputValue && !noSelectValue);
     };
@@ -354,7 +347,7 @@ export const AssistenzaPage = () => {
 
   const textareaInputHandler = (event) => {
     const currentTextarea = event.target;
-    const currentContainer = currentTextarea.closest('.form-group');
+    const currentContainer = currentTextarea.closest(formGroupValue);
     const number = currentContainer.querySelector('.max-length-number');
     number.innerHTML = textareaMaxLength - parseInt(event.target.value.length, 10);
     announce('Numero di caratteri rimanenti: ' + number.innerHTML);
@@ -395,22 +388,22 @@ export const AssistenzaPage = () => {
       const currentPattern = currentTarget.getAttribute('pattern');
       const currentType = currentTarget.getAttribute('type');
       if (currentType === 'email') {
-        const inputContainer = currentTarget.closest('.form-group');
+        const inputContainer = currentTarget.closest(formGroupValue);
         const errorLabel = inputContainer.querySelector('small');
-        errorLabel.classList.add('error-label');
+        errorLabel.classList.add(errorLabelValue);
         errorLabel.innerHTML = emailValidationLabel;
-        currentTarget.classList.add('is-invalid');
+        currentTarget.classList.add(isInvalidValue);
       }
       if (currentPattern) {
         const patternRegExp = new RegExp(currentPattern);
         if (patternRegExp.test(currentValue)) {
           return;
         } else {
-          const inputContainer = currentTarget.closest('.form-group');
+          const inputContainer = currentTarget.closest(formGroupValue);
           const errorLabel = inputContainer.querySelector('small');
-          errorLabel.classList.add('error-label');
+          errorLabel.classList.add(errorLabelValue);
           errorLabel.innerHTML = errorMatch;
-          currentTarget.classList.add('is-invalid');
+          currentTarget.classList.add(isInvalidValue);
         }
       }
     }
@@ -554,8 +547,6 @@ export const AssistenzaPage = () => {
                       placeholder={selectPlaceholder}
                       aria-label={selectPlaceholder}
                       aria-describedby="mandatory-label"
-                      /* aria-invalid={errors.representative && 'true'}
-                    aria-labelledby={errors.representative && 'error-represent'} */
                       className={`select`}
                     />
                     <select
@@ -590,8 +581,6 @@ export const AssistenzaPage = () => {
                       placeholder={selectPlaceholder}
                       aria-label={selectPlaceholder}
                       aria-describedby="mandatory-label"
-                      /* aria-invalid={errors.representative && 'true'}
-                    aria-labelledby={errors.representative && 'error-represent'} */
                       className={`select`}
                     />
                     <select
@@ -671,7 +660,7 @@ export const AssistenzaPage = () => {
                 <p className={classes.modalFooterLabel}>
                   Cliccando su INVIA dichiaro di aver letto e compreso{' '}
                   <a target="_blank" href={privacy.linkTo} rel="noreferrer">
-                    l'informativa privacy
+                    l&apos;informativa privacy
                   </a>
                 </p>
                 <div className="d-flex">
