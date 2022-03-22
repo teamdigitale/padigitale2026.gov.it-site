@@ -1,6 +1,5 @@
 import React, { useEffect, useContext } from 'react';
 import { announce } from '@react-aria/live-announcer';
-// import { support } from '../../contents/home-page/home.yml';
 import content from '../../contents/come-funziona/come-funziona.yml';
 import { SEO } from '../components/SEO';
 import { Timeline } from '../components/carousel/Timeline';
@@ -10,7 +9,6 @@ import seo from '../../contents/seo.yml';
 import { GlobalStateContext } from '../context/globalContext';
 import { Involved } from './come-funziona/Involved';
 import { Beneficiaries } from './come-funziona/Beneficiaries';
-// import { SupportSection } from './faq/SupportSection';
 
 const { title: seoTitle, description: seoDescription } = seo.comeFunzionaPage;
 
@@ -54,16 +52,6 @@ export const ComeFunzionaPage = () => {
       <Involved title={content.involved.title} category={content.involved.category} cards={content.involved.cards} />
       <Timeline content={content.timeline} title="Il calendario" />
       <Beneficiaries item={content.beneficiaries} />
-      {/* <SupportSection
-        supportList={support.cards}
-        title={support.title}
-        buttonLabel={support.buttonLabel}
-        handleToggle={() => {
-          dispatch({
-            type: 'SET:TOGGLE_MODAL_MESSAGE',
-          });
-        }}
-      /> */}
     </>
   );
 };
