@@ -2,7 +2,6 @@
 /* eslint-disable max-lines-per-function */
 /* eslint-disable sonarjs/cognitive-complexity */
 import React, { useState, useEffect } from 'react';
-// import PropTypes from 'prop-types';
 import { useForm, Controller } from 'react-hook-form';
 import { createUseStyles } from 'react-jss';
 import { Row, Col, Button, Input } from 'design-react-kit';
@@ -281,7 +280,7 @@ export const UpdatesPage = () => {
 
   useEffect(() => {}, [selectValue]);
 
-  const onSubmit = async (data, event) => {
+  const onSubmit = async (data) => {
     console.log(data);
     Object.keys(data).map(function (key) {
       if (data[key] === undefined) {
@@ -298,7 +297,6 @@ export const UpdatesPage = () => {
     const notificationElement = document.querySelector('.notification');
     const titleElement = notificationElement.querySelector('h5');
     const descriptionElement = notificationElement.querySelector('p');
-    const modalCloseBtn = event.target.closest('.modal-content').querySelector('.modal-header .btn');
 
     const closeNotification = notificationElement.querySelector('.notification-close');
 
@@ -320,7 +318,6 @@ export const UpdatesPage = () => {
         const status = response.status;
         setTimeout(() => {
           if (status >= 200 && status <= 299) {
-            modalCloseBtn.click();
             notificationElement.classList.add('show');
             notificationElement.classList.add('success');
 
