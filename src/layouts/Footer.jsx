@@ -30,9 +30,12 @@ const useStyle = createUseStyles({
     '& .logos': {
       display: 'flex',
       flexDirection: 'column',
-      alignItems: 'center',
+      alignItems: 'flex-start',
       '@media (min-width: 992px)': {
         flexDirection: 'row',
+      },
+      '@media (max-width: 767px)': {
+        alignItems: 'center',
       },
       '& a': {
         '&:focus': {
@@ -101,10 +104,14 @@ const useStyle = createUseStyles({
   },
   listItem: {
     composes: 'list-inline-item',
+    display: 'inline-flex',
     color: '#fff',
-    display: 'block',
-    '&+.list-inline-item': {
-      marginTop: '30px',
+    '@media (max-width: 767px)': {
+      flexDirection: 'column',
+      '&+.list-inline-item': {
+        display: 'flex',
+        marginTop: '30px',
+      },
     },
     '@media (min-width: 992px)': {
       display: 'inline-block',
@@ -156,7 +163,7 @@ const MainFooter = () => {
 
   return (
     <div className={`${classes.mainFooter} it-footer-main`}>
-      <div className="container text-center text-md-left">
+      <div className="container text-center text-md-left px-3">
         <div className={classes.mainWrapper}>
           <div className="logos">
             <div className="d-flex align-items-center">

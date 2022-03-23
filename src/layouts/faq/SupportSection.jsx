@@ -109,7 +109,7 @@ const useStyles = createUseStyles({
 
 export const SupportSection = (props) => {
   const classes = useStyles();
-  const { title, supportList, buttonLabel, handleToggle } = props;
+  const { title, supportList, buttonLabel } = props;
   return (
     <>
       <section className="section section-muted" aria-labelledby="support-section">
@@ -128,25 +128,8 @@ export const SupportSection = (props) => {
               <Row>
                 {supportList.map((card) => (
                   <Col key={card.title} md={5} lg={4} xl={3} className={classes.colCard}>
-                    {card.isModal ? (
-                      <div
-                        role="button"
-                        tabIndex="0"
-                        onKeyPress={handleToggle}
-                        onClick={handleToggle}
-                        className={classes.resetButton}
-                      >
-                        <Card teaser noWrapper className={classes.cardWrapper}>
-                          <CardBody>
-                            <CardTitle tag="h5" className={classes.cardTitle}>
-                              {card.title}
-                            </CardTitle>
-                            <CardText className={classes.cardText}>{card.description}</CardText>
-                          </CardBody>
-                        </Card>
-                      </div>
-                    ) : (
-                      <Link to="/supporto/faq" className={classes.cleanLink}>
+                    {
+                      <Link to={card.link} className={classes.cleanLink}>
                         <Card teaser noWrapper className={classes.cardWrapper}>
                           <CardBody>
                             <CardTitle tag="h5" className={classes.cardTitle}>
@@ -156,7 +139,7 @@ export const SupportSection = (props) => {
                           </CardBody>
                         </Card>
                       </Link>
-                    )}
+                    }
                   </Col>
                 ))}
               </Row>
@@ -185,5 +168,4 @@ SupportSection.propTypes = {
   title: PropTypes.string,
   supportList: PropTypes.array,
   buttonLabel: PropTypes.string,
-  handleToggle: PropTypes.func,
 };

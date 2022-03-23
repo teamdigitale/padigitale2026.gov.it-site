@@ -1,28 +1,21 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { createUseStyles } from 'react-jss';
-import { announce } from '@react-aria/live-announcer';
 import {
   name,
-  heroMain,
-  heroDigital,
+  heroMainBanner,
   heroPnrr,
-  opportunity,
   heroCarouselNews,
-  homeCarousel,
   heroCarouselNewsTitle,
+  noticesCarouselTitle,
   support,
 } from '../../contents/home-page/home.yml';
-import { HeroImageBackground } from '../components/hero/HeroImageBackground';
-import { HeroImageBackgroundFull } from '../components/hero/HeroImageBackgroundFull';
 import { HeroImage } from '../components/hero/HeroImage';
 import { HeroCarousel } from '../components/carousel/Carousel';
-import { HomeCarousel } from '../components/carousel/HomeCarousel';
 import { SEO } from '../components/SEO';
 import seo from '../../contents/seo.yml';
 import labels from '../../contents/labels.yml';
-import { GlobalStateContext } from '../context/globalContext';
+import { NoticesCarousel } from '../components/carousel/NoticesCarousel';
 import { SupportSection } from './faq/SupportSection';
-import { OpportunitySection } from './home/OpportunitySection';
 
 const { title: seoTitle, description: seoDescription } = seo.homePage;
 const { headerTitle, headerSubtitle } = labels;
@@ -47,10 +40,21 @@ const useStyles = createUseStyles({
 
 export const IndexPage = () => {
   const classes = useStyles();
-  const [, dispatch] = useContext(GlobalStateContext);
+
+  const [newsList, setNewsList] = useState([]);
 
   useEffect(() => {
-    announce('Pagina caricata ' + name);
+    (async () => {
+      try {
+        await fetch(`https://github.com/teamdigitale/padigitale2026-opendata`)
+          .then((res) => res.json())
+          .then((data) => {
+            setNewsList(data.windows);
+          });
+      } catch (error) {
+        console.log(error);
+      }
+    })();
   }, []);
   return (
     <>
@@ -62,55 +66,52 @@ export const IndexPage = () => {
       <div className="sr-only">
         <h2>{name}</h2>
       </div>
-      <HeroImageBackgroundFull
-        category={heroMain.category}
-        title={heroMain.title}
-        body={heroMain.body}
-        image="hero-home.png"
-        imageMobile="hero-home-mobile.png"
-        overlap={true}
+      <HeroImage
+        dark={true}
+        mainHero={true}
+        ctaContainer={true}
+        title={heroMainBanner.title}
+        body={heroMainBanner.body}
+        imageUrl="/assets/icona-home-banner.svg"
+        imageAlt=""
+        firstInternal={true}
+        firstButtonHref="/come-funziona"
+        firstButtonLabel={heroMainBanner.firstButtonLabel}
+        firstButtonAriaLabel={heroMainBanner.firstButtonAriaLabel}
+        heroTitleId="home-hero-title"
       />
-      <HomeCarousel content={homeCarousel} />
-      <OpportunitySection title={opportunity.title} list={opportunity.cards} />
+      <NoticesCarousel content={newsList} title={noticesCarouselTitle} />
+      <HeroImage
+        light={true}
+        ctaContainer={true}
+        category={heroPnrr.category}
+        title={heroPnrr.title}
+        body={heroPnrr.body}
+        imageUrl="/assets/home-candidature.svg"
+        imageAlt=""
+        outlineBtn={true}
+        firstInternal={true}
+        firstButtonHref="/come-funziona"
+        firstButtonLabel={heroPnrr.firstButtonLabel}
+        firstButtonAriaLabel={heroPnrr.firstButtonAriaLabel}
+        heroTitleId="home-hero-title-candidature"
+      />
+      <HeroCarousel content={heroCarouselNews} title={heroCarouselNewsTitle} />
       <HeroImage
         ctaContainer={true}
         category={heroPnrr.category}
         title={heroPnrr.title}
         body={heroPnrr.body}
-        imageUrl="/assets/come-funziona-home.svg"
+        imageUrl="/assets/Classificazione_Dati_e_Servizi.svg"
         imageAlt=""
+        outlineBtn={true}
         firstInternal={true}
         firstButtonHref="/come-funziona"
         firstButtonLabel={heroPnrr.firstButtonLabel}
         firstButtonAriaLabel={heroPnrr.firstButtonAriaLabel}
-        secondButtonLabel={heroPnrr.secondButtonLabel}
-        secondButtonAriaLabel={heroPnrr.secondButtonAriaLabel}
-        secondButtonHref="/come-funziona"
-        heroTitleId="home-hero-title"
+        heroTitleId="home-hero-title-classificazione"
       />
-      <HeroImageBackground
-        title={heroDigital.title}
-        body={heroDigital.body}
-        theme="bg-blue"
-        image="italy-blue.webp"
-        firstButtonLabel={heroDigital.firstButtonLabel}
-        firstButtonAriaLabel={heroDigital.firstButtonAriaLabel}
-        firstButtonClass="btn-light"
-        firstButtonHref={heroDigital.linkTo}
-        overlap={true}
-        titleId="home-italia-digitale"
-      />
-      <HeroCarousel content={heroCarouselNews} title={heroCarouselNewsTitle} />
-      <SupportSection
-        supportList={support.cards}
-        title={support.title}
-        buttonLabel={support.buttonLabel}
-        handleToggle={() => {
-          dispatch({
-            type: 'SET:TOGGLE_MODAL_MESSAGE',
-          });
-        }}
-      />
+      <SupportSection supportList={support.cards} title={support.title} buttonLabel={support.buttonLabel} />
     </>
   );
 };

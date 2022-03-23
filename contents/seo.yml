@@ -19,6 +19,9 @@ opportunityPage:
 comeFunzionaPage:
   title: Come Funziona - PA digitale 2026
   description: Scopri le modalità per accedere ai fondi del PNRR per la digitalizzazione della Pubblica Amministrazione attraverso la piattaforma PA Digitale 2026
+comeParteciparePage:
+  title: Come Partecipare - PA digitale 2026
+  description: Scopri le modalità per accedere ai fondi del PNRR per la digitalizzazione della Pubblica Amministrazione attraverso la piattaforma PA Digitale 2026
 faqPage:
   title: Domande Frequenti - PA digitale 2026
   description: Domande frequenti su PA Digitale 2026, la piattaforma per richiedere i fondi del PNRR dedicati alla transizione digitale delle pubbliche amministrazioni
@@ -33,8 +36,14 @@ unsubscribePage:
   description: Annulla la tua email per ricevere agli aggiornamenti dalla piattaforma PA Digitale 2026
 projectsSolutionPage:
   title: Presentazione progetti - PA digitale 2026
-  description: Per le misure con una platea ristrettadi beneficiari (fino a  1.000 PA), è previstauna modalità di accesso attraversola presentazione di progetti, sempre ispirata ai principi della semplicità e della riduzione degli oneri amministrativi.  
+  description: Per le misure con una platea ristrettadi beneficiari (fino a  1.000 PA), è previstauna modalità di accesso attraversola presentazione di progetti, sempre ispirata ai principi della semplicità e della riduzione degli oneri amministrativi.
+assistenzaPage:
+  title: Assistenza - PA digitale 2026
+  description: Un team dedicato è a tua disposizione per chiarire dubbi e approfondire temi di interesse. Compila il modulo sottostante e invia la richiesta.
 standardSolutionPage:
   title: Soluzioni standard - PA digitale 2026
   description: Per le misure con una platea ampia di beneficiari (oltre 1.000 PA), è prevista una modalità di accesso per soluzioni standard. Un percorso semplificato e guidato che va dalla richiesta dei finanziamenti all'erogazione dei fondi.
+creaProfiloPage:
+  title: Crea profilo - PA digitale 2026
+  description: Per partecipare agli avvisi è necessario che il rappresentante legale di un'amministrazione presente su IPA (Indice dei domini digitali della Pubblica Amministrazione), o una persona incaricata, avvii la procedura di attivazione della PA sulla piattaforma.
 
