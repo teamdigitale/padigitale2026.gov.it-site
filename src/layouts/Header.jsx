@@ -80,10 +80,14 @@ const useStyle = createUseStyles({
     },
   },
   topListLink: {
-    composes: 'border-0 p-0 mr-0',
+    composes: 'border-0 p-0 mr-0 my-0',
     '& .list-item': {
       display: 'inline-flex',
       alignItems: 'center',
+      padding: '5px 24px',
+      '@media (max-width: 991px)': {
+        padding: '5px 0',
+      },
     },
     '& .list-item-link': {
       display: 'inline-flex',
@@ -114,6 +118,13 @@ const useStyle = createUseStyles({
         height: '4rem',
       },
     },
+    '&.it-header-center-wrapper .it-header-center-content-wrapper': {
+      alignItems: 'flex-start',
+    },
+  },
+  headerCenter: {
+    display: 'flex',
+    flexDirection: 'column',
   },
   offCanvasWrapper: {
     padding: [13, 24],
@@ -121,23 +132,18 @@ const useStyle = createUseStyles({
     alignItems: 'center',
     marginBottom: 16,
     position: 'relative',
-    '&:before': {
-      content: '""',
-      position: 'absolute',
-      left: '24px',
-      bottom: '0',
-      width: '65px',
-      height: '1px',
-      backgroundColor: '#0066CC',
-    },
     '@media (min-width: 992px)': {
       display: 'none',
     },
   },
   offCanvasTitle: {
-    marginLeft: 8,
     textDecoration: 'none',
     fontWeight: '700',
+    '& .icon': {
+      marginRight: '15px',
+      width: '39px',
+      height: '39px',
+    },
   },
   navbarNav: {
     width: '100%',
@@ -219,7 +225,9 @@ const useStyle = createUseStyles({
     padding: '0',
     backgroundColor: 'transparent',
     boxShadow: 'none',
-    marginRight: '1.2rem',
+    '& a': {
+      paddingRight: '5px',
+    },
     '&:focus, &:hover': {
       color: '#0066CC',
       backgroundColor: 'transparent',
@@ -235,11 +243,26 @@ const useStyle = createUseStyles({
     cursor: 'pointer',
   },
   mainHeader: {
+    boxShadow: '0 20px 30px 5px rgb(0 0 0 / 5%)',
     '& .it-header-slim-wrapper-content': {
       padding: '0',
     },
+    dropShadow: '0 20px 30px 5px rgb(0 0 0 / 5%)',
     '& .it-header-center-content-wrapper': {
       padding: '0',
+    },
+    '& .it-header-wrapper .it-nav-wrapper .it-header-navbar-wrapper': {
+      top: '30%',
+    },
+    '& .it-header-slim-wrapper': {
+      '@media (max-width: 991px)': {
+        padding: '10px 0',
+      },
+    },
+    '& .it-header-slim-wrapper .it-header-slim-wrapper-content': {
+      '@media (max-width: 991px)': {
+        alignItems: 'flex-start',
+      },
     },
   },
   login: {
@@ -251,6 +274,7 @@ const useStyle = createUseStyles({
     height: '100%',
     '@media (max-width: 992px)': {
       backgroundColor: 'transparent',
+      padding: '0',
     },
     '&:hover': {
       '& span': {
@@ -261,9 +285,11 @@ const useStyle = createUseStyles({
       marginRight: '0.555rem',
       '&.mobile': {
         display: 'none',
+        marginTop: '5px',
       },
       '@media (max-width: 992px)': {
         display: 'none',
+        margin: '0',
         '&.mobile': {
           display: 'block',
         },
@@ -279,6 +305,20 @@ const useStyle = createUseStyles({
       },
     },
   },
+  headerLabel: {
+    composes: 'd-inline-flex flex-column font-weight-bold mt-15 d-lg-none',
+    marginTop: '15px',
+    '& .title-link': {
+      color: '#06c',
+      fontSize: '1.22222rem',
+      lineHeight: '1.25',
+    },
+    '& .subtitle-link': {
+      color: '#06c',
+      fontSize: '1.11111rem',
+      fontWeight: '400',
+    },
+  },
 });
 
 const SlimHeader = () => {
@@ -290,7 +330,7 @@ const SlimHeader = () => {
   };
   return (
     <HeaderReactKit type="slim" theme="light">
-      <HeaderContent>
+      <HeaderContent className="px-2">
         <HeaderBrand
           href="https://innovazione.gov.it/"
           target="_blank"
@@ -338,36 +378,7 @@ const SlimHeader = () => {
                   aria-label="Italia domani - PNRR (Collegamento esterno - Apre su nuova scheda)"
                 >
                   {externalLinks.pnrr.label}
-                  <ExternalLink
-                    className="list-item-link"
-                    linkTo={externalLinks.eu.linkTo}
-                    ariaLabel={externalLinks.eu.ariaLabel}
-                    href={externalLinks.italiaDigitale.linkTo}
-                    target="_blank"
-                  >
-                    <img
-                      className="d-none d-lg-block eu-logo"
-                      src="/assets/eu-flag.svg"
-                      alt={externalLinks.eu.label}
-                    ></img>
-                  </ExternalLink>
                 </LinkListItem>
-                {/* <LinkListItem> */}
-                <ExternalLink
-                  className="list-item-link"
-                  linkTo={externalLinks.eu.linkTo}
-                  ariaLabel={externalLinks.eu.ariaLabel}
-                  href={externalLinks.italiaDigitale.linkTo}
-                  target="_blank"
-                >
-                  <img
-                    className="d-none d-lg-block user-logo"
-                    src="/assets/user-icon.svg"
-                    alt={externalLinks.eu.label}
-                  ></img>
-                  <span>Accedi</span>
-                </ExternalLink>
-                {/* </LinkListItem> */}
               </LinkList>
             </div>
           </Collapse>
@@ -400,7 +411,7 @@ const CenterHeader = () => {
   const classes = useStyle();
   return (
     <HeaderReactKit type="center" theme="light" className={classes.headerCenterWrapper}>
-      <HeaderContent>
+      <HeaderContent className={`${classes.headerCenter} px-2`}>
         <div className="it-brand-wrapper pl-5 pl-sm-0">
           <Link to="/">
             <div className="it-brand-text pr-0">
@@ -414,6 +425,10 @@ const CenterHeader = () => {
               </div>
             </div>
           </Link>
+        </div>
+        <div className={classes.headerLabel} aria-label="PA digitale 2026">
+          <span className="title-link">PA digitale 2026</span>
+          <span className="subtitle-link">Le risorse per una PA protagonista della transazione digitale</span>
         </div>
       </HeaderContent>
     </HeaderReactKit>
@@ -434,7 +449,7 @@ const NavHeader = () => {
         megamenu
         /* aria-label={ariaLabel.menu} */
         aria-labelledby="menu-principale"
-        className="px-0"
+        className="px-2"
         id="menu-principale-anchor"
         tabIndex="-1"
       >
@@ -485,15 +500,6 @@ const NavHeader = () => {
               </NavItem>
               <NavItem>
                 <Link
-                  to={internalLinks.notices.linkTo}
-                  className={activeItem === 'avvisi' ? 'nav-link active' : 'nav-link'}
-                  onClick={closeMenu}
-                >
-                  <span className="font-weight-semibold">{internalLinks.notices.label}</span>
-                </Link>
-              </NavItem>
-              <NavItem>
-                <Link
                   to={internalLinks.howToPartecipate.linkTo}
                   className={activeItem === 'avvisi' ? 'nav-link active' : 'nav-link'}
                   onClick={closeMenu}
@@ -510,18 +516,6 @@ const NavHeader = () => {
                   <span className="font-weight-semibold">{internalLinks.support.label}</span>
                 </Link>
               </NavItem>
-              {/* <NavItem className={classes.updatesBtn} active>
-                <Button
-                  aria-label="Ricevi aggiornamenti (Apri modale e compila il modulo)"
-                  className="nav-link modal-button"
-                  onClick={() => {
-                    closeMenu();
-                    dispatch({ type: 'SET:TOGGLE_MODAL' });
-                  }}
-                >
-                  <span className="font-weight-semibold">{internalLinks.updates.label}</span>
-                </Button>
-              </NavItem> */}
             </Nav>
           </div>
         </HeaderNav>

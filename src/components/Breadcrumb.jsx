@@ -6,28 +6,37 @@ import labels from '../../contents/labels.yml';
 
 const useStyles = createUseStyles({
   breadcrumb: {
-    paddingTop: '1.563rem',
+    padding: '1.563rem 0 0',
+    '& .breadcrumb': {
+      padding: '0.75rem 0',
+    },
+    '& .bradcrumb-item a': {
+      fontWeight: '600',
+      fontSize: '1.125rem',
+      '&.active': {
+        fontWeight: '400',
+        fontSize: '1.125rem',
+      },
+    },
   },
 });
 
 export const Breadcrumb = ({ currentPage }) => {
   const classes = useStyles();
   return (
-    <div className="container">
+    <div className="container px-3">
       <div className="row">
         <div className="col-12">
           <nav aria-label={labels.ariaLabel.breadcrumb} className={`${classes.breadcrumb} breadcrumb-container`}>
-            <ol className="breadcrumb ml-0 ml-sm-4 mt-4 mb-0 justify-content-center justify-content-sm-start">
+            <ol className="breadcrumb justify-content-center justify-content-sm-start">
               <li className="breadcrumb-item d-none d-sm-block">
-                <Link className="font-weight-normal" to="/">
-                  Home
-                </Link>
+                <Link to="/">Home</Link>
                 <span aria-hidden="true" className="separator">
                   /
                 </span>
               </li>
               <li aria-current="page" className="breadcrumb-item active">
-                <span className="font-weight-semibold">{currentPage}</span>
+                <span>{currentPage}</span>
               </li>
             </ol>
           </nav>

@@ -13,6 +13,7 @@ import { SEO } from '../components/SEO';
 import content from '../../contents/opportunity-page/opportunity.yml';
 import links from '../../contents/links.yml';
 import notificationsLabel from '../../contents/notifications.yml';
+import { Breadcrumb } from '../components/Breadcrumb';
 
 const { success: successLabels, error: errorLabels, errorAddress: errorAddressLabel } = notificationsLabel;
 const { title: seoTitle, description: seoDescription } = seo.supportPage;
@@ -216,7 +217,6 @@ const useStyles = createUseStyles({
   formFooterLabel: {
     composes: 'mb-3',
     fontSize: '0.889rem',
-    color: '#000',
   },
   spinner: {
     composes: 'spinner hidden ml-3',
@@ -231,22 +231,34 @@ const useStyles = createUseStyles({
     color: '#33485C',
     lineHeight: '48px',
     marginBottom: '30px',
-    '@media (max-width: 425px)': {
-      fontSize: '2.375rem',
+    '@media (max-width: 991px)': {
+      fontSize: '2.25rem',
     },
   },
   subtitleUpdate: {
     fontSize: '24px',
     color: '#33485C',
     lineHeight: '30px',
-    '@media (max-width: 425px)': {
-      fontSize: '1.25rem',
+    '@media (max-width: 991px)': {
+      fontSize: '1.125rem',
     },
   },
   submitContainer: {
     marginBottom: '12.5rem',
     '@media (max-width: 991px)': {
       marginBottom: '6rem',
+    },
+  },
+  heroImg: {
+    '@media (max-width: 991px)': {
+      width: '64%',
+    },
+  },
+  mandatory: {
+    fontSize: '1rem',
+    marginTop: '6.25rem',
+    '@media (min-width: 991px)': {
+      marginTop: '6.25rem',
     },
   },
 });
@@ -376,6 +388,7 @@ export const UpdatesPage = () => {
   return (
     <>
       <SEO title={seoTitle} description={seoDescription} />
+      <Breadcrumb currentPage="Ricevi aggiornamenti" />
       <div className="sr-only">
         <h2>{content.name}</h2>
       </div>
@@ -385,20 +398,29 @@ export const UpdatesPage = () => {
             <fieldset>
               <legend>
                 <Row>
-                  <Col xs={12} lg={6}>
+                  <Col xs={12} md={6} lg={5}>
                     <div className={classes.titleUpdate}>Ricevi aggiornamenti</div>
                     <div className={classes.subtitleUpdate}>
                       Ricevi materiali e informazioni sulle novità e gli avvisi di Italia digitale 2026.
                     </div>
                   </Col>
-                  <Col xs={12} lg={3} className="offset-lg-2 d-flex align-items-center mt-5 mt-lg-0">
-                    <img src={`/assets/updates-icon.svg`} alt="" />
+                  <Col
+                    xs={12}
+                    md={6}
+                    lg={3}
+                    className="offset-lg-2 d-flex justify-content-sm-end justify-content-lg-center mt-5 mt-md-0"
+                  >
+                    <img src={`/assets/updates-icon.svg`} className={classes.heroImg} alt="" />
                   </Col>
                 </Row>
               </legend>
-              <Row className="mt-5">
+              <Row>
                 <Col xs={12}>
-                  <p id="mandatory-label" dangerouslySetInnerHTML={{ __html: mandatoryAdvise }}></p>
+                  <div
+                    className={classes.mandatory}
+                    id="mandatory-label"
+                    dangerouslySetInnerHTML={{ __html: mandatoryAdvise }}
+                  ></div>
                 </Col>
               </Row>
               <Row className="mt-5">

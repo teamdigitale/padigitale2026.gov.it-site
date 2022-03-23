@@ -32,6 +32,7 @@ const useStyle = createUseStyles({
       flexDirection: 'column',
       alignItems: 'flex-start',
       '@media (min-width: 992px)': {
+        alignItems: 'center',
         flexDirection: 'row',
       },
       '@media (max-width: 767px)': {
@@ -78,7 +79,7 @@ const useStyle = createUseStyles({
       display: 'inline-block',
       margin: 0,
       maxHeight: '2.5rem',
-      marginLeft: '2.5rem',
+      marginLeft: '1.5rem',
       marginRight: '1.2rem',
       paddingLeft: '1.5rem',
       borderLeft: '1px solid #E6E9F2',
@@ -126,7 +127,7 @@ const SlimFooter = () => {
 
   return (
     <div className={classes.slimFooter}>
-      <div className="container">
+      <div className="container px-3">
         <ul className="list-inline link-list mb-0 text-center text-md-left">
           <li className={`${classes.listItem} mr-0 mr-md-5`}>
             <Link to={noteLegali.linkTo} className="list-item mid-footer-link mx-4 mx-md-0">
