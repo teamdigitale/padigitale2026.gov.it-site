@@ -1,6 +1,6 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
-import { Row, Col, Card, CardBody, CardTitle, CardText } from 'design-react-kit';
+import { Row, Col, Card, CardBody, CardTitle } from 'design-react-kit';
 import PropTypes from 'prop-types';
 import { DesktopSwiper } from '../DesktopSwiper';
 import { ExternalLink } from '../ExternalLink';
@@ -9,13 +9,16 @@ const useStyles = createUseStyles({
   heroCards: {
     composes: 'card-bg rounded',
     height: '100%',
+    border: '0.5px solid #979797',
+    boxShadow: '0px 0px 80px rgba(0, 43, 85, 0.05)',
     '&.card.card-bg': {
+      borderRight: '0.5px solid #979797',
       '@media (max-width: 992px)': {
         marginLeft: '0',
       },
     },
     '& .card-body': {
-      boxShadow: '0px 0px 20px rgb(0 43 85 / 4%);',
+      // boxShadow: '0px 0px 20px rgb(0 43 85 / 4%);',
       display: 'flex',
       flexDirection: 'column',
       '& .category': {
@@ -24,17 +27,6 @@ const useStyles = createUseStyles({
         color: '#33485C',
         marginBottom: '1rem',
         textTransform: 'uppercase',
-      },
-      '& h4.card-title': {
-        color: '#0066CC',
-        fontSize: '1.125rem',
-        fontWeight: 'bold',
-        lineHeight: '1.26',
-        '@media (min-width: 992px)': {
-          minHeight: '2.889rem',
-          fontSize: '1rem',
-          lineHeight: '1.44',
-        },
       },
       '& .card-text': {
         color: '#33485C',
@@ -69,15 +61,16 @@ const useStyles = createUseStyles({
       content: 'none',
     },
   },
-  heroCarouselTitle: {
+  noticesCarouselTitle: {
     color: '#33485C',
     fontSize: '1.556rem',
-    fontWeight: '600',
     whiteSpace: 'nowrap',
+    fontWeight: '600',
+    margin: 0,
   },
-  newsUpdateSection: {
+  noticesSection: {
     backgroundColor: '#fff',
-    padding: '6rem 0 4rem',
+    padding: '3rem 0 4rem',
     '& .swiper': {
       margin: '0 -1.111rem',
       '@media (max-width: 992px)': {
@@ -85,7 +78,7 @@ const useStyles = createUseStyles({
       },
     },
     '& .swiper-wrapper': {
-      padding: '0 1.667rem 1.667rem',
+      padding: '1rem 1.667rem 1.667rem',
       margin: '0 -1.667rem -1.667rem',
       '@media (max-width: 992px)': {
         margin: '0 -1.667rem -1.667rem',
@@ -98,81 +91,61 @@ const useStyles = createUseStyles({
       margin: '0 0.889rem',
     },
   },
-  heroLink: {
-    textDecoration: 'none',
-    marginTop: 'auto',
+  noticeLabel: {
+    fontSize: '0.778rem',
+    fontWeight: '400',
+    lineHeight: '1.444rem',
+    marginBottom: '1.389rem',
   },
-  titleLink: {
-    fontSize: '1rem',
-    color: '#33485C',
-    fontWeight: '600',
-    textDecoration: 'none',
-    '&:hover': {
-      textDecoration: 'underline',
-    },
-    '& .source': {
-      display: 'flex',
-      alignItems: 'center',
-      '@media (max-width: 992px)': {
-        marginTop: '0.5rem',
-      },
-    },
-    '& img': {
-      marginLeft: '0.5rem',
-    },
+  dueDate: {
+    fontSize: '0.778rem',
+    fontWeight: '700',
+    lineHeight: '1.444rem',
+  },
+  dueDateDigit: {
+    fontSize: '0.833rem',
+    fontWeight: '400',
+  },
+  noticeInfo: {
+    fontSize: '1.111',
+    fontWeight: '700',
+    lineHeight: '1.444rem',
+    color: '#06c',
   },
 });
 // const carousel = React.createRef();
 
-export const HeroCarousel = ({ content, title }) => {
+export const NoticesCarousel = ({ content, title }) => {
   const classes = useStyles();
-
-  const slides = content.map((element) => (
+  const records = content;
+  const slides = records.map((element) => (
     <>
-      <Card key={element.id} className={classes.heroCards} spacing noWrapper>
-        <CardBody>
-          <span className="category">{element.category}</span>
-          <CardTitle tag="h4">{element.title}</CardTitle>
-          <CardText>{element.description}</CardText>
-          <ExternalLink
-            linkTo={element.linkTo}
-            alt=""
-            className={classes.heroLink}
-            ariaLabel={`${element.title} (Collegamento sito esterno apre su nuova scheda)`}
-          >
-            <div className="source">
-              {element.source}
-              <img src={`/assets/external-link.svg`} alt="" />
-            </div>
-          </ExternalLink>
-        </CardBody>
+      <Card key={element.codiceBando} className={classes.heroCards} spacing noWrapper>
+        <ExternalLink>
+          <CardBody>
+            <span className={classes.dueDate}>
+              CANDIDATURE <span className={classes.dueDateDigit}>Fino al {element.dataFine}</span>
+            </span>
+            <CardTitle tag="h4" className={classes.noticeLabel}>
+              {element.nomeDellaMisura}
+            </CardTitle>
+            <p className={classes.noticeInfo}>{element.titolo}</p>
+          </CardBody>
+        </ExternalLink>
       </Card>
     </>
   ));
 
   return (
     <>
-      <div className={classes.newsUpdateSection}>
-        <section className="container" aria-labelledby="news-home-carousel">
+      <div className={classes.noticesSection}>
+        <section className="container" aria-labelledby="news-bandi-carousel">
           {title ? (
             <Row>
-              <Col xs="12" lg="6">
-                <h3 id="news-home-carousel" className={classes.heroCarouselTitle}>
+              <Col xs="12" lg="4">
+                <h3 id="news-bandi-carousel" className={classes.noticesCarouselTitle}>
                   {title}
                 </h3>
-              </Col>
-              <Col xs="12" lg="6" className="d-lg-flex justify-content-end">
-                <ExternalLink
-                  linkTo="/"
-                  alt=""
-                  className={classes.titleLink}
-                  ariaLabel={`titolo (Collegamento sito esterno apre su nuova scheda)`}
-                >
-                  <div className="source">
-                    Scopri tutto su innovazione.gov.it
-                    <img src={`/assets/external-link.svg`} alt="" />
-                  </div>
-                </ExternalLink>
               </Col>
             </Row>
           ) : (
@@ -188,7 +161,7 @@ export const HeroCarousel = ({ content, title }) => {
             }}
             pagination
             title={title}
-            idCarousel="news-carousel"
+            idCarousel="notices-carousel"
           />
         </section>
       </div>
@@ -196,7 +169,7 @@ export const HeroCarousel = ({ content, title }) => {
   );
 };
 
-HeroCarousel.propTypes = {
+NoticesCarousel.propTypes = {
   content: PropTypes.array.isRequired,
   title: PropTypes.string,
 };

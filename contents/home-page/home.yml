@@ -1,5 +1,11 @@
 name: Homepage - PA digitale 2026
 headerTitle: Dipartimento per la trasformazione digitale
+heroMainBanner:
+  title: Entra in PA digitale 2026
+  body: PA digitale 2026 è il punto di accesso alle risorse per la transizione digitale.<strong>Accedi alla piattaforma e attiva il profilo della tua PA.</strong> Scopri come candidare la tua amministrazione agli avvisi e richiedere i fondi.
+  firstButtonLabel: SCOPRI DI PIù
+  firstButtonAriaLabel: Scopri di più (Collegamento esterno - Apre su nuova scheda)
+  linkTo: https://innovazione.gov.it/dipartimento/focus/italia-digitale-2026/
 heroDigital:
   title: Italia digitale 2026
   body: Il 27% delle risorse totali del PNRR è dedicato alla crescita digitale del Paese. Italia digitale 2026 è la strategia promossa dal <strong>Ministro per l'innovazione tecnologica e la transizione digitale</strong> all’interno del PNRR
@@ -7,12 +13,17 @@ heroDigital:
   firstButtonAriaLabel: VAI AL SITO Italia digitale 2026 (Collegamento esterno - Apre su nuova scheda)
   linkTo: https://innovazione.gov.it/dipartimento/focus/italia-digitale-2026/
 heroPnrr:
-  category: COME FUNZIONA PA digitale 2026
-  title: Come accedere alle misure del PNRR
-  body: <strong>PA digitale 2026</strong> è la piattaforma per accedere alle risorse dedicate alla <strong>transizione digitale</strong> e assistere le amministrazioni nel percorso verso Italia digitale 2026
+  category: Classificazione
+  title: Classificazione dati e servizi
+  body: La classificazione dati e servizi digitali <strong>deve essere effettuata da tutte le PA</strong> ed è <strong>necessaria per avviare il processo di migrazione al cloud.</strong>
   firstButtonLabel: SCOPRI DI PIÙ
-  firstButtonAriaLabel: Scopri di più su come accedere alle opportunità del PNRR
-  secondButtonLabel: VEDI I BENEFICIARI
+  firstButtonAriaLabel: Scopri di più (Collegamento esterno - Apre su nuova scheda)
+heroClassificazione:
+  category: CANDIDATURE
+  title: Candida la tua PA agli avvisi dedicati
+  body: Partecipa agli avvisi <strong>per richiedere i finanziamenti</strong> e avviare il processo di transizione digitale.
+  firstButtonLabel: SCOPRI DI PIÙ
+  firstButtonAriaLabel: Scopri di più (Collegamento esterno - Apre su nuova scheda)
 heroContribute:
   category: Come contribuire
   title: Partecipa al cambiamento, contribuisci a Identità Digitale!
@@ -37,6 +48,33 @@ contributions:
     alt: GitHub logo
     title: GitHub
 heroCarouselNewsTitle: Notizie e aggiornamenti
+noticesCarouselTitle: Avvisi pubblici
+noticesCarouselArchive:
+- dataFine: '2022-02-28'
+  titolo: Comuni capoluogo di Città metropolitane hanno presentato progetti
+  codiceBando: a015t0000029a6uAAA
+  dataInizio: '2022-02-07'
+  nomeDellaMisura: 1.2 Abilitazione e facilitazione migrazione al Cloud
+- dataFine: '2022-02-28'
+  titolo: Test report
+  codiceBando: a017Y00000QN2NjQAL
+  dataInizio: '2022-02-22'
+  nomeDellaMisura: 1.4.4 Adozione identità digitale
+- dataFine: '2022-02-28'
+  titolo: 1.4.3 Adozione PagoPA e AppIO
+  codiceBando: a015t0000028X0CAAU
+  dataInizio: '2022-02-23'
+  nomeDellaMisura: Test report
+- dataFine: '2022-02-28'
+  Titolo: SDM
+  codiceBando: a017Y00000QN8zlQAD
+  dataInizio: '2022-02-19'
+  nomeDellaMisura: 1.2 Abilitazione e facilitazione migrazione al Cloud
+- dataFine: '2022-03-08'
+  titolo: Avviso 3
+  codiceBando: a015t0000029bipAAA
+  dataInizio: '2022-02-08'
+  nomeDellaMisura: 1.2 Abilitazione e facilitazione migrazione al Cloud
 opportunity: 
   title: Le misure
   cards: 
