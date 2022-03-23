@@ -28,6 +28,12 @@ const useStyles = createUseStyles({
       color: ['var(--white)', '!important'],
     },
   },
+  heroSectionDark: {
+    backgroundColor: '#0066CC',
+  },
+  heroSectionLight: {
+    backgroundColor: '#F0F6FC',
+  },
   heroTitle: {
     composes: 'hero-title',
     color: '#33485C',
@@ -43,6 +49,11 @@ const useStyles = createUseStyles({
         color: 'white',
       },
     },
+  },
+  outlineBtn: {
+    backgroundColor: '#fff',
+    border: '1px solid #06c',
+    color: '#06c',
   },
   heroImage: {
     composes: 'row align-items-center',
@@ -92,12 +103,31 @@ const useStyles = createUseStyles({
         width: '220px',
       },
     },
+    '&.hero-main .hero-title': {
+      fontSize: '2.222rem',
+      color: '#fff',
+    },
+    '&.hero-main .hero-body': {
+      color: '#fff',
+    },
+    '&.hero-main .btn': {
+      backgroundColor: '#fff',
+      color: '#0066CC',
+      fontWeight: 'bold',
+      '&:hover': {
+        color: '#004d99',
+      },
+    },
   },
 });
 
 export const HeroImage = ({
   ctaContainer,
   smallText,
+  mainHero,
+  dark,
+  light,
+  outlineBtn,
   category,
   title,
   body,
@@ -115,8 +145,12 @@ export const HeroImage = ({
   const [, dispatch] = useContext(GlobalStateContext);
 
   return (
-    <Hero Tag="section" ariaLabelledBy={heroTitleId}>
-      <div className={`${classes.heroImage} ${smallText ? 'hero-small' : ''}`}>
+    <Hero
+      Tag="section"
+      ariaLabelledBy={heroTitleId}
+      className={`${dark ? classes.heroSectionDark : ''} ${light ? classes.heroSectionLight : ''}`}
+    >
+      <div className={`${classes.heroImage} ${smallText ? 'hero-small' : ''} ${mainHero ? 'hero-main' : ''}`}>
         <div className="col-lg-6 offset-lg-1 p-lg-0 mt-3 mt-lg-0 pr-lg-5">
           <div className="text-center text-lg-left">
             {category ? <HeroCategory title={category} className={classes.heroCategory} /> : ''}
@@ -127,7 +161,9 @@ export const HeroImage = ({
             <HeroCtaContainer>
               {firstInternal ? (
                 <Link
-                  className="btn text-uppercase mx-4 ml-lg-0 my-3 my-md-0 btn-primary"
+                  className={`btn text-uppercase mx-4 ml-lg-0 my-3 my-md-0 btn-primary ${
+                    outlineBtn ? classes.outlineBtn : ''
+                  }`}
                   to={firstButtonHref}
                   aria-label={firstButtonAriaLabel}
                 >
@@ -188,4 +224,8 @@ HeroImage.propTypes = {
   imageUrl: PropTypes.string,
   imageAlt: PropTypes.string,
   heroTitleId: PropTypes.string,
+  mainHero: PropTypes.bool,
+  dark: PropTypes.bool,
+  light: PropTypes.bool,
+  outlineBtn: PropTypes.bool,
 };
