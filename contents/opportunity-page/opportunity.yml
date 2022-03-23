@@ -481,7 +481,7 @@ modal:
   selectPlaceholder: Scegli una voce dall’elenco
   enteValidationLabel: Per favore inserisci una denominazione ente valida.
   enteTypeLabel: TIPO DI ENTE/STRUTTURA*
-  enteNameLabel: NOME ENTE/STRUTTURA*
+  enteNameLabel: NOME STRUTTURA*
   inQuantoLabel: IN QUANTO*
   directContactLabel: CONTATTO DIRETTO
   directContactInfo: Un <strong>Team dedicato</strong> è a tua disposizione per <strong>ricevere<br>chiarimenti</strong> sugli investimenti o approfondire alcuni temi

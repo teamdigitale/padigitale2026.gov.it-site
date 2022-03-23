@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { createUseStyles } from 'react-jss';
 import {
   name,
@@ -14,7 +14,6 @@ import { HeroCarousel } from '../components/carousel/Carousel';
 import { SEO } from '../components/SEO';
 import seo from '../../contents/seo.yml';
 import labels from '../../contents/labels.yml';
-import { GlobalStateContext } from '../context/globalContext';
 import { NoticesCarousel } from '../components/carousel/NoticesCarousel';
 import { SupportSection } from './faq/SupportSection';
 
@@ -41,7 +40,6 @@ const useStyles = createUseStyles({
 
 export const IndexPage = () => {
   const classes = useStyles();
-  const [, dispatch] = useContext(GlobalStateContext);
 
   const [newsList, setNewsList] = useState([]);
 
@@ -113,16 +111,7 @@ export const IndexPage = () => {
         firstButtonAriaLabel={heroPnrr.firstButtonAriaLabel}
         heroTitleId="home-hero-title-classificazione"
       />
-      <SupportSection
-        supportList={support.cards}
-        title={support.title}
-        buttonLabel={support.buttonLabel}
-        handleToggle={() => {
-          dispatch({
-            type: 'SET:TOGGLE_MODAL_MESSAGE',
-          });
-        }}
-      />
+      <SupportSection supportList={support.cards} title={support.title} buttonLabel={support.buttonLabel} />
     </>
   );
 };

@@ -1,7 +1,6 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
-import { Row, Col, Hero, Container } from 'design-react-kit';
-import { Link } from 'gatsby';
+import { Row, Col, Hero, Container, Breadcrumb, BreadcrumbItem } from 'design-react-kit';
 import PropTypes from 'prop-types';
 import { HeroTitle } from './HeroTitle';
 import { HeroBackground } from './HeroBackground';
@@ -13,16 +12,13 @@ const useStyles = createUseStyles({
     width: '100%',
     '@media (min-width: 992px)': {
       position: 'absolute',
-      right: '122px',
-      top: '95px',
-      maxWidth: '350px',
+      right: '0',
+      top: '250px',
+      maxWidth: '530px',
     },
     '@media (min-width: 1200px)': {
-      maxWidth: '450px',
-      right: '155px',
-    },
-    '@media (max-width: 991px)': {
-      width: '80%',
+      top: '130px',
+      maxWidth: '700px',
     },
   },
   heroTitle: {
@@ -38,6 +34,7 @@ const useStyles = createUseStyles({
   contentWrapper: {
     composes: 'it-hero-text-wrapper',
     display: 'flex',
+    paddingBottom: '5.625rem',
   },
   heroWrapper: {
     composes: 'it-hero-wrapper',
@@ -45,10 +42,10 @@ const useStyles = createUseStyles({
     display: 'flex',
     '&.it-hero-wrapper .it-hero-text-wrapper': {
       '@media (min-width: 992px)': {
-        padding: '5.333rem 0 3.889rem',
+        padding: '5.333rem 0 5.625rem',
       },
       '@media (max-width: 991px)': {
-        padding: '5.333rem 0 3.889rem',
+        padding: '3.75rem 0 3.75rem',
       },
     },
     '&.overlap': {
@@ -151,7 +148,6 @@ const useStyles = createUseStyles({
     },
   },
   listTitle: {
-    composes: 'mb-3',
     fontSize: '0.778rem',
     color: '#33485C',
     fontWeight: '600',
@@ -180,55 +176,53 @@ const useStyles = createUseStyles({
       textDecoration: 'underline',
     },
   },
+  breadWhite: {
+    '& a': {
+      color: 'white',
+    },
+    '& .breadcrumb-item': {
+      textDecoration: 'underline',
+      fontWeight: '700',
+      '&.active': {
+        textDecoration: 'none',
+        fontWeight: '400',
+        '&::before': {
+          color: 'white',
+          fontWeight: '700',
+        },
+      },
+    },
+  },
 });
 
-export const HeroHowItWorks = ({ title, body, image, list }) => {
+export const HeroHowToDo = ({ title, body, image, imageMob }) => {
   const classes = useStyles();
-
-  const scrollIntoView = (id) => {
-    const item = document.querySelector('#' + id);
-    item.setAttribute('tabindex', '-1');
-    item.focus();
-  };
 
   return (
     <Hero className="position-relative">
-      <div className={`${classes.heroWrapper} bg-white`}>
+      <div className={`${classes.heroWrapper}`}>
         <Container className="pl-lg-2 pr-lg-2 pl-3 pr-3">
           <Row className="m-0">
-            <Col xs="12" lg="11" className="offset-lg-1 px-0">
-              <div className={`${classes.contentWrapper} bg-white d-flex flex-column`}>
+            <Col xs="12" lg="11" className="px-0">
+              <Breadcrumb className={classes.breadWhite}>
+                <BreadcrumbItem>
+                  <a href="/">Home</a>
+                  <span className="separator"></span>
+                </BreadcrumbItem>
+                <BreadcrumbItem active>
+                  <a href="/come-partecipare">Come partecipare</a>
+                </BreadcrumbItem>
+              </Breadcrumb>
+              <div className={`${classes.contentWrapper} d-flex flex-column`}>
                 <Row className="m-0">
                   <Col lg={6} xs={12} className="pr-3">
                     <div className={classes.textWrapper}>
                       <HeroTitle title={title} className={classes.heroTitle} />
                       <HeroParagraph text={body} />
                     </div>
-                    <div className={classes.listWrapper}>
-                      {list
-                        ? list.map((listItem) => (
-                            <div key={listItem.title} className={classes.list}>
-                              <span className={classes.listTitle}>{listItem.title}</span>
-                              <div className={classes.listItemsWrapper}>
-                                {listItem.items.map((item) => (
-                                  <React.Fragment key={item.item}>
-                                    <Link
-                                      to={`/come-funziona#` + item.anchor}
-                                      onClick={() => scrollIntoView(item.anchor)}
-                                      className={classes.listItem}
-                                    >
-                                      {item.item}
-                                    </Link>
-                                  </React.Fragment>
-                                ))}
-                              </div>
-                            </div>
-                          ))
-                        : ''}
-                    </div>
                   </Col>
-                  <Col xs={12} lg={6} className="d-flex d-lg-none mt-5 mt-lg-0 justify-content-center">
-                    <HeroBackground image={image} className={classes.heroImg} />
+                  <Col xs={12} lg={6} className="d-flex d-lg-none mt-4 mt-lg-0 justify-content-center">
+                    <HeroBackground image={imageMob} className={classes.heroImg} />
                   </Col>
                 </Row>
               </div>
@@ -241,9 +235,10 @@ export const HeroHowItWorks = ({ title, body, image, list }) => {
   );
 };
 
-HeroHowItWorks.propTypes = {
+HeroHowToDo.propTypes = {
   title: PropTypes.string,
   body: PropTypes.string,
   image: PropTypes.string,
+  imageMob: PropTypes.string,
   list: PropTypes.array,
 };
