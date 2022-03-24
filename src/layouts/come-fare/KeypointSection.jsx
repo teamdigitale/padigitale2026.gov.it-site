@@ -3,7 +3,7 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
 import { Link } from 'gatsby';
-import { Container, Row, Col, Button } from 'design-react-kit';
+import { Container, Row, Col } from 'design-react-kit';
 import PropTypes from 'prop-types';
 
 const useStyle = createUseStyles({

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Link } from 'gatsby';
 import { createUseStyles } from 'react-jss';
 import links from '../../contents/links.yml';

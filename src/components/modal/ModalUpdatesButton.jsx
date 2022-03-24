@@ -72,7 +72,7 @@ const useStyles = createUseStyles({
   },
 });
 
-export const ModalUpdatesButton = ({ label, buttonLabel, hasTitle, handleToggle }) => {
+export const ModalUpdatesButton = ({ label, buttonLabel, hasTitle }) => {
   const classes = useStyles();
 
   return (
