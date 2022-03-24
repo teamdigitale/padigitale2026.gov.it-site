@@ -8,13 +8,13 @@ import { announce } from '@react-aria/live-announcer';
 import faq from '../../contents/faq-page/faq.yml';
 import { SEO } from '../components/SEO';
 import seo from '../../contents/seo.yml';
-import content from '../../contents/crea-profilo/crea-profilo.yml';
+import content from '../../contents/candida-pa/candida-pa.yml';
 import { TimelineVerticalCards } from '../components/TimelineVerticalCards';
 import { HeroVideo } from '../components/HeroVideo';
 /* import { Totop } from '../components/Totop'; */
 import { SideNavigationAccordion } from './sideNavigationAccordion';
 
-const { title: seoTitle, description: seoDescription } = seo.creaProfiloPage;
+const { title: seoTitle, description: seoDescription } = seo.candidaPaPage;
 
 const { sidebar, verticalTimeline } = content;
 
@@ -147,29 +147,6 @@ export const CandidaPaPage = () => {
     announce('Pagina caricata ' + faq.name);
   }, []);
 
-  // const handleChange = (event) => {
-  //   setInputValue(event.target.value);
-  //   if (event.target.value.length >= 3) {
-  //     if (isMobile && filterId !== 'all') {
-  //       setQuestions(getQuestionsMobile(getNewQuestions(event.target.value)));
-  //     } else {
-  //       setQuestions(getNewQuestions(event.target.value));
-  //     }
-  //   } else {
-  //     if (isMobile) {
-  //       filterId !== 'all' ? setQuestions(getQuestionsMobile(faq.questions)) : setQuestions(faq.questions);
-  //     } else {
-  //       setQuestions(faq.questions);
-  //     }
-  //   }
-  //   setquestNum(countQuestions());
-  //   if (questions.length === 0) {
-  //     announce('Nessun risultato');
-  //   } else {
-  //     announce('Numero di FAQ in pagina aggiornato');
-  //   }
-  // };
-
   useEffect(() => {
     if (!isMobile) {
       setInputValue('');
@@ -204,16 +181,15 @@ export const CandidaPaPage = () => {
           </Row>
           <Row className="mb-5">
             <Col xs={12} lg={7}>
-              <h4 className={classes.titleUpdate}>Crea il profilo della tua PA: identità digitale e dati IPA</h4>
+              <h4 className={classes.titleUpdate}>Candida la tua PA agli avvisi per la transizione digitale</h4>
               <div className={classes.subtitleUpdate}>
-                <strong>Per partecipare agli avvisi</strong> è necessario che il{' '}
-                <strong>rappresentante legale di un'amministrazione presente su IPA</strong> (Indice dei domini digitali
-                della Pubblica Amministrazione), o una persona incaricata,{' '}
-                <strong>avvii la procedura di attivazione della PA sulla piattaforma</strong>.
+                Per <strong>candidare la tua amministrazione</strong> agli avvisi pubblici e{' '}
+                <strong>richiedere i finanziamenti</strong> segui la configurazione guidata per comporre e inviare il
+                documento di candidatura: potrai seguire lo stato di avanzamento della pratica in area riservata.
               </div>
             </Col>
             <Col xs={12} lg={4} className="offset-lg-1 mt-5 mt-lg-0 d-flex justify-content-center align-items-center">
-              <img src={`/assets/profilo.svg`} alt="" className={classes.heroImg} />
+              <img src={`/assets/candida-pa.svg`} alt="" className={classes.heroImg} />
             </Col>
           </Row>
           <div className={classes.navigationContainer}>
@@ -231,25 +207,13 @@ export const CandidaPaPage = () => {
               {/*  <Totop /> */}
               <Container className="pl-lg-4 mb-4">
                 <section>
-                  <h4 className={`${classes.contentTitle} mt-5`}>Crea il profilo della tua amministrazione</h4>
+                  <h4 className={`${classes.contentTitle} mt-5`}>Candida la tua amministrazione agli avvisi</h4>
                   <p className={`${classes.contentParagraph} mb-0`}>
-                    Il processo di attivazione della PA prevede <strong>quattro passaggi</strong>:
+                    Il processo di candidatura agli avvisi pubblici prevede <strong>quattro passaggi</strong>:
                   </p>
                 </section>
               </Container>
               <TimelineVerticalCards item={verticalTimeline} />
-              <Container className="pl-lg-4">
-                <p className={`${classes.contentParagraph} mb-0`}>
-                  Ti raccomandiamo quindi di verificare fin da subito l’accuratezza delle informazioni presenti su{' '}
-                  <a href="" className="d-inline-flex align-items-center">
-                    IPA <img src="/assets/external-link.svg" alt="" />
-                  </a>
-                  .
-                </p>
-              </Container>
-              <section id="watch-video">
-                <HeroVideo />
-              </section>
               <Container className="pl-lg-4">
                 <section id="to-read-more">
                   <h4 className={`${classes.contentTitle} mb-4`}>Per approfondire</h4>
