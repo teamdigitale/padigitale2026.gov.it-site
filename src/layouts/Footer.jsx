@@ -3,7 +3,6 @@ import { Link } from 'gatsby';
 import { createUseStyles } from 'react-jss';
 import links from '../../contents/links.yml';
 import { ExternalLink } from '../components/ExternalLink';
-import { GlobalStateContext } from '../context/globalContext';
 
 const {
   internalLinks: { privacy, noteLegali },
@@ -20,12 +19,13 @@ const useStyle = createUseStyles({
     '@media (min-width: 992px)': {
       display: 'flex',
       flexDirection: 'column',
-      alignItems: 'center',
+      alignItems: 'flex-start',
       padding: [40, 0],
     },
     '@media (min-width: 1200px)': {
       justifyContent: 'space-between',
       flexDirection: 'row',
+      alignItems: 'center',
     },
     '& .logos': {
       display: 'flex',
@@ -69,7 +69,7 @@ const useStyle = createUseStyles({
       marginTop: '0',
     },
     '&:not(:last-child)': {
-      marginBottom: '20px',
+      marginBottom: '15px',
     },
   },
   departmentLogo: {
@@ -160,7 +160,6 @@ const SlimFooter = () => {
 
 const MainFooter = () => {
   const classes = useStyle();
-  const [{ activeItem }, dispatch] = useContext(GlobalStateContext);
 
   return (
     <div className={`${classes.mainFooter} it-footer-main`}>
@@ -186,41 +185,12 @@ const MainFooter = () => {
               <img src="/assets/dipartimento.svg" alt={dipartimento.label} />
             </ExternalLink>
           </div>
-          <div className="info text-center text-lg-left">
-            {activeItem === 'come-funziona' ? (
-              <>
-                <Link to="/come-funziona#attori-coinvolti" className={classes.seeMore}>
-                  Scopri l&apos;iniziativa
-                </Link>
-                <Link to="/come-funziona#attori-coinvolti" className={classes.seeMore}>
-                  Ricevi aggiornamenti
-                </Link>
-                <Link to="/come-funziona#attori-coinvolti" className={classes.seeMore}>
-                  L&apos;iniziativa
-                </Link>
-              </>
-            ) : (
-              <>
-                <Link
-                  to="/come-funziona#attori-coinvolti"
-                  className={classes.seeMore}
-                  onClick={() =>
-                    dispatch({
-                      type: 'SET:HOW_SECTION_ID',
-                      payload: { howId: 'attori-coinvolti' },
-                    })
-                  }
-                >
-                  Ricevi aggiornamenti
-                </Link>
-                <Link to="/come-funziona#attori-coinvolti" className={classes.seeMore}>
-                  Scopri l&apos;iniziativa
-                </Link>
-                <Link to="/come-funziona#attori-coinvolti" className={classes.seeMore}>
-                  L&apos;iniziativa
-                </Link>
-              </>
-            )}
+          <div className="info text-lg-left">
+            <>
+              <Link to="/ricevi-aggiornamenti" className={classes.seeMore}>
+                Ricevi aggiornamenti
+              </Link>
+            </>
           </div>
         </div>
       </div>

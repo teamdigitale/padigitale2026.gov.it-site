@@ -238,7 +238,7 @@ const useStyles = createUseStyles({
   subtitleUpdate: {
     fontSize: '24px',
     color: '#33485C',
-    lineHeight: '30px',
+    lineHeight: '1.5',
     '@media (max-width: 991px)': {
       fontSize: '1.125rem',
     },

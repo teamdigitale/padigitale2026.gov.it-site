@@ -2,7 +2,7 @@ name: Homepage - PA digitale 2026
 headerTitle: Dipartimento per la trasformazione digitale
 heroMainBanner:
   title: Entra in PA digitale 2026
-  body: PA digitale 2026 è il punto di accesso alle risorse per la transizione digitale.<strong>Accedi alla piattaforma e attiva il profilo della tua PA.</strong> Scopri come candidare la tua amministrazione agli avvisi e richiedere i fondi.
+  body: PA digitale 2026 è il punto di accesso alle risorse per la transizione digitale. <strong>Accedi alla piattaforma e attiva il profilo della tua PA.</strong> Scopri come candidare la tua amministrazione agli avvisi e richiedere i fondi.
   firstButtonLabel: SCOPRI DI PIù
   firstButtonAriaLabel: Scopri di più (Collegamento esterno - Apre su nuova scheda)
   linkTo: https://innovazione.gov.it/dipartimento/focus/italia-digitale-2026/
@@ -13,15 +13,15 @@ heroDigital:
   firstButtonAriaLabel: VAI AL SITO Italia digitale 2026 (Collegamento esterno - Apre su nuova scheda)
   linkTo: https://innovazione.gov.it/dipartimento/focus/italia-digitale-2026/
 heroPnrr:
-  category: Classificazione
-  title: Classificazione dati e servizi
-  body: La classificazione dati e servizi digitali <strong>deve essere effettuata da tutte le PA</strong> ed è <strong>necessaria per avviare il processo di migrazione al cloud.</strong>
+  category: Candidature
+  title: Candida la tua PA agli avvisi dedicati
+  body: Partecipa agli avvisi <strong>per richiedere i finanziamenti</strong> e avviare il processo di transizione digitale.
   firstButtonLabel: SCOPRI DI PIÙ
   firstButtonAriaLabel: Scopri di più (Collegamento esterno - Apre su nuova scheda)
 heroClassificazione:
-  category: CANDIDATURE
-  title: Candida la tua PA agli avvisi dedicati
-  body: Partecipa agli avvisi <strong>per richiedere i finanziamenti</strong> e avviare il processo di transizione digitale.
+  category: Classificazione
+  title: Classificazione dati e servizi
+  body: La classificazione dati e servizi digitali <strong>deve essere effettuata da tutte le PA</strong> ed è <strong>necessaria per avviare il processo di migrazione al cloud.</strong>
   firstButtonLabel: SCOPRI DI PIÙ
   firstButtonAriaLabel: Scopri di più (Collegamento esterno - Apre su nuova scheda)
 heroContribute:
@@ -171,14 +171,14 @@ heroCarouselNews:
     linkTo: 'https://innovazione.gov.it/notizie/articoli/servizio-civile-digitale-al-via-il-nuovo-avviso-per-gli-enti/'
 support:
   tag: Supporto
-  title: Scrivici per chiarimenti o per contribuire con le tue idee al progetto
+  title: Consulta le domande frequenti o scrivici per ricevere assistenza
   buttonLabel: scopri di più
   cards:
     - title: Domande frequenti
-      description: Scopri i dettagli dell’iniziativa e le informazioni chiave sulle opportunità del PNRR
+      description: Scopri i dettagli dell’iniziativa e consulta le risposte alle domande più frequenti.
       link: /supporto/faq
-    - title: Contatti
-      description: Compila il modulo per inviarci i tuoi suggerimenti o per avere chiarimenti sull’iniziativa
+    - title: Assistenza
+      description: Compila il modulo per richiedere chiarimenti e approfondire temi di interesse.
       link: /supporto/assistenza
 heroMain:
   category: 'le misure del pnrr'

@@ -110,12 +110,13 @@ const useStyle = createUseStyles({
     padding: [16, 0],
     '& .it-header-center-content-wrapper .it-brand-wrapper a .icon': {
       '&.site-logo': {
-        width: '3rem',
-        height: '3rem',
+        width: '60px',
+        height: '60px',
       },
       '&.repubblica-logo': {
         width: '3.556rem',
         height: '4rem',
+        marginRight: '15px',
       },
     },
     '&.it-header-center-wrapper .it-header-center-content-wrapper': {
@@ -186,7 +187,7 @@ const useStyle = createUseStyles({
   },
   noShadow: {
     composes: 'shadow-none',
-    top: '30%',
+    top: '27%',
   },
   menuWrapper: {
     composes: 'menu-wrapper',
@@ -225,6 +226,8 @@ const useStyle = createUseStyles({
     padding: '0',
     backgroundColor: 'transparent',
     boxShadow: 'none',
+    display: 'flex',
+    alignItems: 'center',
     '& a': {
       paddingRight: '5px',
     },
@@ -252,7 +255,7 @@ const useStyle = createUseStyles({
       padding: '0',
     },
     '& .it-header-wrapper .it-nav-wrapper .it-header-navbar-wrapper': {
-      top: '30%',
+      top: '27%',
     },
     '& .it-header-slim-wrapper': {
       '@media (max-width: 991px)': {
@@ -286,6 +289,7 @@ const useStyle = createUseStyles({
       '&.mobile': {
         display: 'none',
         marginTop: '5px',
+        height: '24px',
       },
       '@media (max-width: 992px)': {
         display: 'none',
@@ -501,7 +505,7 @@ const NavHeader = () => {
               <NavItem>
                 <Link
                   to={internalLinks.howToPartecipate.linkTo}
-                  className={activeItem === 'avvisi' ? 'nav-link active' : 'nav-link'}
+                  className={activeItem === 'come-partecipare' ? 'nav-link active' : 'nav-link'}
                   onClick={closeMenu}
                 >
                   <span className="font-weight-semibold">{internalLinks.howToPartecipate.label}</span>

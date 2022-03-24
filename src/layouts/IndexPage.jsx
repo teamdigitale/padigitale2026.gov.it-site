@@ -4,6 +4,7 @@ import {
   name,
   heroMainBanner,
   heroPnrr,
+  heroClassificazione,
   heroCarouselNews,
   heroCarouselNewsTitle,
   noticesCarouselTitle,
@@ -46,7 +47,7 @@ export const IndexPage = () => {
   useEffect(() => {
     (async () => {
       try {
-        await fetch(`https://github.com/teamdigitale/padigitale2026-opendata`)
+        await fetch(`https://raw.githubusercontent.com/tuxolino/testapi/main/data/NC002.json`)
           .then((res) => res.json())
           .then((data) => {
             setNewsList(data.windows);
@@ -99,16 +100,16 @@ export const IndexPage = () => {
       <HeroCarousel content={heroCarouselNews} title={heroCarouselNewsTitle} />
       <HeroImage
         ctaContainer={true}
-        category={heroPnrr.category}
-        title={heroPnrr.title}
-        body={heroPnrr.body}
+        category={heroClassificazione.category}
+        title={heroClassificazione.title}
+        body={heroClassificazione.body}
         imageUrl="/assets/Classificazione_Dati_e_Servizi.svg"
         imageAlt=""
         outlineBtn={true}
         firstInternal={true}
         firstButtonHref="/come-funziona"
-        firstButtonLabel={heroPnrr.firstButtonLabel}
-        firstButtonAriaLabel={heroPnrr.firstButtonAriaLabel}
+        firstButtonLabel={heroClassificazione.firstButtonLabel}
+        firstButtonAriaLabel={heroClassificazione.firstButtonAriaLabel}
         heroTitleId="home-hero-title-classificazione"
       />
       <SupportSection supportList={support.cards} title={support.title} buttonLabel={support.buttonLabel} />

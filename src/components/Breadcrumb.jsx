@@ -28,8 +28,8 @@ export const Breadcrumb = ({ currentPage }) => {
       <div className="row">
         <div className="col-12">
           <nav aria-label={labels.ariaLabel.breadcrumb} className={`${classes.breadcrumb} breadcrumb-container`}>
-            <ol className="breadcrumb justify-content-center justify-content-sm-start">
-              <li className="breadcrumb-item d-none d-sm-block">
+            <ol className="breadcrumb justify-content-sm-start">
+              <li className="breadcrumb-item d-sm-block">
                 <Link to="/">Home</Link>
                 <span aria-hidden="true" className="separator">
                   /

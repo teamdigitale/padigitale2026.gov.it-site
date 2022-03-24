@@ -13,17 +13,17 @@ const useStyles = createUseStyles({
     '@media (min-width: 992px)': {
       position: 'absolute',
       right: '0',
-      top: '250px',
+      top: '160px',
       maxWidth: '530px',
     },
     '@media (min-width: 1200px)': {
-      top: '130px',
+      top: '48px',
       maxWidth: '700px',
     },
   },
   heroTitle: {
     composes: 'no_doc',
-    fontSize: '2.222rem',
+    fontSize: '2.5rem',
     '@media (max-width: 992px)': {
       display: 'flex',
       justifyContent: 'center',
@@ -40,9 +40,13 @@ const useStyles = createUseStyles({
     composes: 'it-hero-wrapper',
     position: 'relative',
     display: 'flex',
+    alignItems: 'flex-start',
+    '&.it-hero-wrapper': {
+      minHeight: 'unset',
+    },
     '&.it-hero-wrapper .it-hero-text-wrapper': {
       '@media (min-width: 992px)': {
-        padding: '5.333rem 0 5.625rem',
+        padding: '48px 0 80px',
       },
       '@media (max-width: 991px)': {
         padding: '3.75rem 0 3.75rem',
@@ -90,6 +94,9 @@ const useStyles = createUseStyles({
   textWrapper: {
     '@media (min-width: 992px)': {
       marginRight: '2.611rem',
+    },
+    '& p': {
+      lineHeight: '1.5',
     },
   },
   buttonContainer: {
@@ -177,15 +184,22 @@ const useStyles = createUseStyles({
     },
   },
   breadWhite: {
+    paddingTop: '1.563rem',
     '& a': {
       color: 'white',
     },
+    '& .breadcrumb': {
+      padding: '0.75rem 0',
+    },
     '& .breadcrumb-item': {
       textDecoration: 'underline',
-      fontWeight: '700',
+      fontWeight: '600',
       '&.active': {
         textDecoration: 'none',
         fontWeight: '400',
+        '& a': {
+          textDecoration: 'none',
+        },
         '&::before': {
           color: 'white',
           fontWeight: '700',
@@ -201,7 +215,7 @@ export const HeroHowToDo = ({ title, body, image, imageMob }) => {
   return (
     <Hero className="position-relative">
       <div className={`${classes.heroWrapper}`}>
-        <Container className="pl-lg-2 pr-lg-2 pl-3 pr-3">
+        <Container className="px-3">
           <Row className="m-0">
             <Col xs="12" lg="11" className="px-0">
               <Breadcrumb className={classes.breadWhite}>
@@ -214,17 +228,15 @@ export const HeroHowToDo = ({ title, body, image, imageMob }) => {
                 </BreadcrumbItem>
               </Breadcrumb>
               <div className={`${classes.contentWrapper} d-flex flex-column`}>
-                <Row className="m-0">
-                  <Col lg={6} xs={12} className="pr-3">
-                    <div className={classes.textWrapper}>
-                      <HeroTitle title={title} className={classes.heroTitle} />
-                      <HeroParagraph text={body} />
-                    </div>
-                  </Col>
-                  <Col xs={12} lg={6} className="d-flex d-lg-none mt-4 mt-lg-0 justify-content-center">
-                    <HeroBackground image={imageMob} className={classes.heroImg} />
-                  </Col>
-                </Row>
+                <Col lg={6} xs={12} className="pr-3 pl-0">
+                  <div className={classes.textWrapper}>
+                    <HeroTitle title={title} className={classes.heroTitle} />
+                    <HeroParagraph text={body} />
+                  </div>
+                </Col>
+                <Col xs={12} lg={6} className="d-flex d-lg-none mt-4 mt-lg-0 justify-content-center">
+                  <HeroBackground image={imageMob} className={classes.heroImg} />
+                </Col>
               </div>
             </Col>
           </Row>

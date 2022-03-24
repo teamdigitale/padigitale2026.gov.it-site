@@ -113,7 +113,7 @@ const useStyles = createUseStyles({
       padding: '0 1.667rem 1.667rem',
       margin: '0 -1.667rem -1.667rem',
       '@media (max-width: 992px)': {
-        margin: '0 -1.667rem -1.667rem',
+        margin: '20px -1.667rem -1.667rem',
       },
     },
     '& .swiper-wrapper .swiper-slider': {

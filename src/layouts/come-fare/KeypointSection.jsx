@@ -34,7 +34,7 @@ const useStyle = createUseStyles({
   paragraph: {
     color: '#33485C',
     fontSize: '1.111rem',
-    lineHeight: '30px',
+    lineHeight: '1.5',
     marginBottom: '30px',
     '@media(min-width: 992px)': {
       fontSize: '1.333rem',
@@ -91,6 +91,11 @@ const useStyle = createUseStyles({
       paddingBottom: '3.75rem',
     },
   },
+  btnSection: {
+    '@media (max-width: 767px)': {
+      width: '100%',
+    },
+  },
 });
 
 export const KeypointSection = (props) => {
@@ -118,7 +123,7 @@ export const KeypointSection = (props) => {
           <Container
             tag="section"
             aria-labelledby="keypoints-section-title"
-            className={`${classes.keypointSection} pl-lg-2 pr-lg-2 pl-3 pr-3`}
+            className={`${classes.keypointSection} px-3`}
           >
             {!reverse ? (
               <Row>
@@ -129,7 +134,12 @@ export const KeypointSection = (props) => {
                   </h4>
                   <p className={classes.paragraph} dangerouslySetInnerHTML={{ __html: text }}></p>
                   {button ? (
-                    <Button color="primary" outline aria-label={`Dettaglio punto chiave ${number} ${title}`}>
+                    <Button
+                      color="primary"
+                      className={classes.btnSection}
+                      outline
+                      aria-label={`Dettaglio punto chiave ${number} ${title}`}
+                    >
                       SCOPRI DI PIÚ
                     </Button>
                   ) : (
@@ -169,7 +179,12 @@ export const KeypointSection = (props) => {
                   </h4>
                   <p className={classes.paragraph} dangerouslySetInnerHTML={{ __html: text }}></p>
                   {button ? (
-                    <Button color="primary" outline aria-label={`Dettaglio punto chiave ${number} ${title}`}>
+                    <Button
+                      color="primary"
+                      className={classes.btnSection}
+                      outline
+                      aria-label={`Dettaglio punto chiave ${number} ${title}`}
+                    >
                       SCOPRI DI PIÚ
                     </Button>
                   ) : (
@@ -203,7 +218,12 @@ export const KeypointSection = (props) => {
                   </h4>
                   <p className={classes.paragraph} dangerouslySetInnerHTML={{ __html: text }}></p>
                   {button ? (
-                    <Button color="primary" outline aria-label={`Dettaglio punto chiave ${number} ${title}`}>
+                    <Button
+                      color="primary"
+                      className={classes.btnSection}
+                      outline
+                      aria-label={`Dettaglio punto chiave ${number} ${title}`}
+                    >
                       SCOPRI DI PIÚ
                     </Button>
                   ) : (
@@ -273,7 +293,12 @@ export const KeypointSection = (props) => {
                   </h4>
                   <p className={classes.paragraph} dangerouslySetInnerHTML={{ __html: text }}></p>
                   {button ? (
-                    <Button color="primary" outline aria-label={`Dettaglio punto chiave ${number} ${title}`}>
+                    <Button
+                      color="primary"
+                      className={classes.btnSection}
+                      outline
+                      aria-label={`Dettaglio punto chiave ${number} ${title}`}
+                    >
                       SCOPRI DI PIÚ
                     </Button>
                   ) : (

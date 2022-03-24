@@ -124,11 +124,7 @@ export const Keypoints = (props) => {
   return (
     <>
       <div className={classes.keypointsBg}>
-        <Container
-          tag="section"
-          aria-labelledby="keypoints-title"
-          className={`${classes.keypointsContainer} pl-lg-2 pr-lg-2 pl-3 pr-3`}
-        >
+        <Container tag="section" aria-labelledby="keypoints-title" className={`${classes.keypointsContainer} px-3`}>
           <Row>
             <Col>
               <Row>

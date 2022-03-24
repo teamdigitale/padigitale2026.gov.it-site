@@ -27,10 +27,6 @@ internalLinks:
     linkTo: '/avvisi'
     label: Avvisi
     linkTop: '#mainTop'
-  comePartecipare:
-    linkTo: '/come-partecipare'
-    label: Come partecipare
-    linkTop: '#mainTop'
   updates:
     linkTo: '/updates'
     label: Ricevi aggiornamenti
