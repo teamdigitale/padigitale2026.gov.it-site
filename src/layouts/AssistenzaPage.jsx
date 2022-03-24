@@ -559,48 +559,7 @@ export const AssistenzaPage = () => {
                     >
                       <option value="Accesso al portale">Accesso al portale</option>
                       <option value="Iscrizione alla newsletter">Iscrizione alla newsletter</option>
-                      <option value="Misure">Misure</option>
-                      <option value="Avvisi">Avvisi</option>
-                      <option value="Enti beneficiari">Enti beneficiari</option>
-                      <option value="Spese ammissibili">Spese ammissibili</option>
                       <option value="Generale">Generale</option>
-                    </select>
-                  </div>
-                </Col>
-                <Col xs={12} md={6} lg={4} className="offset-lg-1 mt-5 mt-md-0">
-                  <div className="select-wrapper">
-                    <label htmlFor="measure-select-input" className={classes.selectLabel}>
-                      {measureLabel}
-                    </label>
-                    <Select
-                      id="measure-select"
-                      inputId="measure-select-input"
-                      dataRefer="00N3N00000GCzFW"
-                      options={selectMeasure}
-                      onChange={handleMeasure}
-                      placeholder={selectPlaceholder}
-                      aria-label={selectPlaceholder}
-                      aria-describedby="mandatory-label"
-                      className={`select`}
-                    />
-                    <select
-                      className="d-none"
-                      id="00N3N00000GCzFW"
-                      name="00N3N00000GCzFW"
-                      title="Misura"
-                      required={true}
-                      onInvalid={customInvalid}
-                    >
-                      <option value="1.2 Abilitazione e facilitazione migrazione al Cloud">
-                        1.2 Abilitazione e facilitazione migrazione al Cloud
-                      </option>
-                      <option value="1.4.1 Esperienza dei servizi pubblici">
-                        1.4.1 Esperienza dei servizi pubblici
-                      </option>
-                      <option value="1.4.4 Adozione identità digitale">1.4.4 Adozione identità digitale</option>
-                      <option value="1.4.5 Digitalizzazione degli avvisi pubblici">
-                        1.4.5 Digitalizzazione degli avvisi pubblici
-                      </option>
                     </select>
                   </div>
                 </Col>
