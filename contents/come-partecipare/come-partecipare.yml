@@ -19,10 +19,12 @@ keypoints:
       image: 'keypoint-3.svg'
       title: 'Classificare dati e servizi'
       desc: 'Per abilitare il processo di migrazione delle PA al cloud.'
+      transparent: true
     - number: "04"
       image: 'keypoint-4.svg'
       title: 'Realizzare progetti'
       desc: 'Per risolvere dubbi o problemi riguardo la piattaforma e le candidature.'
+      transparent: true
 sectionFirst:
   number: '01'
   title: 'Attivare la tua  PA'
@@ -55,7 +57,7 @@ sectionThird:
   lBlue: true
 sectionFourth:
   number: '04'
-  title: 'Realizzare i progetti'
+  title: 'Ricevere assistenza'
   text: La piattaforma PA digitale 2026 permette di candidare le PA agli avvisi pubblici e di gestire le attività attraverso l’area riservata.<br><br> Qualsiasi dubbio o problema si possa riscontrare, è possibile <strong>trovare le risposte alle domande più comuni e chiedere assistenza dedicata</strong>.
   button: true
   image: 'kp-section-4.svg'

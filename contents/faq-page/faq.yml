@@ -131,7 +131,7 @@ support:
   tag: Supporto
   title: Non hai trovato le risposte che cerchi? Vuoi inviare suggerimenti o ricevere supporto?
   cards:
-    - title: Contatti
-      description: Compila il modulo per inviarci i tuoi suggerimenti o per avere chiarimenti sull'iniziativa
-      isModal: true
+    - title: Assistenza
+      description: Compila il modulo per richiedere chiarimenti e approfondire temi di interesse.
+      link: /supporto/assistenza
       

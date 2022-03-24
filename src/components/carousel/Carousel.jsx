@@ -80,6 +80,7 @@ const useStyles = createUseStyles({
     padding: '6rem 0 4rem',
     '& .swiper': {
       margin: '0 -1.111rem',
+      paddingTop: '20px',
       '@media (max-width: 992px)': {
         margin: '0',
       },

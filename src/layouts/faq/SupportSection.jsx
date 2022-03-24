@@ -14,6 +14,11 @@ const useStyles = createUseStyles({
         boxShadow: 'none',
       },
     },
+    '& .btn': {
+      '@media (max-width: 767px)': {
+        width: '100%',
+      },
+    },
   },
   tag: {
     fontSize: '0.888rem',

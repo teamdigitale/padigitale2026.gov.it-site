@@ -7,6 +7,7 @@ import { ProjectsCards } from '../components/ProjectsCards';
 import { HeroHowItWorks } from '../components/hero/HeroHowItWorks';
 import seo from '../../contents/seo.yml';
 import { GlobalStateContext } from '../context/globalContext';
+import { Breadcrumb } from '../components/Breadcrumb';
 import { Involved } from './come-funziona/Involved';
 import { Beneficiaries } from './come-funziona/Beneficiaries';
 
@@ -37,6 +38,7 @@ export const ComeFunzionaPage = () => {
   return (
     <>
       <SEO title={seoTitle} description={seoDescription} />
+      <Breadcrumb currentPage="L'iniziativa" />
       <div className="sr-only">
         <h2>{content.name}</h2>
       </div>
