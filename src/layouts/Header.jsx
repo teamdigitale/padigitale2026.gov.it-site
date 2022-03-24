@@ -397,7 +397,7 @@ const SlimHeader = () => {
         </ExternalLink>
         <ExternalLink
           className={classes.login}
-          linkTo="#"
+          linkTo="https://dev1-padigitale2026.cs128.force.com/padigitale2026/sis_SpidPage"
           ariaLabel={externalLinks.eu.ariaLabel}
           href="#"
           target="_blank"
@@ -498,7 +498,10 @@ const NavHeader = () => {
                 </Link>
               </NavItem>
               <NavItem active>
-                <ExternalLink to="#" className="nav-link">
+                <ExternalLink
+                  linkTo="https://dev1-padigitale2026.cs128.force.com/padigitale2026/Pa_digitale2026_avvisi"
+                  className="nav-link"
+                >
                   <span className="font-weight-semibold">Gli avvisi</span>
                 </ExternalLink>
               </NavItem>
