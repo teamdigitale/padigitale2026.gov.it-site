@@ -6,7 +6,7 @@ import contentHowItWorks from '../../contents/come-funziona/come-funziona.yml';
 import { SEO } from '../components/SEO';
 import seo from '../../contents/seo.yml';
 import { GlobalStateContext } from '../context/globalContext';
-import { HeroImage } from '../components/hero/HeroImage';
+import { HeroSolutions } from '../components/hero/HeroSolutions';
 import { TimelineVertical } from '../components/TimelineVertical';
 import { ProjectsCards } from '../components/ProjectsCards';
 
@@ -14,21 +14,32 @@ const { title: seoTitle, description: seoDescription } = seo.projectsSolutionPag
 
 const useStyles = createUseStyles({
   breadcrumb: {
-    '@media (min-width: 991px)': {
-      marginLeft: '0.722rem',
+    padding: '1.563rem 0 0',
+    '& .breadcrumb': {
+      padding: '0.75rem 0',
     },
   },
   breadcrumbItem: {
     '& a': {
       color: '#5B6F82',
-      fontWeight: '700',
+      fontWeight: '600',
       textDecoration: 'underline',
+      fontSize: '18px',
+    },
+    '&::before': {
+      fontWeight: '600',
+      color: '#33485C',
     },
   },
   breadcrumbItemActive: {
     '& a': {
       color: '#5B6F82',
       textDecoration: 'none',
+      fontSize: '18px',
+    },
+    '&::before': {
+      fontWeight: '600',
+      color: '#33485C',
     },
   },
 });
@@ -54,10 +65,14 @@ export const SolutionProjects = () => {
     <>
       <SEO title={seoTitle} description={seoDescription} />
       <h1 className="sr-only">{seoTitle}</h1>
-      <div className="container">
+      <div className="container px-3">
         <Row>
           <Col xs="12">
             <Breadcrumb className={classes.breadcrumb}>
+              <BreadcrumbItem className={classes.breadcrumbItem}>
+                <a href="/">Home</a>
+                <span className="separator"></span>
+              </BreadcrumbItem>
               <BreadcrumbItem className={classes.breadcrumbItem}>
                 <a href="/come-funziona">Come funziona</a>
                 <span className="separator"></span>
@@ -69,12 +84,12 @@ export const SolutionProjects = () => {
           </Col>
         </Row>
       </div>
-      <HeroImage
+      <HeroSolutions
         title={hero.title}
         body={hero.body}
-        imageUrl="/assets/projects-solution-big.svg"
-        imageAlt=""
-        smallText={true}
+        image="projects-solution-big.svg"
+        theme="bg-white"
+        smallText="true"
       />
       <TimelineVertical item={verticalTimeline} />
       <ProjectsCards item={projectsCardsItem} />
