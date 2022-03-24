@@ -395,17 +395,15 @@ const SlimHeader = () => {
         >
           <img className="d-none d-lg-block" src="/assets/eu-flag.svg" alt={externalLinks.eu.label}></img>
         </ExternalLink>
-        <ExternalLink
+        <Link
           className={classes.login}
-          linkTo="https://dev1-padigitale2026.cs128.force.com/padigitale2026/sis_SpidPage"
+          to="https://dev1-padigitale2026.cs128.force.com/padigitale2026/sis_SpidPage"
           ariaLabel={externalLinks.eu.ariaLabel}
-          href="#"
-          target="_blank"
         >
           <img src="/assets/user-icon.svg" alt={externalLinks.eu.label}></img>
           <img className="mobile" src="/assets/user-icon-dark.svg" alt={externalLinks.eu.label}></img>
           <span>Accedi</span>
-        </ExternalLink>
+        </Link>
       </HeaderContent>
     </HeaderReactKit>
   );
@@ -498,12 +496,12 @@ const NavHeader = () => {
                 </Link>
               </NavItem>
               <NavItem active>
-                <ExternalLink
-                  linkTo="https://dev1-padigitale2026.cs128.force.com/padigitale2026/Pa_digitale2026_avvisi"
+                <Link
+                  to="https://dev1-padigitale2026.cs128.force.com/padigitale2026/Pa_digitale2026_avvisi"
                   className="nav-link"
                 >
                   <span className="font-weight-semibold">Gli avvisi</span>
-                </ExternalLink>
+                </Link>
               </NavItem>
               <NavItem>
                 <Link
