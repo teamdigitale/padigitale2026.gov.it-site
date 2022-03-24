@@ -372,14 +372,6 @@ export const AssistenzaPage = () => {
     hiddenSelect.dispatchEvent(optionSelected);
   };
 
-  const handleMeasure = (element) => {
-    const measureInput = document.querySelector('#measure-select-input');
-    const selectWrapper = measureInput.closest('.select-wrapper');
-    const hiddenSelect = selectWrapper.querySelector('select');
-    hiddenSelect.value = element.value;
-    hiddenSelect.dispatchEvent(optionSelected);
-  };
-
   const customInvalid = (event) => {
     event.preventDefault();
     const currentTarget = event.target;
@@ -426,11 +418,9 @@ export const AssistenzaPage = () => {
 
   const {
     selectArgument,
-    selectMeasure,
     emailValidationLabel,
     emailLabel,
     argumentLabel,
-    measureLabel,
     selectPlaceholder,
     telLabel,
     descriptionLabel,
