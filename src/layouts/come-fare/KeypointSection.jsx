@@ -115,6 +115,7 @@ export const KeypointSection = (props) => {
     BottomImage2,
     BottomLinkLabel1,
     BottomLinkLabel2,
+    linkTo,
   } = props.item;
 
   return (
@@ -136,7 +137,7 @@ export const KeypointSection = (props) => {
                   <p className={classes.paragraph} dangerouslySetInnerHTML={{ __html: text }}></p>
                   {button ? (
                     <Link
-                      to="/come-partecipare/crea-profilo"
+                      to={`/come-partecipare/${linkTo}`}
                       color="primary"
                       className={`${classes.btnSection} btn btn-outline-primary`}
                       aria-label={`Dettaglio punto chiave ${number} ${title}`}
@@ -181,7 +182,7 @@ export const KeypointSection = (props) => {
                   <p className={classes.paragraph} dangerouslySetInnerHTML={{ __html: text }}></p>
                   {button ? (
                     <Link
-                      to="/come-partecipare/crea-profilo"
+                      to={`/come-partecipare/${linkTo}`}
                       className={`${classes.btnSection} btn btn-outline-primary`}
                       aria-label={`Dettaglio punto chiave ${number} ${title}`}
                     >
@@ -219,7 +220,7 @@ export const KeypointSection = (props) => {
                   <p className={classes.paragraph} dangerouslySetInnerHTML={{ __html: text }}></p>
                   {button ? (
                     <Link
-                      to="/come-partecipare/crea-profilo"
+                      to={`/come-partecipare/${linkTo}`}
                       className={`${classes.btnSection} btn btn-outline-primary`}
                       aria-label={`Dettaglio punto chiave ${number} ${title}`}
                     >
@@ -293,7 +294,7 @@ export const KeypointSection = (props) => {
                   <p className={classes.paragraph} dangerouslySetInnerHTML={{ __html: text }}></p>
                   {button ? (
                     <Link
-                      to="/come-partecipare/crea-profilo"
+                      to={`/come-partecipare/${linkTo}`}
                       className={`${classes.btnSection} btn btn-outline-primary`}
                       aria-label={`Dettaglio punto chiave ${number} ${title}`}
                     >
