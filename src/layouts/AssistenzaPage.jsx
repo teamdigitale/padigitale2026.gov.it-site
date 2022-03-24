@@ -87,7 +87,6 @@ const useStyles = createUseStyles({
     color: '#33485C',
   },
   formMessage: {
-    padding: '0 0 50px 0',
     '& p': {
       fontSize: '0.889rem',
       color: '#33485C',
@@ -231,9 +230,11 @@ const useStyles = createUseStyles({
     },
   },
   titleUpdate: {
-    fontSize: '3rem',
+    fontSize: '2.5rem',
     fontWeight: '700',
     color: '#33485C',
+    lineHeight: '48px',
+    marginBottom: '30px',
     '@media (max-width: 991px)': {
       fontSize: '2.25rem',
     },
@@ -241,7 +242,7 @@ const useStyles = createUseStyles({
   subtitleUpdate: {
     fontSize: '1.333rem',
     color: '#33485C',
-    lineHeight: '28px',
+    lineHeight: '1.5',
     '@media (max-width: 991px)': {
       fontSize: '1.125rem',
     },
@@ -254,30 +255,44 @@ const useStyles = createUseStyles({
     },
   },
   heroImg: {
+    maxWidth: '100%',
     '@media (max-width: 991px)': {
       width: '64%',
     },
   },
   breadcrumb: {
-    paddingTop: '1.563rem',
+    padding: '1.563rem 0 0',
     '& .breadcrumb': {
-      paddingTop: '0',
-    },
-    '@media (min-width: 991px)': {
-      marginLeft: '0.722rem',
+      padding: '0.75rem 0',
     },
   },
   breadcrumbItem: {
     '& a': {
       color: '#5B6F82',
-      fontWeight: '700',
+      fontWeight: '600',
       textDecoration: 'underline',
+      fontSize: '18px',
+    },
+    '&::before': {
+      fontWeight: '600',
+      color: '#33485C',
     },
   },
   breadcrumbItemActive: {
     '& a': {
       color: '#5B6F82',
       textDecoration: 'none',
+      fontSize: '18px',
+    },
+    '&::before': {
+      fontWeight: '600',
+      color: '#33485C',
+    },
+  },
+  submitContainer: {
+    marginBottom: '12.5rem',
+    '@media (max-width: 991px)': {
+      marginBottom: '6rem',
     },
   },
 });
@@ -443,7 +458,7 @@ export const AssistenzaPage = () => {
   return (
     <>
       <SEO title={seoTitle} description={seoDescription} />
-      <div className="container">
+      <div className="container px-3">
         <Row>
           <Col xs="12">
             <Breadcrumb className={classes.breadcrumb}>
@@ -663,7 +678,7 @@ export const AssistenzaPage = () => {
                     l&apos;informativa privacy
                   </a>
                 </p>
-                <div className="d-flex">
+                <div className={`${classes.submitContainer} d-flex mt-5`}>
                   <input type="submit" name="submit" disabled value={sendButtonLabel} className="btn btn-primary" />
                 </div>
               </div>

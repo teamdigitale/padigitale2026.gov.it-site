@@ -62,7 +62,7 @@ const useStyle = createUseStyles({
     },
     '& p': {
       fontSize: '1.25rem',
-      fontWeight: '600',
+      fontWeight: '400',
       lineHeight: '1',
       marginBottom: '0',
       '@media (min-width: 768px)': {
@@ -84,8 +84,8 @@ export const Beneficiaries = (props) => {
 
   return (
     <>
-      <Container tag="section" aria-labelledby="beneficiaries-title" className="pl-lg-2 pr-lg-2 pl-3 pr-3 pt-5">
-        <Row>
+      <Container tag="section" aria-labelledby="beneficiaries-title" className="pl-lg-2 pr-lg-2 pl-3 pr-3 pt-5 pb-5">
+        <Row className="mb-5">
           <Col className="offset-lg-1">
             <Row>
               <Col xs="12" lg="5" id="beneficiari">
