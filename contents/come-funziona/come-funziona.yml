@@ -22,8 +22,6 @@ beneficiaries:
       items:
         - linkLabel: 'Comuni'
           filterId: 'comuni'
-        - linkLabel: 'Città metropolitane'
-          filterId: 'citta-metropolitane'
         - linkLabel: 'Enti regionali'
           filterId: 'enti-regionali'
         - linkLabel: 'Province'
@@ -52,7 +50,7 @@ beneficiaries:
     - icon: '/assets/icone-beneficiari/pa-centrali.svg'
       name: 'Pubbliche Amministrazioni Centrali'
       items:
-        - linkLabel: 'Pubbliche Amministrazioni centrali'
+        - linkLabel: 'Pubbliche Amministrazioni Centrali'
           filterId: 'pa-centrali'
     - icon: '/assets/icone-beneficiari/asl.svg'
       name: 'Salute'
@@ -96,7 +94,7 @@ timeline:
       text: L’Unione Europea approva un piano da €750 miliardi che ha l'obiettivo di rilanciare l'economia europea dopo la pandemia di COVID-19 e di renderla più verde e digitale.
     - id: 2
       active: false
-      time: MAGGIO 2021
+      time: Aprile 2021
       title: ITALIA DOMANI
       text: Il Governo italiano presenta “Italia Domani”, il Piano Nazionale di Ripresa e Resilienza (PNRR). Grazie all’integrazione di un Fondo Complementare, il totale degli investimenti previsti è di €222,1 miliardi.
     - id: 3

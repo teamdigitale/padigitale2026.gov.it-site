@@ -2,6 +2,7 @@ import React from 'react';
 import { createUseStyles } from 'react-jss';
 import PropTypes from 'prop-types';
 import { Row, Col, Hero } from 'design-react-kit';
+import { Breadcrumb } from '../Breadcrumb';
 import { HeroTitle } from './HeroTitle';
 import { HeroBackground } from './HeroBackground';
 import { HeroButton } from './HeroButton';
@@ -19,34 +20,42 @@ const useStyles = createUseStyles({
     },
   },
   heroTitle: {
-    composes: 'no_doc title-hero',
-    fontSize: '2.222rem',
-    '@media (max-width: 992px)': {
-      display: 'flex',
-      justifyContent: 'center',
-      fontSize: '1.778rem',
+    fontSize: '2.5rem',
+    fontWeight: '700',
+    color: '#33485C',
+    lineHeight: '48px',
+    marginBottom: '30px',
+    '@media (max-width: 991px)': {
+      fontSize: '2.25rem',
       textAlign: 'center',
+      display: 'block',
+    },
+  },
+  heroSubtitle: {
+    fontSize: '24px',
+    color: '#33485C',
+    lineHeight: '1.5',
+    '@media (max-width: 991px)': {
+      fontSize: '1.125rem',
     },
   },
   contentWrapper: {
     composes: 'it-hero-text-wrapper',
     paddingLeft: '0 !important',
     zIndex: 2,
-    '@media (max-width: 992px)': {
-      marginBottom: '4rem',
-    },
   },
   heroWrapper: {
     composes: 'it-hero-wrapper',
     position: 'relative',
     display: 'flex',
     padding: '0 0 2rem',
+    marginTop: '-101px',
     '&:not(.overlap)': {
       minHeight: 'auto',
       '& .container .it-hero-text-wrapper': {
-        padding: '5rem 0',
+        padding: '150px 0 5rem',
         '@media (max-width: 992px)': {
-          padding: '4rem 0 1rem',
+          paddingBottom: '0',
         },
         '& .title-hero': {
           fontSize: '2.5rem',
@@ -72,7 +81,7 @@ const useStyles = createUseStyles({
       paddingBottom: '5rem',
     },
     '&.bg-white': {
-      backgroundColor: '#fff',
+      backgroundColor: 'transparent !important',
       '& .it-hero-text-wrapper.bg-white span, h1, h2, h3, p': {
         color: '#33485C',
       },
@@ -165,14 +174,15 @@ export const HeroImageBackground = ({
   const classes = useStyles();
   return (
     <Hero>
+      <Breadcrumb currentPage="Misure" />
       <div className={`${classes.heroWrapper} ${overlap ? 'overlap' : ''} ${theme}`}>
-        <section aria-labelledby={titleId} className={classes.heroContentContainer}>
+        <section aria-labelledby={titleId} className={`${classes.heroContentContainer} px-3`}>
           <Row>
             <Col xs="12" lg="5" className="offset-lg-1">
               <div className={`${classes.contentWrapper} ${theme}`}>
                 <div>
                   <HeroTitle id={titleId} Tag="h3" title={title} className={classes.heroTitle} />
-                  <HeroParagraph text={body} />
+                  <HeroParagraph text={body} className={classes.heroSubtitle} />
                   <div className={classes.buttonContainer}>
                     {noButton ? (
                       ''

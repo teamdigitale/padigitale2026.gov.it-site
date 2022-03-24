@@ -10,7 +10,7 @@ const useStyle = createUseStyles({
     minHeight: '412px',
     '@media (max-width: 991px)': {
       flexDirection: 'column',
-      padding: '82px 0',
+      padding: '40px 0',
     },
   },
   info: {

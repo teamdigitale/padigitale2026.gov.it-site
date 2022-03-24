@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { createUseStyles } from 'react-jss';
-import { Container, Row, Col, Button } from 'design-react-kit';
+import { Container, Row, Col } from 'design-react-kit';
+import { Link } from 'gatsby';
 
 const useStyles = createUseStyles({
   modalButtonContainer: {
     border: '1px solid #0066CC',
-    padding: '0.5rem 5.556rem',
+    padding: '1.5rem 1.5rem',
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
@@ -15,15 +16,23 @@ const useStyles = createUseStyles({
       fontSize: '1.333rem',
       fontWeight: '700',
       color: '#33485C',
-      maxWidth: '60%',
+      '@media (max-width: 767px)': {
+        textAlign: 'center',
+      },
     },
     '& .btn': {
-      padding: '0.444rem 0.889rem',
       whiteSpace: 'nowrap',
+      '@media (max-width: 991px)': {
+        marginTop: '20px',
+      },
+      '@media (max-width: 767px)': {
+        width: '100%',
+      },
     },
     '@media (max-width: 991px)': {
       flexDirection: 'column',
       padding: '0.889rem 1.333rem',
+      alignItems: 'flex-start',
       '& p': {
         maxWidth: '100%',
         marginBottom: '1rem',
@@ -34,7 +43,12 @@ const useStyles = createUseStyles({
     fontSize: '1.556rem',
     fontWeight: '600',
     color: '#33485C',
+    lineHeight: '1.556rem',
     '@media (max-width: 992px)': {
+      textAlign: 'center',
+    },
+    '@media (max-width: 767px)': {
+      display: 'block',
       textAlign: 'center',
     },
   },
@@ -43,6 +57,9 @@ const useStyles = createUseStyles({
     fontWeight: '400',
     color: '#33485C',
     '@media (max-width: 992px)': {
+      display: 'block',
+    },
+    '@media (max-width: 767px)': {
       display: 'block',
       textAlign: 'center',
     },
@@ -55,7 +72,7 @@ const useStyles = createUseStyles({
   },
 });
 
-export const ModalUpdatesButton = ({ label, buttonLabel, hasTitle, handleToggle }) => {
+export const ModalUpdatesButton = ({ label, buttonLabel, hasTitle }) => {
   const classes = useStyles();
 
   return (
@@ -64,7 +81,7 @@ export const ModalUpdatesButton = ({ label, buttonLabel, hasTitle, handleToggle 
         <Container className="px-3">
           <Row className="align-items-center mb-4">
             <Col sm={12} lg={3}>
-              <span className={classes.buttonTitle}>Le misure</span>
+              <span className={`${classes.buttonTitle} mb-4 mb-md-0`}>Le misure</span>
             </Col>
             <Col sm={12} lg={9}>
               <span className={classes.buttonInfo}>
@@ -84,14 +101,13 @@ export const ModalUpdatesButton = ({ label, buttonLabel, hasTitle, handleToggle 
               <p className="description">
                 <strong>{label}</strong>
               </p>
-              <Button
+              <Link
+                to="/ricevi-aggiornamenti"
                 aria-label="Ricevi aggiornamenti (Apri modale e compila il modulo)"
-                className={classes.button}
-                color="primary"
-                onClick={handleToggle}
+                className={`${classes.button} text-white btn btn-primary`}
               >
                 {buttonLabel}
-              </Button>
+              </Link>
             </div>
           </Col>
         </Row>

@@ -20,22 +20,32 @@ const { sidebar, verticalTimeline } = content;
 
 const useStyles = createUseStyles({
   breadcrumb: {
-    '@media (min-width: 991px)': {
-      marginLeft: '0.722rem',
-      marginBottom: '90px',
+    padding: '1.563rem 0 0',
+    '& .breadcrumb': {
+      padding: '0.75rem 0',
     },
   },
   breadcrumbItem: {
     '& a': {
-      color: '#06c',
-      fontWeight: '700',
+      color: '#5B6F82',
+      fontWeight: '600',
       textDecoration: 'underline',
+      fontSize: '18px',
+    },
+    '&::before': {
+      fontWeight: '600',
+      color: '#33485C',
     },
   },
   breadcrumbItemActive: {
     '& a': {
       color: '#5B6F82',
       textDecoration: 'none',
+      fontSize: '18px',
+    },
+    '&::before': {
+      fontWeight: '600',
+      color: '#33485C',
     },
   },
   navigationContainer: {
@@ -112,19 +122,20 @@ const useStyles = createUseStyles({
     color: '#33485C',
     lineHeight: '48px',
     marginBottom: '30px',
-    '@media (max-width: 425px)': {
-      fontSize: '2.375rem',
+    '@media (max-width: 991px)': {
+      fontSize: '2.25rem',
     },
   },
   subtitleUpdate: {
-    fontSize: '24px',
+    fontSize: '1.333rem',
     color: '#33485C',
-    lineHeight: '30px',
-    '@media (max-width: 425px)': {
-      fontSize: '1.25rem',
+    lineHeight: '1.5',
+    '@media (max-width: 991px)': {
+      fontSize: '1.125rem',
     },
   },
   heroImg: {
+    maxWidth: '100%',
     '@media (max-width: 425px)': {
       maxWidth: '80%',
     },
@@ -147,29 +158,6 @@ export const CreaProfiloPage = () => {
     announce('Pagina caricata ' + faq.name);
   }, []);
 
-  // const handleChange = (event) => {
-  //   setInputValue(event.target.value);
-  //   if (event.target.value.length >= 3) {
-  //     if (isMobile && filterId !== 'all') {
-  //       setQuestions(getQuestionsMobile(getNewQuestions(event.target.value)));
-  //     } else {
-  //       setQuestions(getNewQuestions(event.target.value));
-  //     }
-  //   } else {
-  //     if (isMobile) {
-  //       filterId !== 'all' ? setQuestions(getQuestionsMobile(faq.questions)) : setQuestions(faq.questions);
-  //     } else {
-  //       setQuestions(faq.questions);
-  //     }
-  //   }
-  //   setquestNum(countQuestions());
-  //   if (questions.length === 0) {
-  //     announce('Nessun risultato');
-  //   } else {
-  //     announce('Numero di FAQ in pagina aggiornato');
-  //   }
-  // };
-
   useEffect(() => {
     if (!isMobile) {
       setInputValue('');
@@ -183,7 +171,7 @@ export const CreaProfiloPage = () => {
       <div className="sr-only">
         <h2>{faq.name}</h2>
       </div>
-      <div className="docs pt-4 pb-5 py-md-5">
+      <div className="pb-5">
         <Container className="px-3">
           <Row>
             <Col xs={12}>
@@ -202,9 +190,9 @@ export const CreaProfiloPage = () => {
               </Breadcrumb>
             </Col>
           </Row>
-          <Row className="mb-5">
+          <Row className="mb-5 mt-5">
             <Col xs={12} lg={7}>
-              <h4 className={classes.titleUpdate}>Crea il profilo della tua PA: identità digitale e dati IPA</h4>
+              <h4 className={classes.titleUpdate}>Attiva il profilo della tua PA: identità digitale e dati IPA</h4>
               <div className={classes.subtitleUpdate}>
                 <strong>Per partecipare agli avvisi</strong> è necessario che il{' '}
                 <strong>rappresentante legale di un'amministrazione presente su IPA</strong> (Indice dei domini digitali
@@ -231,7 +219,7 @@ export const CreaProfiloPage = () => {
               {/*  <Totop /> */}
               <Container className="pl-lg-4 mb-4">
                 <section>
-                  <h4 className={`${classes.contentTitle} mt-5`}>Crea il profilo della tua amministrazione</h4>
+                  <h4 className={`${classes.contentTitle} mt-5`}>Attiva il profilo della tua amministrazione</h4>
                   <p className={`${classes.contentParagraph} mb-0`}>
                     Il processo di attivazione della PA prevede <strong>quattro passaggi</strong>:
                   </p>
