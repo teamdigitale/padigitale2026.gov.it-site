@@ -30,6 +30,7 @@ sectionFirst:
   title: 'Attivare la tua  PA'
   text: 'L’attivazione del profilo della PA <strong>è il primo passaggio per partecipare agli avvisi pubblici</strong> e richiedere i finanziamenti per avviare il processo di transizione digitale.</br></br>Il rappresentante legale, o un suo incaricato, può accedere alla piattaforma grazie a SPID o CIE e, attraverso un percorso guidato, completare il processo di attivazione.'
   button: true
+  linkTo: "crea-profilo"
   image: 'kp-section-1.svg'
   bottomSection: false
   BottomImage1: 'bottom-1-1.svg'
@@ -41,6 +42,7 @@ sectionSecond:
   title: 'Candidare una PA agli avvisi'
   text: In base alla tipologia e agli obiettivi della PA, è possibile identificare gli avvisi pubblici più idonei ad avviare il processo di transizione digitale.<br/><br/>Una volta identificato l'avviso, è possibile candidare una PA attraverso un processo guidato, che permette di <strong>comporre il documento di candidatura e inviarlo tramite la piattaforma.</strong>
   button: true
+  linkTo: "candida-pa"
   image: 'kp-section-2.svg'
   reverse: true
   bottomSection: false
