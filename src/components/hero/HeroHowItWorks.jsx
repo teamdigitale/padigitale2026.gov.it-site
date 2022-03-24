@@ -227,7 +227,7 @@ export const HeroHowItWorks = ({ title, body, image, list }) => {
                                 {listItem.items.map((item) => (
                                   <React.Fragment key={item.item}>
                                     <Link
-                                      to={`/come-funziona#` + item.anchor}
+                                      to={`/iniziativa#` + item.anchor}
                                       onClick={() => scrollIntoView(item.anchor)}
                                       className={classes.listItem}
                                     >
