@@ -19,10 +19,12 @@ keypoints:
       image: 'keypoint-3.svg'
       title: 'Classificare dati e servizi'
       desc: 'Per abilitare il processo di migrazione delle PA al cloud.'
+      transparent: true
     - number: "04"
       image: 'keypoint-4.svg'
       title: 'Realizzare progetti'
       desc: 'Per risolvere dubbi o problemi riguardo la piattaforma e le candidature.'
+      transparent: true
 sectionFirst:
   number: '01'
   title: 'Attivare la tua  PA'

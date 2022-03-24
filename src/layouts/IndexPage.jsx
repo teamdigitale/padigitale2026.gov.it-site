@@ -47,7 +47,7 @@ export const IndexPage = () => {
   useEffect(() => {
     (async () => {
       try {
-        await fetch(`https://raw.githubusercontent.com/tuxolino/testapi/main/data/NC002.json`)
+        await fetch(`https://github.com/teamdigitale/padigitale2026-opendata`)
           .then((res) => res.json())
           .then((data) => {
             setNewsList(data.windows);

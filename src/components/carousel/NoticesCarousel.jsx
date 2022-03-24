@@ -95,11 +95,13 @@ const useStyles = createUseStyles({
     fontWeight: '400',
     lineHeight: '1.444rem',
     marginBottom: '1.389rem',
+    color: '#5A768A',
   },
   dueDate: {
     fontSize: '0.778rem',
     fontWeight: '700',
     lineHeight: '1.444rem',
+    color: '#5A768A',
   },
   dueDateDigit: {
     fontSize: '0.833rem',

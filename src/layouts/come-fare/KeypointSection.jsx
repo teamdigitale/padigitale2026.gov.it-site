@@ -2,6 +2,7 @@
 /* eslint-disable max-lines-per-function */
 import React from 'react';
 import { createUseStyles } from 'react-jss';
+import { Link } from 'gatsby';
 import { Container, Row, Col, Button } from 'design-react-kit';
 import PropTypes from 'prop-types';
 
@@ -134,14 +135,14 @@ export const KeypointSection = (props) => {
                   </h4>
                   <p className={classes.paragraph} dangerouslySetInnerHTML={{ __html: text }}></p>
                   {button ? (
-                    <Button
+                    <Link
+                      to="/come-partecipare/crea-profilo"
                       color="primary"
-                      className={classes.btnSection}
-                      outline
+                      className={`${classes.btnSection} btn btn-outline-primary`}
                       aria-label={`Dettaglio punto chiave ${number} ${title}`}
                     >
                       SCOPRI DI PIÚ
-                    </Button>
+                    </Link>
                   ) : (
                     ''
                   )}
@@ -179,14 +180,13 @@ export const KeypointSection = (props) => {
                   </h4>
                   <p className={classes.paragraph} dangerouslySetInnerHTML={{ __html: text }}></p>
                   {button ? (
-                    <Button
-                      color="primary"
-                      className={classes.btnSection}
-                      outline
+                    <Link
+                      to="/come-partecipare/crea-profilo"
+                      className={`${classes.btnSection} btn btn-outline-primary`}
                       aria-label={`Dettaglio punto chiave ${number} ${title}`}
                     >
                       SCOPRI DI PIÚ
-                    </Button>
+                    </Link>
                   ) : (
                     ''
                   )}
@@ -218,14 +218,13 @@ export const KeypointSection = (props) => {
                   </h4>
                   <p className={classes.paragraph} dangerouslySetInnerHTML={{ __html: text }}></p>
                   {button ? (
-                    <Button
-                      color="primary"
-                      className={classes.btnSection}
-                      outline
+                    <Link
+                      to="/come-partecipare/crea-profilo"
+                      className={`${classes.btnSection} btn btn-outline-primary`}
                       aria-label={`Dettaglio punto chiave ${number} ${title}`}
                     >
                       SCOPRI DI PIÚ
-                    </Button>
+                    </Link>
                   ) : (
                     ''
                   )}
@@ -293,14 +292,13 @@ export const KeypointSection = (props) => {
                   </h4>
                   <p className={classes.paragraph} dangerouslySetInnerHTML={{ __html: text }}></p>
                   {button ? (
-                    <Button
-                      color="primary"
-                      className={classes.btnSection}
-                      outline
+                    <Link
+                      to="/come-partecipare/crea-profilo"
+                      className={`${classes.btnSection} btn btn-outline-primary`}
                       aria-label={`Dettaglio punto chiave ${number} ${title}`}
                     >
                       SCOPRI DI PIÚ
-                    </Button>
+                    </Link>
                   ) : (
                     ''
                   )}

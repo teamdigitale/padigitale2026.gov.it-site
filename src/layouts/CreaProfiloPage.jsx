@@ -192,7 +192,7 @@ export const CreaProfiloPage = () => {
           </Row>
           <Row className="mb-5 mt-5">
             <Col xs={12} lg={7}>
-              <h4 className={classes.titleUpdate}>Crea il profilo della tua PA: identità digitale e dati IPA</h4>
+              <h4 className={classes.titleUpdate}>Attiva il profilo della tua PA: identità digitale e dati IPA</h4>
               <div className={classes.subtitleUpdate}>
                 <strong>Per partecipare agli avvisi</strong> è necessario che il{' '}
                 <strong>rappresentante legale di un'amministrazione presente su IPA</strong> (Indice dei domini digitali
@@ -219,7 +219,7 @@ export const CreaProfiloPage = () => {
               {/*  <Totop /> */}
               <Container className="pl-lg-4 mb-4">
                 <section>
-                  <h4 className={`${classes.contentTitle} mt-5`}>Crea il profilo della tua amministrazione</h4>
+                  <h4 className={`${classes.contentTitle} mt-5`}>Attiva il profilo della tua amministrazione</h4>
                   <p className={`${classes.contentParagraph} mb-0`}>
                     Il processo di attivazione della PA prevede <strong>quattro passaggi</strong>:
                   </p>

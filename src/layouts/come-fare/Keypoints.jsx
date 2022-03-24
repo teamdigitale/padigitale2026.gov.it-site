@@ -115,6 +115,9 @@ const useStyle = createUseStyles({
   keypointsBg: {
     backgroundColor: '#F0F6FC',
   },
+  cardTransparent: {
+    opacity: '0.5',
+  },
 });
 
 export const Keypoints = (props) => {
@@ -140,7 +143,14 @@ export const Keypoints = (props) => {
           <Row>
             {list
               ? list.map((listItem, index, array) => (
-                  <Col xs="12" md="6" lg="3" className={`${index + 1 === array.length ? 'mb-lg-0' : 'mb-5 mb-lg-0'}`}>
+                  <Col
+                    xs="12"
+                    md="6"
+                    lg="3"
+                    className={`${index + 1 === array.length ? 'mb-lg-0' : 'mb-5 mb-lg-0'} ${
+                      listItem.transparent === true ? classes.cardTransparent : ''
+                    }`}
+                  >
                     <div className={classes.keypointNumber}>{listItem.number}.</div>
                     <div className={classes.keypointTitle}>{listItem.title}</div>
                     <div className={classes.keypointDesc}>{listItem.desc}</div>
