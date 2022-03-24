@@ -2,6 +2,7 @@ import React from 'react';
 import { createUseStyles } from 'react-jss';
 import { Row, Col, Card, CardBody, CardTitle } from 'design-react-kit';
 import PropTypes from 'prop-types';
+import { Link } from 'gatsby';
 import { DesktopSwiper } from '../DesktopSwiper';
 import { ExternalLink } from '../ExternalLink';
 
@@ -9,10 +10,8 @@ const useStyles = createUseStyles({
   heroCards: {
     composes: 'card-bg rounded',
     height: '100%',
-    border: '0.5px solid #979797',
     boxShadow: '0px 0px 80px rgba(0, 43, 85, 0.05)',
     '&.card.card-bg': {
-      borderRight: '0.5px solid #979797',
       '@media (max-width: 992px)': {
         marginLeft: '0',
       },
@@ -96,11 +95,13 @@ const useStyles = createUseStyles({
     fontWeight: '400',
     lineHeight: '1.444rem',
     marginBottom: '1.389rem',
+    color: '#5A768A',
   },
   dueDate: {
     fontSize: '0.778rem',
     fontWeight: '700',
     lineHeight: '1.444rem',
+    color: '#5A768A',
   },
   dueDateDigit: {
     fontSize: '0.833rem',
@@ -163,6 +164,11 @@ export const NoticesCarousel = ({ content, title }) => {
             title={title}
             idCarousel="notices-carousel"
           />
+          <div className="d-flex justify-content-center">
+            <Link to="/" className="btn text-uppercase btn-primary">
+              scopri tutti
+            </Link>
+          </div>
         </section>
       </div>
     </>

@@ -87,7 +87,6 @@ const useStyles = createUseStyles({
     color: '#33485C',
   },
   formMessage: {
-    padding: '0 0 50px 0',
     '& p': {
       fontSize: '0.889rem',
       color: '#33485C',
@@ -231,9 +230,11 @@ const useStyles = createUseStyles({
     },
   },
   titleUpdate: {
-    fontSize: '3rem',
+    fontSize: '2.5rem',
     fontWeight: '700',
     color: '#33485C',
+    lineHeight: '48px',
+    marginBottom: '30px',
     '@media (max-width: 991px)': {
       fontSize: '2.25rem',
     },
@@ -241,7 +242,7 @@ const useStyles = createUseStyles({
   subtitleUpdate: {
     fontSize: '1.333rem',
     color: '#33485C',
-    lineHeight: '28px',
+    lineHeight: '1.5',
     '@media (max-width: 991px)': {
       fontSize: '1.125rem',
     },
@@ -254,30 +255,44 @@ const useStyles = createUseStyles({
     },
   },
   heroImg: {
+    maxWidth: '100%',
     '@media (max-width: 991px)': {
       width: '64%',
     },
   },
   breadcrumb: {
-    paddingTop: '1.563rem',
+    padding: '1.563rem 0 0',
     '& .breadcrumb': {
-      paddingTop: '0',
-    },
-    '@media (min-width: 991px)': {
-      marginLeft: '0.722rem',
+      padding: '0.75rem 0',
     },
   },
   breadcrumbItem: {
     '& a': {
       color: '#5B6F82',
-      fontWeight: '700',
+      fontWeight: '600',
       textDecoration: 'underline',
+      fontSize: '18px',
+    },
+    '&::before': {
+      fontWeight: '600',
+      color: '#33485C',
     },
   },
   breadcrumbItemActive: {
     '& a': {
       color: '#5B6F82',
       textDecoration: 'none',
+      fontSize: '18px',
+    },
+    '&::before': {
+      fontWeight: '600',
+      color: '#33485C',
+    },
+  },
+  submitContainer: {
+    marginBottom: '12.5rem',
+    '@media (max-width: 991px)': {
+      marginBottom: '6rem',
     },
   },
 });
@@ -372,14 +387,6 @@ export const AssistenzaPage = () => {
     hiddenSelect.dispatchEvent(optionSelected);
   };
 
-  const handleMeasure = (element) => {
-    const measureInput = document.querySelector('#measure-select-input');
-    const selectWrapper = measureInput.closest('.select-wrapper');
-    const hiddenSelect = selectWrapper.querySelector('select');
-    hiddenSelect.value = element.value;
-    hiddenSelect.dispatchEvent(optionSelected);
-  };
-
   const customInvalid = (event) => {
     event.preventDefault();
     const currentTarget = event.target;
@@ -426,11 +433,9 @@ export const AssistenzaPage = () => {
 
   const {
     selectArgument,
-    selectMeasure,
     emailValidationLabel,
     emailLabel,
     argumentLabel,
-    measureLabel,
     selectPlaceholder,
     telLabel,
     descriptionLabel,
@@ -443,7 +448,7 @@ export const AssistenzaPage = () => {
   return (
     <>
       <SEO title={seoTitle} description={seoDescription} />
-      <div className="container">
+      <div className="container px-3">
         <Row>
           <Col xs="12">
             <Breadcrumb className={classes.breadcrumb}>
@@ -559,48 +564,7 @@ export const AssistenzaPage = () => {
                     >
                       <option value="Accesso al portale">Accesso al portale</option>
                       <option value="Iscrizione alla newsletter">Iscrizione alla newsletter</option>
-                      <option value="Misure">Misure</option>
-                      <option value="Avvisi">Avvisi</option>
-                      <option value="Enti beneficiari">Enti beneficiari</option>
-                      <option value="Spese ammissibili">Spese ammissibili</option>
                       <option value="Generale">Generale</option>
-                    </select>
-                  </div>
-                </Col>
-                <Col xs={12} md={6} lg={4} className="offset-lg-1 mt-5 mt-md-0">
-                  <div className="select-wrapper">
-                    <label htmlFor="measure-select-input" className={classes.selectLabel}>
-                      {measureLabel}
-                    </label>
-                    <Select
-                      id="measure-select"
-                      inputId="measure-select-input"
-                      dataRefer="00N3N00000GCzFW"
-                      options={selectMeasure}
-                      onChange={handleMeasure}
-                      placeholder={selectPlaceholder}
-                      aria-label={selectPlaceholder}
-                      aria-describedby="mandatory-label"
-                      className={`select`}
-                    />
-                    <select
-                      className="d-none"
-                      id="00N3N00000GCzFW"
-                      name="00N3N00000GCzFW"
-                      title="Misura"
-                      required={true}
-                      onInvalid={customInvalid}
-                    >
-                      <option value="1.2 Abilitazione e facilitazione migrazione al Cloud">
-                        1.2 Abilitazione e facilitazione migrazione al Cloud
-                      </option>
-                      <option value="1.4.1 Esperienza dei servizi pubblici">
-                        1.4.1 Esperienza dei servizi pubblici
-                      </option>
-                      <option value="1.4.4 Adozione identità digitale">1.4.4 Adozione identità digitale</option>
-                      <option value="1.4.5 Digitalizzazione degli avvisi pubblici">
-                        1.4.5 Digitalizzazione degli avvisi pubblici
-                      </option>
                     </select>
                   </div>
                 </Col>
@@ -663,7 +627,7 @@ export const AssistenzaPage = () => {
                     l&apos;informativa privacy
                   </a>
                 </p>
-                <div className="d-flex">
+                <div className={`${classes.submitContainer} d-flex mt-5`}>
                   <input type="submit" name="submit" disabled value={sendButtonLabel} className="btn btn-primary" />
                 </div>
               </div>

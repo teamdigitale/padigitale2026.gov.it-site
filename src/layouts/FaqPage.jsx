@@ -236,13 +236,7 @@ export const FaqPage = () => {
           </Row>
         </Container>
       </div>
-      <SupportSection
-        supportList={faq.support.cards}
-        title={faq.support.title}
-        handleToggle={() => {
-          dispatch({ type: 'SET:TOGGLE_MODAL_MESSAGE' });
-        }}
-      />
+      <SupportSection supportList={faq.support.cards} title={faq.support.title} />
     </>
   );
 };
