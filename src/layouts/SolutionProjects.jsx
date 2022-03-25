@@ -74,11 +74,11 @@ export const SolutionProjects = () => {
                 <span className="separator"></span>
               </BreadcrumbItem>
               <BreadcrumbItem className={classes.breadcrumbItem}>
-                <a href="/come-funziona">Come funziona</a>
+                <a href="/iniziativa">L&apos;iniziativa</a>
                 <span className="separator"></span>
               </BreadcrumbItem>
               <BreadcrumbItem active className={classes.breadcrumbItemActive}>
-                <a href="/come-funziona/presentazione-progetti">Presentazione progetti</a>
+                <a href="/iniziativa/presentazione-progetti">Presentazione progetti</a>
               </BreadcrumbItem>
             </Breadcrumb>
           </Col>

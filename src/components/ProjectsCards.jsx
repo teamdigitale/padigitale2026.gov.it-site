@@ -88,12 +88,20 @@ const useStyles = createUseStyles({
       marginBottom: '1.667rem',
       paddingRight: '0',
     },
+    '@media (max-width: 767px)': {
+      maxWidth: '100%',
+    },
   },
   cardFooter: {
     '@media (max-width: 992px)': {
       display: 'flex',
       width: '100%',
       justifyContent: 'center',
+    },
+    '& .btn': {
+      '@media (max-width: 767px)': {
+        width: '100%',
+      },
     },
   },
   columnCard: {
@@ -132,7 +140,7 @@ export const ProjectsCards = (item) => {
                 <img src="/assets/standard-solution.svg" alt=""></img>
               </div>
               <div className={classes.cardFooter}>
-                <Link to="/come-funziona/soluzioni-standard" className="btn text-uppercase btn-primary">
+                <Link to="/iniziativa/soluzioni-standard" className="btn text-uppercase btn-primary">
                   {projectsCardsItem.buttonLabelLeft}
                 </Link>
               </div>
@@ -149,7 +157,7 @@ export const ProjectsCards = (item) => {
                 <img src="/assets/projects-solution.svg" alt=""></img>
               </div>
               <div className={classes.cardFooter}>
-                <Link to="/come-funziona/presentazione-progetti" className="btn text-uppercase btn-primary">
+                <Link to="/iniziativa/presentazione-progetti" className="btn text-uppercase btn-primary">
                   {projectsCardsItem.buttonLabelRight}
                 </Link>
               </div>

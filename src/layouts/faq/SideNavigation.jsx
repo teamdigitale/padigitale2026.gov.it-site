@@ -54,7 +54,7 @@ const useStyles = createUseStyles({
                 padding: '0.111rem 0.555rem',
                 borderRadius: '0.888rem',
                 whiteSpace: 'nowrap',
-                border: '1px solid #0073E6',
+                border: '1px solid #06c',
                 '&.disabled': {
                   color: '#DAE3EC',
                   border: '1px solid #DAE3EC',
@@ -62,7 +62,7 @@ const useStyles = createUseStyles({
               },
               '& span': {
                 marginRight: '0',
-                color: '#0073E6',
+                color: '#06c',
                 textDecoration: 'none',
                 fontWeight: '600',
               },

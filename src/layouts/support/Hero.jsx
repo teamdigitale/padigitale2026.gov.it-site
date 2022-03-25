@@ -2,9 +2,38 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
 import PropTypes from 'prop-types';
-import { Breadcrumb } from '../../components/Breadcrumb';
+import { Breadcrumb, BreadcrumbItem } from 'design-react-kit';
 
 const useStyle = createUseStyles({
+  breadcrumb: {
+    padding: '1.563rem 0 0',
+    '& .breadcrumb': {
+      padding: '0.75rem 0',
+    },
+  },
+  breadcrumbItem: {
+    '& a': {
+      color: '#5B6F82',
+      fontWeight: '600',
+      textDecoration: 'underline',
+      fontSize: '18px',
+    },
+    '&::before': {
+      fontWeight: '600',
+      color: '#33485C',
+    },
+  },
+  breadcrumbItemActive: {
+    '& a': {
+      color: '#5B6F82',
+      textDecoration: 'none',
+      fontSize: '18px',
+    },
+    '&::before': {
+      fontWeight: '600',
+      color: '#33485C',
+    },
+  },
   supportHero: {
     composes: 'it-hero-wrapper',
     minHeight: 'auto',
@@ -23,6 +52,7 @@ const useStyle = createUseStyles({
         marginBottom: '30px',
         '@media (max-width: 991px)': {
           fontSize: '2.25rem',
+          textAlign: 'center',
         },
       },
       '& .support-hero-description': {
@@ -31,22 +61,48 @@ const useStyle = createUseStyles({
         lineHeight: '1.5',
         '@media (max-width: 991px)': {
           fontSize: '1.125rem',
+          textAlign: 'center',
         },
       },
     },
   },
 });
 
-export const HeroSupport = ({ title, subtitle }) => {
+export const HeroSupport = ({ title, subtitle, isFaq }) => {
   const classes = useStyle();
 
   return (
     <>
       <div className={classes.supportHero}>
         <div className="container px-3">
-        <Breadcrumb currentPage="Supporto" />
+        
+        {isFaq ? 
+        <Breadcrumb className={classes.breadcrumb}>
+         <BreadcrumbItem className={classes.breadcrumbItem}>
+           <a href="/">Home</a>
+           <span className="separator"></span>
+         </BreadcrumbItem>
+         <BreadcrumbItem className={classes.breadcrumbItem}>
+           <a href="/supporto">Supporto</a>
+         </BreadcrumbItem>
+         <BreadcrumbItem active className={classes.breadcrumbItemActive}>
+           <a href="/supporto/faq">FAQ</a>
+         </BreadcrumbItem>
+       </Breadcrumb>
+         :
+
+        <Breadcrumb className={classes.breadcrumb}>
+        <BreadcrumbItem className={classes.breadcrumbItem}>
+          <a href="/">Home</a>
+          <span className="separator"></span>
+        </BreadcrumbItem>
+        <BreadcrumbItem active className={classes.breadcrumbItemActive}>
+          <a href="/supporto">Supporto</a>
+        </BreadcrumbItem>
+      </Breadcrumb>
+        }
           <div className="row">
-            <div className="col-12 col-lg-6 offset-lg-1">
+            <div className="col-12 col-lg-8 col-xl-6 offset-lg-1">
               <div className="it-hero-text-wrapper">
                 <h3 className="no_toc">{title}</h3>
                 <p
@@ -65,4 +121,5 @@ export const HeroSupport = ({ title, subtitle }) => {
 HeroSupport.propTypes = {
   title: PropTypes.string,
   subtitle: PropTypes.string,
+  isFaq: PropTypes.bool,
 };

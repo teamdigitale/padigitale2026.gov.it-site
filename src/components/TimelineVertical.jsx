@@ -24,6 +24,9 @@ const useStyle = createUseStyles({
       top: '0',
       height: 'calc(100% - 72px)',
     },
+    '@media (max-width: 767px)': {
+      left: '17px',
+    },
   },
   scrollIndicatorActive: {
     composes: 'scroll-indicator-active',
@@ -39,6 +42,12 @@ const useStyle = createUseStyles({
     position: 'relative',
     '@media (max-width: 992px)': {
       marginLeft: '4.444rem',
+    },
+    '@media (max-width: 767px)': {
+      marginLeft: '3.444rem',
+    },
+    '&:last-child': {
+      marginBottom: '0',
     },
   },
   timelineNumber: {
@@ -60,8 +69,8 @@ const useStyle = createUseStyles({
       top: '0',
       left: '-66px',
     },
-    '@media (max-width: 574px)': {
-      left: '-57px',
+    '@media (max-width: 767px)': {
+      left: '-55px',
     },
     '&.active': {
       background: '#0066CC',
@@ -245,8 +254,8 @@ export const TimelineVertical = ({ item }) => {
 
   return (
     <>
-      <div className="container">
-        <Row className="mb-5 mt-md-5">
+      <div className="container px-3">
+        <Row className="mt-md-5">
           <Col xs="12" lg="11" className="offset-lg-1 mb-3 mb-lg-0">
             <div className={classes.timelineVertical}>
               <div className={classes.scrollIndicator}>

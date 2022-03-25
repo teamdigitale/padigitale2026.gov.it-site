@@ -36,6 +36,9 @@ const useStyles = createUseStyles({
       width: '1.1rem',
       height: '1.1rem',
     },
+    '& label': {
+      fontWeight: '400',
+    },
   },
   inputWrap: {
     backgroundImage: 'url("../assets/icon-search.svg")',
@@ -167,7 +170,7 @@ export const FaqPage = () => {
       <div className="sr-only">
         <h2>{faq.name}</h2>
       </div>
-      <HeroSupport title={faq.hero.title} subtitle={faq.hero.subtitle} />
+      <HeroSupport title={faq.hero.title} subtitle={faq.hero.subtitle} isFaq={true} />
       <div className="docs py-4 py-md-5">
         <Container className="px-3">
           <h3 id="question-section" className="sr-only">

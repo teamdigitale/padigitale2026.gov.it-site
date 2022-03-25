@@ -60,10 +60,6 @@ export const IndexPage = () => {
   return (
     <>
       <SEO title={seoTitle} description={seoDescription} />
-      <div className={classes.mobileTitle}>
-        <h1 className="title">{headerTitle}</h1>
-        <p className="description">{headerSubtitle}</p>
-      </div>
       <div className="sr-only">
         <h2>{name}</h2>
       </div>
@@ -76,7 +72,7 @@ export const IndexPage = () => {
         imageUrl="/assets/icona-home-banner.svg"
         imageAlt=""
         firstInternal={true}
-        firstButtonHref="/come-funziona"
+        firstButtonHref="/iniziativa"
         firstButtonLabel={heroMainBanner.firstButtonLabel}
         firstButtonAriaLabel={heroMainBanner.firstButtonAriaLabel}
         heroTitleId="home-hero-title"
@@ -90,9 +86,8 @@ export const IndexPage = () => {
         body={heroPnrr.body}
         imageUrl="/assets/home-candidature.svg"
         imageAlt=""
-        outlineBtn={true}
         firstInternal={true}
-        firstButtonHref="/come-funziona"
+        firstButtonHref="/come-partecipare/candida-pa"
         firstButtonLabel={heroPnrr.firstButtonLabel}
         firstButtonAriaLabel={heroPnrr.firstButtonAriaLabel}
         heroTitleId="home-hero-title-candidature"
@@ -105,9 +100,8 @@ export const IndexPage = () => {
         body={heroClassificazione.body}
         imageUrl="/assets/Classificazione_Dati_e_Servizi.svg"
         imageAlt=""
-        outlineBtn={true}
         firstInternal={true}
-        firstButtonHref="/come-funziona"
+        firstButtonHref="/iniziativa"
         firstButtonLabel={heroClassificazione.firstButtonLabel}
         firstButtonAriaLabel={heroClassificazione.firstButtonAriaLabel}
         heroTitleId="home-hero-title-classificazione"

@@ -18,9 +18,16 @@ const useStyles = createUseStyles({
     },
     '@media (min-width: 1200px)': {
       maxWidth: '300px',
-      right: '155px',
+      right: '260px',
+    },
+    '@media (max-width: 1200px)': {
+      top: '94px',
     },
     '@media (max-width: 991px)': {
+      width: '60%',
+      top: '0',
+    },
+    '@media (max-width: 767px)': {
       width: '80%',
     },
   },

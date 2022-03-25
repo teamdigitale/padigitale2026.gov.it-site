@@ -54,7 +54,7 @@ export const SolutionStandard = () => {
   useEffect(() => {
     dispatch({
       type: 'SET:ACTIVE_HEADER',
-      payload: { activeItem: 'come-funziona' },
+      payload: { activeItem: 'iniziativa' },
     });
     return () => {
       dispatch({ type: 'SET:ACTIVE_HEADER' });
@@ -74,11 +74,11 @@ export const SolutionStandard = () => {
                 <span className="separator"></span>
               </BreadcrumbItem>
               <BreadcrumbItem className={classes.breadcrumbItem}>
-                <a href="/come-funziona">Come funziona</a>
+                <a href="/iniziativa">L&apos;iniziativa</a>
                 <span className="separator"></span>
               </BreadcrumbItem>
               <BreadcrumbItem active className={classes.breadcrumbItemActive}>
-                <a href="/come-funziona/soluzioni-standard">Soluzioni standard</a>
+                <a href="/iniziativa/soluzioni-standard">Soluzioni standard</a>
               </BreadcrumbItem>
             </Breadcrumb>
           </Col>

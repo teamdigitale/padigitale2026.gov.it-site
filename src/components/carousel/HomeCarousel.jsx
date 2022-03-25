@@ -41,7 +41,7 @@ const useStyles = createUseStyles({
       '& h4.card-title': {
         color: '#0066CC',
         fontSize: '1.778rem',
-        fontWeight: 'bold',
+        fontWeight: '600',
         lineHeight: '1.43',
         marginBottom: '0.889rem',
         '@media (min-width: 992px)': {
