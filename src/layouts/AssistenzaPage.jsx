@@ -5,7 +5,7 @@ import { createUseStyles } from 'react-jss';
 import { announce } from '@react-aria/live-announcer';
 import { Row, Col, Input, Breadcrumb, BreadcrumbItem } from 'design-react-kit';
 import Select from 'react-select';
-import ReCAPTCHA from 'react-google-recaptcha';
+// import ReCAPTCHA from 'react-google-recaptcha';
 import content from '../../contents/opportunity-page/opportunity.yml';
 import notificationsLabel from '../../contents/notifications.yml';
 import labels from '../../contents/labels.yml';
@@ -612,12 +612,12 @@ export const AssistenzaPage = () => {
               <input type="hidden" name="recordType" value="0127Y00000229Rc" />
               <Row>
                 <Col xs={12}>
-                  <ReCAPTCHA
+                  {/* <ReCAPTCHA
                     sitekey="6LfW56weAAAAAIWHJnwlQ2lHNRCcd04QLYQyamww"
                     onChange={onChangeCaptcha}
                     className={`${formFilled ? ' mt-5' : 'd-none'}`}
                     id="captcha-container"
-                  />
+                  /> */}
                 </Col>
               </Row>
               <div className="justify-content-center flex-column align-items-start justify-content-md-start px-0 py-0 mt-5">
