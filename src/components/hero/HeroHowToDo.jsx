@@ -228,7 +228,7 @@ export const HeroHowToDo = ({ title, body, image, imageMob }) => {
                 </BreadcrumbItem>
               </Breadcrumb>
               <div className={`${classes.contentWrapper} d-flex flex-column`}>
-                <Col lg={6} xs={12} className="pr-3 pl-0">
+                <Col lg={6} xs={12} className="pr-lg-3 pl-0 pr-0">
                   <div className={classes.textWrapper}>
                     <HeroTitle title={title} className={classes.heroTitle} />
                     <HeroParagraph text={body} />
