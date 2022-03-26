@@ -184,13 +184,11 @@ export const CandidaPaPage = () => {
                   <span className="separator"></span>
                 </BreadcrumbItem>
                 <BreadcrumbItem active className={classes.breadcrumbItem}>
-                  <a href="/iniziativa/presentazione-progetti">L'iniziativa</a>
+                  <a href="/come-partecipare">Come partecipare</a>
                   <span className="separator"></span>
                 </BreadcrumbItem>
                 <BreadcrumbItem active className={classes.breadcrumbItemActive}>
-                  <a href="/iniziativa/presentazione-progetti">
-                    Candida la tua PA agli avvisi per la transizione digitale
-                  </a>
+                  <a href="#">Candida la tua PA agli avvisi per la transizione digitale</a>
                 </BreadcrumbItem>
               </Breadcrumb>
             </Col>

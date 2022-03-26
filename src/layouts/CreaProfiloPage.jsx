@@ -182,17 +182,15 @@ export const CreaProfiloPage = () => {
             <Col xs={12}>
               <Breadcrumb className={classes.breadcrumb}>
                 <BreadcrumbItem className={classes.breadcrumbItem}>
-                  <a href="/iniziativa">Home</a>
+                  <a href="/">Home</a>
                   <span className="separator"></span>
                 </BreadcrumbItem>
                 <BreadcrumbItem active className={classes.breadcrumbItem}>
-                  <a href="/iniziativa/presentazione-progetti">Come partecipare</a>
+                  <a href="/come-partecipare">Come partecipare</a>
                   <span className="separator"></span>
                 </BreadcrumbItem>
                 <BreadcrumbItem active className={classes.breadcrumbItemActive}>
-                  <a href="/iniziativa/presentazione-progetti">
-                    Attiva il profilo della tua PA: identità digitale e dati IPA
-                  </a>
+                  <a href="#">Attiva il profilo della tua PA: identità digitale e dati IPA</a>
                 </BreadcrumbItem>
               </Breadcrumb>
             </Col>
