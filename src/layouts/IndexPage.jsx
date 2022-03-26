@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { createUseStyles } from 'react-jss';
 import {
   name,
   heroMainBanner,
