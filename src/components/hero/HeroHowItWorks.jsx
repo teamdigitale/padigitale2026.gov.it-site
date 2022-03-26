@@ -21,6 +21,9 @@ const useStyles = createUseStyles({
       maxWidth: '450px',
       right: '155px',
     },
+    '@media (min-width: 1441px) and (max-width: 1680px)': {
+      right: '280px',
+    },
     '@media (min-width: 1700px)': {
       right: '385px',
     },
