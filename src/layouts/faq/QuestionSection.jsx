@@ -1,6 +1,6 @@
 /* eslint-disable sonarjs/no-duplicate-string */
 import React, { useState, useEffect, useContext } from 'react';
-import { Accordion, AccordionHeader, AccordionBody, Button } from 'design-react-kit';
+import { Accordion, AccordionHeader, AccordionBody } from 'design-react-kit';
 import { createUseStyles } from 'react-jss';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';

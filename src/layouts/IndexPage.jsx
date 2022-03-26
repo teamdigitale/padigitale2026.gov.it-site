@@ -14,34 +14,12 @@ import { HeroImage } from '../components/hero/HeroImage';
 import { HeroCarousel } from '../components/carousel/Carousel';
 import { SEO } from '../components/SEO';
 import seo from '../../contents/seo.yml';
-import labels from '../../contents/labels.yml';
 import { NoticesCarousel } from '../components/carousel/NoticesCarousel';
 import { SupportSection } from './faq/SupportSection';
 
 const { title: seoTitle, description: seoDescription } = seo.homePage;
-const { headerTitle, headerSubtitle } = labels;
-
-const useStyles = createUseStyles({
-  mobileTitle: {
-    composes: 'px-3',
-    '@media (min-width: 992px)': {
-      display: 'none',
-    },
-    '& .title': {
-      fontSize: '1.25rem',
-      color: '#0066CC',
-      fontWeight: 'bold',
-    },
-    '& .description': {
-      fontSize: '1.25rem',
-      color: '#0066CC',
-    },
-  },
-});
 
 export const IndexPage = () => {
-  const classes = useStyles();
-
   const [newsList, setNewsList] = useState([]);
 
   useEffect(() => {

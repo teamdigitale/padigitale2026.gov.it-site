@@ -10,7 +10,6 @@ import { SEO } from '../components/SEO';
 import seo from '../../contents/seo.yml';
 import content from '../../contents/candida-pa/candida-pa.yml';
 import { TimelineVerticalCards } from '../components/TimelineVerticalCards';
-import { HeroVideo } from '../components/HeroVideo';
 /* import { Totop } from '../components/Totop'; */
 import { SideNavigationAccordion } from './sideNavigationAccordion';
 
