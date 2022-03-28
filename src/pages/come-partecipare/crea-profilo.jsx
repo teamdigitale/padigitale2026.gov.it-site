@@ -11,6 +11,6 @@ const Page = () => {
       dispatch({ type: 'SET:ACTIVE_HEADER' });
     };
   }, [dispatch]);
-  return <CreaProfiloPage {...location} />;
+  return <CreaProfiloPage />;
 };
 export default Page;
