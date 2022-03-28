@@ -608,6 +608,7 @@ export const AssistenzaPage = () => {
                       wrap="soft"
                       required={true}
                       onInvalid={customInvalid}
+                      aria-label="messaggio"
                     ></textarea>
                     <label className={textareaDescriptionState === 'active' ? 'active' : ''} htmlFor="00N7Y000008tqdW">
                       {descriptionLabel}
