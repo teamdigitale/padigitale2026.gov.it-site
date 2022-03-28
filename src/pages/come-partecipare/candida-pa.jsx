@@ -11,6 +11,6 @@ const Page = () => {
       dispatch({ type: 'SET:ACTIVE_HEADER' });
     };
   }, [dispatch]);
-  return <CandidaPaPage {...location} />;
+  return <CandidaPaPage />;
 };
 export default Page;
