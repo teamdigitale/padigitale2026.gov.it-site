@@ -5,10 +5,14 @@ import PropTypes from 'prop-types';
 const useStyles = createUseStyles({
   body: {
     color: '#33485C',
-    fontSize: '1rem',
-    fontFamily: 'Titillium Web',
+    fontSize: '1.5rem',
+    lineHeight: '1.5',
     '@media (min-width: 992px)': {
-      maxWidth: '26.667rem',
+      fontSize: '1.333rem',
+    },
+    '@media (max-width: 767px)': {
+      textAlign: 'center',
+      display: 'block',
     },
   },
 });

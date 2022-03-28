@@ -25,7 +25,7 @@ export const SupportPage = () => {
       <div className="sr-only">
         <h2>{content.name}</h2>
       </div>
-      <HeroSupport title={title} subtitle={description} />
+      <HeroSupport title={title} subtitle={description} isFaq={false} />
       <FAQPreview />
       <Assistance />
       <SupportBanner text={content.bottomBanner} />

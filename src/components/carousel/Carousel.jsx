@@ -28,7 +28,7 @@ const useStyles = createUseStyles({
       '& h4.card-title': {
         color: '#0066CC',
         fontSize: '1.125rem',
-        fontWeight: 'bold',
+        fontWeight: '600',
         lineHeight: '1.26',
         '@media (min-width: 992px)': {
           minHeight: '2.889rem',
@@ -77,7 +77,7 @@ const useStyles = createUseStyles({
   },
   newsUpdateSection: {
     backgroundColor: '#fff',
-    padding: '6rem 0 4rem',
+    padding: '5.556rem 0',
     '& .swiper': {
       margin: '0 -1.111rem',
       paddingTop: '20px',
@@ -154,7 +154,7 @@ export const HeroCarousel = ({ content, title }) => {
   return (
     <>
       <div className={classes.newsUpdateSection}>
-        <section className="container" aria-labelledby="news-home-carousel">
+        <section className="container px-3" aria-labelledby="news-home-carousel">
           {title ? (
             <Row>
               <Col xs="12" lg="6">

@@ -103,7 +103,7 @@ export const ModalUpdatesButton = ({ label, buttonLabel, hasTitle }) => {
               </p>
               <Link
                 to="/ricevi-aggiornamenti"
-                aria-label="Ricevi aggiornamenti (Apri modale e compila il modulo)"
+                aria-label="Ricevi aggiornamenti (Vai alla pagina e compila il modulo)"
                 className={`${classes.button} text-white btn btn-primary`}
               >
                 {buttonLabel}

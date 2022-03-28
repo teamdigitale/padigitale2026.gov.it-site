@@ -139,7 +139,7 @@ export const KeypointSection = (props) => {
                     <Link
                       to={`/come-partecipare/${linkTo}`}
                       color="primary"
-                      className={`${classes.btnSection} btn btn-outline-primary`}
+                      className={`${classes.btnSection} btn btn-primary`}
                       aria-label={`Dettaglio punto chiave ${number} ${title}`}
                     >
                       SCOPRI DI PIÚ
@@ -183,7 +183,7 @@ export const KeypointSection = (props) => {
                   {button ? (
                     <Link
                       to={`/come-partecipare/${linkTo}`}
-                      className={`${classes.btnSection} btn btn-outline-primary`}
+                      className={`${classes.btnSection} btn btn-primary`}
                       aria-label={`Dettaglio punto chiave ${number} ${title}`}
                     >
                       SCOPRI DI PIÚ
@@ -221,7 +221,7 @@ export const KeypointSection = (props) => {
                   {button ? (
                     <Link
                       to={`/come-partecipare/${linkTo}`}
-                      className={`${classes.btnSection} btn btn-outline-primary`}
+                      className={`${classes.btnSection} btn btn-primary`}
                       aria-label={`Dettaglio punto chiave ${number} ${title}`}
                     >
                       SCOPRI DI PIÚ
@@ -295,7 +295,7 @@ export const KeypointSection = (props) => {
                   {button ? (
                     <Link
                       to={`/come-partecipare/${linkTo}`}
-                      className={`${classes.btnSection} btn btn-outline-primary`}
+                      className={`${classes.btnSection} btn btn-primary`}
                       aria-label={`Dettaglio punto chiave ${number} ${title}`}
                     >
                       SCOPRI DI PIÚ

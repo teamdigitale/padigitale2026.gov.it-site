@@ -46,7 +46,7 @@ const useStyles = createUseStyles({
               paddingLeft: '0',
               '& span': {
                 marginRight: '0',
-                color: '#0073E6',
+                color: '#06c',
                 textDecoration: 'none',
                 fontWeight: '400',
                 fontSize: '0.833rem',

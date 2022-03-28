@@ -17,7 +17,7 @@ const useStyle = createUseStyles({
     top: '0',
     left: '-40px',
     width: '4px',
-    height: 'calc(100% - 100px)',
+    height: 'calc(100% - 60px)',
     background: '#C5E1F9',
     display: 'none',
     '@media (max-width: 992px)': {

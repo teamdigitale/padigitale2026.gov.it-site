@@ -99,7 +99,6 @@ const useStyles = createUseStyles({
     flexDirection: 'column',
     padding: '20px 30px 20px 55px',
     position: 'relative',
-    textDecoration: 'none',
   },
   clip: {
     position: 'absolute',
@@ -125,6 +124,9 @@ const useStyles = createUseStyles({
     '@media (max-width: 991px)': {
       fontSize: '2.25rem',
     },
+    '@media (max-width: 767px)': {
+      textAlign: 'center',
+    },
   },
   subtitleUpdate: {
     fontSize: '1.333rem',
@@ -132,6 +134,9 @@ const useStyles = createUseStyles({
     lineHeight: '1.5',
     '@media (max-width: 991px)': {
       fontSize: '1.125rem',
+    },
+    '@media (max-width: 767px)': {
+      textAlign: 'center',
     },
   },
   heroImg: {
@@ -177,15 +182,15 @@ export const CreaProfiloPage = () => {
             <Col xs={12}>
               <Breadcrumb className={classes.breadcrumb}>
                 <BreadcrumbItem className={classes.breadcrumbItem}>
-                  <a href="/come-funziona">Home</a>
+                  <a href="/">Home</a>
                   <span className="separator"></span>
                 </BreadcrumbItem>
                 <BreadcrumbItem active className={classes.breadcrumbItem}>
-                  <a href="/come-funziona/presentazione-progetti">Come partecipare</a>
+                  <a href="/come-partecipare">Come partecipare</a>
                   <span className="separator"></span>
                 </BreadcrumbItem>
                 <BreadcrumbItem active className={classes.breadcrumbItemActive}>
-                  <a href="/come-funziona/presentazione-progetti">Crea il profilo della tua PA</a>
+                  <a href="#">Attiva il profilo della tua PA: identità digitale e dati IPA</a>
                 </BreadcrumbItem>
               </Breadcrumb>
             </Col>
@@ -238,12 +243,12 @@ export const CreaProfiloPage = () => {
               <section id="watch-video">
                 <HeroVideo />
               </section>
-              <Container className="pl-lg-4">
+              {/* <Container className="pl-lg-4">
                 <section id="to-read-more">
                   <h4 className={`${classes.contentTitle} mb-4`}>Per approfondire</h4>
                   <Row>
                     <Col xs={12} lg={6} xl={4}>
-                      <a href="#" className={classes.cardReadMore}>
+                      <a className={classes.cardReadMore}>
                         <img className={classes.clip} src="/assets/clip.svg" alt=""></img>
                         <span className={classes.cardTitle}>Banda ultra larga</span>
                         <span className={classes.cardInfo}>Scarica il PDF (3.7MB)</span>
@@ -251,7 +256,7 @@ export const CreaProfiloPage = () => {
                     </Col>
                   </Row>
                 </section>
-              </Container>
+              </Container> */}
             </div>
           </div>
         </Container>

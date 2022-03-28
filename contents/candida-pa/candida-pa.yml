@@ -15,12 +15,6 @@ sidebar:
   - sectionTitle: 4. Resta sempre aggiornato
     sectionId: confirm-subscription
     sectionActive: false
-  - sectionTitle: Guarda il video dedicato
-    sectionId: watch-video
-    sectionActive: false
-  - sectionTitle: Per approfondire
-    sectionId: to-read-more
-    sectionActive: false
 verticalTimeline:
   - index: 0
     title: 'Cerca gli avvisi per la tua PA'

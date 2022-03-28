@@ -19,18 +19,40 @@ const useStyle = createUseStyles({
   },
   heroTitle: {
     color: '#33485C',
-    fontSize: '1.333rem',
-    fontWeight: '700',
+    fontSize: '1.556rem',
+    fontWeight: '600',
     '@media (min-width: 992px)': {
       fontSize: '1.778rem',
+    },
+    '@media (max-width: 767px)': {
+      textAlign: 'center',
+      display: 'block',
     },
   },
   heroBtn: {
     textTransform: 'uppercase',
     marginTop: '1.5rem',
-    '@media (min-width: 992px)': {
-      marginTop: '2.667rem',
+    '@media (max-width: 991px)': {
+      marginRight: 'auto',
     },
+    '@media (min-width: 991px)': {
+      marginRight: 'auto',
+    },
+    '@media (max-width: 767px)': {
+      width: '100%',
+    },
+  },
+  heroGraphic: {
+    '& img': {
+      width: '100%',
+      maxWidth: '370px',
+      '@media (max-width: 991px)': {
+        maxWidth: '310px',
+      },
+      '@media (max-width: 767px)': {
+        width: '80%',
+      },
+    }
   },
 });
 
@@ -39,9 +61,9 @@ export const Assistance = () => {
 
   return (
     <React.Fragment>
-      <Hero className={classes.heroAssistanceBg}>
-        <div className="row align-items-center px-lg-5 flex-column-reverse flex-lg-row">
-          <div className="col-lg-6 p-0 mt-3 mt-lg-0 pr-lg-5">
+      <Hero className={`${classes.heroAssistanceBg} pt-0`}>
+        <div className="row align-items-center flex-column-reverse flex-lg-row">
+          <div className="offset-lg-1 col-lg-5 mt-3 mt-lg-0 pr-lg-5">
             <HeroTitle title={title} className={classes.heroTitle} />
             <HeroBody html={body} />
             <HeroCtaContainer>
@@ -50,7 +72,7 @@ export const Assistance = () => {
               </Link>
             </HeroCtaContainer>
           </div>
-          <HeroGraphic className="col-lg-6 text-center mt-4 mt-lg-0">
+          <HeroGraphic className={`${classes.heroGraphic} col-lg-6 text-center text-md-left text-lg-center mt-0 mt-md-4 mt-lg-0`}>
             <img
               src={`/assets/supporto.svg`}
               alt=""

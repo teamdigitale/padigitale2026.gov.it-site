@@ -14,7 +14,7 @@ hero:
         - item: Beneficiari
           anchor: beneficiari
 beneficiaries:
-  category: I Beneficiari
+  category: Beneficiari
   title: La digitalizzazione a misura di territorio
   categories:
     - icon: '/assets/icone-beneficiari/regioni.svg'
@@ -84,7 +84,7 @@ involved:
       image: '/assets/consip-logo.svg'
       text: <strong>Consip</strong> è la centrale acquisti della Pubblica Amministrazione. Per il PNRR <strong>mette a disposizione strumenti per agevolare la realizzazione degli interventi</strong>, semplificando il processo di acquisto delle PA attraverso contratti quadro o piattaforme per la negoziazione.
 timeline:
-  category: "Il Calendario"
+  category: "Calendario"
   title: "Le fasi per la transizione digitale della PA"
   cards:
     - id: 1
