@@ -175,7 +175,7 @@ export const HeroImageBackground = ({
     <Hero>
       <div className={`${classes.heroWrapper} ${overlap ? 'overlap' : ''} ${theme}`}>
         <section aria-labelledby={titleId} className={`${classes.heroContentContainer} px-3`}>
-          <Breadcrumb currentPage="Misure" noContainer={true}/>
+          <Breadcrumb currentPage="Misure" noContainer={true} />
           <Row>
             <Col xs="12" lg="5" className="offset-lg-1">
               <div className={`${classes.contentWrapper} ${theme} mt-5`}>

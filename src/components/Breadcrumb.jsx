@@ -48,4 +48,5 @@ export const Breadcrumb = ({ currentPage, noContainer }) => {
 
 Breadcrumb.propTypes = {
   currentPage: PropTypes.string.isRequired,
+  noContainer: PropTypes.bool,
 };
