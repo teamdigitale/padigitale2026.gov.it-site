@@ -343,7 +343,7 @@ export const AssistenzaPage = () => {
 
     const selectHandler = () => {
       noSelectValue = Array.prototype.slice.call(selectArr).find((select) => select.value === '');
-      noSelectValue ? (noSelectValue = false) : (noSelectValue = true);
+      noSelectValue ? (noSelectValue = true) : (noSelectValue = false);
       setFormFilled(!noInputValue && !noSelectValue);
     };
 
