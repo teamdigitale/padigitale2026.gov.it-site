@@ -214,7 +214,7 @@ export const CandidaPaPage = () => {
                 </section>
               </Container>
               <TimelineVerticalCards item={verticalTimeline} />
-              <Container className="pl-lg-4">
+              {/* <Container className="pl-lg-4">
                 <section id="to-read-more">
                   <h4 className={`${classes.contentTitle} mb-4`}>Per approfondire</h4>
                   <Row>
@@ -227,7 +227,7 @@ export const CandidaPaPage = () => {
                     </Col>
                   </Row>
                 </section>
-              </Container>
+              </Container> */}
             </div>
           </div>
         </Container>
