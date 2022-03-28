@@ -24,12 +24,12 @@ verticalTimeline:
   - index: 1
     title: 'Configura il pacchetto'
     icon: '/assets/configura-pacchetto.svg'
-    headerParagraph: 'Una volta identificato l’avviso di interesse, segui la configurazione guidata per definire il pacchetto sulla base delle esigenze della tua PA: puoi selezionare servizi e modalità implementative, e <strong>creare il documento di candidatura.</strong>'
+    headerParagraph: 'Una volta identificato l’avviso di interesse, segui la configurazione guidata per definire il pacchetto sulla base delle esigenze della tua PA: puoi selezionare servizi e modalità implementative, e <strong>creare la domanda di partecipazione.</strong>'
     sectionId: 'select-administration'
   - index: 2
-    title: 'Invia candidatura'
+    title: 'Invia la domanda di partecipazione'
     icon: '/assets/invia-candidatura.svg'
-    headerParagraph: 'In questa fase puoi visualizzare i dettagli <strong>del documento di candidatura</strong> che hai creato ed effettuare eventuali modifiche. Una volta firmato digitalmente potrai <strong>inviarlo attraverso la piattaforma per completare la candidatura.</strong>'
+    headerParagraph: 'In questa fase puoi visualizzare i dettagli <strong>della domanda di partecipazione</strong> che hai creato ed effettuare eventuali modifiche. Una volta firmato digitalmente potrai <strong>inviarlo attraverso la piattaforma per completare la candidatura.</strong>'
     sectionId: 'verify-data'
   - index: 3
     title: 'Ricevi aggiornamenti'

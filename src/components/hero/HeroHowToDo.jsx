@@ -27,7 +27,7 @@ const useStyles = createUseStyles({
     '@media (max-width: 992px)': {
       display: 'flex',
       justifyContent: 'center',
-      fontSize: '1.778rem',
+      fontSize: '2.25rem',
       textAlign: 'center',
     },
   },

@@ -437,6 +437,11 @@ export const AssistenzaPage = () => {
     }, 5000);
   };
 
+  const orgId = {
+    dev: '00D3N0000004K3l',
+    collaudo: '00D3N0000008lSz',
+  };
+
   const {
     selectArgument,
     emailValidationLabel,
@@ -500,7 +505,7 @@ export const AssistenzaPage = () => {
         <Row>
           <Col xs="12">
             <form
-              action="https://padigitale2026--dev1.my.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8"
+              action="https://padigitale2026--collaudo.my.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8"
               method="POST"
               className={classes.formMessage}
               id="assistance-form"
@@ -510,10 +515,10 @@ export const AssistenzaPage = () => {
               <input
                 type="hidden"
                 name="captcha_settings"
-                value='{"keyname":"DEV1","fallback":"true","orgId":"00D3N0000004K3l","ts":""}'
+                value={`{"keyname":"COLLTEST","fallback":"true","orgId":"${orgId.collaudo}","ts":""}`}
               />
               <input type="hidden" name="debug" value={1} />
-              <input type="hidden" name="orgid" value="00D3N0000004K3l" />
+              <input type="hidden" name="orgid" value={orgId.collaudo} />
               <Row className="mt-5">
                 <Col xs={12} md={6} lg={4}>
                   <Input
@@ -522,8 +527,8 @@ export const AssistenzaPage = () => {
                     maxLength="80"
                     aria-describedby="mandatory-label"
                     type="email"
-                    id="00N7Y000008tqdM"
-                    name="00N7Y000008tqdM"
+                    id="00N3N00000GYuAx"
+                    name="00N3N00000GYuAx"
                     aria-required="true"
                     onInvalid={customInvalid}
                     required={true}
@@ -536,8 +541,8 @@ export const AssistenzaPage = () => {
                     maxLength="40"
                     aria-describedby="mandatory-label"
                     type="text"
-                    id="00N7Y000008tqdb"
-                    name="00N7Y000008tqdb"
+                    id="00N3N00000GYuAr"
+                    name="00N3N00000GYuAr"
                     pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$"
                     onInvalid={customInvalid}
                   />
@@ -552,7 +557,7 @@ export const AssistenzaPage = () => {
                     <Select
                       id="argument-select"
                       inputId="argument-select-input"
-                      dataRefer="00N3N00000GCzFR"
+                      dataRefer="00N3N00000GYuAm"
                       options={selectArgument}
                       onChange={handleArgument}
                       placeholder={selectPlaceholder}
@@ -562,14 +567,14 @@ export const AssistenzaPage = () => {
                     />
                     <select
                       className="d-none"
-                      id="00N3N00000GCzFR"
-                      name="00N3N00000GCzFR"
+                      id="00N3N00000GYuAm"
+                      name="00N3N00000GYuAm"
                       title="Argomento"
                       required={true}
                       onInvalid={customInvalid}
                     >
                       <option value="Accesso al portale">Accesso al portale</option>
-                      <option value="Iscrizione alla newsletter">Iscrizione alla newsletter</option>
+                      <option value="Iscrizione newsletter">Iscrizione alla newsletter</option>
                       <option value="Generale">Generale</option>
                     </select>
                   </div>
@@ -581,8 +586,8 @@ export const AssistenzaPage = () => {
                     label={objectLabel}
                     aria-describedby="mandatory-label"
                     type="text"
-                    id="00N7Y000008tqdR"
-                    name="00N7Y000008tqdR"
+                    id="subject"
+                    name="subject"
                     aria-required="true"
                     required={true}
                     onInvalid={customInvalid}
@@ -598,8 +603,8 @@ export const AssistenzaPage = () => {
                       onInput={textareaInputHandler}
                       rows="3"
                       maxLength={textareaMaxLength}
-                      id="00N7Y000008tqdW"
-                      name="00N7Y000008tqdW"
+                      id="description"
+                      name="description"
                       wrap="soft"
                       required={true}
                       onInvalid={customInvalid}
@@ -615,7 +620,7 @@ export const AssistenzaPage = () => {
               </Row>
               <input type="hidden" id="external" name="external" value="1" />
               <input type="hidden" name="origin" value="Area pubblica" />
-              <input type="hidden" name="recordType" value="0127Y00000229Rc" />
+              <input type="hidden" name="recordType" value="0123N000003LK6mQAG" />
               <Row>
                 <Col xs={12}>
                   <ReCAPTCHA
