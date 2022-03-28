@@ -621,6 +621,7 @@ export const AssistenzaPage = () => {
               <input type="hidden" id="external" name="external" value="1" />
               <input type="hidden" name="origin" value="Area pubblica" />
               <input type="hidden" name="recordType" value="0123N000003LK6mQAG" />
+              <input type="hidden" id="priority" name="priority" value="Medium" />
               <Row>
                 <Col xs={12}>
                   <ReCAPTCHA
