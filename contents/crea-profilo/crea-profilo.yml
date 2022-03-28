@@ -18,9 +18,6 @@ sidebar:
   - sectionTitle: Guarda il video dedicato
     sectionId: watch-video
     sectionActive: false
-  - sectionTitle: Per approfondire
-    sectionId: to-read-more
-    sectionActive: false
 verticalTimeline:
   - index: 0
     title: 'Accedi tramite identità digitale'

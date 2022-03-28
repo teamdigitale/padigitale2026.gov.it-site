@@ -8,7 +8,7 @@ internalLinks:
     label: Misure
     linkTop: '/#mainTop'
   howitworks:
-    linkTo: '/come-funziona'
+    linkTo: '/iniziativa'
     label: L'iniziativa
     linkTop: '#mainTop'
   notices:
@@ -91,6 +91,10 @@ externalLinks:
     linkTo: https://ec.europa.eu/info/index_it
     ariaLabel: 'Unione Europea (Collegamento esterno - Apre su nuova scheda)'
     label: 'Unione Europea'
+  accedi:
+    linkTo: https://dev1-padigitale2026.cs128.force.com/padigitale2026/sis_SpidPage
+    ariaLabel: "Accedi all'area privata"
+    label: 'Accedi'
   repubblica:
     linkTo: https://www.governo.it/
     ariaLabel: 'Governo Italiano (Collegamento esterno - Apre su nuova scheda)'

@@ -238,6 +238,9 @@ const useStyles = createUseStyles({
     '@media (max-width: 991px)': {
       fontSize: '2.25rem',
     },
+    '@media (max-width: 767px)': {
+      textAlign: 'center',
+    },
   },
   subtitleUpdate: {
     fontSize: '1.333rem',
@@ -245,6 +248,9 @@ const useStyles = createUseStyles({
     lineHeight: '1.5',
     '@media (max-width: 991px)': {
       fontSize: '1.125rem',
+    },
+    '@media (max-width: 767px)': {
+      textAlign: 'center',
     },
   },
   mandatory: {
@@ -257,7 +263,7 @@ const useStyles = createUseStyles({
   heroImg: {
     maxWidth: '100%',
     '@media (max-width: 991px)': {
-      width: '64%',
+      width: '80%',
     },
   },
   breadcrumb: {
@@ -481,7 +487,7 @@ export const AssistenzaPage = () => {
             xs={12}
             md={6}
             lg={3}
-            className="offset-lg-2 d-flex justify-content-sm-end justify-content-lg-center mt-5 mt-md-0"
+            className="offset-lg-2 d-flex justify-content-center justify-content-sm-end justify-content-lg-center mt-5 mt-md-0"
           >
             <img src={`/assets/assistenza.svg`} alt="" className={classes.heroImg} />
           </Col>

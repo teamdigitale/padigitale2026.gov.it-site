@@ -10,7 +10,6 @@ import { SEO } from '../components/SEO';
 import seo from '../../contents/seo.yml';
 import content from '../../contents/candida-pa/candida-pa.yml';
 import { TimelineVerticalCards } from '../components/TimelineVerticalCards';
-import { HeroVideo } from '../components/HeroVideo';
 /* import { Totop } from '../components/Totop'; */
 import { SideNavigationAccordion } from './sideNavigationAccordion';
 
@@ -20,22 +19,32 @@ const { sidebar, verticalTimeline } = content;
 
 const useStyles = createUseStyles({
   breadcrumb: {
-    '@media (min-width: 991px)': {
-      marginLeft: '0.722rem',
-      marginBottom: '90px',
+    padding: '1.563rem 0 0',
+    '& .breadcrumb': {
+      padding: '0.75rem 0',
     },
   },
   breadcrumbItem: {
     '& a': {
-      color: '#06c',
-      fontWeight: '700',
+      color: '#5B6F82',
+      fontWeight: '600',
       textDecoration: 'underline',
+      fontSize: '18px',
+    },
+    '&::before': {
+      fontWeight: '600',
+      color: '#33485C',
     },
   },
   breadcrumbItemActive: {
     '& a': {
       color: '#5B6F82',
       textDecoration: 'none',
+      fontSize: '18px',
+    },
+    '&::before': {
+      fontWeight: '600',
+      color: '#33485C',
     },
   },
   navigationContainer: {
@@ -89,7 +98,6 @@ const useStyles = createUseStyles({
     flexDirection: 'column',
     padding: '20px 30px 20px 55px',
     position: 'relative',
-    textDecoration: 'none',
   },
   clip: {
     position: 'absolute',
@@ -115,6 +123,9 @@ const useStyles = createUseStyles({
     '@media (max-width: 425px)': {
       fontSize: '2.375rem',
     },
+    '@media (max-width: 767px)': {
+      textAlign: 'center',
+    },
   },
   subtitleUpdate: {
     fontSize: '24px',
@@ -122,6 +133,9 @@ const useStyles = createUseStyles({
     lineHeight: '30px',
     '@media (max-width: 425px)': {
       fontSize: '1.25rem',
+    },
+    '@media (max-width: 767px)': {
+      textAlign: 'center',
     },
   },
   heroImg: {
@@ -160,26 +174,26 @@ export const CandidaPaPage = () => {
       <div className="sr-only">
         <h2>{faq.name}</h2>
       </div>
-      <div className="docs pt-4 pb-5 py-md-5">
+      <div className="pb-5">
         <Container className="px-3">
           <Row>
             <Col xs={12}>
               <Breadcrumb className={classes.breadcrumb}>
                 <BreadcrumbItem className={classes.breadcrumbItem}>
-                  <a href="/come-funziona">Home</a>
+                  <a href="/">Home</a>
                   <span className="separator"></span>
                 </BreadcrumbItem>
                 <BreadcrumbItem active className={classes.breadcrumbItem}>
-                  <a href="/come-funziona/presentazione-progetti">Come partecipare</a>
+                  <a href="/come-partecipare">Come partecipare</a>
                   <span className="separator"></span>
                 </BreadcrumbItem>
                 <BreadcrumbItem active className={classes.breadcrumbItemActive}>
-                  <a href="/come-funziona/presentazione-progetti">Candida una PA agli avvisi</a>
+                  <a href="#">Candida la tua PA agli avvisi per la transizione digitale</a>
                 </BreadcrumbItem>
               </Breadcrumb>
             </Col>
           </Row>
-          <Row className="mb-5">
+          <Row className="mb-5 mt-5">
             <Col xs={12} lg={7}>
               <h4 className={classes.titleUpdate}>Candida la tua PA agli avvisi per la transizione digitale</h4>
               <div className={classes.subtitleUpdate}>
@@ -214,12 +228,12 @@ export const CandidaPaPage = () => {
                 </section>
               </Container>
               <TimelineVerticalCards item={verticalTimeline} />
-              <Container className="pl-lg-4">
+              {/* <Container className="pl-lg-4">
                 <section id="to-read-more">
                   <h4 className={`${classes.contentTitle} mb-4`}>Per approfondire</h4>
                   <Row>
                     <Col xs={12} lg={6} xl={4}>
-                      <a href="#" className={classes.cardReadMore}>
+                      <a className={classes.cardReadMore}>
                         <img className={classes.clip} src="/assets/clip.svg" alt=""></img>
                         <span className={classes.cardTitle}>Banda ultra larga</span>
                         <span className={classes.cardInfo}>Scarica il PDF (3.7MB)</span>
@@ -227,7 +241,7 @@ export const CandidaPaPage = () => {
                     </Col>
                   </Row>
                 </section>
-              </Container>
+              </Container> */}
             </div>
           </div>
         </Container>

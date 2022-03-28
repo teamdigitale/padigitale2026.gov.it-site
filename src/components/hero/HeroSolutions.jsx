@@ -1,7 +1,6 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
 import { Row, Col, Hero, Container } from 'design-react-kit';
-import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import { HeroTitle } from './HeroTitle';
 import { HeroBackground } from './HeroBackground';
@@ -15,19 +14,26 @@ const useStyles = createUseStyles({
       position: 'absolute',
       right: '122px',
       top: '54px',
-      maxWidth: '350px',
+      maxWidth: '300px',
     },
     '@media (min-width: 1200px)': {
-      maxWidth: '450px',
-      right: '155px',
+      maxWidth: '300px',
+      right: '260px',
     },
-    '@media (min-width: 1441px) and (max-width: 1680px)': {
-      right: '280px',
+    '@media (max-width: 1200px)': {
+      top: '94px',
     },
     '@media (min-width: 1700px)': {
       right: '385px',
     },
+    '@media (min-width: 1441px) and (max-width: 1680px)': {
+      right: '380px',
+    },
     '@media (max-width: 991px)': {
+      width: '60%',
+      top: '0',
+    },
+    '@media (max-width: 767px)': {
       width: '80%',
     },
   },
@@ -59,6 +65,7 @@ const useStyles = createUseStyles({
     display: 'flex',
     '&.it-hero-wrapper': {
       alignItems: 'flex-start',
+      minHeight: 'unset',
     },
     '&.it-hero-wrapper .it-hero-text-wrapper': {
       '@media (min-width: 992px)': {
@@ -115,105 +122,14 @@ const useStyles = createUseStyles({
       textAlign: 'center',
     },
   },
-  buttonContainer: {
-    composes: 'it-btn-container',
-    display: 'flex',
-    '& .btn+.btn': {
-      marginLeft: '1.875rem',
-    },
-    '@media (max-width: 992px)': {
-      justifyContent: 'center',
-      flexDirection: 'column',
-      alignItems: 'center',
-      '& .btn+.btn': {
-        marginLeft: '0',
-        marginTop: '1.875rem',
-      },
-    },
-  },
-  listWrapper: {
-    composes: 'mt-5',
-    display: 'flex',
-    '@media (max-width: 991px)': {
-      flexDirection: 'column',
-      textAlign: 'center',
-    },
-  },
-  list: {
-    composes: 'list',
-    display: 'flex',
-    flexDirection: 'column',
-    '& + .list': {
-      marginTop: '2.222rem',
-      '@media (min-width: 992px)': {
-        marginTop: '0',
-      },
-    },
-    '@media (min-width: 992px)': {
-      paddingRight: '1.333rem',
-      '& + .list': {
-        padding: '0 1.333rem',
-      },
-      '&:not(:last-child)': {
-        '& .list-items-wrapper': {
-          position: 'relative',
-        },
-        '& .list-items-wrapper::after': {
-          content: '""',
-          height: '100%',
-          width: '1px',
-          position: 'absolute',
-          top: '0',
-          right: '-1.333rem',
-          background: '#B6C5D6',
-        },
-      },
-    },
-  },
-  listTitle: {
-    composes: 'mb-3',
-    fontSize: '0.889rem',
-    color: '#33485C',
-    fontWeight: '600',
-    marginBottom: '0.889rem',
-  },
-  listItemsWrapper: {
-    composes: 'list-items-wrapper',
-    display: 'flex',
-    flexDirection: 'column',
-  },
-  listItem: {
-    composes: 'list-item',
-    textAlign: 'left',
-    color: '#0066CC',
-    fontWeight: '400',
-    marginBottom: '1rem',
-    textDecoration: 'none',
-    '@media (max-width: 991px)': {
-      textAlign: 'center',
-    },
-    '&:focus': {
-      outline: '2px solid #ff9900',
-      boxShadow: 'none',
-    },
-    '&:hover': {
-      textDecoration: 'underline',
-    },
-  },
 });
 
-export const HeroHowItWorks = ({ title, body, image, list }) => {
+export const HeroSolutions = ({ title, body, image }) => {
   const classes = useStyles();
-
-  const scrollIntoView = (id) => {
-    const item = document.querySelector('#' + id);
-    item.setAttribute('tabindex', '-1');
-    item.focus();
-  };
 
   return (
     <Hero className="position-relative">
-      <div className={`${classes.heroWrapper} bg-white`}>
+      <div className={`${classes.heroWrapper} bg-white pb-5`}>
         <Container className="pl-lg-2 pr-lg-2 pl-3 pr-3">
           <Row className="mt-5">
             <Col xs="12" lg="11" className="offset-lg-1 px-0">
@@ -223,28 +139,6 @@ export const HeroHowItWorks = ({ title, body, image, list }) => {
                     <div className={classes.textWrapper}>
                       <HeroTitle title={title} className={classes.heroTitle} />
                       <HeroParagraph text={body} className={classes.heroSubtitle} />
-                    </div>
-                    <div className={classes.listWrapper}>
-                      {list
-                        ? list.map((listItem) => (
-                            <div key={listItem.title} className={classes.list}>
-                              <span className={classes.listTitle}>{listItem.title}</span>
-                              <div className={classes.listItemsWrapper}>
-                                {listItem.items.map((item) => (
-                                  <React.Fragment key={item.item}>
-                                    <Link
-                                      to={`/iniziativa#` + item.anchor}
-                                      onClick={() => scrollIntoView(item.anchor)}
-                                      className={classes.listItem}
-                                    >
-                                      {item.item}
-                                    </Link>
-                                  </React.Fragment>
-                                ))}
-                              </div>
-                            </div>
-                          ))
-                        : ''}
                     </div>
                   </Col>
                   <Col xs={12} lg={6} className="d-flex d-lg-none mt-5 mt-lg-0 justify-content-center">
@@ -261,9 +155,8 @@ export const HeroHowItWorks = ({ title, body, image, list }) => {
   );
 };
 
-HeroHowItWorks.propTypes = {
+HeroSolutions.propTypes = {
   title: PropTypes.string,
   body: PropTypes.string,
   image: PropTypes.string,
-  list: PropTypes.array,
 };

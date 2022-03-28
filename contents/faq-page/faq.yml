@@ -73,7 +73,9 @@ questions:
             <li>1.7.2 Centri di facilitazione digitale (135 mln) - Ampliare l’esperienza dei "Centri di facilitazione digitale", punti di accesso fisici, solitamente situati in biblioteche, scuole e centri sociali, che forniscono ai cittadini formazione sia di persona che online sulle competenze digitali al fine di supportare l’inclusione digitale</li>            
           </ul>
       - title: Dove posso trovare informazioni su tutti gli investimenti di Italia domani, il Piano nazionale di ripresa e resilienza?
-        content: Per tutte le informazioni sugli investimenti di Italia domani, il Piano nazionale di ripresa e resilienza dell’Italia, è possibile visitare il sito ufficiale del Governo <a aria-label="Vai al sito Italia domani (Collegamento esterno - Apre su nuova scheda)" href='https://italiadomani.gov.it/'>https://italiadomani.gov.it/</a>
+        content: Per tutte le informazioni sugli investimenti di Italia domani, il Piano nazionale di ripresa e resilienza dell’Italia, è possibile visitare il sito ufficiale del Governo
+        linkLabel: Vai al sito Italia domani
+        link: 'https://italiadomani.gov.it/'
   - title: Richiesta dei fondi
     description: I bandi e gli avvisi degli investimenti di Italia digitale 2026 e tutte le indicazioni necessarie per scoprire le opportunità e candidarsi
     sectionId: richiesta-fondi
@@ -84,7 +86,7 @@ questions:
       - title: Quando saranno pubblicati gli avvisi?
         content: La pubblicazione dei primi avvisi è prevista per la primavera del 2022.
       - title: Come posso fare richiesta di accesso ai fondi?
-        content: A seconda della tipologia di misura e di PA, sarà possibile accedere alle risorse o attraverso delle <strong><a href="/come-funziona/#soluzioni-standard">soluzioni standard</a></strong> o attraverso la <strong><a href="/come-funziona/#presentazione-progetto">presentazione di progetti</a></strong>.
+        content: A seconda della tipologia di misura e di PA, sarà possibile accedere alle risorse o attraverso delle <strong><a aria-label="vai alla pagina soluzioni standard" href="/iniziativa/soluzioni-standard">soluzioni standard</a></strong> o attraverso la <strong><a aria-label="vai alla pagina presentazione progetti" href="/iniziativa/presentazione-progetti">presentazione di progetti</a></strong>.
       - title: Come funzionano gli avvisi a soluzioni standard?
         content: "Per le misure con una platea ampia di beneficiari (oltre 1.000 PA), è prevista una modalità di accesso per soluzioni standard. Un percorso semplificato e guidato che va dalla richiesta dei finanziamenti all’erogazione dei fondi. Le soluzioni standard hanno 3 caratteristiche principali:<ol><li>Soluzioni standard: ogni PA, in base a tipologia e dimensione, potrà accedere alle misure attraverso soluzioni standard, ciascuna con un valore economico predefinito. Non sarà necessario scrivere e presentare progetti per ricevere finanziamenti;</li><li>Registrazione unica: per semplificare l’accesso ai fondi del PNRR le amministrazioni potranno accedere - con un’unica registrazione - a più misure, richiedendo, per esempio, sia finanziamenti per la migrazione al cloud che per il miglioramento dei siti web;</li><li>Per obiettivi: per semplificare l’erogazione delle risorse, i contributi saranno riconosciuti alle amministrazioni sulla base del raggiungimento di specifici obiettivi predefiniti. Il processo di rendicontazione sarà quindi alleggerito, e non sarà necessario rendicontare le singole spese effettuate per ottenere i fondi.</li></ol>"
       - title: Come funzionano gli avvisi per cui è necessario presentare un progetto?
@@ -101,8 +103,8 @@ questions:
         content: In attesa della pubblicazione degli avvisi, è possibile richiedere di rimanere aggiornati. Lasciando i tuoi contatti verrai anche notificato su tutte le novità, le iniziative e su eventuali attività informative pensate per agevolare la conoscenza e la futura partecipazione agli avvisi.
       - title: È possibile richiedere supporto? 
         content: Sì, il sito prevede un modulo di contatto per richiedere assistenza e porre domande. Lasciando i propri contatti e selezionando l’argomento della richiesta, è possibile inviare un messaggio. Sarete poi ricontattati via mail dallo staff dedicato.
-        modalBtn: Rimani aggiornato
-        ariaLabel: testo aria label
+        updates: Rimani aggiornato
+        ariaLabel: Vai alla pagina per ricevere aggiornamenti
   - title: Erogazione delle risorse
     description: Le indicazioni pratiche per ricevere chiarimenti e aggiornamenti
     sectionId: erogazione
@@ -119,13 +121,12 @@ questions:
     description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
     sectionId: supporto-tecnico
     accordions:
-      - title: "Non ho ricevuto l'email di verifica: come posso finalizzare l’iscrizione agli aggiornamenti di PA Digitale 2026?" 
+      - title: "Non ho ricevuto l'email di verifica: come posso finalizzare l’iscrizione agli aggiornamenti di PA digitale 2026?" 
         content: "Se non trovi l’email che contiene il link per verificare l’indirizzo di posta sul quale vuoi ricevere gli aggiornamenti della piattaforma, ti consigliamo di:<ul><li>controllare che l’email non si trovi nelle cartelle “spam”, “posta indesiderata”, “cestino”;</li><li>assicurarti di cercare l’email nell’account di posta elettronica che hai indicato nel modulo di iscrizione;</li><li>se non hai ricevuto alcuna email, scrivici tramite il modulo di supporto.</li></ul>"
-        linkLabel: Scrivici
-        link: 'https://padigitale2026.gov.it/supporto'
-        ariaLabel: Vai al modulo di supporto 
+        assistance: Scrivici
+        ariaLabel: Vai alla pagina di assistenza
       - title: Come posso annullare la mia iscrizione agli aggiornamenti? 
-        content: Se desideri interrompere la ricezione di comunicazioni e aggiornamenti da PA Digitale 2026, usa il link “Annulla iscrizione” presente nella sezione finale di ogni email.
+        content: Se desideri interrompere la ricezione di comunicazioni e aggiornamenti da PA digitale 2026, usa il link “Annulla iscrizione” presente nella sezione finale di ogni email.
 noResults: Nessun risultato trovato
 support:
   tag: Supporto
