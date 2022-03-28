@@ -497,7 +497,7 @@ const NavHeader = () => {
               </NavItem>
               <NavItem active>
                 <Link
-                  to="https://dev1-padigitale2026.cs128.force.com/padigitale2026/Pa_digitale2026_avvisi"
+                  to="https://collaudo-padigitale2026.cs128.force.com/padigitale2026/Pa_digitale2026_avvisi"
                   className="nav-link"
                 >
                   <span className="font-weight-semibold">Gli avvisi</span>
