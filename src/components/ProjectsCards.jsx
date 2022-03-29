@@ -88,12 +88,20 @@ const useStyles = createUseStyles({
       marginBottom: '1.667rem',
       paddingRight: '0',
     },
+    '@media (max-width: 767px)': {
+      maxWidth: '100%',
+    },
   },
   cardFooter: {
     '@media (max-width: 992px)': {
       display: 'flex',
       width: '100%',
       justifyContent: 'center',
+    },
+    '& .btn': {
+      '@media (max-width: 767px)': {
+        width: '100%',
+      },
     },
   },
   columnCard: {

@@ -8,28 +8,23 @@ keypoints:
   title: 'Come fare per'
   list:
     - number: "01"
-      image: 'keypoint-1.svg'
+      image: 'computer-2.svg'
       title: 'Attivare la tua PA'
       desc: 'Per partecipare agli avvisi pubblici e richiedere i finanziamenti'
     - number: "02"
-      image: 'keypoint-2.svg'
+      image: 'icon-chat.svg'
+      title: 'Ricevere assistenza'
+      desc: 'Per risolvere dubbi o problemi riguardo la piattaforma e le candidature.'
+    - number: "03"
+      image: 'invia-candidatura.svg'
       title: 'Candidare una PA agli avvisi'
       desc: 'Attraverso la creazione e l’invio del documento di candidatura.'
-    - number: "03"
-      image: 'keypoint-3.svg'
-      title: 'Classificare dati e servizi'
-      desc: 'Per abilitare il processo di migrazione delle PA al cloud.'
-      transparent: true
-    - number: "04"
-      image: 'keypoint-4.svg'
-      title: 'Realizzare progetti'
-      desc: 'Per risolvere dubbi o problemi riguardo la piattaforma e le candidature.'
-      transparent: true
 sectionFirst:
   number: '01'
   title: 'Attivare la tua  PA'
   text: 'L’attivazione del profilo della PA <strong>è il primo passaggio per partecipare agli avvisi pubblici</strong> e richiedere i finanziamenti per avviare il processo di transizione digitale.</br></br>Il rappresentante legale, o un suo incaricato, può accedere alla piattaforma grazie a SPID o CIE e, attraverso un percorso guidato, completare il processo di attivazione.'
   button: true
+  linkTo: "crea-profilo"
   image: 'kp-section-1.svg'
   bottomSection: false
   BottomImage1: 'bottom-1-1.svg'
@@ -41,8 +36,8 @@ sectionSecond:
   title: 'Candidare una PA agli avvisi'
   text: In base alla tipologia e agli obiettivi della PA, è possibile identificare gli avvisi pubblici più idonei ad avviare il processo di transizione digitale.<br/><br/>Una volta identificato l'avviso, è possibile candidare una PA attraverso un processo guidato, che permette di <strong>comporre il documento di candidatura e inviarlo tramite la piattaforma.</strong>
   button: true
+  linkTo: "candida-pa"
   image: 'kp-section-2.svg'
-  reverse: true
   bottomSection: false
   BottomImage1: 'bottom-1-1.svg'
   BottomImage2: 'bottom-1-2.svg'
@@ -60,5 +55,5 @@ sectionFourth:
   title: 'Ricevere assistenza'
   text: La piattaforma PA digitale 2026 permette di candidare le PA agli avvisi pubblici e di gestire le attività attraverso l’area riservata.<br><br> Qualsiasi dubbio o problema si possa riscontrare, è possibile <strong>trovare le risposte alle domande più comuni e chiedere assistenza dedicata</strong>.
   button: true
-  image: 'kp-section-4.svg'
+  image: 'assistenza.svg'
   reverse: true

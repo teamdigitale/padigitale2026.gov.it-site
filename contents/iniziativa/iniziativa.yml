@@ -1,5 +1,5 @@
-title: Come funziona - PA digitale 2026
-name: Come Funziona - PA digitale 2026
+title: L'iniziativa - PA digitale 2026
+name: L'iniziativa - PA digitale 2026
 hero:
   title: "PA digitale 2026: scopri l'iniziativa"
   body: Candida la tua amministrazione agli avvisi pubblici per <strong>richiedere le risorse e avviare il processo di transizione digitale</strong>.
@@ -14,7 +14,7 @@ hero:
         - item: Beneficiari
           anchor: beneficiari
 beneficiaries:
-  category: I Beneficiari
+  category: Beneficiari
   title: La digitalizzazione a misura di territorio
   categories:
     - icon: '/assets/icone-beneficiari/regioni.svg'
@@ -84,7 +84,7 @@ involved:
       image: '/assets/consip-logo.svg'
       text: <strong>Consip</strong> è la centrale acquisti della Pubblica Amministrazione. Per il PNRR <strong>mette a disposizione strumenti per agevolare la realizzazione degli interventi</strong>, semplificando il processo di acquisto delle PA attraverso contratti quadro o piattaforme per la negoziazione.
 timeline:
-  category: "Il Calendario"
+  category: "Calendario"
   title: "Le fasi per la transizione digitale della PA"
   cards:
     - id: 1

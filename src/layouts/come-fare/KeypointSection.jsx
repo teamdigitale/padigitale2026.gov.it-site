@@ -18,12 +18,6 @@ const useStyle = createUseStyles({
       lineHeight: '2.222rem',
     },
   },
-  keypointSectionNumber: {
-    fontSize: '0.889rem',
-    fontWeight: '600',
-    color: '#33485C',
-    marginBottom: '0.556rem',
-  },
   keypointSectionImage: {
     width: '100%',
   },
@@ -115,6 +109,7 @@ export const KeypointSection = (props) => {
     BottomImage2,
     BottomLinkLabel1,
     BottomLinkLabel2,
+    linkTo,
   } = props.item;
 
   return (
@@ -136,9 +131,9 @@ export const KeypointSection = (props) => {
                   <p className={classes.paragraph} dangerouslySetInnerHTML={{ __html: text }}></p>
                   {button ? (
                     <Link
-                      to="/come-partecipare/crea-profilo"
+                      to={`/come-partecipare/${linkTo}`}
                       color="primary"
-                      className={`${classes.btnSection} btn btn-outline-primary`}
+                      className={`${classes.btnSection} btn btn-primary`}
                       aria-label={`Dettaglio punto chiave ${number} ${title}`}
                     >
                       SCOPRI DI PIÚ
@@ -174,15 +169,14 @@ export const KeypointSection = (props) => {
                   <img className={classes.keypointSectionImage} src={`/assets/come-fare/${image}`} alt="" />
                 </Col>
                 <Col xs="12" lg="5" className="offset-lg-1">
-                  <h3 className={classes.keypointSectionNumber}>{number}</h3>
                   <h4 id={`keypoint-section-title-${number}`} className={classes.keypointSectionTitle}>
                     {title}
                   </h4>
                   <p className={classes.paragraph} dangerouslySetInnerHTML={{ __html: text }}></p>
                   {button ? (
                     <Link
-                      to="/come-partecipare/crea-profilo"
-                      className={`${classes.btnSection} btn btn-outline-primary`}
+                      to={`/come-partecipare/${linkTo}`}
+                      className={`${classes.btnSection} btn btn-primary`}
                       aria-label={`Dettaglio punto chiave ${number} ${title}`}
                     >
                       SCOPRI DI PIÚ
@@ -219,8 +213,8 @@ export const KeypointSection = (props) => {
                   <p className={classes.paragraph} dangerouslySetInnerHTML={{ __html: text }}></p>
                   {button ? (
                     <Link
-                      to="/come-partecipare/crea-profilo"
-                      className={`${classes.btnSection} btn btn-outline-primary`}
+                      to={`/come-partecipare/${linkTo}`}
+                      className={`${classes.btnSection} btn btn-primary`}
                       aria-label={`Dettaglio punto chiave ${number} ${title}`}
                     >
                       SCOPRI DI PIÚ
@@ -293,8 +287,8 @@ export const KeypointSection = (props) => {
                   <p className={classes.paragraph} dangerouslySetInnerHTML={{ __html: text }}></p>
                   {button ? (
                     <Link
-                      to="/come-partecipare/crea-profilo"
-                      className={`${classes.btnSection} btn btn-outline-primary`}
+                      to={`/come-partecipare/${linkTo}`}
+                      className={`${classes.btnSection} btn btn-primary`}
                       aria-label={`Dettaglio punto chiave ${number} ${title}`}
                     >
                       SCOPRI DI PIÚ

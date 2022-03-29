@@ -66,10 +66,13 @@ const useStyles = createUseStyles({
     whiteSpace: 'nowrap',
     fontWeight: '600',
     margin: 0,
+    '@media (max-width: 767px)': {
+      textAlign: 'center',
+    },
   },
   noticesSection: {
     backgroundColor: '#fff',
-    padding: '3rem 0 4rem',
+    padding: '5.556rem 0',
     '& .swiper': {
       margin: '0 -1.111rem',
       '@media (max-width: 992px)': {
@@ -88,6 +91,11 @@ const useStyles = createUseStyles({
     },
     '& .swiper-pagination.swiper-pagination-bullets .swiper-pagination-bullet': {
       margin: '0 0.889rem',
+    },
+    '& .btn': {
+      '@media (max-width: 767px)': {
+        width: '100%',
+      },
     },
   },
   noticeLabel: {
@@ -140,7 +148,7 @@ export const NoticesCarousel = ({ content, title }) => {
   return (
     <>
       <div className={classes.noticesSection}>
-        <section className="container" aria-labelledby="news-bandi-carousel">
+        <section className="container px-3" aria-labelledby="news-bandi-carousel">
           {title ? (
             <Row>
               <Col xs="12" lg="4">
@@ -165,7 +173,10 @@ export const NoticesCarousel = ({ content, title }) => {
             idCarousel="notices-carousel"
           />
           <div className="d-flex justify-content-center">
-            <Link to="/" className="btn text-uppercase btn-primary">
+            <Link
+              to="https://dev1-padigitale2026.cs128.force.com/padigitale2026/Pa_digitale2026_avvisi"
+              className="btn text-uppercase btn-primary"
+            >
               scopri tutti
             </Link>
           </div>

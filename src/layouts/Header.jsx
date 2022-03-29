@@ -395,17 +395,11 @@ const SlimHeader = () => {
         >
           <img className="d-none d-lg-block" src="/assets/eu-flag.svg" alt={externalLinks.eu.label}></img>
         </ExternalLink>
-        <ExternalLink
-          className={classes.login}
-          linkTo="#"
-          ariaLabel={externalLinks.eu.ariaLabel}
-          href="#"
-          target="_blank"
-        >
+        <Link className={classes.login} to={externalLinks.accedi.linkTo} ariaLabel={externalLinks.accedi.ariaLabel}>
           <img src="/assets/user-icon.svg" alt={externalLinks.eu.label}></img>
           <img className="mobile" src="/assets/user-icon-dark.svg" alt={externalLinks.eu.label}></img>
-          <span>Accedi</span>
-        </ExternalLink>
+          <span>{externalLinks.accedi.label}</span>
+        </Link>
       </HeaderContent>
     </HeaderReactKit>
   );
@@ -432,7 +426,7 @@ const CenterHeader = () => {
         </div>
         <div className={classes.headerLabel} aria-label="PA digitale 2026">
           <span className="title-link">PA digitale 2026</span>
-          <span className="subtitle-link">Le risorse per una PA protagonista della transazione digitale</span>
+          <span className="subtitle-link">Le risorse per una PA protagonista della transizione digitale</span>
         </div>
       </HeaderContent>
     </HeaderReactKit>
@@ -498,9 +492,12 @@ const NavHeader = () => {
                 </Link>
               </NavItem>
               <NavItem active>
-                <ExternalLink to="#" className="nav-link">
-                  <span className="font-weight-semibold">Gli avvisi</span>
-                </ExternalLink>
+                <Link
+                  to="https://collaudo-padigitale2026.cs128.force.com/padigitale2026/Pa_digitale2026_avvisi"
+                  className="nav-link"
+                >
+                  <span className="font-weight-semibold">Avvisi</span>
+                </Link>
               </NavItem>
               <NavItem>
                 <Link

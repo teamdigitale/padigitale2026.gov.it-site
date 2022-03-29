@@ -104,7 +104,7 @@ export const ComeFunzionaPage = () => {
       />
       <ProjectsCards item={content.projectsCardsItem} />
       <Involved title={content.involved.title} category={content.involved.category} cards={content.involved.cards} />
-      <Timeline content={content.timeline} title="Il calendario" />
+      <Timeline content={content.timeline} title="Calendario" />
       <Beneficiaries item={content.beneficiaries} />
     </>
   );

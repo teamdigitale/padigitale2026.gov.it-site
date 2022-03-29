@@ -51,14 +51,13 @@ const useStyles = createUseStyles({
     },
   },
   outlineBtn: {
-    backgroundColor: '#fff',
+    backgroundColor: 'transparent',
     border: '1px solid #06c',
     color: '#06c',
   },
   heroImage: {
     composes: 'row align-items-center',
     '@media (min-width: 768px)': {
-      flexWrap: 'nowrap !important',
       '& .hero-graphic-img': {
         order: 2,
       },
@@ -81,8 +80,11 @@ const useStyles = createUseStyles({
       },
     },
     '& .graphic-image': {
+      '@media (max-width: 991px)': {
+        maxWidth: '50%',
+      },
       '@media (max-width: 767px)': {
-        maxWidth: '15.6rem',
+        maxWidth: '80%',
         margin: '0 auto 2.5rem',
       },
     },
@@ -113,9 +115,17 @@ const useStyles = createUseStyles({
     '&.hero-main .btn': {
       backgroundColor: '#fff',
       color: '#0066CC',
-      fontWeight: 'bold',
+      fontWeight: '600',
       '&:hover': {
         color: '#004d99',
+      },
+      '@media (max-width: 767px)': {
+        width: '100%',
+      },
+    },
+    '& .btn': {
+      '@media (max-width: 767px)': {
+        width: '100%',
       },
     },
   },
@@ -151,7 +161,7 @@ export const HeroImage = ({
       className={`${dark ? classes.heroSectionDark : ''} ${light ? classes.heroSectionLight : ''}`}
     >
       <div className={`${classes.heroImage} ${smallText ? 'hero-small' : ''} ${mainHero ? 'hero-main' : ''}`}>
-        <div className="col-lg-6 offset-lg-1 p-lg-0 mt-3 mt-lg-0 pr-lg-5">
+        <div className="col-lg-6 col-12 offset-lg-1 p-lg-0 mt-3 mt-lg-0 pr-lg-5">
           <div className="text-center text-lg-left">
             {category ? <HeroCategory title={category} className={classes.heroCategory} /> : ''}
             <HeroTitle Tag="h2" id={heroTitleId} title={title} className={classes.heroTitle} />
@@ -161,7 +171,7 @@ export const HeroImage = ({
             <HeroCtaContainer>
               {firstInternal ? (
                 <Link
-                  className={`btn text-uppercase mx-4 ml-lg-0 my-3 my-md-0 btn-primary ${
+                  className={`btn text-uppercase ml-lg-0 my-3 my-md-0 btn-primary ${
                     outlineBtn ? classes.outlineBtn : ''
                   }`}
                   to={firstButtonHref}
@@ -173,7 +183,7 @@ export const HeroImage = ({
                 <ExternalLink
                   linkTo={firstButtonHref}
                   ariaLabel={firstButtonAriaLabel}
-                  className="btn text-uppercase mx-4 ml-lg-0 my-3 my-md-0 btn-primary"
+                  className="btn text-uppercase ml-lg-0 my-3 my-md-0 btn-primary"
                 >
                   {firstButtonLabel}
                 </ExternalLink>
@@ -181,8 +191,8 @@ export const HeroImage = ({
               {secondButtonLabel ? (
                 <Link
                   ariaLabel={secondButtonAriaLabel}
-                  className="btn text-uppercase mx-4 ml-lg-0 my-3 my-md-0 btn-outline-primary"
-                  to="/come-funziona#beneficiari"
+                  className="btn text-uppercase ml-lg-0 my-3 my-md-0 btn-outline-primary"
+                  to="/iniziativa#beneficiari"
                   onClick={() =>
                     dispatch({
                       type: 'SET:HOW_SECTION_ID',
@@ -200,7 +210,7 @@ export const HeroImage = ({
             ''
           )}
         </div>
-        <HeroGraphic className="col-lg-5 d-flex justify-content-sm-center hero-graphic-img">
+        <HeroGraphic className="col-lg-5 col-12 d-flex mt-5 mt-lg-0 justify-content-sm-center justify-content-lg-end hero-graphic-img">
           <img className="graphic-image" src={imageUrl} alt={imageAlt} />
         </HeroGraphic>
       </div>

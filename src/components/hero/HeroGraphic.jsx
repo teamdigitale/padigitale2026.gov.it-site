@@ -4,11 +4,6 @@ import PropTypes from 'prop-types';
 
 const useStyles = createUseStyles({
   heroGraphic: {},
-  '@media (max-width: 992px)': {
-    heroGraphic: {
-      order: -1,
-    },
-  },
 });
 
 export const HeroGraphic = ({ className = '', children }) => {

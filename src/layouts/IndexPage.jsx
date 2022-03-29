@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { createUseStyles } from 'react-jss';
 import {
   name,
   heroMainBanner,
@@ -14,34 +13,12 @@ import { HeroImage } from '../components/hero/HeroImage';
 import { HeroCarousel } from '../components/carousel/Carousel';
 import { SEO } from '../components/SEO';
 import seo from '../../contents/seo.yml';
-import labels from '../../contents/labels.yml';
 import { NoticesCarousel } from '../components/carousel/NoticesCarousel';
 import { SupportSection } from './faq/SupportSection';
 
 const { title: seoTitle, description: seoDescription } = seo.homePage;
-const { headerTitle, headerSubtitle } = labels;
-
-const useStyles = createUseStyles({
-  mobileTitle: {
-    composes: 'px-3',
-    '@media (min-width: 992px)': {
-      display: 'none',
-    },
-    '& .title': {
-      fontSize: '1.25rem',
-      color: '#0066CC',
-      fontWeight: 'bold',
-    },
-    '& .description': {
-      fontSize: '1.25rem',
-      color: '#0066CC',
-    },
-  },
-});
 
 export const IndexPage = () => {
-  const classes = useStyles();
-
   const [newsList, setNewsList] = useState([]);
 
   useEffect(() => {
@@ -60,10 +37,6 @@ export const IndexPage = () => {
   return (
     <>
       <SEO title={seoTitle} description={seoDescription} />
-      <div className={classes.mobileTitle}>
-        <h1 className="title">{headerTitle}</h1>
-        <p className="description">{headerSubtitle}</p>
-      </div>
       <div className="sr-only">
         <h2>{name}</h2>
       </div>
@@ -90,7 +63,6 @@ export const IndexPage = () => {
         body={heroPnrr.body}
         imageUrl="/assets/home-candidature.svg"
         imageAlt=""
-        outlineBtn={true}
         firstInternal={true}
         firstButtonHref="/iniziativa"
         firstButtonLabel={heroPnrr.firstButtonLabel}
@@ -105,7 +77,6 @@ export const IndexPage = () => {
         body={heroClassificazione.body}
         imageUrl="/assets/Classificazione_Dati_e_Servizi.svg"
         imageAlt=""
-        outlineBtn={true}
         firstInternal={true}
         firstButtonHref="/iniziativa"
         firstButtonLabel={heroClassificazione.firstButtonLabel}

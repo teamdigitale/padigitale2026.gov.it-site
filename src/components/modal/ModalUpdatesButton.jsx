@@ -22,6 +22,7 @@ const useStyles = createUseStyles({
     },
     '& .btn': {
       whiteSpace: 'nowrap',
+      color: '#fff',
       '@media (max-width: 991px)': {
         marginTop: '20px',
       },
@@ -103,8 +104,8 @@ export const ModalUpdatesButton = ({ label, buttonLabel, hasTitle }) => {
               </p>
               <Link
                 to="/ricevi-aggiornamenti"
-                aria-label="Ricevi aggiornamenti (Apri modale e compila il modulo)"
-                className={`${classes.button} text-white btn btn-primary`}
+                aria-label="Ricevi aggiornamenti (Vai alla pagina e compila il modulo)"
+                className={`${classes.button} btn btn-primary`}
               >
                 {buttonLabel}
               </Link>

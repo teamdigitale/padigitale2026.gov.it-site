@@ -6,7 +6,7 @@ import { Link } from 'gatsby';
 
 const useStyles = createUseStyles({
   layout: {
-    composes: 'offset-lg-1 px-3',
+    composes: 'offset-lg-1 pl-0',
     '& a': {
       '&:focus': {
         // eslint-disable-next-line sonarjs/no-duplicate-string
@@ -110,6 +110,10 @@ const useStyles = createUseStyles({
       },
     },
   },
+  sectionMuted: {
+    background: '#f2f7fc',
+    padding: '5.556rem 0',
+  },
 });
 
 export const SupportSection = (props) => {
@@ -117,11 +121,11 @@ export const SupportSection = (props) => {
   const { title, supportList, buttonLabel } = props;
   return (
     <>
-      <section className="section section-muted" aria-labelledby="support-section">
+      <section className={classes.sectionMuted} aria-labelledby="support-section">
         <h3 id="support-section" className="sr-only">
           Supporto
         </h3>
-        <div className="container">
+        <div className="container px-3">
           <Row>
             <Col md={8} lg={6} className={classes.layout}>
               <p className={classes.tag}>Supporto</p>

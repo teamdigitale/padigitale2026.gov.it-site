@@ -20,8 +20,8 @@ export const Hero = ({
     className
   );
   const containerClass = classNames('container', {
-    'py-xl-5': yPaddingXLScreen,
-    'px-3 px-md-0': xPadding,
+    'py-3': yPaddingXLScreen,
+    'px-3': xPadding,
   });
   return (
     <div className={heroClasses}>

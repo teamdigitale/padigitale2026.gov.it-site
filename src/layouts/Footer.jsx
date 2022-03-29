@@ -106,7 +106,9 @@ const useStyle = createUseStyles({
   listItem: {
     composes: 'list-inline-item',
     display: 'inline-flex',
-    color: '#fff',
+    '& a': {
+      color: '#27D1D6',
+    },
     '@media (max-width: 767px)': {
       flexDirection: 'column',
       '&+.list-inline-item': {

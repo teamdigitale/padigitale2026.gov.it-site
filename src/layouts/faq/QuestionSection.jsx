@@ -1,8 +1,9 @@
 /* eslint-disable sonarjs/no-duplicate-string */
 import React, { useState, useEffect, useContext } from 'react';
-import { Accordion, AccordionHeader, AccordionBody, Button } from 'design-react-kit';
+import { Accordion, AccordionHeader, AccordionBody } from 'design-react-kit';
 import { createUseStyles } from 'react-jss';
 import PropTypes from 'prop-types';
+import { Link } from 'gatsby';
 import { GlobalStateContext } from '../../context/globalContext';
 import { ExternalLink } from '../../components/ExternalLink';
 
@@ -56,7 +57,7 @@ const useStyles = createUseStyles({
   linkAccordion: {
     marginTop: '2.222rem',
     '& a': {
-      fontWeight: 'bold',
+      fontWeight: '600',
       textDecoration: 'none',
       display: 'flex',
       alignItems: 'center',
@@ -68,34 +69,15 @@ const useStyles = createUseStyles({
   },
   modalLink: {
     marginTop: '2.222rem',
-    '&.btn-secondary': {
-      backgroundColor: 'transparent',
-      border: 'none',
-      boxShadow: 'unset',
-      color: '#06c',
-      padding: '0',
-      display: 'inline-flex',
-      alignItems: 'center',
-      fontSize: '1rem',
-      fontWeight: 'bold',
-
-      '&:hover': {
-        color: '#004080',
-      },
-      '&:not(:disabled):not(.disabled):active': {
-        backgroundColor: 'transparent',
-        border: 'none',
-        boxShadow: 'unset',
-        color: '#004080',
-      },
-    },
+    fontWeight: '600',
+    textDecoration: 'none',
+    display: 'block',
   },
 });
 
 export const QuestionSection = (props) => {
   const classes = useStyles();
   const { title, accordions, sectionId } = props.item;
-  const { handleToggle } = props;
   const { inputText } = props;
 
   const [indexIsOpen, setIndexIsOpen] = useState(-1);
@@ -161,7 +143,7 @@ export const QuestionSection = (props) => {
   return (
     <>
       <section id={sectionId} className={classes.section} aria-labelledby={sectionId + '-headings'}>
-        <h4 id={sectionId + '-headings'} className={classes.sectionTitle}>
+        <h4 id={sectionId + '-headings'} className={`${classes.sectionTitle} mb-4`}>
           {title}
         </h4>
         <Accordion>
@@ -185,11 +167,17 @@ export const QuestionSection = (props) => {
                     </ExternalLink>
                   </div>
                 )}
-                {accordion.modalBtn ? (
-                  <Button className={classes.modalLink} onClick={handleToggle}>
-                    {accordion.modalBtn}
-                    <img className="ml-2" src="/assets/external-icon.svg" alt="" />
-                  </Button>
+                {accordion.updates ? (
+                  <Link className={classes.modalLink} aria-label={accordion.ariaLabel} to="/ricevi-aggiornamenti">
+                    {accordion.updates}
+                  </Link>
+                ) : (
+                  ''
+                )}
+                {accordion.assistance ? (
+                  <Link className={classes.modalLink} aria-label={accordion.ariaLabel} to="/supporto/assistenza">
+                    {accordion.assistance}
+                  </Link>
                 ) : (
                   ''
                 )}
@@ -205,5 +193,4 @@ export const QuestionSection = (props) => {
 QuestionSection.propTypes = {
   item: PropTypes.object.isRequired,
   inputText: PropTypes.string,
-  handleToggle: PropTypes.func,
 };
