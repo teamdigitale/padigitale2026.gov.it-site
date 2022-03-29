@@ -95,7 +95,7 @@ const useStyles = createUseStyles({
       marginTop: '0.888rem',
     },
     '&.card.card-teaser': {
-      '& h5.card-title': {
+      '& h3.card-title': {
         color: '#0066CC',
         fontSize: '1.555rem',
         fontWeight: '600',
@@ -137,7 +137,7 @@ export const SupportSection = (props) => {
                       <Link to={card.link} className={classes.cleanLink}>
                         <Card teaser noWrapper className={classes.cardWrapper}>
                           <CardBody>
-                            <CardTitle tag="h5" className={classes.cardTitle}>
+                            <CardTitle tag="h3" className={classes.cardTitle}>
                               {card.title}
                             </CardTitle>
                             <CardText className={classes.cardText}>{card.description}</CardText>

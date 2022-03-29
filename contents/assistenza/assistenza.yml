@@ -1,1 +1,70 @@
 breadcrumb: Assistenza
+name: Assistenza
+modal:
+  selectRepresent:
+    - value: public-administration
+      label: Pubblica amministrazione
+    - value: fornitore-it
+      label: Fornitore IT
+    - value: other
+      label: Altro
+  selectArgument:
+    - value: Accesso al portale
+      label: Accesso al portale
+    - value: Iscrizione alla newsletter
+      label: Iscrizione alla newsletter
+    - value: Generale
+      label: Generale
+  selectInQuanto:
+    - value: dirigente-administration
+      label: Dirigente dell’amministrazione
+    - value: dirigente-it-administration
+      label: Dirigente sistemi IT dell’amministrazione
+    - value: dipendente-administration
+      label: Dipendente dell’amministrazione
+    - value: other
+      label: Altro
+  selectMessage:
+    - value: general
+      label: Generale
+    - value: investimenti-pnrr
+      label: Investimenti del PNRR
+    - value: richiesta-fondi
+      label: Richiesta dei fondi
+    - value: realizzazione-progetti
+      label: Realizzazione dei progetti
+    - value: erogazione-risorse
+      label: Erogazione delle risorse
+    - value: technical-support
+      label: Supporto tecnico
+  modalUpdatesTitle: Ricevi aggiornamenti
+  modalMessageTitle: Scrivici
+  updatesLabel: AGGIORNAMENTI
+  updatesInfo: Lascia i tuoi contatti per ricevere <strong>materiali e <br>informazioni</strong> sulle novità e gli avvisi di Italia digitale 2026
+  mandatoryAdvise: I campi con * sono obbligatori
+  requiredLabel: Questo campo è richiesto
+  emailLabel: EMAIL*
+  emailValidationLabel: Per favore inserisci un'indirizzo email valido.
+  argumentLabel: Argomento*
+  measureLabel: Misura*
+  selectPlaceholder: Scegli una voce dall’elenco
+  enteValidationLabel: Per favore inserisci una denominazione ente valida.
+  enteTypeLabel: TIPO DI ENTE/STRUTTURA*
+  enteNameLabel: NOME STRUTTURA*
+  inQuantoLabel: IN QUANTO*
+  directContactLabel: CONTATTO DIRETTO
+  directContactInfo: Un <strong>Team dedicato</strong> è a tua disposizione per <strong>ricevere<br>chiarimenti</strong> sugli investimenti o approfondire alcuni temi
+  addMessageLabel: Voglio aggiungere un messaggio
+  nameLabel: Nome richiedente:*
+  objectLabel: Oggetto*
+  messageSelectLabel: ARGOMENTO MESSAGGIO
+  descriptionLabel: Testo messaggio*
+  telLabel: "Contatto telefonico"
+  radioGroupLabel: DICHIARO
+  representLabel: RAPPRESENTO*
+  messageLabel: TESTO MESSAGGIO
+  comunicationRadio: Acconsento a essere contattato per comunicazioni specifiche*
+  privacyRadio: Ho letto e compreso
+  privacyRadioLinkLabel: l’informativa privacy
+  mandatoryRadioLabel: Seleziona entrambe le voci per proseguire
+  sendButtonLabel: INVIA

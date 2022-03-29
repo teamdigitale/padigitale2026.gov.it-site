@@ -114,10 +114,10 @@ export const ProjectsCards = (item) => {
       <div className="container pl-lg-2 pr-lg-2 pl-3 pr-3">
         <Row className="mb-5 ml-0 mr-0">
           <Col xs="12" lg="6" id="beneficiari-pc" className={`${classes.columnCard} offset-lg-1`}>
-            <h3 className={classes.category}>{projectsCardsItem.littleTitle}</h3>
-            <h4 className={classes.title} id="beneficiaries-title-pc">
+            <span className={classes.category}>{projectsCardsItem.littleTitle}</span>
+            <h2 className={classes.title} id="beneficiaries-title-pc">
               {projectsCardsItem.title}
-            </h4>
+            </h2>
           </Col>
         </Row>
         <Row className="ml-0 mr-0">
@@ -126,13 +126,17 @@ export const ProjectsCards = (item) => {
             <div className={classes.card}>
               <div className={classes.cardBody}>
                 <div>
-                  <h4 className={classes.cardTitle}>{projectsCardsItem.cardTitleLeft}</h4>
+                  <h3 className={classes.cardTitle}>{projectsCardsItem.cardTitleLeft}</h3>
                   <p className={classes.cardText}>{projectsCardsItem.cardTextLeft}</p>
                 </div>
                 <img src="/assets/standard-solution.svg" alt=""></img>
               </div>
               <div className={classes.cardFooter}>
-                <Link to="/come-funziona/soluzioni-standard" className="btn text-uppercase btn-primary">
+                <Link
+                  to="/come-funziona/soluzioni-standard"
+                  className="btn text-uppercase btn-primary"
+                  aria-label="Scopri di più sulle soluzioni standard"
+                >
                   {projectsCardsItem.buttonLabelLeft}
                 </Link>
               </div>
@@ -149,7 +153,11 @@ export const ProjectsCards = (item) => {
                 <img src="/assets/projects-solution.svg" alt=""></img>
               </div>
               <div className={classes.cardFooter}>
-                <Link to="/come-funziona/presentazione-progetti" className="btn text-uppercase btn-primary">
+                <Link
+                  to="/come-funziona/presentazione-progetti"
+                  className="btn text-uppercase btn-primary"
+                  aria-label="Scopri di più sulle presentazioni progetti"
+                >
                   {projectsCardsItem.buttonLabelRight}
                 </Link>
               </div>

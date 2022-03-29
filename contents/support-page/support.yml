@@ -10,14 +10,17 @@ faqSection:
       title: Cos'è Next Generation EU?
       text: Next Generation EU (NGEU) è un piano Next da €750 miliardi di Euro che ha l'obiettivo di rilanciare l'economia europea dopo la pandemia di COVID-19 e di renderla più verde e digitale.
       faqId: faq-1
+      ariaLabel: Vai alla faq Cos'è Next Generation EU?
     - id: 2
       title: Cos’è Italia domani, il Piano nazionale di ripresa e resilienza (PNRR)?
       text: Italia domani è il nome del Piano nazionale di ripresa e resilienza (PNRR) approvato dal Governo italiano il 29 aprile del 2021 all’interno del programma europeo Next Generation EU. L’Italia è la prima beneficiaria, in valore assoluto, del programma Next Generation EU, con un totale di €191,5 miliardi. Mediante un Fondo Complementare, finanziato direttamente dal bilancio dello Stato, il nostro Paese ha previsto un'integrazione di €30,6 mld. Il totale degli investimenti previsti è pertanto di €222,1 miliardi.
       faqId: faq-2
+      ariaLabel: Vai alla faq Cos'è Italia domani, il Piano nazionale di ripresa e resilienza (PNRR)?
     - id: 3
       title: Chi può accedere alle risorse di Italia digitale 2026?
       text: Il ruolo della PA, soprattutto quella locale, è centrale nell’implementazione di Italia digitale 2026. Le risorse a disposizione servono per permettere alle diverse amministrazioni di partecipare in prima persona al percorso di transizione digitale del Paese.
       faqId: faq-3
+      ariaLabel: Vai alla faq Chi può accedere alle risorse di Italia digitale 2026?
 heroAssistance:
   title: Richiedi assistenza
   body: 'Se non hai trovato le informazioni che cercavi fra le domande frequenti, <strong>scrivici</strong>: ti risponderemo al più presto'

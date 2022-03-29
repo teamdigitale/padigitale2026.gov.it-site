@@ -79,6 +79,7 @@ const useStyle = createUseStyles({
   linkCard: {
     textDecoration: 'none',
     height: '100%',
+    display: 'inline-flex',
     '&:hover': {
       textDecoration: 'none',
       '& .card-title': {
@@ -97,7 +98,7 @@ export const FAQPreview = () => {
 
   const cards = faqSection.faqPreviewCards.map((card) => (
     <Col key={card.id} xs="12" lg="4">
-      <Link to={`/supporto/faq#` + card.faqId} onClick={() => dispatch({ type: 'SET:FAQ_ID', payload: { faqId: card.faqId } })} className={classes.linkCard}>
+      <Link to={`/supporto/faq#` + card.faqId} onClick={() => dispatch({ type: 'SET:FAQ_ID', payload: { faqId: card.faqId } })} className={classes.linkCard} ariaLabel={card.ariaLabel}>
         <Card className={classes.faqCard}>
           <CardBody>
             <CardTitle tag="h4">{card.title}</CardTitle>

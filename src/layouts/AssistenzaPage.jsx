@@ -6,7 +6,7 @@ import { announce } from '@react-aria/live-announcer';
 import { Row, Col, Input, Breadcrumb, BreadcrumbItem } from 'design-react-kit';
 import Select from 'react-select';
 // import ReCAPTCHA from 'react-google-recaptcha';
-import content from '../../contents/opportunity-page/opportunity.yml';
+import content from '../../contents/assistenza/assistenza.yml';
 import notificationsLabel from '../../contents/notifications.yml';
 import labels from '../../contents/labels.yml';
 import links from '../../contents/links.yml';
@@ -169,6 +169,17 @@ const useStyles = createUseStyles({
     '& .form-group input[type="text"].is-invalid': {
       borderBottom: 'solid 2px #F83E5A',
     },
+    '& .form-group input[type="email"]': {
+      fontSize: '0.889rem',
+      '&:focus': {
+        border: '2px solid #f90',
+        boxShadow: '0 0 0 2px #f90',
+        outline: '0',
+      },
+    },
+    '& .form-group input[type="email"].is-invalid': {
+      borderBottom: 'solid 2px #F83E5A',
+    },
     '& .invalid-feedback': {
       color: '#F83E5A !important',
     },
@@ -283,6 +294,8 @@ const useStyles = createUseStyles({
       color: '#5B6F82',
       textDecoration: 'none',
       fontSize: '18px',
+      cursorPointer: 'default',
+      pointerEvents: 'none',
     },
     '&::before': {
       fontWeight: '600',
@@ -448,6 +461,9 @@ export const AssistenzaPage = () => {
   return (
     <>
       <SEO title={seoTitle} description={seoDescription} />
+      <div className="sr-only">
+        <h2>{content.name}</h2>
+      </div>
       <div className="container px-3">
         <Row>
           <Col xs="12">
@@ -471,7 +487,7 @@ export const AssistenzaPage = () => {
         <iframe name="formFrame" id="formFrame" className="d-none" title="no-redirect"></iframe>
         <Row className="mt-5">
           <Col xs={12} md={6} lg={5}>
-            <div className={classes.titleUpdate}>Assistenza</div>
+            <h3 className={classes.titleUpdate}>Assistenza</h3>
             <div className={classes.subtitleUpdate}>
               Un team dedicato è a tua disposizione per chiarire dubbi e approfondire temi di interesse. Compila il
               modulo sottostante e invia la richiesta.
@@ -529,7 +545,7 @@ export const AssistenzaPage = () => {
                     size="20"
                     maxLength="40"
                     aria-describedby="mandatory-label"
-                    type="text"
+                    type="number"
                     id="00N7Y000008tqdb"
                     name="00N7Y000008tqdb"
                     pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$"

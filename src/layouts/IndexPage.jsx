@@ -76,7 +76,7 @@ export const IndexPage = () => {
         imageUrl="/assets/icona-home-banner.svg"
         imageAlt=""
         firstInternal={true}
-        firstButtonHref="/come-funziona"
+        firstButtonHref="/iniziativa"
         firstButtonLabel={heroMainBanner.firstButtonLabel}
         firstButtonAriaLabel={heroMainBanner.firstButtonAriaLabel}
         heroTitleId="home-hero-title"
@@ -92,7 +92,7 @@ export const IndexPage = () => {
         imageAlt=""
         outlineBtn={true}
         firstInternal={true}
-        firstButtonHref="/come-funziona"
+        firstButtonHref="/iniziativa"
         firstButtonLabel={heroPnrr.firstButtonLabel}
         firstButtonAriaLabel={heroPnrr.firstButtonAriaLabel}
         heroTitleId="home-hero-title-candidature"
@@ -107,7 +107,7 @@ export const IndexPage = () => {
         imageAlt=""
         outlineBtn={true}
         firstInternal={true}
-        firstButtonHref="/come-funziona"
+        firstButtonHref="/iniziativa"
         firstButtonLabel={heroClassificazione.firstButtonLabel}
         firstButtonAriaLabel={heroClassificazione.firstButtonAriaLabel}
         heroTitleId="home-hero-title-classificazione"

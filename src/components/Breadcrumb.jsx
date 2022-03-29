@@ -9,8 +9,12 @@ const useStyles = createUseStyles({
     padding: '1.563rem 0 0',
     '& .breadcrumb': {
       padding: '0.75rem 0',
+      '& .breadcrumb-item.active': {
+        pointerEvents: 'none',
+        cursor: 'default',
+      },
     },
-    '& .bradcrumb-item a': {
+    '& .breadcrumb-item a': {
       fontWeight: '600',
       fontSize: '1.125rem',
       '&.active': {
