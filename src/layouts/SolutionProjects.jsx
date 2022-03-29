@@ -1,8 +1,8 @@
 import React, { useEffect, useContext } from 'react';
 import { createUseStyles } from 'react-jss';
 import { Breadcrumb, BreadcrumbItem, Row, Col } from 'design-react-kit';
-import content from '../../contents/come-funziona/soluzione-progetti.yml';
-import contentHowItWorks from '../../contents/come-funziona/come-funziona.yml';
+import content from '../../contents/iniziativa/soluzione-progetti.yml';
+import contentHowItWorks from '../../contents/iniziativa/iniziativa.yml';
 import { SEO } from '../components/SEO';
 import seo from '../../contents/seo.yml';
 import { GlobalStateContext } from '../context/globalContext';
@@ -54,7 +54,7 @@ export const SolutionProjects = () => {
   useEffect(() => {
     dispatch({
       type: 'SET:ACTIVE_HEADER',
-      payload: { activeItem: 'come-funziona' },
+      payload: { activeItem: 'iniziativa' },
     });
     return () => {
       dispatch({ type: 'SET:ACTIVE_HEADER' });

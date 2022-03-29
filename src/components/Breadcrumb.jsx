@@ -21,10 +21,10 @@ const useStyles = createUseStyles({
   },
 });
 
-export const Breadcrumb = ({ currentPage }) => {
+export const Breadcrumb = ({ currentPage, noContainer }) => {
   const classes = useStyles();
   return (
-    <div className="container px-3">
+    <div className={`container ${noContainer ? 'px-0' : 'px-3'}`}>
       <div className="row">
         <div className="col-12">
           <nav aria-label={labels.ariaLabel.breadcrumb} className={`${classes.breadcrumb} breadcrumb-container`}>
@@ -48,4 +48,5 @@ export const Breadcrumb = ({ currentPage }) => {
 
 Breadcrumb.propTypes = {
   currentPage: PropTypes.string.isRequired,
+  noContainer: PropTypes.bool,
 };

@@ -49,11 +49,10 @@ const useStyles = createUseStyles({
     position: 'relative',
     display: 'flex',
     padding: '0 0 2rem',
-    marginTop: '-101px',
     '&:not(.overlap)': {
       minHeight: 'auto',
       '& .container .it-hero-text-wrapper': {
-        padding: '150px 0 5rem',
+        padding: '0 0 5rem',
         '@media (max-width: 992px)': {
           paddingBottom: '0',
         },
@@ -174,12 +173,12 @@ export const HeroImageBackground = ({
   const classes = useStyles();
   return (
     <Hero>
-      <Breadcrumb currentPage="Misure" />
       <div className={`${classes.heroWrapper} ${overlap ? 'overlap' : ''} ${theme}`}>
         <section aria-labelledby={titleId} className={`${classes.heroContentContainer} px-3`}>
+          <Breadcrumb currentPage="Misure" noContainer={true} />
           <Row>
             <Col xs="12" lg="5" className="offset-lg-1">
-              <div className={`${classes.contentWrapper} ${theme}`}>
+              <div className={`${classes.contentWrapper} ${theme} mt-5`}>
                 <div>
                   <HeroTitle id={titleId} Tag="h3" title={title} className={classes.heroTitle} />
                   <HeroParagraph text={body} className={classes.heroSubtitle} />

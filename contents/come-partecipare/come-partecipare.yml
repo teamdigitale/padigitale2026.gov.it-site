@@ -8,23 +8,17 @@ keypoints:
   title: 'Come fare per'
   list:
     - number: "01"
-      image: 'keypoint-1.svg'
+      image: 'computer-2.svg'
       title: 'Attivare la tua PA'
       desc: 'Per partecipare agli avvisi pubblici e richiedere i finanziamenti'
     - number: "02"
-      image: 'keypoint-2.svg'
-      title: 'Candidare una PA agli avvisi'
-      desc: 'Attraverso la creazione e l’invio del documento di candidatura.'
-    - number: "03"
-      image: 'keypoint-3.svg'
-      title: 'Classificare dati e servizi'
-      desc: 'Per abilitare il processo di migrazione delle PA al cloud.'
-      transparent: true
-    - number: "04"
-      image: 'keypoint-4.svg'
+      image: 'icon-chat.svg'
       title: 'Ricevere assistenza'
       desc: 'Per risolvere dubbi o problemi riguardo la piattaforma e le candidature.'
-      transparent: true
+    - number: "03"
+      image: 'invia-candidatura.svg'
+      title: 'Candidare una PA agli avvisi'
+      desc: 'Attraverso la creazione e l’invio del documento di candidatura.'
 sectionFirst:
   number: '01'
   title: 'Attivare la tua  PA'
@@ -44,7 +38,6 @@ sectionSecond:
   button: true
   linkTo: "candida-pa"
   image: 'kp-section-2.svg'
-  reverse: true
   bottomSection: false
   BottomImage1: 'bottom-1-1.svg'
   BottomImage2: 'bottom-1-2.svg'
