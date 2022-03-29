@@ -621,8 +621,10 @@ export const AssistenzaPage = () => {
               </Row>
               <input type="hidden" id="external" name="external" value="1" />
               <input type="hidden" name="origin" value="Area pubblica" />
-              <input type="hidden" name="recordType" value="0123N000003LK6mQAG" />
+              <input type="hidden" name="recordType" value="0123N000003LK6m" />
               <input type="hidden" id="priority" name="priority" value="Medium" />
+              <input type="hidden" name="debug" value="1" />
+              <input type="hidden" name="debugEmail" value="mattia.puggioni@yopmail.com" />
               <Row>
                 <Col xs={12}>
                   <ReCAPTCHA
