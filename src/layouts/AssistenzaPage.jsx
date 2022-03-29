@@ -422,13 +422,13 @@ export const AssistenzaPage = () => {
     }
   };
 
-  const formHandler = () => {
+  const formHandler = (event) => {
+    event.target.reset();
     const notificationElement = document.querySelector('.notification');
     const titleElement = notificationElement.querySelector('h5');
     const descriptionElement = notificationElement.querySelector('p');
     notificationElement.classList.add('show');
     notificationElement.classList.add('success');
-
     titleElement.innerHTML = `${successLabels.icon} ${successLabels.title}`;
     descriptionElement.innerHTML = successLabels.description;
 
