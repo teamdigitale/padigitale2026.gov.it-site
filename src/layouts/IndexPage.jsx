@@ -70,19 +70,6 @@ export const IndexPage = () => {
         heroTitleId="home-hero-title-candidature"
       />
       <HeroCarousel content={heroCarouselNews} title={heroCarouselNewsTitle} />
-      <HeroImage
-        ctaContainer={true}
-        category={heroClassificazione.category}
-        title={heroClassificazione.title}
-        body={heroClassificazione.body}
-        imageUrl="/assets/Classificazione_Dati_e_Servizi.svg"
-        imageAlt=""
-        firstInternal={true}
-        firstButtonHref="/iniziativa"
-        firstButtonLabel={heroClassificazione.firstButtonLabel}
-        firstButtonAriaLabel={heroClassificazione.firstButtonAriaLabel}
-        heroTitleId="home-hero-title-classificazione"
-      />
       <SupportSection supportList={support.cards} title={support.title} buttonLabel={support.buttonLabel} />
     </>
   );

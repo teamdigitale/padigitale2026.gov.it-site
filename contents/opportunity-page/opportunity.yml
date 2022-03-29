@@ -26,8 +26,6 @@ selectBeneficiaries:
     label: 'Enti di ricera pubblica'
   - value: 'enti-diritto'
     label: 'Enti per il diritto allo studio, agenzie, consorzi'
-  - value: 'enti-regionali'
-    label: 'Enti regionali'
   - value: 'istituti-formazione'
     label: 'Istituti di alta formazione musicale e coreutica'
   - value: 'province'
@@ -220,8 +218,6 @@ beneficiaries:
         label: ASL
       - label: Aziende Ospedaliere
         value: aziende-ospedaliere
-      - value: enti-regionali
-        label: Enti Regionali
       - value: universita
         label: Università
       - value: enti-diritto
@@ -403,7 +399,7 @@ modal:
   selectArgument:
     - value: Accesso al portale
       label: Accesso al portale
-    - value: Iscrizione alla newsletter
+    - value: Iscrizione newsletter
       label: Iscrizione alla newsletter
     - value: Generale
       label: Generale

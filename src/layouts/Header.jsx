@@ -242,7 +242,7 @@ const useStyle = createUseStyles({
     },
   },
   headerLink: {
-    composes: 'font-weight-bold',
+    composes: 'font-weight-semibold',
     cursor: 'pointer',
   },
   mainHeader: {

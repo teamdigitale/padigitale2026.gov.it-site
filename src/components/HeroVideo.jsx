@@ -1,16 +1,39 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { createUseStyles } from 'react-jss';
+import { Accordion, AccordionHeader, AccordionBody } from 'design-react-kit';
 
 const useStyle = createUseStyles({
   heroVideo: {
     display: 'flex',
-    padding: '82px 0 82px 1.5rem',
+    padding: '82px 0 0 1.5rem',
     alignItems: 'flex-start',
     flexDirection: 'column',
     minHeight: '412px',
     '@media (max-width: 991px)': {
       flexDirection: 'column',
       padding: '40px 0',
+    },
+    '& .collapse-div': {
+      border: 'none',
+      width: '100%',
+    },
+    '& .collapse-header button': {
+      border: 'none',
+      display: 'inline-flex',
+      paddingLeft: '0',
+      '&::before': {
+        position: 'relative',
+        order: '2',
+        marginLeft: '5px',
+      },
+      '&.collapsed': {
+        color: '#06c',
+      },
+    },
+    '& .collapse-body': {
+      paddingLeft: '0',
+      paddingRight: '0',
+      paddingBottom: '0',
     },
   },
   info: {
@@ -31,6 +54,7 @@ const useStyle = createUseStyles({
 
 export const HeroVideo = () => {
   const classes = useStyle();
+  const [collapseOpen, setCollapseOpen] = useState(false);
 
   return (
     <>
@@ -50,6 +74,18 @@ export const HeroVideo = () => {
             title="video-container"
           ></iframe>
         </div>
+        <Accordion className="mt-5">
+          <AccordionHeader active={collapseOpen} onToggle={() => setCollapseOpen(!collapseOpen)}>
+            Trascrizione del video
+          </AccordionHeader>
+          <AccordionBody active={collapseOpen}>
+            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim
+            velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est
+            sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat
+            sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+            consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet
+          </AccordionBody>
+        </Accordion>
       </div>
     </>
   );
