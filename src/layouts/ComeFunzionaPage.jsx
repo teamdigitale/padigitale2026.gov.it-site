@@ -2,7 +2,7 @@ import React, { useEffect, useContext } from 'react';
 import { announce } from '@react-aria/live-announcer';
 import { Row, Col, Breadcrumb, BreadcrumbItem } from 'design-react-kit';
 import { createUseStyles } from 'react-jss';
-import content from '../../contents/come-funziona/come-funziona.yml';
+import content from '../../contents/iniziativa/iniziativa.yml';
 import { SEO } from '../components/SEO';
 import { Timeline } from '../components/carousel/Timeline';
 import { ProjectsCards } from '../components/ProjectsCards';
@@ -10,8 +10,8 @@ import { HeroHowItWorks } from '../components/hero/HeroHowItWorks';
 import seo from '../../contents/seo.yml';
 import { GlobalStateContext } from '../context/globalContext';
 // import { Breadcrumb } from '../components/Breadcrumb';
-import { Involved } from './come-funziona/Involved';
-import { Beneficiaries } from './come-funziona/Beneficiaries';
+import { Involved } from './iniziativa/Involved';
+import { Beneficiaries } from './iniziativa/Beneficiaries';
 
 const { title: seoTitle, description: seoDescription } = seo.comeFunzionaPage;
 
