@@ -234,7 +234,10 @@ export const CreaProfiloPage = () => {
               <Container className="pl-lg-4">
                 <p className={`${classes.contentParagraph} mb-0`}>
                   Ti raccomandiamo quindi di verificare fin da subito l’accuratezza delle informazioni presenti su{' '}
-                  <a href="" className="d-inline-flex align-items-center">
+                  <a
+                    href="https://www.indicepa.gov.it/ipa-portale/consultazione/indirizzo-sede/ricerca-ente"
+                    className="d-inline-flex align-items-center"
+                  >
                     IPA <img src="/assets/external-link.svg" alt="" />
                   </a>
                   .

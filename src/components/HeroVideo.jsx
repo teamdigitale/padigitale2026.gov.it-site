@@ -37,9 +37,7 @@ export const HeroVideo = () => {
       <div className={classes.heroVideo}>
         <div className={classes.info}>
           <h4>Guarda il video dedicato</h4>
-          <p>
-            Scopri come creare il profilo della tua amministrazione all&apos;interno della piattaforma PA digitale 2026.
-          </p>
+          <p>Scopri come attivare il profilo della tua amministrazione su PA digitale 2026.</p>
         </div>
         <div className={classes.videoContainer}>
           <iframe

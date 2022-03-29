@@ -200,7 +200,7 @@ homeCarousel:
     imageMobile: 'home-carousel-mobile-2.svg'
     button: 'scopri di più'
     buttonAriaLabel: 'Scopri di più su domande frequenti e contatti'
-    linkTo: '/come-funziona'
+    linkTo: '/iniziativa'
   - id: 3
     title: Fase 3, avviare i progetti
     description: 'Dall’<strong>estate del 2022</strong> le amministrazioni potranno <strong>avviare i primi progetti</strong>: un team dedicato fornirà alle PA assistenza tecnica nell’implementazione delle iniziative; un sistema di rendicontazione online organizzato per obiettivi semplificherà il percorso delle amministrazioni.'
@@ -208,4 +208,4 @@ homeCarousel:
     imageMobile: 'home-carousel-mobile-3.svg'
     button: 'scopri di più'
     buttonAriaLabel: 'Scopri di più su domande frequenti e contatti'
-    linkTo: '/come-funziona'
+    linkTo: '/iniziativa'

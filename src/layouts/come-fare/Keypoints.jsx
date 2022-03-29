@@ -89,12 +89,11 @@ const useStyle = createUseStyles({
       paddingBottom: 'calc(3.75rem - 48px)',
     },
   },
-  keypointNumber: {
-    color: '#06c',
-    fontWeight: '700',
-    fontSize: '2.222rem',
+  iconContainer: {
     marginBottom: '0.556rem',
-    lineHeight: '1',
+    '& img': {
+      height: '58px',
+    },
   },
   keypointTitle: {
     color: '#33485C',
@@ -151,7 +150,9 @@ export const Keypoints = (props) => {
                       listItem.transparent === true ? classes.cardTransparent : ''
                     }`}
                   >
-                    <div className={classes.keypointNumber}>{listItem.number}.</div>
+                    <div className={classes.iconContainer}>
+                      <img src={`/assets/${listItem.image}`} alt=""></img>
+                    </div>
                     <div className={classes.keypointTitle}>{listItem.title}</div>
                     <div className={classes.keypointDesc}>{listItem.desc}</div>
                   </Col>

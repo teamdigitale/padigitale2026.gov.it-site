@@ -1,10 +1,10 @@
 import React, { useEffect, useContext } from 'react';
 import { createUseStyles } from 'react-jss';
 import { Breadcrumb, BreadcrumbItem, Row, Col } from 'design-react-kit';
-import content from '../../contents/come-funziona/soluzione-standard.yml';
+import content from '../../contents/iniziativa/soluzione-standard.yml';
 import { SEO } from '../components/SEO';
 import seo from '../../contents/seo.yml';
-import contentHowItWorks from '../../contents/come-funziona/come-funziona.yml';
+import contentHowItWorks from '../../contents/iniziativa/iniziativa.yml';
 import { GlobalStateContext } from '../context/globalContext';
 import { HeroSolutions } from '../components/hero/HeroSolutions';
 import { TimelineVertical } from '../components/TimelineVertical';
