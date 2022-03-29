@@ -18,12 +18,6 @@ const useStyle = createUseStyles({
       lineHeight: '2.222rem',
     },
   },
-  keypointSectionNumber: {
-    fontSize: '0.889rem',
-    fontWeight: '600',
-    color: '#33485C',
-    marginBottom: '0.556rem',
-  },
   keypointSectionImage: {
     width: '100%',
   },
@@ -130,7 +124,6 @@ export const KeypointSection = (props) => {
             {!reverse ? (
               <Row>
                 <Col xs="12" lg="5" className="offset-lg-1 order-1 order-lg-0">
-                  <h3 className={classes.keypointSectionNumber}>{number}</h3>
                   <h4 id={`keypoint-section-title-${number}`} className={classes.keypointSectionTitle}>
                     {title}
                   </h4>
@@ -175,7 +168,6 @@ export const KeypointSection = (props) => {
                   <img className={classes.keypointSectionImage} src={`/assets/come-fare/${image}`} alt="" />
                 </Col>
                 <Col xs="12" lg="5" className="offset-lg-1">
-                  <h3 className={classes.keypointSectionNumber}>{number}</h3>
                   <h4 id={`keypoint-section-title-${number}`} className={classes.keypointSectionTitle}>
                     {title}
                   </h4>
@@ -213,7 +205,6 @@ export const KeypointSection = (props) => {
             <React.Fragment>
               <Row>
                 <Col xs="12" lg="5" className="offset-lg-1 order-1 order-lg-0">
-                  <h3 className={classes.keypointSectionNumber}>{number}</h3>
                   <h4 id={`keypoint-section-title-${number}`} className={classes.keypointSectionTitle}>
                     {title}
                   </h4>
@@ -287,7 +278,6 @@ export const KeypointSection = (props) => {
                   <img className={classes.keypointSectionImage} src={`/assets/come-fare/${image}`} alt="" />
                 </Col>
                 <Col xs="12" lg="5" className="offset-lg-1">
-                  <h3 className={classes.keypointSectionNumber}>{number}</h3>
                   <h4 id={`keypoint-section-title-${number}`} className={classes.keypointSectionTitle}>
                     {title}
                   </h4>
