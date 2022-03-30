@@ -3,7 +3,6 @@ import {
   name,
   heroMainBanner,
   heroPnrr,
-  heroClassificazione,
   heroCarouselNews,
   heroCarouselNewsTitle,
   noticesCarouselTitle,
