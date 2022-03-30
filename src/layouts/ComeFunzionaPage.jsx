@@ -24,7 +24,7 @@ const useStyles = createUseStyles({
   },
   breadcrumbItem: {
     '& a': {
-      color: '#fff',
+      color: '#5B6F82',
       fontWeight: '600',
       textDecoration: 'underline',
       fontSize: '18px',
@@ -36,7 +36,7 @@ const useStyles = createUseStyles({
   },
   breadcrumbItemActive: {
     '& a': {
-      color: '#fff',
+      color: '#5B6F82',
       textDecoration: 'none',
       fontSize: '18px',
       cursorPointer: 'default',
@@ -85,7 +85,7 @@ export const ComeFunzionaPage = () => {
                 <span className="separator"></span>
               </BreadcrumbItem>
               <BreadcrumbItem active className={classes.breadcrumbItemActive}>
-                <a href="#">Come funziona</a>
+                <a href="/iniziativa">Iniziativa</a>
               </BreadcrumbItem>
             </Breadcrumb>
           </Col>

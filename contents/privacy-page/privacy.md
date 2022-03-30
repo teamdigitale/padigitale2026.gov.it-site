@@ -14,16 +14,16 @@ Il Titolare del trattamento è la Presidenza del Consiglio dei Ministri -
 Dipartimento per la trasformazione digitale, con sede in Largo Pietro di Brazzà
 86, 00186 Roma, contattabile ai seguenti recapiti:
 
-- Email: [segreteria.trasformazionedigitale@governo.it](mailto:segreteria.trasformazionedigitale@governo.it){class="text-decoration-none font-weight-semibold", rel='noreferrer', target='\_blank', aria-label='Invia un Email a segreteria.trasformazionedigitale@governo.it (link esterno - Apertura nuova scheda)'}
-- PEC: [diptrasformazionedigitale@pec.governo.it](mailto:diptrasformazionedigitale@pec.governo.it){class="text-decoration-none font-weight-semibold", rel='noreferrer', target='\_blank', aria-label='Invia una PEC a diptrasformazionedigitale@pec.governo.it (link esterno - Apertura nuova scheda)'}
+- Email: [segreteria.trasformazionedigitale@governo.it](mailto:segreteria.trasformazionedigitale@governo.it){class="text-decoration-none font-weight-semibold", rel='noreferrer', target='\_blank', aria-label='Invia un Email a: segreteria.trasformazionedigitale@governo.it (link esterno - Apertura nuova scheda)'}
+- PEC: [diptrasformazionedigitale@pec.governo.it](mailto:diptrasformazionedigitale@pec.governo.it){class="text-decoration-none font-weight-semibold", rel='noreferrer', target='\_blank', aria-label='Invia una PEC a: diptrasformazionedigitale@pec.governo.it (link esterno - Apertura nuova scheda)'}
 
 ### Responsabile per la protezione dei dati
 
 Il Responsabile per la protezione dei dati - Data Protection Officer, è
 contattabile ai seguenti recapiti:
 
-- Email: [responsabileprotezionedatipcm@governo.it](mailto:responsabileprotezionedatipcm@governo.it){class="text-decoration-none font-weight-semibold", rel='noreferrer', target='\_blank', aria-label='Invia un Email a responsabileprotezionedatipcm@governo.it (link esterno - Apertura nuova scheda)'}
-- PEC: [USG@mailbox.governo.it](mailto:USG@mailbox.governo.it){class="text-decoration-none font-weight-semibold", rel='noreferrer', target='\_blank', aria-label='Invia una PEC a USG@mailbox.governo.it (link esterno - Apertura nuova scheda)'}
+- Email: [responsabileprotezionedatipcm@governo.it](mailto:responsabileprotezionedatipcm@governo.it){class="text-decoration-none font-weight-semibold", rel='noreferrer', target='\_blank', aria-label='Invia un Email a: responsabileprotezionedatipcm@governo.it (link esterno - Apertura nuova scheda)'}
+- PEC: [USG@mailbox.governo.it](mailto:USG@mailbox.governo.it){class="text-decoration-none font-weight-semibold", rel='noreferrer', target='\_blank', aria-label='Invia una PEC a: USG@mailbox.governo.it (link esterno - Apertura nuova scheda)'}
 
 ### Come vengono trattati i tuoi dati personali - periodo di conservazione - base giuridica
 
@@ -56,7 +56,7 @@ trattamento ai sensi e per gli effetti di cui all’articolo 28 del GDPR.
 
 L’elenco dei responsabili del trattamento può essere richiesto al Titolare in
 qualsiasi momento, scrivendo a
-[segreteria.trasformazionedigitale@governo.it](mailto:segreteria.trasformazionedigitale@governo.it){class="text-decoration-none font-weight-semibold", rel='noreferrer', target='\_blank', aria-label='Invia un'Email a segreteria.trasformazionedigitale@governo.it (link esterno - Apertura nuova scheda)'}.
+[segreteria.trasformazionedigitale@governo.it](mailto:segreteria.trasformazionedigitale@governo.it){class="text-decoration-none font-weight-semibold", rel='noreferrer', target='\_blank', aria-label='Invia un Email a: segreteria.trasformazionedigitale@governo.it (link esterno - Apertura nuova scheda)'}.
 
 ### Trasferimento dei dati
 

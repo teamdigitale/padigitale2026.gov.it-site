@@ -446,10 +446,21 @@ export const AssistenzaPage = () => {
   };
 
   const handleChangeTel = (event) => {
+    const currentTarget = event.target;
     let value = event.target.value;
+    const inputContainer = currentTarget.closest(formGroupValue);
+    const errorLabel = inputContainer.querySelector('small');
     const regex = /^[0-9]+$/;
+
     if (!value.match(regex)) {
       value = value.slice(0, -1);
+      errorLabel.classList.add(errorLabelValue);
+      errorLabel.innerHTML = errorMatch;
+      currentTarget.classList.add(isInvalidValue);
+    } else {
+      errorLabel.classList.remove(errorLabelValue);
+      errorLabel.innerHTML = '';
+      currentTarget.classList.remove(isInvalidValue);
     }
     event.target.value = value;
   };

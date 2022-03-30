@@ -31,6 +31,7 @@ sectionFirst:
   BottomImage2: 'bottom-1-2.svg'
   BottomLinkLabel1: Come funziona l'accesso con SPID/CIE
   BottomLinkLabel2: Cosa può fare il rappresentante legale
+  ariaLabel: "Scopri di più su come attivare la tua PA"
 sectionSecond:
   number: '02'
   title: 'Candidare una PA agli avvisi'
@@ -43,6 +44,7 @@ sectionSecond:
   BottomImage2: 'bottom-1-2.svg'
   BottomLinkLabel1: Come funziona l'accesso con SPID/CIE
   BottomLinkLabel2: Cosa può fare il rappresentante legale
+  ariaLabel: "Scopri di più su come candidare una PA agli avvisi"
 sectionThird:
   number: '03'
   title: 'Classificare dati e servizi'
@@ -50,6 +52,7 @@ sectionThird:
   image: 'kp-section-3.svg'
   button: true
   lBlue: true
+  ariaLabel: "Scopri di più su come classificare dati e servizi"
 sectionFourth:
   number: '04'
   title: 'Ricevere assistenza'
@@ -57,3 +60,4 @@ sectionFourth:
   button: true
   image: 'assistenza.svg'
   reverse: true
+  ariaLabel: "Scopri di più su come ricevere assistenza"

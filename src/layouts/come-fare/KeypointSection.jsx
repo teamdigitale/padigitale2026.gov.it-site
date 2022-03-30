@@ -110,6 +110,7 @@ export const KeypointSection = (props) => {
     BottomLinkLabel1,
     BottomLinkLabel2,
     linkTo,
+    ariaLabel,
   } = props.item;
 
   return (
@@ -134,7 +135,7 @@ export const KeypointSection = (props) => {
                       to={`/come-partecipare/${linkTo}`}
                       color="primary"
                       className={`${classes.btnSection} btn btn-primary`}
-                      aria-label={`Dettaglio punto chiave ${number} ${title}`}
+                      aria-label={ariaLabel}
                     >
                       SCOPRI DI PIÚ
                     </Link>
@@ -177,7 +178,7 @@ export const KeypointSection = (props) => {
                     <Link
                       to={`/come-partecipare/${linkTo}`}
                       className={`${classes.btnSection} btn btn-primary`}
-                      aria-label={`Dettaglio punto chiave ${number} ${title}`}
+                      aria-label={ariaLabel}
                     >
                       SCOPRI DI PIÚ
                     </Link>
@@ -215,7 +216,7 @@ export const KeypointSection = (props) => {
                     <Link
                       to={`/come-partecipare/${linkTo}`}
                       className={`${classes.btnSection} btn btn-primary`}
-                      aria-label={`Dettaglio punto chiave ${number} ${title}`}
+                      aria-label={ariaLabel}
                     >
                       SCOPRI DI PIÚ
                     </Link>
@@ -289,7 +290,7 @@ export const KeypointSection = (props) => {
                     <Link
                       to={`/come-partecipare/${linkTo}`}
                       className={`${classes.btnSection} btn btn-primary`}
-                      aria-label={`Dettaglio punto chiave ${number} ${title}`}
+                      aria-label={ariaLabel}
                     >
                       SCOPRI DI PIÚ
                     </Link>

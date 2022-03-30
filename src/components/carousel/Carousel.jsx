@@ -149,7 +149,7 @@ export const HeroCarousel = ({ content, title }) => {
             linkTo={element.linkTo}
             alt=""
             className={classes.heroLink}
-            ariaLabel={`${element.title} (Collegamento sito esterno apre su nuova scheda)`}
+            ariaLabel={`${element.source} ${element.title} (Collegamento sito esterno apre su nuova scheda)`}
           >
             <div className="source">
               {element.source}
@@ -177,7 +177,7 @@ export const HeroCarousel = ({ content, title }) => {
                   linkTo="/"
                   alt=""
                   className={classes.titleLink}
-                  ariaLabel={`titolo (Collegamento sito esterno apre su nuova scheda)`}
+                  ariaLabel={`Scopri tutto su innovazione.gov.it (Collegamento sito esterno apre su nuova scheda)`}
                 >
                   <div className="source">
                     Scopri tutto su innovazione.gov.it
