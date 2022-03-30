@@ -89,7 +89,7 @@ beneficiaries:
     solutionType: '/iniziativa/soluzioni-standard'
     accessSectionId: soluzioni-standard
     accessLabel: Soluzioni Standard
-    moreInfoLink: '#'
+    moreInfoLink: 'https://collaudo-padigitale2026.cs128.force.com/padigitale2026/Pa_digitale2026_avvisi'
   - number: 1.3.1
     id: piatt-dig-naz
     title: Piattaforma Digitale Nazionale Dati
@@ -118,7 +118,7 @@ beneficiaries:
     solutionType: '/iniziativa/presentazione-progetti'
     accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
-    moreInfoLink: '#'
+    moreInfoLink: 'https://collaudo-padigitale2026.cs128.force.com/padigitale2026/Pa_digitale2026_avvisi'
   - number: 1.3.2
     id: sport-digi-unic
     title: Sportello Digitale Unico
@@ -168,7 +168,7 @@ beneficiaries:
     solutionType: '/iniziativa/soluzioni-standard'
     accessSectionId: soluzioni-standard
     accessLabel: Soluzioni standard
-    moreInfoLink: '#'
+    moreInfoLink: 'https://collaudo-padigitale2026.cs128.force.com/padigitale2026/Pa_digitale2026_avvisi'
   - number: 1.4.2
     id: access
     title: Accessibilità
@@ -226,7 +226,7 @@ beneficiaries:
     solutionType: '/iniziativa/soluzioni-standard'
     accessSectionId: soluzioni-standard
     accessLabel: Soluzioni Standard
-    moreInfoLink: '#'
+    moreInfoLink: 'https://collaudo-padigitale2026.cs128.force.com/padigitale2026/Pa_digitale2026_avvisi'
   - number: 1.4.4
     id: adoz-id
     title: Adozione identità digitale
@@ -262,7 +262,7 @@ beneficiaries:
     solutionType: '/iniziativa/soluzioni-standard'
     accessSectionId: soluzioni-standard
     accessLabel: Soluzioni Standard
-    moreInfoLink: '#'
+    moreInfoLink: 'https://collaudo-padigitale2026.cs128.force.com/padigitale2026/Pa_digitale2026_avvisi'
   - number: 1.4.5
     id: digi-avvisi
     title: Digitalizzazione degli avvisi pubblici
@@ -281,7 +281,7 @@ beneficiaries:
     solutionType: '/iniziativa/soluzioni-standard'
     accessSectionId: soluzioni-standard
     accessLabel: Soluzioni standard
-    moreInfoLink: '#'
+    moreInfoLink: 'https://collaudo-padigitale2026.cs128.force.com/padigitale2026/Pa_digitale2026_avvisi'
   - number: 1.4.6
     id: maas
     title: MaaS
@@ -371,7 +371,7 @@ beneficiaries:
     solutionType: '/iniziativa/presentazione-progetti'
     accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
-    moreInfoLink: '#'
+    moreInfoLink: 'https://collaudo-padigitale2026.cs128.force.com/padigitale2026/Pa_digitale2026_avvisi'
 modal:
   selectRepresent:
     - value: public-administration

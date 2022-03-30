@@ -164,7 +164,7 @@ export const HeroCarousel = ({ content, title }) => {
               </Col>
               <Col xs="12" lg="6" className="d-lg-flex justify-content-end">
                 <ExternalLink
-                  linkTo="/"
+                  linkTo="https://innovazione.gov.it/"
                   alt=""
                   className={classes.titleLink}
                   ariaLabel={`titolo (Collegamento sito esterno apre su nuova scheda)`}
