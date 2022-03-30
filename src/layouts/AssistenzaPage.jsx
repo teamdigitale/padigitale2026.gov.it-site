@@ -149,6 +149,9 @@ const useStyles = createUseStyles({
         outline: '0',
       },
     },
+    '& .css-1n7v3ny-option': {
+      textDecoration: 'underline',
+    },
     '& .form-check': {
       borderBottom: '1px solid #e6e6e6',
       padding: '1.111rem 0.444rem',

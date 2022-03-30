@@ -148,6 +148,9 @@ const useStyles = createUseStyles({
       boxShadow: '0 0 0 2px #f90',
       outline: '0',
     },
+    '& .css-1n7v3ny-option': {
+      textDecoration: 'underline',
+    },
     '& .form-check': {
       borderBottom: '1px solid #e6e6e6',
       padding: '1.111rem 0.444rem',
@@ -368,6 +371,10 @@ export const UpdatesPage = () => {
       });
   };
 
+  const onFocus = (event) => {
+    console.log(event.target);
+  };
+
   const onError = async (data) => {
     console.log('error', data);
   };
@@ -405,7 +412,7 @@ export const UpdatesPage = () => {
               <legend>
                 <Row>
                   <Col xs={12} md={6} lg={5}>
-                    <div className={classes.titleUpdate}>Ricevi aggiornamenti</div>
+                    <h3 className={classes.titleUpdate}>Ricevi aggiornamenti</h3>
                     <div className={classes.subtitleUpdate}>
                       Ricevi materiali e informazioni sulle novità e gli avvisi di Italia digitale 2026.
                     </div>
@@ -477,6 +484,7 @@ export const UpdatesPage = () => {
                         id="represent-select"
                         inputId="represent-select-input"
                         onChange={onChange}
+                        onFocus={onFocus}
                         options={selectRepresent}
                         placeholder={selectPlaceholder}
                         aria-label={selectPlaceholder}

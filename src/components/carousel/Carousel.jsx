@@ -106,10 +106,11 @@ const useStyles = createUseStyles({
   },
   titleLink: {
     fontSize: '1rem',
-    color: '#33485C',
+    color: '#06c',
     fontWeight: '600',
     textDecoration: 'none',
     '&:hover': {
+      color: '#06c',
       textDecoration: 'underline',
     },
     '& .source': {
