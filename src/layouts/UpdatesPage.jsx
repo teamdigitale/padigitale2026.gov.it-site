@@ -298,7 +298,7 @@ export const UpdatesPage = () => {
 
   useEffect(() => {}, [selectValue]);
 
-  const onSubmit = async (data) => {
+  const onSubmit = async (data, event) => {
     console.log(data);
     Object.keys(data).map(function (key) {
       if (data[key] === undefined) {
@@ -365,6 +365,11 @@ export const UpdatesPage = () => {
       .then(() => {
         spinner.classList.add('hidden');
         announce('Invio in corso');
+        event.target.reset();
+        const selectArr = document.querySelectorAll('.select [class$="-singleValue"]');
+        selectArr.forEach((singleValue) => (singleValue.innerHTML = ''));
+        const inputArr = document.querySelectorAll('#updates-form input');
+        inputArr.forEach((input) => (input.value = ''));
       });
   };
 

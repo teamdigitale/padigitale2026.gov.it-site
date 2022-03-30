@@ -424,6 +424,7 @@ export const AssistenzaPage = () => {
 
   const formHandler = (event) => {
     event.target.reset();
+    window.grecaptcha.reset();
     const notificationElement = document.querySelector('.notification');
     const titleElement = notificationElement.querySelector('h5');
     const descriptionElement = notificationElement.querySelector('p');
@@ -431,6 +432,11 @@ export const AssistenzaPage = () => {
     notificationElement.classList.add('success');
     titleElement.innerHTML = `${successLabels.icon} ${successLabels.title}`;
     descriptionElement.innerHTML = successLabels.description;
+    const selectArr = document.querySelectorAll('.select-wrapper [class$="-singleValue"]');
+    selectArr.forEach((singleValue) => (singleValue.innerHTML = ''));
+    setFormFilled(false);
+    const submitBtn = document.querySelector('#assistance-form input[type="submit"]');
+    submitBtn.disabled = true;
 
     setTimeout(() => {
       notificationElement.classList.remove('show');
