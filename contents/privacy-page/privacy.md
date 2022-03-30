@@ -1,4 +1,4 @@
-# Informativa privacy
+## Informativa privacy
 
 [padigitale2026.gov.it](https://padigitale2026.gov.it/){class="text-decoration-none font-weight-semibold"}
 è gestito dalla Presidenza del Consiglio dei Ministri - Dipartimento per la Trasformazione Digitale.
@@ -8,24 +8,24 @@ fornirti un'informativa semplice e chiara su come trattiamo i dati personali che
 ci fornisci direttamente o di cui comunque potremo venire in possesso tramite
 contatto con il sito web padigitale2026.gov.it.
 
-## Titolare del trattamento
+### Titolare del trattamento
 
 Il Titolare del trattamento è la Presidenza del Consiglio dei Ministri -
 Dipartimento per la trasformazione digitale, con sede in Largo Pietro di Brazzà
 86, 00186 Roma, contattabile ai seguenti recapiti:
 
-- Email: [segreteria.trasformazionedigitale@governo.it](mailto:segreteria.trasformazionedigitale@governo.it){class="text-decoration-none font-weight-semibold", rel='noreferrer', target='\_blank', aria-label='Indirizzo Email (link esterno)'}
-- PEC: [diptrasformazionedigitale@pec.governo.it](mailto:diptrasformazionedigitale@pec.governo.it){class="text-decoration-none font-weight-semibold", rel='noreferrer', target='\_blank', aria-label='Indirizzo PEC (link esterno)'}
+- Email: [segreteria.trasformazionedigitale@governo.it](mailto:segreteria.trasformazionedigitale@governo.it){class="text-decoration-none font-weight-semibold", rel='noreferrer', target='\_blank', aria-label='Invia un Email a segreteria.trasformazionedigitale@governo.it (link esterno)'}
+- PEC: [diptrasformazionedigitale@pec.governo.it](mailto:diptrasformazionedigitale@pec.governo.it){class="text-decoration-none font-weight-semibold", rel='noreferrer', target='\_blank', aria-label='Invia una PEC a diptrasformazionedigitale@pec.governo.it (link esterno)'}
 
-## Responsabile per la protezione dei dati
+### Responsabile per la protezione dei dati
 
 Il Responsabile per la protezione dei dati - Data Protection Officer, è
 contattabile ai seguenti recapiti:
 
-- Email: [responsabileprotezionedatipcm@governo.it](mailto:responsabileprotezionedatipcm@governo.it){class="text-decoration-none font-weight-semibold", rel='noreferrer', target='\_blank', aria-label='Indirizzo Email (link esterno)'}
-- PEC: [USG@mailbox.governo.it](mailto:USG@mailbox.governo.it){class="text-decoration-none font-weight-semibold", rel='noreferrer', target='\_blank', aria-label='Indirizzo PEC (link esterno)'}
+- Email: [responsabileprotezionedatipcm@governo.it](mailto:responsabileprotezionedatipcm@governo.it){class="text-decoration-none font-weight-semibold", rel='noreferrer', target='\_blank', aria-label='Invia un Email a responsabileprotezionedatipcm@governo.it (link esterno)'}
+- PEC: [USG@mailbox.governo.it](mailto:USG@mailbox.governo.it){class="text-decoration-none font-weight-semibold", rel='noreferrer', target='\_blank', aria-label='Invia una PEC a USG@mailbox.governo.it (link esterno)'}
 
-## Come vengono trattati i tuoi dati personali - periodo di conservazione - base giuridica
+### Come vengono trattati i tuoi dati personali - periodo di conservazione - base giuridica
 
 La richiesta di materiali o informazioni in modalità automatizzata o l'invio
 facoltativo, esplicito e volontario di messaggi per il tramite dell’apposito
@@ -44,7 +44,7 @@ digitalizzazione della PA previsti dal Piano Nazionale di Ripresa e Resilienza
 (PNRR) approvato dal governo italiano all’interno del programma europeo
 NextGenerationEU.
 
-## Chi potrà conoscere i dati personali
+### Chi potrà conoscere i dati personali
 
 I dati personali raccolti potranno essere oggetto di comunicazione a soggetti,
 interni o esterni alla Presidenza del Consiglio dei Ministri, nei confronti dei
@@ -56,9 +56,9 @@ trattamento ai sensi e per gli effetti di cui all’articolo 28 del GDPR.
 
 L’elenco dei responsabili del trattamento può essere richiesto al Titolare in
 qualsiasi momento, scrivendo a
-[segreteria.trasformazionedigitale@governo.it](mailto:segreteria.trasformazionedigitale@governo.it){class="text-decoration-none font-weight-semibold", rel='noreferrer', target='\_blank', aria-label='Indirizzo Email (link esterno)'}.
+[segreteria.trasformazionedigitale@governo.it](mailto:segreteria.trasformazionedigitale@governo.it){class="text-decoration-none font-weight-semibold", rel='noreferrer', target='\_blank', aria-label='Invia un'Email a segreteria.trasformazionedigitale@governo.it (link esterno)'}.
 
-## Trasferimento dei dati
+### Trasferimento dei dati
 
 I dati potranno essere liberamente trasferiti fuori dal territorio nazionale a
 Paesi situati nell'Unione Europea. Per la fornitura di alcuni servizi
@@ -68,7 +68,7 @@ fuori dell'Unione Europea avverrà, in ogni caso, nel rispetto delle garanzie
 appropriate e opportune ai fini del trasferimento stesso, ai sensi della
 normativa applicabile.
 
-## Quali sono i tuoi diritti
+### Quali sono i tuoi diritti
 
 - **Diritto di accedere ai dati**: puoi ottenere conferma e informazioni sul trattamento.
 - **Diritto di rettifica**: puoi rettificare dati inesatti o integrarli.
@@ -89,7 +89,7 @@ personali a te riferiti avvenga in violazione di quanto previsto dal GDPR, hai
 anche diritto di proporre reclamo, ai sensi dell’art. 77 del GDPR, al Garante
 per la protezione dei dati personali.
 
-## Cookie
+### Cookie
 
 Questa sezione fornisce informazioni dettagliate sull'uso dei cookie, su come
 sono utilizzati dal sito e su come gestirli, in attuazione dell’art. 122 del
@@ -106,8 +106,7 @@ consenso per memorizzare i cookie.
 
 Utilizziamo anche i seguenti cookie analitici:
 
-- Il servizio Google Analytics, la cui policy può essere visionata a questo
-  link [a questo link](https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage){class="text-decoration-none font-weight-semibold", rel='noreferrer', target='\_blank', aria-label='Uso di cookie di Google Analytics (link esterno)'}.
+- Il servizio Google Analytics, la cui policy può essere visionata [a questo link](https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage){class="text-decoration-none font-weight-semibold", rel='noreferrer', target='\_blank', aria-label='Uso di cookie di Google Analytics (link esterno)'}.
   Al fine di rispettare la privacy degli utenti, il servizio è utilizzato con la
   modalità “anonymizeIp” che consente di mascherare gli indirizzi IP degli
   utenti che navigano sul sito (maggiori informazioni sulla funzionalità [a questo link](https://support.google.com/analytics/answer/2763052?hl=it){class="text-decoration-none font-weight-semibold", rel='noreferrer', target='\_blank', aria-label='Anonimizzazione (o mascheramento) degli indirizzi IP in Google Analytics (link esterno)'})
@@ -122,7 +121,7 @@ per un periodo non superiore a 13 mesi dal momento della raccolta, salvo che la
 loro ulteriore conservazione non si renda necessaria per l’accertamento di
 reati.
 
-## Come disabilitare i cookie (opt-out) sul proprio dispositivo
+### Come disabilitare i cookie (opt-out) sul proprio dispositivo
 
 La maggior parte dei browser accetta i cookie automaticamente, ma è possibile
 rifiutarli.
@@ -132,11 +131,11 @@ impostazioni di sicurezza del browser utilizzato, secondo le istruzioni rese
 disponibili dai relativi fornitori ai link di seguito indicati.  Nel caso in cui
 si disabilitino tutti i cookie, il sito potrebbe non funzionare correttamente.
 
-- [Chrome](https://support.google.com/chrome/answer/95647?co=GENIE.Platform%3DDesktop&hl=it){class="text-decoration-none font-weight-semibold", rel='noreferrer', target='\_blank', aria-label='Chrome (link esterno)'}
-- [Firefox](https://support.mozilla.org/it/kb/protezione-antitracciamento-avanzata-firefox-desktop?redirectlocale=it&redirectslug=Attivare+e+disattivare+i+cookie){class="text-decoration-none font-weight-semibold", rel='noreferrer', target='\_blank', aria-label='Firefox (link esterno)'}
-- [Safari](https://support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471/mac){class="text-decoration-none font-weight-semibold", rel='noreferrer', target='\_blank', aria-label='Safari (link esterno)'}
-- [Edge](https://support.microsoft.com/it-it/help/4027947/microsoft-edge-delete-cookies){class="text-decoration-none font-weight-semibold", rel='noreferrer', target='\_blank', aria-label='Edge (link esterno)'}
-- [Opera](https://help.opera.com/en/latest/web-preferences/#cookies){class="text-decoration-none font-weight-semibold", rel='noreferrer', target='\_blank', aria-label='Opera (link esterno)'}
+- [Chrome](https://support.google.com/chrome/answer/95647?co=GENIE.Platform%3DDesktop&hl=it){class="text-decoration-none font-weight-semibold", rel='noreferrer', target='\_blank', aria-label='Scopri di più su come gestire i cookie per Chrome (link esterno)'}
+- [Firefox](https://support.mozilla.org/it/kb/protezione-antitracciamento-avanzata-firefox-desktop?redirectlocale=it&redirectslug=Attivare+e+disattivare+i+cookie){class="text-decoration-none font-weight-semibold", rel='noreferrer', target='\_blank', aria-label='Scopri di più su come gestire i cookie per Firefox (link esterno)'}
+- [Safari](https://support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471/mac){class="text-decoration-none font-weight-semibold", rel='noreferrer', target='\_blank', aria-label='Scopri di più su come gestire i cookie per Safari (link esterno)'}
+- [Edge](https://support.microsoft.com/it-it/help/4027947/microsoft-edge-delete-cookies){class="text-decoration-none font-weight-semibold", rel='noreferrer', target='\_blank', aria-label='Scopri di più su come gestire i cookie per Edge (link esterno)'}
+- [Opera](https://help.opera.com/en/latest/web-preferences/#cookies){class="text-decoration-none font-weight-semibold", rel='noreferrer', target='\_blank', aria-label='Scopri di più su come gestire i cookie per Opera (link esterno)'}
 
 Le presenti informazioni sono aggiornate alla data riportata in calce a questa pagina.
 

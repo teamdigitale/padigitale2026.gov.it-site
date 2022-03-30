@@ -142,6 +142,13 @@ const useStyles = createUseStyles({
       boxShadow: '0 0 0 2px #f90',
       outline: '0',
     },
+    '& .select': {
+      '&:focus': {
+        borderColor: '#f90',
+        boxShadow: '0 0 0 2px #f90',
+        outline: '0',
+      },
+    },
     '& .form-check': {
       borderBottom: '1px solid #e6e6e6',
       padding: '1.111rem 0.444rem',
@@ -435,6 +442,15 @@ export const AssistenzaPage = () => {
     }
   };
 
+  const handleChangeTel = (event) => {
+    let value = event.target.value;
+    const regex = /^[0-9]+$/;
+    if (!value.match(regex)) {
+      value = value.slice(0, -1);
+    }
+    event.target.value = value;
+  };
+
   const formHandler = () => {
     const notificationElement = document.querySelector('.notification');
     const titleElement = notificationElement.querySelector('h5');
@@ -561,6 +577,8 @@ export const AssistenzaPage = () => {
                     name="00N3N00000GYuAr"
                     pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$"
                     onInvalid={customInvalid}
+                    onChange={handleChangeTel}
+                    className="tel-input"
                   />
                 </Col>
               </Row>
@@ -580,6 +598,7 @@ export const AssistenzaPage = () => {
                       aria-label={selectPlaceholder}
                       aria-describedby="mandatory-label"
                       className={`select`}
+                      tabIndex="0"
                     />
                     <select
                       className="d-none"

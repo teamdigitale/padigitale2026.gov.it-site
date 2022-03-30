@@ -1,6 +1,7 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
 import { Row, Col, Card, CardBody, CardTitle, CardText } from 'design-react-kit';
+import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import { DesktopSwiper } from '../DesktopSwiper';
 import { ExternalLink } from '../ExternalLink';
@@ -122,6 +123,12 @@ const useStyles = createUseStyles({
       marginLeft: '0.5rem',
     },
   },
+  titleCardLink: {
+    textDecoration: 'none',
+    '&:hover': {
+      color: '#06c',
+    },
+  },
 });
 // const carousel = React.createRef();
 
@@ -133,7 +140,9 @@ export const HeroCarousel = ({ content, title }) => {
       <Card key={element.id} className={classes.heroCards} spacing noWrapper>
         <CardBody>
           <span className="category">{element.category}</span>
-          <CardTitle tag="h4">{element.title}</CardTitle>
+          <Link to="/" className={classes.titleCardLink}>
+            <CardTitle tag="h4">{element.title}</CardTitle>
+          </Link>
           <CardText>{element.description}</CardText>
           <ExternalLink
             linkTo={element.linkTo}

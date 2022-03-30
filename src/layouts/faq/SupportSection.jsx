@@ -160,7 +160,7 @@ export const SupportSection = (props) => {
                 <Link
                   to="/supporto"
                   className="btn btn-primary text-uppercase"
-                  aria-label="Scopri di più sulla pagina supporto"
+                  aria-label="Scopri di più su come avere supporto"
                 >
                   {buttonLabel}
                 </Link>
