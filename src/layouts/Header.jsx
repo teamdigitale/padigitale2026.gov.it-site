@@ -250,7 +250,6 @@ const useStyle = createUseStyles({
     '& .it-header-slim-wrapper-content': {
       padding: '0',
     },
-    dropShadow: '0 20px 30px 5px rgb(0 0 0 / 5%)',
     '& .it-header-center-content-wrapper': {
       padding: '0',
     },
@@ -395,7 +394,7 @@ const SlimHeader = () => {
         >
           <img className="d-none d-lg-block" src="/assets/eu-flag.svg" alt={externalLinks.eu.label}></img>
         </ExternalLink>
-        <Link className={classes.login} to={externalLinks.accedi.linkTo} ariaLabel={externalLinks.accedi.ariaLabel}>
+        <Link className={classes.login} to={externalLinks.accedi.linkTo} aria-label={externalLinks.accedi.ariaLabel}>
           <img src="/assets/user-icon.svg" alt={externalLinks.eu.label}></img>
           <img className="mobile" src="/assets/user-icon-dark.svg" alt={externalLinks.eu.label}></img>
           <span>{externalLinks.accedi.label}</span>
