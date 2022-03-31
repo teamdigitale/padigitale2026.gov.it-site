@@ -15,7 +15,7 @@ sidebar:
   - sectionTitle: Candidatura
     sectionId: candidatura
     sectionActive: false
-  - sectionTitle: Supporto Tecnico
+  - sectionTitle: Supporto tecnico
     sectionId: supporto-tecnico
     sectionActive: false
 questions:
@@ -81,7 +81,7 @@ questions:
     sectionId: gestione-utenti
     accordions:
       - title: Quanti utenti è possibile invitare in PA digitale 2026 per una singola amministrazione?
-        content: Oltre al ruolo di rappresentante legale, ogni amministrazione può avere un massimo di 3 utenti. I ruoli possono essere così
+        content: "Oltre al ruolo di rappresentante legale, ogni amministrazione può avere un massimo di 3 utenti. I ruoli possono essere così suddivisi: 1 incaricato e 2 editori, oppure 3 editori."
       - title: Che differenza c'è tra rappresentante legale, incaricato ed editore?
         content: L'utenza del rappresentante legale è la prima creata per la PA all'interno della piattaforma e ha la facoltà di creare e gestire tutti gli altri ruoli utente. Un utente con ruolo di "incaricato" può visualizzare le informazioni relative alla PA e alle candidature, compilare moduli, caricare documenti e invitare utenti “editori”. È possibile essere utente “incaricato” per più amministrazioni (es. forme aggregative quali unioni di comuni). Il rappresentante legale può invitare un solo utente con il ruolo di “incaricato”. Un utente con ruolo di "editore" può visualizzare le informazioni relative alla PA e alle candidature, compilare moduli e caricare documenti. Non può invitare altri utenti. È possibile essere utente “editore” per una sola amministrazione. Il rappresentante legale o l'incaricato possono invitare uno o più utenti con questo ruolo nei limiti del numero di utenti permesso dalla piattaforma.
       - title: Come si effettua l'accesso a PA digitale 2026 per un'amministrazione in qualità di incaricati o editori?
@@ -138,6 +138,12 @@ questions:
     accordions:
       - title: "Quali browser sono supportati per la navigazione di PA digitale 2026?" 
         content: "È possibile navigare la piattaforma con i browser più comuni, come Chrome, Firefox e Safari, ad eccezione di Internet Explorer 11, che non è supportato dal sistema."
+      - title: "Non ho ricevuto l'email di verifica: come posso finalizzare l’iscrizione agli aggiornamenti di PA digitale 2026?" 
+        content: "Se non trovi l’email che contiene il link per verificare l’indirizzo di posta sul quale vuoi ricevere gli aggiornamenti della piattaforma, ti consigliamo di:<ul><li>controllare che l’email non si trovi nelle cartelle “spam”, “posta indesiderata”, “cestino”;</li><li>assicurarti di cercare l’email nell’account di posta elettronica che hai indicato nel modulo di iscrizione;</li><li>se non hai ricevuto alcuna email, scrivici tramite il modulo di supporto.</li></ul>"
+        assistance: Scrivici
+        ariaLabel: Vai alla pagina di assistenza
+      - title: Come posso annullare la mia iscrizione agli aggiornamenti? 
+        content: Se desideri interrompere la ricezione di comunicazioni e aggiornamenti da PA digitale 2026, usa il link “Annulla iscrizione” presente nella sezione finale di ogni email.
 noResults: Nessun risultato trovato
 support:
   tag: Supporto
