@@ -18,6 +18,7 @@ heroPnrr:
   body: Partecipa agli avvisi <strong>per richiedere i finanziamenti</strong> e avviare il processo di transizione digitale.
   firstButtonLabel: SCOPRI DI PIÙ
   firstButtonAriaLabel: Scopri di più (Collegamento esterno - Apre su nuova scheda)
+  link: /come-partecipare/candida-pa
 heroClassificazione:
   category: Classificazione
   title: Classificazione dati e servizi
@@ -125,43 +126,43 @@ heroCarouselNews:
     category: Avviso pubblico
     title: "Milano, Napoli e Roma città capofila per il progetto Mobility as a Service for Italy"
     description: Pubblicata la graduatoria dell’avviso pubblico. Nei prossimi mesi un nuovo bando per ampliare l’iniziativa
-    source: 'Fonte: innovazione.gov.it'
+    source: 'innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/articoli/milano-napoli-e-roma-citta-capofila-per-il-progetto-mobility-as-a-service/'
   - id: 2
     category: Approfondimento
     title: "Cosa servirà alle PA per partecipare agli avvisi pubblici"
     description: Come funzionerà la registrazione e di cosa avranno bisogno le amministrazioni nelle diverse fasi progettuali
-    source: 'Fonte: innovazione.gov.it'
+    source: 'innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/articoli/pa-digitale-2026-cosa-servira-alle-pa-per-partecipare-agli-avvisi-pubblici/'
   - id: 3
     category: Novità
     title: "La svolta digitale delle grandi amministrazioni centrali"
     description: Grazie al PNRR, un piano di interventi per ridisegnare e digitalizzare alcuni servizi fondamentali della PA
-    source: 'Fonte: innovazione.gov.it'
+    source: 'innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/articoli/la-svolta-digitale-delle-grandi-amministrazioni-centrali/'
   - id: 4
     category: Novità
     title: "I progetti Sportello Digitale Unico e accessibilità entrano nel vivo"
     description: AgID al lavoro su due importanti misure del PNRR sulla digitalizzazione della Pubblica amministrazione
-    source: 'Fonte: agid.gov.it'
+    source: 'agid.gov.it'
     linkTo: 'https://www.agid.gov.it/it/agenzia/stampa-e-comunicazione/notizie/2022/02/21/pa-digitale-2026-i-progetti-sportello-digitale-unico-accessibilita-entrano-vivo'
   - id: 5
     category: Approfondimento
     title: "Le misure per una PA protagonista della transizione digitale"
     description: Disponibile un approfondimento sulle quattordici misure del PNRR di PA digitale 2026
-    source: 'Fonte: innovazione.gov.it'
+    source: 'innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/articoli/le-misure-per-una-pa-protagonista-della-transizione-digitale/'
   - id: 6
     category: Novità
     title: "Pubblicato il bando per il Polo Strategico Nazionale"
     description: Al via la gara europea per la gestione dei servizi cloud per la Pubblica Amministrazione. Scade il 16 marzo il termine per presentare le offerte
-    source: 'Fonte: innovazione.gov.it'
+    source: 'innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/articoli/pubblicato-il-bando-per-il-polo-strategico-nazionale/'
   - id: 7
     category: Comunicato stampa
     title: "Anagrafe digitale: al via il cambio di residenza online"
     description: Attiva da febbraio la prima fase di applicazione, che verrà estesa in tutta Italia
-    source: 'Fonte: innovazione.gov.it'
+    source: 'innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/articoli/anagrafe-digitale-al-via-il-cambio-di-residenza-online/'
 support:
   tag: Supporto
