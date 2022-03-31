@@ -1,7 +1,7 @@
+/* eslint-disable sonarjs/no-duplicate-string */
 import React from 'react';
 import { createUseStyles } from 'react-jss';
 import { Row, Col, Card, CardBody, CardTitle, CardText } from 'design-react-kit';
-import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import { DesktopSwiper } from '../DesktopSwiper';
 import { ExternalLink } from '../ExternalLink';
