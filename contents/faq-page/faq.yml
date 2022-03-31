@@ -15,7 +15,7 @@ sidebar:
   - sectionTitle: Candidatura
     sectionId: candidatura
     sectionActive: false
-  - sectionTitle: Supporto Tecnico
+  - sectionTitle: Supporto tecnico
     sectionId: supporto-tecnico
     sectionActive: false
 questions:
