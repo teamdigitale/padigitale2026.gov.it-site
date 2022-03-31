@@ -49,5 +49,8 @@ creaProfiloPage:
 candidaPaPage:
   title: Candida PA - PA digitale 2026
   description: Per partecipare agli avvisi è necessario che il rappresentante legale di un'amministrazione presente su IPA (Indice dei domini digitali della Pubblica Amministrazione), o una persona incaricata, avvii la procedura di attivazione della PA sulla piattaforma.
+riceviAssistenzaPage:
+  title: Ricevi assistenza - PA digitale 2026
+  description: Per partecipare agli avvisi è necessario che il rappresentante legale di un'amministrazione presente su IPA (Indice dei domini digitali della Pubblica Amministrazione), o una persona incaricata, avvii la procedura di attivazione della PA sulla piattaforma.
 
 

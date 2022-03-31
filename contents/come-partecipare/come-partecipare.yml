@@ -57,7 +57,7 @@ sectionFourth:
   number: '04'
   title: 'Ricevere assistenza'
   text: La piattaforma PA digitale 2026 permette di candidare le PA agli avvisi pubblici e di gestire le attività attraverso l’area riservata.<br><br> Qualsiasi dubbio o problema si possa riscontrare, è possibile <strong>trovare le risposte alle domande più comuni e chiedere assistenza dedicata</strong>.
-  linkTo: '/supporto/assistenza'
+  linkTo: '/come-partecipare/ricevi-assistenza'
   button: true
   image: 'assistenza.svg'
   reverse: true
