@@ -11,7 +11,7 @@ modal:
   selectArgument:
     - value: Accesso al portale
       label: Accesso al portale
-    - value: Iscrizione alla newsletter
+    - value: Iscrizione newsletter
       label: Iscrizione alla newsletter
     - value: Generale
       label: Generale

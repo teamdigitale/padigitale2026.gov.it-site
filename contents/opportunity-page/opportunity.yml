@@ -227,6 +227,7 @@ beneficiaries:
     accessSectionId: soluzioni-standard
     accessLabel: Soluzioni Standard
     moreInfoLink: 'https://collaudo-padigitale2026.cs128.force.com/padigitale2026/Pa_digitale2026_avvisi'
+    goToButton: true
   - number: 1.4.4
     id: adoz-id
     title: Adozione identità digitale
@@ -263,6 +264,7 @@ beneficiaries:
     accessSectionId: soluzioni-standard
     accessLabel: Soluzioni Standard
     moreInfoLink: 'https://collaudo-padigitale2026.cs128.force.com/padigitale2026/Pa_digitale2026_avvisi'
+    goToButton: true
   - number: 1.4.5
     id: digi-avvisi
     title: Digitalizzazione degli avvisi pubblici

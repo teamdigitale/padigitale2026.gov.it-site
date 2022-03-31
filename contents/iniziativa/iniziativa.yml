@@ -84,25 +84,25 @@ timeline:
     - id: 1
       active: false
       time: LUGLIO 2020
-      title: NEXT GENERATION EU
+      title: NextGenerationEU
       text: L’Unione Europea approva un piano da €750 miliardi che ha l'obiettivo di rilanciare l'economia europea dopo la pandemia di COVID-19 e di renderla più verde e digitale.
     - id: 2
       active: false
-      time: Aprile 2021
-      title: ITALIA DOMANI
+      time: APRILE 2021
+      title: Italia Domani
       text: Il Governo italiano presenta “Italia Domani”, il Piano Nazionale di Ripresa e Resilienza (PNRR). Grazie all’integrazione di un Fondo Complementare, il totale degli investimenti previsti è di €222,1 miliardi.
     - id: 3
-      time: Aprile 2021
-      title: ITALIA DIGITALE 2026
+      time: APRILE 2021
+      title: Italia digitale 2026
       text: "Con l’approvazione del PNRR, viene definito il piano strategico per la transizione digitale e la connettività del paese: Italia digitale 2026. Degli oltre 13 miliardi di euro, 6,74 sono dedicati alla digitalizzazione della PA."
     - id: 4
-      time: Novembre 2021
-      title: PA DIGITALE 2026
-      text: L’Unione Europea approva un piano da €750 miliardi che ha l'obiettivo di rilanciare l'economia europea dopo la pandemia di COVID-19 e di renderla più verde e digitale.
+      time: NOVEMBRE 2021
+      title: PA digitale 2026
+      text: Inizia il percorso di accompagnamento per aiutare le PA a conoscere le grandi opportunità del digitale previste dal PNRR.
     - id: 5
       active: true
-      time: Aprile 2022
-      title: PARTONO I PRIMI AVVISI
+      time: APRILE 2022
+      title: Partono i primi avvisi
       text: Su PA digitale 2026 le PA locali possono accedere attraverso soluzioni standard alle risorse del PNRR.
 pacchettiTabs:
   title: Soluzioni standard
