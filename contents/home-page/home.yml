@@ -163,12 +163,6 @@ heroCarouselNews:
     description: Attiva da febbraio la prima fase di applicazione, che verrà estesa in tutta Italia
     source: 'Fonte: innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/articoli/anagrafe-digitale-al-via-il-cambio-di-residenza-online/'
-  - id: 8
-    category: Avvis pubblico
-    title: "Servizio civile digitale: al via il nuovo Avviso per gli enti"
-    description: Il servizio civile digitale espande il suo bacino di intervento con la pubblicazione del nuovo avviso per gli Enti
-    source: 'Fonte: innovazione.gov.it'
-    linkTo: 'https://innovazione.gov.it/notizie/articoli/servizio-civile-digitale-al-via-il-nuovo-avviso-per-gli-enti/'
 support:
   tag: Supporto
   title: Consulta le domande frequenti o scrivici per ricevere assistenza

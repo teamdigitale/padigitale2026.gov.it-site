@@ -44,6 +44,9 @@ const useStyle = createUseStyles({
     '& .it-hero-text-wrapper': {
       paddingRight: '0',
       paddingLeft: '0',
+      '& p': {
+        fontFamily: 'Titillium Web, sans-serif',
+      },
       '& .no_toc': {
         fontSize: '2.5rem',
         fontWeight: '700',

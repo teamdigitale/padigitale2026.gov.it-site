@@ -58,7 +58,7 @@ const useStyle = createUseStyles({
   seeMore: {
     color: '#06c',
     textDecoration: 'none',
-    fontWeight: 'bold',
+    fontWeight: '600',
     marginTop: '2.5rem',
     display: 'block',
     '&:hover': {
