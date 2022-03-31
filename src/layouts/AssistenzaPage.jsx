@@ -414,6 +414,7 @@ export const AssistenzaPage = () => {
     const selectWrapper = argumentInput.closest('.select-wrapper');
     const hiddenSelect = selectWrapper.querySelector('select');
     hiddenSelect.value = element.value;
+    console.log(element.value);
     hiddenSelect.dispatchEvent(optionSelected);
   };
 
