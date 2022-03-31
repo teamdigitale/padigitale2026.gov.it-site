@@ -104,6 +104,6 @@ wUTbulqPrJYP7tzmTJVyEunP91j49HohxIxFxOx65iIb8R7LpNx98w8pSXcaRfPb</ds:X509Certifi
          <spid:Public />
 		 <spid:IPACode>PA:IT-PCM_AA1D3A2</spid:IPACode>
       </md:Extensions>
-      <md:EmailAddress>itcrowd@teamdigitale.governo.it</md:EmailAddress>
+      <md:EmailAddress>tech@teamdigitale.governo.it</md:EmailAddress>
    </md:ContactPerson>
 </md:EntityDescriptor>
