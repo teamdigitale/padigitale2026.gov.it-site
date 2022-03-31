@@ -1,3 +1,4 @@
+/* eslint-disable max-lines-per-function */
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-undef */
@@ -158,6 +159,43 @@ export const FaqPage = () => {
       }
     }
   }, [filterId, getNewQuestions, getQuestionsMobile, inputValue]);
+
+  useEffect(() => {
+    const sectionArr = document.querySelectorAll('.question-section');
+
+    const observerHandler = (entries) => {
+
+      const changeActive = (id) => {
+        const sideMenuActive = document.querySelector(`.sidebar-wrapper .list-item.active`);
+        const sideMenuRefer = document.querySelector(`.sidebar-wrapper .list-item[data-id=${id}]`);
+
+        sideMenuActive.classList.remove('active');
+        sideMenuRefer.classList.add('active');
+      };
+
+      entries.forEach((entry) => {
+        if (entry.intersectionRatio > 0.6 && entry.intersectionRatio < 0.7) {
+          changeActive(entry.target.id);
+        }
+      });
+    };
+
+    const scrollHandler = () => {
+      const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: [0.6, 0.8],
+        trackVisibility: true,
+        delay: 200,
+      };
+
+      const observer = new IntersectionObserver(observerHandler, options);
+      sectionArr.forEach((section) => {
+        observer.observe(section);
+      });
+    };
+    window.addEventListener('scroll', scrollHandler);
+  }, []);
 
   const resetInput = () => {
     setInputValue('');

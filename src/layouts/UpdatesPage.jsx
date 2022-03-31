@@ -317,7 +317,7 @@ export const UpdatesPage = () => {
     });
   }, []);
 
-  const onSubmit = async (data, event) => {
+  const onSubmit = async (data) => {
     console.log(data);
     Object.keys(data).map(function (key) {
       if (data[key] === undefined) {
@@ -384,11 +384,6 @@ export const UpdatesPage = () => {
       .then(() => {
         spinner.classList.add('hidden');
         announce('Invio in corso');
-        event.target.reset();
-        const selectArr = document.querySelectorAll('.select [class$="-singleValue"]');
-        selectArr.forEach((singleValue) => (singleValue.innerHTML = ''));
-        const inputArr = document.querySelectorAll('#updates-form input');
-        inputArr.forEach((input) => (input.value = ''));
       });
   };
 
@@ -652,7 +647,7 @@ export const UpdatesPage = () => {
           </a>
         </p>
         <div className={`${classes.submitContainer} d-flex mt-5`}>
-          <Button color="primary" type="submit" form="updates-form" {...(!formValidate ? 'disabled' : '')}>
+          <Button color="primary" type="submit" form="updates-form" disabled={!formValidate ? true : false}>
             {sendButtonLabel}
           </Button>
           <img className={classes.spinner} src="/assets/spinner.gif" alt=""></img>
