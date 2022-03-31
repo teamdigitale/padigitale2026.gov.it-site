@@ -105,7 +105,7 @@ Per maggiori informazioni o per esercitare i propri diritti, l’interessato pu�
 
 ### 11. Cookie
 
-Questa sezione fornisce informazioni dettagliate sull'uso dei cookie, su come sono utilizzati dal Sito e su come gestirli, in attuazione dell’art. 122 del decreto legislativo 30 giugno 2003, n. 196, nonché nel rispetto delle “[Linee guida cookie e altri strumenti di tracciamento](garanteprivacy.it/web/guest/home/docweb/-/docweb-display/docweb/9677876){class="text-decoration-none font-weight-semibold", rel='noreferrer', target='\_blank', aria-label='Linee guida cookie e strumenti di tracciamento (link esterno - Apertura nuova scheda)'}” emanate dal Garante per la protezione dei dati personali con provvedimento del 10 giugno 2021.
+Questa sezione fornisce informazioni dettagliate sull'uso dei cookie, su come sono utilizzati dal Sito e su come gestirli, in attuazione dell’art. 122 del decreto legislativo 30 giugno 2003, n. 196, nonché nel rispetto delle “[Linee guida cookie e altri strumenti di tracciamento](garanteprivacy.it/web/guest/home/docweb/-/docweb-display/docweb/9677876){class="text-decoration-none font-weight-semibold", rel='noreferrer', target='\_blank', aria-label='Linee guida cookie e altri strumenti di tracciamento (link esterno - Apertura nuova scheda)'}” emanate dal Garante per la protezione dei dati personali con provvedimento del 10 giugno 2021.
 
 Il Sito utilizza cookie tecnici al fine di garantire il corretto funzionamento delle procedure e migliorare l'esperienza d'uso dei propri visitatori, il cui uso non è strumentale alla raccolta di dati personali identificativi dell'utente. Per questo motivo non è necessario il consenso dell’utente per la memorizzazione dei cookie.
 
