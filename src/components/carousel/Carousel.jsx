@@ -1,7 +1,7 @@
+/* eslint-disable sonarjs/no-duplicate-string */
 import React from 'react';
 import { createUseStyles } from 'react-jss';
 import { Row, Col, Card, CardBody, CardTitle, CardText } from 'design-react-kit';
-import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import { DesktopSwiper } from '../DesktopSwiper';
 import { ExternalLink } from '../ExternalLink';
@@ -27,7 +27,7 @@ const useStyles = createUseStyles({
         textTransform: 'uppercase',
       },
       '& h4.card-title': {
-        color: '#0066CC',
+        color: '#33485C',
         fontSize: '1.125rem',
         fontWeight: '600',
         lineHeight: '1.26',
@@ -103,6 +103,8 @@ const useStyles = createUseStyles({
   heroLink: {
     textDecoration: 'none',
     marginTop: 'auto',
+    display: 'inline-flex',
+    marginLeft: '5px',
   },
   titleLink: {
     fontSize: '1rem',
@@ -114,7 +116,7 @@ const useStyles = createUseStyles({
       textDecoration: 'underline',
     },
     '& .source': {
-      display: 'flex',
+      display: 'inline-flex',
       alignItems: 'center',
       '@media (max-width: 992px)': {
         marginTop: '0.5rem',
@@ -141,21 +143,22 @@ export const HeroCarousel = ({ content, title }) => {
       <Card key={element.id} className={classes.heroCards} spacing noWrapper>
         <CardBody>
           <span className="category">{element.category}</span>
-          <Link to="/" className={classes.titleCardLink}>
+          <div className={classes.titleCardLink}>
             <CardTitle tag="h4">{element.title}</CardTitle>
-          </Link>
+          </div>
           <CardText>{element.description}</CardText>
-          <ExternalLink
-            linkTo={element.linkTo}
-            alt=""
-            className={classes.heroLink}
-            ariaLabel={`${element.source} ${element.title} (Collegamento sito esterno apre su nuova scheda)`}
-          >
-            <div className="source">
+          <div className="source">
+            Fonte:
+            <ExternalLink
+              linkTo={element.linkTo}
+              alt=""
+              className={classes.heroLink}
+              ariaLabel={`${element.source} ${element.title} (Collegamento sito esterno apre su nuova scheda)`}
+            >
               {element.source}
               <img src={`/assets/external-link.svg`} alt="" />
-            </div>
-          </ExternalLink>
+            </ExternalLink>
+          </div>
         </CardBody>
       </Card>
     </>

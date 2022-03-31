@@ -280,8 +280,20 @@ const useStyles = createUseStyles({
 
 export const AccordionButtonFull = (props) => {
   const classes = useStyles();
-  const { id, number, title, money, tags, description, stalls, accessLabel, moreInfoLabel, moreInfoLink, updates } =
-    props.data;
+  const {
+    id,
+    number,
+    title,
+    money,
+    tags,
+    description,
+    stalls,
+    accessLabel,
+    moreInfoLabel,
+    moreInfoLink,
+    updates,
+    goToButton,
+  } = props.data;
 
   const eventHandler = () => {
     props.handleToggle(props.id);
@@ -336,7 +348,7 @@ export const AccordionButtonFull = (props) => {
                     <span className="value-info updates" dangerouslySetInnerHTML={{ __html: updates }}></span>
                   </div>
                 )}
-                {!updates && (
+                {goToButton && (
                   <div className={classes.linkAccordion}>
                     <ExternalLink
                       className="btn btn-primary"

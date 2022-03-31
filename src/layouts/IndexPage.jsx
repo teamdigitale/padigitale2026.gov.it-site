@@ -63,7 +63,7 @@ export const IndexPage = () => {
         imageUrl="/assets/home-candidature.svg"
         imageAlt=""
         firstInternal={true}
-        firstButtonHref="/iniziativa"
+        firstButtonHref={heroPnrr.link}
         firstButtonLabel={heroPnrr.firstButtonLabel}
         firstButtonAriaLabel={heroPnrr.firstButtonAriaLabel}
         heroTitleId="home-hero-title-candidature"

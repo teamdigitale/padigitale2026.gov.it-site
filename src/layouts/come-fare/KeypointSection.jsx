@@ -125,7 +125,6 @@ export const KeypointSection = (props) => {
             {!reverse ? (
               <Row>
                 <Col xs="12" lg="5" className="offset-lg-1 order-1 order-lg-0">
-                  <span className={classes.keypointSectionNumber}>{number}</span>
                   <h3 id={`keypoint-section-title-${number}`} className={classes.keypointSectionTitle}>
                     {title}
                   </h3>
@@ -203,7 +202,6 @@ export const KeypointSection = (props) => {
             <React.Fragment>
               <Row>
                 <Col xs="12" lg="5" className="offset-lg-1 order-1 order-lg-0">
-                  <span className={classes.keypointSectionNumber}>{number}</span>
                   <h3 id={`keypoint-section-title-${number}`} className={classes.keypointSectionTitle}>
                     {title}
                   </h3>
@@ -273,7 +271,6 @@ export const KeypointSection = (props) => {
                   <img className={classes.keypointSectionImage} src={`/assets/come-fare/${image}`} alt="" />
                 </Col>
                 <Col xs="12" lg="5" className="offset-lg-1">
-                  <span className={classes.keypointSectionNumber}>{number}</span>
                   <h3 id={`keypoint-section-title-${number}`} className={classes.keypointSectionTitle}>
                     {title}
                   </h3>
