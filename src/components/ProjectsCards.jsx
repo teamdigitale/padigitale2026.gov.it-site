@@ -141,7 +141,7 @@ export const ProjectsCards = (item) => {
               </div>
               <div className={classes.cardFooter}>
                 <Link
-                  to="/come-funziona/soluzioni-standard"
+                  to="/iniziativa/soluzioni-standard"
                   className="btn text-uppercase btn-primary"
                   aria-label="Scopri di più sulle soluzioni standard"
                 >
@@ -162,7 +162,7 @@ export const ProjectsCards = (item) => {
               </div>
               <div className={classes.cardFooter}>
                 <Link
-                  to="/come-funziona/presentazione-progetti"
+                  to="/iniziativa/presentazione-progetti"
                   className="btn text-uppercase btn-primary"
                   aria-label="Scopri di più sulle presentazioni progetti"
                 >
