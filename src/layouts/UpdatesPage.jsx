@@ -405,7 +405,7 @@ export const UpdatesPage = () => {
 
   useEffect(() => {
     inputValue && selectValue ? setFormValidate(true) : setFormValidate(false);
-    console.log(formValidate);
+    console.log('formValidate', formValidate);
   }, [selectValue, inputValue, formValidate]);
 
   const {
@@ -647,13 +647,7 @@ export const UpdatesPage = () => {
           </a>
         </p>
         <div className={`${classes.submitContainer} d-flex mt-5`}>
-          <Button
-            color="primary"
-            type="submit"
-            form="updates-form"
-            className={!formValidate ? 'disabled' : ''}
-            disabled={!formValidate ? 'true' : 'false'}
-          >
+          <Button color="primary" type="submit" form="updates-form" {...(!formValidate ? 'disabled' : '')}>
             {sendButtonLabel}
           </Button>
           <img className={classes.spinner} src="/assets/spinner.gif" alt=""></img>
