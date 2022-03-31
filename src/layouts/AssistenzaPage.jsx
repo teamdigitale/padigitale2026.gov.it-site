@@ -422,15 +422,21 @@ export const AssistenzaPage = () => {
     }
   };
 
-  const formHandler = () => {
+  const formHandler = (event) => {
+    event.target.reset();
+    window.grecaptcha.reset();
     const notificationElement = document.querySelector('.notification');
     const titleElement = notificationElement.querySelector('h5');
     const descriptionElement = notificationElement.querySelector('p');
     notificationElement.classList.add('show');
     notificationElement.classList.add('success');
-
     titleElement.innerHTML = `${successLabels.icon} ${successLabels.title}`;
     descriptionElement.innerHTML = successLabels.description;
+    const selectArr = document.querySelectorAll('.select-wrapper [class$="-singleValue"]');
+    selectArr.forEach((singleValue) => (singleValue.innerHTML = ''));
+    setFormFilled(false);
+    const submitBtn = document.querySelector('#assistance-form input[type="submit"]');
+    submitBtn.disabled = true;
 
     setTimeout(() => {
       notificationElement.classList.remove('show');
@@ -499,7 +505,9 @@ export const AssistenzaPage = () => {
         </Row>
         <Row>
           <Col xs={12}>
-            <div className={classes.mandatory}>I campi con * sono obbligatori </div>
+            <div className={classes.mandatory} id="mandatory-label">
+              I campi con * sono obbligatori
+            </div>
           </Col>
         </Row>
         <Row>
@@ -572,6 +580,7 @@ export const AssistenzaPage = () => {
                       title="Argomento"
                       required={true}
                       onInvalid={customInvalid}
+                      size="1"
                     >
                       <option value="Accesso al portale">Accesso al portale</option>
                       <option value="Iscrizione newsletter">Iscrizione alla newsletter</option>
@@ -610,7 +619,7 @@ export const AssistenzaPage = () => {
                       onInvalid={customInvalid}
                       aria-label="messaggio"
                     ></textarea>
-                    <label className={textareaDescriptionState === 'active' ? 'active' : ''} htmlFor="00N7Y000008tqdW">
+                    <label className={textareaDescriptionState === 'active' ? 'active' : ''} htmlFor="description">
                       {descriptionLabel}
                     </label>
                     <span className={classes.maxLengthLabel}>
