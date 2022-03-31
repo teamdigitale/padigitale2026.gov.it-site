@@ -175,11 +175,7 @@ export const KeypointSection = (props) => {
                   </h4>
                   <p className={classes.paragraph} dangerouslySetInnerHTML={{ __html: text }}></p>
                   {button ? (
-                    <Link
-                      to={linkTo}
-                      className={`${classes.btnSection} btn btn-primary`}
-                      aria-label={ariaLabel}
-                    >
+                    <Link to={linkTo} className={`${classes.btnSection} btn btn-primary`} aria-label={ariaLabel}>
                       SCOPRI DI PIÚ
                     </Link>
                   ) : (
@@ -213,11 +209,7 @@ export const KeypointSection = (props) => {
                   </h3>
                   <p className={classes.paragraph} dangerouslySetInnerHTML={{ __html: text }}></p>
                   {button ? (
-                    <Link
-                      to={linkTo}
-                      className={`${classes.btnSection} btn btn-primary`}
-                      aria-label={ariaLabel}
-                    >
+                    <Link to={linkTo} className={`${classes.btnSection} btn btn-primary`} aria-label={ariaLabel}>
                       SCOPRI DI PIÚ
                     </Link>
                   ) : (
@@ -287,11 +279,7 @@ export const KeypointSection = (props) => {
                   </h3>
                   <p className={classes.paragraph} dangerouslySetInnerHTML={{ __html: text }}></p>
                   {button ? (
-                    <Link
-                      to={linkTo}
-                      className={`${classes.btnSection} btn btn-primary`}
-                      aria-label={ariaLabel}
-                    >
+                    <Link to={linkTo} className={`${classes.btnSection} btn btn-primary`} aria-label={ariaLabel}>
                       SCOPRI DI PIÚ
                     </Link>
                   ) : (
