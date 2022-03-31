@@ -200,8 +200,8 @@ export const CreaProfiloPage = () => {
               <h4 className={classes.titleUpdate}>Attiva il profilo della tua PA: identità digitale e dati IPA</h4>
               <div className={classes.subtitleUpdate}>
                 <strong>Per partecipare agli avvisi</strong> è necessario che il{' '}
-                <strong>rappresentante legale di un'amministrazione presente su IPA</strong> (Indice dei domini digitali
-                della Pubblica Amministrazione), o una persona incaricata,{' '}
+                <strong>rappresentante legale di un'amministrazione presente su IPA</strong> (Indice dei domicili
+                digitali della Pubblica Amministrazione), o una persona incaricata,{' '}
                 <strong>avvii la procedura di attivazione della PA sulla piattaforma</strong>.
               </div>
             </Col>
@@ -236,6 +236,8 @@ export const CreaProfiloPage = () => {
                   <a
                     href="https://www.indicepa.gov.it/ipa-portale/consultazione/indirizzo-sede/ricerca-ente"
                     className="d-inline-flex align-items-center"
+                    target="_blank"
+                    rel="noreferrer"
                   >
                     IPA <img src="/assets/external-link.svg" alt="" />
                   </a>
