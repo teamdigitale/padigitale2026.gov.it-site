@@ -61,7 +61,7 @@ beneficiaries:
     solutionType: '/iniziativa/presentazione-progetti'
     accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
-    updates: Il 28 gennaio 2022 è stato <a href="https://innovazione.gov.it/notizie/articoli/pubblicato-il-bando-per-il-polo-strategico-nazionale/">pubblicato il bando</a> per la realizzazione del Polo Strategico Nazionale (PSN). La proposta per la creazione del Polo, su cui si basa la gara, è stata individuata dal Dipartimento per la trasformazione digitale a dicembre 2021 secondo il modello di partenariato pubblico privato. La procedura è affidata a Difesa Servizi S.p.A., società in house del Ministero della Difesa, in qualità di centrale di committenza. 
+    updates: Il 28 gennaio 2022 è stato <a target="_blank" aria-label="Leggi di più sul pubblicato il bando - link esterno - apertura nuova scheda" href="https://innovazione.gov.it/notizie/articoli/pubblicato-il-bando-per-il-polo-strategico-nazionale/">pubblicato il bando<img class="ml-1" src="/assets/external-icon.svg" alt="" /></a> per la realizzazione del Polo Strategico Nazionale (PSN). La proposta per la creazione del Polo, su cui si basa la gara, è stata individuata dal Dipartimento per la trasformazione digitale a dicembre 2021 secondo il modello di partenariato pubblico privato. La procedura è affidata a Difesa Servizi S.p.A., società in house del Ministero della Difesa, in qualità di centrale di committenza. 
   - number: 1.2
     id: abili-faci-migr
     title: Abilitazione e facilitazione migrazione al Cloud

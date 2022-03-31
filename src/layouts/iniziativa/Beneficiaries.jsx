@@ -89,10 +89,10 @@ export const Beneficiaries = (props) => {
           <Col className="offset-lg-1">
             <Row>
               <Col xs="12" lg="5" id="beneficiari">
-                <h3 className={classes.category}>{category}</h3>
-                <h4 className={classes.title} id="beneficiaries-title">
+                <span className={classes.category}>{category}</span>
+                <h3 className={classes.title} id="beneficiaries-title">
                   {title}
-                </h4>
+                </h3>
               </Col>
             </Row>
             <Row>
