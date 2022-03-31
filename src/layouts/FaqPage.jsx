@@ -164,7 +164,6 @@ export const FaqPage = () => {
     const sectionArr = document.querySelectorAll('.question-section');
 
     const observerHandler = (entries) => {
-
       const changeActive = (id) => {
         const sideMenuActive = document.querySelector(`.sidebar-wrapper .list-item.active`);
         const sideMenuRefer = document.querySelector(`.sidebar-wrapper .list-item[data-id=${id}]`);
