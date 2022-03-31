@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/no-duplicate-string */
 /* eslint-disable max-lines-per-function */
 /* eslint-disable sonarjs/cognitive-complexity */
 import React, { useState, useEffect } from 'react';
@@ -6,7 +7,7 @@ import { announce } from '@react-aria/live-announcer';
 import { Row, Col, Input, Breadcrumb, BreadcrumbItem } from 'design-react-kit';
 import Select from 'react-select';
 import ReCAPTCHA from 'react-google-recaptcha';
-import content from '../../contents/opportunity-page/opportunity.yml';
+import content from '../../contents/assistenza/assistenza.yml';
 import notificationsLabel from '../../contents/notifications.yml';
 import labels from '../../contents/labels.yml';
 import links from '../../contents/links.yml';
@@ -142,6 +143,16 @@ const useStyles = createUseStyles({
       boxShadow: '0 0 0 2px #f90',
       outline: '0',
     },
+    '& .select': {
+      '&:focus': {
+        borderColor: '#f90',
+        boxShadow: '0 0 0 2px #f90',
+        outline: '0',
+      },
+    },
+    '& .css-1n7v3ny-option': {
+      textDecoration: 'underline',
+    },
     '& .form-check': {
       borderBottom: '1px solid #e6e6e6',
       padding: '1.111rem 0.444rem',
@@ -167,6 +178,17 @@ const useStyles = createUseStyles({
       },
     },
     '& .form-group input[type="text"].is-invalid': {
+      borderBottom: 'solid 2px #F83E5A',
+    },
+    '& .form-group input[type="email"]': {
+      fontSize: '0.889rem',
+      '&:focus': {
+        border: '2px solid #f90',
+        boxShadow: '0 0 0 2px #f90',
+        outline: '0',
+      },
+    },
+    '& .form-group input[type="email"].is-invalid': {
       borderBottom: 'solid 2px #F83E5A',
     },
     '& .invalid-feedback': {
@@ -289,6 +311,8 @@ const useStyles = createUseStyles({
       color: '#5B6F82',
       textDecoration: 'none',
       fontSize: '18px',
+      cursorPointer: 'default',
+      pointerEvents: 'none',
     },
     '&::before': {
       fontWeight: '600',
@@ -422,6 +446,26 @@ export const AssistenzaPage = () => {
     }
   };
 
+  const handleChangeTel = (event) => {
+    const currentTarget = event.target;
+    let value = event.target.value;
+    const inputContainer = currentTarget.closest(formGroupValue);
+    const errorLabel = inputContainer.querySelector('small');
+    const regex = /^[0-9]+$/;
+
+    if (!value.match(regex)) {
+      value = value.slice(0, -1);
+      errorLabel.classList.add(errorLabelValue);
+      errorLabel.innerHTML = errorMatch;
+      currentTarget.classList.add(isInvalidValue);
+    } else {
+      errorLabel.classList.remove(errorLabelValue);
+      errorLabel.innerHTML = '';
+      currentTarget.classList.remove(isInvalidValue);
+    }
+    event.target.value = value;
+  };
+
   const formHandler = (event) => {
     event.target.reset();
     window.grecaptcha.reset();
@@ -465,6 +509,9 @@ export const AssistenzaPage = () => {
   return (
     <>
       <SEO title={seoTitle} description={seoDescription} />
+      <div className="sr-only">
+        <h2>{content.name}</h2>
+      </div>
       <div className="container px-3">
         <Row>
           <Col xs="12">
@@ -488,7 +535,7 @@ export const AssistenzaPage = () => {
         <iframe name="formFrame" id="formFrame" className="d-none" title="no-redirect"></iframe>
         <Row className="mt-5">
           <Col xs={12} md={6} lg={5}>
-            <div className={classes.titleUpdate}>Assistenza</div>
+            <h3 className={classes.titleUpdate}>Assistenza</h3>
             <div className={classes.subtitleUpdate}>
               Un team dedicato è a tua disposizione per chiarire dubbi e approfondire temi di interesse. Compila il
               modulo sottostante e invia la richiesta.
@@ -553,6 +600,8 @@ export const AssistenzaPage = () => {
                     name="00N3N00000GYuAr"
                     pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$"
                     onInvalid={customInvalid}
+                    onChange={handleChangeTel}
+                    className="tel-input"
                   />
                 </Col>
               </Row>
@@ -572,6 +621,7 @@ export const AssistenzaPage = () => {
                       aria-label={selectPlaceholder}
                       aria-describedby="mandatory-label"
                       className={`select`}
+                      tabIndex="0"
                     />
                     <select
                       className="d-none"

@@ -110,6 +110,7 @@ export const KeypointSection = (props) => {
     BottomLinkLabel1,
     BottomLinkLabel2,
     linkTo,
+    ariaLabel,
   } = props.item;
 
   return (
@@ -124,16 +125,17 @@ export const KeypointSection = (props) => {
             {!reverse ? (
               <Row>
                 <Col xs="12" lg="5" className="offset-lg-1 order-1 order-lg-0">
-                  <h4 id={`keypoint-section-title-${number}`} className={classes.keypointSectionTitle}>
+                  <span className={classes.keypointSectionNumber}>{number}</span>
+                  <h3 id={`keypoint-section-title-${number}`} className={classes.keypointSectionTitle}>
                     {title}
-                  </h4>
+                  </h3>
                   <p className={classes.paragraph} dangerouslySetInnerHTML={{ __html: text }}></p>
                   {button ? (
                     <Link
                       to={linkTo}
                       color="primary"
                       className={`${classes.btnSection} btn btn-primary`}
-                      aria-label={`Dettaglio punto chiave ${number} ${title}`}
+                      aria-label={ariaLabel}
                     >
                       SCOPRI DI PIÚ
                     </Link>
@@ -173,11 +175,7 @@ export const KeypointSection = (props) => {
                   </h4>
                   <p className={classes.paragraph} dangerouslySetInnerHTML={{ __html: text }}></p>
                   {button ? (
-                    <Link
-                      to={linkTo}
-                      className={`${classes.btnSection} btn btn-primary`}
-                      aria-label={`Dettaglio punto chiave ${number} ${title}`}
-                    >
+                    <Link to={linkTo} className={`${classes.btnSection} btn btn-primary`} aria-label={ariaLabel}>
                       SCOPRI DI PIÚ
                     </Link>
                   ) : (
@@ -205,16 +203,13 @@ export const KeypointSection = (props) => {
             <React.Fragment>
               <Row>
                 <Col xs="12" lg="5" className="offset-lg-1 order-1 order-lg-0">
-                  <h4 id={`keypoint-section-title-${number}`} className={classes.keypointSectionTitle}>
+                  <span className={classes.keypointSectionNumber}>{number}</span>
+                  <h3 id={`keypoint-section-title-${number}`} className={classes.keypointSectionTitle}>
                     {title}
-                  </h4>
+                  </h3>
                   <p className={classes.paragraph} dangerouslySetInnerHTML={{ __html: text }}></p>
                   {button ? (
-                    <Link
-                      to={linkTo}
-                      className={`${classes.btnSection} btn btn-primary`}
-                      aria-label={`Dettaglio punto chiave ${number} ${title}`}
-                    >
+                    <Link to={linkTo} className={`${classes.btnSection} btn btn-primary`} aria-label={ariaLabel}>
                       SCOPRI DI PIÚ
                     </Link>
                   ) : (
@@ -278,16 +273,13 @@ export const KeypointSection = (props) => {
                   <img className={classes.keypointSectionImage} src={`/assets/come-fare/${image}`} alt="" />
                 </Col>
                 <Col xs="12" lg="5" className="offset-lg-1">
-                  <h4 id={`keypoint-section-title-${number}`} className={classes.keypointSectionTitle}>
+                  <span className={classes.keypointSectionNumber}>{number}</span>
+                  <h3 id={`keypoint-section-title-${number}`} className={classes.keypointSectionTitle}>
                     {title}
-                  </h4>
+                  </h3>
                   <p className={classes.paragraph} dangerouslySetInnerHTML={{ __html: text }}></p>
                   {button ? (
-                    <Link
-                      to={linkTo}
-                      className={`${classes.btnSection} btn btn-primary`}
-                      aria-label={`Dettaglio punto chiave ${number} ${title}`}
-                    >
+                    <Link to={linkTo} className={`${classes.btnSection} btn btn-primary`} aria-label={ariaLabel}>
                       SCOPRI DI PIÚ
                     </Link>
                   ) : (
