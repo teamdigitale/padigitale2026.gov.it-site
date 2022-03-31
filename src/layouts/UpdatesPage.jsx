@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/no-identical-functions */
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable max-lines-per-function */
 /* eslint-disable sonarjs/cognitive-complexity */
@@ -280,8 +281,11 @@ const query = graphql`
 `;
 
 export const UpdatesPage = () => {
-  const [selectValue] = useState(null);
+  const [selectValue, setSelectValue] = useState(false);
+  const [inputValue, setInputValue] = useState(false);
   const [enteState] = useState('');
+  const [formValidate, setFormValidate] = useState(false);
+
   const {
     site: {
       siteMetadata: { apiUrl },
@@ -296,7 +300,22 @@ export const UpdatesPage = () => {
 
   const classes = useStyles();
 
-  useEffect(() => {}, [selectValue]);
+  useEffect(() => {
+    const inputArr = document.querySelectorAll('#updates-form [data-form="true"]');
+
+    const inputHandler = () => {
+      const currentInputArr = document.querySelectorAll('#updates-form [data-form="true"]');
+      const inputValue = Array.prototype.slice.call(currentInputArr).every((input) => input.value !== '');
+      console.log('every', inputValue);
+      if (inputValue) {
+        setInputValue(true);
+      }
+    };
+
+    inputArr.forEach((input) => {
+      input.addEventListener('input', inputHandler);
+    });
+  }, []);
 
   const onSubmit = async (data) => {
     console.log(data);
@@ -376,6 +395,19 @@ export const UpdatesPage = () => {
     announce('Pagina caricata ' + content.name);
   }, []);
 
+  const onChangeSelectHandler = (e) => {
+    if (e.value !== '') {
+      setSelectValue(true);
+    } else {
+      setSelectValue(false);
+    }
+  };
+
+  useEffect(() => {
+    inputValue && selectValue ? setFormValidate(true) : setFormValidate(false);
+    console.log(formValidate);
+  }, [selectValue, inputValue, formValidate]);
+
   const {
     selectRepresent,
     selectInQuanto,
@@ -452,6 +484,7 @@ export const UpdatesPage = () => {
                           type="text"
                           id="address"
                           aria-required="true"
+                          data-form="true"
                           autocomplete="email"
                           {...field}
                           className="mb-0"
@@ -471,12 +504,12 @@ export const UpdatesPage = () => {
                     control={control}
                     name="representative"
                     rules={{ required: true }}
-                    render={({ field: { onChange, value } }) => (
+                    render={({ field: { onChangeSelect, value } }) => (
                       <Select
                         value={value}
                         id="represent-select"
                         inputId="represent-select-input"
-                        onChange={onChange}
+                        onChange={(onChangeSelect, onChangeSelectHandler)}
                         options={selectRepresent}
                         placeholder={selectPlaceholder}
                         aria-label={selectPlaceholder}
@@ -555,6 +588,7 @@ export const UpdatesPage = () => {
                           aria-required="true"
                           aria-labelledby={errors.ente && 'error-enteName'}
                           aria-invalid={errors.ente && 'true'}
+                          data-form="true"
                           {...field}
                           id="enteName"
                         />
@@ -581,12 +615,12 @@ export const UpdatesPage = () => {
                           message: requiredLabel,
                         },
                       }}
-                      render={({ field: { onChange, value } }) => (
+                      render={({ field: { onChangeSelect, value } }) => (
                         <Select
                           value={value}
                           id="enteSelect"
                           inputId="enteSelect-input"
-                          onChange={onChange}
+                          onChange={onChangeSelect}
                           options={selectInQuanto}
                           aria-describedby="mandatory-label"
                           placeholder={selectPlaceholder}
@@ -613,7 +647,13 @@ export const UpdatesPage = () => {
           </a>
         </p>
         <div className={`${classes.submitContainer} d-flex mt-5`}>
-          <Button color="primary" type="submit" form="updates-form">
+          <Button
+            color="primary"
+            type="submit"
+            form="updates-form"
+            className={!formValidate ? 'disabled' : ''}
+            disabled={!formValidate ? 'true' : 'false'}
+          >
             {sendButtonLabel}
           </Button>
           <img className={classes.spinner} src="/assets/spinner.gif" alt=""></img>
