@@ -8,7 +8,7 @@ keypoints:
   title: 'Come fare per'
   list:
     - number: "01"
-      image: 'computer-2.svg'
+      image: 'pc-card.svg'
       title: 'Attivare la tua PA'
       desc: 'Per partecipare agli avvisi pubblici e richiedere i finanziamenti'
     - number: "02"
