@@ -233,6 +233,9 @@ export const RiceviAssistenzaPage = () => {
                 <p className={`${classes.contentParagraph} mb-0`}>
                   Ti raccomandiamo quindi di verificare fin da subito l’accuratezza delle informazioni presenti su{' '}
                   <a
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="Ricerca ente (Collegamento esterno - Apre su nuova scheda)"
                     href="https://www.indicepa.gov.it/ipa-portale/consultazione/indirizzo-sede/ricerca-ente"
                     className="d-inline-flex align-items-center"
                   >
