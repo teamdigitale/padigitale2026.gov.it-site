@@ -79,11 +79,9 @@ export const HeroVideo = () => {
             Trascrizione del video
           </AccordionHeader>
           <AccordionBody active={collapseOpen}>
-            Intro<br></br>
             PA digitale 2026 è il punto di accesso alle risorse previste dal PNRR per la transizione digitale della PA.
             <br></br>
             <br></br>
-            Descrizione passaggi registrazione<br></br>
             Registrare la tua amministrazione è semplice:<br></br>● se sei un rappresentante legale di un Ente o un suo
             incaricato, puoi accedere alla piattaforma con identità digitale SPID o CIE.<br></br>● Inserisci la tua
             email istituzionale, e attiva il profilo dell’amministrazione indicando il nome della PA o il codice IPA.
@@ -91,7 +89,6 @@ export const HeroVideo = () => {
             IPA.<br></br>● La conferma di registrazione avverrà cliccando sul link di verifica che riceverai alla PEC
             del tuo Ente.<br></br>
             <br></br>
-            Chiusura<br></br>
             Ora puoi candidare la tua amministrazione agli avvisi pubblici per renderla più digitale, sicura ed
             efficiente.
           </AccordionBody>
