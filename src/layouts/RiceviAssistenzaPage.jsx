@@ -199,7 +199,8 @@ export const RiceviAssistenzaPage = () => {
             <Col xs={12} lg={7}>
               <h4 className={classes.titleUpdate}>Trova le risposte alle tue domande o ricevi assistenza</h4>
               <div className={classes.subtitleUpdate}>
-                All’interno della sezione dedicata al supporto puoi <strong>consultare le risposte alle domande più frequenti</strong> o 
+                All’interno della sezione dedicata al supporto puoi 
+                <strong>consultare le risposte alle domande più frequenti</strong> o 
                 <strong>aprire una richiesta per ricevere assistenza</strong>.
               </div>
             </Col>
