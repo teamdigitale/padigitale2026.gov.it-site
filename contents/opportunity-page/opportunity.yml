@@ -18,18 +18,10 @@ selectBeneficiaries:
     label: 'Comuni'
   - value: 'citta-metropolitane'
     label: 'Città metropolitane'
-  - value: 'consorzi-ricerca'
-    label: 'Consorzi interuniversitari di ricerca'
   - value: 'enti-servizio-civile'
     label: 'Enti iscritti all’albo del servizio civile'
-  - value: 'enti-ricerca-pubblica'
-    label: 'Enti di ricera pubblica'
-  - value: 'enti-diritto'
-    label: 'Enti per il diritto allo studio, agenzie, consorzi'
-  - value: 'enti-regionali'
-    label: 'Enti regionali'
-  - value: 'istituti-formazione'
-    label: 'Istituti di alta formazione musicale e coreutica'
+  - value: 'istituti-ricerca-afam'
+    label: 'Istituti di Ricerca e AFAM'
   - value: 'province'
     label: 'Province'
   - value: 'province-autonome'
@@ -93,11 +85,11 @@ beneficiaries:
       <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">l&rsquo;utilizzo di soluzioni in cloud permette alle amministrazioni di beneficiare di risparmi significativi da reinvestire nello sviluppo di nuovi servizi, maggiore trasparenza sui costi e sull&rsquo;utilizzo dei servizi, agilit&agrave; e scalabilit&agrave; nella gestione delle infrastrutture;</span></li>
       <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">la migrazione al cloud prevede un miglioramento dell&rsquo;efficienza energetica delle infrastrutture della PA e maggiore sostenibilit&agrave; ambientale grazie alla dismissione dei data center meno efficienti. </span></li>
       </ul>
-    stalls: '16,600 enti'
+    stalls: '16,500 enti'
     solutionType: '/iniziativa/soluzioni-standard'
     accessSectionId: soluzioni-standard
     accessLabel: Soluzioni Standard
-    moreInfoLink: '#'
+    moreInfoLink: 'https://collaudo-padigitale2026.cs128.force.com/padigitale2026/Pa_digitale2026_avvisi'
   - number: 1.3.1
     id: piatt-dig-naz
     title: Piattaforma Digitale Nazionale Dati
@@ -126,7 +118,7 @@ beneficiaries:
     solutionType: '/iniziativa/presentazione-progetti'
     accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
-    moreInfoLink: '#'
+    moreInfoLink: 'https://collaudo-padigitale2026.cs128.force.com/padigitale2026/Pa_digitale2026_avvisi'
   - number: 1.3.2
     id: sport-digi-unic
     title: Sportello Digitale Unico
@@ -146,8 +138,8 @@ beneficiaries:
         label: Province autonome
       - value: universita
         label: Università
-      - value: 'enti-diritto'
-        label: 'Enti per il diritto allo studio, agenzie, consorzi'
+      - value: istituti-ricerca-afam
+        label: Istituti di Ricerca e AFAM
     description: Facilitare l’implementazione dello “Sportello Digitale Unico” (Single Digital Gateway), ovvero supportare l’attuazione del regolamento europeo che ha l’obiettivo di uniformare l’accesso ai servizi digitali in tutto i Paesi membri dell'UE.
     stalls: '230 enti'
     solutionType: '/iniziativa/presentazione-progetti'
@@ -159,8 +151,6 @@ beneficiaries:
     title: Esperienza dei servizi pubblici
     money: '613 <span>milioni di euro<span>'
     tags:
-      - value: citta-metropolitane
-        label: "Città metropolitane"
       - value: comuni
         label: Comuni
       - value: scuole
@@ -174,11 +164,11 @@ beneficiaries:
       <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">opportunit&agrave; per tutte le PA, anche quelle con meno risorse, di poter garantire un&rsquo;esperienza d&rsquo;uso semplice, efficace, trasparente e accessibile;</span></li>
       <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">risparmio di risorse, automatizzando e riusando soluzioni gi&agrave; collaudate, chiavi in mano.</span></li>
       </ul>
-    stalls: '16,500 enti'
+    stalls: '15,900 enti'
     solutionType: '/iniziativa/soluzioni-standard'
     accessSectionId: soluzioni-standard
     accessLabel: Soluzioni standard
-    moreInfoLink: '#'
+    moreInfoLink: 'https://collaudo-padigitale2026.cs128.force.com/padigitale2026/Pa_digitale2026_avvisi'
   - number: 1.4.2
     id: access
     title: Accessibilità
@@ -220,29 +210,23 @@ beneficiaries:
         label: ASL
       - label: Aziende Ospedaliere
         value: aziende-ospedaliere
-      - value: enti-regionali
-        label: Enti Regionali
+      - label: Province autonome
+        value: province-autonome
       - value: universita
         label: Università
-      - value: enti-diritto
-        label: Enti diritto allo studio, agenzie e consorzi
-      - value: istituti-formazione
-        label: Istituti alta formazione musicale e coreutica
-      - value: enti-ricerca-pubblica
-        label: Enti di ricerca pubblica
-      - value: consorzi-ricerca
-        label: Consorzi interuniversitari di ricerca
+      - value: istituti-ricerca-afam
+        label: Istituti di Ricerca e AFAM
     description: |
       Accelerare l'adozione di pagoPA, la piattaforma digitale per i pagamenti verso le Pubbliche Amministrazioni, e dell’app IO quale principale punto di contatto tra Enti e cittadini per la fruizione dei servizi pubblici digitali.
       <p><strong></strong></p>
       <p><strong>Vantaggi per la PA</strong><strong></strong></p>
       <p><span style="font-weight: 400;">pagoPA consente alle Pubbliche Amministrazioni di gestire gli incassi in modo centralizzato ed efficiente, offrendo sistemi automatici di rendicontazione e riconciliazione con un significativo risparmio in termini di risorse, tempi e costi e assicurando un servizio migliore ai cittadini.</span></p>
       <p><span style="font-weight: 400;">IO permette alle diverse PA, locali o nazionali, di raccogliere tutti i servizi, le comunicazioni e i relativi documenti in un unico luogo e di interfacciarsi in modo semplice, rapido e sicuro con i cittadini.</span></p>
-    stalls: '17,500 enti'
+    stalls: '16,800 enti'
     solutionType: '/iniziativa/soluzioni-standard'
     accessSectionId: soluzioni-standard
     accessLabel: Soluzioni Standard
-    moreInfoLink: '#'
+    moreInfoLink: 'https://collaudo-padigitale2026.cs128.force.com/padigitale2026/Pa_digitale2026_avvisi'
   - number: 1.4.4
     id: adoz-id
     title: Adozione identità digitale
@@ -260,29 +244,25 @@ beneficiaries:
         value: aziende-ospedaliere
       - value: province
         label: Province
+      - value: citta-metropolitane
+        label: Città metropolitane
       - value: altre-pa-locali
         label: Altre PAL
       - value: universita
         label: Università
-      - value: enti-diritto
-        label: Enti diritto allo studio, agenzie e consorzi
-      - value: istituti-formazione
-        label: Istituti alta formazione musicale e coreutica
-      - value: enti-ricerca-pubblica
-        label: Enti di ricerca pubblica
-      - value: consorzi-ricerca
-        label: Consorzi interuniversitari di ricerca
+      - value: istituti-ricerca-afam
+        label: Istituti di Ricerca e AFAM
     description: |
       Favorire l'adozione dell’identità digitale (Sistema Pubblico di Identità Digitale, SPID e Carta d'Identità Elettronica, CIE) e dell'Anagrafe nazionale della popolazione residente (ANPR).
       <p><strong></strong></p>
       <p><strong>Vantaggi per la PA</strong><strong></strong></p>
       <p><span style="font-weight: 400;">Le soluzioni di identit&agrave; digitale SPID e CIE consentono alle amministrazioni di abbandonare i diversi sistemi di autenticazione gestiti localmente, permettendo di risparmiare risorse (in termini di lavoro e costo necessari per il rilascio e la manutenzione delle credenziali) ed offrire un accesso sicuro e veloce ed omogeneo ai servizi online su tutto il territorio nazionale.</span></p>
       <p><span style="font-weight: 400;">Con ANPR le amministrazioni potranno dialogare in maniera efficiente tra di loro, avendo&nbsp; a disposizione un punto di riferimento unico di dati e informazioni anagrafiche, dal quale poter reperire informazioni certe e sicure per poter erogare servizi integrati e pi&ugrave; efficienti per i cittadini. Per la Pubblica Amministrazione significa guadagnare in efficienza superando le precedenti frammentazioni, ottimizzare le risorse, semplificare e automatizzare le operazioni relative ai servizi anagrafici, consultare o estrarre dati, monitorare le attivit&agrave; ed effettuare analisi e statistiche</span></p>
-    stalls: '10,300 enti'
+    stalls: '22,300 enti'
     solutionType: '/iniziativa/soluzioni-standard'
     accessSectionId: soluzioni-standard
     accessLabel: Soluzioni Standard
-    moreInfoLink: '#'
+    moreInfoLink: 'https://collaudo-padigitale2026.cs128.force.com/padigitale2026/Pa_digitale2026_avvisi'
   - number: 1.4.5
     id: digi-avvisi
     title: Digitalizzazione degli avvisi pubblici
@@ -301,7 +281,7 @@ beneficiaries:
     solutionType: '/iniziativa/soluzioni-standard'
     accessSectionId: soluzioni-standard
     accessLabel: Soluzioni standard
-    moreInfoLink: '#'
+    moreInfoLink: 'https://collaudo-padigitale2026.cs128.force.com/padigitale2026/Pa_digitale2026_avvisi'
   - number: 1.4.6
     id: maas
     title: MaaS
@@ -391,7 +371,7 @@ beneficiaries:
     solutionType: '/iniziativa/presentazione-progetti'
     accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
-    moreInfoLink: '#'
+    moreInfoLink: 'https://collaudo-padigitale2026.cs128.force.com/padigitale2026/Pa_digitale2026_avvisi'
 modal:
   selectRepresent:
     - value: public-administration
@@ -403,7 +383,7 @@ modal:
   selectArgument:
     - value: Accesso al portale
       label: Accesso al portale
-    - value: Iscrizione alla newsletter
+    - value: Iscrizione newsletter
       label: Iscrizione alla newsletter
     - value: Generale
       label: Generale

@@ -216,10 +216,9 @@ export const CreaProfiloPage = () => {
             <SideNavigationAccordion activeList={questions} searchValue={inputValue} list={sidebar} />
             <div
               className="pl-lg-3 content-container"
-              id="id-list-faq"
+              id="id-list-points"
               role="region"
-              aria-label="Lista domande frequenti"
-              aria-describedby="numberfaq"
+              aria-label="Lista punti da seguire"
             >
               {/*  <Totop /> */}
               <Container className="pl-lg-4 mb-4">

@@ -215,7 +215,7 @@ const useStyle = createUseStyles({
   littleTitle: {
     display: 'block',
     marginTop: '1.111rem',
-    fontSize: '0.778',
+    fontSize: '0.778rem',
     fontWeight: '600',
     textTransform: 'uppercase',
     marginBottom: '0.444rem',
