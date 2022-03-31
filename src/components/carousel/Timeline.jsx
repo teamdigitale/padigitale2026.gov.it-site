@@ -204,10 +204,10 @@ export const Timeline = ({ content }) => {
           {content.category ? (
             <Row className="mb-5 ml-0 mr-0">
               <Col xs="12" lg="5" id="timeline-pc" className={`${classes.columnCard} offset-lg-1`}>
-                <h3 className={classes.category}>{content.category}</h3>
-                <h4 className={classes.title} id="timeline-title-pc">
+                <span className={classes.category}>{content.category}</span>
+                <h3 className={classes.title} id="timeline-title-pc">
                   {content.title}
-                </h4>
+                </h3>
               </Col>
             </Row>
           ) : (

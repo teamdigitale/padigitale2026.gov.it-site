@@ -410,7 +410,7 @@ const CenterHeader = () => {
     <HeaderReactKit type="center" theme="light" className={classes.headerCenterWrapper}>
       <HeaderContent className={`${classes.headerCenter} px-2`}>
         <div className="it-brand-wrapper pl-5 pl-sm-0">
-          <Link to="/">
+          <Link to="/" aria-label="Vai alla home page del sito pubblico di PA digitale 2026">
             <div className="it-brand-text pr-0">
               <div className="d-md-flex align-items-center">
                 <img className="icon repubblica-logo" src="/assets/repubblica-logo-blue.svg" alt="" />

@@ -161,6 +161,8 @@ export const FaqPage = () => {
 
   const resetInput = () => {
     setInputValue('');
+    const searchInput = document.querySelector('#faq-search');
+    searchInput.value = '';
     setQuestions(faq.questions);
   };
 
