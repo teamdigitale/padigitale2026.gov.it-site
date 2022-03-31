@@ -490,6 +490,7 @@ export const AssistenzaPage = () => {
   const orgId = {
     dev: '00D3N0000004K3l',
     collaudo: '00D3N0000008lSz',
+    prod: '00D7Q000001NvsR',
   };
 
   const {
@@ -560,7 +561,7 @@ export const AssistenzaPage = () => {
         <Row>
           <Col xs="12">
             <form
-              action="https://padigitale2026--collaudo.my.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8"
+              action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8"
               method="POST"
               className={classes.formMessage}
               id="assistance-form"
@@ -570,10 +571,10 @@ export const AssistenzaPage = () => {
               <input
                 type="hidden"
                 name="captcha_settings"
-                value={`{"keyname":"COLLTEST","fallback":"true","orgId":"${orgId.collaudo}","ts":""}`}
+                value={`{"keyname":"reCAPTCHA_prod","fallback":"true","orgId":"${orgId.prod}","ts":""}`}
               />
               <input type="hidden" name="debug" value={1} />
-              <input type="hidden" name="orgid" value={orgId.collaudo} />
+              <input type="hidden" name="orgid" value={orgId.prod} />
               <Row className="mt-5">
                 <Col xs={12} md={6} lg={4}>
                   <Input
@@ -582,8 +583,8 @@ export const AssistenzaPage = () => {
                     maxLength="80"
                     aria-describedby="mandatory-label"
                     type="email"
-                    id="00N3N00000GYuAx"
-                    name="00N3N00000GYuAx"
+                    id="00N7Q000007qqu1"
+                    name="00N7Q000007qqu1"
                     aria-required="true"
                     onInvalid={customInvalid}
                     required={true}
@@ -596,8 +597,8 @@ export const AssistenzaPage = () => {
                     maxLength="40"
                     aria-describedby="mandatory-label"
                     type="text"
-                    id="00N3N00000GYuAr"
-                    name="00N3N00000GYuAr"
+                    id="00N7Q000007qqts"
+                    name="00N7Q000007qqts"
                     pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$"
                     onInvalid={customInvalid}
                     onChange={handleChangeTel}
@@ -614,7 +615,7 @@ export const AssistenzaPage = () => {
                     <Select
                       id="argument-select"
                       inputId="argument-select-input"
-                      dataRefer="00N3N00000GYuAm"
+                      dataRefer="00N7Q000007qqtk"
                       options={selectArgument}
                       onChange={handleArgument}
                       placeholder={selectPlaceholder}
@@ -625,8 +626,8 @@ export const AssistenzaPage = () => {
                     />
                     <select
                       className="d-none"
-                      id="00N3N00000GYuAm"
-                      name="00N3N00000GYuAm"
+                      id="00N7Q000007qqtk"
+                      name="00N7Q000007qqtk"
                       title="Argomento"
                       required={true}
                       onInvalid={customInvalid}
@@ -680,7 +681,7 @@ export const AssistenzaPage = () => {
               </Row>
               <input type="hidden" id="external" name="external" value="1" />
               <input type="hidden" name="origin" value="Area pubblica" />
-              <input type="hidden" name="recordType" value="0123N000003LK6m" />
+              <input type="hidden" name="recordType" value="0127Q0000001c35" />
               <input type="hidden" id="priority" name="priority" value="Medium" />
               <input type="hidden" name="debug" value="1" />
               <input type="hidden" name="debugEmail" value="mattia.puggioni@yopmail.com" />
