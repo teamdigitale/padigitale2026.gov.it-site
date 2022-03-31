@@ -8,13 +8,13 @@ import { announce } from '@react-aria/live-announcer';
 import faq from '../../contents/faq-page/faq.yml';
 import { SEO } from '../components/SEO';
 import seo from '../../contents/seo.yml';
-import content from '../../contents/crea-profilo/crea-profilo.yml';
+import content from '../../contents/ricevi-assistenza/ricevi-assistenza.yml';
 import { TimelineVerticalCards } from '../components/TimelineVerticalCards';
 import { HeroVideo } from '../components/HeroVideo';
 /* import { Totop } from '../components/Totop'; */
 import { SideNavigationAccordion } from './sideNavigationAccordion';
 
-const { title: seoTitle, description: seoDescription } = seo.creaProfiloPage;
+const { title: seoTitle, description: seoDescription } = seo.riceviAssistenzaPage;
 
 const { sidebar, verticalTimeline } = content;
 
@@ -148,7 +148,7 @@ const useStyles = createUseStyles({
 });
 
 // eslint-disable-next-line sonarjs/cognitive-complexity
-export const CreaProfiloPage = () => {
+export const RiceviAssistenzaPage = () => {
   const classes = useStyles();
   const [inputValue, setInputValue] = useState('');
   const [questions, setQuestions] = useState(faq.questions);
@@ -190,23 +190,20 @@ export const CreaProfiloPage = () => {
                   <span className="separator"></span>
                 </BreadcrumbItem>
                 <BreadcrumbItem active className={classes.breadcrumbItemActive}>
-                  <a href="#">Attiva il profilo della tua PA: identità digitale e dati IPA</a>
+                  <a href="#">Trova le risposte alle tue domande o ricevi assistenza</a>
                 </BreadcrumbItem>
               </Breadcrumb>
             </Col>
           </Row>
           <Row className="mb-5 mt-5">
             <Col xs={12} lg={7}>
-              <h4 className={classes.titleUpdate}>Attiva il profilo della tua PA: identità digitale e dati IPA</h4>
+              <h4 className={classes.titleUpdate}>Trova le risposte alle tue domande o ricevi assistenza</h4>
               <div className={classes.subtitleUpdate}>
-                <strong>Per partecipare agli avvisi</strong> è necessario che il{' '}
-                <strong>rappresentante legale di un'amministrazione presente su IPA</strong> (Indice dei domini digitali
-                della Pubblica Amministrazione), o una persona incaricata,{' '}
-                <strong>avvii la procedura di attivazione della PA sulla piattaforma</strong>.
+                All’interno della sezione dedicata al supporto puoi <strong>consultare le risposte alle domande più frequenti</strong> o <strong>aprire una richiesta per ricevere assistenza</strong>.
               </div>
             </Col>
             <Col xs={12} lg={4} className="offset-lg-1 mt-5 mt-lg-0 d-flex justify-content-center align-items-center">
-              <img src={`/assets/profilo.svg`} alt="" className={classes.heroImg} />
+              <img src={`/assets/ricevi-assistenza.svg`} alt="" className={classes.heroImg} />
             </Col>
           </Row>
           <div className={classes.navigationContainer}>
@@ -223,9 +220,9 @@ export const CreaProfiloPage = () => {
               {/*  <Totop /> */}
               <Container className="pl-lg-4 mb-4">
                 <section>
-                  <h4 className={`${classes.contentTitle} mt-5`}>Attiva il profilo della tua amministrazione</h4>
+                  <h4 className={`${classes.contentTitle} mt-5`}>Ricevi supporto dedicato su PA digitale 2026</h4>
                   <p className={`${classes.contentParagraph} mb-0`}>
-                    Il processo di attivazione della PA prevede <strong>quattro passaggi</strong>:
+                    Il processo di assistenza può prevedere fino a <strong>quattro passaggi</strong>:
                   </p>
                 </section>
               </Container>

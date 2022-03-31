@@ -1,0 +1,18 @@
+<svg width="134" height="135" viewBox="0 0 134 135" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_14528_327647" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="134" height="135">
+<rect width="134" height="135" fill="#C4C4C4"/>
+</mask>
+<g mask="url(#mask0_14528_327647)">
+<path d="M17 82V92.9692C17 98.7264 21.6671 103.393 27.4243 103.393H121.602C127.359 103.393 132.026 98.7264 132.026 92.9692V33.4243C132.026 27.6671 127.359 23 121.602 23H27.4243C22.6823 23 18.6798 26.1663 17.4157 30.5" stroke="#505050" stroke-width="2.56309" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M71.3572 96.3684H77.9226" stroke="#505050" stroke-width="2.56309" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M17.1267 89.9673H132.153" stroke="#505050" stroke-width="2.56309" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M63.5889 116.255L64.7836 103.355" stroke="#505050" stroke-width="2.56309" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M84.4966 103.355L85.6913 116.255" stroke="#505050" stroke-width="2.56309" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M52.2515 116.255H97.0276" stroke="#505050" stroke-width="2.56309" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M22 34.9971V34.9972L22.0089 34.9971C33.4183 34.9161 42.75 44.4056 42.75 56.2469C42.75 67.9968 33.4213 77.4966 22 77.4966C10.5787 77.4966 1.25 67.9968 1.25 56.2469C1.25 44.497 10.5787 34.9971 22 34.9971Z" stroke="#505050" stroke-width="2.5"/>
+<path d="M12 52.1725C12.1044 47.2651 15.7582 43.7466 21.3956 43.7466C28.7033 43.7466 31 47.7281 31 50.3207C31 56.8947 24.6319 55.9688 24.0055 60.1355V61.4318H18.7857V59.8577C19.3077 53.9318 25.0494 54.4873 24.9451 50.7836C24.9451 48.654 23.6923 47.7281 21.7088 47.7281C18.8901 47.7281 17.7418 49.7651 17.7418 52.1725H12ZM18.1593 63.4688H24.2143V68.7466H18.1593V63.4688Z" fill="#0073E6"/>
+<rect x="53.0252" y="45.0252" width="68.9495" height="7.94953" rx="3.97476" stroke="#0073E6" stroke-width="2.05047"/>
+<rect x="53" y="59" width="44" height="5" fill="#27D1D6"/>
+<rect x="53" y="67" width="36" height="3" fill="#0073E6"/>
+</g>
+</svg>

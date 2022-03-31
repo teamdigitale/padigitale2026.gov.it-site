@@ -1,6 +1,6 @@
 import React, { useEffect, useContext } from 'react';
 import { GlobalStateContext } from '../../context/globalContext';
-import { CreaProfiloPage } from '../../layouts/CreaProfiloPage';
+import { RiceviAssistenzaPage } from '../../layouts/RiceviAssistenzaPage';
 
 const Page = () => {
   const [, dispatch] = useContext(GlobalStateContext);
@@ -11,6 +11,6 @@ const Page = () => {
       dispatch({ type: 'SET:ACTIVE_HEADER' });
     };
   }, [dispatch]);
-  return <CreaProfiloPage />;
+  return <RiceviAssistenzaPage />;
 };
 export default Page;
