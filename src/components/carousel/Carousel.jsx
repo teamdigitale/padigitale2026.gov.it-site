@@ -1,6 +1,7 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
 import { Row, Col, Card, CardBody, CardTitle, CardText } from 'design-react-kit';
+import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import { DesktopSwiper } from '../DesktopSwiper';
 import { ExternalLink } from '../ExternalLink';
@@ -105,10 +106,11 @@ const useStyles = createUseStyles({
   },
   titleLink: {
     fontSize: '1rem',
-    color: '#33485C',
+    color: '#06c',
     fontWeight: '600',
     textDecoration: 'none',
     '&:hover': {
+      color: '#06c',
       textDecoration: 'underline',
     },
     '& .source': {
@@ -122,6 +124,12 @@ const useStyles = createUseStyles({
       marginLeft: '0.5rem',
     },
   },
+  titleCardLink: {
+    textDecoration: 'none',
+    '&:hover': {
+      color: '#06c',
+    },
+  },
 });
 // const carousel = React.createRef();
 
@@ -133,13 +141,15 @@ export const HeroCarousel = ({ content, title }) => {
       <Card key={element.id} className={classes.heroCards} spacing noWrapper>
         <CardBody>
           <span className="category">{element.category}</span>
-          <CardTitle tag="h4">{element.title}</CardTitle>
+          <Link to="/" className={classes.titleCardLink}>
+            <CardTitle tag="h4">{element.title}</CardTitle>
+          </Link>
           <CardText>{element.description}</CardText>
           <ExternalLink
             linkTo={element.linkTo}
             alt=""
             className={classes.heroLink}
-            ariaLabel={`${element.title} (Collegamento sito esterno apre su nuova scheda)`}
+            ariaLabel={`${element.source} ${element.title} (Collegamento sito esterno apre su nuova scheda)`}
           >
             <div className="source">
               {element.source}
@@ -167,7 +177,7 @@ export const HeroCarousel = ({ content, title }) => {
                   linkTo="https://innovazione.gov.it/"
                   alt=""
                   className={classes.titleLink}
-                  ariaLabel={`titolo (Collegamento sito esterno apre su nuova scheda)`}
+                  ariaLabel={`Scopri tutto su innovazione.gov.it (Collegamento sito esterno apre su nuova scheda)`}
                 >
                   <div className="source">
                     Scopri tutto su innovazione.gov.it

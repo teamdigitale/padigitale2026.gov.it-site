@@ -199,6 +199,8 @@ const useStyles = createUseStyles({
         fontWeight: '400',
         '& a': {
           textDecoration: 'none',
+          cursorPointer: 'default',
+          pointerEvents: 'none',
         },
         '&::before': {
           color: 'white',

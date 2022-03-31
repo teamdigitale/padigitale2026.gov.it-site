@@ -63,7 +63,7 @@ export const IndexPage = () => {
         imageUrl="/assets/home-candidature.svg"
         imageAlt=""
         firstInternal={true}
-        firstButtonHref="/come-partecipare/candida-pa"
+        firstButtonHref="/iniziativa"
         firstButtonLabel={heroPnrr.firstButtonLabel}
         firstButtonAriaLabel={heroPnrr.firstButtonAriaLabel}
         heroTitleId="home-hero-title-candidature"
