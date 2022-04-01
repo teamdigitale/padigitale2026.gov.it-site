@@ -337,8 +337,25 @@ export const AssistenzaPage = () => {
 
   const [optionSelected, setOptionSelected] = useState();
 
+  const setFocusStyleOnSelect = () => {
+    const selectInputArr = document.querySelectorAll('#assistance-form .select input');
+    selectInputArr.forEach((input) => {
+      const selectFocusHandler = () => {
+        const currentSelect = input.closest('.select');
+        currentSelect.classList.add('focused');
+      };
+      const selectFocusOutHandler = () => {
+        const currentSelect = input.closest('.select');
+        currentSelect.classList.remove('focused');
+      };
+      input.addEventListener('focus', selectFocusHandler);
+      input.addEventListener('focusout', selectFocusOutHandler);
+    });
+  };
+
   useEffect(() => {
     setOptionSelected(new Event('selected'));
+    setFocusStyleOnSelect();
   }, []);
 
   useEffect(() => {
