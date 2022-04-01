@@ -467,8 +467,6 @@ export const AssistenzaPage = () => {
   };
 
   const formHandler = (event) => {
-    event.target.reset();
-    window.grecaptcha.reset();
     const notificationElement = document.querySelector('.notification');
     const titleElement = notificationElement.querySelector('h5');
     const descriptionElement = notificationElement.querySelector('p');
@@ -476,12 +474,16 @@ export const AssistenzaPage = () => {
     notificationElement.classList.add('success');
     titleElement.innerHTML = `${successLabels.icon} ${successLabels.title}`;
     descriptionElement.innerHTML = successLabels.description;
-    const selectArr = document.querySelectorAll('.select-wrapper [class$="-singleValue"]');
-    selectArr.forEach((singleValue) => (singleValue.innerHTML = ''));
-    setFormFilled(false);
-    const submitBtn = document.querySelector('#assistance-form input[type="submit"]');
-    submitBtn.disabled = true;
 
+    setTimeout(() => {
+      event.target.reset();
+      window.grecaptcha.reset();
+      const selectArr = document.querySelectorAll('.select-wrapper [class$="-singleValue"]');
+      selectArr.forEach((singleValue) => (singleValue.innerHTML = ''));
+      setFormFilled(false);
+      const submitBtn = document.querySelector('#assistance-form input[type="submit"]');
+      submitBtn.disabled = true;
+    }, 500);
     setTimeout(() => {
       notificationElement.classList.remove('show');
     }, 5000);
@@ -680,10 +682,9 @@ export const AssistenzaPage = () => {
                 </Col>
               </Row>
               <input type="hidden" id="external" name="external" value="1" />
-              <input type="hidden" name="origin" value="Area pubblica" />
-              <input type="hidden" name="recordType" value="0127Q0000001c35" />
+              <input type="hidden" id="origin" name="origin" value="Area pubblica" />
+              <input type="hidden" id="recordType" name="recordType" value="0127Q0000001c35" />
               <input type="hidden" id="priority" name="priority" value="Medium" />
-              <input type="hidden" name="debug" value="1" />
               <input type="hidden" name="debugEmail" value="mattia.puggioni@yopmail.com" />
               <Row>
                 <Col xs={12}>
