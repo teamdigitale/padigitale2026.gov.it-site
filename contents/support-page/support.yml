@@ -8,7 +8,7 @@ faqSection:
   faqPreviewCards:
     - id: 1
       title: Chi può accedere a PA digitale 2026?
-      text: Next Generation EU (NGEU) è un piano Next da €750 miliardi di Euro che ha l'obiettivo di rilanciare l'economia europea dopo la pandemia di COVID-19 e di renderla più verde e digitale.
+      text: Il rappresentante legale dell'amministrazione, o una persona incaricata ad agire per suo conto, può accedere con SPID/CIE alla piattaforma. Durante la procedura di primo accesso alla piattaforma, è necessario selezionare e attivare il profilo della PA di riferimento.
       faqId: faq-1
       ariaLabel: Vai alla faq Chi può accedere a PA digitale 2026?
     - id: 2
