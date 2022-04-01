@@ -285,7 +285,7 @@ const query = graphql`
 `;
 
 export const UpdatesPage = () => {
-  const [selectValue, setSelectValue] = useState(false);
+  const [selectValue] = useState(false);
   const [inasmuchValue, setInasmuchValue] = useState(false);
   const [inputValue, setInputValue] = useState(false);
   const [enteState, setEnteState] = useState('');
