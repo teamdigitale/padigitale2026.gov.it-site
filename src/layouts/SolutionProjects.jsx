@@ -2,13 +2,11 @@ import React, { useEffect, useContext } from 'react';
 import { createUseStyles } from 'react-jss';
 import { Breadcrumb, BreadcrumbItem, Row, Col } from 'design-react-kit';
 import content from '../../contents/iniziativa/soluzione-progetti.yml';
-// import contentHowItWorks from '../../contents/iniziativa/iniziativa.yml';
 import { SEO } from '../components/SEO';
 import seo from '../../contents/seo.yml';
 import { GlobalStateContext } from '../context/globalContext';
 import { HeroSolutions } from '../components/hero/HeroSolutions';
 import { TimelineVertical } from '../components/TimelineVertical';
-// import { ProjectsCards } from '../components/ProjectsCards';
 import { HeroMode } from '../components/hero/HeroMode';
 
 const { title: seoTitle, description: seoDescription } = seo.projectsSolutionPage;
@@ -49,7 +47,6 @@ export const SolutionProjects = () => {
   const classes = useStyles();
 
   const { hero, verticalTimeline, heroMode } = content;
-  // const { projectsCardsItem } = contentHowItWorks;
   const [, dispatch] = useContext(GlobalStateContext);
 
   useEffect(() => {
@@ -93,9 +90,7 @@ export const SolutionProjects = () => {
         smallText="true"
       />
       <TimelineVertical item={verticalTimeline} />
-      {/* <ProjectsCards item={projectsCardsItem} /> */}
       <HeroMode
-        light={true}
         ctaContainer={true}
         category={heroMode.category}
         title={heroMode.title}

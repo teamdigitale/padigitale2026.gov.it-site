@@ -135,8 +135,6 @@ export const HeroMode = ({
   ctaContainer,
   smallText,
   mainHero,
-  dark,
-  light,
   outlineBtn,
   category,
   title,
@@ -155,11 +153,7 @@ export const HeroMode = ({
   const [, dispatch] = useContext(GlobalStateContext);
 
   return (
-    <Hero
-      Tag="section"
-      ariaLabelledBy={heroTitleId}
-      className={`${dark ? classes.heroSectionDark : ''} ${light ? classes.heroSectionLight : ''}`}
-    >
+    <Hero Tag="section" ariaLabelledBy={heroTitleId}>
       <div className={`${classes.heroImage} ${smallText ? 'hero-small' : ''} ${mainHero ? 'hero-main' : ''}`}>
         <div className="col-lg-6 col-12 offset-lg-1 p-lg-0 mt-3 mt-lg-0 pr-lg-5">
           <div className="text-center text-lg-left">
@@ -235,7 +229,5 @@ HeroMode.propTypes = {
   imageAlt: PropTypes.string,
   heroTitleId: PropTypes.string,
   mainHero: PropTypes.bool,
-  dark: PropTypes.bool,
-  light: PropTypes.bool,
   outlineBtn: PropTypes.bool,
 };
