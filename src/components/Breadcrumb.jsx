@@ -16,10 +16,10 @@ const useStyles = createUseStyles({
     },
     '& .breadcrumb-item a': {
       fontWeight: '600',
-      fontSize: '1.125rem',
+      fontSize: '18px',
       '&.active': {
         fontWeight: '400',
-        fontSize: '1.125rem',
+        fontSize: '18px',
       },
     },
   },

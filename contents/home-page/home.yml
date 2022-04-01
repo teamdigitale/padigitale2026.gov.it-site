@@ -62,7 +62,7 @@ noticesCarouselArchive:
   dataInizio: '2022-02-22'
   nomeDellaMisura: 1.4.4 Adozione identità digitale
 - dataFine: '2022-02-28'
-  titolo: 1.4.3 Adozione PagoPA e AppIO
+  titolo: 1.4.3 Adozione pagoPA e AppIO
   codiceBando: a015t0000028X0CAAU
   dataInizio: '2022-02-23'
   nomeDellaMisura: Test report
@@ -98,7 +98,7 @@ opportunity:
       title: Accessibilità
       id: access
     - number: 1.4.3
-      title: Adozione PagoPA e app IO
+      title: Adozione pagoPA e app IO
       id: adoz-pago
     - number: 1.4.4
       title: Adozione identità digitale
@@ -171,7 +171,7 @@ support:
   cards:
     - title: Domande frequenti
       description: Scopri i dettagli dell’iniziativa e consulta le risposte alle domande più frequenti.
-      link: /supporto/faq
+      link: /supporto/domande-frequenti
     - title: Assistenza
       description: Compila il modulo per richiedere chiarimenti e approfondire temi di interesse.
       link: /supporto/assistenza
