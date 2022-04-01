@@ -25,7 +25,7 @@ selectBeneficiaries:
   - value: 'province'
     label: 'Province'
   - value: 'province-autonome'
-    label: 'Province Autonome'
+    label: 'Province autonome'
   - value: 'pa-centrali'
     label: 'Pubbliche Amministrazioni Centrali'
   - value: 'regioni'
@@ -199,7 +199,7 @@ beneficiaries:
     updates: Il Dipartimento per la trasformazione digitale ha siglato un <a href="https://www.agid.gov.it/it/agenzia/stampa-e-comunicazione/notizie/2022/02/21/pa-digitale-2026-i-progetti-sportello-digitale-unico-accessibilita-entrano-vivo" target="_blank" aria-label="Leggi di più sull'accordo di collaborazione con AgID (Collegamento esterno - Apre su nuova scheda)">accordo di collaborazione con AgID</a>, in quanto soggetto attuatore, per l’implementazione della misure. La Corte dei Conti ha registrato l’accordo rendendolo pienamente operativo. Per tutti gli aggiornamenti visita la <a href="https://www.agid.gov.it/it/agenzia/attuazione-misure-pnrr" target="_blank" aria-label="sezione dedicata del sito AgID (Collegamento esterno - Apre su nuova scheda)">sezione dedicata del sito AgID</a>.
   - number: 1.4.3
     id: adoz-pago
-    title: Adozione PagoPA e app IO
+    title: Adozione pagoPA e app IO
     money: '750 <span>milioni di euro<span>'
     tags:
       - value: comuni
