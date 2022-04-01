@@ -526,7 +526,7 @@ export const AssistenzaPage = () => {
                 <span className="separator"></span>
               </BreadcrumbItem>
               <BreadcrumbItem active className={classes.breadcrumbItemActive}>
-                <a href="/supporto/assistenza">Assistenza</a>
+                <a>Assistenza</a>
               </BreadcrumbItem>
             </Breadcrumb>
           </Col>
