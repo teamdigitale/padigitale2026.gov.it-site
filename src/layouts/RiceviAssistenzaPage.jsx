@@ -189,7 +189,7 @@ export const RiceviAssistenzaPage = () => {
                   <span className="separator"></span>
                 </BreadcrumbItem>
                 <BreadcrumbItem active className={classes.breadcrumbItemActive}>
-                  <a href="#">Trova le risposte alle tue domande o ricevi assistenza</a>
+                  <a>Trova le risposte alle tue domande o ricevi assistenza</a>
                 </BreadcrumbItem>
               </Breadcrumb>
             </Col>
