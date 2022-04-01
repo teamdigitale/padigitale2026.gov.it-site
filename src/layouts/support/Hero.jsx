@@ -89,7 +89,7 @@ export const HeroSupport = ({ title, subtitle, isFaq }) => {
            <a href="/supporto">Supporto</a>
          </BreadcrumbItem>
          <BreadcrumbItem active className={classes.breadcrumbItemActive}>
-           <a href="/supporto/domande-frequenti">Domande frequenti</a>
+           <a>Domande frequenti</a>
          </BreadcrumbItem>
        </Breadcrumb>
          :
@@ -100,7 +100,7 @@ export const HeroSupport = ({ title, subtitle, isFaq }) => {
           <span className="separator"></span>
         </BreadcrumbItem>
         <BreadcrumbItem active className={classes.breadcrumbItemActive}>
-          <a href="/supporto">Supporto</a>
+          <a>Supporto</a>
         </BreadcrumbItem>
       </Breadcrumb>
         }

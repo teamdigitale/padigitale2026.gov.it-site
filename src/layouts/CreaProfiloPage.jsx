@@ -190,7 +190,7 @@ export const CreaProfiloPage = () => {
                   <span className="separator"></span>
                 </BreadcrumbItem>
                 <BreadcrumbItem active className={classes.breadcrumbItemActive}>
-                  <a href="#">Attiva il profilo della tua PA: identità digitale e dati IPA</a>
+                  <a>Attiva il profilo della tua PA: identità digitale e dati IPA</a>
                 </BreadcrumbItem>
               </Breadcrumb>
             </Col>
