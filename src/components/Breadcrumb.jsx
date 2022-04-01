@@ -40,7 +40,7 @@ export const Breadcrumb = ({ currentPage, noContainer }) => {
                 </span>
               </li>
               <li aria-current="page" className="breadcrumb-item active">
-                <span>{currentPage}</span>
+                <a>{currentPage}</a>
               </li>
             </ol>
           </nav>
