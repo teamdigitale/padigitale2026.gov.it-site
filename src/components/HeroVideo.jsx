@@ -65,13 +65,13 @@ export const HeroVideo = () => {
         </div>
         <div className={classes.videoContainer}>
           <iframe
-            src="https://player.vimeo.com/video/142548770?h=4205667b4f"
-            width="100%"
-            height="100%"
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/JXnRZRI5j20"
+            title="YouTube video player"
             frameBorder="0"
-            allow="autoplay; fullscreen; picture-in-picture"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
-            title="video-container"
           ></iframe>
         </div>
         <Accordion className="mt-5">

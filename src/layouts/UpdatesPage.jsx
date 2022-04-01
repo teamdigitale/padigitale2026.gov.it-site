@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable sonarjs/no-identical-functions */
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable max-lines-per-function */
@@ -284,9 +285,10 @@ const query = graphql`
 `;
 
 export const UpdatesPage = () => {
-  const [selectValue, setSelectValue] = useState(false);
+  const [selectValue] = useState(false);
+  const [inasmuchValue, setInasmuchValue] = useState(false);
   const [inputValue, setInputValue] = useState(false);
-  const [enteState] = useState('');
+  const [enteState, setEnteState] = useState('');
   const [formValidate, setFormValidate] = useState(false);
 
   const {
@@ -303,22 +305,67 @@ export const UpdatesPage = () => {
 
   const classes = useStyles();
 
+  const setListenersToSelectOptions = () => {
+    const representSelectOptions = document.querySelector('#represent-select');
+    const config = { childList: true, subtree: true };
+    const setObserver = (mutationsList) => {
+      for (const mutation of mutationsList) {
+        if (mutation.type === 'childList') {
+          let value = representSelectOptions.querySelector('div[class*="singleValue"]');
+          value ? (value = value.innerHTML) : (value = '');
+          let valueSelected = selectRepresent.find((valueObj) => {
+            if (value === valueObj.label) {
+              return valueObj;
+            }
+          });
+          valueSelected = valueSelected?.value;
+          setEnteState(valueSelected);
+        }
+      }
+    };
+    const observer = new MutationObserver(setObserver);
+    observer.observe(representSelectOptions, config);
+  };
+
+  const setFocusStyleOnSelect = () => {
+    const selectInputArr = document.querySelectorAll('#updates-form .select input');
+    selectInputArr.forEach((input) => {
+      const selectFocusHandler = () => {
+        const currentSelect = input.closest('.select');
+        currentSelect.classList.add('focused');
+      };
+      const selectFocusOutHandler = () => {
+        const currentSelect = input.closest('.select');
+        currentSelect.classList.remove('focused');
+      };
+      input.addEventListener('focus', selectFocusHandler);
+      input.addEventListener('focusout', selectFocusOutHandler);
+    });
+  };
+
   useEffect(() => {
     const inputArr = document.querySelectorAll('#updates-form [data-form="true"]');
 
     const inputHandler = () => {
       const currentInputArr = document.querySelectorAll('#updates-form [data-form="true"]');
-      const inputValue = Array.prototype.slice.call(currentInputArr).every((input) => input.value !== '');
-      console.log('every', inputValue);
+      const visibleInput = Array.prototype.slice.call(currentInputArr).filter((input) => {
+        const hidden = input.closest('.hidden');
+        if (!hidden) {
+          return input;
+        }
+      });
+      const inputValue = Array.prototype.slice.call(visibleInput).every((input) => input.value !== '');
       if (inputValue) {
         setInputValue(true);
       }
     };
 
+    setListenersToSelectOptions();
+    setFocusStyleOnSelect();
     inputArr.forEach((input) => {
       input.addEventListener('input', inputHandler);
     });
-  }, []);
+  }, [setListenersToSelectOptions]);
 
   const onSubmit = async (data) => {
     console.log(data);
@@ -390,10 +437,6 @@ export const UpdatesPage = () => {
       });
   };
 
-  const onFocus = (event) => {
-    console.log(event.target);
-  };
-
   const onError = async (data) => {
     console.log('error', data);
   };
@@ -402,18 +445,14 @@ export const UpdatesPage = () => {
     announce('Pagina caricata ' + content.name);
   }, []);
 
-  const onChangeSelectHandler = (e) => {
-    if (e.value !== '') {
-      setSelectValue(true);
-    } else {
-      setSelectValue(false);
-    }
+  const inQuantoHandler = (e) => {
+    setInasmuchValue(e.value);
   };
 
   useEffect(() => {
+    console.log(inputValue);
     inputValue && selectValue ? setFormValidate(true) : setFormValidate(false);
-    console.log('formValidate', formValidate);
-  }, [selectValue, inputValue, formValidate]);
+  }, [selectValue, inputValue, formValidate, inasmuchValue]);
 
   const {
     selectRepresent,
@@ -492,7 +531,7 @@ export const UpdatesPage = () => {
                           id="address"
                           aria-required="true"
                           data-form="true"
-                          autocomplete="email"
+                          autoComplete="email"
                           {...field}
                           className="mb-0"
                         />
@@ -516,8 +555,7 @@ export const UpdatesPage = () => {
                         value={value}
                         id="represent-select"
                         inputId="represent-select-input"
-                        onChange={(onChangeSelect, onChangeSelectHandler)}
-                        onFocus={onFocus}
+                        onChange={onChangeSelect}
                         options={selectRepresent}
                         placeholder={selectPlaceholder}
                         aria-label={selectPlaceholder}
@@ -561,6 +599,7 @@ export const UpdatesPage = () => {
                             aria-invalid={errors.enteType && 'true'}
                             {...field}
                             id="enteType"
+                            data-form="true"
                           />
                           <span className={classes.errorLabel} id="error-enteType">
                             {errors.enteType && errors.enteType.message}
@@ -628,14 +667,14 @@ export const UpdatesPage = () => {
                           value={value}
                           id="enteSelect"
                           inputId="enteSelect-input"
-                          onChange={onChangeSelect}
+                          onChange={(onChangeSelect, inQuantoHandler)}
                           options={selectInQuanto}
                           aria-describedby="mandatory-label"
                           placeholder={selectPlaceholder}
                           aria-label={selectPlaceholder}
                           aria-invalid={errors.enteSelect && 'true'}
                           aria-labelledby={errors.enteSelect && 'error-enteSelect'}
-                          className={`${errors.enteSelect && 'select is-invalid'}`}
+                          className={`select ${errors.enteSelect && 'select is-invalid'}`}
                         />
                       )}
                     />
@@ -655,7 +694,7 @@ export const UpdatesPage = () => {
           </a>
         </p>
         <div className={`${classes.submitContainer} d-flex mt-5`}>
-          <Button color="primary" type="submit" form="updates-form" disabled={!formValidate ? true : false}>
+          <Button color="primary" type="submit" form="updates-form" /* disabled={!formValidate ? true : false} */>
             {sendButtonLabel}
           </Button>
           <img className={classes.spinner} src="/assets/spinner.gif" alt=""></img>
