@@ -10,7 +10,6 @@ import { SEO } from '../components/SEO';
 import seo from '../../contents/seo.yml';
 import content from '../../contents/ricevi-assistenza/ricevi-assistenza.yml';
 import { TimelineVerticalCards } from '../components/TimelineVerticalCards';
-import { HeroVideo } from '../components/HeroVideo';
 /* import { Totop } from '../components/Totop'; */
 import { SideNavigationAccordion } from './sideNavigationAccordion';
 
@@ -199,8 +198,8 @@ export const RiceviAssistenzaPage = () => {
             <Col xs={12} lg={7}>
               <h4 className={classes.titleUpdate}>Trova le risposte alle tue domande o ricevi assistenza</h4>
               <div className={classes.subtitleUpdate}>
-                All’interno della sezione dedicata al supporto puoi
-                <strong>consultare le risposte alle domande più frequenti</strong> o
+                All’interno della sezione dedicata al supporto puoi{' '}
+                <strong>consultare le risposte alle domande più frequenti</strong> o{' '}
                 <strong>aprire una richiesta per ricevere assistenza</strong>.
               </div>
             </Col>
@@ -229,38 +228,6 @@ export const RiceviAssistenzaPage = () => {
                 </section>
               </Container>
               <TimelineVerticalCards item={verticalTimeline} />
-              <Container className="pl-lg-4">
-                <p className={`${classes.contentParagraph} mb-0`}>
-                  Ti raccomandiamo quindi di verificare fin da subito l’accuratezza delle informazioni presenti su{' '}
-                  <a
-                    target="_blank"
-                    rel="noreferrer"
-                    aria-label="Ricerca ente (Collegamento esterno - Apre su nuova scheda)"
-                    href="https://www.indicepa.gov.it/ipa-portale/consultazione/indirizzo-sede/ricerca-ente"
-                    className="d-inline-flex align-items-center"
-                  >
-                    IPA <img src="/assets/external-link.svg" alt="" />
-                  </a>
-                  .
-                </p>
-              </Container>
-              <section id="watch-video">
-                <HeroVideo />
-              </section>
-              {/* <Container className="pl-lg-4">
-                <section id="to-read-more">
-                  <h4 className={`${classes.contentTitle} mb-4`}>Per approfondire</h4>
-                  <Row>
-                    <Col xs={12} lg={6} xl={4}>
-                      <a className={classes.cardReadMore}>
-                        <img className={classes.clip} src="/assets/clip.svg" alt=""></img>
-                        <span className={classes.cardTitle}>Banda ultra larga</span>
-                        <span className={classes.cardInfo}>Scarica il PDF (3.7MB)</span>
-                      </a>
-                    </Col>
-                  </Row>
-                </section>
-              </Container> */}
             </div>
           </div>
         </Container>

@@ -56,7 +56,7 @@ Con riferimento alla finalità di cui al punto A, sezione 3 di questa informativ
 
 - e-mail;
 
-- numero di telefono (facoltativo);
+- numero di telefono;
 
 - eventuali ulteriori dati personali, di natura comune, anagrafici e/o di contatto, inclusi nelle comunicazioni.
 

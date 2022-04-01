@@ -15,9 +15,6 @@ sidebar:
   - sectionTitle: 4. Ricevi aggiornamenti
     sectionId: confirm-subscription
     sectionActive: false
-  - sectionTitle: Guarda il video dedicato
-    sectionId: watch-video
-    sectionActive: false
 verticalTimeline:
   - index: 0
     title: 'Trova le risposte ai dubbi più comuni'

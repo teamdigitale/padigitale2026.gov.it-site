@@ -24,22 +24,19 @@ questions:
     sectionId: generali
     accordions:
       - title: Cos'è Next Generation EU?
-        content: Next Generation EU (NGEU) è un piano Next da €750 miliardi di Euro che ha l'obiettivo di rilanciare l'economia europea dopo la pandemia di COVID-19 e di renderla più verde e digitale.
+        content: Next Generation EU (NGEU) è un piano Next da €750 miliardi che ha l'obiettivo di rilanciare l'economia europea dopo la pandemia di COVID-19 e di renderla più verde e digitale.
         linkLabel: Vai al sito Next Generation EU dell'Unione Europea
         link: 'https://europa.eu/next-generation-eu/index_it'
         ariaLabel: Vai al sito Next Generation EU dell'Unione Europea (Collegamento esterno - Apre su nuova scheda)
-        accordionId: faq-1
       - title: Cos'è Italia domani, il Piano nazionale di ripresa e resilienza (PNRR)?
         content: Italia domani è il nome del Piano nazionale di ripresa e resilienza (PNRR) approvato dal Governo italiano il 29 aprile del 2021 all’interno del programma europeo Next Generation EU. L’Italia è la prima beneficiaria, in valore assoluto, del programma Next Generation EU, con un totale di €191,5 miliardi. Mediante un Fondo Complementare, finanziato direttamente dal bilancio dello Stato, il nostro Paese ha previsto un'integrazione di €30,6 mld. Il totale degli investimenti previsti è pertanto di €222,1 miliardi.
         linkLabel: Vai al sito Italia domani
         link: 'https://italiadomani.gov.it/'
         ariaLabel: Vai al sito Italia domani (Collegamento esterno - Apre su nuova scheda)
-        accordionId: faq-2
       - title: Cos'è Italia digitale 2026?
         content: Italia digitale 2026 è il piano strategico per la transizione digitale e la connettività promosso dal Ministro per l’innovazione tecnologica e la transizione digitale all’interno di Italia domani. Il Piano, che raccoglie il 27% delle risorse di Italia domani, si sviluppa su due assi. Il primo asse (6,71 miliardi) riguarda le infrastrutture digitali e la connettività a banda ultra larga. Il secondo (6,74 miliardi) riguarda tutti quegli interventi volti a trasformare la Pubblica Amministrazione (PA) in chiave digitale. I due assi sono necessari per garantire che tutti i cittadini abbiano accesso a connessioni veloci per vivere appieno le opportunità che una vita digitale può e deve offrire e per migliorare il rapporto tra cittadino e pubblica amministrazione rendendo quest’ultima un alleato nella vita digitale dei cittadini.
         linkLabel: Scopri la strategia Italia digitale 2026
         link: 'https://innovazione.gov.it/dipartimento/focus/italia-digitale-2026/'
-        accordionId: faq-3
         ariaLabel: Scopri la strategia Italia digitale 2026 (Collegamento esterno - Apre su nuova scheda)
       - title: Quali sono gli obiettivi di Italia digitale 2026?
         content: "L'importante piano di investimenti e riforme previsto dal Piano nazionale di ripresa e resilienza vuole mettere l'Italia nel gruppo di testa in Europa entro il 2026. Italia digitale 2026 si pone cinque ambiziosi obiettivi: <ol><li>Diffondere l’identità digitale, assicurando che venga utilizzata dal 70% della popolazione;</li><li>Colmare il gap di competenze digitali, con almeno il 70% della popolazione che sia digitalmente abile;</li><li>Portare circa il 75% delle PA italiane a utilizzare servizi in cloud;</li><li>Raggiungere almeno l’80% dei servizi pubblici essenziali erogati online;</li><li>Raggiungere, in collaborazione con il Mise, il 100% delle famiglie e delle imprese italiane con reti a banda ultra-larga.</li></ol>"
@@ -54,12 +51,15 @@ questions:
     accordions:
       - title: Chi può accedere a PA digitale 2026?
         content: Il rappresentante legale dell'amministrazione, o una persona incaricata ad agire per suo conto, può accedere con SPID/CIE alla piattaforma. Durante la procedura di primo accesso alla piattaforma, è necessario selezionare e attivare il profilo della PA di riferimento.
+        accordionId: faq-1
       - title: Quali sono i requisiti per il primo accesso a PA digitale 2026?
         content: Per accedere alla piattaforma è necessario disporre della propria identità digitale (SPID o CIE) e della propria email istituzionale. Il rappresentante legale dell'amministrazione (o chi opera per suo conto) deve inoltre avere la possibilità di consultare la PEC dell'amministrazione per la quale intende operare.
+        accordionId: faq-2
       - title: Cosa è necessario per completare la procedura di primo accesso a PA digitale 2026?
         content: Per completare la procedura di primo accesso alla piattaforma PA digitale 2026, è necessario confermare il link di verifica presente nella PEC inviata all'amministrazione di riferimento. Il link di verifica ha una validità di 7 giorni.
       - title: È possibile accedere alla piattaforma anche quando non si ricopre il ruolo di rappresentante legale dell'amministrazione?
         content: Si. Nel caso in cui a effettuare l'accesso non sia direttamente il rappresentante legale ma una persona da lui incaricata, è presente una casella da spuntare per dichiarare di stare agendo per conto del rappresentante legale dell'amministrazione. Alla fine della procedura di primo accesso, il rappresentante legale della PA riceve una PEC con cui viene a informato del fatto che la persona incaricata ha agito per suo conto su PA digitale 2026. 
+        accordionId: faq-3
       - title: Cosa bisogna fare se i dati visualizzati nella procedura di attivazione del profilo della PA non sono aggiornati?
         content: Nello step di selezione dell'amministrazione mediante nome della PA, codice IPA o luogo, il sistema precarica i dati dell'amministrazione presenti nella banca dati IPA. Se si riscontrano inesattezze nei dati della PA visualizzati, è necessario modificarli su IPA (https://indicepa.gov.it/ipa-portale/) e riprendere l’attivazione della PA dopo l’aggiornamento. È bene ricordare che per visualizzare su PA digitale 2026 i dati aggiornati a seguito di modifiche su IPA, potrebbero essere necessarie alcune ore. 
       - title: Cosa bisogna fare se la PA non riceve la PEC contenente il link di verifica oppure non riesce a completare il processo di attivazione entro 7 giorni?
@@ -121,7 +121,7 @@ questions:
       - title: "Il sistema non consente di caricare la domanda di finanziamento. Come si può procedere per inviare la candidatura?"
         content: È necessario controllare che:<ul><li>il file caricato sia in formato P7M;</li><li>il file caricato corrisponda all’ultima versione scaricata;</li><li>sia presente la firma digitale;</li><li>la firma digitale sia quella del rappresentante legale.</li></ul>
       - title: "Come viene calcolato l'importo totale del finanziamento?"
-        content: Il calcolo dell'importo totale del finanziamento varia a seconda dell'avviso appartenente alla misura. Ogni misura ha un calcolo diverso. Per approfondire il calcolo dell'importo totale del finanziamento si rimanda alle FAQ di dettaglio della misura di interesse. <ul><li>Misura 1.2</li><li>Misura 1.4.1</li><li>Misura 1.4.3</li><li>Misura 1.4.4</li><li>Misura 1.4.5</li></ul>
+        content: Il calcolo dell'importo totale del finanziamento varia a seconda dell'avviso appartenente alla misura. Ogni misura ha un calcolo diverso. Per approfondire il calcolo dell'importo totale del finanziamento si rimanda alle FAQ di dettaglio della misura di interesse. <ul><li>Misura 1.2;</li><li>Misura 1.4.1;</li><li>Misura 1.4.3;</li><li>Misura 1.4.4;</li><li>Misura 1.4.5.</li></ul>
       - title: "Cosa succede se non viene rispettato il calendario scadenze/cronoprogramma?"
         content: Se non vengono completate le attività necessarie previste nel calendario scadenze/cronoprogramma, il finanziamento concesso viene revocato.
       - title: "Come ci si dota di dispositivo di firma digitale?"

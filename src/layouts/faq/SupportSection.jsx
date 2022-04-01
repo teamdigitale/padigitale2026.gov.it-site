@@ -83,7 +83,7 @@ const useStyles = createUseStyles({
     cursor: 'pointer',
     '&:hover': {
       '&.card.card-teaser': {
-        '& h5.card-title': {
+        '& .card-title': {
           textDecoration: 'underline',
         },
       },
