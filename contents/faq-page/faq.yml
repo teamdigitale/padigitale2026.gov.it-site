@@ -24,7 +24,7 @@ questions:
     sectionId: generali
     accordions:
       - title: Cos'è Next Generation EU?
-        content: Next Generation EU (NGEU) è un piano Next da €750 miliardi di Euro che ha l'obiettivo di rilanciare l'economia europea dopo la pandemia di COVID-19 e di renderla più verde e digitale.
+        content: Next Generation EU (NGEU) è un piano Next da €750 miliardi che ha l'obiettivo di rilanciare l'economia europea dopo la pandemia di COVID-19 e di renderla più verde e digitale.
         linkLabel: Vai al sito Next Generation EU dell'Unione Europea
         link: 'https://europa.eu/next-generation-eu/index_it'
         ariaLabel: Vai al sito Next Generation EU dell'Unione Europea (Collegamento esterno - Apre su nuova scheda)
@@ -121,7 +121,7 @@ questions:
       - title: "Il sistema non consente di caricare la domanda di finanziamento. Come si può procedere per inviare la candidatura?"
         content: È necessario controllare che:<ul><li>il file caricato sia in formato P7M;</li><li>il file caricato corrisponda all’ultima versione scaricata;</li><li>sia presente la firma digitale;</li><li>la firma digitale sia quella del rappresentante legale.</li></ul>
       - title: "Come viene calcolato l'importo totale del finanziamento?"
-        content: Il calcolo dell'importo totale del finanziamento varia a seconda dell'avviso appartenente alla misura. Ogni misura ha un calcolo diverso. Per approfondire il calcolo dell'importo totale del finanziamento si rimanda alle FAQ di dettaglio della misura di interesse. <ul><li>Misura 1.2</li><li>Misura 1.4.1</li><li>Misura 1.4.3</li><li>Misura 1.4.4</li><li>Misura 1.4.5</li></ul>
+        content: Il calcolo dell'importo totale del finanziamento varia a seconda dell'avviso appartenente alla misura. Ogni misura ha un calcolo diverso. Per approfondire il calcolo dell'importo totale del finanziamento si rimanda alle FAQ di dettaglio della misura di interesse. <ul><li>Misura 1.2;</li><li>Misura 1.4.1;</li><li>Misura 1.4.3;</li><li>Misura 1.4.4;</li><li>Misura 1.4.5.</li></ul>
       - title: "Cosa succede se non viene rispettato il calendario scadenze/cronoprogramma?"
         content: Se non vengono completate le attività necessarie previste nel calendario scadenze/cronoprogramma, il finanziamento concesso viene revocato.
       - title: "Come ci si dota di dispositivo di firma digitale?"
