@@ -4,11 +4,12 @@ import { Breadcrumb, BreadcrumbItem, Row, Col } from 'design-react-kit';
 import content from '../../contents/iniziativa/soluzione-standard.yml';
 import { SEO } from '../components/SEO';
 import seo from '../../contents/seo.yml';
-import contentHowItWorks from '../../contents/iniziativa/iniziativa.yml';
+// import contentHowItWorks from '../../contents/iniziativa/iniziativa.yml';
 import { GlobalStateContext } from '../context/globalContext';
 import { HeroSolutions } from '../components/hero/HeroSolutions';
 import { TimelineVertical } from '../components/TimelineVertical';
-import { ProjectsCards } from '../components/ProjectsCards';
+// import { ProjectsCards } from '../components/ProjectsCards';
+import { HeroMode } from '../components/hero/HeroMode';
 
 const { title: seoTitle, description: seoDescription } = seo.standardSolutionPage;
 
@@ -47,8 +48,8 @@ const useStyles = createUseStyles({
 export const SolutionStandard = () => {
   const classes = useStyles();
 
-  const { hero, verticalTimeline } = content;
-  const { projectsCardsItem } = contentHowItWorks;
+  const { hero, verticalTimeline, heroMode } = content;
+  // const { projectsCardsItem } = contentHowItWorks;
   const [, dispatch] = useContext(GlobalStateContext);
 
   useEffect(() => {
@@ -92,7 +93,21 @@ export const SolutionStandard = () => {
         smallText="true"
       />
       <TimelineVertical item={verticalTimeline} />
-      <ProjectsCards item={projectsCardsItem} />
+      {/* <ProjectsCards item={projectsCardsItem} /> */}
+      <HeroMode
+        light={true}
+        ctaContainer={true}
+        category={heroMode.category}
+        title={heroMode.title}
+        body={heroMode.body}
+        imageUrl="/assets/Soluzioni_Standard.svg"
+        imageAlt=""
+        firstInternal={true}
+        firstButtonHref={heroMode.link}
+        firstButtonLabel={heroMode.btnLabel}
+        firstButtonAriaLabel={heroMode.btnAria}
+        heroTitleId="home-hero-title-candidature"
+      />
     </>
   );
 };
