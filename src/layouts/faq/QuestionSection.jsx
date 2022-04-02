@@ -52,6 +52,12 @@ const useStyles = createUseStyles({
         backgroundColor: '#e3e8f4',
         padding: '0 2px',
       },
+      '& a': {
+        textDecoration: 'none',
+        '&:hover': {
+          textDecoration: 'underline',
+        },
+      },
     },
   },
   linkAccordion: {
