@@ -285,11 +285,11 @@ const query = graphql`
 `;
 
 export const UpdatesPage = () => {
-  const [selectValue] = useState(false);
   const [inasmuchValue, setInasmuchValue] = useState(false);
-  const [inputValue, setInputValue] = useState(false);
+  const [inputValue, setInputValue] = useState('');
   const [enteState, setEnteState] = useState('');
   const [formValidate, setFormValidate] = useState(false);
+  const publicAdministrationValue = 'public-administration';
 
   const {
     site: {
@@ -342,30 +342,6 @@ export const UpdatesPage = () => {
       input.addEventListener('focusout', selectFocusOutHandler);
     });
   };
-
-  useEffect(() => {
-    const inputArr = document.querySelectorAll('#updates-form [data-form="true"]');
-
-    const inputHandler = () => {
-      const currentInputArr = document.querySelectorAll('#updates-form [data-form="true"]');
-      const visibleInput = Array.prototype.slice.call(currentInputArr).filter((input) => {
-        const hidden = input.closest('.hidden');
-        if (!hidden) {
-          return input;
-        }
-      });
-      const inputValue = Array.prototype.slice.call(visibleInput).every((input) => input.value !== '');
-      if (inputValue) {
-        setInputValue(true);
-      }
-    };
-
-    setListenersToSelectOptions();
-    setFocusStyleOnSelect();
-    inputArr.forEach((input) => {
-      input.addEventListener('input', inputHandler);
-    });
-  }, [setListenersToSelectOptions]);
 
   const onSubmit = async (data) => {
     console.log(data);
@@ -450,9 +426,48 @@ export const UpdatesPage = () => {
   };
 
   useEffect(() => {
-    console.log(inputValue);
-    inputValue && selectValue ? setFormValidate(true) : setFormValidate(false);
-  }, [selectValue, inputValue, formValidate, inasmuchValue]);
+    const inputArr = document.querySelectorAll('#updates-form input[data-form="true"]');
+    const visibleInputArr = Array.prototype.slice.call(inputArr).filter((input) => {
+      if (!input.closest('.hidden')) {
+        return input;
+      }
+    });
+    const isValidateInput = visibleInputArr.every((input) => {
+      if (input.value !== '') {
+        return input;
+      }
+    });
+
+    const isValidateSelectFunc = (enteState, inasmuchValue) => {
+      if (enteState || inasmuchValue) {
+        const inasmuchSelect = document.querySelector('#enteSelect');
+        const isInasmuchVisible = !inasmuchSelect.closest('.hidden');
+        if (enteState === publicAdministrationValue && inasmuchValue) {
+          return true;
+        }
+        if (enteState !== publicAdministrationValue && !inasmuchValue) {
+          return true;
+        }
+        if (enteState !== publicAdministrationValue && inasmuchValue && !isInasmuchVisible) {
+          return true;
+        }
+      }
+      return false;
+    };
+    const isValidateSelect = isValidateSelectFunc(enteState, inasmuchValue);
+
+    if (isValidateInput && isValidateSelect) {
+      setFormValidate(true);
+    } else {
+      setFormValidate(false);
+    }
+    setListenersToSelectOptions();
+    setFocusStyleOnSelect();
+  }, [enteState, inasmuchValue, inputValue]);
+
+  const onInputHandler = (e) => {
+    setInputValue(e.target.value);
+  };
 
   const {
     selectRepresent,
@@ -531,6 +546,7 @@ export const UpdatesPage = () => {
                           id="address"
                           aria-required="true"
                           data-form="true"
+                          onInput={onInputHandler}
                           autoComplete="email"
                           {...field}
                           className="mb-0"
@@ -600,6 +616,7 @@ export const UpdatesPage = () => {
                             {...field}
                             id="enteType"
                             data-form="true"
+                            onInput={onInputHandler}
                           />
                           <span className={classes.errorLabel} id="error-enteType">
                             {errors.enteType && errors.enteType.message}
@@ -636,6 +653,7 @@ export const UpdatesPage = () => {
                           aria-labelledby={errors.ente && 'error-enteName'}
                           aria-invalid={errors.ente && 'true'}
                           data-form="true"
+                          onInput={onInputHandler}
                           {...field}
                           id="enteName"
                         />
@@ -647,7 +665,7 @@ export const UpdatesPage = () => {
                   />
                 </Col>
               </Row>
-              <div className={`${classes.enteContainer} ${enteState === 'public-administration' ? '' : 'hidden'}`}>
+              <div className={`${classes.enteContainer} ${enteState === publicAdministrationValue ? '' : 'hidden'}`}>
                 <Row className="mt-5">
                   <Col xs={12} lg={6}>
                     <label htmlFor="enteSelect-input" className={classes.selectLabel}>
@@ -658,7 +676,7 @@ export const UpdatesPage = () => {
                       name="enteSelect"
                       rules={{
                         required: {
-                          value: enteState === 'public-administration' ? true : false,
+                          value: enteState === publicAdministrationValue ? true : false,
                           message: requiredLabel,
                         },
                       }}
@@ -694,7 +712,7 @@ export const UpdatesPage = () => {
           </a>
         </p>
         <div className={`${classes.submitContainer} d-flex mt-5`}>
-          <Button color="primary" type="submit" form="updates-form" /* disabled={!formValidate ? true : false} */>
+          <Button color="primary" type="submit" form="updates-form" disabled={!formValidate ? true : false}>
             {sendButtonLabel}
           </Button>
           <img className={classes.spinner} src="/assets/spinner.gif" alt=""></img>
