@@ -289,6 +289,7 @@ export const UpdatesPage = () => {
   const [inputValue, setInputValue] = useState('');
   const [enteState, setEnteState] = useState('');
   const [formValidate, setFormValidate] = useState(false);
+  const publicAdministrationValue = 'public-administration';
 
   const {
     site: {
@@ -441,13 +442,13 @@ export const UpdatesPage = () => {
       if (enteState || inasmuchValue) {
         const inasmuchSelect = document.querySelector('#enteSelect');
         const isInasmuchVisible = !inasmuchSelect.closest('.hidden');
-        if (enteState === 'public-administration' && inasmuchValue) {
+        if (enteState === publicAdministrationValue && inasmuchValue) {
           return true;
         }
-        if (enteState !== 'public-administration' && !inasmuchValue) {
+        if (enteState !== publicAdministrationValue && !inasmuchValue) {
           return true;
         }
-        if (enteState !== 'public-administration' && inasmuchValue && !isInasmuchVisible) {
+        if (enteState !== publicAdministrationValue && inasmuchValue && !isInasmuchVisible) {
           return true;
         }
       }
@@ -664,7 +665,7 @@ export const UpdatesPage = () => {
                   />
                 </Col>
               </Row>
-              <div className={`${classes.enteContainer} ${enteState === 'public-administration' ? '' : 'hidden'}`}>
+              <div className={`${classes.enteContainer} ${enteState === publicAdministrationValue ? '' : 'hidden'}`}>
                 <Row className="mt-5">
                   <Col xs={12} lg={6}>
                     <label htmlFor="enteSelect-input" className={classes.selectLabel}>
@@ -675,7 +676,7 @@ export const UpdatesPage = () => {
                       name="enteSelect"
                       rules={{
                         required: {
-                          value: enteState === 'public-administration' ? true : false,
+                          value: enteState === publicAdministrationValue ? true : false,
                           message: requiredLabel,
                         },
                       }}
