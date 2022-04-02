@@ -21,7 +21,7 @@ sidebar:
   - sectionTitle: Misura 1.4.3 pagoPa
     sectionId: measure-1-4-3-pagopa
     sectionActive: false
-  - sectionTitle: Misura 1.4.3 appIO
+  - sectionTitle: Misura 1.4.3 app IO
     sectionId: measure-1-4-3-appio
     sectionActive: false
   - sectionTitle: Misura 1.4.4
@@ -183,27 +183,27 @@ questions:
         content: Per transazione con esito positivo si intende sia una transazione reale eseguita da un cittadino, nel caso in cui la stagionalità del singolo servizio di incasso lo consenta, oppure - in caso contrario - una transazione reale con importo di valore simbolico (es. 0,01€) ma con codice tassonomico e IUV reale, al fine di poter verificare l’effettiva e corretta integrazione del servizio di incasso in modalità end-to-end (cd. transazione di test)
       - title: Qual è il metodo di calcolo del voucher?
         content: L’importo del voucher è determinato dal prodotto dell'importo unitario dei servizi attivati (in funzione della classe di popolazione residente del Soggetto Attuatore) e il numero totale dei servizi attivati.
-  - title: misura 1.4.3 appIO
+  - title: misura 1.4.3 app IO
     description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
     sectionId: measure-1-4-3-appio
     accordions:
       - title: "Come viene calcolato l'importo forfettario previsto dall'Avviso ''Adozione APP IO'' della Misura 1.4.3?"
-        content: "L’importo del finanziamento concedibile ai Comuni è individuato in un importo forfettario determinato secondo il seguente criterio:<br></br>a. per i Comuni fino a 5.000 ab.: App IO: €243 per servizio (min.3 max 50);<br>b. per i Comuni 5.001 - 20.000 ab. App IO: €343 per servizio (min.3 max 50);<br>c. per i Comuni 20.001 - 100.000 ab. App IO: €728 per servizio (min.5 max 50);<br>d. per i Comuni 100.001 - 250.000 ab. App IO: €1.099 per servizio (min.5 max 50);<br>e. per i Comuni > 250.000 ab. App IO: €3.187 per servizio (min.5 max 50)."
+        content: "L’importo del finanziamento concedibile ai Comuni è individuato in un importo forfettario determinato secondo il seguente criterio:<br></br>a. per i Comuni fino a 5.000 ab.: app IO: €243 per servizio (min.3 max 50);<br>b. per i Comuni 5.001 - 20.000 ab. app IO: €343 per servizio (min.3 max 50);<br>c. per i Comuni 20.001 - 100.000 ab. app IO: €728 per servizio (min.5 max 50);<br>d. per i Comuni 100.001 - 250.000 ab. app IO: €1.099 per servizio (min.5 max 50);<br>e. per i Comuni > 250.000 ab. app IO: €3.187 per servizio (min.5 max 50)."
       - title: Quali enti della PA possono presentare domanda?
         content: I Soggetti Attuatori, ovvero coloro che possono accedere allo strumento predisposto dall'Avviso, sono i Comuni. 
       - title: Qual è l'obiettivo dell'Avviso "Adozione APP IO" della Misura 1.4.3?
-        content: L'obiettivo del presente Avviso riferito alla Misura 1.4.3 è la migrazione e l’attivazione dei servizi digitali (AppIO) seguendo una logica di “pacchetti” che identificano il numero minimo di servizi da integrare a fronte di una singola adesione all’Avviso con il fine ultimo di raggiungere una integrazione cd. full per ciascun Comune, come specificato nell'Allegato 2.
+        content: L'obiettivo del presente Avviso riferito alla Misura 1.4.3 è la migrazione e l’attivazione dei servizi digitali (app IO) seguendo una logica di “pacchetti” che identificano il numero minimo di servizi da integrare a fronte di una singola adesione all’Avviso con il fine ultimo di raggiungere una integrazione cd. full per ciascun Comune, come specificato nell'Allegato 2.
       - title: È possibile accedere al finanziamento in caso di realizzazione del progetto prima della pubblicazione dell'Avviso "Adozione APP IO" riferito della Misura 1.4.3?
-        content: Si, è possibile accedere al finanziamento previsto dal presente Avviso nel caso in cui l'attuazione dei servizi digitali (AppIO) sia stata realizzata a decorrere dal 01 Aprile 2021, con risorse finanziarie proprie.
+        content: Si, è possibile accedere al finanziamento previsto dal presente Avviso nel caso in cui l'attuazione dei servizi digitali (app IO) sia stata realizzata a decorrere dal 01 Aprile 2021, con risorse finanziarie proprie.
       - title: È possibile accedere al finanziamento in caso di realizzazione del progetto, con l'ausilio di Fondi pubblici, prima della pubblicazione dell'Avviso "Adozione APP IO" della Misura 1.4.3?
-        content: No, non è possibile accedere al finanziamento previsto dall'Avviso riferito alla Misura 1.4.3 nel caso in cui l'attuazione degli stessi servizi digitali (AppIO) sia stata realizzata con altri finanziamenti pubblici, nazionali, regionali o europei, secondo quanto previsto dall'art. 7 dell'Avviso. Può essere invece finanziata l'attivazione di nuovi servizi, non inclusi nel precedente finanziamento.
+        content: No, non è possibile accedere al finanziamento previsto dall'Avviso riferito alla Misura 1.4.3 nel caso in cui l'attuazione degli stessi servizi digitali (app IO) sia stata realizzata con altri finanziamenti pubblici, nazionali, regionali o europei, secondo quanto previsto dall'art. 7 dell'Avviso. Può essere invece finanziata l'attivazione di nuovi servizi, non inclusi nel precedente finanziamento.
       - title: Entro quando è possibile inoltrare la domanda di accesso al finanziamento?
         content: La domanda di partecipazione può essere presentata a partire dalla data di pubblicazione dell'Avviso fino ad esaurimento delle risorse disponibili, e comunque non oltre alle ore 23.59 del 2 settembre 2022.
       - title: Entro quanto tempo dovrà essere contrattualizzato il fornitore rispetto al Decreto di Finanziamento?
         content: Il fornitore dovà essere contrattualizzato al massimo entro 6 mesi (180 gg) dalla data di notifica del Decreto di Finanziamento.
       - title: Entro quando dovranno essere portate a termine le attività di migrazione e di attivazione dei servizi?
         content: Le attività di migrazione e di attivazione dei servizi dovranno essere portate a termine entro 8 mesi (240 gg), a partire dalla data di contrattualizzazione del fornitore.
-      - title: Quando il processo di migrazione e attivazione dei servizi si intende concluso con esito positivo per i servizi attivati sull’App IO?
+      - title: Quando il processo di migrazione e attivazione dei servizi si intende concluso con esito positivo per i servizi attivati sull’app IO?
         content: Il processo si riterrà concluso con esito positivo quando le richieste di pubblicazione saranno approvate dalla PagoPA S.p.A  e tutti i servizi saranno visibili in App.
   - title: misura 1.4.4
     description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
