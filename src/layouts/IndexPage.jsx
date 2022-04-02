@@ -23,7 +23,9 @@ export const IndexPage = () => {
   useEffect(() => {
     (async () => {
       try {
-        await fetch(`https://github.com/teamdigitale/padigitale2026-opendata`)
+        await fetch(
+          `https://raw.githubusercontent.com/teamdigitale/padigitale2026-opendata/main/dati/avvisi-latest.json`
+        )
           .then((res) => res.json())
           .then((data) => {
             setNewsList(data.windows);
