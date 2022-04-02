@@ -204,7 +204,7 @@ export const HeroMode = ({
             ''
           )}
         </div>
-        <HeroGraphic className="col-lg-5 col-12 d-flex mt-5 mt-lg-0 justify-content-sm-center justify-content-lg-end hero-graphic-img">
+        <HeroGraphic className="col-lg-4 col-12 d-flex mt-5 mt-lg-0 justify-content-sm-center justify-content-lg-end hero-graphic-img">
           <img className="graphic-image" src={imageUrl} alt={imageAlt} />
         </HeroGraphic>
       </div>

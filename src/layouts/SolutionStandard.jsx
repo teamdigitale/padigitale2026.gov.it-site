@@ -32,7 +32,7 @@ const useStyles = createUseStyles({
   },
   breadcrumbItemActive: {
     '& a': {
-      color: '#5B6F82',
+      color: '#656566',
       textDecoration: 'none',
       fontSize: '18px',
     },
@@ -76,7 +76,7 @@ export const SolutionStandard = () => {
                 <span className="separator"></span>
               </BreadcrumbItem>
               <BreadcrumbItem active className={classes.breadcrumbItemActive}>
-                <a href="/iniziativa/soluzioni-standard">Soluzioni standard</a>
+                <a>Soluzioni standard</a>
               </BreadcrumbItem>
             </Breadcrumb>
           </Col>
@@ -95,7 +95,7 @@ export const SolutionStandard = () => {
         category={heroMode.category}
         title={heroMode.title}
         body={heroMode.body}
-        imageUrl="/assets/Soluzioni_Standard.svg"
+        imageUrl="/assets/Presentazione_Progetti.svg"
         imageAlt=""
         firstInternal={true}
         firstButtonHref={heroMode.link}

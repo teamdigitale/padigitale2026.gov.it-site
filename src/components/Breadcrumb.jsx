@@ -20,6 +20,7 @@ const useStyles = createUseStyles({
       '&.active': {
         fontWeight: '400',
         fontSize: '18px',
+        color: '#656566',
       },
     },
   },

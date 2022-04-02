@@ -35,7 +35,7 @@ const useStyle = createUseStyles({
         alignItems: 'center',
         flexDirection: 'row',
       },
-      '@media (max-width: 767px)': {
+      '@media (max-width: 991px)': {
         alignItems: 'center',
       },
       '& a': {
@@ -61,6 +61,7 @@ const useStyle = createUseStyles({
     fontWeight: '600',
     marginTop: '2.5rem',
     display: 'block',
+    textAlign: 'center',
     '&:hover': {
       textDecoration: 'underline',
       color: '#06c',
@@ -187,7 +188,7 @@ const MainFooter = () => {
               <img src="/assets/dipartimento.svg" alt={dipartimento.label} />
             </ExternalLink>
           </div>
-          <div className="info text-lg-left">
+          <div className="info">
             <>
               <Link to="/ricevi-aggiornamenti" className={classes.seeMore}>
                 Ricevi aggiornamenti

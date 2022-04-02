@@ -18,7 +18,7 @@ sidebar:
   - sectionTitle: Supporto tecnico
     sectionId: supporto-tecnico
     sectionActive: false
-  - sectionTitle: Misura 1.4.3 pagoPa
+  - sectionTitle: Misura 1.4.3 pagoPA
     sectionId: measure-1-4-3-pagopa
     sectionActive: false
   - sectionTitle: Misura 1.4.3 app IO
@@ -153,19 +153,19 @@ questions:
         ariaLabel: Vai alla pagina di assistenza
       - title: Come posso annullare la mia iscrizione agli aggiornamenti? 
         content: Se desideri interrompere la ricezione di comunicazioni e aggiornamenti da PA digitale 2026, usa il link “Annulla iscrizione” presente nella sezione finale di ogni email.
-  - title: Misura 1.4.3 pagoPa
+  - title: Misura 1.4.3 pagoPA
     description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
     sectionId: measure-1-4-3-pagopa
     accordions:
-      - title: A quanto ammonta l'importo del finanziamento previsto dall'Avviso "Adozione pagoPa" della Misura 1.4.3?
-        content: "L’importo del finanziamento concedibile ai Comuni è individuato in un importo forfettario determinato secondo il seguente criterio:<br></br>a. per i Comuni fino a 5.000 ab.: pago PA: €607 per servizio (min.3 max 111);<br>b. per i Comuni 5.001 - 20.000 ab. pago PA: €857 per servizio (min.3 max 111);<br>c. per i Comuni 20.001 - 100.000 ab. pago PA: €1821 per servizio (min.5 max 111);<br>d. per i Comuni 100.001 - 250.000 ab. pago PA: €2747 per servizio (min.5 max 111);<br>e. per i Comuni > 250.000 ab. pago PA: €7967 per servizio (min.5 max 111)."
+      - title: A quanto ammonta l'importo del finanziamento previsto dall'Avviso "Adozione pagoPA" della Misura 1.4.3?
+        content: "L’importo del finanziamento concedibile ai Comuni è individuato in un importo forfettario determinato secondo il seguente criterio:<br></br>a. per i Comuni fino a 5.000 ab.: pagoPA: €607 per servizio (min.3 max 111);<br>b. per i Comuni 5.001 - 20.000 ab. pagoPA: €857 per servizio (min.3 max 111);<br>c. per i Comuni 20.001 - 100.000 ab. pagoPA: €1821 per servizio (min.5 max 111);<br>d. per i Comuni 100.001 - 250.000 ab. pagoPA: €2747 per servizio (min.5 max 111);<br>e. per i Comuni > 250.000 ab. pagoPA: €7967 per servizio (min.5 max 111)."
       - title: Quali enti della PA possono presentare domanda?
         content: I soggetti attuatori, ovvero coloro che possono accedere allo strumento predisposto dall'Avviso, sono i Comuni.
       - title: È possibile accedere al finanziamento in caso di realizzazione del progetto prima della pubblicazione dell'Avviso "Adozione pagoPA" della Misura 1.4.3?
         content: Si, è possibile accedere al finanziamento previsto dall'Avviso nel caso in cui l'attivazione dei servizi di incasso (pagoPA) sia stata realizzata dopo il 01 Aprile 2021 con risorse finanziarie proprie.
       - title: È possibile accedere al finanziamento in caso di realizzazione del progetto in data antecedente al 01 Aprile 2021?
-        content: No, non è possibile accedere al finanziamento previsto dall'Avviso nel caso in cui il processo di l'attuazione dei servizi di incasso(PagoPA) sia stata realizzatao prima del 01 Aprile 2021, indipendemente dai fondi/risorse utilizzati. Può essere invece finanziata l'attivazione di nuovi servizi, non inclusi nel precedente finanziamento.
-      - title: Quali interventi possono essere finanziati dall'Avviso 1.4.3 per PagoPA?
+        content: No, non è possibile accedere al finanziamento previsto dall'Avviso nel caso in cui il processo di l'attuazione dei servizi di incasso (pagoPA) sia stata realizzatao prima del 01 Aprile 2021, indipendemente dai fondi/risorse utilizzati. Può essere invece finanziata l'attivazione di nuovi servizi, non inclusi nel precedente finanziamento.
+      - title: Quali interventi possono essere finanziati dall'Avviso 1.4.3 per pagoPA?
         content: I servizi oggetto di migrazione possono essere tutti i servizi di incasso erogati da ciascun Ente facendo valere il principio della titolarità del credito, cioè, potranno essere migrati tutti i servizi di incasso gestiti direttamente dal singolo Ente e/o affidati a soggetti esterni (es. Riscossori; Unioni di Comuni; Comunità Montane) fermo restando che l’Ente mantenga la titolarità del credito vantato.
       - title: Entro quando è possibile inoltrare la domanda di accesso al finanziamento?
         content: La domanda può essere presentata a partire  dalla data di pubblicazione dell'Avviso fino ad esaurimento delle risorse disponibili, e comunque non oltre alle ore 23.59 del 2 settembre 2022.
@@ -177,9 +177,9 @@ questions:
         content: Il fornitore dovà essere contrattualizzato al massimo entro 6 mesi (180 gg) dalla data di notifica del Decreto di Finanziamento.
       - title: Entro quando dovranno essere portate a termine le attività di migrazione e di attivazione dei servizi?
         content: Le attività di migrazione e di attivazione dei servizi dovranno essere portate a termine entro 8 mesi (240 gg), a partire dalla data di contrattualizzazione del fornitore.
-      - title: Quando il processo di migrazione e attivazione dei servizi si intende concluso con esito positivo per per i servizi attivati sulla Piattaforma PagoPA?
+      - title: Quando il processo di migrazione e attivazione dei servizi si intende concluso con esito positivo per per i servizi attivati sulla Piattaforma pagoPA?
         content: Il processo di riterrà concluso quando sarà stata effettuata una transazione con esito positivo con la corretta applicazione del codice tassonomico per ogni singolo servizio incluso nel progetto.
-      - title: Cosa si intende per transazione con esito positivo per PagoPA?
+      - title: Cosa si intende per transazione con esito positivo per pagoPA?
         content: Per transazione con esito positivo si intende sia una transazione reale eseguita da un cittadino, nel caso in cui la stagionalità del singolo servizio di incasso lo consenta, oppure - in caso contrario - una transazione reale con importo di valore simbolico (es. 0,01€) ma con codice tassonomico e IUV reale, al fine di poter verificare l’effettiva e corretta integrazione del servizio di incasso in modalità end-to-end (cd. transazione di test)
       - title: Qual è il metodo di calcolo del voucher?
         content: L’importo del voucher è determinato dal prodotto dell'importo unitario dei servizi attivati (in funzione della classe di popolazione residente del Soggetto Attuatore) e il numero totale dei servizi attivati.
@@ -187,15 +187,15 @@ questions:
     description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
     sectionId: measure-1-4-3-appio
     accordions:
-      - title: "Come viene calcolato l'importo forfettario previsto dall'Avviso ''Adozione APP IO'' della Misura 1.4.3?"
+      - title: "Come viene calcolato l'importo forfettario previsto dall'Avviso ''Adozione app IO'' della Misura 1.4.3?"
         content: "L’importo del finanziamento concedibile ai Comuni è individuato in un importo forfettario determinato secondo il seguente criterio:<br></br>a. per i Comuni fino a 5.000 ab.: app IO: €243 per servizio (min.3 max 50);<br>b. per i Comuni 5.001 - 20.000 ab. app IO: €343 per servizio (min.3 max 50);<br>c. per i Comuni 20.001 - 100.000 ab. app IO: €728 per servizio (min.5 max 50);<br>d. per i Comuni 100.001 - 250.000 ab. app IO: €1.099 per servizio (min.5 max 50);<br>e. per i Comuni > 250.000 ab. app IO: €3.187 per servizio (min.5 max 50)."
       - title: Quali enti della PA possono presentare domanda?
         content: I Soggetti Attuatori, ovvero coloro che possono accedere allo strumento predisposto dall'Avviso, sono i Comuni. 
-      - title: Qual è l'obiettivo dell'Avviso "Adozione APP IO" della Misura 1.4.3?
+      - title: Qual è l'obiettivo dell'Avviso "Adozione app IO" della Misura 1.4.3?
         content: L'obiettivo del presente Avviso riferito alla Misura 1.4.3 è la migrazione e l’attivazione dei servizi digitali (app IO) seguendo una logica di “pacchetti” che identificano il numero minimo di servizi da integrare a fronte di una singola adesione all’Avviso con il fine ultimo di raggiungere una integrazione cd. full per ciascun Comune, come specificato nell'Allegato 2.
-      - title: È possibile accedere al finanziamento in caso di realizzazione del progetto prima della pubblicazione dell'Avviso "Adozione APP IO" riferito della Misura 1.4.3?
+      - title: È possibile accedere al finanziamento in caso di realizzazione del progetto prima della pubblicazione dell'Avviso "Adozione app IO" riferito della Misura 1.4.3?
         content: Si, è possibile accedere al finanziamento previsto dal presente Avviso nel caso in cui l'attuazione dei servizi digitali (app IO) sia stata realizzata a decorrere dal 01 Aprile 2021, con risorse finanziarie proprie.
-      - title: È possibile accedere al finanziamento in caso di realizzazione del progetto, con l'ausilio di Fondi pubblici, prima della pubblicazione dell'Avviso "Adozione APP IO" della Misura 1.4.3?
+      - title: È possibile accedere al finanziamento in caso di realizzazione del progetto, con l'ausilio di Fondi pubblici, prima della pubblicazione dell'Avviso "Adozione app IO" della Misura 1.4.3?
         content: No, non è possibile accedere al finanziamento previsto dall'Avviso riferito alla Misura 1.4.3 nel caso in cui l'attuazione degli stessi servizi digitali (app IO) sia stata realizzata con altri finanziamenti pubblici, nazionali, regionali o europei, secondo quanto previsto dall'art. 7 dell'Avviso. Può essere invece finanziata l'attivazione di nuovi servizi, non inclusi nel precedente finanziamento.
       - title: Entro quando è possibile inoltrare la domanda di accesso al finanziamento?
         content: La domanda di partecipazione può essere presentata a partire dalla data di pubblicazione dell'Avviso fino ad esaurimento delle risorse disponibili, e comunque non oltre alle ore 23.59 del 2 settembre 2022.
@@ -204,13 +204,13 @@ questions:
       - title: Entro quando dovranno essere portate a termine le attività di migrazione e di attivazione dei servizi?
         content: Le attività di migrazione e di attivazione dei servizi dovranno essere portate a termine entro 8 mesi (240 gg), a partire dalla data di contrattualizzazione del fornitore.
       - title: Quando il processo di migrazione e attivazione dei servizi si intende concluso con esito positivo per i servizi attivati sull’app IO?
-        content: Il processo si riterrà concluso con esito positivo quando le richieste di pubblicazione saranno approvate dalla PagoPA S.p.A  e tutti i servizi saranno visibili in App.
+        content: Il processo si riterrà concluso con esito positivo quando le richieste di pubblicazione saranno approvate dalla pagoPA S.p.A  e tutti i servizi saranno visibili in App.
   - title: Misura 1.4.4
     description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
     sectionId: measure-1-4-4
     accordions:
       - title: Qual è l'importo del finanziamento concedibile?
-        content: L'importo del finanziamento riconoscibile è pari a 14.000 euro al termine della realizzazione del progetto.
+        content: L'importo del finanziamento riconoscibile è pari a €14.000 al termine della realizzazione del progetto.
       - title: Sono previste risorse espressamente dedicate ai territori delle regioni Abruzzo, Basilicata, Campania, Calabria, Molise, Puglia, Sardegna, Sicilia?
         content: Si, l'Avviso destina il 40% delle risorse al finanziamento di Soggetti Attuatori ubicati nelle regioni Abruzzo, Basilicata, Campania, Calabria, Molise, Puglia, Sardegna, Sicilia, nel rispetto della priorità trasversale del PNRR relativa al “superamento dei divari territoriali” di cui all’art. 2 comma 6 bis del decreto- legge 31 maggio 2021 n.77, convertito in legge 29 luglio 2021, n. 108. 
       - title: Quali enti della PA possono presentare domanda?
@@ -234,9 +234,9 @@ questions:
       - title: Quando si considera raggiunto l’obiettivo di integrazione a SPID?
         content: Per SPID sarà necessario che il soggetto attuatore abbia eseguito i test tecnici di integrazione e abilitato i servizi online all’accesso tramite SPID. Farà fede la data di richiesta per il primo collaudo tecnico ad AgID il cui esito è positivo.
       - title: Link utili per tematiche tecniche su SPID
-        content: 'Domande frequenti: <br><a target="_blank" href="https://www.spid.gov.it/domande-frequenti/">https://www.spid.gov.it/domande-frequenti/</a><br><a target="_blank" href="https://helpdesk.spid.gov.it/knowledgebase.php?category=2">https://helpdesk.spid.gov.it/knowledgebase.php?category=2</a><br></br>Risorse per Sviluppatori:<br><a target="_blank" href="https://developers.italia.it/it/spid/#resourcecontent-1">https://developers.italia.it/it/spid/#resourcecontent-1</a>'
+        content: 'Domande frequenti: <br><a target="_blank" href="https://www.spid.gov.it/domande-frequenti/">https://www.spid.gov.it/domande-frequenti/</a><br><a target="_blank" href="https://helpdesk.spid.gov.it/knowledgebase.php?category=2">https://helpdesk.spid.gov.it/knowledgebase.php?category=2</a><br></br>Risorse per sviluppatori:<br><a target="_blank" href="https://developers.italia.it/it/spid/#resourcecontent-1">https://developers.italia.it/it/spid/#resourcecontent-1</a>'
       - title: Link utili per tematiche tecniche su CIE
-        content: 'Domande Frequenti: <br><a target="_blank" href="https://federazione.servizicie.interno.gov.it/faq">https://federazione.servizicie.interno.gov.it/faq</a><br></br>Risorse per sviluppatori:<br><a target="_blank" href="https://developers.italia.it/it/cie">https://developers.italia.it/it/cie</a>'
+        content: 'Domande frequenti: <br><a target="_blank" href="https://federazione.servizicie.interno.gov.it/faq">https://federazione.servizicie.interno.gov.it/faq</a><br></br>Risorse per sviluppatori:<br><a target="_blank" href="https://developers.italia.it/it/cie">https://developers.italia.it/it/cie</a>'
 
 
 noResults: Nessun risultato trovato

@@ -36,10 +36,9 @@ const useStyles = createUseStyles({
   },
   breadcrumbItemActive: {
     '& a': {
-      color: '#5B6F82',
+      color: '#656566',
       textDecoration: 'none',
       fontSize: '18px',
-      cursorPointer: 'default',
       pointerEvents: 'none',
     },
     '&::before': {
