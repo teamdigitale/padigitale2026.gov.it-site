@@ -121,6 +121,9 @@ const useStyles = createUseStyles({
     lineHeight: '1.444rem',
     color: '#06c',
   },
+  cardWrapper: {
+    textDecoration: 'none',
+  },
 });
 // const carousel = React.createRef();
 
