@@ -65,8 +65,8 @@ export const HeroVideo = () => {
         </div>
         <div className={classes.videoContainer}>
           <iframe
-            width="560"
-            height="315"
+            width="100%"
+            height="100%"
             src="https://www.youtube.com/embed/JXnRZRI5j20"
             title="YouTube video player"
             frameBorder="0"
