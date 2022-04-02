@@ -130,7 +130,10 @@ export const NoticesCarousel = ({ content, title }) => {
   const slides = records.map((element) => (
     <>
       <Card key={element.codiceBando} className={classes.heroCards} spacing noWrapper>
-        <ExternalLink>
+        <ExternalLink
+          linkTo={`https://areariservata.padigitale2026.gov.it/Pa_digitale2026_dettagli_avviso?id=${element.codiceBando}`}
+          className={classes.cardWrapper}
+        >
           <CardBody>
             <span className={classes.dueDate}>
               CANDIDATURE <span className={classes.dueDateDigit}>Fino al {element.dataFine}</span>
