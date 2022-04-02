@@ -285,9 +285,8 @@ const query = graphql`
 `;
 
 export const UpdatesPage = () => {
-  const [selectValue] = useState(false);
   const [inasmuchValue, setInasmuchValue] = useState(false);
-  const [inputValue, setInputValue] = useState(0);
+  const [inputValue, setInputValue] = useState('');
   const [enteState, setEnteState] = useState('');
   const [formValidate, setFormValidate] = useState(false);
 
@@ -461,7 +460,13 @@ export const UpdatesPage = () => {
     } else {
       setFormValidate(false);
     }
+    setListenersToSelectOptions();
+    setFocusStyleOnSelect();
   }, [enteState, inasmuchValue, inputValue]);
+
+  const onInputHandler = (e) => {
+    setInputValue(e.target.value);
+  };
 
   const {
     selectRepresent,
@@ -540,6 +545,7 @@ export const UpdatesPage = () => {
                           id="address"
                           aria-required="true"
                           data-form="true"
+                          onInput={onInputHandler}
                           autoComplete="email"
                           {...field}
                           className="mb-0"
@@ -609,6 +615,7 @@ export const UpdatesPage = () => {
                             {...field}
                             id="enteType"
                             data-form="true"
+                            onInput={onInputHandler}
                           />
                           <span className={classes.errorLabel} id="error-enteType">
                             {errors.enteType && errors.enteType.message}
@@ -645,6 +652,7 @@ export const UpdatesPage = () => {
                           aria-labelledby={errors.ente && 'error-enteName'}
                           aria-invalid={errors.ente && 'true'}
                           data-form="true"
+                          onInput={onInputHandler}
                           {...field}
                           id="enteName"
                         />
