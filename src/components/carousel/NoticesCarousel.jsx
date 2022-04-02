@@ -174,7 +174,7 @@ export const NoticesCarousel = ({ content, title }) => {
           />
           <div className="d-flex justify-content-center">
             <Link
-              to="https://collaudo-padigitale2026.cs128.force.com/padigitale2026/Pa_digitale2026_avvisi"
+              to="https://areariservata.padigitale2026.gov.it/Pa_digitale2026_avvisi"
               className="btn text-uppercase btn-primary"
             >
               scopri tutti
