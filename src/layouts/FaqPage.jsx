@@ -168,8 +168,8 @@ export const FaqPage = () => {
         const sideMenuActive = document.querySelector(`.sidebar-wrapper .list-item.active`);
         const sideMenuRefer = document.querySelector(`.sidebar-wrapper .list-item[data-id=${id}]`);
 
-        sideMenuActive.classList.remove('active');
-        sideMenuRefer.classList.add('active');
+        sideMenuActive && sideMenuActive.classList.remove('active');
+        sideMenuRefer && sideMenuRefer.classList.add('active');
       };
 
       entries.forEach((entry) => {

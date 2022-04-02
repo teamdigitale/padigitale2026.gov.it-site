@@ -92,7 +92,7 @@ externalLinks:
     ariaLabel: 'Unione Europea (Collegamento esterno - Apre su nuova scheda)'
     label: 'Unione Europea'
   accedi:
-    linkTo: https://collaudo-padigitale2026.cs128.force.com/padigitale2026/sis_SpidPage
+    linkTo: https://areariservata.padigitale2026.gov.it/sis_SpidPage
     ariaLabel: "Accedi all'area privata"
     label: 'Accedi'
   repubblica:
