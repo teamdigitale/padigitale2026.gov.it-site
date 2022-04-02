@@ -4,7 +4,6 @@ import { Row, Col, Card, CardBody, CardTitle } from 'design-react-kit';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import { DesktopSwiper } from '../DesktopSwiper';
-import { ExternalLink } from '../ExternalLink';
 
 const useStyles = createUseStyles({
   heroCards: {
@@ -121,6 +120,9 @@ const useStyles = createUseStyles({
     lineHeight: '1.444rem',
     color: '#06c',
   },
+  cardWrapper: {
+    textDecoration: 'none',
+  },
 });
 // const carousel = React.createRef();
 
@@ -130,7 +132,10 @@ export const NoticesCarousel = ({ content, title }) => {
   const slides = records.map((element) => (
     <>
       <Card key={element.codiceBando} className={classes.heroCards} spacing noWrapper>
-        <ExternalLink>
+        <Link
+          to={`https://areariservata.padigitale2026.gov.it/Pa_digitale2026_dettagli_avviso?id=${element.codiceBando}`}
+          className={classes.cardWrapper}
+        >
           <CardBody>
             <span className={classes.dueDate}>
               CANDIDATURE <span className={classes.dueDateDigit}>Fino al {element.dataFine}</span>
@@ -140,7 +145,7 @@ export const NoticesCarousel = ({ content, title }) => {
             </CardTitle>
             <p className={classes.noticeInfo}>{element.titolo}</p>
           </CardBody>
-        </ExternalLink>
+        </Link>
       </Card>
     </>
   ));
