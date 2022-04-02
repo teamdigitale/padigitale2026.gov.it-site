@@ -103,28 +103,47 @@ const useStyles = createUseStyles({
     lineHeight: '1.444rem',
     marginBottom: '1.389rem',
     color: '#5A768A',
+    '@media (max-width:991px)': {
+      fontSize: '0.875rem',
+    },
   },
   dueDate: {
     fontSize: '0.778rem',
-    fontWeight: '700',
+    fontWeight: '600',
     lineHeight: '1.444rem',
-    color: '#5A768A',
+    color: '#33485C',
+    '@media (max-width:991px)': {
+      fontSize: '1rem',
+    },
   },
   dueDateDigit: {
     fontSize: '0.833rem',
     fontWeight: '400',
+    marginLeft: '5px',
+    '@media (max-width:991px)': {
+      fontSize: '1rem',
+    },
   },
   noticeInfo: {
+    composes: 'notice-info',
     fontSize: '1.111',
-    fontWeight: '700',
+    fontWeight: '600',
     lineHeight: '1.444rem',
     color: '#06c',
+    '@media (max-width:991px)': {
+      fontSize: '1.125rem',
+    },
   },
   cardWrapper: {
     textDecoration: 'none',
+    '&:hover': {
+      textDecoration: 'none',
+      '& .notice-info': {
+        textDecoration: 'underline',
+      },
+    },
   },
 });
-// const carousel = React.createRef();
 
 export const NoticesCarousel = ({ content, title }) => {
   const classes = useStyles();
@@ -177,7 +196,7 @@ export const NoticesCarousel = ({ content, title }) => {
             title={title}
             idCarousel="notices-carousel"
           />
-          <div className="d-flex justify-content-center">
+          <div className="mt-5 d-flex justify-content-center">
             <Link
               to="https://areariservata.padigitale2026.gov.it/Pa_digitale2026_avvisi"
               className="btn text-uppercase btn-primary"

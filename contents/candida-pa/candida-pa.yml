@@ -3,23 +3,23 @@ hero:
   title: Domande frequenti
   subtitle: Esplora le risposte alle domande più frequenti o fai una ricerca per parola chiave
 sidebar:
-  - sectionTitle: 1. Cerca gli avvisi dedicati
+  - sectionTitle: 1. Cerca gli avvisi per la tua PA
     sectionId: digital-identity
     sectionActive: true
-  - sectionTitle: 2. Configura pacchetto
+  - sectionTitle: 2. Configura il pacchetto
     sectionId: select-administration
     sectionActive: false
-  - sectionTitle: 3. Verifica e invia documento
+  - sectionTitle: 3. Invia la domanda di partecipazione
     sectionId: verify-data
     sectionActive: false
-  - sectionTitle: 4. Resta sempre aggiornato
+  - sectionTitle: 4. Ricevi aggiornamenti
     sectionId: confirm-subscription
     sectionActive: false
 verticalTimeline:
   - index: 0
     title: 'Cerca gli avvisi per la tua PA'
     icon: '/assets/cerca-avvisi.svg'
-    headerParagraph: "All'interno della pagina “Gli avvisi pubblici” puoi <strong>identificare gli avvisi più idonei per la tua PA</strong>, filtrandoli in base a misura, beneficiari e stato dell'avviso."
+    headerParagraph: "All'interno della sezione “Avvisi“ puoi <strong>identificare gli avvisi più idonei per la tua PA</strong>, filtrandoli in base a misura, beneficiari e stato dell'avviso."
     sectionId: 'digital-identity'
   - index: 1
     title: 'Configura il pacchetto'
