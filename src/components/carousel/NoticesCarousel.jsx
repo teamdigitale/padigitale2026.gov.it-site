@@ -157,16 +157,20 @@ export const NoticesCarousel = ({ content, title }) => {
   };
 
   const setName = (currentName, type) => {
+    console.log(type);
     const pagoPaString = '1.4.3 pagoPA';
     const appIoString = '1.4.3 app IO';
-    switch (type) {
-      case 'PagoPA':
-        return pagoPaString;
-      case 'AppIO':
-        return appIoString;
-      case '' || null:
-        return currentName;
+    if (type) {
+      switch (type) {
+        case 'PagoPA':
+          return pagoPaString;
+        case 'AppIO':
+          return appIoString;
+        case '' || null || undefined:
+          return currentName;
+      }
     }
+    return currentName;
   };
 
   const slides = records.map((element) => (
