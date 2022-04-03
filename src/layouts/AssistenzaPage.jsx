@@ -243,6 +243,12 @@ const useStyles = createUseStyles({
   modalFooterLabel: {
     composes: 'mb-3',
     fontSize: '0.889rem',
+    '& a': {
+      textDecoration: 'none',
+      '&:hover': {
+        textDecoration: 'underline',
+      },
+    },
   },
   spinner: {
     composes: 'spinner hidden ml-3',

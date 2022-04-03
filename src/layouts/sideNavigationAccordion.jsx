@@ -197,19 +197,22 @@ export const SideNavigationAccordion = (props) => {
     linkTag.classList.add('active');
 
     if (isMobile) {
-      const sidenavBtn = document.querySelector('.sidenav button');
-      const sidenavBody = document.querySelector('.sidenav .collapse');
-      sidenavBtn.classList.remove('collapsed');
-      sidenavBtn.setAttribute('aria-expanded', 'false');
-      sidenavBody.classList.remove('show');
+      setCollapseOpen(false);
     }
 
     const section = document.querySelector(linkTag.getAttribute('href'));
-    const sectionY = section.getBoundingClientRect().top + window.pageYOffset - 60;
-    window.scrollTo({
-      top: sectionY,
-      behavior: 'smooth',
-    });
+    const sectionY = section.getBoundingClientRect().top + window.pageYOffset;
+    if (isMobile) {
+      window.scrollTo({
+        top: sectionY - 320,
+        behavior: 'smooth',
+      });
+    } else {
+      window.scrollTo({
+        top: sectionY - 60,
+        behavior: 'smooth',
+      });
+    }
   }
 
   function removeActive() {
