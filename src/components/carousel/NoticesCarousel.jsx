@@ -148,6 +148,28 @@ const useStyles = createUseStyles({
 export const NoticesCarousel = ({ content, title }) => {
   const classes = useStyles();
   const records = content;
+  const formatDate = (stringDate) => {
+    const date = new Date(stringDate);
+    return date.toLocaleDateString('it-IT');
+  };
+
+  const setName = (currentName, type) => {
+    console.log(type);
+    const pagoPaString = '1.4.3 pagoPA';
+    const appIoString = '1.4.3 app IO';
+    if (type) {
+      switch (type) {
+        case 'PagoPA':
+          return pagoPaString;
+        case 'AppIO':
+          return appIoString;
+        default:
+          return currentName;
+      }
+    }
+    return currentName;
+  };
+
   const slides = records.map((element) => (
     <>
       <Card key={element.codiceBando} className={classes.heroCards} spacing noWrapper>
@@ -157,10 +179,10 @@ export const NoticesCarousel = ({ content, title }) => {
         >
           <CardBody>
             <span className={classes.dueDate}>
-              CANDIDATURE <span className={classes.dueDateDigit}>Fino al {element.dataFine}</span>
+              SCADENZA AVVISO <span className={classes.dueDateDigit}>{formatDate(element.dataFineBando)}</span>
             </span>
             <CardTitle tag="h4" className={classes.noticeLabel}>
-              {element.nomeDellaMisura}
+              {setName(element.nomeDellaMisura, element.pagoPAappIO)}
             </CardTitle>
             <p className={classes.noticeInfo}>{element.titolo}</p>
           </CardBody>

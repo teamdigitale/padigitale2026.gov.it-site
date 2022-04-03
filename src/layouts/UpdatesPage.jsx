@@ -301,6 +301,7 @@ export const UpdatesPage = () => {
     control,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm();
 
   const classes = useStyles();
@@ -387,6 +388,7 @@ export const UpdatesPage = () => {
             titleElement.innerHTML = `${successLabels.icon} ${successLabels.title}`;
             descriptionElement.innerHTML = successLabels.description;
             announce('Inviato con successo');
+            reset(data);
             setTimeout(() => {
               notificationElement.classList.remove('show');
             }, 5000);
