@@ -566,12 +566,12 @@ export const UpdatesPage = () => {
                     control={control}
                     name="representative"
                     rules={{ required: true }}
-                    render={({ field: { onChangeSelect, value } }) => (
+                    render={({ field: { onChange, value } }) => (
                       <Select
                         value={value}
                         id="represent-select"
                         inputId="represent-select-input"
-                        onChange={onChangeSelect}
+                        onChange={onChange}
                         options={selectRepresent}
                         placeholder={selectPlaceholder}
                         aria-label={selectPlaceholder}
@@ -680,12 +680,15 @@ export const UpdatesPage = () => {
                           message: requiredLabel,
                         },
                       }}
-                      render={({ field: { onChangeSelect, value } }) => (
+                      render={({ field: { onChange, value } }) => (
                         <Select
                           value={value}
                           id="enteSelect"
                           inputId="enteSelect-input"
-                          onChange={(onChangeSelect, inQuantoHandler)}
+                          onChange={(e) => {
+                            inQuantoHandler(e);
+                            onChange(e);
+                          }}
                           options={selectInQuanto}
                           aria-describedby="mandatory-label"
                           placeholder={selectPlaceholder}
