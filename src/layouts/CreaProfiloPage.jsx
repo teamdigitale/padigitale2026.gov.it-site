@@ -133,7 +133,7 @@ const useStyles = createUseStyles({
     color: '#33485C',
     lineHeight: '1.5',
     '@media (max-width: 991px)': {
-      fontSize: '1.125rem',
+      fontSize: '1.25rem',
     },
     '@media (max-width: 767px)': {
       textAlign: 'center',

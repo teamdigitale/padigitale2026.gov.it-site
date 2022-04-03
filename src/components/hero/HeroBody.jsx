@@ -14,6 +14,9 @@ const useStyles = createUseStyles({
       textAlign: 'center',
       display: 'block',
     },
+    '@media (max-width: 991px)': {
+      fontSize: '1.25rem',
+    },
   },
 });
 
