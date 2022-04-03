@@ -18,7 +18,7 @@ sidebar:
 verticalTimeline:
   - index: 0
     title: 'Cerca gli avvisi per la tua PA'
-    icon: '/assets/cerca-avvisi.svg'
+    icon: '/assets/candida-pa-lens.svg'
     headerParagraph: "All'interno della sezione “Avvisi“ puoi <strong>identificare gli avvisi più idonei per la tua PA</strong>, filtrandoli in base a misura, beneficiari e stato dell'avviso."
     sectionId: 'digital-identity'
   - index: 1
