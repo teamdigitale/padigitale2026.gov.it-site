@@ -78,6 +78,9 @@ const useStyles = createUseStyles({
       '@media (min-width: 992px)': {
         fontSize: '1.333rem',
       },
+      '@media (max-width: 991px)': {
+        fontSize: '1.25rem',
+      },
     },
     '& .graphic-image': {
       '@media (max-width: 991px)': {

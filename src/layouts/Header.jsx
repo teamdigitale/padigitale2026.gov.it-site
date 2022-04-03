@@ -240,6 +240,9 @@ const useStyle = createUseStyles({
     '@media (min-width: 992px)': {
       display: 'none',
     },
+    '@media (min-width: 359px) and (max-width: 360px)': {
+      whiteSpace: 'nowrap',
+    },
   },
   headerLink: {
     composes: 'font-weight-semibold',
