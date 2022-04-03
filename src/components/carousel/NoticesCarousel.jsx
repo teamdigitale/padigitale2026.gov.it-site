@@ -150,10 +150,7 @@ export const NoticesCarousel = ({ content, title }) => {
   const records = content;
   const formatDate = (stringDate) => {
     const date = new Date(stringDate);
-    const year = date.getFullYear();
-    const month = ('0' + (date.getMonth() + 1)).slice(-2);
-    const dt = ('0' + date.getDate()).slice(-2);
-    return `${dt}/${month}/${year}`;
+    return date.toLocaleDateString('it-IT');
   };
 
   const setName = (currentName, type) => {
@@ -166,7 +163,7 @@ export const NoticesCarousel = ({ content, title }) => {
           return pagoPaString;
         case 'AppIO':
           return appIoString;
-        case '' || null || undefined:
+        default:
           return currentName;
       }
     }
