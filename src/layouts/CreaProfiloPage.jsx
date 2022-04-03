@@ -92,6 +92,12 @@ const useStyles = createUseStyles({
   },
   contentParagraph: {
     fontSize: '1.125rem',
+    '& a': {
+      textDecoration: 'none',
+      '&:hover': {
+        textDecoration: 'underline',
+      },
+    },
   },
   cardReadMore: {
     boxShadow: '0px 2px 20px rgba(0, 0, 0, 0.1)',
