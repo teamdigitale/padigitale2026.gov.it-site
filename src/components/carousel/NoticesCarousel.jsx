@@ -148,6 +148,13 @@ const useStyles = createUseStyles({
 export const NoticesCarousel = ({ content, title }) => {
   const classes = useStyles();
   const records = content;
+  const formatDate = (stringDate) => {
+    const date = new Date(stringDate);
+    const year = date.getFullYear();
+    const month = ('0' + (date.getMonth() + 1)).slice(-2);
+    const dt = ('0' + date.getDate()).slice(-2);
+    return `${dt}/${month}/${year}`;
+  };
   const slides = records.map((element) => (
     <>
       <Card key={element.codiceBando} className={classes.heroCards} spacing noWrapper>
@@ -157,7 +164,7 @@ export const NoticesCarousel = ({ content, title }) => {
         >
           <CardBody>
             <span className={classes.dueDate}>
-              CANDIDATURE <span className={classes.dueDateDigit}>Fino al {element.dataFine}</span>
+              SCADENZA AVVISO <span className={classes.dueDateDigit}>{formatDate(element.dataFineBando)}</span>
             </span>
             <CardTitle tag="h4" className={classes.noticeLabel}>
               {element.nomeDellaMisura}
