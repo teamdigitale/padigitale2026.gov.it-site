@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkpadigitale2026=self.webpackChunkpadigitale2026||[]).push([[857],{8637:function(e,t,n){n.r(t);var u=n(7294),a=n(5444);t.default=function(){return(0,u.useEffect)((function(){(0,a.c4)("/supporto/domande-frequenti")}),[]),u.createElement(u.Fragment,null)}}}]);
+//# sourceMappingURL=component---src-pages-supporto-faq-jsx-84ece085c532528aa057.js.map
