@@ -123,47 +123,47 @@ opportunity:
       id: centri-facili
 heroCarouselNews:
   - id: 1
+    category: Avvisi pubblici
+    title: "Parte la digitalizzazione dei Comuni con identità digitale, pagoPA e app IO"
+    description: Sulla piattaforma PA digitale 2026 i Comuni italiani possono richiedere i primi voucher economici
+    source: 'innovazione.gov.it'
+    linkTo: 'https://innovazione.gov.it/notizie/articoli/parte-la-digitalizzazione-dei-comuni-con-identita-digitale-pagopa-e-app-io/'
+   - id: 2
+    category: Eventi
+    title: "Verso #PAdigitale2026, marzo 2022"
+    description: Nuovo mese di incontri con le amministrazioni locali e il mondo della fornitura per presentare le grandi opportunità PNRR dedicate al digitale
+    source: 'innovazione.gov.it'
+    linkTo: 'https://innovazione.gov.it/notizie/articoli/verso-padigitale2026-marzo-2022/'
+   - id: 3
+    category: Novità
+    title: "Cybersicurezza e resilienza per la trasformazione digitale della PA"
+    description: Grazie al PNRR, un piano di interventi per rafforzare la resilienza cyber dell’ecosistema digitale nazionale
+    source: 'innovazione.gov.it'
+    linkTo: 'https://innovazione.gov.it/notizie/articoli/cybersicurezza-e-resilienza-per-la-trasformazione-digitale-della-pa/'    
+    - id: 4
     category: Avviso pubblico
     title: "Milano, Napoli e Roma città capofila per il progetto Mobility as a Service for Italy"
     description: Pubblicata la graduatoria dell’avviso pubblico. Nei prossimi mesi un nuovo bando per ampliare l’iniziativa
     source: 'innovazione.gov.it'
-    linkTo: 'https://innovazione.gov.it/notizie/articoli/milano-napoli-e-roma-citta-capofila-per-il-progetto-mobility-as-a-service/'
-  - id: 2
+    linkTo: 'https://innovazione.gov.it/notizie/articoli/milano-napoli-e-roma-citta-capofila-per-il-progetto-mobility-as-a-service/'   
+  - id: 5
     category: Approfondimento
     title: "Cosa servirà alle PA per partecipare agli avvisi pubblici"
     description: Come funzionerà la registrazione e di cosa avranno bisogno le amministrazioni nelle diverse fasi progettuali
     source: 'innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/articoli/pa-digitale-2026-cosa-servira-alle-pa-per-partecipare-agli-avvisi-pubblici/'
-  - id: 3
+  - id: 6
     category: Novità
     title: "La svolta digitale delle grandi amministrazioni centrali"
     description: Grazie al PNRR, un piano di interventi per ridisegnare e digitalizzare alcuni servizi fondamentali della PA
     source: 'innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/articoli/la-svolta-digitale-delle-grandi-amministrazioni-centrali/'
-  - id: 4
+  - id: 7
     category: Novità
     title: "I progetti Sportello Digitale Unico e accessibilità entrano nel vivo"
     description: AgID al lavoro su due importanti misure del PNRR sulla digitalizzazione della Pubblica amministrazione
     source: 'agid.gov.it'
     linkTo: 'https://www.agid.gov.it/it/agenzia/stampa-e-comunicazione/notizie/2022/02/21/pa-digitale-2026-i-progetti-sportello-digitale-unico-accessibilita-entrano-vivo'
-  - id: 5
-    category: Approfondimento
-    title: "Le misure per una PA protagonista della transizione digitale"
-    description: Disponibile un approfondimento sulle quattordici misure del PNRR di PA digitale 2026
-    source: 'innovazione.gov.it'
-    linkTo: 'https://innovazione.gov.it/notizie/articoli/le-misure-per-una-pa-protagonista-della-transizione-digitale/'
-  - id: 6
-    category: Novità
-    title: "Pubblicato il bando per il Polo Strategico Nazionale"
-    description: Al via la gara europea per la gestione dei servizi cloud per la Pubblica Amministrazione. Scade il 16 marzo il termine per presentare le offerte
-    source: 'innovazione.gov.it'
-    linkTo: 'https://innovazione.gov.it/notizie/articoli/pubblicato-il-bando-per-il-polo-strategico-nazionale/'
-  - id: 7
-    category: Comunicato stampa
-    title: "Anagrafe digitale: al via il cambio di residenza online"
-    description: Attiva da febbraio la prima fase di applicazione, che verrà estesa in tutta Italia
-    source: 'innovazione.gov.it'
-    linkTo: 'https://innovazione.gov.it/notizie/articoli/anagrafe-digitale-al-via-il-cambio-di-residenza-online/'
 support:
   tag: Supporto
   title: Consulta le domande frequenti o scrivici per ricevere assistenza
