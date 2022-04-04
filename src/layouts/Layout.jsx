@@ -40,6 +40,9 @@ const useStyles = createUseStyles({
       '& .grecaptcha-badge': {
         display: 'none !important',
       },
+      '&.no-scroll': {
+        overflow: 'hidden',
+      },
     },
   },
 });
