@@ -281,6 +281,9 @@ const useStyle = createUseStyles({
       backgroundColor: 'transparent',
       padding: '0',
     },
+    '@media (min-width: 359px) and (max-width: 360px)': {
+      marginLeft: 'auto',
+    },
     '&:hover': {
       '& span': {
         textDecoration: 'underline',

@@ -30,6 +30,7 @@ const useStyle = createUseStyles({
       fontSize: '18px',
     },
     '&::before': {
+      fontSize: '18px',
       fontWeight: '600',
       color: '#33485C',
     },

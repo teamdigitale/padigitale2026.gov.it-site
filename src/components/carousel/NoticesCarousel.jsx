@@ -153,23 +153,6 @@ export const NoticesCarousel = ({ content, title }) => {
     return date.toLocaleDateString('it-IT');
   };
 
-  const setName = (currentName, type) => {
-    console.log(type);
-    const pagoPaString = '1.4.3 pagoPA';
-    const appIoString = '1.4.3 app IO';
-    if (type) {
-      switch (type) {
-        case 'PagoPA':
-          return pagoPaString;
-        case 'AppIO':
-          return appIoString;
-        default:
-          return currentName;
-      }
-    }
-    return currentName;
-  };
-
   const slides = records.map((element) => (
     <>
       <Card key={element.codiceBando} className={classes.heroCards} spacing noWrapper>
@@ -182,7 +165,7 @@ export const NoticesCarousel = ({ content, title }) => {
               SCADENZA AVVISO <span className={classes.dueDateDigit}>{formatDate(element.dataFineBando)}</span>
             </span>
             <CardTitle tag="h4" className={classes.noticeLabel}>
-              {setName(element.nomeDellaMisura, element.pagoPAappIO)}
+              {element.nomeDellaMisura}
             </CardTitle>
             <p className={classes.noticeInfo}>{element.titolo}</p>
           </CardBody>
