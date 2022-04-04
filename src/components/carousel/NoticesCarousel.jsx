@@ -153,7 +153,7 @@ export const NoticesCarousel = ({ content, title }) => {
     return date.toLocaleDateString('it-IT');
   };
 
-  const setName = (currentName, type) => {
+  /* const setName = (currentName, type) => {
     const pagoPaString = '1.4.3 pagoPA';
     const appIoString = '1.4.3 app IO';
     if (type) {
@@ -167,7 +167,7 @@ export const NoticesCarousel = ({ content, title }) => {
       }
     }
     return currentName;
-  };
+  }; */
 
   const slides = records.map((element) => (
     <>
