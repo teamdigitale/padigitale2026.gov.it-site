@@ -50,7 +50,7 @@ export const IndexPage = () => {
         imageUrl="/assets/icona-home-banner.svg"
         imageAlt=""
         firstInternal={true}
-        firstButtonHref="/iniziativa"
+        firstButtonHref="/come-partecipare/crea-profilo"
         firstButtonLabel={heroMainBanner.firstButtonLabel}
         firstButtonAriaLabel={heroMainBanner.firstButtonAriaLabel}
         heroTitleId="home-hero-title"
