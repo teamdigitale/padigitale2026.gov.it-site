@@ -1,0 +1,38 @@
+name: FAQ - PA digitale 2026
+hero:
+  title: Domande frequenti
+  subtitle: Esplora le risposte alle domande più frequenti o fai una ricerca per parola chiave
+sidebar:
+  - sectionTitle: 1. Cerca gli avvisi per la tua PA
+    sectionId: digital-identity
+    sectionActive: true
+  - sectionTitle: 2. Configura il pacchetto
+    sectionId: select-administration
+    sectionActive: false
+  - sectionTitle: 3. Invia la domanda di partecipazione
+    sectionId: verify-data
+    sectionActive: false
+  - sectionTitle: 4. Ricevi aggiornamenti
+    sectionId: confirm-subscription
+    sectionActive: false
+verticalTimeline:
+  - index: 0
+    title: 'Cerca gli avvisi per la tua PA'
+    icon: '/assets/candida-pa-lens.svg'
+    headerParagraph: "All'interno della sezione “Avvisi“ puoi <strong>identificare gli avvisi più idonei per la tua PA</strong>, filtrandoli in base a misura, beneficiari e stato dell'avviso."
+    sectionId: 'digital-identity'
+  - index: 1
+    title: 'Configura il pacchetto'
+    icon: '/assets/configura-pacchetto.svg'
+    headerParagraph: 'Una volta identificato l’avviso di interesse, segui la configurazione guidata per definire il pacchetto sulla base delle esigenze della tua PA: puoi selezionare servizi e modalità implementative, e <strong>creare la domanda di partecipazione.</strong>'
+    sectionId: 'select-administration'
+  - index: 2
+    title: 'Invia la domanda di partecipazione'
+    icon: '/assets/invia-candidatura.svg'
+    headerParagraph: 'In questa fase puoi visualizzare i dettagli <strong>della domanda di partecipazione</strong> che hai creato ed effettuare eventuali modifiche. Una volta firmato digitalmente potrai <strong>inviarlo attraverso la piattaforma per completare la candidatura.</strong>'
+    sectionId: 'verify-data'
+  - index: 3
+    title: 'Ricevi aggiornamenti'
+    icon: '/assets/notifiche.svg'
+    headerParagraph: 'All’interno dell’area riservata puoi controllare lo stato della tua candidatura e ricevere le <strong>notifiche dedicate all’avanzamento della pratica digitale.</strong>'
+    sectionId: 'confirm-subscription'

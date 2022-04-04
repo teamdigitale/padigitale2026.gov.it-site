@@ -9,13 +9,13 @@ const useStyle = createUseStyles({
     backgroundColor: '#F0F6FC',
     padding: '3rem 0 3rem 0',
     '@media (min-width: 992px)': {
-      padding: '3rem 0 3rem 2.667rem'
+      padding: '3rem 0 3rem 0'
     },
     '& .text': {
       color: '#33485C',
       '& strong': {
         '& a': {
-          color: '#33485C',
+          color: '#06c',
           textDecoration: 'none',
           '&:hover': {
             textDecoration: 'underline',
@@ -35,7 +35,7 @@ export const SupportBanner = ({ text }) => {
         <section className="container px-3">
           <Row>
             <Col xs="12" lg="5" >
-              <span className="text" dangerouslySetInnerHTML={{ __html: text }}/>
+              <span className="text d-block text-center text-md-left" dangerouslySetInnerHTML={{ __html: text }}/>
             </Col>
           </Row>
         </section>

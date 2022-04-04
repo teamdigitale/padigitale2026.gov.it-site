@@ -1,3 +1,4 @@
+/* eslint-disable max-lines-per-function */
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-undef */
@@ -9,6 +10,7 @@ import faq from '../../contents/faq-page/faq.yml';
 import { SEO } from '../components/SEO';
 import seo from '../../contents/seo.yml';
 import { GlobalStateContext } from '../context/globalContext';
+import content from '../../contents/faq-page/faq.yml';
 import { SideNavigation } from './faq/SideNavigation';
 import { QuestionSection } from './faq/QuestionSection';
 import { SupportSection } from './faq/SupportSection';
@@ -34,6 +36,9 @@ const useStyles = createUseStyles({
       backgroundRepeat: 'no-repeat',
       width: '1.1rem',
       height: '1.1rem',
+    },
+    '& label': {
+      fontWeight: '400',
     },
   },
   inputWrap: {
@@ -155,8 +160,46 @@ export const FaqPage = () => {
     }
   }, [filterId, getNewQuestions, getQuestionsMobile, inputValue]);
 
+  useEffect(() => {
+    const sectionArr = document.querySelectorAll('.question-section');
+
+    const observerHandler = (entries) => {
+      const changeActive = (id) => {
+        const sideMenuActive = document.querySelector(`.sidebar-wrapper .list-item.active`);
+        const sideMenuRefer = document.querySelector(`.sidebar-wrapper .list-item[data-id=${id}]`);
+
+        sideMenuActive && sideMenuActive.classList.remove('active');
+        sideMenuRefer && sideMenuRefer.classList.add('active');
+      };
+
+      entries.forEach((entry) => {
+        if (entry.intersectionRatio > 0.6 && entry.intersectionRatio < 0.7) {
+          changeActive(entry.target.id);
+        }
+      });
+    };
+
+    const scrollHandler = () => {
+      const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: [0.6, 0.8],
+        trackVisibility: true,
+        delay: 200,
+      };
+
+      const observer = new IntersectionObserver(observerHandler, options);
+      sectionArr.forEach((section) => {
+        observer.observe(section);
+      });
+    };
+    window.addEventListener('scroll', scrollHandler);
+  }, []);
+
   const resetInput = () => {
     setInputValue('');
+    const searchInput = document.querySelector('#faq-search');
+    searchInput.value = '';
     setQuestions(faq.questions);
   };
 
@@ -166,7 +209,7 @@ export const FaqPage = () => {
       <div className="sr-only">
         <h2>{faq.name}</h2>
       </div>
-      <HeroSupport title={faq.hero.title} subtitle={faq.hero.subtitle} />
+      <HeroSupport title={faq.hero.title} subtitle={faq.hero.subtitle} isFaq={true} />
       <div className="docs py-4 py-md-5">
         <Container className="px-3">
           <h3 id="question-section" className="sr-only">
@@ -198,7 +241,12 @@ export const FaqPage = () => {
           </Row>
           <Row>
             <Col lg={3}>
-              <SideNavigation getFilter={setFilterId} activeList={questions} searchValue={inputValue} />
+              <SideNavigation
+                getFilter={setFilterId}
+                activeList={questions}
+                searchValue={inputValue}
+                list={content.sidebar}
+              />
             </Col>
             <Col
               lg={9}
@@ -230,13 +278,7 @@ export const FaqPage = () => {
           </Row>
         </Container>
       </div>
-      <SupportSection
-        supportList={faq.support.cards}
-        title={faq.support.title}
-        handleToggle={() => {
-          dispatch({ type: 'SET:TOGGLE_MODAL_MESSAGE' });
-        }}
-      />
+      <SupportSection supportList={faq.support.cards} title={faq.support.title} />
     </>
   );
 };

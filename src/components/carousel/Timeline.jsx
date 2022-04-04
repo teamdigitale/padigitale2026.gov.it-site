@@ -6,10 +6,10 @@ import { DesktopSwiper } from '../DesktopSwiper';
 
 const useStyles = createUseStyles({
   timelineSection: {
-    padding: '3.125rem 0 4.5rem 0',
+    padding: '0 0 4.5rem 0',
     overflow: 'hidden',
     '@media (min-width: 992px)': {
-      padding: '5.333rem 0 2.5rem 0',
+      padding: '0 0 2.5rem 0',
     },
     '& .swiper': {
       margin: '0 -1.111rem',
@@ -79,7 +79,6 @@ const useStyles = createUseStyles({
   },
   timelineCard: {
     marginTop: '1.875rem',
-    maxWidth: '15.278rem',
     '@media (min-width: 992px)': {
       marginTop: '1.667rem',
       maxWidth: '17.188rem',
@@ -205,10 +204,10 @@ export const Timeline = ({ content }) => {
           {content.category ? (
             <Row className="mb-5 ml-0 mr-0">
               <Col xs="12" lg="5" id="timeline-pc" className={`${classes.columnCard} offset-lg-1`}>
-                <h3 className={classes.category}>{content.category}</h3>
-                <h4 className={classes.title} id="timeline-title-pc">
+                <span className={classes.category}>{content.category}</span>
+                <h3 className={classes.title} id="timeline-title-pc">
                   {content.title}
-                </h4>
+                </h3>
               </Col>
             </Row>
           ) : (
@@ -222,6 +221,9 @@ export const Timeline = ({ content }) => {
                 slides={slides}
                 breakpoints={{
                   slidesPerView: 1,
+                  768: {
+                    slidesPerView: 2,
+                  },
                   992: {
                     slidesPerView: 3,
                   },

@@ -1,5 +1,11 @@
 name: Homepage - PA digitale 2026
 headerTitle: Dipartimento per la trasformazione digitale
+heroMainBanner:
+  title: Entra in PA digitale 2026
+  body: PA digitale 2026 è il punto di accesso alle risorse per la transizione digitale.<strong> Accedi alla piattaforma e attiva il profilo della tua PA.</strong> Scopri come candidare la tua amministrazione agli avvisi e richiedere i fondi.
+  firstButtonLabel: SCOPRI DI PIù
+  firstButtonAriaLabel: Scopri di più (Collegamento esterno - Apre su nuova scheda)
+  linkTo: https://innovazione.gov.it/dipartimento/focus/italia-digitale-2026/
 heroDigital:
   title: Italia digitale 2026
   body: Il 27% delle risorse totali del PNRR è dedicato alla crescita digitale del Paese. Italia digitale 2026 è la strategia promossa dal <strong>Ministro per l'innovazione tecnologica e la transizione digitale</strong> all’interno del PNRR
@@ -7,12 +13,18 @@ heroDigital:
   firstButtonAriaLabel: VAI AL SITO Italia digitale 2026 (Collegamento esterno - Apre su nuova scheda)
   linkTo: https://innovazione.gov.it/dipartimento/focus/italia-digitale-2026/
 heroPnrr:
-  category: COME FUNZIONA PA digitale 2026
-  title: Come accedere alle misure del PNRR
-  body: <strong>PA digitale 2026</strong> è la piattaforma per accedere alle risorse dedicate alla <strong>transizione digitale</strong> e assistere le amministrazioni nel percorso verso Italia digitale 2026
+  category: Candidature
+  title: Candida la tua PA agli avvisi dedicati
+  body: Partecipa agli avvisi <strong>per richiedere i finanziamenti</strong> e avviare il processo di transizione digitale.
   firstButtonLabel: SCOPRI DI PIÙ
-  firstButtonAriaLabel: Scopri di più su come accedere alle opportunità del PNRR
-  secondButtonLabel: VEDI I BENEFICIARI
+  firstButtonAriaLabel: Scopri di più (Collegamento esterno - Apre su nuova scheda)
+  link: /come-partecipare/candida-pa
+heroClassificazione:
+  category: Classificazione
+  title: Classificazione dati e servizi
+  body: La classificazione dati e servizi digitali <strong>deve essere effettuata da tutte le PA</strong> ed è <strong>necessaria per avviare il processo di migrazione al cloud.</strong>
+  firstButtonLabel: SCOPRI DI PIÙ
+  firstButtonAriaLabel: Scopri di più (Collegamento esterno - Apre su nuova scheda)
 heroContribute:
   category: Come contribuire
   title: Partecipa al cambiamento, contribuisci a Identità Digitale!
@@ -37,6 +49,33 @@ contributions:
     alt: GitHub logo
     title: GitHub
 heroCarouselNewsTitle: Notizie e aggiornamenti
+noticesCarouselTitle: Avvisi pubblici
+noticesCarouselArchive:
+- dataFine: '2022-02-28'
+  titolo: Comuni capoluogo di Città metropolitane hanno presentato progetti
+  codiceBando: a015t0000029a6uAAA
+  dataInizio: '2022-02-07'
+  nomeDellaMisura: 1.2 Abilitazione e facilitazione migrazione al Cloud
+- dataFine: '2022-02-28'
+  titolo: Test report
+  codiceBando: a017Y00000QN2NjQAL
+  dataInizio: '2022-02-22'
+  nomeDellaMisura: 1.4.4 Adozione identità digitale
+- dataFine: '2022-02-28'
+  titolo: 1.4.3 Adozione pagoPA e AppIO
+  codiceBando: a015t0000028X0CAAU
+  dataInizio: '2022-02-23'
+  nomeDellaMisura: Test report
+- dataFine: '2022-02-28'
+  Titolo: SDM
+  codiceBando: a017Y00000QN8zlQAD
+  dataInizio: '2022-02-19'
+  nomeDellaMisura: 1.2 Abilitazione e facilitazione migrazione al Cloud
+- dataFine: '2022-03-08'
+  titolo: Avviso 3
+  codiceBando: a015t0000029bipAAA
+  dataInizio: '2022-02-08'
+  nomeDellaMisura: 1.2 Abilitazione e facilitazione migrazione al Cloud
 opportunity: 
   title: Le misure
   cards: 
@@ -59,7 +98,7 @@ opportunity:
       title: Accessibilità
       id: access
     - number: 1.4.3
-      title: Adozione PagoPA e app IO
+      title: Adozione pagoPA e app IO
       id: adoz-pago
     - number: 1.4.4
       title: Adozione identità digitale
@@ -87,61 +126,55 @@ heroCarouselNews:
     category: Avviso pubblico
     title: "Milano, Napoli e Roma città capofila per il progetto Mobility as a Service for Italy"
     description: Pubblicata la graduatoria dell’avviso pubblico. Nei prossimi mesi un nuovo bando per ampliare l’iniziativa
-    source: 'Fonte: innovazione.gov.it'
+    source: 'innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/articoli/milano-napoli-e-roma-citta-capofila-per-il-progetto-mobility-as-a-service/'
   - id: 2
     category: Approfondimento
     title: "Cosa servirà alle PA per partecipare agli avvisi pubblici"
     description: Come funzionerà la registrazione e di cosa avranno bisogno le amministrazioni nelle diverse fasi progettuali
-    source: 'Fonte: innovazione.gov.it'
+    source: 'innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/articoli/pa-digitale-2026-cosa-servira-alle-pa-per-partecipare-agli-avvisi-pubblici/'
   - id: 3
     category: Novità
     title: "La svolta digitale delle grandi amministrazioni centrali"
     description: Grazie al PNRR, un piano di interventi per ridisegnare e digitalizzare alcuni servizi fondamentali della PA
-    source: 'Fonte: innovazione.gov.it'
+    source: 'innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/articoli/la-svolta-digitale-delle-grandi-amministrazioni-centrali/'
   - id: 4
     category: Novità
     title: "I progetti Sportello Digitale Unico e accessibilità entrano nel vivo"
     description: AgID al lavoro su due importanti misure del PNRR sulla digitalizzazione della Pubblica amministrazione
-    source: 'Fonte: agid.gov.it'
+    source: 'agid.gov.it'
     linkTo: 'https://www.agid.gov.it/it/agenzia/stampa-e-comunicazione/notizie/2022/02/21/pa-digitale-2026-i-progetti-sportello-digitale-unico-accessibilita-entrano-vivo'
   - id: 5
     category: Approfondimento
     title: "Le misure per una PA protagonista della transizione digitale"
     description: Disponibile un approfondimento sulle quattordici misure del PNRR di PA digitale 2026
-    source: 'Fonte: innovazione.gov.it'
+    source: 'innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/articoli/le-misure-per-una-pa-protagonista-della-transizione-digitale/'
   - id: 6
     category: Novità
     title: "Pubblicato il bando per il Polo Strategico Nazionale"
     description: Al via la gara europea per la gestione dei servizi cloud per la Pubblica Amministrazione. Scade il 16 marzo il termine per presentare le offerte
-    source: 'Fonte: innovazione.gov.it'
+    source: 'innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/articoli/pubblicato-il-bando-per-il-polo-strategico-nazionale/'
   - id: 7
     category: Comunicato stampa
     title: "Anagrafe digitale: al via il cambio di residenza online"
     description: Attiva da febbraio la prima fase di applicazione, che verrà estesa in tutta Italia
-    source: 'Fonte: innovazione.gov.it'
+    source: 'innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/articoli/anagrafe-digitale-al-via-il-cambio-di-residenza-online/'
-  - id: 8
-    category: Avvis pubblico
-    title: "Servizio civile digitale: al via il nuovo Avviso per gli enti"
-    description: Il servizio civile digitale espande il suo bacino di intervento con la pubblicazione del nuovo avviso per gli Enti
-    source: 'Fonte: innovazione.gov.it'
-    linkTo: 'https://innovazione.gov.it/notizie/articoli/servizio-civile-digitale-al-via-il-nuovo-avviso-per-gli-enti/'
 support:
   tag: Supporto
-  title: Scrivici per chiarimenti o per contribuire con le tue idee al progetto
+  title: Consulta le domande frequenti o scrivici per ricevere assistenza
   buttonLabel: scopri di più
   cards:
     - title: Domande frequenti
-      description: Scopri i dettagli dell’iniziativa e le informazioni chiave sulle opportunità del PNRR
-      isModal: false
-    - title: Contatti
-      description: Compila il modulo per inviarci i tuoi suggerimenti o per avere chiarimenti sull’iniziativa
-      isModal: true
+      description: Scopri i dettagli dell’iniziativa e consulta le risposte alle domande più frequenti.
+      link: /supporto/domande-frequenti
+    - title: Assistenza
+      description: Compila il modulo per richiedere chiarimenti e approfondire temi di interesse.
+      link: /supporto/assistenza
 heroMain:
   category: 'le misure del pnrr'
   title: Il punto di accesso alle risorse per la transizione digitale della PA
@@ -162,7 +195,7 @@ homeCarousel:
     imageMobile: 'home-carousel-mobile-2.svg'
     button: 'scopri di più'
     buttonAriaLabel: 'Scopri di più su domande frequenti e contatti'
-    linkTo: '/come-funziona'
+    linkTo: '/iniziativa'
   - id: 3
     title: Fase 3, avviare i progetti
     description: 'Dall’<strong>estate del 2022</strong> le amministrazioni potranno <strong>avviare i primi progetti</strong>: un team dedicato fornirà alle PA assistenza tecnica nell’implementazione delle iniziative; un sistema di rendicontazione online organizzato per obiettivi semplificherà il percorso delle amministrazioni.'
@@ -170,4 +203,4 @@ homeCarousel:
     imageMobile: 'home-carousel-mobile-3.svg'
     button: 'scopri di più'
     buttonAriaLabel: 'Scopri di più su domande frequenti e contatti'
-    linkTo: '/come-funziona'
+    linkTo: '/iniziativa'

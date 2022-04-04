@@ -80,21 +80,52 @@ const useStyle = createUseStyles({
     },
   },
   topListLink: {
-    composes: 'border-0 p-0 mr-0',
+    composes: 'border-0 p-0 mr-0 my-0',
+    '& .list-item': {
+      display: 'inline-flex',
+      alignItems: 'center',
+      padding: '5px 24px',
+      '@media (max-width: 991px)': {
+        padding: '5px 0',
+      },
+    },
+    '& .list-item-link': {
+      display: 'inline-flex',
+      padding: '0',
+      alignItems: 'center',
+      '& img': {
+        maxHeight: '32px',
+        '&.eu-logo': {
+          marginLeft: '32px',
+        },
+        '&.user-logo': {
+          maxHeight: '24px',
+          marginRight: '10px',
+        },
+      },
+    },
   },
   headerCenterWrapper: {
     height: 'auto',
     padding: [16, 0],
     '& .it-header-center-content-wrapper .it-brand-wrapper a .icon': {
       '&.site-logo': {
-        width: '3rem',
-        height: '3rem',
+        width: '60px',
+        height: '60px',
       },
       '&.repubblica-logo': {
         width: '3.556rem',
         height: '4rem',
+        marginRight: '15px',
       },
     },
+    '&.it-header-center-wrapper .it-header-center-content-wrapper': {
+      alignItems: 'flex-start',
+    },
+  },
+  headerCenter: {
+    display: 'flex',
+    flexDirection: 'column',
   },
   offCanvasWrapper: {
     padding: [13, 24],
@@ -102,23 +133,18 @@ const useStyle = createUseStyles({
     alignItems: 'center',
     marginBottom: 16,
     position: 'relative',
-    '&:before': {
-      content: '""',
-      position: 'absolute',
-      left: '24px',
-      bottom: '0',
-      width: '65px',
-      height: '1px',
-      backgroundColor: '#0066CC',
-    },
     '@media (min-width: 992px)': {
       display: 'none',
     },
   },
   offCanvasTitle: {
-    marginLeft: 8,
     textDecoration: 'none',
     fontWeight: '700',
+    '& .icon': {
+      marginRight: '15px',
+      width: '39px',
+      height: '39px',
+    },
   },
   navbarNav: {
     width: '100%',
@@ -148,6 +174,9 @@ const useStyle = createUseStyles({
         boxShadow: 'none',
       },
     },
+    '& .nav-item.r-nav': {
+      marginLeft: 'auto',
+    },
   },
   linkListWrapperCustom: {
     '& ul li:not(:first-child)': {
@@ -158,7 +187,7 @@ const useStyle = createUseStyles({
   },
   noShadow: {
     composes: 'shadow-none',
-    top: '30%',
+    top: '27%',
   },
   menuWrapper: {
     composes: 'menu-wrapper',
@@ -197,6 +226,11 @@ const useStyle = createUseStyles({
     padding: '0',
     backgroundColor: 'transparent',
     boxShadow: 'none',
+    display: 'flex',
+    alignItems: 'center',
+    '& a': {
+      paddingRight: '5px',
+    },
     '&:focus, &:hover': {
       color: '#0066CC',
       backgroundColor: 'transparent',
@@ -206,10 +240,93 @@ const useStyle = createUseStyles({
     '@media (min-width: 992px)': {
       display: 'none',
     },
+    '@media (min-width: 359px) and (max-width: 360px)': {
+      whiteSpace: 'nowrap',
+    },
   },
   headerLink: {
-    composes: 'font-weight-bold',
+    composes: 'font-weight-semibold',
     cursor: 'pointer',
+  },
+  mainHeader: {
+    boxShadow: '0 20px 30px 5px rgb(0 0 0 / 5%)',
+    '& .it-header-slim-wrapper-content': {
+      padding: '0',
+    },
+    '& .it-header-center-content-wrapper': {
+      padding: '0',
+    },
+    '& .it-header-wrapper .it-nav-wrapper .it-header-navbar-wrapper': {
+      top: '27%',
+    },
+    '& .it-header-slim-wrapper': {
+      '@media (max-width: 991px)': {
+        padding: '10px 0',
+      },
+    },
+    '& .it-header-slim-wrapper .it-header-slim-wrapper-content': {
+      '@media (max-width: 991px)': {
+        alignItems: 'flex-start',
+      },
+    },
+  },
+  login: {
+    marginLeft: '1.38rem',
+    backgroundColor: '#0066CC',
+    display: 'flex',
+    alignItems: 'center',
+    padding: '0 1.38rem',
+    height: '100%',
+    '@media (max-width: 992px)': {
+      backgroundColor: 'transparent',
+      padding: '0',
+    },
+    '@media (min-width: 359px) and (max-width: 360px)': {
+      marginLeft: 'auto',
+    },
+    '&:hover': {
+      '& span': {
+        textDecoration: 'underline',
+      },
+    },
+    '& img': {
+      marginRight: '0.555rem',
+      '&.mobile': {
+        display: 'none',
+        marginTop: '5px',
+        height: '24px',
+      },
+      '@media (max-width: 992px)': {
+        display: 'none',
+        margin: '0',
+        '&.mobile': {
+          display: 'block',
+        },
+      },
+    },
+    '& span': {
+      fontSize: '1rem',
+      fontWeight: 'bold',
+      lineHeight: '1.3',
+      color: '#fff',
+      '@media (max-width: 992px)': {
+        display: 'none',
+      },
+    },
+  },
+  headerLabel: {
+    composes: 'd-inline-flex flex-column font-weight-bold mt-15 d-lg-none',
+    marginTop: '15px',
+    '& .title-link': {
+      color: '#06c',
+      fontSize: '1.22222rem',
+      lineHeight: '1.25',
+    },
+    '& .subtitle-link': {
+      color: '#06c',
+      fontSize: '1.11111rem',
+      fontWeight: '400',
+    },
   },
 });
 
@@ -222,7 +339,7 @@ const SlimHeader = () => {
   };
   return (
     <HeaderReactKit type="slim" theme="light">
-      <HeaderContent>
+      <HeaderContent className="px-2">
         <HeaderBrand
           href="https://innovazione.gov.it/"
           target="_blank"
@@ -283,6 +400,11 @@ const SlimHeader = () => {
         >
           <img className="d-none d-lg-block" src="/assets/eu-flag.svg" alt={externalLinks.eu.label}></img>
         </ExternalLink>
+        <Link className={classes.login} to={externalLinks.accedi.linkTo} aria-label={externalLinks.accedi.ariaLabel}>
+          <img src="/assets/user-icon.svg" alt={externalLinks.eu.label}></img>
+          <img className="mobile" src="/assets/user-icon-dark.svg" alt={externalLinks.eu.label}></img>
+          <span>{externalLinks.accedi.label}</span>
+        </Link>
       </HeaderContent>
     </HeaderReactKit>
   );
@@ -292,9 +414,9 @@ const CenterHeader = () => {
   const classes = useStyle();
   return (
     <HeaderReactKit type="center" theme="light" className={classes.headerCenterWrapper}>
-      <HeaderContent>
+      <HeaderContent className={`${classes.headerCenter} px-2`}>
         <div className="it-brand-wrapper pl-5 pl-sm-0">
-          <Link to="/">
+          <Link to="/" aria-label="Vai alla home page del sito pubblico di PA digitale 2026">
             <div className="it-brand-text pr-0">
               <div className="d-md-flex align-items-center">
                 <img className="icon repubblica-logo" src="/assets/repubblica-logo-blue.svg" alt="" />
@@ -307,13 +429,17 @@ const CenterHeader = () => {
             </div>
           </Link>
         </div>
+        <div className={classes.headerLabel} aria-label="PA digitale 2026">
+          <span className="title-link">PA digitale 2026</span>
+          <span className="subtitle-link">Le risorse per una PA protagonista della transizione digitale</span>
+        </div>
       </HeaderContent>
     </HeaderReactKit>
   );
 };
 
 const NavHeader = () => {
-  const [{ activeItem }, dispatch] = useContext(GlobalStateContext);
+  const [{ activeItem }] = useContext(GlobalStateContext);
   const [isOpen, setIsOpen] = useState(false);
   const closeMenu = () => setIsOpen(false);
   const toogleMenu = () => setIsOpen(!isOpen);
@@ -354,6 +480,15 @@ const NavHeader = () => {
               </li>
               <NavItem active>
                 <Link
+                  to={internalLinks.initiative.linkTo}
+                  className={activeItem === 'iniziativa' ? 'nav-link active' : 'nav-link'}
+                  onClick={closeMenu}
+                >
+                  <span className="font-weight-semibold">{internalLinks.initiative.label}</span>
+                </Link>
+              </NavItem>
+              <NavItem active>
+                <Link
                   to={internalLinks.opportunity.linkTo}
                   className={activeItem === 'misure' ? 'nav-link active' : 'nav-link'}
                   onClick={closeMenu}
@@ -361,16 +496,21 @@ const NavHeader = () => {
                   <span className="font-weight-semibold">{internalLinks.opportunity.label}</span>
                 </Link>
               </NavItem>
-              <NavItem>
-                <Link
-                  to={internalLinks.howitworks.linkTo}
-                  className={activeItem === 'come-funziona' ? 'nav-link active' : 'nav-link'}
-                  onClick={closeMenu}
-                >
-                  <span className="font-weight-semibold">{internalLinks.howitworks.label}</span>
+              <NavItem active>
+                <Link to="https://areariservata.padigitale2026.gov.it/Pa_digitale2026_avvisi" className="nav-link">
+                  <span className="font-weight-semibold">Avvisi</span>
                 </Link>
               </NavItem>
               <NavItem>
+                <Link
+                  to={internalLinks.howToPartecipate.linkTo}
+                  className={activeItem === 'come-partecipare' ? 'nav-link active' : 'nav-link'}
+                  onClick={closeMenu}
+                >
+                  <span className="font-weight-semibold">{internalLinks.howToPartecipate.label}</span>
+                </Link>
+              </NavItem>
+              <NavItem className={classes.updatesBtn}>
                 <Link
                   to={internalLinks.support.linkTo}
                   className={activeItem === 'supporto' ? 'nav-link active' : 'nav-link'}
@@ -378,18 +518,6 @@ const NavHeader = () => {
                 >
                   <span className="font-weight-semibold">{internalLinks.support.label}</span>
                 </Link>
-              </NavItem>
-              <NavItem className={classes.updatesBtn} active>
-                <Button
-                  aria-label="Ricevi aggiornamenti (Apri modale e compila il modulo)"
-                  className="nav-link modal-button"
-                  onClick={() => {
-                    closeMenu();
-                    dispatch({ type: 'SET:TOGGLE_MODAL' });
-                  }}
-                >
-                  <span className="font-weight-semibold">{internalLinks.updates.label}</span>
-                </Button>
               </NavItem>
             </Nav>
           </div>
@@ -399,17 +527,21 @@ const NavHeader = () => {
   );
 };
 
-export const Header = (props) => (
-  <header id="mainTop">
-    <Headers>
-      <SlimHeader />
-      <div className="it-nav-wrapper">
-        <CenterHeader />
-        <NavHeader toggleModal={props.toggleModal} />
-      </div>
-    </Headers>
-  </header>
-);
+export const Header = (props) => {
+  const classes = useStyle();
+
+  return (
+    <header id="mainTop" className={classes.mainHeader}>
+      <Headers>
+        <SlimHeader />
+        <div className="it-nav-wrapper">
+          <CenterHeader />
+          <NavHeader toggleModal={props.toggleModal} />
+        </div>
+      </Headers>
+    </header>
+  );
+};
 
 Header.propTypes = {
   toggleModal: PropTypes.func,

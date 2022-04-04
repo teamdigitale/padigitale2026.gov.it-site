@@ -6,12 +6,17 @@ import { Link } from 'gatsby';
 
 const useStyles = createUseStyles({
   layout: {
-    composes: 'offset-lg-1 px-3',
+    composes: 'offset-lg-1 pl-0',
     '& a': {
       '&:focus': {
         // eslint-disable-next-line sonarjs/no-duplicate-string
         outline: '2px solid #ff9900',
         boxShadow: 'none',
+      },
+    },
+    '& .btn': {
+      '@media (max-width: 767px)': {
+        width: '100%',
       },
     },
   },
@@ -78,7 +83,7 @@ const useStyles = createUseStyles({
     cursor: 'pointer',
     '&:hover': {
       '&.card.card-teaser': {
-        '& h5.card-title': {
+        '& .card-title': {
           textDecoration: 'underline',
         },
       },
@@ -90,7 +95,7 @@ const useStyles = createUseStyles({
       marginTop: '0.888rem',
     },
     '&.card.card-teaser': {
-      '& h5.card-title': {
+      '& h3.card-title': {
         color: '#0066CC',
         fontSize: '1.555rem',
         fontWeight: '600',
@@ -105,18 +110,22 @@ const useStyles = createUseStyles({
       },
     },
   },
+  sectionMuted: {
+    background: '#f2f7fc',
+    padding: '5.556rem 0',
+  },
 });
 
 export const SupportSection = (props) => {
   const classes = useStyles();
-  const { title, supportList, buttonLabel, handleToggle } = props;
+  const { title, supportList, buttonLabel } = props;
   return (
     <>
-      <section className="section section-muted" aria-labelledby="support-section">
+      <section className={classes.sectionMuted} aria-labelledby="support-section">
         <h3 id="support-section" className="sr-only">
           Supporto
         </h3>
-        <div className="container">
+        <div className="container px-3">
           <Row>
             <Col md={8} lg={6} className={classes.layout}>
               <p className={classes.tag}>Supporto</p>
@@ -128,35 +137,18 @@ export const SupportSection = (props) => {
               <Row>
                 {supportList.map((card) => (
                   <Col key={card.title} md={5} lg={4} xl={3} className={classes.colCard}>
-                    {card.isModal ? (
-                      <div
-                        role="button"
-                        tabIndex="0"
-                        onKeyPress={handleToggle}
-                        onClick={handleToggle}
-                        className={classes.resetButton}
-                      >
+                    {
+                      <Link to={card.link} className={classes.cleanLink}>
                         <Card teaser noWrapper className={classes.cardWrapper}>
                           <CardBody>
-                            <CardTitle tag="h5" className={classes.cardTitle}>
-                              {card.title}
-                            </CardTitle>
-                            <CardText className={classes.cardText}>{card.description}</CardText>
-                          </CardBody>
-                        </Card>
-                      </div>
-                    ) : (
-                      <Link to="/supporto/faq" className={classes.cleanLink}>
-                        <Card teaser noWrapper className={classes.cardWrapper}>
-                          <CardBody>
-                            <CardTitle tag="h5" className={classes.cardTitle}>
+                            <CardTitle tag="h3" className={classes.cardTitle}>
                               {card.title}
                             </CardTitle>
                             <CardText className={classes.cardText}>{card.description}</CardText>
                           </CardBody>
                         </Card>
                       </Link>
-                    )}
+                    }
                   </Col>
                 ))}
               </Row>
@@ -168,7 +160,7 @@ export const SupportSection = (props) => {
                 <Link
                   to="/supporto"
                   className="btn btn-primary text-uppercase"
-                  aria-label="Scopri di più sulla pagina supporto"
+                  aria-label="Scopri di più su come avere supporto"
                 >
                   {buttonLabel}
                 </Link>
@@ -185,5 +177,4 @@ SupportSection.propTypes = {
   title: PropTypes.string,
   supportList: PropTypes.array,
   buttonLabel: PropTypes.string,
-  handleToggle: PropTypes.func,
 };

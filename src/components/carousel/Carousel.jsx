@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/no-duplicate-string */
 import React from 'react';
 import { createUseStyles } from 'react-jss';
 import { Row, Col, Card, CardBody, CardTitle, CardText } from 'design-react-kit';
@@ -26,9 +27,9 @@ const useStyles = createUseStyles({
         textTransform: 'uppercase',
       },
       '& h4.card-title': {
-        color: '#0066CC',
+        color: '#33485C',
         fontSize: '1.125rem',
-        fontWeight: 'bold',
+        fontWeight: '600',
         lineHeight: '1.26',
         '@media (min-width: 992px)': {
           minHeight: '2.889rem',
@@ -70,16 +71,17 @@ const useStyles = createUseStyles({
     },
   },
   heroCarouselTitle: {
-    color: '#fff',
+    color: '#33485C',
     fontSize: '1.556rem',
+    fontWeight: '600',
     whiteSpace: 'nowrap',
-    backgroundColor: '#0066CC',
   },
   newsUpdateSection: {
     backgroundColor: '#fff',
-    padding: '1.111rem 0 4rem',
+    padding: '5.556rem 0',
     '& .swiper': {
       margin: '0 -1.111rem',
+      paddingTop: '20px',
       '@media (max-width: 992px)': {
         margin: '0',
       },
@@ -101,6 +103,34 @@ const useStyles = createUseStyles({
   heroLink: {
     textDecoration: 'none',
     marginTop: 'auto',
+    display: 'inline-flex',
+    marginLeft: '5px',
+  },
+  titleLink: {
+    fontSize: '1rem',
+    color: '#06c',
+    fontWeight: '600',
+    textDecoration: 'none',
+    '&:hover': {
+      color: '#06c',
+      textDecoration: 'underline',
+    },
+    '& .source': {
+      display: 'inline-flex',
+      alignItems: 'center',
+      '@media (max-width: 992px)': {
+        marginTop: '0.5rem',
+      },
+    },
+    '& img': {
+      marginLeft: '0.5rem',
+    },
+  },
+  titleCardLink: {
+    textDecoration: 'none',
+    '&:hover': {
+      color: '#06c',
+    },
   },
 });
 // const carousel = React.createRef();
@@ -113,19 +143,22 @@ export const HeroCarousel = ({ content, title }) => {
       <Card key={element.id} className={classes.heroCards} spacing noWrapper>
         <CardBody>
           <span className="category">{element.category}</span>
-          <CardTitle tag="h4">{element.title}</CardTitle>
+          <div className={classes.titleCardLink}>
+            <CardTitle tag="h4">{element.title}</CardTitle>
+          </div>
           <CardText>{element.description}</CardText>
-          <ExternalLink
-            linkTo={element.linkTo}
-            alt=""
-            className={classes.heroLink}
-            ariaLabel={`${element.title} (Collegamento sito esterno apre su nuova scheda)`}
-          >
-            <div className="source">
+          <div className="source">
+            Fonte:
+            <ExternalLink
+              linkTo={element.linkTo}
+              alt=""
+              className={classes.heroLink}
+              ariaLabel={`${element.source} ${element.title} (Collegamento sito esterno apre su nuova scheda)`}
+            >
               {element.source}
               <img src={`/assets/external-link.svg`} alt="" />
-            </div>
-          </ExternalLink>
+            </ExternalLink>
+          </div>
         </CardBody>
       </Card>
     </>
@@ -134,13 +167,26 @@ export const HeroCarousel = ({ content, title }) => {
   return (
     <>
       <div className={classes.newsUpdateSection}>
-        <section className="container" aria-labelledby="news-home-carousel">
+        <section className="container px-3" aria-labelledby="news-home-carousel">
           {title ? (
             <Row>
-              <Col xs="12" lg="4">
+              <Col xs="12" lg="6">
                 <h3 id="news-home-carousel" className={classes.heroCarouselTitle}>
                   {title}
                 </h3>
+              </Col>
+              <Col xs="12" lg="6" className="d-lg-flex justify-content-end">
+                <ExternalLink
+                  linkTo="https://innovazione.gov.it/"
+                  alt=""
+                  className={classes.titleLink}
+                  ariaLabel={`Scopri tutto su innovazione.gov.it (Collegamento sito esterno apre su nuova scheda)`}
+                >
+                  <div className="source">
+                    Scopri tutto su innovazione.gov.it
+                    <img src={`/assets/external-link.svg`} alt="" />
+                  </div>
+                </ExternalLink>
               </Col>
             </Row>
           ) : (
@@ -156,7 +202,7 @@ export const HeroCarousel = ({ content, title }) => {
             }}
             pagination
             title={title}
-            id="news-carousel"
+            idCarousel="news-carousel"
           />
         </section>
       </div>

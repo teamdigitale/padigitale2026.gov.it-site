@@ -3,21 +3,24 @@ mainHero:
   title: Hai bisogno di chiarimenti o supporto?
   description: Consulta le <strong>le domande frequenti</strong> o <strong>scrivici</strong> per ricevere una risposta via email
 faqSection:
-  buttonLink: '/supporto/faq'
+  buttonLink: '/supporto/domande-frequenti'
   buttonLabel: Vai alle domande frequenti
   faqPreviewCards:
     - id: 1
-      title: Cos'è Next Generation EU?
-      text: Next Generation EU (NGEU) è un piano Next da €750 miliardi di Euro che ha l'obiettivo di rilanciare l'economia europea dopo la pandemia di COVID-19 e di renderla più verde e digitale.
+      title: Chi può accedere a PA digitale 2026?
+      text: Il rappresentante legale dell'amministrazione, o una persona incaricata ad agire per suo conto, può accedere con SPID/CIE alla piattaforma. Durante la procedura di primo accesso alla piattaforma, è necessario selezionare e attivare il profilo della PA di riferimento.
       faqId: faq-1
+      ariaLabel: Vai alla faq Chi può accedere a PA digitale 2026?
     - id: 2
-      title: Cos’è Italia domani, il Piano nazionale di ripresa e resilienza (PNRR)?
-      text: Italia domani è il nome del Piano nazionale di ripresa e resilienza (PNRR) approvato dal Governo italiano il 29 aprile del 2021 all’interno del programma europeo Next Generation EU. L’Italia è la prima beneficiaria, in valore assoluto, del programma Next Generation EU, con un totale di €191,5 miliardi. Mediante un Fondo Complementare, finanziato direttamente dal bilancio dello Stato, il nostro Paese ha previsto un'integrazione di €30,6 mld. Il totale degli investimenti previsti è pertanto di €222,1 miliardi.
+      title: Quali sono i requisiti per il primo accesso a PA digitale 2026?
+      text: Per accedere alla piattaforma è necessario disporre della propria identità digitale (SPID o CIE) e della propria email istituzionale. Il rappresentante legale dell'amministrazione (o chi opera per suo conto) deve inoltre avere la possibilità di consultare la PEC dell'amministrazione per la quale intende operare.
       faqId: faq-2
+      ariaLabel: Vai alla faq Quali sono i requisiti per il primo accesso a PA digitale 2026?
     - id: 3
-      title: Chi può accedere alle risorse di Italia digitale 2026?
-      text: Il ruolo della PA, soprattutto quella locale, è centrale nell’implementazione di Italia digitale 2026. Le risorse a disposizione servono per permettere alle diverse amministrazioni di partecipare in prima persona al percorso di transizione digitale del Paese.
+      title: È possibile accedere alla piattaforma anche quando non si ricopre il ruolo di rappresentante legale dell'amministrazione?
+      text: Si. Nel caso in cui a effettuare l'accesso non sia direttamente il rappresentante legale ma una persona da lui incaricata, è presente una casella da spuntare per dichiarare di stare agendo per conto del rappresentante legale dell'amministrazione. Alla fine della procedura di primo accesso, il rappresentante legale della PA riceve una PEC con cui viene a informato del fatto che la persona incaricata ha agito per suo conto su PA digitale 2026. 
       faqId: faq-3
+      ariaLabel: Vai alla faq È possibile accedere alla piattaforma anche quando non si ricopre il ruolo di rappresentante legale dell'amministrazione?
 heroAssistance:
   title: Richiedi assistenza
   body: 'Se non hai trovato le informazioni che cercavi fra le domande frequenti, <strong>scrivici</strong>: ti risponderemo al più presto'

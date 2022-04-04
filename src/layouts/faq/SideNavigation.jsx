@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 import { createUseStyles } from 'react-jss';
 import { useState } from 'react';
 import { useEffect } from 'react';
-import content from '../../../contents/faq-page/faq.yml';
 
 const useStyles = createUseStyles({
   wrapper: {
@@ -55,7 +54,7 @@ const useStyles = createUseStyles({
                 padding: '0.111rem 0.555rem',
                 borderRadius: '0.888rem',
                 whiteSpace: 'nowrap',
-                border: '1px solid #0073E6',
+                border: '1px solid #06c',
                 '&.disabled': {
                   color: '#DAE3EC',
                   border: '1px solid #DAE3EC',
@@ -63,7 +62,7 @@ const useStyles = createUseStyles({
               },
               '& span': {
                 marginRight: '0',
-                color: '#0073E6',
+                color: '#06c',
                 textDecoration: 'none',
                 fontWeight: '600',
               },
@@ -98,7 +97,7 @@ export const SideNavigation = (props) => {
   const classes = useStyles();
   const [isMobile, setIsMobile] = useState();
   const itemSel = '.sidebar-wrapper .link-list .list-item';
-  const { activeList, searchValue } = props;
+  const { activeList, searchValue, list } = props;
   useEffect(() => {
     setIsMobile(window.innerWidth < 992);
     window.addEventListener('resize', () => {
@@ -114,7 +113,7 @@ export const SideNavigation = (props) => {
     } else {
       if (!isMobile) {
         removeActive();
-        setActiveLinkOnChanges(content.sidebar);
+        setActiveLinkOnChanges(list);
         removeDisabled();
       }
     }
@@ -124,9 +123,9 @@ export const SideNavigation = (props) => {
 
   function disableLinks() {
     if (searchValue && searchValue.length >= 3) {
-      const activeItems = content.sidebar.filter((el) => activeList.some((f) => f.sectionId === el.sectionId));
+      const activeItems = list.filter((el) => activeList.some((f) => f.sectionId === el.sectionId));
 
-      const disabledItems = content.sidebar.filter((ad) => activeList.every((fd) => fd.sectionId !== ad.sectionId));
+      const disabledItems = list.filter((ad) => activeList.every((fd) => fd.sectionId !== ad.sectionId));
 
       if (!isMobile) {
         removeActive();
@@ -141,7 +140,7 @@ export const SideNavigation = (props) => {
     } else {
       if (!isMobile) {
         removeActive();
-        setActiveLinkOnChanges(content.sidebar);
+        setActiveLinkOnChanges(list);
       }
       removeDisabled();
     }
@@ -207,7 +206,7 @@ export const SideNavigation = (props) => {
             </LinkListItem>
           )}
 
-          {content.sidebar.map((anchor) => (
+          {list.map((anchor) => (
             <React.Fragment key={anchor.sectionId}>
               {anchor.sectionActive ? (
                 <LinkListItem
@@ -245,4 +244,5 @@ SideNavigation.propTypes = {
   activeList: PropTypes.array,
   searchValue: PropTypes.string,
   getFilter: PropTypes.func,
+  list: PropTypes.array,
 };

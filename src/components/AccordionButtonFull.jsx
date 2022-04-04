@@ -1,9 +1,7 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Button, Collapse, Card, CardBody } from 'design-react-kit';
 import { createUseStyles } from 'react-jss';
-import { navigate } from 'gatsby';
 import PropTypes from 'prop-types';
-import { GlobalStateContext } from '../context/globalContext';
 import { ExternalLink } from './ExternalLink';
 
 const useStyles = createUseStyles({
@@ -31,6 +29,9 @@ const useStyles = createUseStyles({
     display: 'flex',
     justifyContent: 'space-between',
     padding: '1.333rem 0.778rem',
+    '@media (max-width: 768px)': {
+      padding: '1.333rem 1.778rem',
+    },
     flexDirection: 'column',
     alignItems: 'center',
     '@media (min-width: 992px)': {
@@ -49,7 +50,7 @@ const useStyles = createUseStyles({
       fontWeight: 'normal',
     },
     '@media (min-width: 992px)': {
-      maxWidth: '70%',
+      maxWidth: '80%',
       fontSize: '1.778rem',
       paddingBottom: '0.833rem',
     },
@@ -59,7 +60,6 @@ const useStyles = createUseStyles({
       display: 'flex',
       alignItems: 'baseline',
       flexBasis: '100%',
-      marginTop: '-1.111rem',
     },
     '& .tag-title': {
       textTransform: 'uppercase',
@@ -100,7 +100,10 @@ const useStyles = createUseStyles({
     fontSize: '3.111rem',
     lineHeight: '1.15',
     textAlign: 'center',
-    marginBottom: '0.889rem',
+    marginBottom: '1.889rem',
+    '@media (max-width: 992px)': {
+      marginTop: '0.889rem',
+    },
     '& span': {
       display: 'block',
       fontSize: '0.889rem',
@@ -124,8 +127,11 @@ const useStyles = createUseStyles({
       padding: '1.333rem 0.778rem',
       display: 'flex',
       flexDirection: 'column',
+      '@media (max-width: 768px)': {
+        padding: '1.333rem 1.778rem',
+      },
       '@media (min-width: 992px)': {
-        padding: '0.444rem 2.222rem 1.778rem',
+        padding: '0.444rem 9.222rem 1.778rem 2.222rem',
       },
       '& .description': {
         '@media (min-width: 992px)': {
@@ -146,36 +152,9 @@ const useStyles = createUseStyles({
         textTransform: 'lowercase',
       },
     },
-    '& .access': {
-      fontSize: '0.778rem',
-      lineHeight: '1.4',
-      letterSpacing: '0.5px',
-      textTransform: 'uppercase',
-      display: 'flex',
-      alignItems: 'baseline',
-      marginBottom: '1rem',
-      '& span': {
-        flexShrink: '0',
-        marginRight: '0.313rem',
-      },
-      '& a': {
-        fontSize: '1.125rem',
-        lineHeight: '1',
-        fontWeight: '600',
-        color: '#0066CC',
-        textTransform: 'capitalize',
-        textDecoration: 'none',
-        '@media (min-width: 992px)': {
-          fontSize: '1rem',
-        },
-        '&:hover': {
-          textDecoration: 'underline',
-        },
-      },
-    },
   },
   linkAccordion: {
-    textAlign: 'right',
+    marginTop: '1.5rem',
     '@media (min-width: 992px)': {
       marginTop: '2.222rem',
     },
@@ -183,12 +162,14 @@ const useStyles = createUseStyles({
       textDecoration: 'none',
       display: 'inline-flex',
       alignItems: 'center',
-      fontSize: '0.778rem',
+      fontSize: '16px',
+      '@media (max-width: 767px)': {
+        width: '100%',
+        textAlign: 'center',
+        justifyContent: 'center',
+      },
       '& img': {
         marginLeft: '0.444rem',
-      },
-      '&:hover': {
-        textDecoration: 'underline',
       },
     },
   },
@@ -216,6 +197,7 @@ const useStyles = createUseStyles({
       backgroundImage: 'url(/assets/chevron-up-white.svg)',
       '&:hover, &:focus': {
         backgroundImage: 'url(/assets/chevron-up-white.svg)',
+        zIndex: '2',
       },
     },
     '@media (max-width: 991px)': {
@@ -247,9 +229,52 @@ const useStyles = createUseStyles({
   },
   description: {
     marginBottom: '1rem',
+    fontWeight: '400',
+    fontSize: '16px',
+    '& strong': {
+      fontSize: '18px',
+    },
   },
   stalls: {
     marginBottom: '1rem',
+  },
+  moreInfo: {
+    composes: 'info-row',
+    fontSize: '0.778rem',
+    lineHeight: '1.4',
+    display: 'flex',
+    alignItems: 'baseline',
+    '& + .info-row': {
+      marginTop: '15px',
+    },
+    '& .label-info': {
+      flexBasis: '9.4rem',
+      flexShrink: '0',
+      marginRight: '1rem',
+      textTransform: 'uppercase',
+    },
+    '& .value-info': {
+      fontSize: '0.88rem',
+      fontWeight: 600,
+      lineHeight: '1.25',
+      '&.updates': {
+        fontWeight: 'normal',
+        lineHeight: '1.5',
+        textTransform: 'none',
+        '& a': {
+          fontWeight: '600',
+        },
+      },
+    },
+    '&.updates': {
+      '@media (max-width: 992px)': {
+        display: 'block',
+        '& .label-info': {
+          display: 'block',
+          marginBottom: '0.888rem',
+        },
+      },
+    },
   },
 });
 
@@ -263,14 +288,12 @@ export const AccordionButtonFull = (props) => {
     tags,
     description,
     stalls,
-    solutionType,
     accessLabel,
-    accessSectionId,
     moreInfoLabel,
     moreInfoLink,
+    updates,
+    goToButton,
   } = props.data;
-
-  const [, dispatch] = useContext(GlobalStateContext);
 
   const eventHandler = () => {
     props.handleToggle(props.id);
@@ -310,36 +333,32 @@ export const AccordionButtonFull = (props) => {
           >
             <Card>
               <CardBody>
-                <div className={classes.description} dangerouslySetInnerHTML={{ __html: description }}></div>
-                <div className={classes.stalls}>
-                  Platea potenziale: <span>{stalls}</span>
+                <p className={classes.description} dangerouslySetInnerHTML={{ __html: description }}></p>
+                <div className={classes.moreInfo}>
+                  <span className="label-info">Platea potenziale</span>
+                  <span className="value-info">{stalls}</span>
                 </div>
-                <div className="access">
-                  <span>Modalità di accesso:</span>{' '}
-                  <button
-                    className={classes.accessLink}
-                    onClick={() => {
-                      dispatch({
-                        type: 'SET:HOW_SECTION_ID',
-                        payload: { howId: accessSectionId },
-                      });
-                      navigate(solutionType);
-                    }}
-                  >
-                    <span className="sr-only">Vai alla sezione </span>
-                    <span>{accessLabel}</span>
-                    <span className="sr-only"> della pagina come funziona</span>
-                  </button>
+                <div className={classes.moreInfo}>
+                  <span className="label-info">Modalità di accesso</span>
+                  <span className="value-info access">{accessLabel}</span>
                 </div>
-                <div className={classes.linkAccordion}>
-                  <ExternalLink
-                    linkTo={moreInfoLink}
-                    ariaLabel={`${moreInfoLabel}, ${title}, (Collegamento esterno - Apre su nuova scheda)`}
-                  >
-                    {moreInfoLabel}
-                    <img src="/assets/external-icon.svg" alt="" />
-                  </ExternalLink>
-                </div>
+                {updates && (
+                  <div className={`${classes.moreInfo} updates`}>
+                    <span className="label-info">Aggiornamenti</span>
+                    <span className="value-info updates" dangerouslySetInnerHTML={{ __html: updates }}></span>
+                  </div>
+                )}
+                {goToButton && (
+                  <div className={classes.linkAccordion}>
+                    <ExternalLink
+                      className="btn btn-primary"
+                      linkTo={moreInfoLink}
+                      ariaLabel={`${moreInfoLabel}, ${title}, (Collegamento esterno - Apre su nuova scheda)`}
+                    >
+                      VAI AGLI AVVISI
+                    </ExternalLink>
+                  </div>
+                )}
               </CardBody>
             </Card>
           </Collapse>

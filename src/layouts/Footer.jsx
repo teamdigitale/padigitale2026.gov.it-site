@@ -1,9 +1,8 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Link } from 'gatsby';
 import { createUseStyles } from 'react-jss';
 import links from '../../contents/links.yml';
 import { ExternalLink } from '../components/ExternalLink';
-import { GlobalStateContext } from '../context/globalContext';
 
 const {
   internalLinks: { privacy, noteLegali },
@@ -20,19 +19,24 @@ const useStyle = createUseStyles({
     '@media (min-width: 992px)': {
       display: 'flex',
       flexDirection: 'column',
-      alignItems: 'center',
+      alignItems: 'flex-start',
       padding: [40, 0],
     },
     '@media (min-width: 1200px)': {
       justifyContent: 'space-between',
       flexDirection: 'row',
+      alignItems: 'center',
     },
     '& .logos': {
       display: 'flex',
       flexDirection: 'column',
-      alignItems: 'center',
+      alignItems: 'flex-start',
       '@media (min-width: 992px)': {
+        alignItems: 'center',
         flexDirection: 'row',
+      },
+      '@media (max-width: 991px)': {
+        alignItems: 'center',
       },
       '& a': {
         '&:focus': {
@@ -48,21 +52,25 @@ const useStyle = createUseStyles({
     composes: 'it-footer-small-prints py-4',
     backgroundColor: '#01254C',
     '& a': {
-      color: '#27D1D6',
+      color: '#fff',
     },
   },
   seeMore: {
-    color: '#33485C',
+    color: '#06c',
     textDecoration: 'none',
-    fontWeight: 'bold',
+    fontWeight: '600',
     marginTop: '2.5rem',
     display: 'block',
+    textAlign: 'center',
     '&:hover': {
       textDecoration: 'underline',
-      color: '#33485C',
+      color: '#06c',
     },
     '@media (min-width: 1200px)': {
       marginTop: '0',
+    },
+    '&:not(:last-child)': {
+      marginBottom: '15px',
     },
   },
   departmentLogo: {
@@ -75,7 +83,7 @@ const useStyle = createUseStyles({
       display: 'inline-block',
       margin: 0,
       maxHeight: '2.5rem',
-      marginLeft: '2.5rem',
+      marginLeft: '1.5rem',
       marginRight: '1.2rem',
       paddingLeft: '1.5rem',
       borderLeft: '1px solid #E6E9F2',
@@ -98,9 +106,16 @@ const useStyle = createUseStyles({
   },
   listItem: {
     composes: 'list-inline-item',
-    display: 'block',
-    '&+.list-inline-item': {
-      marginTop: '30px',
+    display: 'inline-flex',
+    '& a': {
+      color: '#27D1D6',
+    },
+    '@media (max-width: 767px)': {
+      flexDirection: 'column',
+      '&+.list-inline-item': {
+        display: 'flex',
+        marginTop: '30px',
+      },
     },
     '@media (min-width: 992px)': {
       display: 'inline-block',
@@ -119,7 +134,7 @@ const SlimFooter = () => {
 
   return (
     <div className={classes.slimFooter}>
-      <div className="container">
+      <div className="container px-3">
         <ul className="list-inline link-list mb-0 text-center text-md-left">
           <li className={`${classes.listItem} mr-0 mr-md-5`}>
             <Link to={noteLegali.linkTo} className="list-item mid-footer-link mx-4 mx-md-0">
@@ -148,11 +163,10 @@ const SlimFooter = () => {
 
 const MainFooter = () => {
   const classes = useStyle();
-  const [{ activeItem }, dispatch] = useContext(GlobalStateContext);
 
   return (
     <div className={`${classes.mainFooter} it-footer-main`}>
-      <div className="container text-center text-md-left">
+      <div className="container text-center text-md-left px-3">
         <div className={classes.mainWrapper}>
           <div className="logos">
             <div className="d-flex align-items-center">
@@ -174,25 +188,12 @@ const MainFooter = () => {
               <img src="/assets/dipartimento.svg" alt={dipartimento.label} />
             </ExternalLink>
           </div>
-          <div className="info text-center">
-            {activeItem === 'come-funziona' ? (
-              <Link to="/come-funziona#attori-coinvolti" className={classes.seeMore}>
-                Scopri l&apos;iniziativa
+          <div className="info">
+            <>
+              <Link to="/ricevi-aggiornamenti" className={classes.seeMore}>
+                Ricevi aggiornamenti
               </Link>
-            ) : (
-              <Link
-                to="/come-funziona#attori-coinvolti"
-                className={classes.seeMore}
-                onClick={() =>
-                  dispatch({
-                    type: 'SET:HOW_SECTION_ID',
-                    payload: { howId: 'attori-coinvolti' },
-                  })
-                }
-              >
-                Scopri l&apos;iniziativa
-              </Link>
-            )}
+            </>
           </div>
         </div>
       </div>

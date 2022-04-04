@@ -1,15 +1,31 @@
 internalLinks:
+  initiative:
+    linkTo: '/iniziativa'
+    label: L'iniziativa
+    linkTop: '/#mainTop'
   opportunity:
     linkTo: '/misure'
-    label: Le misure
+    label: Misure
     linkTop: '/#mainTop'
   howitworks:
-    linkTo: '/come-funziona'
-    label: Come funziona
+    linkTo: '/iniziativa'
+    label: L'iniziativa
+    linkTop: '#mainTop'
+  notices:
+    linkTo: '/avvisi'
+    label: Avvisi
+    linkTop: '#mainTop'
+  howToPartecipate:
+    linkTo: '/come-partecipare'
+    label: Come partecipare
     linkTop: '#mainTop'
   support:
     linkTo: '/supporto'
     label: Supporto
+    linkTop: '#mainTop'
+  avvisi:
+    linkTo: '/avvisi'
+    label: Avvisi
     linkTop: '#mainTop'
   updates:
     linkTo: '/updates'
@@ -64,9 +80,9 @@ externalLinks:
     linkTo: https://github.com/italia/
     ariaLabel: 'GitHub Italia (link esterno)'
   dipartimento:
-    label: Dipartimento per la Trasformazione Digitale
+    label: Dipartimento per la trasformazione digitale
     linkTo: https://innovazione.gov.it
-    ariaLabel: 'Dipartimento per la Trasformazione Digitale (Collegamento esterno - Apre su nuova scheda)'
+    ariaLabel: 'Dipartimento per la trasformazione digitale (Collegamento esterno - Apre su nuova scheda)'
   ministeroMitd:
     label: "Ministero per l'innovazione tecnologica e la transizione digitale"
     linkTo: 'https://innovazione.gov.it/'
@@ -75,6 +91,10 @@ externalLinks:
     linkTo: https://ec.europa.eu/info/index_it
     ariaLabel: 'Unione Europea (Collegamento esterno - Apre su nuova scheda)'
     label: 'Unione Europea'
+  accedi:
+    linkTo: https://areariservata.padigitale2026.gov.it/sis_SpidPage
+    ariaLabel: "Accedi all'area privata"
+    label: 'Accedi'
   repubblica:
     linkTo: https://www.governo.it/
     ariaLabel: 'Governo Italiano (Collegamento esterno - Apre su nuova scheda)'

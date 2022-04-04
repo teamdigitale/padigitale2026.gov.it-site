@@ -31,17 +31,13 @@ const useStyle = createUseStyles({
         justifyContent: 'space-between',
       },
       '& h4.card-title': {
-        color: '#0066CC',
-        fontWeight: 'bold',
-        fontSize: '1.556rem',
-        lineHeight: '1.4',
-        marginBottom: '0.889rem',
-        '@media (min-width: 992px)': {
-          fontSize: '1.333rem',
-          lineHeight: '1.32',
-          fontWeight: 'normal',
-          minHeight: '5.333rem',
-          marginBottom: '2.222rem',
+        fontSize: '1.333rem',
+        lineHeight: '1.32',
+        fontWeight: 'normal',
+        minHeight: '5.333rem',
+        marginBottom: '2.222rem',
+        '@media (max-width: 991px)': {
+          minHeight: 'unset',
         },
       },
       '& .card-text': {
@@ -74,11 +70,15 @@ const useStyle = createUseStyles({
     },
     '& .btn': {
       textTransform: 'uppercase',
+      '@media (max-width: 767px)': {
+        width: '100%',
+      },
     },
   },
   linkCard: {
     textDecoration: 'none',
     height: '100%',
+    display: 'inline-flex',
     '&:hover': {
       textDecoration: 'none',
       '& .card-title': {
@@ -97,7 +97,7 @@ export const FAQPreview = () => {
 
   const cards = faqSection.faqPreviewCards.map((card) => (
     <Col key={card.id} xs="12" lg="4">
-      <Link to={`/supporto/faq#` + card.faqId} onClick={() => dispatch({ type: 'SET:FAQ_ID', payload: { faqId: card.faqId } })} className={classes.linkCard}>
+      <Link to={`/supporto/domande-frequenti#` + card.faqId} onClick={() => dispatch({ type: 'SET:FAQ_ID', payload: { faqId: card.faqId } })} className={classes.linkCard} ariaLabel={card.ariaLabel}>
         <Card className={classes.faqCard}>
           <CardBody>
             <CardTitle tag="h4">{card.title}</CardTitle>
@@ -114,7 +114,7 @@ export const FAQPreview = () => {
         <div className="container px-3">
           <Row>{cards}</Row>
           <div className={classes.btnWrapper}>
-            <Link to="/supporto/faq" className="btn btn-primary text-uppercase">
+            <Link to="/supporto/domande-frequenti" className="btn btn-primary text-uppercase">
               {faqSection.buttonLabel}
             </Link>
           </div>

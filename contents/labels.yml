@@ -21,3 +21,5 @@ ariaLabel:
   slimMenu: Menu progetti correlati
   breadcrumb: Sei qui
   externalLink: Link esterno
+errors:
+  errorMatch: "Il valore inserito non è valido"

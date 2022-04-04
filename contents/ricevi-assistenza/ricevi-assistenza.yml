@@ -1,0 +1,38 @@
+name: FAQ - PA digitale 2026
+hero:
+  title: Domande frequenti
+  subtitle: Esplora le risposte alle domande più frequenti o fai una ricerca per parola chiave
+sidebar:
+  - sectionTitle: 1. Trova le risposte ai dubbi più comuni
+    sectionId: digital-identity
+    sectionActive: true
+  - sectionTitle: 2. Apri una richiesta di assistenza
+    sectionId: select-administration
+    sectionActive: false
+  - sectionTitle: 3. Richiedi ulteriore supporto
+    sectionId: verify-data
+    sectionActive: false
+  - sectionTitle: 4. Ricevi aggiornamenti
+    sectionId: confirm-subscription
+    sectionActive: false
+verticalTimeline:
+  - index: 0
+    title: 'Trova le risposte ai dubbi più comuni'
+    icon: '/assets/ricevi-assistenza-1.svg'
+    headerParagraph: "All’interno della sezione “Domande frequenti” puoi consultare le risposte alle domande più frequenti <strong>riguardo al funzionamento della piattaforma.</strong>"
+    sectionId: 'digital-identity'
+  - index: 1
+    title: 'Apri una richiesta di assistenza'
+    icon: '/assets/ricevi-assistenza-2.svg'
+    headerParagraph: 'Se non hai trovato una risposta alla tua domanda, puoi ricevere assistenza compilando <strong>il modulo dedicato all’apertura di una nuova richiesta</strong> di supporto.'
+    sectionId: 'select-administration'
+  - index: 2
+    title: 'Richiedi ulteriore supporto'
+    icon: '/assets/ricevi-assistenza-3.svg'
+    headerParagraph: 'Anche se hai ricevuto una risposta per risolvere il tuo problema, <strong>potresti aver bisogno di ulteriore supporto. In questo caso puoi</strong> riaprire la tua richiesta e ricevere, se necessario, assistenza telefonica.'
+    sectionId: 'verify-data'
+  - index: 3
+    title: 'Ricevi aggiornamenti'
+    icon: '/assets/ricevi-assistenza-4.svg'
+    headerParagraph: '<strong>Rimani aggiornato sull’evoluzione delle tue richieste</strong> di assistenza grazie alle notifiche della tua area riservata. Puoi inoltre consultare lo storico delle richieste.'
+    sectionId: 'confirm-subscription'

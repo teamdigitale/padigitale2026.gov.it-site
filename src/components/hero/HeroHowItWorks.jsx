@@ -13,22 +13,40 @@ const useStyles = createUseStyles({
     width: '100%',
     '@media (min-width: 992px)': {
       position: 'absolute',
-      right: '0',
-      top: '95px',
-      maxWidth: '480px',
+      right: '122px',
+      top: '54px',
+      maxWidth: '350px',
     },
     '@media (min-width: 1200px)': {
-      maxWidth: '580px',
+      maxWidth: '450px',
+      right: '155px',
+    },
+    '@media (min-width: 1441px) and (max-width: 1680px)': {
+      right: '280px',
+    },
+    '@media (min-width: 1700px)': {
+      right: '385px',
+    },
+    '@media (max-width: 991px)': {
+      width: '80%',
     },
   },
   heroTitle: {
-    composes: 'no_doc',
-    fontSize: '2.222rem',
-    '@media (max-width: 992px)': {
-      display: 'flex',
-      justifyContent: 'center',
-      fontSize: '1.778rem',
-      textAlign: 'center',
+    fontSize: '2.5rem',
+    fontWeight: '700',
+    color: '#33485C',
+    lineHeight: '48px',
+    marginBottom: '30px',
+    '@media (max-width: 991px)': {
+      fontSize: '2.25rem',
+    },
+  },
+  heroSubtitle: {
+    fontSize: '24px',
+    color: '#33485C',
+    lineHeight: '1.5',
+    '@media (max-width: 991px)': {
+      fontSize: '1.125rem',
     },
   },
   contentWrapper: {
@@ -39,12 +57,15 @@ const useStyles = createUseStyles({
     composes: 'it-hero-wrapper',
     position: 'relative',
     display: 'flex',
+    '&.it-hero-wrapper': {
+      alignItems: 'flex-start',
+    },
     '&.it-hero-wrapper .it-hero-text-wrapper': {
       '@media (min-width: 992px)': {
-        padding: '5.333rem 0 3.889rem',
+        padding: '0',
       },
       '@media (max-width: 991px)': {
-        padding: '5.333rem 0 3.889rem',
+        padding: '0 0 3.889rem',
       },
     },
     '&.overlap': {
@@ -52,7 +73,7 @@ const useStyles = createUseStyles({
       paddingBottom: '4rem',
     },
     '&.bg-white': {
-      backgroundColor: '#fff',
+      backgroundColor: 'transparent !important',
       '& .it-hero-text-wrapper.bg-white span, h1, h2, h3, p': {
         color: '#33485C',
       },
@@ -89,6 +110,9 @@ const useStyles = createUseStyles({
   textWrapper: {
     '@media (min-width: 992px)': {
       marginRight: '2.611rem',
+    },
+    '@media (max-width: 991px)': {
+      textAlign: 'center',
     },
   },
   buttonContainer: {
@@ -147,7 +171,8 @@ const useStyles = createUseStyles({
     },
   },
   listTitle: {
-    fontSize: '0.778rem',
+    composes: 'mb-3',
+    fontSize: '0.889rem',
     color: '#33485C',
     fontWeight: '600',
     marginBottom: '0.889rem',
@@ -161,7 +186,7 @@ const useStyles = createUseStyles({
     composes: 'list-item',
     textAlign: 'left',
     color: '#0066CC',
-    fontWeight: '600',
+    fontWeight: '400',
     marginBottom: '1rem',
     textDecoration: 'none',
     '@media (max-width: 991px)': {
@@ -190,37 +215,39 @@ export const HeroHowItWorks = ({ title, body, image, list }) => {
     <Hero className="position-relative">
       <div className={`${classes.heroWrapper} bg-white`}>
         <Container className="pl-lg-2 pr-lg-2 pl-3 pr-3">
-          <Row className="m-0">
+          <Row className="mt-5">
             <Col xs="12" lg="11" className="offset-lg-1 px-0">
               <div className={`${classes.contentWrapper} bg-white d-flex flex-column`}>
                 <Row className="m-0">
                   <Col lg={6} xs={12} className="pr-3">
                     <div className={classes.textWrapper}>
                       <HeroTitle title={title} className={classes.heroTitle} />
-                      <HeroParagraph text={body} />
+                      <HeroParagraph text={body} className={classes.heroSubtitle} />
                     </div>
                     <div className={classes.listWrapper}>
-                      {list.map((listItem) => (
-                        <div key={listItem.title} className={classes.list}>
-                          <span className={classes.listTitle}>{listItem.title}</span>
-                          <div className={classes.listItemsWrapper}>
-                            {listItem.items.map((item) => (
-                              <React.Fragment key={item.item}>
-                                <Link
-                                  to={`/come-funziona#` + item.anchor}
-                                  onClick={() => scrollIntoView(item.anchor)}
-                                  className={classes.listItem}
-                                >
-                                  {item.item}
-                                </Link>
-                              </React.Fragment>
-                            ))}
-                          </div>
-                        </div>
-                      ))}
+                      {list
+                        ? list.map((listItem) => (
+                            <div key={listItem.title} className={classes.list}>
+                              <span className={classes.listTitle}>{listItem.title}</span>
+                              <div className={classes.listItemsWrapper}>
+                                {listItem.items.map((item) => (
+                                  <React.Fragment key={item.item}>
+                                    <Link
+                                      to={`/iniziativa#` + item.anchor}
+                                      onClick={() => scrollIntoView(item.anchor)}
+                                      className={classes.listItem}
+                                    >
+                                      {item.item}
+                                    </Link>
+                                  </React.Fragment>
+                                ))}
+                              </div>
+                            </div>
+                          ))
+                        : ''}
                     </div>
                   </Col>
-                  <Col xs={12} lg={6} className="d-flex d-lg-none mt-4 mt-lg-0 justify-content-center">
+                  <Col xs={12} lg={6} className="d-flex d-lg-none mt-5 mt-lg-0 justify-content-center">
                     <HeroBackground image={image} className={classes.heroImg} />
                   </Col>
                 </Row>

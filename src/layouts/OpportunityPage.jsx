@@ -46,7 +46,7 @@ export const OpportunityPage = (props) => {
       <HeroImageBackground
         title={heroOpportunity.title}
         body={heroOpportunity.body}
-        image="opportunity-hero.webp"
+        image="misure-hero.webp"
         theme="bg-white flex-column-reverse"
         noButton
       />

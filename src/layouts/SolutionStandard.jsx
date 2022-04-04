@@ -1,34 +1,45 @@
 import React, { useEffect, useContext } from 'react';
 import { createUseStyles } from 'react-jss';
 import { Breadcrumb, BreadcrumbItem, Row, Col } from 'design-react-kit';
-import content from '../../contents/come-funziona/soluzione-standard.yml';
+import content from '../../contents/iniziativa/soluzione-standard.yml';
 import { SEO } from '../components/SEO';
 import seo from '../../contents/seo.yml';
-import contentHowItWorks from '../../contents/come-funziona/come-funziona.yml';
 import { GlobalStateContext } from '../context/globalContext';
-import { HeroImage } from '../components/hero/HeroImage';
+import { HeroSolutions } from '../components/hero/HeroSolutions';
 import { TimelineVertical } from '../components/TimelineVertical';
-import { ProjectsCards } from '../components/ProjectsCards';
+import { HeroMode } from '../components/hero/HeroMode';
 
 const { title: seoTitle, description: seoDescription } = seo.standardSolutionPage;
 
 const useStyles = createUseStyles({
   breadcrumb: {
-    '@media (min-width: 991px)': {
-      marginLeft: '0.722rem',
+    padding: '1.563rem 0 0',
+    '& .breadcrumb': {
+      padding: '0.75rem 0',
     },
   },
   breadcrumbItem: {
     '& a': {
       color: '#5B6F82',
-      fontWeight: '700',
+      fontWeight: '600',
       textDecoration: 'underline',
+      fontSize: '18px',
+    },
+    '&::before': {
+      fontWeight: '600',
+      color: '#33485C',
     },
   },
   breadcrumbItemActive: {
     '& a': {
-      color: '#5B6F82',
+      color: '#656566',
       textDecoration: 'none',
+      fontSize: '18px',
+    },
+    '&::before': {
+      fontSize: '18px',
+      fontWeight: '600',
+      color: '#33485C',
     },
   },
 });
@@ -36,14 +47,13 @@ const useStyles = createUseStyles({
 export const SolutionStandard = () => {
   const classes = useStyles();
 
-  const { hero, verticalTimeline } = content;
-  const { projectsCardsItem } = contentHowItWorks;
+  const { hero, verticalTimeline, heroMode } = content;
   const [, dispatch] = useContext(GlobalStateContext);
 
   useEffect(() => {
     dispatch({
       type: 'SET:ACTIVE_HEADER',
-      payload: { activeItem: 'come-funziona' },
+      payload: { activeItem: 'iniziativa' },
     });
     return () => {
       dispatch({ type: 'SET:ACTIVE_HEADER' });
@@ -54,30 +64,46 @@ export const SolutionStandard = () => {
     <>
       <SEO title={seoTitle} description={seoDescription} />
       <h1 className="sr-only">{seoTitle}</h1>
-      <div className="container">
+      <div className="container px-3">
         <Row>
           <Col xs="12">
             <Breadcrumb className={classes.breadcrumb}>
               <BreadcrumbItem className={classes.breadcrumbItem}>
-                <a href="/come-funziona">Come funziona</a>
+                <a href="/">Home</a>
+                <span className="separator"></span>
+              </BreadcrumbItem>
+              <BreadcrumbItem className={classes.breadcrumbItem}>
+                <a href="/iniziativa">L&apos;iniziativa</a>
                 <span className="separator"></span>
               </BreadcrumbItem>
               <BreadcrumbItem active className={classes.breadcrumbItemActive}>
-                <a href="/come-funziona/soluzioni-standard">Soluzioni standard</a>
+                <a>Soluzioni standard</a>
               </BreadcrumbItem>
             </Breadcrumb>
           </Col>
         </Row>
       </div>
-      <HeroImage
+      <HeroSolutions
         title={hero.title}
         body={hero.body}
-        imageUrl="/assets/standard-solution-big.svg"
-        imageAlt=""
-        smallText={true}
+        image="standard-solution-big.svg"
+        theme="bg-white"
+        smallText="true"
       />
       <TimelineVertical item={verticalTimeline} />
-      <ProjectsCards item={projectsCardsItem} />
+      <HeroMode
+        ctaContainer={true}
+        category={heroMode.category}
+        title={heroMode.title}
+        body={heroMode.body}
+        imageUrl="/assets/Presentazione_Progetti.svg"
+        imageAlt=""
+        firstInternal={true}
+        firstButtonHref={heroMode.link}
+        firstButtonLabel={heroMode.btnLabel}
+        firstButtonAriaLabel={heroMode.btnAria}
+        heroTitleId="home-hero-title-candidature"
+      />
     </>
   );
 };

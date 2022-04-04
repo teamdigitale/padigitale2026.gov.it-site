@@ -88,11 +88,11 @@ export const Involved = (props) => {
       <div className={classes.involvedSection}>
         <Container tag="section" aria-labelledby="involved-actors-title" className="px-3">
           <Row>
-            <Col xs="12" lg="5" className="offset-lg-1" id="attori-coinvolti">
-              <h3 className={classes.category}>{category}</h3>
-              <h4 className={classes.title} id="involved-actors-title">
+            <Col xs="12" lg="7" xl="5" className="offset-lg-1" id="attori-coinvolti">
+              <span className={classes.category}>{category}</span>
+              <h3 className={classes.title} id="involved-actors-title">
                 {title}
-              </h4>
+              </h3>
             </Col>
           </Row>
           <Row role="list">{actorsCards}</Row>
