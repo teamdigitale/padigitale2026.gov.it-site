@@ -128,19 +128,19 @@ heroCarouselNews:
     description: Sulla piattaforma PA digitale 2026 i Comuni italiani possono richiedere i primi voucher economici
     source: 'innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/articoli/parte-la-digitalizzazione-dei-comuni-con-identita-digitale-pagopa-e-app-io/'
-   - id: 2
+  - id: 2
     category: Eventi
     title: "Verso #PAdigitale2026, marzo 2022"
     description: Nuovo mese di incontri con le amministrazioni locali e il mondo della fornitura per presentare le grandi opportunità PNRR dedicate al digitale
     source: 'innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/articoli/verso-padigitale2026-marzo-2022/'
-   - id: 3
+  - id: 3
     category: Novità
     title: "Cybersicurezza e resilienza per la trasformazione digitale della PA"
     description: Grazie al PNRR, un piano di interventi per rafforzare la resilienza cyber dell’ecosistema digitale nazionale
     source: 'innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/articoli/cybersicurezza-e-resilienza-per-la-trasformazione-digitale-della-pa/'    
-    - id: 4
+  - id: 4
     category: Avviso pubblico
     title: "Milano, Napoli e Roma città capofila per il progetto Mobility as a Service for Italy"
     description: Pubblicata la graduatoria dell’avviso pubblico. Nei prossimi mesi un nuovo bando per ampliare l’iniziativa
