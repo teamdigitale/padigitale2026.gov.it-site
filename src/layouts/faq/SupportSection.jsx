@@ -25,7 +25,6 @@ const useStyles = createUseStyles({
     color: '#33485C',
     lineHeight: '1.5',
     marginBottom: '0.555rem',
-    textTransform: 'uppercase',
     textAlign: 'center',
     fontWeight: '600',
     '@media (min-width: 768px)': {
@@ -128,7 +127,7 @@ export const SupportSection = (props) => {
         <div className="container px-3">
           <Row>
             <Col md={8} lg={6} className={classes.layout}>
-              <p className={classes.tag}>Supporto</p>
+              <p className={classes.tag}>SUPPORTO</p>
               <h4 className={classes.sectionTitle}>{title}</h4>
             </Col>
           </Row>

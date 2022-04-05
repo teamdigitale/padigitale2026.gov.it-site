@@ -197,7 +197,7 @@ export const RiceviAssistenzaPage = () => {
           </Row>
           <Row className="mb-5 mt-5">
             <Col xs={12} lg={7}>
-              <h4 className={classes.titleUpdate}>Trova le risposte alle tue domande o ricevi assistenza</h4>
+              <h2 className={classes.titleUpdate}>Trova le risposte alle tue domande o ricevi assistenza</h2>
               <div className={classes.subtitleUpdate}>
                 All’interno della sezione dedicata al supporto puoi{' '}
                 <strong>consultare le risposte alle domande più frequenti</strong> o{' '}

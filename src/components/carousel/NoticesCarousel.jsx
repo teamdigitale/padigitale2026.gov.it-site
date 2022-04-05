@@ -205,6 +205,7 @@ export const NoticesCarousel = ({ content, title }) => {
             <Link
               to="https://areariservata.padigitale2026.gov.it/Pa_digitale2026_avvisi"
               className="btn text-uppercase btn-primary"
+              aria-label="Scopri tutti gli avvisi"
             >
               scopri tutti
             </Link>

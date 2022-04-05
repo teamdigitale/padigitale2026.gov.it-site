@@ -204,7 +204,7 @@ export const CreaProfiloPage = () => {
           </Row>
           <Row className="mb-5 mt-5">
             <Col xs={12} lg={7}>
-              <h4 className={classes.titleUpdate}>Attiva il profilo della tua PA: identità digitale e dati IPA</h4>
+              <h2 className={classes.titleUpdate}>Attiva il profilo della tua PA: identità digitale e dati IPA</h2>
               <div className={classes.subtitleUpdate}>
                 <strong>Per partecipare agli avvisi</strong> è necessario che il{' '}
                 <strong>rappresentante legale di un'amministrazione presente su IPA</strong> (Indice dei domicili

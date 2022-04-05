@@ -3,8 +3,8 @@ headerTitle: Dipartimento per la trasformazione digitale
 heroMainBanner:
   title: Entra in PA digitale 2026
   body: PA digitale 2026 è il punto di accesso alle risorse per la transizione digitale.<strong> Accedi alla piattaforma e attiva il profilo della tua PA.</strong> Scopri come candidare la tua amministrazione agli avvisi e richiedere i fondi.
-  firstButtonLabel: SCOPRI DI PIù
-  firstButtonAriaLabel: Scopri di più (Collegamento esterno - Apre su nuova scheda)
+  firstButtonLabel: SCOPRI DI PIÙ
+  firstButtonAriaLabel: Scopri di più su come entrare in PA digitale 2026 (Collegamento esterno - Apre su nuova scheda)
   linkTo: https://innovazione.gov.it/dipartimento/focus/italia-digitale-2026/
 heroDigital:
   title: Italia digitale 2026
@@ -17,7 +17,7 @@ heroPnrr:
   title: Candida la tua PA agli avvisi dedicati
   body: Partecipa agli avvisi <strong>per richiedere i finanziamenti</strong> e avviare il processo di transizione digitale.
   firstButtonLabel: SCOPRI DI PIÙ
-  firstButtonAriaLabel: Scopri di più (Collegamento esterno - Apre su nuova scheda)
+  firstButtonAriaLabel: Scopri di più su come candidare la tua PA agli avvisi dedicati (Collegamento esterno - Apre su nuova scheda)
   link: /come-partecipare/candida-pa
 heroClassificazione:
   category: Classificazione
