@@ -136,7 +136,7 @@ export const KeypointSection = (props) => {
                       className={`${classes.btnSection} btn btn-primary`}
                       aria-label={ariaLabel}
                     >
-                      SCOPRI DI PIÚ
+                      SCOPRI DI PIÙ
                     </Link>
                   ) : (
                     ''
@@ -175,7 +175,7 @@ export const KeypointSection = (props) => {
                   <p className={classes.paragraph} dangerouslySetInnerHTML={{ __html: text }}></p>
                   {button ? (
                     <Link to={linkTo} className={`${classes.btnSection} btn btn-primary`} aria-label={ariaLabel}>
-                      SCOPRI DI PIÚ
+                      SCOPRI DI PIÙ
                     </Link>
                   ) : (
                     ''
@@ -208,7 +208,7 @@ export const KeypointSection = (props) => {
                   <p className={classes.paragraph} dangerouslySetInnerHTML={{ __html: text }}></p>
                   {button ? (
                     <Link to={linkTo} className={`${classes.btnSection} btn btn-primary`} aria-label={ariaLabel}>
-                      SCOPRI DI PIÚ
+                      SCOPRI DI PIÙ
                     </Link>
                   ) : (
                     ''
@@ -277,7 +277,7 @@ export const KeypointSection = (props) => {
                   <p className={classes.paragraph} dangerouslySetInnerHTML={{ __html: text }}></p>
                   {button ? (
                     <Link to={linkTo} className={`${classes.btnSection} btn btn-primary`} aria-label={ariaLabel}>
-                      SCOPRI DI PIÚ
+                      SCOPRI DI PIÙ
                     </Link>
                   ) : (
                     ''

@@ -136,7 +136,7 @@ const useStyles = createUseStyles({
       color: '#737374',
     },
     '& .select.is-invalid [class$="-control"]': {
-      borderColor: '#F83E5A',
+      borderColor: '#D6364E',
     },
     '& .select.focused': {
       borderColor: '#f90',
@@ -178,7 +178,7 @@ const useStyles = createUseStyles({
       },
     },
     '& .form-group input[type="text"].is-invalid': {
-      borderBottom: 'solid 2px #F83E5A',
+      borderBottom: 'solid 2px #D6364E',
     },
     '& .form-group input[type="email"]': {
       fontSize: '0.889rem',
@@ -189,14 +189,14 @@ const useStyles = createUseStyles({
       },
     },
     '& .form-group input[type="email"].is-invalid': {
-      borderBottom: 'solid 2px #F83E5A',
+      borderBottom: 'solid 2px #D6364E',
     },
     '& .invalid-feedback': {
-      color: '#F83E5A !important',
+      color: '#D6364E !important',
     },
     '& small.error-label': {
       fontSize: '0.778rem',
-      color: '#F83E5A',
+      color: '#D6364E',
       padding: '0 0.444rem',
       fontWeight: '400',
       position: 'absolute',
@@ -243,12 +243,6 @@ const useStyles = createUseStyles({
   modalFooterLabel: {
     composes: 'mb-3',
     fontSize: '0.889rem',
-    '& a': {
-      textDecoration: 'none',
-      '&:hover': {
-        textDecoration: 'underline',
-      },
-    },
   },
   spinner: {
     composes: 'spinner hidden ml-3',

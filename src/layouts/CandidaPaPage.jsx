@@ -196,7 +196,7 @@ export const CandidaPaPage = () => {
           </Row>
           <Row className="mb-5 mt-5">
             <Col xs={12} lg={7}>
-              <h4 className={classes.titleUpdate}>Candida la tua PA agli avvisi per la transizione digitale</h4>
+              <h2 className={classes.titleUpdate}>Candida la tua PA agli avvisi per la transizione digitale</h2>
               <div className={classes.subtitleUpdate}>
                 Per <strong>candidare la tua amministrazione</strong> agli avvisi pubblici e{' '}
                 <strong>richiedere i finanziamenti</strong> segui la configurazione guidata per comporre e inviare il

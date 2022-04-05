@@ -134,7 +134,7 @@ const useStyles = createUseStyles({
       color: '#000',
     },
     '& .select.is-invalid [class$="-control"]': {
-      borderColor: '#F83E5A',
+      borderColor: '#D6364E',
     },
     '& .select.focused': {
       borderColor: '#f90',
@@ -163,10 +163,10 @@ const useStyles = createUseStyles({
       },
     },
     '& .form-group input[type="text"].is-invalid': {
-      borderBottom: 'solid 2px #F83E5A',
+      borderBottom: 'solid 2px #D6364E',
     },
     '& .invalid-feedback': {
-      color: '#F83E5A !important',
+      color: '#D6364E !important',
     },
   },
   modalLabel: {
@@ -181,7 +181,7 @@ const useStyles = createUseStyles({
   },
   errorLabel: {
     fontSize: '0.778rem',
-    color: '#F83E5A',
+    color: '#D6364E',
     padding: '0 0.444rem',
     fontWeight: '400',
   },
