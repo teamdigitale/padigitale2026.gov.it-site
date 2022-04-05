@@ -243,6 +243,12 @@ const useStyle = createUseStyles({
     '@media (min-width: 359px) and (max-width: 360px)': {
       whiteSpace: 'nowrap',
     },
+    '& button svg': {
+      transition: '.3s',
+    },
+    '& button[aria-expanded="true"] svg': {
+      transform: 'rotateZ(180deg)',
+    },
   },
   headerLink: {
     composes: 'font-weight-semibold',
