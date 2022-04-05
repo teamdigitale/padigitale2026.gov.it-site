@@ -1,6 +1,6 @@
 /* eslint-disable sonarjs/no-duplicate-string */
 import { Link } from 'gatsby';
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import {
   Collapse,
@@ -243,6 +243,12 @@ const useStyle = createUseStyles({
     '@media (min-width: 359px) and (max-width: 360px)': {
       whiteSpace: 'nowrap',
     },
+    '& button svg': {
+      transition: '.3s',
+    },
+    '& button[aria-expanded="true"] svg': {
+      transform: 'rotateZ(180deg)',
+    },
   },
   headerLink: {
     composes: 'font-weight-semibold',
@@ -444,6 +450,16 @@ const NavHeader = () => {
   const closeMenu = () => setIsOpen(false);
   const toogleMenu = () => setIsOpen(!isOpen);
   const classes = useStyle();
+
+  useEffect(() => {
+    const isMobile = window.innerWidth < 992;
+    const body = document.querySelector('body');
+    if (isOpen === true && isMobile) {
+      body.classList.add('no-scroll');
+    } else {
+      body.classList.remove('no-scroll');
+    }
+  }, [isOpen]);
 
   return (
     <HeaderReactKit type="navbar" theme="light" className={classes.noShadow}>

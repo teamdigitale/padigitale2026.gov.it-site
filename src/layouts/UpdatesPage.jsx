@@ -289,6 +289,8 @@ export const UpdatesPage = () => {
   const [inputValue, setInputValue] = useState('');
   const [enteState, setEnteState] = useState('');
   const [formValidate, setFormValidate] = useState(false);
+  const [user, setUser] = useState(null);
+  const [formSubmitted, setFormSubmitted] = useState(false);
   const publicAdministrationValue = 'public-administration';
 
   const {
@@ -391,10 +393,12 @@ export const UpdatesPage = () => {
             reset(data);
             setTimeout(() => {
               notificationElement.classList.remove('show');
+              setFormSubmitted(true);
             }, 5000);
           } else {
             notificationElement.classList.add('show');
             notificationElement.classList.add('error');
+            setFormSubmitted(false);
             announce("Errore nell'invio");
             if (data.message.includes('already exists')) {
               titleElement.innerHTML = `${errorLabels.icon} ${errorAddressLabel.title}`;
@@ -470,6 +474,16 @@ export const UpdatesPage = () => {
   const onInputHandler = (e) => {
     setInputValue(e.target.value);
   };
+
+  useEffect(() => {
+    if (formSubmitted === true) {
+      setUser({ address: '', ente: '', enteSelect: '', representative: '', enteType: '' });
+    }
+  }, [formSubmitted]);
+
+  useEffect(() => {
+    reset(user);
+  }, [user]);
 
   const {
     selectRepresent,
