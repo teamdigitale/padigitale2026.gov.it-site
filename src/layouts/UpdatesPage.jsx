@@ -3,7 +3,7 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable max-lines-per-function */
 /* eslint-disable sonarjs/cognitive-complexity */
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { createUseStyles } from 'react-jss';
 import { Row, Col, Button, Input } from 'design-react-kit';
@@ -14,10 +14,9 @@ import seo from '../../contents/seo.yml';
 import { SEO } from '../components/SEO';
 import content from '../../contents/opportunity-page/opportunity.yml';
 import links from '../../contents/links.yml';
-import notificationsLabel from '../../contents/notifications.yml';
 import { Breadcrumb } from '../components/Breadcrumb';
+import { GlobalStateContext } from '../context/globalContext';
 
-const { success: successLabels, error: errorLabels, errorAddress: errorAddressLabel } = notificationsLabel;
 const { title: seoTitle, description: seoDescription } = seo.supportPage;
 const { privacy } = links.internalLinks;
 
@@ -199,26 +198,6 @@ const useStyles = createUseStyles({
     paddingLeft: '9px',
     marginBottom: '0',
   },
-  notification: {
-    composes: 'notification with-icon dismissable',
-    zIndex: '9999',
-    display: 'block',
-    opacity: '0',
-    visibility: 'hidden',
-    transition: '.3s ease',
-    bottom: 'unset',
-    top: '16px',
-    left: '50%',
-    transform: 'translateX(-50%)',
-    '&.show': {
-      opacity: '1',
-      visibility: 'visible',
-      transition: '.3s ease',
-    },
-    '&.with-icon.success': {
-      borderColor: '#00CF86',
-    },
-  },
   formFooterLabel: {
     composes: 'mb-3',
     fontSize: '0.889rem',
@@ -292,6 +271,7 @@ export const UpdatesPage = () => {
   const [user, setUser] = useState(null);
   const [formSubmitted, setFormSubmitted] = useState(false);
   const publicAdministrationValue = 'public-administration';
+  const [, dispatch] = useContext(GlobalStateContext);
 
   const {
     site: {
@@ -360,18 +340,6 @@ export const UpdatesPage = () => {
     const spinner = document.querySelector('.spinner');
     spinner.classList.remove('hidden');
 
-    const notificationElement = document.querySelector('.notification');
-    const titleElement = notificationElement.querySelector('h5');
-    const descriptionElement = notificationElement.querySelector('p');
-
-    const closeNotification = notificationElement.querySelector('.notification-close');
-
-    const closeNotificationHandler = (event) => {
-      event.target.closest('.notification').classList.remove('show');
-      closeNotification.removeEventListener('click', closeNotificationHandler);
-    };
-    closeNotification.addEventListener('click', closeNotificationHandler);
-
     fetch(`${apiUrl}/users`, {
       method: 'POST',
       headers: {
@@ -383,30 +351,21 @@ export const UpdatesPage = () => {
         const data = await response.json();
         const status = response.status;
         setTimeout(() => {
-          if (status >= 200 && status <= 299) {
-            notificationElement.classList.add('show');
-            notificationElement.classList.add('success');
-
-            titleElement.innerHTML = `${successLabels.icon} ${successLabels.title}`;
-            descriptionElement.innerHTML = successLabels.description;
+          if (status <= 200 && status >= 299) {
             announce('Inviato con successo');
             reset(data);
+            window.location.assign('../richiesta-inviata');
             setTimeout(() => {
-              notificationElement.classList.remove('show');
               setFormSubmitted(true);
             }, 5000);
           } else {
-            notificationElement.classList.add('show');
-            notificationElement.classList.add('error');
+            dispatch({
+              type: 'SET:UPDATE_DATA',
+              payload: data,
+            });
+            window.location.assign('../richiesta-errore');
             setFormSubmitted(false);
             announce("Errore nell'invio");
-            if (data.message.includes('already exists')) {
-              titleElement.innerHTML = `${errorLabels.icon} ${errorAddressLabel.title}`;
-              descriptionElement.innerHTML = errorAddressLabel.description;
-            } else {
-              titleElement.innerHTML = `${errorLabels.icon} ${errorLabels.title}`;
-              descriptionElement.innerHTML = errorLabels.description;
-            }
           }
         }, 500);
       })

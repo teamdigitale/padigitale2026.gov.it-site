@@ -19,6 +19,8 @@ const reducer = (state, { type, payload }) => {
       return { ...state, modalStateMessage: !state.modalStateMessage };
     case 'SET:ACTIVE_HEADER':
       return { ...state, activeItem: payload?.activeItem };
+    case 'SET:UPDATE_DATA':
+      return { ...state, updateData: payload?.updateData };
     default:
       return { ...state };
   }
