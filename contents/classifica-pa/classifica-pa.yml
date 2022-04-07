@@ -20,7 +20,7 @@ verticalTimeline:
     sectionId: 'verify-classification'
   - index: 1
     title: 'Compila il questionario per modificare la classificazione automatica'
-    icon: '/assets/goals-card.svg'
+    icon: '/assets/configura-pacchetto.svg'
     headerParagraph: "<strong>Nel caso avessi bisogno di aggiungere un servizio oppure di modificare la classificazione</strong> automatica proposta, puoi compilare il questionario per determinare una nuova classificazione."
     sectionId: 'questionario'
   - index: 2
@@ -29,7 +29,7 @@ verticalTimeline:
     headerParagraph: "Una volta inviato il questionario di classificazione, <strong>l’Agenzia per la Cybersicurezza Nazionale eseguirà le verifiche di fattibilità</strong> entro 90 giorni."
     sectionId: 'send-classification'
   - index: 3
-    title: 'receive-updates'
+    title: 'Ricevi aggiornamenti'
     icon: '/assets/notifiche.svg'
     headerParagraph: "All’interno della tua area riservata puoi controllare <strong>lo stato della classificazione e ricevere notifiche dedicate</strong> sullo stato di approvazione."
-    sectionId: 'verify-data'
+    sectionId: 'receive-updates'
