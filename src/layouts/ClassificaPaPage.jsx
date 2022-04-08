@@ -10,7 +10,6 @@ import { SEO } from '../components/SEO';
 import seo from '../../contents/seo.yml';
 import content from '../../contents/classifica-pa/classifica-pa.yml';
 import { TimelineVerticalCards } from '../components/TimelineVerticalCards';
-/* import { Totop } from '../components/Totop'; */
 import { SideNavigationAccordion } from './sideNavigationAccordion';
 
 const { title: seoTitle, description: seoDescription } = seo.classificaPaPage;
@@ -152,7 +151,6 @@ export const ClassificaPaPage = () => {
   const [inputValue, setInputValue] = useState('');
   const [questions, setQuestions] = useState(faq.questions);
   const [isMobile, setIsMobile] = useState();
-  // const [, dispatch] = useContext(GlobalStateContext);
 
   useEffect(() => {
     setIsMobile(window.innerWidth < 992);
@@ -218,7 +216,6 @@ export const ClassificaPaPage = () => {
               role="region"
               aria-label="Lista punti da seguire"
             >
-              {/*  <Totop /> */}
               <Container className="pl-lg-4 mb-4">
                 <section>
                   <h4 className={`${classes.contentTitle} mt-5`}>
@@ -230,20 +227,6 @@ export const ClassificaPaPage = () => {
                 </section>
               </Container>
               <TimelineVerticalCards item={verticalTimeline} />
-              {/* <Container className="pl-lg-4">
-                <section id="to-read-more">
-                  <h4 className={`${classes.contentTitle} mb-4`}>Per approfondire</h4>
-                  <Row>
-                    <Col xs={12} lg={6} xl={4}>
-                      <a className={classes.cardReadMore}>
-                        <img className={classes.clip} src="/assets/clip.svg" alt=""></img>
-                        <span className={classes.cardTitle}>Banda ultra larga</span>
-                        <span className={classes.cardInfo}>Scarica il PDF (3.7MB)</span>
-                      </a>
-                    </Col>
-                  </Row>
-                </section>
-              </Container> */}
             </div>
           </div>
         </Container>
