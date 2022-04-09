@@ -19,7 +19,7 @@ La presente informativa è resa ai sensi degli articoli 13 e 14 del Regolamento.
 
 ### 2. Titolare del trattamento e Responsabile per la protezione dei dati - Data Protection Officer
 
-Il Titolare del trattamento (il “**Titolare**” o l’“**Amministrazione Centrale**”) è la **Presidenza del Consiglio dei Ministri - Dipartimento per la trasformazione digitale**, con sede in Largo Pietro di Brazzà 86, 00186 Roma, contattabile ai seguenti recapiti:
+Il Titolare del trattamento (il “**Titolare**” o l’“**Amministrazione Centrale**”) è la **Presidenza del Consiglio dei Ministri - Dipartimento per la trasformazione digitale**, con sede in Largo Pietro di Brazzà 86, 00187 Roma, contattabile ai seguenti recapiti:
 
 - Email: [segreteria.trasformazionedigitale@governo.it](mailto:segreteria.trasformazionedigitale@governo.it){class="text-decoration-none font-weight-semibold", rel='noreferrer', target='\_blank', aria-label='Invia un Email a: segreteria.trasformazionedigitale@governo.it (link esterno - Apertura nuova scheda)'}
 - PEC: [diptrasformazionedigitale@pec.governo.it](mailto:diptrasformazionedigitale@pec.governo.it){class="text-decoration-none font-weight-semibold", rel='noreferrer', target='\_blank', aria-label='Invia una PEC a: diptrasformazionedigitale@pec.governo.it (link esterno - Apertura nuova scheda)'}
