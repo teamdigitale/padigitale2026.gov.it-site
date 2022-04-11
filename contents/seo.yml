@@ -45,12 +45,15 @@ standardSolutionPage:
   description: Per le misure con una platea ampia di beneficiari (oltre 1.000 PA), è prevista una modalità di accesso per soluzioni standard. Un percorso semplificato e guidato che va dalla richiesta dei finanziamenti all'erogazione dei fondi.
 creaProfiloPage:
   title: Crea profilo - PA digitale 2026
-  description: Per partecipare agli avvisi è necessario che il rappresentante legale di un'amministrazione presente su IPA (Indice dei domini digitali della Pubblica Amministrazione), o una persona incaricata, avvii la procedura di attivazione della PA sulla piattaforma.
+  description: Per partecipare agli avvisi è necessario che il rappresentante legale di un'amministrazione presente su IPA (Indice dei domicili digitali della Pubblica Amministrazione), o una persona incaricata, avvii la procedura di attivazione della PA sulla piattaforma.
 candidaPaPage:
   title: Candida PA - PA digitale 2026
-  description: Per partecipare agli avvisi è necessario che il rappresentante legale di un'amministrazione presente su IPA (Indice dei domini digitali della Pubblica Amministrazione), o una persona incaricata, avvii la procedura di attivazione della PA sulla piattaforma.
+  description: "Per candidare la tua amministrazione agli avvisi pubblici e richiedere i finanziamenti segui la configurazione guidata per comporre e inviare il documento di candidatura: potrai seguire lo stato di avanzamento della pratica in area riservata."
+classificaPaPage:
+  title: Classifica PA - PA digitale 2026
+  description: La classificazione dati e servizi è un requisito fondamentale da completare entro il 18 luglio 2022 ed è necessaria per avviare il processo di migrazione al cloud e garantire così sicurezza, efficienza e affidabilità dei servizi e delle infrastrutture.
 riceviAssistenzaPage:
   title: Ricevi assistenza - PA digitale 2026
-  description: Per partecipare agli avvisi è necessario che il rappresentante legale di un'amministrazione presente su IPA (Indice dei domini digitali della Pubblica Amministrazione), o una persona incaricata, avvii la procedura di attivazione della PA sulla piattaforma.
+  description: All'interno della sezione dedicata al supporto puoi consultare le risposte alle domande più frequenti o aprire una richiesta per ricevere assistenza.
 
 
