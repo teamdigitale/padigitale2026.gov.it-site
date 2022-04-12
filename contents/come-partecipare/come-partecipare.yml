@@ -16,6 +16,10 @@ keypoints:
       title: 'Ricevere assistenza'
       desc: 'Per risolvere dubbi o problemi riguardo la piattaforma e le candidature.'
     - number: "03"
+      image: 'candida-pa-lens.svg'
+      title: 'Classificare dati e servizi'
+      desc: 'Per abilitare il processo di migrazione delle PA al cloud.'
+    - number: "04"
       image: 'invia-candidatura.svg'
       title: 'Candidare una PA agli avvisi'
       desc: 'Attraverso la creazione e l’invio del documento di candidatura.'
@@ -45,12 +49,14 @@ sectionSecond:
   BottomLinkLabel1: Come funziona l'accesso con SPID/CIE
   BottomLinkLabel2: Cosa può fare il rappresentante legale
   ariaLabel: "Scopri di più su come candidare una PA agli avvisi"
+  reverse: true
 sectionThird:
   number: '03'
   title: 'Classificare dati e servizi'
   text: La classificazione dei dati e dei servizi è fondamentale per <strong>abilitare il processo di migrazione delle PA al cloud</strong>.</br></br>La classificazione deve essere trasmessa entro il 18 luglio 2022 per identificare la tipologia del cloud di destinazione per i servizi della PA.
   image: 'kp-section-3.svg'
   button: true
+  linkTo: "/come-partecipare/classifica-pa"
   lBlue: true
   ariaLabel: "Scopri di più su come classificare dati e servizi"
 sectionFourth:
