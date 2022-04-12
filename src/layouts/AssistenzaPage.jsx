@@ -326,7 +326,7 @@ const useStyles = createUseStyles({
 });
 
 export const AssistenzaPage = () => {
-  const textareaMaxLength = 300;
+  const textareaMaxLength = 700;
   const [textareaDescriptionState, setTextareaDescriptionState] = useState('not-active');
   const [formFilled, setFormFilled] = useState(false);
   const isInvalidValue = 'is-invalid';

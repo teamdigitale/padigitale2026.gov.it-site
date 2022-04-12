@@ -3,7 +3,7 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable max-lines-per-function */
 /* eslint-disable sonarjs/cognitive-complexity */
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { createUseStyles } from 'react-jss';
 import { Row, Col, Button, Input } from 'design-react-kit';
@@ -15,7 +15,6 @@ import { SEO } from '../components/SEO';
 import content from '../../contents/opportunity-page/opportunity.yml';
 import links from '../../contents/links.yml';
 import { Breadcrumb } from '../components/Breadcrumb';
-import { GlobalStateContext } from '../context/globalContext';
 
 const { title: seoTitle, description: seoDescription } = seo.supportPage;
 const { privacy } = links.internalLinks;
@@ -271,7 +270,24 @@ export const UpdatesPage = () => {
   const [user, setUser] = useState(null);
   const [formSubmitted, setFormSubmitted] = useState(false);
   const publicAdministrationValue = 'public-administration';
-  const [, dispatch] = useContext(GlobalStateContext);
+  const [representativeSelected, setRepresentativeSelected] = useState(null);
+  const [enteSelected, setEnteSelected] = useState(null);
+
+  const {
+    selectRepresent,
+    selectInQuanto,
+    mandatoryAdvise,
+    requiredLabel,
+    emailValidationLabel,
+    emailLabel,
+    representLabel,
+    selectPlaceholder,
+    enteValidationLabel,
+    enteTypeLabel,
+    enteNameLabel,
+    inQuantoLabel,
+    sendButtonLabel,
+  } = content.modal;
 
   const {
     site: {
@@ -284,6 +300,7 @@ export const UpdatesPage = () => {
     handleSubmit,
     formState: { errors },
     reset,
+    setValue,
   } = useForm();
 
   const classes = useStyles();
@@ -326,8 +343,39 @@ export const UpdatesPage = () => {
     });
   };
 
+  useEffect(() => {
+    const updateData = JSON.parse(localStorage.getItem('updateData'));
+    if (updateData) {
+      localStorage.setItem('updateData', null);
+      const keys = Object.keys(updateData);
+      keys.forEach((key) => {
+        if (key === 'representative') {
+          const selectedOption = selectRepresent.find((option) => {
+            if (option.value === updateData[key]) {
+              return option;
+            }
+          });
+          setRepresentativeSelected(selectedOption);
+        }
+        if (key === 'enteSelect') {
+          const selectedOption = selectInQuanto.find((option) => {
+            if (option.value === updateData[key]) {
+              return option;
+            }
+          });
+          setEnteSelected(selectedOption);
+        }
+        setTimeout(() => {
+          setValue(key, updateData[key]);
+        }, 500);
+      });
+      setTimeout(() => {
+        setFormValidate(true);
+      }, 500);
+    }
+  }, []);
+
   const onSubmit = async (data) => {
-    console.log(data);
     Object.keys(data).map(function (key) {
       if (data[key] === undefined) {
         delete data[key];
@@ -348,21 +396,18 @@ export const UpdatesPage = () => {
       body: JSON.stringify(data),
     })
       .then(async (response) => {
-        const data = await response.json();
         const status = response.status;
         setTimeout(() => {
-          if (status <= 200 && status >= 299) {
+          if (status >= 200 && status <= 299) {
             announce('Inviato con successo');
             reset(data);
             window.location.assign('../richiesta-inviata');
             setTimeout(() => {
               setFormSubmitted(true);
             }, 5000);
+            localStorage.setItem('updateData', null);
           } else {
-            dispatch({
-              type: 'SET:UPDATE_DATA',
-              payload: data,
-            });
+            localStorage.setItem('updateData', JSON.stringify(data));
             window.location.assign('../richiesta-errore');
             setFormSubmitted(false);
             announce("Errore nell'invio");
@@ -387,7 +432,12 @@ export const UpdatesPage = () => {
   }, []);
 
   const inQuantoHandler = (e) => {
+    setEnteSelected(null);
     setInasmuchValue(e.value);
+  };
+
+  const representativeHandler = () => {
+    setRepresentativeSelected(null);
   };
 
   useEffect(() => {
@@ -444,21 +494,6 @@ export const UpdatesPage = () => {
     reset(user);
   }, [user]);
 
-  const {
-    selectRepresent,
-    selectInQuanto,
-    mandatoryAdvise,
-    requiredLabel,
-    emailValidationLabel,
-    emailLabel,
-    representLabel,
-    selectPlaceholder,
-    enteValidationLabel,
-    enteTypeLabel,
-    enteNameLabel,
-    inQuantoLabel,
-    sendButtonLabel,
-  } = content.modal;
   return (
     <>
       <SEO title={seoTitle} description={seoDescription} />
@@ -543,10 +578,13 @@ export const UpdatesPage = () => {
                     rules={{ required: true }}
                     render={({ field: { onChange, value } }) => (
                       <Select
-                        value={value}
+                        value={representativeSelected ? representativeSelected : value}
                         id="represent-select"
                         inputId="represent-select-input"
-                        onChange={onChange}
+                        onChange={(e) => {
+                          representativeHandler(e);
+                          onChange(e);
+                        }}
                         options={selectRepresent}
                         placeholder={selectPlaceholder}
                         aria-label={selectPlaceholder}
@@ -657,7 +695,7 @@ export const UpdatesPage = () => {
                       }}
                       render={({ field: { onChange, value } }) => (
                         <Select
-                          value={value}
+                          value={enteSelected ? enteSelected : value}
                           id="enteSelect"
                           inputId="enteSelect-input"
                           onChange={(e) => {
