@@ -4,6 +4,7 @@
 import React, { useState, useEffect } from 'react';
 import { createUseStyles } from 'react-jss';
 import { announce } from '@react-aria/live-announcer';
+import { navigate } from 'gatsby';
 import { Row, Col, Input, Breadcrumb, BreadcrumbItem } from 'design-react-kit';
 import Select from 'react-select';
 import ReCAPTCHA from 'react-google-recaptcha';
@@ -483,7 +484,7 @@ export const AssistenzaPage = () => {
 
   const formHandler = (event) => {
     setTimeout(() => {
-      window.location.assign('../../richiesta-inviata');
+      navigate('../../richiesta-inviata');
       event.target.reset();
       window.grecaptcha.reset();
       setFormFilled(false);

@@ -9,7 +9,7 @@ import { createUseStyles } from 'react-jss';
 import { Row, Col, Button, Input } from 'design-react-kit';
 import Select from 'react-select';
 import { announce } from '@react-aria/live-announcer';
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql, useStaticQuery, navigate } from 'gatsby';
 import seo from '../../contents/seo.yml';
 import { SEO } from '../components/SEO';
 import content from '../../contents/opportunity-page/opportunity.yml';
@@ -401,14 +401,14 @@ export const UpdatesPage = () => {
           if (status >= 200 && status <= 299) {
             announce('Inviato con successo');
             reset(data);
-            window.location.assign('../richiesta-inviata');
+            navigate('../richiesta-inviata');
             setTimeout(() => {
               setFormSubmitted(true);
             }, 5000);
             localStorage.setItem('updateData', null);
           } else {
             localStorage.setItem('updateData', JSON.stringify(data));
-            window.location.assign('../richiesta-errore');
+            navigate('../richiesta-errore');
             setFormSubmitted(false);
             announce("Errore nell'invio");
           }
