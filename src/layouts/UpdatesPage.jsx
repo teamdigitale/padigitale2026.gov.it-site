@@ -582,7 +582,7 @@ export const UpdatesPage = () => {
                         id="represent-select"
                         inputId="represent-select-input"
                         onChange={(e) => {
-                          representativeHandler(e);
+                          representativeHandler();
                           onChange(e);
                         }}
                         options={selectRepresent}
