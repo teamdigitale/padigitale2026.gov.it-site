@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'design-react-kit';
-import FormResult from '../components/FormResult';
+import { FormResult } from '../components/FormResult';
 import { SEO } from '../components/SEO';
 import content from '../../contents/assistenza/assistenza.yml';
 import seo from '../../contents/seo.yml';
