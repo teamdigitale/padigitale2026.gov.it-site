@@ -20,7 +20,7 @@ verticalTimeline:
     sectionId: 'verify-classification'
   - index: 1
     title: 'Compila il questionario per modificare la classificazione automatica'
-    icon: '/assets/configura-pacchetto.svg'
+    icon: '/assets/goals-card.svg'
     headerParagraph: "<strong>Nel caso avessi bisogno di aggiungere un servizio oppure di modificare la classificazione</strong> automatica proposta, puoi compilare il questionario per determinare una nuova classificazione."
     sectionId: 'questionario'
   - index: 2

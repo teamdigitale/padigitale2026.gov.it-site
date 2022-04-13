@@ -56,7 +56,7 @@ const useStyles = createUseStyles({
         fontWeight: '600',
         lineHeight: '1.24',
         display: 'inline-flex',
-        alignItems: 'center',
+        alignItems: 'baseline',
         '@media (min-width: 992px)': {
           fontSize: '0.889rem',
           lineHeight: '1.44',
