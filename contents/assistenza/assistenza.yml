@@ -70,7 +70,7 @@ modal:
   sendButtonLabel: INVIA
 assistanceSuccess:
   image: assets/assistance-success.svg
-  altImg: illustrazione successo
+  altImage: illustrazione successo
   title: Richiesta di assistenza inviata
   text: Abbiamo ricevuto la tua richiesta di assistenza. Riceverai un riscontro al più presto ai contatti indicati.
   link: "/"
@@ -78,7 +78,7 @@ assistanceSuccess:
   btnLabel: TORNA ALLA HOME
 updateSuccess:
   image: assets/assistance-success.svg
-  altImg: illustrazione successo
+  altImage: illustrazione successo
   title: Indirizzo email da confermare
   text: Per completare la richiesta, fai click sul link che ti abbiamo inviato all’indirizzo email indicato.
   link: "/"
@@ -86,7 +86,7 @@ updateSuccess:
   btnLabel: TORNA ALLA HOME
 updateError:
   image: assets/error-page.svg
-  altImg: illustrazione errore
+  altImage: illustrazione errore
   title: Attenzione, non è possibile completare la richiesta
   text: Si è verificato un errore durante l’invio dei dati.
   link: "/ricevi-aggiornamenti"
