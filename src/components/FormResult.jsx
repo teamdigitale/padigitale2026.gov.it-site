@@ -23,7 +23,7 @@ const useStyles = createUseStyles({
   },
   resultParagraph: {
     fontSize: '1.111rem',
-    color: '#5A768A',
+    color: '#33485C',
   },
   linkHome: {
     color: '#06c',
