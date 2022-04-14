@@ -159,4 +159,5 @@ HeroSolutions.propTypes = {
   title: PropTypes.string,
   body: PropTypes.string,
   image: PropTypes.string,
+  isH1: PropTypes.bool,
 };
