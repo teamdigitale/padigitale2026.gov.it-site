@@ -236,9 +236,9 @@ export const SideNavigationAccordion = (props) => {
       <nav aria-labelledby="table-of-contents">
         <Accordion>
           <AccordionHeader active={collapseOpen} onToggle={() => setCollapseOpen(!collapseOpen)}>
-            <h3 id="table-of-contents" className="sr-only">
+            <h2 id="table-of-contents" className="sr-only">
               Indice dei contenuti
-            </h3>
+            </h2>
             <span className="title">INDICE DELLA PAGINA</span>
             <div className="scroll-indicator">
               <div className="scroll-indicator-active"></div>

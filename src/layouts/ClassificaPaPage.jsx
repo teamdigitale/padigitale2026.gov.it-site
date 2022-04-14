@@ -194,7 +194,7 @@ export const ClassificaPaPage = () => {
           </Row>
           <Row className="mb-5 mt-5">
             <Col xs={12} lg={7}>
-              <h2 className={classes.titleUpdate}>Classifica i dati e i servizi della tua PA</h2>
+              <h1 className={classes.titleUpdate}>Classifica i dati e i servizi della tua PA</h1>
               <div className={classes.subtitleUpdate}>
                 La classificazione dati e servizi è un requisito fondamentale da completare entro il 18 luglio 2022 ed è{' '}
                 <strong>necessaria per avviare il processo di migrazione al cloud</strong> e garantire così sicurezza,

@@ -311,9 +311,9 @@ export const AccordionButtonFull = (props) => {
         ></Button>
         <div className={classes.cardWrapper}>
           <div className={classes.cardHeader}>
-            <h4 className={classes.cardTitle} onClick={eventHandler}>
+            <h3 className={classes.cardTitle} onClick={eventHandler}>
               <span>{number}</span> {title}
-            </h4>
+            </h3>
             <div className={classes.cardHeaderValue} dangerouslySetInnerHTML={{ __html: money }} />
             <div className={classes.cardTags}>
               <p className="tag-title">Beneficiari</p>

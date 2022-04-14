@@ -7,7 +7,7 @@ import seo from '../../contents/seo.yml';
 
 export const ConfirmAddressPage = () => {
   const { title: seoTitle, description: seoDescription } = seo.updateSuccessPage;
-  const assistanceSuccess = content.assistanceSuccess;
+  const updateSuccess = content.updateSuccess;
 
   return (
     <>
@@ -15,7 +15,7 @@ export const ConfirmAddressPage = () => {
       <Container className="px-3">
         <Row>
           <Col xs={12} lg={6} className="offset-lg-3">
-            <FormResult resultObject={assistanceSuccess}></FormResult>
+            <FormResult resultObject={updateSuccess}></FormResult>
           </Col>
         </Row>
       </Container>

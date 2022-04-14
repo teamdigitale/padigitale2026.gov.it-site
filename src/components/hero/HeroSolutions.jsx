@@ -124,7 +124,7 @@ const useStyles = createUseStyles({
   },
 });
 
-export const HeroSolutions = ({ title, body, image }) => {
+export const HeroSolutions = ({ title, body, image, isH1 }) => {
   const classes = useStyles();
 
   return (
@@ -137,7 +137,7 @@ export const HeroSolutions = ({ title, body, image }) => {
                 <Row className="m-0">
                   <Col lg={6} xs={12} className="pr-3">
                     <div className={classes.textWrapper}>
-                      <HeroTitle title={title} className={classes.heroTitle} />
+                      <HeroTitle title={title} className={classes.heroTitle} Tag={isH1 ? 'h1' : 'h3'} />
                       <HeroParagraph text={body} className={classes.heroSubtitle} />
                     </div>
                   </Col>

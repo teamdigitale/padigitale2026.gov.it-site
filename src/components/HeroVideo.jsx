@@ -60,7 +60,7 @@ export const HeroVideo = () => {
     <>
       <div className={classes.heroVideo}>
         <div className={classes.info}>
-          <h4>Guarda il video dedicato</h4>
+          <h3>Guarda il video dedicato</h3>
           <p>Scopri come attivare il profilo della tua amministrazione su PA digitale 2026.</p>
         </div>
         <div className={classes.videoContainer}>

@@ -180,9 +180,6 @@ export const CreaProfiloPage = () => {
   return (
     <>
       <SEO title={seoTitle} description={seoDescription} />
-      <div className="sr-only">
-        <h2>{faq.name}</h2>
-      </div>
       <div className="pb-5">
         <Container className="px-3">
           <Row>
@@ -204,7 +201,7 @@ export const CreaProfiloPage = () => {
           </Row>
           <Row className="mb-5 mt-5">
             <Col xs={12} lg={7}>
-              <h2 className={classes.titleUpdate}>Attiva il profilo della tua PA: identità digitale e dati IPA</h2>
+              <h1 className={classes.titleUpdate}>Attiva il profilo della tua PA: identità digitale e dati IPA</h1>
               <div className={classes.subtitleUpdate}>
                 <strong>Per partecipare agli avvisi</strong> è necessario che il{' '}
                 <strong>rappresentante legale di un'amministrazione presente su IPA</strong> (Indice dei domicili
@@ -217,9 +214,6 @@ export const CreaProfiloPage = () => {
             </Col>
           </Row>
           <div className={classes.navigationContainer}>
-            <h3 id="question-section" className="sr-only">
-              Sezione domande frequenti
-            </h3>
             <SideNavigationAccordion activeList={questions} searchValue={inputValue} list={sidebar} />
             <div
               className="pl-lg-3 content-container"
@@ -230,7 +224,7 @@ export const CreaProfiloPage = () => {
               {/*  <Totop /> */}
               <Container className="pl-lg-4 mb-4">
                 <section>
-                  <h4 className={`${classes.contentTitle} mt-5`}>Attiva il profilo della tua amministrazione</h4>
+                  <h3 className={`${classes.contentTitle} mt-5`}>Attiva il profilo della tua amministrazione</h3>
                   <p className={`${classes.contentParagraph} mb-0`}>
                     Il processo di attivazione della PA prevede <strong>quattro passaggi</strong>:
                   </p>

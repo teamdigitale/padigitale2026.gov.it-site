@@ -514,9 +514,6 @@ export const AssistenzaPage = () => {
   return (
     <>
       <SEO title={seoTitle} description={seoDescription} />
-      <div className="sr-only">
-        <h2>{content.name}</h2>
-      </div>
       <div className="container px-3">
         <Row>
           <Col xs="12">
@@ -540,7 +537,7 @@ export const AssistenzaPage = () => {
         <iframe name="formFrame" id="formFrame" className="d-none" title="no-redirect"></iframe>
         <Row className="mt-5">
           <Col xs={12} md={6} lg={5}>
-            <h3 className={classes.titleUpdate}>Assistenza</h3>
+            <h1 className={classes.titleUpdate}>Assistenza</h1>
             <div className={classes.subtitleUpdate}>
               Un team dedicato è a tua disposizione per chiarire dubbi e approfondire temi di interesse. Compila il
               modulo sottostante e invia la richiesta.

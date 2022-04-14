@@ -90,9 +90,9 @@ export const Beneficiaries = (props) => {
             <Row>
               <Col xs="12" lg="5" id="beneficiari">
                 <span className={classes.category}>{category}</span>
-                <h3 className={classes.title} id="beneficiaries-title">
+                <h2 className={classes.title} id="beneficiaries-title">
                   {title}
-                </h3>
+                </h2>
               </Col>
             </Row>
             <Row>
@@ -101,7 +101,7 @@ export const Beneficiaries = (props) => {
                   <Col lg="6" className="px-lg-3">
                     <div className={classes.headCategory}>
                       <img src={category.icon} alt="" />
-                      <h4 className="category-title">{category.name}</h4>
+                      <h3 className="category-title">{category.name}</h3>
                     </div>
                     <ul className={classes.beneficiariesList}>
                       {category.items.map((item) => (
