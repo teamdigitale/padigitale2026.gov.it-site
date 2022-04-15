@@ -213,6 +213,8 @@ beneficiaries:
         value: aziende-ospedaliere
       - value: regioni
         label: Regioni
+      - value: province-autonome
+        label: Province autonome
       - value: universita
         label: Università
       - value: istituti-ricerca-afam
