@@ -169,6 +169,7 @@ export const HeroImageBackground = ({
   overlap,
   noButton,
   titleId,
+  isH1,
 }) => {
   const classes = useStyles();
   return (
@@ -180,7 +181,7 @@ export const HeroImageBackground = ({
             <Col xs="12" lg="5" className="offset-lg-1">
               <div className={`${classes.contentWrapper} ${theme} mt-5`}>
                 <div>
-                  <HeroTitle id={titleId} Tag="h3" title={title} className={classes.heroTitle} />
+                  <HeroTitle id={titleId} Tag={isH1 ? 'h1' : 'h3'} title={title} className={classes.heroTitle} />
                   <HeroParagraph text={body} className={classes.heroSubtitle} />
                   <div className={classes.buttonContainer}>
                     {noButton ? (
@@ -229,4 +230,5 @@ HeroImageBackground.propTypes = {
   overlap: PropTypes.bool,
   noButton: PropTypes.bool,
   titleId: PropTypes.string,
+  isH1: PropTypes.bool,
 };

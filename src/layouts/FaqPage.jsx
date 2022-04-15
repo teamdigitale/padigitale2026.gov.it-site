@@ -206,15 +206,12 @@ export const FaqPage = () => {
   return (
     <>
       <SEO title={seoTitle} description={seoDescription} />
-      <div className="sr-only">
-        <h2>{faq.name}</h2>
-      </div>
       <HeroSupport title={faq.hero.title} subtitle={faq.hero.subtitle} isFaq={true} />
       <div className="docs py-4 py-md-5">
         <Container className="px-3">
-          <h3 id="question-section" className="sr-only">
+          <h2 id="question-section" className="sr-only">
             Sezione domande frequenti
-          </h3>
+          </h2>
           <Row>
             <Col lg={9} className="offset-lg-3 px-lg-3">
               <div role="search" className={classes.inputContainer} aria-label="Nelle domande frequenti">

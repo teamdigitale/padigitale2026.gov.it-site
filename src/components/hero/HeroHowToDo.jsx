@@ -231,7 +231,7 @@ export const HeroHowToDo = ({ title, body, image, imageMob }) => {
               <div className={`${classes.contentWrapper} d-flex flex-column`}>
                 <Col lg={6} xs={12} className="pr-lg-3 pl-0 pr-0">
                   <div className={classes.textWrapper}>
-                    <HeroTitle title={title} className={classes.heroTitle} />
+                    <HeroTitle title={title} className={classes.heroTitle} Tag="h1" />
                     <HeroParagraph text={body} />
                   </div>
                 </Col>

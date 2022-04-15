@@ -401,7 +401,7 @@ export const UpdatesPage = () => {
           if (status >= 200 && status <= 299) {
             announce('Inviato con successo');
             reset(data);
-            navigate('../richiesta-inviata');
+            navigate('../indirizzo-da-confermare');
             setTimeout(() => {
               setFormSubmitted(true);
             }, 5000);
@@ -498,9 +498,6 @@ export const UpdatesPage = () => {
     <>
       <SEO title={seoTitle} description={seoDescription} />
       <Breadcrumb currentPage="Ricevi aggiornamenti" />
-      <div className="sr-only">
-        <h2>{content.name}</h2>
-      </div>
       <div className="container mt-5 px-3">
         <div className={classes.formBody}>
           <form onSubmit={handleSubmit(onSubmit, onError)} id="updates-form" aria-describedby="mandatory-label">
@@ -508,7 +505,7 @@ export const UpdatesPage = () => {
               <legend>
                 <Row>
                   <Col xs={12} md={6} lg={5}>
-                    <h3 className={classes.titleUpdate}>Ricevi aggiornamenti</h3>
+                    <h1 className={classes.titleUpdate}>Ricevi aggiornamenti</h1>
                     <div className={classes.subtitleUpdate}>
                       Ricevi materiali e informazioni sulle novità e gli avvisi di Italia digitale 2026.
                     </div>

@@ -190,9 +190,6 @@ export const SideNavigation = (props) => {
   return (
     <Sidebar className={`${classes.wrapper} p-0`}>
       <nav aria-labelledby="table-of-contents">
-        <h3 id="table-of-contents" className="sr-only">
-          Indice dei contenuti
-        </h3>
         <LinkList>
           {isMobile && (
             <LinkListItem

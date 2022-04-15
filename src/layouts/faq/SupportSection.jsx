@@ -121,14 +121,14 @@ export const SupportSection = (props) => {
   return (
     <>
       <section className={classes.sectionMuted} aria-labelledby="support-section">
-        <h3 id="support-section" className="sr-only">
+        <h2 id="support-section" className="sr-only">
           Supporto
-        </h3>
+        </h2>
         <div className="container px-3">
           <Row>
             <Col md={8} lg={6} className={classes.layout}>
               <p className={classes.tag}>SUPPORTO</p>
-              <h4 className={classes.sectionTitle}>{title}</h4>
+              <h3 className={classes.sectionTitle}>{title}</h3>
             </Col>
           </Row>
           <Row>
@@ -140,7 +140,7 @@ export const SupportSection = (props) => {
                       <Link to={card.link} className={classes.cleanLink}>
                         <Card teaser noWrapper className={classes.cardWrapper}>
                           <CardBody>
-                            <CardTitle tag="h3" className={classes.cardTitle}>
+                            <CardTitle tag="h4" className={classes.cardTitle}>
                               {card.title}
                             </CardTitle>
                             <CardText className={classes.cardText}>{card.description}</CardText>

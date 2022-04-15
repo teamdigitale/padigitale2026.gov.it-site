@@ -64,7 +64,7 @@ export const Assistance = () => {
       <Hero className={`${classes.heroAssistanceBg} pt-0`}>
         <div className="row align-items-center flex-column-reverse flex-lg-row">
           <div className="offset-lg-1 col-lg-5 mt-3 mt-lg-0 pr-lg-5">
-            <HeroTitle title={title} className={classes.heroTitle} />
+            <HeroTitle title={title} className={classes.heroTitle} Tag='h2'/>
             <HeroBody html={body} />
             <HeroCtaContainer>
               <Link to="/supporto/assistenza" className={`${classes.heroBtn} btn btn-primary`} aria-label="Vai alla sezioni scrivici per ricevere assistenza">

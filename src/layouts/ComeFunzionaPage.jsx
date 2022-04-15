@@ -91,9 +91,6 @@ export const ComeFunzionaPage = () => {
           </Col>
         </Row>
       </div>
-      <div className="sr-only">
-        <h2>{content.name}</h2>
-      </div>
       <HeroHowItWorks
         title={content.hero.title}
         body={content.hero.body}

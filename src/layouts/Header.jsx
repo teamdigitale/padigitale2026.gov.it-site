@@ -431,7 +431,7 @@ const CenterHeader = () => {
                 <img className="icon repubblica-logo" src="/assets/repubblica-logo-blue.svg" alt="" />
                 <img className="icon site-logo" src="/assets/site-logo.svg" alt="" />
                 <div className="d-none d-lg-inline-block">
-                  <h1 className="h3 mb-0">{headerTitle}</h1>
+                  <div className="h3 mb-0">{headerTitle}</div>
                   <div className={classes.subtitle}>{headerSubtitle}</div>
                 </div>
               </div>
@@ -470,14 +470,11 @@ const NavHeader = () => {
         expand="lg"
         megamenu
         /* aria-label={ariaLabel.menu} */
-        aria-labelledby="menu-principale"
+        aria-label="menu-principale"
         className="px-2"
         id="menu-principale-anchor"
         tabIndex="-1"
       >
-        <h2 id="menu-principale" className="sr-only">
-          Menu principale
-        </h2>
         <button
           onClick={() => setIsOpen(!isOpen)}
           aria-label={ariaLabel.toggleMenu}

@@ -155,7 +155,7 @@ export const ProjectsCards = (item) => {
             <div className={classes.card}>
               <div className={classes.cardBody}>
                 <div>
-                  <h4 className={classes.cardTitle}>{projectsCardsItem.cardTitleRight}</h4>
+                  <h3 className={classes.cardTitle}>{projectsCardsItem.cardTitleRight}</h3>
                   <p className={classes.cardText}>{projectsCardsItem.cardTextRight}</p>
                 </div>
                 <img src="/assets/projects-solution.svg" alt=""></img>

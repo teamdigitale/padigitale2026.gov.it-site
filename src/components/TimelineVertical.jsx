@@ -269,7 +269,7 @@ export const TimelineVertical = ({ item }) => {
                   <div className={classes.pointHeader}>
                     <img src={elem.icon} alt=""></img>
                     <div className={classes.headerInfo}>
-                      <h4 className={classes.headerTitle}>{elem.title}</h4>
+                      <h3 className={classes.headerTitle}>{elem.title}</h3>
                       <p
                         className={classes.headerParagraph}
                         dangerouslySetInnerHTML={{

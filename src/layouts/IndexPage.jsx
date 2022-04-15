@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import {
-  name,
   heroMainBanner,
   heroPnrr,
   heroCarouselNews,
@@ -39,9 +38,7 @@ export const IndexPage = () => {
   return (
     <>
       <SEO title={seoTitle} description={seoDescription} />
-      <div className="sr-only">
-        <h2>{name}</h2>
-      </div>
+      <h1 className="sr-only">Home page PA digitale 2026</h1>
       <HeroImage
         dark={true}
         mainHero={true}

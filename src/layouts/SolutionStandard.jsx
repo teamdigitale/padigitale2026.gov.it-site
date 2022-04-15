@@ -63,7 +63,6 @@ export const SolutionStandard = () => {
   return (
     <>
       <SEO title={seoTitle} description={seoDescription} />
-      <h1 className="sr-only">{seoTitle}</h1>
       <div className="container px-3">
         <Row>
           <Col xs="12">
@@ -89,7 +88,9 @@ export const SolutionStandard = () => {
         image="standard-solution-big.svg"
         theme="bg-white"
         smallText="true"
+        isH1={true}
       />
+      <h2 className="sr-only">fasi per accedere</h2>
       <TimelineVertical item={verticalTimeline} />
       <HeroMode
         ctaContainer={true}

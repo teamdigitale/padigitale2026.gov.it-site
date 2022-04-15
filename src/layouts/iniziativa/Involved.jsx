@@ -90,9 +90,9 @@ export const Involved = (props) => {
           <Row>
             <Col xs="12" lg="7" xl="5" className="offset-lg-1" id="attori-coinvolti">
               <span className={classes.category}>{category}</span>
-              <h3 className={classes.title} id="involved-actors-title">
+              <h2 className={classes.title} id="involved-actors-title">
                 {title}
-              </h3>
+              </h2>
             </Col>
           </Row>
           <Row role="list">{actorsCards}</Row>

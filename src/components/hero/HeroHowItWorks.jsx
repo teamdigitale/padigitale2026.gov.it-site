@@ -221,7 +221,7 @@ export const HeroHowItWorks = ({ title, body, image, list }) => {
                 <Row className="m-0">
                   <Col lg={6} xs={12} className="pr-3">
                     <div className={classes.textWrapper}>
-                      <HeroTitle title={title} className={classes.heroTitle} />
+                      <HeroTitle title={title} className={classes.heroTitle} Tag="h1" />
                       <HeroParagraph text={body} className={classes.heroSubtitle} />
                     </div>
                     <div className={classes.listWrapper}>
