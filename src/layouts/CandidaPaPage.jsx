@@ -10,12 +10,13 @@ import { SEO } from '../components/SEO';
 import seo from '../../contents/seo.yml';
 import content from '../../contents/candida-pa/candida-pa.yml';
 import { TimelineVerticalCards } from '../components/TimelineVerticalCards';
+import { HeroVideo } from '../components/HeroVideo';
 /* import { Totop } from '../components/Totop'; */
 import { SideNavigationAccordion } from './sideNavigationAccordion';
 
 const { title: seoTitle, description: seoDescription } = seo.candidaPaPage;
 
-const { sidebar, verticalTimeline } = content;
+const { sidebar, verticalTimeline, video } = content;
 
 const useStyles = createUseStyles({
   breadcrumb: {
@@ -228,6 +229,9 @@ export const CandidaPaPage = () => {
                 </section>
               </Container>
               <TimelineVerticalCards item={verticalTimeline} />
+              <section id="watch-video">
+                <HeroVideo src={video.src} description={video.description} videoText={video.videoText} />
+              </section>
               {/* <Container className="pl-lg-4">
                 <section id="to-read-more">
                   <h4 className={`${classes.contentTitle} mb-4`}>Per approfondire</h4>

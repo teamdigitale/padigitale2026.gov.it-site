@@ -10,11 +10,12 @@ import { SEO } from '../components/SEO';
 import seo from '../../contents/seo.yml';
 import content from '../../contents/classifica-pa/classifica-pa.yml';
 import { TimelineVerticalCards } from '../components/TimelineVerticalCards';
+import { HeroVideo } from '../components/HeroVideo';
 import { SideNavigationAccordion } from './sideNavigationAccordion';
 
 const { title: seoTitle, description: seoDescription } = seo.classificaPaPage;
 
-const { sidebar, verticalTimeline } = content;
+const { sidebar, verticalTimeline, video } = content;
 
 const useStyles = createUseStyles({
   breadcrumb: {
@@ -227,6 +228,9 @@ export const ClassificaPaPage = () => {
                 </section>
               </Container>
               <TimelineVerticalCards item={verticalTimeline} />
+              <section id="watch-video">
+                <HeroVideo src={video.src} description={video.description} videoText={video.videoText} />
+              </section>
             </div>
           </div>
         </Container>
