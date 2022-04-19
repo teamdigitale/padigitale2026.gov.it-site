@@ -15,6 +15,9 @@ sidebar:
   - sectionTitle: 4. Ricevi aggiornamenti
     sectionId: confirm-subscription
     sectionActive: false
+  - sectionTitle: Guarda il video dedicato
+    sectionId: watch-video
+    sectionActive: false
 verticalTimeline:
   - index: 0
     title: 'Cerca gli avvisi per la tua PA'
@@ -36,3 +39,6 @@ verticalTimeline:
     icon: '/assets/notifiche.svg'
     headerParagraph: 'All’interno dell’area riservata puoi controllare lo stato della tua candidatura e ricevere le <strong>notifiche dedicate all’avanzamento della pratica digitale.</strong>'
     sectionId: 'confirm-subscription'
+video:
+  src: https://www.youtube-nocookie.com/embed/V7y_58sCNzI
+  description: Scopri come candidare la tua amministrazione agli avvisi su PA digitale 2026.
