@@ -98,7 +98,7 @@ export const SideNavigation = (props) => {
   const [isMobile, setIsMobile] = useState();
   const itemSel = '.sidebar-wrapper .link-list .list-item';
   const { activeList, searchValue, list } = props;
-  
+
   useEffect(() => {
     setIsMobile(window.innerWidth < 992);
     window.addEventListener('resize', () => {
