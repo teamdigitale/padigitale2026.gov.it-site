@@ -229,7 +229,7 @@ export const ClassificaPaPage = () => {
               </Container>
               <TimelineVerticalCards item={verticalTimeline} />
               <section id="watch-video">
-                <HeroVideo src={video.src} description={video.description} />
+                <HeroVideo src={video.src} description={video.description} videoText={video.videoText} />
               </section>
             </div>
           </div>

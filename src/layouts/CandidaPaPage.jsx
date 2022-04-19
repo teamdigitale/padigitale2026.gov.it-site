@@ -230,7 +230,7 @@ export const CandidaPaPage = () => {
               </Container>
               <TimelineVerticalCards item={verticalTimeline} />
               <section id="watch-video">
-                <HeroVideo src={video.src} description={video.description} />
+                <HeroVideo src={video.src} description={video.description} videoText={video.videoText} />
               </section>
               {/* <Container className="pl-lg-4">
                 <section id="to-read-more">
