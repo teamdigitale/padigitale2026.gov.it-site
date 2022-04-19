@@ -191,7 +191,7 @@ export const Timeline = ({ content }) => {
           {element.time}
           <span className="arrow"></span>
         </span>
-        <h4 className="title">{element.title}</h4>
+        <h3 className="title">{element.title}</h3>
         <div className="text" dangerouslySetInnerHTML={{ __html: element.text }} />
       </div>
     </>
@@ -205,9 +205,9 @@ export const Timeline = ({ content }) => {
             <Row className="mb-5 ml-0 mr-0">
               <Col xs="12" lg="5" id="timeline-pc" className={`${classes.columnCard} offset-lg-1`}>
                 <span className={classes.category}>{content.category}</span>
-                <h3 className={classes.title} id="timeline-title-pc">
+                <h2 className={classes.title} id="timeline-title-pc">
                   {content.title}
-                </h3>
+                </h2>
               </Col>
             </Row>
           ) : (

@@ -90,6 +90,7 @@ beneficiaries:
     accessSectionId: soluzioni-standard
     accessLabel: Soluzioni Standard
     moreInfoLink: 'https://areariservata.padigitale2026.gov.it/Pa_digitale2026_avvisi'
+    goToButton: true
   - number: 1.3.1
     id: piatt-dig-naz
     title: Piattaforma Digitale Nazionale Dati
@@ -210,8 +211,10 @@ beneficiaries:
         label: ASL
       - label: Aziende Ospedaliere
         value: aziende-ospedaliere
-      - label: Province autonome
-        value: province-autonome
+      - value: regioni
+        label: Regioni
+      - value: province-autonome
+        label: Province autonome
       - value: universita
         label: Università
       - value: istituti-ricerca-afam
@@ -233,8 +236,6 @@ beneficiaries:
     title: Adozione identità digitale
     money: '285 <span>milioni di euro<span>'
     tags:
-      - value: pa-centrali
-        label: PA Centrali
       - value: comuni
         label: Comuni
       - value: scuole
@@ -243,16 +244,20 @@ beneficiaries:
         label: ASL
       - label: Aziende Ospedaliere
         value: aziende-ospedaliere
+      - value: regioni
+        label: Regioni
       - value: province
         label: Province
       - value: citta-metropolitane
         label: Città metropolitane
-      - value: altre-pa-locali
-        label: Altre PAL
       - value: universita
         label: Università
       - value: istituti-ricerca-afam
         label: Istituti di Ricerca e AFAM
+      - value: pa-centrali
+        label: PA Centrali
+      - value: altre-pa-locali
+        label: Altre PAL
     description: |
       Favorire l'adozione dell’identità digitale (Sistema Pubblico di Identità Digitale, SPID e Carta d'Identità Elettronica, CIE) e dell'Anagrafe nazionale della popolazione residente (ANPR).
       <p><strong></strong></p>
@@ -270,10 +275,10 @@ beneficiaries:
     title: Digitalizzazione degli avvisi pubblici
     money: '245 <span>milioni di euro<span>'
     tags:
-      - value: pa-centrali
-        label: PA Centrali
       - value: comuni
         label: Comuni
+      - value: pa-centrali
+        label: PA Centrali
     description: |
       Sviluppare e implementare la Piattaforma notifiche digitali degli atti pubblici, l’infrastruttura che le PA utilizzeranno per la notificazione di atti amministrativi a valore legale verso persone fisiche e giuridiche, contribuendo ad una riduzione di costi e tempo per cittadini ed enti. 
       <p><strong></strong></p>

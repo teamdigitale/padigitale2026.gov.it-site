@@ -10,14 +10,14 @@
     }
 </style>
 
-## Informativa privacy
+# Informativa privacy
 
-### 1. Oggetto del trattamento
+## 1. Oggetto del trattamento
 
 Ai sensi del Regolamento (UE) 2016/679 del Parlamento europeo e del Consiglio del 27 aprile 2016 recante la disciplina europea per la protezione delle persone fisiche con riguardo al trattamento dei dati personali, nonché alla libera circolazione di tali dati (General Data Protection Regulation, in seguito "**Regolamento**"), e nel rispetto del decreto legislativo 30 giugno 2003, n. 196 e s.m.i., questo documento descrive le modalità di trattamento dei dati personali dei soggetti coinvolti e/o interessati a vario titolo alle iniziative finanziate nell’ambito del Piano Nazionale di Ripresa e Resilienza (in seguito, anche “**PNRR**”), nonché a tutte le attività a queste connesse espletabili nell’ambito della piattaforma [www.padigitale2026.gov.it](https://padigitale2026.gov.it/){class="text-decoration-none font-weight-semibold"} (la “**Piattaforma**” o il “**Sito**”).
 La presente informativa è resa ai sensi degli articoli 13 e 14 del Regolamento.
 
-### 2. Titolare del trattamento e Responsabile per la protezione dei dati - Data Protection Officer
+## 2. Titolare del trattamento e Responsabile per la protezione dei dati - Data Protection Officer
 
 Il Titolare del trattamento (il “**Titolare**” o l’“**Amministrazione Centrale**”) è la **Presidenza del Consiglio dei Ministri - Dipartimento per la trasformazione digitale**, con sede in Largo Pietro di Brazzà 86, 00187 Roma, contattabile ai seguenti recapiti:
 
@@ -30,7 +30,7 @@ contattabile ai seguenti recapiti:
 - Email: [responsabileprotezionedatipcm@governo.it](mailto:responsabileprotezionedatipcm@governo.it){class="text-decoration-none font-weight-semibold", rel='noreferrer', target='\_blank', aria-label='Invia un Email a: responsabileprotezionedatipcm@governo.it (link esterno - Apertura nuova scheda)'}
 - PEC: [USG@mailbox.governo.it](mailto:USG@mailbox.governo.it){class="text-decoration-none font-weight-semibold", rel='noreferrer', target='\_blank', aria-label='Invia una PEC a: USG@mailbox.governo.it (link esterno - Apertura nuova scheda)'}
 
-### 3. Finalità del trattamento
+## 3. Finalità del trattamento
 
 I dati personali trasmessi per il tramite della Piattaforma, anche attraverso compilazione e inoltro di moduli, vengono trattati per:
 
@@ -40,7 +40,7 @@ I dati personali trasmessi per il tramite della Piattaforma, anche attraverso co
   <li> <strong>assolvere eventuali obblighi di legge, contabili e fiscali.</strong></li>
 </ol>
 
-### 4. Tipologia di dati conferiti
+## 4. Tipologia di dati conferiti
 
 **4.1 Premessa**
 
@@ -64,7 +64,7 @@ Con riferimento alla finalità di cui ai punti B e C, sezione 3 di questa Inform
 
 - dati relativi ai soggetti coinvolti nell’attuazione, quali i Soggetti Attuatori, realizzatori, destinatari degli interventi, incluso codice fiscale e/o partita IVA.
 
-### 5. Soggetti del trattamento
+## 5. Soggetti del trattamento
 
 Il Titolare tratta i dati personali forniti dai soggetti coinvolti e/o interessati a vario titolo alle iniziative finanziate nell’ambito del Piano Nazionale di Ripresa e Resilienza.
 
@@ -74,25 +74,25 @@ trattamento ai sensi dell’articolo 28 del Regolamento, che, per conto del Tito
 
 L’elenco dei responsabili del trattamento può essere richiesto al Titolare in qualsiasi momento, scrivendo a [segreteria.trasformazionedigitale@governo.it](mailto:segreteria.trasformazionedigitale@governo.it){class="text-decoration-none font-weight-semibold", rel='noreferrer', target='\_blank', aria-label='Invia un Email a: segreteria.trasformazionedigitale@governo.it (link esterno - Apertura nuova scheda)'}
 
-### 6. Modalità del trattamento e ambito di circolazione dei dati
+## 6. Modalità del trattamento e ambito di circolazione dei dati
 
 I dati personali sono trattati secondo i principi di liceità, correttezza, trasparenza e vengono acquisiti e conservati con l’ausilio di sistemi e strumenti, anche elettronici, idonei a garantirne la sicurezza e la riservatezza secondo le modalità previste dalle leggi e dai regolamenti vigenti.
 
 I dati personali potranno essere condivisi, per finalità istituzionali, con soggetti nei confronti dei quali la comunicazione e/o l’eventuale diffusione sia prevista da disposizioni di legge, da regolamenti o dalla normativa comunitaria, ovvero da soggetti pubblici e organi di controllo per lo svolgimento delle loro funzioni istituzionali quali Commissione Europea ed altri Enti e/o Autorità con finalità ispettive, contabili-amministrative e di verifica (es. Istituti di credito, Unità di Audit, ANAC, GdF, OLAF, Corte dei Conti europea-ECA, Procura europea-EPPO ecc.).
 
-### 7. Base giuridica del trattamento
+## 7. Base giuridica del trattamento
 
 La liceità del trattamento dei dati personali trova fondamento (i) ai sensi dell’articolo 6, comma 1, lettera b) del Regolamento, nell’esecuzione di un contratto di cui l’interessato è parte o delle misure precontrattuali adottate su richiesta dello stesso interessato (es. in fase di gestione di attività operative volte a garantire l’eventuale erogazione di contributi o ai fini della gestione dei processi amministrativi, contabili e fiscali); (ii) ai sensi dell’articolo 6, comma 1, lettera c) del Regolamento, nell’adempimento di un obbligo legale al quale è soggetta l’Amministrazione Centrale (es. in fase di gestione dell’attività istruttoria o in fase di comunicazione dei dati in adempimento ai generali obblighi di trasparenza ai sensi del d.lgs. 33/2013 e ss.mm.); (iii) ai sensi dell’articolo 6, comma 1, lettera e) del Regolamento e dell’articolo 2-sexies del Codice privacy, nell'esecuzione dei compiti di interesse pubblico o comunque connessi all'esercizio dei propri pubblici poteri (es. nell’esecuzione delle attività di monitoraggio, analisi, ricerca e nell’esecuzione di attività di comunicazione e promozione relativamente all’attività istituzionale).
 
-### 8. Trasferimento dei dati
+## 8. Trasferimento dei dati
 
 Per la fornitura di alcuni servizi tecnologici, il Titolare potrebbe avvalersi di soggetti ubicati al di fuori dell’Unione Europea. L'eventuale trasferimento dei dati in Paesi situati al di fuori dell'Unione Europea avverrà, in ogni caso, nel rispetto delle garanzie appropriate e opportune ai fini del trasferimento stesso, ai sensi della normativa applicabile e con particolare riferimento agli art. 44 e ss. del Regolamento.
 
-### 9. Tempo di conservazione dei dati personali
+## 9. Tempo di conservazione dei dati personali
 
 Nel rispetto delle norme previste dalla normativa vigente per la conservazione degli atti e dei documenti della P.A., i dati personali saranno conservati per un periodo di tempo non superiore a quello necessario agli scopi per i quali essi sono stati raccolti o successivamente trattati conformemente a quanto previsto dagli obblighi di legge.
 
-### 10. Diritti degli interessati
+## 10. Diritti degli interessati
 
 - **Diritto di accedere ai dati**: è possibile ottenere conferma e informazioni sul trattamento.
 - **Diritto di rettifica**: è possibile rettificare dati inesatti o integrarli.
@@ -103,9 +103,9 @@ Nel rispetto delle norme previste dalla normativa vigente per la conservazione d
 
 Per maggiori informazioni o per esercitare i propri diritti, l’interessato può contattare il Titolare agli indirizzi sopra indicati. Se invece si ritiene che il trattamento dei dati personali avvenga in violazione di quanto previsto dal Regolamento, è possibile proporre reclamo, ai sensi dell’art. 77 del Regolamento, al Garante per la protezione dei dati personali.
 
-### 11. Cookie
+## 11. Cookie
 
-Questa sezione fornisce informazioni dettagliate sull'uso dei cookie, su come sono utilizzati dal Sito e su come gestirli, in attuazione dell’art. 122 del decreto legislativo 30 giugno 2003, n. 196, nonché nel rispetto delle “[Linee guida cookie e altri strumenti di tracciamento](garanteprivacy.it/web/guest/home/docweb/-/docweb-display/docweb/9677876){class="text-decoration-none font-weight-semibold", rel='noreferrer', target='\_blank', aria-label='Linee guida cookie e altri strumenti di tracciamento (link esterno - Apertura nuova scheda)'}” emanate dal Garante per la protezione dei dati personali con provvedimento del 10 giugno 2021.
+Questa sezione fornisce informazioni dettagliate sull'uso dei cookie, su come sono utilizzati dal Sito e su come gestirli, in attuazione dell’art. 122 del decreto legislativo 30 giugno 2003, n. 196, nonché nel rispetto delle “[Linee guida cookie e altri strumenti di tracciamento](https://garanteprivacy.it/web/guest/home/docweb/-/docweb-display/docweb/9677876){class="text-decoration-none font-weight-semibold", rel='noreferrer', target='\_blank', aria-label='Linee guida cookie e altri strumenti di tracciamento (link esterno - Apertura nuova scheda)'}” emanate dal Garante per la protezione dei dati personali con provvedimento del 10 giugno 2021.
 
 Il Sito utilizza cookie tecnici al fine di garantire il corretto funzionamento delle procedure e migliorare l'esperienza d'uso dei propri visitatori, il cui uso non è strumentale alla raccolta di dati personali identificativi dell'utente. Per questo motivo non è necessario il consenso dell’utente per la memorizzazione dei cookie.
 

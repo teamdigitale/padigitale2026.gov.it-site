@@ -3,7 +3,7 @@
 import React, { createContext, useReducer, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
-const initialState = { sectionId: null, faqId: null, modalState: false };
+const initialState = { sectionId: null, faqId: null, modalState: false, updateData: {} };
 
 const reducer = (state, { type, payload }) => {
   switch (type) {

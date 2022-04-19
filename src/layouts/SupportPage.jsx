@@ -22,10 +22,8 @@ export const SupportPage = () => {
   return (
     <>
       <SEO title={seoTitle} description={seoDescription} />
-      <div className="sr-only">
-        <h2>{content.name}</h2>
-      </div>
       <HeroSupport title={title} subtitle={description} isFaq={false} />
+      <h2 className="sr-only">Domande frequenti</h2>
       <FAQPreview />
       <Assistance />
       <SupportBanner text={content.bottomBanner} />

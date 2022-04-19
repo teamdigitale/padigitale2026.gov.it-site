@@ -117,7 +117,7 @@ export const BeneficiariesSection = (props) => {
       const item = document.querySelector('#' + sectionId);
       item.setAttribute('tabindex', '-1');
       item.focus();
-      item.querySelector('h4').click();
+      item.querySelector('h3').click();
     }
   }, [sectionId]);
 
@@ -161,9 +161,9 @@ export const BeneficiariesSection = (props) => {
   return (
     <>
       <div className={classes.section}>
-        <h3 className="sr-only" id="lista-misure-hader">
+        <h2 className="sr-only" id="lista-misure-hader">
           Elenco opportunità
-        </h3>
+        </h2>
         <div className="container mt-5 px-3" id="filter-beneficiaries">
           <div className={classes.selectWrapper}>
             <label htmlFor="beneficiaries">

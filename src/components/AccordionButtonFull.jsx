@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, Collapse, Card, CardBody } from 'design-react-kit';
 import { createUseStyles } from 'react-jss';
 import PropTypes from 'prop-types';
-import { ExternalLink } from './ExternalLink';
+import { Link } from 'gatsby';
 
 const useStyles = createUseStyles({
   collapseWrapper: {
@@ -311,9 +311,9 @@ export const AccordionButtonFull = (props) => {
         ></Button>
         <div className={classes.cardWrapper}>
           <div className={classes.cardHeader}>
-            <h4 className={classes.cardTitle} onClick={eventHandler}>
+            <h3 className={classes.cardTitle} onClick={eventHandler}>
               <span>{number}</span> {title}
-            </h4>
+            </h3>
             <div className={classes.cardHeaderValue} dangerouslySetInnerHTML={{ __html: money }} />
             <div className={classes.cardTags}>
               <p className="tag-title">Beneficiari</p>
@@ -350,13 +350,13 @@ export const AccordionButtonFull = (props) => {
                 )}
                 {goToButton && (
                   <div className={classes.linkAccordion}>
-                    <ExternalLink
+                    <Link
                       className="btn btn-primary"
-                      linkTo={moreInfoLink}
+                      to={moreInfoLink}
                       ariaLabel={`${moreInfoLabel}, ${title}, (Collegamento esterno - Apre su nuova scheda)`}
                     >
                       VAI AGLI AVVISI
-                    </ExternalLink>
+                    </Link>
                   </div>
                 )}
               </CardBody>

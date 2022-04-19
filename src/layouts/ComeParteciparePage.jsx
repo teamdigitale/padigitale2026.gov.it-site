@@ -11,9 +11,6 @@ const { title: seoTitle, description: seoDescription } = seo.comeParteciparePage
 export const ComeParteciparePage = () => (
   <>
     <SEO title={seoTitle} description={seoDescription} />
-    <div className="sr-only">
-      <h2>{content.name}</h2>
-    </div>
     <HeroHowToDo
       title={content.hero.title}
       body={content.hero.body}
@@ -25,7 +22,7 @@ export const ComeParteciparePage = () => (
     <Keypoints item={content.keypoints} />
     <KeypointSection item={content.sectionFirst} />
     <KeypointSection item={content.sectionFourth} />
+    <KeypointSection item={content.sectionThird} />
     <KeypointSection item={content.sectionSecond} />
-    {/* <KeypointSection item={content.sectionThird} /> */}
   </>
 );

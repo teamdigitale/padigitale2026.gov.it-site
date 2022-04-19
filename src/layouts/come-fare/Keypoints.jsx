@@ -131,10 +131,10 @@ export const Keypoints = (props) => {
             <Col>
               <Row>
                 <Col xs="12" lg="5" id="keypoints" className="mb-5">
-                  <h3 className={classes.category}>{category}</h3>
-                  <h4 className={classes.title} id="keypoints-title">
+                  <h2 className={classes.category}>{category}</h2>
+                  <h3 className={classes.title} id="keypoints-title">
                     {title}
-                  </h4>
+                  </h3>
                 </Col>
               </Row>
             </Col>
@@ -153,7 +153,7 @@ export const Keypoints = (props) => {
                     <div className={classes.iconContainer}>
                       <img src={`/assets/${listItem.image}`} alt=""></img>
                     </div>
-                    <div className={classes.keypointTitle}>{listItem.title}</div>
+                    <h4 className={classes.keypointTitle}>{listItem.title}</h4>
                     <div className={classes.keypointDesc}>{listItem.desc}</div>
                   </Col>
                 ))

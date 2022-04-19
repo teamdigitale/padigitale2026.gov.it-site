@@ -1,6 +1,6 @@
 /* eslint-disable sonarjs/no-duplicate-string */
 import { Link } from 'gatsby';
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import {
   Collapse,
@@ -243,6 +243,12 @@ const useStyle = createUseStyles({
     '@media (min-width: 359px) and (max-width: 360px)': {
       whiteSpace: 'nowrap',
     },
+    '& button svg': {
+      transition: '.3s',
+    },
+    '& button[aria-expanded="true"] svg': {
+      transform: 'rotateZ(180deg)',
+    },
   },
   headerLink: {
     composes: 'font-weight-semibold',
@@ -416,13 +422,16 @@ const CenterHeader = () => {
     <HeaderReactKit type="center" theme="light" className={classes.headerCenterWrapper}>
       <HeaderContent className={`${classes.headerCenter} px-2`}>
         <div className="it-brand-wrapper pl-5 pl-sm-0">
-          <Link to="/" aria-label="Vai alla home page del sito pubblico di PA digitale 2026">
+          <Link
+            to="/"
+            aria-label="Pa digitale 2026 le risorse per una PA protagonista della transizione digitale - vai alla home page"
+          >
             <div className="it-brand-text pr-0">
               <div className="d-md-flex align-items-center">
                 <img className="icon repubblica-logo" src="/assets/repubblica-logo-blue.svg" alt="" />
                 <img className="icon site-logo" src="/assets/site-logo.svg" alt="" />
                 <div className="d-none d-lg-inline-block">
-                  <h1 className="h3 mb-0">{headerTitle}</h1>
+                  <div className="h3 mb-0">{headerTitle}</div>
                   <div className={classes.subtitle}>{headerSubtitle}</div>
                 </div>
               </div>
@@ -445,20 +454,27 @@ const NavHeader = () => {
   const toogleMenu = () => setIsOpen(!isOpen);
   const classes = useStyle();
 
+  useEffect(() => {
+    const isMobile = window.innerWidth < 992;
+    const body = document.querySelector('body');
+    if (isOpen === true && isMobile) {
+      body.classList.add('no-scroll');
+    } else {
+      body.classList.remove('no-scroll');
+    }
+  }, [isOpen]);
+
   return (
     <HeaderReactKit type="navbar" theme="light" className={classes.noShadow}>
       <HeaderContent
         expand="lg"
         megamenu
         /* aria-label={ariaLabel.menu} */
-        aria-labelledby="menu-principale"
+        aria-label="menu-principale"
         className="px-2"
         id="menu-principale-anchor"
         tabIndex="-1"
       >
-        <h2 id="menu-principale" className="sr-only">
-          Menu principale
-        </h2>
         <button
           onClick={() => setIsOpen(!isOpen)}
           aria-label={ariaLabel.toggleMenu}

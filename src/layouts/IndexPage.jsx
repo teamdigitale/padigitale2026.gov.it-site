@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import {
-  name,
   heroMainBanner,
   heroPnrr,
   heroCarouselNews,
+  heroClassificazione,
   heroCarouselNewsTitle,
   noticesCarouselTitle,
   support,
@@ -38,9 +38,7 @@ export const IndexPage = () => {
   return (
     <>
       <SEO title={seoTitle} description={seoDescription} />
-      <div className="sr-only">
-        <h2>{name}</h2>
-      </div>
+      <h1 className="sr-only">Home page PA digitale 2026</h1>
       <HeroImage
         dark={true}
         mainHero={true}
@@ -50,7 +48,7 @@ export const IndexPage = () => {
         imageUrl="/assets/icona-home-banner.svg"
         imageAlt=""
         firstInternal={true}
-        firstButtonHref="/come-partecipare/crea-profilo"
+        firstButtonHref="/iniziativa"
         firstButtonLabel={heroMainBanner.firstButtonLabel}
         firstButtonAriaLabel={heroMainBanner.firstButtonAriaLabel}
         heroTitleId="home-hero-title"
@@ -71,6 +69,19 @@ export const IndexPage = () => {
         heroTitleId="home-hero-title-candidature"
       />
       <HeroCarousel content={heroCarouselNews} title={heroCarouselNewsTitle} />
+      <HeroImage
+        ctaContainer={true}
+        category={heroClassificazione.category}
+        title={heroClassificazione.title}
+        body={heroClassificazione.body}
+        imageUrl="/assets/Classificazione_Dati_e_Servizi.svg"
+        imageAlt=""
+        firstInternal={true}
+        firstButtonHref={heroClassificazione.link}
+        firstButtonLabel={heroClassificazione.firstButtonLabel}
+        firstButtonAriaLabel={heroClassificazione.firstButtonAriaLabel}
+        heroTitleId="home-hero-title-classificazione"
+      />
       <SupportSection supportList={support.cards} title={support.title} buttonLabel={support.buttonLabel} />
     </>
   );

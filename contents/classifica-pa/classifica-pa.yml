@@ -1,0 +1,42 @@
+name: Candida la tua PA agli avvisi per la transizione digitale - PA digitale 2026
+sidebar:
+  - sectionTitle: 1. Verifica la classificazione automatica
+    sectionId: verify-classification
+    sectionActive: true
+  - sectionTitle: 2. Compila il questionario per modificare la classificazione automatica
+    sectionId: questionario
+    sectionActive: false
+  - sectionTitle: 3. Invia la classificazione
+    sectionId: send-classification
+    sectionActive: false
+  - sectionTitle: 4. Ricevi aggiornamenti 
+    sectionId: receive-updates
+    sectionActive: false
+  - sectionTitle: Guarda il video dedicato
+    sectionId: watch-video
+    sectionActive: false
+verticalTimeline:
+  - index: 0
+    title: 'Verifica la classificazione automatica'
+    icon: '/assets/candida-pa-lens.svg'
+    headerParagraph: "Per semplificare il processo, per ciascuna PA è stato identificato un elenco di servizi applicabili e pre-individuato per tutti questi un livello di classificazione. <strong>Se corretto, lo puoi confermare direttamente.</strong>"
+    sectionId: 'verify-classification'
+  - index: 1
+    title: 'Compila il questionario per modificare la classificazione automatica'
+    icon: '/assets/goals-card.svg'
+    headerParagraph: "<strong>Nel caso avessi bisogno di aggiungere un servizio oppure di modificare la classificazione</strong> automatica proposta, puoi compilare il questionario per determinare una nuova classificazione."
+    sectionId: 'questionario'
+  - index: 2
+    title: 'Invia la classificazione'
+    icon: '/assets/invia-candidatura.svg'
+    headerParagraph: "Una volta inviato il questionario di classificazione, <strong>l’Agenzia per la Cybersicurezza Nazionale eseguirà le verifiche di fattibilità</strong> entro 90 giorni."
+    sectionId: 'send-classification'
+  - index: 3
+    title: 'Ricevi aggiornamenti'
+    icon: '/assets/notifiche.svg'
+    headerParagraph: "All’interno della tua area riservata puoi controllare <strong>lo stato della classificazione e ricevere notifiche dedicate</strong> sullo stato di approvazione."
+    sectionId: 'receive-updates'
+video:
+  src: https://www.youtube-nocookie.com/embed/WuJv4tNdJ4o
+  description: Scopri come classificare dati e servizi della tua amministrazione su PA digitale 2026.
+  videoText: "PA digitale 2026 è il punto di accesso alle risorse previste dal PNRR per la transizione digitale della PA.<br></br>Grazie alla piattaforma puoi anche effettuare la Classificazione dati e servizi necessaria per avviare la migrazione al cloud.<br></br>Completarla è semplice: puoi verificare l’elenco dei servizi e il livello di classificazione creati automaticamente sulla base delle caratteristiche della tua PA: se sono corretti, puoi confermarli direttamente. In caso contrario, puoi determinare una nuova classificazione del servizio compilando un questionario. Inoltre, puoi anche aggiungere o eliminare un servizio. Una volta ultimata questa procedura, l’Agenzia per la Cybersicurezza Nazionale eseguirà le verifiche di fattibilità.<br></br>Hai sempre tutto sotto controllo: nell’area riservata infatti puoi monitorare lo stato della classificazione, anche grazie a notifiche dedicate.<br></br>La classificazione è il primo passo per la migrazione al cloud della PA, per garantire servizi e infrastrutture più sicuri, efficienti e affidabili."

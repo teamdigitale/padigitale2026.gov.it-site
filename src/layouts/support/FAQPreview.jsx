@@ -30,7 +30,7 @@ const useStyle = createUseStyles({
         flexDirection: 'column',
         justifyContent: 'space-between',
       },
-      '& h4.card-title': {
+      '& h3.card-title': {
         fontSize: '1.333rem',
         lineHeight: '1.32',
         fontWeight: 'normal',
@@ -96,16 +96,18 @@ export const FAQPreview = () => {
   const [, dispatch] = useContext(GlobalStateContext);
 
   const cards = faqSection.faqPreviewCards.map((card) => (
+    <>
     <Col key={card.id} xs="12" lg="4">
       <Link to={`/supporto/domande-frequenti#` + card.faqId} onClick={() => dispatch({ type: 'SET:FAQ_ID', payload: { faqId: card.faqId } })} className={classes.linkCard} ariaLabel={card.ariaLabel}>
         <Card className={classes.faqCard}>
           <CardBody>
-            <CardTitle tag="h4">{card.title}</CardTitle>
+            <CardTitle tag="h3">{card.title}</CardTitle>
             <CardText dangerouslySetInnerHTML={{ __html: card.text }} />
           </CardBody>
         </Card>
       </Link>
     </Col>
+    </>
   ));
 
   return (

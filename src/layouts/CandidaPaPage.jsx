@@ -10,12 +10,13 @@ import { SEO } from '../components/SEO';
 import seo from '../../contents/seo.yml';
 import content from '../../contents/candida-pa/candida-pa.yml';
 import { TimelineVerticalCards } from '../components/TimelineVerticalCards';
+import { HeroVideo } from '../components/HeroVideo';
 /* import { Totop } from '../components/Totop'; */
 import { SideNavigationAccordion } from './sideNavigationAccordion';
 
 const { title: seoTitle, description: seoDescription } = seo.candidaPaPage;
 
-const { sidebar, verticalTimeline } = content;
+const { sidebar, verticalTimeline, video } = content;
 
 const useStyles = createUseStyles({
   breadcrumb: {
@@ -196,7 +197,7 @@ export const CandidaPaPage = () => {
           </Row>
           <Row className="mb-5 mt-5">
             <Col xs={12} lg={7}>
-              <h4 className={classes.titleUpdate}>Candida la tua PA agli avvisi per la transizione digitale</h4>
+              <h1 className={classes.titleUpdate}>Candida la tua PA agli avvisi per la transizione digitale</h1>
               <div className={classes.subtitleUpdate}>
                 Per <strong>candidare la tua amministrazione</strong> agli avvisi pubblici e{' '}
                 <strong>richiedere i finanziamenti</strong> segui la configurazione guidata per comporre e inviare il
@@ -228,6 +229,9 @@ export const CandidaPaPage = () => {
                 </section>
               </Container>
               <TimelineVerticalCards item={verticalTimeline} />
+              <section id="watch-video">
+                <HeroVideo src={video.src} description={video.description} videoText={video.videoText} />
+              </section>
               {/* <Container className="pl-lg-4">
                 <section id="to-read-more">
                   <h4 className={`${classes.contentTitle} mb-4`}>Per approfondire</h4>

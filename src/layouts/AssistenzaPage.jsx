@@ -4,11 +4,11 @@
 import React, { useState, useEffect } from 'react';
 import { createUseStyles } from 'react-jss';
 import { announce } from '@react-aria/live-announcer';
+import { navigate } from 'gatsby';
 import { Row, Col, Input, Breadcrumb, BreadcrumbItem } from 'design-react-kit';
 import Select from 'react-select';
 import ReCAPTCHA from 'react-google-recaptcha';
 import content from '../../contents/assistenza/assistenza.yml';
-import notificationsLabel from '../../contents/notifications.yml';
 import labels from '../../contents/labels.yml';
 import links from '../../contents/links.yml';
 const { privacy } = links.internalLinks;
@@ -16,7 +16,6 @@ import seo from '../../contents/seo.yml';
 import { SEO } from '../components/SEO';
 
 const { title: seoTitle, description: seoDescription } = seo.assistenzaPage;
-const { successMessage: successLabels } = notificationsLabel;
 const { errors } = labels;
 
 const useStyles = createUseStyles({
@@ -136,7 +135,7 @@ const useStyles = createUseStyles({
       color: '#737374',
     },
     '& .select.is-invalid [class$="-control"]': {
-      borderColor: '#F83E5A',
+      borderColor: '#D6364E',
     },
     '& .select.focused': {
       borderColor: '#f90',
@@ -178,7 +177,7 @@ const useStyles = createUseStyles({
       },
     },
     '& .form-group input[type="text"].is-invalid': {
-      borderBottom: 'solid 2px #F83E5A',
+      borderBottom: 'solid 2px #D6364E',
     },
     '& .form-group input[type="email"]': {
       fontSize: '0.889rem',
@@ -189,14 +188,14 @@ const useStyles = createUseStyles({
       },
     },
     '& .form-group input[type="email"].is-invalid': {
-      borderBottom: 'solid 2px #F83E5A',
+      borderBottom: 'solid 2px #D6364E',
     },
     '& .invalid-feedback': {
-      color: '#F83E5A !important',
+      color: '#D6364E !important',
     },
     '& small.error-label': {
       fontSize: '0.778rem',
-      color: '#F83E5A',
+      color: '#D6364E',
       padding: '0 0.444rem',
       fontWeight: '400',
       position: 'absolute',
@@ -243,12 +242,6 @@ const useStyles = createUseStyles({
   modalFooterLabel: {
     composes: 'mb-3',
     fontSize: '0.889rem',
-    '& a': {
-      textDecoration: 'none',
-      '&:hover': {
-        textDecoration: 'underline',
-      },
-    },
   },
   spinner: {
     composes: 'spinner hidden ml-3',
@@ -334,7 +327,7 @@ const useStyles = createUseStyles({
 });
 
 export const AssistenzaPage = () => {
-  const textareaMaxLength = 300;
+  const textareaMaxLength = 700;
   const [textareaDescriptionState, setTextareaDescriptionState] = useState('not-active');
   const [formFilled, setFormFilled] = useState(false);
   const isInvalidValue = 'is-invalid';
@@ -490,26 +483,12 @@ export const AssistenzaPage = () => {
   };
 
   const formHandler = (event) => {
-    const notificationElement = document.querySelector('.notification');
-    const titleElement = notificationElement.querySelector('h5');
-    const descriptionElement = notificationElement.querySelector('p');
-    notificationElement.classList.add('show');
-    notificationElement.classList.add('success');
-    titleElement.innerHTML = `${successLabels.icon} ${successLabels.title}`;
-    descriptionElement.innerHTML = successLabels.description;
-
     setTimeout(() => {
+      navigate('../../richiesta-inviata');
       event.target.reset();
       window.grecaptcha.reset();
-      const selectArr = document.querySelectorAll('.select-wrapper [class$="-singleValue"]');
-      selectArr.forEach((singleValue) => (singleValue.innerHTML = ''));
       setFormFilled(false);
-      const submitBtn = document.querySelector('#assistance-form input[type="submit"]');
-      submitBtn.disabled = true;
     }, 500);
-    setTimeout(() => {
-      notificationElement.classList.remove('show');
-    }, 5000);
   };
 
   const orgId = {
@@ -535,9 +514,6 @@ export const AssistenzaPage = () => {
   return (
     <>
       <SEO title={seoTitle} description={seoDescription} />
-      <div className="sr-only">
-        <h2>{content.name}</h2>
-      </div>
       <div className="container px-3">
         <Row>
           <Col xs="12">
@@ -561,7 +537,7 @@ export const AssistenzaPage = () => {
         <iframe name="formFrame" id="formFrame" className="d-none" title="no-redirect"></iframe>
         <Row className="mt-5">
           <Col xs={12} md={6} lg={5}>
-            <h3 className={classes.titleUpdate}>Assistenza</h3>
+            <h1 className={classes.titleUpdate}>Assistenza</h1>
             <div className={classes.subtitleUpdate}>
               Un team dedicato è a tua disposizione per chiarire dubbi e approfondire temi di interesse. Compila il
               modulo sottostante e invia la richiesta.
@@ -731,40 +707,6 @@ export const AssistenzaPage = () => {
                 </div>
               </div>
             </form>
-            <div className={classes.notification} role="alert" aria-labelledby="not2dms-title" id="not2dms2">
-              <h5 id="not2dms-title2">
-                notifiche
-                <svg className="icon" role="img" aria-label=""></svg>
-              </h5>
-              <p></p>
-              <button
-                type="button"
-                className="btn notification-close"
-                aria-label="Chiudi"
-                aria-describedby="not2dms-title"
-              >
-                <svg
-                  width="19"
-                  height="19"
-                  viewBox="0 0 19 19"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  focusable="false"
-                  role="img"
-                  aria-label="Chiudi"
-                >
-                  <rect
-                    x="17.3242"
-                    y="0.5"
-                    width="1.49987"
-                    height="24.4978"
-                    transform="rotate(45 17.3242 0.5)"
-                    fill="#5C6F82"
-                  />
-                  <rect y="1.56055" width="1.49987" height="24.4978" transform="rotate(-45 0 1.56055)" fill="#5C6F82" />
-                </svg>
-              </button>
-            </div>
           </Col>
         </Row>
       </div>

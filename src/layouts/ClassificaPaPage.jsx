@@ -8,13 +8,12 @@ import { announce } from '@react-aria/live-announcer';
 import faq from '../../contents/faq-page/faq.yml';
 import { SEO } from '../components/SEO';
 import seo from '../../contents/seo.yml';
-import content from '../../contents/crea-profilo/crea-profilo.yml';
+import content from '../../contents/classifica-pa/classifica-pa.yml';
 import { TimelineVerticalCards } from '../components/TimelineVerticalCards';
 import { HeroVideo } from '../components/HeroVideo';
-/* import { Totop } from '../components/Totop'; */
 import { SideNavigationAccordion } from './sideNavigationAccordion';
 
-const { title: seoTitle, description: seoDescription } = seo.creaProfiloPage;
+const { title: seoTitle, description: seoDescription } = seo.classificaPaPage;
 
 const { sidebar, verticalTimeline, video } = content;
 
@@ -93,12 +92,6 @@ const useStyles = createUseStyles({
   },
   contentParagraph: {
     fontSize: '1.125rem',
-    '& a': {
-      textDecoration: 'none',
-      '&:hover': {
-        textDecoration: 'underline',
-      },
-    },
   },
   cardReadMore: {
     boxShadow: '0px 2px 20px rgba(0, 0, 0, 0.1)',
@@ -128,18 +121,18 @@ const useStyles = createUseStyles({
     color: '#33485C',
     lineHeight: '48px',
     marginBottom: '30px',
-    '@media (max-width: 991px)': {
-      fontSize: '2.25rem',
+    '@media (max-width: 425px)': {
+      fontSize: '2.375rem',
     },
     '@media (max-width: 767px)': {
       textAlign: 'center',
     },
   },
   subtitleUpdate: {
-    fontSize: '1.333rem',
+    fontSize: '24px',
     color: '#33485C',
-    lineHeight: '1.5',
-    '@media (max-width: 991px)': {
+    lineHeight: '30px',
+    '@media (max-width: 425px)': {
       fontSize: '1.25rem',
     },
     '@media (max-width: 767px)': {
@@ -147,7 +140,6 @@ const useStyles = createUseStyles({
     },
   },
   heroImg: {
-    maxWidth: '100%',
     '@media (max-width: 425px)': {
       maxWidth: '80%',
     },
@@ -155,12 +147,11 @@ const useStyles = createUseStyles({
 });
 
 // eslint-disable-next-line sonarjs/cognitive-complexity
-export const CreaProfiloPage = () => {
+export const ClassificaPaPage = () => {
   const classes = useStyles();
   const [inputValue, setInputValue] = useState('');
   const [questions, setQuestions] = useState(faq.questions);
   const [isMobile, setIsMobile] = useState();
-  // const [, dispatch] = useContext(GlobalStateContext);
 
   useEffect(() => {
     setIsMobile(window.innerWidth < 992);
@@ -180,6 +171,9 @@ export const CreaProfiloPage = () => {
   return (
     <>
       <SEO title={seoTitle} description={seoDescription} />
+      <div className="sr-only">
+        <h2>{faq.name}</h2>
+      </div>
       <div className="pb-5">
         <Container className="px-3">
           <Row>
@@ -194,26 +188,28 @@ export const CreaProfiloPage = () => {
                   <span className="separator"></span>
                 </BreadcrumbItem>
                 <BreadcrumbItem active className={classes.breadcrumbItemActive}>
-                  <a>Attiva il profilo della tua PA: identità digitale e dati IPA</a>
+                  <a>Classifica i dati e i servizi della tua PA</a>
                 </BreadcrumbItem>
               </Breadcrumb>
             </Col>
           </Row>
           <Row className="mb-5 mt-5">
             <Col xs={12} lg={7}>
-              <h1 className={classes.titleUpdate}>Attiva il profilo della tua PA: identità digitale e dati IPA</h1>
+              <h1 className={classes.titleUpdate}>Classifica i dati e i servizi della tua PA</h1>
               <div className={classes.subtitleUpdate}>
-                <strong>Per partecipare agli avvisi</strong> è necessario che il{' '}
-                <strong>rappresentante legale di un'amministrazione presente su IPA</strong> (Indice dei domicili
-                digitali della Pubblica Amministrazione), o una persona incaricata,{' '}
-                <strong>avvii la procedura di attivazione della PA sulla piattaforma</strong>.
+                La classificazione dati e servizi è un requisito fondamentale da completare entro il 18 luglio 2022 ed è{' '}
+                <strong>necessaria per avviare il processo di migrazione al cloud</strong> e garantire così sicurezza,
+                efficienza e affidabilità dei servizi e delle infrastrutture.
               </div>
             </Col>
             <Col xs={12} lg={4} className="offset-lg-1 mt-5 mt-lg-0 d-flex justify-content-center align-items-center">
-              <img src={`/assets/profilo.svg`} alt="" className={classes.heroImg} />
+              <img src={`/assets/Classificazione_Dati_e_Servizi.svg`} alt="" className={classes.heroImg} />
             </Col>
           </Row>
           <div className={classes.navigationContainer}>
+            <h3 id="question-section" className="sr-only">
+              Sezione domande frequenti
+            </h3>
             <SideNavigationAccordion activeList={questions} searchValue={inputValue} list={sidebar} />
             <div
               className="pl-lg-3 content-container"
@@ -221,47 +217,20 @@ export const CreaProfiloPage = () => {
               role="region"
               aria-label="Lista punti da seguire"
             >
-              {/*  <Totop /> */}
               <Container className="pl-lg-4 mb-4">
                 <section>
-                  <h3 className={`${classes.contentTitle} mt-5`}>Attiva il profilo della tua amministrazione</h3>
+                  <h4 className={`${classes.contentTitle} mt-5`}>
+                    Classifica i dati e i servizi della tua amministrazione
+                  </h4>
                   <p className={`${classes.contentParagraph} mb-0`}>
-                    Il processo di attivazione della PA prevede <strong>quattro passaggi</strong>:
+                    Il processo di classificazione dati e servizi prevede <strong>quattro passaggi</strong>:
                   </p>
                 </section>
               </Container>
               <TimelineVerticalCards item={verticalTimeline} />
-              <Container className="pl-lg-4">
-                <p className={`${classes.contentParagraph} mb-0`}>
-                  Ti raccomandiamo quindi di verificare fin da subito l’accuratezza delle informazioni presenti su{' '}
-                  <a
-                    href="https://www.indicepa.gov.it/ipa-portale/consultazione/indirizzo-sede/ricerca-ente"
-                    className="d-inline-flex align-items-center"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    IPA <img src="/assets/external-link.svg" alt="" />
-                  </a>
-                  .
-                </p>
-              </Container>
               <section id="watch-video">
                 <HeroVideo src={video.src} description={video.description} videoText={video.videoText} />
               </section>
-              {/* <Container className="pl-lg-4">
-                <section id="to-read-more">
-                  <h4 className={`${classes.contentTitle} mb-4`}>Per approfondire</h4>
-                  <Row>
-                    <Col xs={12} lg={6} xl={4}>
-                      <a className={classes.cardReadMore}>
-                        <img className={classes.clip} src="/assets/clip.svg" alt=""></img>
-                        <span className={classes.cardTitle}>Banda ultra larga</span>
-                        <span className={classes.cardInfo}>Scarica il PDF (3.7MB)</span>
-                      </a>
-                    </Col>
-                  </Row>
-                </section>
-              </Container> */}
             </div>
           </div>
         </Container>

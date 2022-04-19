@@ -98,6 +98,7 @@ export const SideNavigation = (props) => {
   const [isMobile, setIsMobile] = useState();
   const itemSel = '.sidebar-wrapper .link-list .list-item';
   const { activeList, searchValue, list } = props;
+
   useEffect(() => {
     setIsMobile(window.innerWidth < 992);
     window.addEventListener('resize', () => {
@@ -190,9 +191,6 @@ export const SideNavigation = (props) => {
   return (
     <Sidebar className={`${classes.wrapper} p-0`}>
       <nav aria-labelledby="table-of-contents">
-        <h3 id="table-of-contents" className="sr-only">
-          Indice dei contenuti
-        </h3>
         <LinkList>
           {isMobile && (
             <LinkListItem
