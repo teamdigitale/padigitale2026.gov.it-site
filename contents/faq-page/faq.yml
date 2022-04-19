@@ -159,6 +159,59 @@ questions:
         ariaLabel: Vai alla pagina di assistenza
       - title: Come posso annullare la mia iscrizione agli aggiornamenti?
         content: Se desideri interrompere la ricezione di comunicazioni e aggiornamenti da PA digitale 2026, usa il link “Annulla iscrizione” presente nella sezione finale di ogni email.
+  - title: Misura 1.2
+    description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
+    sectionId: misura-1-2
+    accordions:
+      - title: Quali enti della PA possono presentare domanda per accedere al finanziamento dall'Avviso riferito alla Misura 1.2?
+        content: I Soggetti Attuatori, ovvero coloro che possono accedere allo strumento predisposto dall'Avviso, sono i Comuni.
+      - title: È possibile accedere al finanziamento in caso di realizzazione della migrazione al cloud prima della pubblicazione dall'Avviso riferito alla Misura 1.2?
+        content: Si, è possibile accedere al finanziamento previsto dall'Avviso, riferito alla Misura 1.2, nel caso in cui il processo di migrazione al cloud sia stato realizzato a decorrere dal 01 Febbraio 2020 con risorse finanziarie proprie.
+      - title: È possibile accedere al finanziamento in caso di realizzazione della migrazione al cloud, con l'ausilio di Fondi pubblici,nazionali, regionali o europei prima della pubblicazione dell'Avviso riferito alla Misura 1.2?
+        content: No, non è possibile accedere al finanziamento previsto dall'Avviso, riferito alla Misura 1.2, nel caso in cui il processo di migrazione al cloud sia stato realizzato con Fondi pubblici, nazionali, regionali o europei, secondo quanto previsto dall'art. 8 comma 5 dell'Avviso. 
+      - title: Entro quando è possibile inoltrare la domanda di accesso al finanziamento?
+        content: La domanda può essere presentata a partire dalla data di pubblicazione fino ad esaurimento delle risorse e comunque entro e non oltre le ore 23:59 del 22/07/2022, come specificato nell'Avviso 1.2.
+      - title: Quali tipologie di servizi potranno essere oggetto di migrazione?
+        content: Oggetto di migrazione potranno essere tutti i servizi - presenti in lista nell'Allegato 2 corrispondente alla fascia di popolazione del tuo Comune - erogati in tutte le loro forme dal singolo Ente e il cui livello complessivo di efficienza possa essere ottimizzato attraverso una migrazione verso piattaforme Cloud qualificate.
+      - title: Di quante modalità di migrazione può avvalersi un Comune al fine di rispondere correttamente ai requisiti previsti dall'Avviso riferito alla Misura 1.2?
+        content: Il Comune potrà effettuare la migrazione avvalendosi dei due modelli di migrazione ""Trasferimento in sicurezza dell’infrastruttura IT"" e ""Aggiornamento in sicurezza di applicazioni in Cloud"" come delineato nella Strategia Nazionale per il Cloud.Per ulteriori approfondimenti si rimanda all'Allegato 2 corrispondente alla fascia di popolazione del tuo Comune.
+      - title: Quali sono le caratteristiche del modello di migrazione "Trasferimento in sicurezza dell’infrastruttura IT"?
+        content: L’opzione "Trasferimento in sicurezza dell’infrastruttura IT" consente di sfruttare la strategia di migrazione Lift&Shift (anche detta Rehost), cioè la migrazione al Cloud dell’infrastruttura già esistente, senza la necessità di reingegnerizzare le applicazioni. Tale modalità consiste nel migrare l’intero servizio, comprensivo di applicazioni e dati su un hosting cloud senza apportare modifiche agli applicativi, ovvero replicando il servizio esistente in un ambiente cloud.
+      - title: Un Comune è obbligato ad adottare la stessa modalità di migrazione per tutti i servizi?
+        content: No, il Comune può decidere singolarmente per ognuno dei servizi oggetto della migrazione. L’Ente potrà selezionare il modello di migrazione più adatto da presentare all’interno del piano di migrazione.
+      - title: Se ho già migrato un servizio in cloud in modalità "Trasferimento in sicurezza dell’infrastruttura IT" posso aderire al finanziamento per implementare la modalità "Aggiornamento in sicurezza di applicazioni in Cloud"?
+        content: Si, se il Comune ha già migrato un servizio in cloud in modalità "Trasferimento in sicurezza dell’infrastruttura IT" può accedere al finanziamento previsto dall'Avviso, riferito alla Misura 1.2, per l'implementazione della modalità "Aggiornamento in sicurezza di applicazioni in Cloud".In ogni caso, il processo di migrazione al cloud deve essere stato realizzato a decorrere dal 01 Febbraio 2020 con risorse finanziarie proprie.
+      - title: Il Canone del primo anno è incluso nel finanziamento? 
+        content: Si, il canone del primo anno è incluso nell’importo forfettario come definito dagli allegati 2.
+      - title: Come deve essere rendicontato il contributo?
+        content: Il contributo consiste in una somma forfettaria che viene erogata al raggiungimento del risultato come indicato dall'Avviso. Non è prevista la rendicontazione a costi reali.
+      - title: Cosa è e come è strutturata la Strategia Cloud Italia?
+        content: La Strategia Cloud Italia, realizzata dal Dipartimento per la trasformazione digitale e dall'Agenzia per la cybersicurezza nazionale (ACN), contiene gli indirizzi strategici per il percorso di migrazione verso il cloud di dati e servizi digitali della Pubblica Amministrazione. Il documento illustra i criteri di classificazione di dati e servizi e la composizione della infrastruttura ad alta affidabilità (Polo Strategico Nazionale) che ospiterà i servizi strategici e critici.
+        linkLabel: Ulteriori informazioni sono disponibili al seguente link
+        link: 'https://innovazione.gov.it/dipartimento/focus/strategia-cloud-italia/'
+        ariaLabel: Vedi ulteriori informazioni sulla strategia cloud italia (Collegamento esterno - Apre su nuova scheda)
+      - title: Quali sono gli obiettivi relativi a Cloud e Infrastrutture digitali nell'ambito del Piano Nazionale di Ripresa e Resilienza?
+        content: La trasformazione digitale della Pubblica Amministrazione (PA) segue un approccio “cloud first”, orientato alla migrazione dei dati e degli applicativi informatici delle singole amministrazioni verso un ambiente cloud.Il processo consentirà di razionalizzare e consolidare molti dei data center oggi distribuiti sul territorio, a partire da quelli meno efficienti e sicuri. Ad oggi il 95% dei circa 11mila data center utilizzati dagli enti pubblici italiani presenta carenze nei requisiti minimi di sicurezza, affidabilità, capacità elaborativa ed efficienza.
+        linkLabel: Ulteriori informazioni sono disponibili al seguente link
+        link: 'https://innovazione.gov.it/notizie/articoli/cloud-e-infrastrutture-digitali/'
+        ariaLabel: Vedi ulteriori informazioni sul cloud e le infrastrutture digitali (Collegamento esterno - Apre su nuova scheda)
+      - title: In cosa consiste la classificazione di dati e servizi? A cosa serve?
+        content: La classificazione dei dati e dei servizi gestiti dalle PA consente di uniformare e guidare il processo di migrazione al Cloud della PA. Le classi dei dati e servizi sono identificate sulla base del danno che una loro compromissione, in termini di confidenzialità, integrità e disponibilità, provocherebbe al sistema Paese. 
+        linkLabel: Ulteriori informazioni sono disponibili al seguente link
+        link: 'https://docs.italia.it/italia/cloud-italia/strategia-cloud-italia-docs/it/stabile/4_la_strategia_cloud_per_la_pubblica_amministrazione.html#la-classificazione-dei-dati-e-dei-servizi'
+        ariaLabel: Vedi ulteriori informazioni sulla classificazione dei dati e dei servizi gestiti dalle PA (Collegamento esterno - Apre su nuova scheda)
+      - title: Come avviene l'acquisizione di servizi cloud qualificati?
+        content: I fornitori cloud che intendono erogare servizi Infrastructure as a Service (IaaS), Platform as a Service (PaaS) e Software as a Service (SaaS) destinati alle pubbliche amministrazioni devono ottenere, per questi servizi, la qualificazione rilasciata dall’Agenzia per l’Italia digitale (AgID), utilizzando la piattaforma dedicata alla qualificazione dei cloud service provider e dei servizi cloud.
+        linkLabel: Ulteriori informazioni sono disponibili al seguente link
+        link: 'https://docs.italia.it/italia/cloud-italia/strategia-cloud-italia-docs/it/stabile/5_la_migrazione_della_pubblica_amministrazione_sul_cloud.html'
+        ariaLabel: Vedi ulteriori informazioni sulla migrazione della pubblica amministrazione (Collegamento esterno - Apre su nuova scheda)
+      - title: Perchè è necessario migrare verso il cloud qualificato?
+        content: La migrazione verso il cloud qualificato è necessaria per responsabilzzare il soggetto pubblico e individuare e catalogare i dati e i servizi gestiti, applicando una categorizzazione rispetto agli impatti di eventuali compromissioni, dei vincoli normativi e di sicurezza.
+        linkLabel: Ulteriori informazioni sono disponibili al seguente link
+        link: 'https://docs.italia.it/italia/cloud-italia/strategia-cloud-italia-docs/it/stabile/5_la_migrazione_della_pubblica_amministrazione_sul_cloud.html'
+        ariaLabel: Vedi ulteriori informazioni sulla migrazione della pubblica amministrazione (Collegamento esterno - Apre su nuova scheda)
+      - title: Come avviene la migrazione verso i servizi cloud qualificati?
+        content: La migrazione verso i diversi servizi Cloud qualificati e eventualmente all’interno del PSN dovrà essere governata tramite un processo centralizzato, agevole e uniforme per tutte le amministrazioni. I piani di migrazione saranno quindi definiti in accordo con il risultato della classificazione dei dati e dei servizi. La classificazione e la redazione del piano di migrazione saranno definiti e supportati, per i rispettivi profili di competenza, dell’Agenzia per la Cybersicurezza Nazionale (ACN) e del Dipartimento per la Trasformazione Digitale (DTD).
   - title: Misura 1.4.3 pagoPA
     description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
     sectionId: measure-1-4-3-pagopa
@@ -243,60 +296,6 @@ questions:
         content: 'Domande frequenti: <br><a target="_blank" href="https://www.spid.gov.it/domande-frequenti/">https://www.spid.gov.it/domande-frequenti/</a><br><a target="_blank" href="https://helpdesk.spid.gov.it/knowledgebase.php?category=2">https://helpdesk.spid.gov.it/knowledgebase.php?category=2</a><br></br>Risorse per sviluppatori:<br><a target="_blank" href="https://developers.italia.it/it/spid/#resourcecontent-1">https://developers.italia.it/it/spid/#resourcecontent-1</a>'
       - title: Link utili per tematiche tecniche su CIE
         content: 'Domande frequenti: <br><a target="_blank" href="https://federazione.servizicie.interno.gov.it/faq">https://federazione.servizicie.interno.gov.it/faq</a><br></br>Risorse per sviluppatori:<br><a target="_blank" href="https://developers.italia.it/it/cie">https://developers.italia.it/it/cie</a>'
-  - title: Misura 1.2
-    description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
-    sectionId: misura-1-2
-    accordions:
-      - title: Quali enti della PA possono presentare domanda per accedere al finanziamento dall'Avviso riferito alla Misura 1.2?
-        content: I Soggetti Attuatori, ovvero coloro che possono accedere allo strumento predisposto dall'Avviso, sono i Comuni.
-      - title: È possibile accedere al finanziamento in caso di realizzazione della migrazione al cloud prima della pubblicazione dall'Avviso riferito alla Misura 1.2?
-        content: Si, è possibile accedere al finanziamento previsto dall'Avviso, riferito alla Misura 1.2, nel caso in cui il processo di migrazione al cloud sia stato realizzato a decorrere dal 01 Febbraio 2020 con risorse finanziarie proprie.
-      - title: È possibile accedere al finanziamento in caso di realizzazione della migrazione al cloud, con l'ausilio di Fondi pubblici,nazionali, regionali o europei prima della pubblicazione dell'Avviso riferito alla Misura 1.2?
-        content: No, non è possibile accedere al finanziamento previsto dall'Avviso, riferito alla Misura 1.2, nel caso in cui il processo di migrazione al cloud sia stato realizzato con Fondi pubblici, nazionali, regionali o europei, secondo quanto previsto dall'art. 8 comma 5 dell'Avviso. 
-      - title: Entro quando è possibile inoltrare la domanda di accesso al finanziamento?
-        content: La domanda può essere presentata a partire dalla data di pubblicazione fino ad esaurimento delle risorse e comunque entro e non oltre le ore 23:59 del 22/07/2022, come specificato nell'Avviso 1.2.
-      - title: Quali tipologie di servizi potranno essere oggetto di migrazione?
-        content: Oggetto di migrazione potranno essere tutti i servizi - presenti in lista nell'Allegato 2 corrispondente alla fascia di popolazione del tuo Comune - erogati in tutte le loro forme dal singolo Ente e il cui livello complessivo di efficienza possa essere ottimizzato attraverso una migrazione verso piattaforme Cloud qualificate.
-      - title: Di quante modalità di migrazione può avvalersi un Comune al fine di rispondere correttamente ai requisiti previsti dall'Avviso riferito alla Misura 1.2?
-        content: Il Comune potrà effettuare la migrazione avvalendosi dei due modelli di migrazione ""Trasferimento in sicurezza dell’infrastruttura IT"" e ""Aggiornamento in sicurezza di applicazioni in Cloud"" come delineato nella Strategia Nazionale per il Cloud.Per ulteriori approfondimenti si rimanda all'Allegato 2 corrispondente alla fascia di popolazione del tuo Comune.
-      - title: Quali sono le caratteristiche del modello di migrazione "Trasferimento in sicurezza dell’infrastruttura IT"?
-        content: L’opzione "Trasferimento in sicurezza dell’infrastruttura IT" consente di sfruttare la strategia di migrazione Lift&Shift (anche detta Rehost), cioè la migrazione al Cloud dell’infrastruttura già esistente, senza la necessità di reingegnerizzare le applicazioni. Tale modalità consiste nel migrare l’intero servizio, comprensivo di applicazioni e dati su un hosting cloud senza apportare modifiche agli applicativi, ovvero replicando il servizio esistente in un ambiente cloud.
-      - title: Un Comune è obbligato ad adottare la stessa modalità di migrazione per tutti i servizi?
-        content: No, il Comune può decidere singolarmente per ognuno dei servizi oggetto della migrazione. L’Ente potrà selezionare il modello di migrazione più adatto da presentare all’interno del piano di migrazione.
-      - title: Se ho già migrato un servizio in cloud in modalità "Trasferimento in sicurezza dell’infrastruttura IT" posso aderire al finanziamento per implementare la modalità "Aggiornamento in sicurezza di applicazioni in Cloud"?
-        content: Si, se il Comune ha già migrato un servizio in cloud in modalità "Trasferimento in sicurezza dell’infrastruttura IT" può accedere al finanziamento previsto dall'Avviso, riferito alla Misura 1.2, per l'implementazione della modalità "Aggiornamento in sicurezza di applicazioni in Cloud".In ogni caso, il processo di migrazione al cloud deve essere stato realizzato a decorrere dal 01 Febbraio 2020 con risorse finanziarie proprie.
-      - title: Il Canone del primo anno è incluso nel finanziamento? 
-        content: Si, il canone del primo anno è incluso nell’importo forfettario come definito dagli allegati 2.
-      - title: Come deve essere rendicontato il contributo?
-        content: Il contributo consiste in una somma forfettaria che viene erogata al raggiungimento del risultato come indicato dall'Avviso. Non è prevista la rendicontazione a costi reali.
-      - title: Cosa è e come è strutturata la Strategia Cloud Italia?
-        content: La Strategia Cloud Italia, realizzata dal Dipartimento per la trasformazione digitale e dall'Agenzia per la cybersicurezza nazionale (ACN), contiene gli indirizzi strategici per il percorso di migrazione verso il cloud di dati e servizi digitali della Pubblica Amministrazione. Il documento illustra i criteri di classificazione di dati e servizi e la composizione della infrastruttura ad alta affidabilità (Polo Strategico Nazionale) che ospiterà i servizi strategici e critici.
-        linkLabel: Ulteriori informazioni sono disponibili al seguente link
-        link: 'https://innovazione.gov.it/dipartimento/focus/strategia-cloud-italia/'
-        ariaLabel: Vedi ulteriori informazioni sulla strategia cloud italia (Collegamento esterno - Apre su nuova scheda)
-      - title: Quali sono gli obiettivi relativi a Cloud e Infrastrutture digitali nell'ambito del Piano Nazionale di Ripresa e Resilienza?
-        content: La trasformazione digitale della Pubblica Amministrazione (PA) segue un approccio “cloud first”, orientato alla migrazione dei dati e degli applicativi informatici delle singole amministrazioni verso un ambiente cloud.Il processo consentirà di razionalizzare e consolidare molti dei data center oggi distribuiti sul territorio, a partire da quelli meno efficienti e sicuri. Ad oggi il 95% dei circa 11mila data center utilizzati dagli enti pubblici italiani presenta carenze nei requisiti minimi di sicurezza, affidabilità, capacità elaborativa ed efficienza.
-        linkLabel: Ulteriori informazioni sono disponibili al seguente link
-        link: 'https://innovazione.gov.it/notizie/articoli/cloud-e-infrastrutture-digitali/'
-        ariaLabel: Vedi ulteriori informazioni sul cloud e le infrastrutture digitali (Collegamento esterno - Apre su nuova scheda)
-      - title: In cosa consiste la classificazione di dati e servizi? A cosa serve?
-        content: La classificazione dei dati e dei servizi gestiti dalle PA consente di uniformare e guidare il processo di migrazione al Cloud della PA. Le classi dei dati e servizi sono identificate sulla base del danno che una loro compromissione, in termini di confidenzialità, integrità e disponibilità, provocherebbe al sistema Paese. 
-        linkLabel: Ulteriori informazioni sono disponibili al seguente link
-        link: 'https://docs.italia.it/italia/cloud-italia/strategia-cloud-italia-docs/it/stabile/4_la_strategia_cloud_per_la_pubblica_amministrazione.html#la-classificazione-dei-dati-e-dei-servizi'
-        ariaLabel: Vedi ulteriori informazioni sulla classificazione dei dati e dei servizi gestiti dalle PA (Collegamento esterno - Apre su nuova scheda)
-      - title: Come avviene l'acquisizione di servizi cloud qualificati?
-        content: I fornitori cloud che intendono erogare servizi Infrastructure as a Service (IaaS), Platform as a Service (PaaS) e Software as a Service (SaaS) destinati alle pubbliche amministrazioni devono ottenere, per questi servizi, la qualificazione rilasciata dall’Agenzia per l’Italia digitale (AgID), utilizzando la piattaforma dedicata alla qualificazione dei cloud service provider e dei servizi cloud.
-        linkLabel: Ulteriori informazioni sono disponibili al seguente link
-        link: 'https://docs.italia.it/italia/cloud-italia/strategia-cloud-italia-docs/it/stabile/5_la_migrazione_della_pubblica_amministrazione_sul_cloud.html'
-        ariaLabel: Vedi ulteriori informazioni sulla migrazione della pubblica amministrazione (Collegamento esterno - Apre su nuova scheda)
-      - title: Perchè è necessario migrare verso il cloud qualificato?
-        content: La migrazione verso il cloud qualificato è necessaria per responsabilzzare il soggetto pubblico e individuare e catalogare i dati e i servizi gestiti, applicando una categorizzazione rispetto agli impatti di eventuali compromissioni, dei vincoli normativi e di sicurezza.
-        linkLabel: Ulteriori informazioni sono disponibili al seguente link
-        link: 'https://docs.italia.it/italia/cloud-italia/strategia-cloud-italia-docs/it/stabile/5_la_migrazione_della_pubblica_amministrazione_sul_cloud.html'
-        ariaLabel: Vedi ulteriori informazioni sulla migrazione della pubblica amministrazione (Collegamento esterno - Apre su nuova scheda)
-      - title: Come avviene la migrazione verso i servizi cloud qualificati?
-        content: La migrazione verso i diversi servizi Cloud qualificati e eventualmente all’interno del PSN dovrà essere governata tramite un processo centralizzato, agevole e uniforme per tutte le amministrazioni. I piani di migrazione saranno quindi definiti in accordo con il risultato della classificazione dei dati e dei servizi. La classificazione e la redazione del piano di migrazione saranno definiti e supportati, per i rispettivi profili di competenza, dell’Agenzia per la Cybersicurezza Nazionale (ACN) e del Dipartimento per la Trasformazione Digitale (DTD).
-
   - title: Classificazione dati e servizi
     description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
     sectionId: classification-data-services
