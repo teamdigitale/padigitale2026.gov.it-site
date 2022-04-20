@@ -33,6 +33,9 @@ sidebar:
   - sectionTitle: Classificazione dati e servizi
     sectionId: classification-data-services
     sectionActive: false
+  - sectionTitle: Fondo Innovazione
+    sectionId: fondo-innovazione
+    sectionActive: false
 questions:
   - title: Generali
     description: La strategia di ripresa economica e gli interventi previsti per il rilancio digitale del Paese
@@ -339,7 +342,19 @@ questions:
       - title: 'Ho ricevuto una notifica e una PEC con richieste di integrazione alla classificazione dati e servizi da parte dell’Agenzia per la Cybersicurezza Nazionale (ACN): cosa devo fare?'
         content: È necessario entrare nell’area riservata di PA digitale 2026, accedere alla Scrivania della PA per la quale si sono ricevuto le richieste di integrazioni e apportare le modifiche segnalate da ACN. Una volta apportate le modifiche, è necessario inviare nuovamente la classificazione. In questo momento, lo stato della procedura passerà da “Da modificare” a “In valutazione”. È in ogni caso necessario apportare le modifiche richieste entro 30 giorni dalla ricezione della PEC e della notifica.
       - title: Posso indicare dei numeri approssimativi di dati personali nella compilazione della sezione 4 – Riservatezza delle informazioni?
-        content: Si, l’obiettivo è di avere un ordine di grandezza il più realistico possibile della numerosità di dati trattati, pertanto anche eventuali arrotondamenti sono accettati (ad esempio, 1.224.000 dati anagrafici possono essere indicati come 1.200.000). Non è invece possibile indicare numeri decimali o minori di zero.
+        content: Sì, l’obiettivo è di avere un ordine di grandezza il più realistico possibile della numerosità di dati trattati, pertanto anche eventuali arrotondamenti sono accettati (ad esempio, 1.224.000 dati anagrafici possono essere indicati come 1.200.000). Non è invece possibile indicare numeri decimali o minori di zero.
+  - title: Fondo Innovazione
+    description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
+    sectionId: fondo-innovazione
+    accordions:
+      - title: Posso aderire agli avvisi del PNRR relativi alla piattaforma pagoPA e all’App IO se ho già partecipato all’Avviso Pubblico Fondo Innovazione e ho già ricevuto i relativi contributi?
+        content: Sì, ma sarà possibile richiedere i contributi soltanto in relazione all’integrazione di servizi (sia per la piattaforma pagoPA che per l’App IO) che non sono stati già finanziati con l’Avviso Pubblico Fondo Innovazione.
+      - title: Se un Comune ha già ricevuto i finanziamenti relativi alla Fase I dell’Avviso Pubblico Fondo Innovazione, l’ente può aderire agli avvisi del PNRR relativi alla piattaforma pagoPA e all’App IO?
+        content: Sì, i Comuni in questo caso possono aderire agli avvisi del PNRR richiedendo i contributi per l’integrazione di servizi diversi e ulteriori rispetto a quelli per cui hanno già ricevuto il finanziamento.
+      - title: I Comuni che hanno ricevuto i contributi della Fase I dell’Avviso Pubblico Fondo Innovazione, dichiarando più servizi rispetto ai minimi richiesti (1 o 2 nuovi servizi per la piattaforma pagoPA e 1 servizio sull’App IO) come devono comportarsi rispetto agli avvisi del PNRR?
+        content: "I Comuni potranno richiedere i finanziamenti degli avvisi del PNRR solo per quei servizi eccedenti rispetto ai minimi richiesti dall’Avviso Pubblico Fondo Innovazione. Nello specifico, saranno considerati già finanziati (e quindi esclusi): <ul><li>il primo servizio dichiarato nella richiesta di erogazione del contributo, per chi ha aderito alla piattaforma pagoPA durante la vigenza dell’Avviso Pubblico</li><li>i primi due servizi dichiarati nella richiesta di erogazione del contributo, per chi ha aderito alla piattaforma pagoPA prima della pubblicazione dell’Avviso Pubblico</li><li>il primo servizio dichiarato nella richiesta di erogazione del contributo, per App IO</li></ul>"
+      - title: Se sono un Comune aderente al progetto cd. “Regionale”, come faccio a rinunciare ai finanziamenti del Fondo Innovazione della Fase II?
+        content: A tal riguardo, dovrai richiedere le modalità di gestione alla Regione, in coerenza con gli specifici accordi regionali con il DTD
 
 noResults: Nessun risultato trovato
 support:
