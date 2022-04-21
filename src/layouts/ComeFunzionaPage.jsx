@@ -85,7 +85,7 @@ export const ComeFunzionaPage = () => {
                 <span className="separator"></span>
               </BreadcrumbItem>
               <BreadcrumbItem active className={classes.breadcrumbItemActive}>
-                <a href="/iniziativa">L&apos;iniziativa</a>
+                <a>L&apos;iniziativa</a>
               </BreadcrumbItem>
             </Breadcrumb>
           </Col>

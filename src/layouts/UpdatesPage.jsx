@@ -16,7 +16,7 @@ import content from '../../contents/opportunity-page/opportunity.yml';
 import links from '../../contents/links.yml';
 import { Breadcrumb } from '../components/Breadcrumb';
 
-const { title: seoTitle, description: seoDescription } = seo.supportPage;
+const { title: seoTitle, description: seoDescription } = seo.updatesPage;
 const { privacy } = links.internalLinks;
 
 const useStyles = createUseStyles({
