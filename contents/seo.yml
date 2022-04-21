@@ -28,6 +28,9 @@ faqPage:
 supportPage:
   title: Supporto - PA digitale 2026
   description: Ottieni supporto e trova le risposte alle domande più frequenti sulla richiesta dei fondi del PNRR dedicati alla transizione digitale della PA
+updatesPage:
+  title: Aggiornamenti - PA digitale 2026
+  description: Ottieni supporto e trova le risposte alle domande più frequenti sulla richiesta dei fondi del PNRR dedicati alla transizione digitale della PA
 confirmPage:
   title: Conferma Email - PA digitale 2026
   description: Conferma la tua email per ricevere agli aggiornamenti dalla piattaforma PA Digitale 2026
@@ -36,25 +39,25 @@ unsubscribePage:
   description: Annulla la tua email per ricevere agli aggiornamenti dalla piattaforma PA Digitale 2026
 projectsSolutionPage:
   title: Presentazione progetti - PA digitale 2026
-  description: Per le misure con una platea ristrettadi beneficiari (fino a  1.000 PA), è previstauna modalità di accesso attraversola presentazione di progetti, sempre ispirata ai principi della semplicità e della riduzione degli oneri amministrativi.
+  description: Scopri la modalità di accesso con la presentazione di progetti, ispirata ai principi della semplicità e della riduzione degli oneri amministrativi.
 assistenzaPage:
   title: Assistenza - PA digitale 2026
   description: Un team dedicato è a tua disposizione per chiarire dubbi e approfondire temi di interesse. Compila il modulo sottostante e invia la richiesta.
 standardSolutionPage:
   title: Soluzioni standard - PA digitale 2026
-  description: Per le misure con una platea ampia di beneficiari (oltre 1.000 PA), è prevista una modalità di accesso per soluzioni standard. Un percorso semplificato e guidato che va dalla richiesta dei finanziamenti all'erogazione dei fondi.
+  description: "Scopri la modalità di accesso per le soluzioni standard: un percorso guidato che va dalla richiesta dei fondi alla loro erogazione."
 creaProfiloPage:
   title: Crea profilo - PA digitale 2026
-  description: Per partecipare agli avvisi è necessario che il rappresentante legale di un'amministrazione presente su IPA (Indice dei domicili digitali della Pubblica Amministrazione), o una persona incaricata, avvii la procedura di attivazione della PA sulla piattaforma.
+  description: "Scopri come attivare il profilo della tua PA per partecipare agli avvisi: scegli un amministratore, verifica i dati e conferma la registrazione."
 candidaPaPage:
   title: Candida PA - PA digitale 2026
-  description: "Per candidare la tua amministrazione agli avvisi pubblici e richiedere i finanziamenti segui la configurazione guidata per comporre e inviare il documento di candidatura: potrai seguire lo stato di avanzamento della pratica in area riservata."
+  description: "Scopri come candidare la tua amministrazione agli avvisi pubblici e richiedere finanziamenti seguendo la configurazione guidata."
 classificaPaPage:
   title: Classifica PA - PA digitale 2026
   description: La classificazione dati e servizi è un requisito fondamentale da completare entro il 18 luglio 2022 ed è necessaria per avviare il processo di migrazione al cloud e garantire così sicurezza, efficienza e affidabilità dei servizi e delle infrastrutture.
 riceviAssistenzaPage:
   title: Ricevi assistenza - PA digitale 2026
-  description: All'interno della sezione dedicata al supporto puoi consultare le risposte alle domande più frequenti o aprire una richiesta per ricevere assistenza.
+  description: Trova le risposte alle tue domande o ricevi assistenza all'interno della sezione dedicata al supporto su PA digitale 2026.
 assistanceSuccessPage:
   title: Richiesta di assistenza inviata - PA digitale 2026
   description: Abbiamo ricevuto la tua richiesta di assistenza. Riceverai un riscontro al più presto ai contatti indicati.
