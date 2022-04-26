@@ -18,8 +18,11 @@ sidebar:
   - sectionTitle: Supporto tecnico
     sectionId: supporto-tecnico
     sectionActive: false
-  - sectionTitle: Misura 1.2
-    sectionId: misura-1-2
+  - sectionTitle: Misura 1.2 Comuni
+    sectionId: misura-1-2-comuni
+    sectionActive: false
+  - sectionTitle: Misura 1.4.1 Comuni
+    sectionId: misura-1-4-1-comuni
     sectionActive: false
   - sectionTitle: Misura 1.4.3 pagoPA
     sectionId: measure-1-4-3-pagopa
@@ -159,9 +162,9 @@ questions:
         ariaLabel: Vai alla pagina di assistenza
       - title: Come posso annullare la mia iscrizione agli aggiornamenti?
         content: Se desideri interrompere la ricezione di comunicazioni e aggiornamenti da PA digitale 2026, usa il link “Annulla iscrizione” presente nella sezione finale di ogni email.
-  - title: Misura 1.2
+  - title: Misura 1.2 Comuni
     description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
-    sectionId: misura-1-2
+    sectionId: misura-1-2-comuni
     accordions:
       - title: Quali enti della PA possono presentare domanda per accedere al finanziamento dall'Avviso riferito alla Misura 1.2?
         content: I Soggetti Attuatori, ovvero coloro che possono accedere allo strumento predisposto dall'Avviso, sono i Comuni.
@@ -212,6 +215,28 @@ questions:
         ariaLabel: Vedi ulteriori informazioni sulla migrazione della pubblica amministrazione (Collegamento esterno - Apre su nuova scheda)
       - title: Come avviene la migrazione verso i servizi cloud qualificati?
         content: La migrazione verso i diversi servizi Cloud qualificati e eventualmente all’interno del PSN dovrà essere governata tramite un processo centralizzato, agevole e uniforme per tutte le amministrazioni. I piani di migrazione saranno quindi definiti in accordo con il risultato della classificazione dei dati e dei servizi. La classificazione e la redazione del piano di migrazione saranno definiti e supportati, per i rispettivi profili di competenza, dell’Agenzia per la Cybersicurezza Nazionale (ACN) e del Dipartimento per la Trasformazione Digitale (DTD).
+  - title: Misura 1.4.1 Comuni
+    description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
+    sectionId: misura-1-4-1-comuni
+    accordions:
+      - title: Quali enti della PA possono presentare domanda?
+        content: I Soggetti Attuatori, ovvero coloro che possono accedere allo strumento predisposto dall'Avviso, sono esclusivamente i Comuni.
+      - title: È possibile accedere al finanziamento in caso di realizzazione del progetto prima della pubblicazione dell'Avviso “Esperienza del cittadino nei servizi pubblici” COMUNI (Aprile 2022) per i Comuni riferito alla Misura 1.4.1?
+        content: Si, è possibile accedere al finanziamento previsto dall'Avviso nel caso in cui l'implementazione delle attività di miglioramento oggetto del finanziamento siano state realizzate a decorrere dal 1° Febbraio 2020, con risorse finanziarie proprie.
+      - title: Entro quando è possibile inoltrare la domanda di accesso al finanziamento?
+        content: La domanda di partecipazione può essere presentata a partire dalla data di pubblicazione dell'Avviso fino ad esaurimento delle risorse disponibili, e comunque non oltre le ore 23.59 del 2 Settembre 2022.
+      - title: Entro quando dovrà essere rilasciato il sito istituzionale per i Comuni?
+        content: Il rilascio del sito istituzionale deve essere concluso nel termine perentorio previsto dall'Allegato 2 corrispondente alla fascia di popolazione del Comune.
+      - title: Cosa prevede il “Pacchetto cittadino informato”?
+        content: L’Ente che aderisce all’Avviso dovrà obbligatoriamente implementare il modello per il sito dei Comuni (“Pacchetto cittadino informato”), attraverso le modalità descritte nel paragrafo “Implementazione di sito comunale” dell'Allegato 2. Per il riconoscimento dell’obiettivo conseguito, l’Ente dovrà provvedere a rendere disponibile il proprio sito comunale e attenersi ai criteri di conformità secondo quanto previsto dal paragrafo "Raggiungimento dell’obiettivo di conformità al modello sito comunale" dell'Allegato 2.
+      - title: Cosa prevede il “Pacchetto cittadino attivo”?
+        content: L’Ente ha  la possibilità di selezionare, a seconda della dimensione del Comune, un numero massimo di servizi digitali per il cittadino, selezionabili dalla lista di servizi digitali per il cittadino (“Pacchetto cittadino attivo”). In questo caso l’Ente dovrà provvedere al ridisegno dei servizi scelti utilizzando le tipologie di flussi di interfaccia descritte nel relativo paragrafo, o comunque garantire i criteri di conformità descritti nel paragrafo "Raggiungimento dell’obiettivo per i servizi digitali per il cittadino" di cui all'Allegato 2.
+      - title: Cosa comprende il sito istituzionale per i Comuni messo a disposizione all’indirizzo https://designers.italia.it/modello/comuni/ ?
+        content: "Il modello di sito comunale, messo a disposizione all’indirizzo <a href=\"https://designers.italia.it/modello/comuni/\">https://designers.italia.it/modello/comuni/</a> comprende due strumenti fondamentali: l’architettura dell’informazione del sito comunale e i template html del sito comunale."
+      - title: Come viene calcolato l'importo forfettario previsto dall'Avviso “Esperienza del cittadino nei servizi pubblici” COMUNI (Aprile 2022) per i Comuni riferito alla Misura 1.4.1?
+        comuni: L’importo del finanziamento concedibile ai Comuni è individuato in un importo forfettario (lump sum) determinato in funzione della tipologia degli interventi previsti ed in funzione della classe di popolazione residente di riferimento del medesimo Comune aggiornata al dato ISTAT 2021.(Art. 1, comma 3 dell'Avviso).
+      - title: Qual è l'obiettivo dell'Avviso “Esperienza del cittadino nei servizi pubblici” COMUNI (Aprile 2022) per i Comuni riferito alla Misura 1.4.1?
+        content: "Per quanto riguarda i siti comunali, l’obiettivo del presente avviso è di mettere a disposizione dei cittadini interfacce coerenti, fruibili e accessibili, secondo il modello di sito comunale, e in conformità con le Linee guida emanate ai sensi del CAD e l’e-government benchmark relativamente agli indicatori della ‘user-centricity’ e della trasparenza, come indicato dall’Egovernment benchmark Method Paper 2020-2023. Per quanto riguarda i servizi digitali per il cittadino, l’obiettivo del presente avviso è di mettere a disposizione dei cittadini una serie di procedure erogate a livello comunale, tramite interfacce coerenti, fruibili e accessibili, con flussi di servizio quanto più uniformi, trasparenti e utente-centrici."
   - title: Misura 1.4.3 pagoPA
     description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
     sectionId: measure-1-4-3-pagopa
