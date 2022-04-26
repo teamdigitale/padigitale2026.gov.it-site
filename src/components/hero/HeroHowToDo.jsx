@@ -225,7 +225,7 @@ export const HeroHowToDo = ({ title, body, image, imageMob }) => {
                   <span className="separator"></span>
                 </BreadcrumbItem>
                 <BreadcrumbItem active>
-                  <a href="/come-partecipare">Come partecipare</a>
+                  <a>Come partecipare</a>
                 </BreadcrumbItem>
               </Breadcrumb>
               <div className={`${classes.contentWrapper} d-flex flex-column`}>
