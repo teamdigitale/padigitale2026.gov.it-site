@@ -21,6 +21,9 @@ sidebar:
   - sectionTitle: Misura 1.2
     sectionId: misura-1-2
     sectionActive: false
+  - sectionTitle: Misura 1.4.1
+    sectionId: misura-1-4-1
+    sectionActive: false
   - sectionTitle: Misura 1.4.3 pagoPA
     sectionId: measure-1-4-3-pagopa
     sectionActive: false
@@ -212,6 +215,25 @@ questions:
         ariaLabel: Vedi ulteriori informazioni sulla migrazione della pubblica amministrazione (Collegamento esterno - Apre su nuova scheda)
       - title: Come avviene la migrazione verso i servizi cloud qualificati?
         content: La migrazione verso i diversi servizi Cloud qualificati e eventualmente all’interno del PSN dovrà essere governata tramite un processo centralizzato, agevole e uniforme per tutte le amministrazioni. I piani di migrazione saranno quindi definiti in accordo con il risultato della classificazione dei dati e dei servizi. La classificazione e la redazione del piano di migrazione saranno definiti e supportati, per i rispettivi profili di competenza, dell’Agenzia per la Cybersicurezza Nazionale (ACN) e del Dipartimento per la Trasformazione Digitale (DTD).
+  - title: Misura 1.4.1
+    description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
+    sectionId: misura-1-4-1
+    accordions:
+      - title: Quali enti della PA possono presentare domanda?
+        content: I Soggetti Attuatori, ovvero coloro che possono accedere allo strumento predisposto dall'Avviso, sono esclusivamente i Comuni.
+      - title: È possibile accedere al finanziamento in caso di realizzazione del progetto prima della pubblicazione dell'Avviso “Esperienza del cittadino nei servizi pubblici” COMUNI (Aprile 2022) per i Comuni riferito alla Misura 1.4.1?
+        content: Si, è possibile accedere al finanziamento previsto dall'Avviso nel caso in cui l'implementazione delle attività di miglioramento oggetto del finanziamento siano state realizzate a decorrere dal 1° Febbraio 2020, con risorse finanziarie proprie.
+      - title: Entro quando è possibile inoltrare la domanda di accesso al finanziamento?
+        content: La domanda di partecipazione può essere presentata a partire dalla data di pubblicazione dell'Avviso fino ad esaurimento delle risorse disponibili, e comunque non oltre le ore 23.59 del 2 Settembre 2022.
+      - title: Entro quando dovrà essere rilasciato il sito istituzionale per i Comuni?
+        content: Il rilascio del sito istituzionale deve essere concluso nel termine perentorio previsto dall'Allegato 2 corrispondente alla fascia di popolazione del Comune.
+      - title: Cosa prevede il “Pacchetto cittadino informato”?
+        content: L’Ente che aderisce all’Avviso dovrà obbligatoriamente implementare il modello per il sito dei Comuni (“Pacchetto cittadino informato”), attraverso le modalità descritte nel paragrafo “Implementazione di sito comunale” dell'Allegato 2. Per il riconoscimento dell’obiettivo conseguito, l’Ente dovrà provvedere a rendere disponibile il proprio sito comunale e attenersi ai criteri di conformità secondo quanto previsto dal paragrafo "Raggiungimento dell’obiettivo di conformità al modello sito comunale" dell'Allegato 2.
+      - title: Cosa prevede il “Pacchetto cittadino attivo”?
+        content: L’Ente ha  la possibilità di selezionare, a seconda della dimensione del Comune, un numero massimo di servizi digitali per il cittadino, selezionabili dalla lista di servizi digitali per il cittadino (“Pacchetto cittadino attivo”). In questo caso l’Ente dovrà provvedere al ridisegno dei servizi scelti utilizzando le tipologie di flussi di interfaccia descritte nel relativo paragrafo, o comunque garantire i criteri di conformità descritti nel paragrafo "Raggiungimento dell’obiettivo per i servizi digitali per il cittadino" di cui all'Allegato 2.
+      - title: Cosa comprende il sito istituzionale per i Comuni messo a disposizione all’indirizzo https://designers.italia.it/modello/comuni/ ?
+        content: "Il modello di sito comunale, messo a disposizione all’indirizzo <a href=\"https://designers.italia.it/modello/comuni/\">https://designers.italia.it/modello/comuni/</a> comprende due strumenti fondamentali: l’architettura dell’informazione del sito comunale e i template html del sito comunale."
+
   - title: Misura 1.4.3 pagoPA
     description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
     sectionId: measure-1-4-3-pagopa
