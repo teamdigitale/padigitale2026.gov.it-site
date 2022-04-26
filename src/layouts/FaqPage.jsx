@@ -57,7 +57,6 @@ export const FaqPage = () => {
   const [questions, setQuestions] = useState(faq.questions);
   const [isMobile, setIsMobile] = useState();
   const [questNum, setquestNum] = useState(countInitQuestions());
-  const [, dispatch] = useContext(GlobalStateContext);
 
   useEffect(() => {
     setIsMobile(window.innerWidth < 992);
@@ -158,7 +157,7 @@ export const FaqPage = () => {
         }
       }
     }
-  }, [filterId, getNewQuestions, getQuestionsMobile, inputValue]);
+  }, [filterId, inputValue]);
 
   useEffect(() => {
     const sectionArr = document.querySelectorAll('.question-section');
@@ -239,7 +238,7 @@ export const FaqPage = () => {
           <Row>
             <Col lg={3}>
               <SideNavigation
-                getFilter={setFilterId}
+                getFilter={filterId}
                 activeList={questions}
                 searchValue={inputValue}
                 list={content.sidebar}
@@ -257,14 +256,7 @@ export const FaqPage = () => {
                 Numero faq filtrate {questNum}
               </span>
               {questions.map((question) => (
-                <QuestionSection
-                  key={question.title}
-                  item={question}
-                  inputText={inputValue}
-                  handleToggle={() => {
-                    dispatch({ type: 'SET:TOGGLE_MODAL' });
-                  }}
-                />
+                <QuestionSection key={question.title} item={question} inputText={inputValue} />
               ))}
               {!questions.length && (
                 <p className={classes.noResults} role="alert">

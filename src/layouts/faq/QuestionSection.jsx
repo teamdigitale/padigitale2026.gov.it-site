@@ -93,7 +93,8 @@ export const QuestionSection = (props) => {
 
   useEffect(() => {
     if (inputText && inputText.length >= 3) {
-      const regexp = new RegExp(inputText, 'i');
+      const newInputText = inputText.replace('.', '//.');
+      const regexp = new RegExp(newInputText, 'i');
       const filterAccordions = accordions.filter(
         (accordion) =>
           regexp.test(accordion.title) || regexp.test(accordion.content) || regexp.test(accordion.linkLabel)
