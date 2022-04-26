@@ -18,8 +18,8 @@ sidebar:
   - sectionTitle: Supporto tecnico
     sectionId: supporto-tecnico
     sectionActive: false
-  - sectionTitle: Misura 1.2
-    sectionId: misura-1-2
+  - sectionTitle: Misura 1.2 Comuni
+    sectionId: misura-1-2-comuni
     sectionActive: false
   - sectionTitle: Misura 1.4.1
     sectionId: misura-1-4-1
@@ -162,9 +162,9 @@ questions:
         ariaLabel: Vai alla pagina di assistenza
       - title: Come posso annullare la mia iscrizione agli aggiornamenti?
         content: Se desideri interrompere la ricezione di comunicazioni e aggiornamenti da PA digitale 2026, usa il link “Annulla iscrizione” presente nella sezione finale di ogni email.
-  - title: Misura 1.2
+  - title: Misura 1.2 Comuni
     description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
-    sectionId: misura-1-2
+    sectionId: misura-1-2-comuni
     accordions:
       - title: Quali enti della PA possono presentare domanda per accedere al finanziamento dall'Avviso riferito alla Misura 1.2?
         content: I Soggetti Attuatori, ovvero coloro che possono accedere allo strumento predisposto dall'Avviso, sono i Comuni.

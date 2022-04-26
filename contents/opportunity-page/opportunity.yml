@@ -170,6 +170,7 @@ beneficiaries:
     accessSectionId: soluzioni-standard
     accessLabel: Soluzioni standard
     moreInfoLink: 'https://areariservata.padigitale2026.gov.it/Pa_digitale2026_avvisi'
+    goToButton: true
   - number: 1.4.2
     id: access
     title: Accessibilità
