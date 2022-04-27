@@ -2,14 +2,13 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-undef */
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Input, Row, Col } from 'design-react-kit';
 import { createUseStyles } from 'react-jss';
 import { announce } from '@react-aria/live-announcer';
 import faq from '../../contents/faq-page/faq.yml';
 import { SEO } from '../components/SEO';
 import seo from '../../contents/seo.yml';
-import { GlobalStateContext } from '../context/globalContext';
 import content from '../../contents/faq-page/faq.yml';
 import { SideNavigation } from './faq/SideNavigation';
 import { QuestionSection } from './faq/QuestionSection';
