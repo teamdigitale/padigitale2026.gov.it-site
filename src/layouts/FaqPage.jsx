@@ -89,12 +89,17 @@ export const FaqPage = () => {
   }
 
   const handleChange = (event) => {
-    setInputValue(event.target.value);
-    if (event.target.value.length >= 3) {
+    let value = event.target.value;
+    if (value.charAt(value.length - 1) === '\\') {
+      value = value.substring(0, value.length - 1);
+    }
+    event.target.value = value;
+    setInputValue(value);
+    if (value.length >= 3) {
       if (isMobile && filterId !== 'all') {
-        setQuestions(getQuestionsMobile(getNewQuestions(event.target.value)));
+        setQuestions(getQuestionsMobile(getNewQuestions(value)));
       } else {
-        setQuestions(getNewQuestions(event.target.value));
+        setQuestions(getNewQuestions(value));
       }
     } else {
       if (isMobile) {
@@ -238,7 +243,7 @@ export const FaqPage = () => {
           <Row>
             <Col lg={3}>
               <SideNavigation
-                getFilter={filterId}
+                getFilter={setFilterId}
                 activeList={questions}
                 searchValue={inputValue}
                 list={content.sidebar}
