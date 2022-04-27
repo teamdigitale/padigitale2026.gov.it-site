@@ -1,3 +1,5 @@
+/* eslint-disable sonarjs/cognitive-complexity */
+/* eslint-disable sonarjs/no-collapsible-if */
 /* eslint-disable sonarjs/no-duplicate-string */
 import React, { useState, useEffect, useContext } from 'react';
 import { Accordion, AccordionHeader, AccordionBody } from 'design-react-kit';
@@ -93,7 +95,13 @@ export const QuestionSection = (props) => {
 
   useEffect(() => {
     if (inputText && inputText.length >= 3) {
-      const newInputText = inputText.replace('.', '//.');
+      const afterDot = inputText.substring(inputText.indexOf('.') + 1);
+      let newInputText = inputText;
+      if (inputText.indexOf('.') > -1) {
+        if (afterDot !== '' && !isNaN(afterDot)) {
+          newInputText = inputText.replaceAll('.', '//.');
+        }
+      }
       const regexp = new RegExp(newInputText, 'i');
       const filterAccordions = accordions.filter(
         (accordion) =>
