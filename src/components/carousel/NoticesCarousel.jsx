@@ -201,7 +201,7 @@ export const NoticesCarousel = ({ content, title }) => {
             title={title}
             idCarousel="notices-carousel"
           />
-          <div className="mt-5 mt-lg-0 d-flex justify-content-center">
+          <div className="mt-5 d-flex justify-content-center">
             <Link
               to="https://areariservata.padigitale2026.gov.it/Pa_digitale2026_avvisi"
               className="btn text-uppercase btn-primary"
