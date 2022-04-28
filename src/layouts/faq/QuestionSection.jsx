@@ -1,6 +1,3 @@
-/* eslint-disable sonarjs/cognitive-complexity */
-/* eslint-disable sonarjs/no-collapsible-if */
-/* eslint-disable sonarjs/no-duplicate-string */
 import React, { useState, useEffect, useContext } from 'react';
 import { Accordion, AccordionHeader, AccordionBody } from 'design-react-kit';
 import { createUseStyles } from 'react-jss';
@@ -86,64 +83,9 @@ const useStyles = createUseStyles({
 export const QuestionSection = (props) => {
   const classes = useStyles();
   const { title, accordions, sectionId } = props.item;
-  const { inputText } = props;
 
   const [indexIsOpen, setIndexIsOpen] = useState(-1);
-  const [accordionList, setAccordionList] = useState(accordions);
   const [{ faqId }] = useContext(GlobalStateContext);
-  // const [sectionVisible, setSectionVisible] = useState(true);
-
-  useEffect(() => {
-    if (inputText && inputText.length >= 3) {
-      const afterDot = inputText.substring(inputText.indexOf('.') + 1);
-      let newInputText = inputText;
-      if (inputText.indexOf('.') > -1) {
-        if (afterDot !== '' && !isNaN(afterDot)) {
-          newInputText = inputText.replaceAll('.', '//.');
-        }
-      }
-      const regexp = new RegExp(newInputText, 'i');
-      const filterAccordions = accordions.filter(
-        (accordion) =>
-          regexp.test(accordion.title) || regexp.test(accordion.content) || regexp.test(accordion.linkLabel)
-      );
-      const newAccordions = filterAccordions.map((acc) => {
-        const regex = acc.title.match(regexp);
-        const regexContent = acc.content.match(regexp);
-        let regexLink;
-
-        if (acc.linkLabel) {
-          regexLink = acc.linkLabel.match(regexp);
-        } else {
-          regexLink = null;
-        }
-
-        if (regex?.length || regexContent?.length || regexLink?.length) {
-          let text = acc.title.replaceAll(/(<mark>|<\/mark>)/gim, '');
-          let contentText = acc.content.replaceAll(/(<mark>|<\/mark>)/gim, '');
-          let linkText = acc.linkLabel;
-
-          if (regexLink) {
-            linkText = acc.linkLabel.replaceAll(/(<mark>|<\/mark>)/gim, '');
-            const newLink = linkText.replaceAll(regexLink, '<mark>$&</mark>');
-            linkText = newLink;
-          }
-
-          const newText = text.replaceAll(regex, '<mark>$&</mark>');
-          const newContent = contentText.replaceAll(regexContent, '<mark>$&</mark>');
-
-          text = newText;
-          contentText = newContent;
-          return { ...acc, title: text, content: contentText, linkLabel: linkText };
-        }
-        return acc;
-      });
-
-      setAccordionList(newAccordions);
-    } else {
-      setAccordionList(accordions);
-    }
-  }, [inputText, accordions]);
 
   useEffect(() => {
     if (faqId) {
@@ -151,9 +93,9 @@ export const QuestionSection = (props) => {
         behavior: 'smooth',
       });
       const isAccordion = (element) => faqId === element.accordionId;
-      setIndexIsOpen(accordionList.findIndex(isAccordion));
+      setIndexIsOpen(accordions.findIndex(isAccordion));
     }
-  }, [faqId, accordionList]);
+  }, [faqId, accordions]);
 
   return (
     <>
@@ -162,7 +104,7 @@ export const QuestionSection = (props) => {
           {title}
         </h3>
         <Accordion>
-          {accordionList.map((accordion, i) => (
+          {accordions.map((accordion, i) => (
             <div key={accordion.title} className={classes.accordionWrapper}>
               <AccordionHeader
                 onToggle={() => setIndexIsOpen((state) => (state === i ? -1 : i))}
@@ -208,4 +150,5 @@ export const QuestionSection = (props) => {
 QuestionSection.propTypes = {
   item: PropTypes.object.isRequired,
   inputText: PropTypes.string,
+  setQuestions: PropTypes.func,
 };

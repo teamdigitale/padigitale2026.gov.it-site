@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/no-identical-functions */
 /* eslint-disable max-lines-per-function */
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react-hooks/exhaustive-deps */
@@ -88,17 +89,57 @@ export const FaqPage = () => {
   }
 
   const handleChange = (event) => {
-    let value = event.target.value;
-    if (value.charAt(value.length - 1) === '\\') {
-      value = value.substring(0, value.length - 1);
-    }
-    event.target.value = value;
+    const value = event.target.value;
     setInputValue(value);
     if (value.length >= 3) {
       if (isMobile && filterId !== 'all') {
-        setQuestions(getQuestionsMobile(getNewQuestions(value)));
+        const mobileGroup = getQuestionsMobile(getNewQuestions(value));
+        const filteredMobileGroup = JSON.parse(JSON.stringify(mobileGroup)).map((group) =>
+          group.accordions.filter((accordion) => {
+            if (
+              accordion.title?.toLowerCase().includes(value.toLowerCase()) ||
+              accordion.content?.toLowerCase().includes(value.toLowerCase()) ||
+              accordion.linkLabel?.toLowerCase().includes(value.toLowerCase())
+            ) {
+              return accordion;
+            }
+          })
+        );
+        setQuestions(filteredMobileGroup);
       } else {
-        setQuestions(getNewQuestions(value));
+        const group = getNewQuestions(value);
+        const filteredGroup = JSON.parse(JSON.stringify(group)).map((g) => {
+          g.accordions = g.accordions.filter((accordion) => {
+            if (
+              accordion.title?.toLowerCase().includes(value.toLowerCase()) ||
+              accordion.content?.toLowerCase().includes(value.toLowerCase()) ||
+              accordion.linkLabel?.toLowerCase().includes(value.toLowerCase())
+            ) {
+              return accordion;
+            }
+          });
+          g.accordions = g.accordions.map((accordion) => {
+            const valueLength = value.length;
+            if (accordion.title?.toLowerCase().includes(value.toLowerCase())) {
+              const index = accordion.title.toLowerCase().indexOf(value.toLowerCase());
+              const foundText = accordion.title.substring(index, index + valueLength);
+              accordion.title = accordion.title?.replaceAll(foundText, `<mark>${foundText}</mark>`);
+            }
+            if (accordion.content?.toLowerCase().includes(value.toLowerCase())) {
+              const index = accordion.content.toLowerCase().indexOf(value.toLowerCase());
+              const foundText = accordion.content.substring(index, index + valueLength);
+              accordion.content = accordion.content?.replaceAll(foundText, `<mark>${foundText}</mark>`);
+            }
+            if (accordion.linkLabel?.toLowerCase().includes(value.toLowerCase())) {
+              const index = accordion.linkLabel.toLowerCase().indexOf(value.toLowerCase());
+              const foundText = accordion.linkLabel.substring(index, index + valueLength);
+              accordion.linkLabel = accordion.linkLabel?.replaceAll(foundText, `<mark>${foundText}</mark>`);
+            }
+            return accordion;
+          });
+          return g;
+        });
+        setQuestions(filteredGroup);
       }
     } else {
       if (isMobile) {
@@ -116,10 +157,15 @@ export const FaqPage = () => {
   };
 
   function getAccordionsFiltered(question, input) {
-    const regexp = new RegExp(input, 'i');
-    return question.accordions.filter(
-      (accordion) => regexp.test(accordion.title) || regexp.test(accordion.content) || regexp.test(accordion.linkLabel)
-    );
+    return question.accordions.filter((accordion) => {
+      if (
+        accordion.title?.toLowerCase().includes(input.toLowerCase()) ||
+        accordion.content?.toLowerCase().includes(input.toLowerCase()) ||
+        accordion.linkLabel?.toLowerCase().includes(input.toLowerCase())
+      ) {
+        return accordion;
+      }
+    });
   }
 
   function getNewQuestions(inputValue) {
@@ -148,20 +194,6 @@ export const FaqPage = () => {
       setQuestions(faq.questions);
     }
   }, [isMobile]);
-
-  useEffect(() => {
-    if (filterId) {
-      if (filterId === 'all') {
-        inputValue ? setQuestions(getNewQuestions(inputValue)) : setQuestions(faq.questions);
-      } else {
-        if (!getAccordionsFiltered(getQuestionsMobile(faq.questions)[0], inputValue).length) {
-          setQuestions(filterAccordions);
-        } else {
-          setQuestions(getQuestionsMobile(faq.questions));
-        }
-      }
-    }
-  }, [filterId, inputValue]);
 
   useEffect(() => {
     const sectionArr = document.querySelectorAll('.question-section');
@@ -260,7 +292,12 @@ export const FaqPage = () => {
                 Numero faq filtrate {questNum}
               </span>
               {questions.map((question) => (
-                <QuestionSection key={question.title} item={question} inputText={inputValue} />
+                <QuestionSection
+                  key={question.title}
+                  item={question}
+                  inputText={inputValue}
+                  setQuestions={setQuestions}
+                />
               ))}
               {!questions.length && (
                 <p className={classes.noResults} role="alert">
