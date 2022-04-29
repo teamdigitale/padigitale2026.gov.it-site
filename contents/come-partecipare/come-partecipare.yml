@@ -23,6 +23,10 @@ keypoints:
       image: 'invia-candidatura.svg'
       title: 'Candidare una PA agli avvisi'
       desc: 'Attraverso la creazione e l’invio del documento di candidatura.'
+    - number: "05"
+      image: 'gest-prog-icon.svg'
+      title: 'Gestire un progetto'
+      desc: Per completare le attività previste e richiedere il finanziamento.'
 sectionFirst:
   number: '01'
   title: 'Attivare la tua  PA'
