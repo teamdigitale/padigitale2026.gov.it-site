@@ -21,8 +21,14 @@ sidebar:
   - sectionTitle: Misura 1.2 Comuni
     sectionId: misura-1-2-comuni
     sectionActive: false
+  - sectionTitle: Misura 1.2 Scuole
+    sectionId: misura-1-2-scuole
+    sectionActive: false
   - sectionTitle: Misura 1.4.1 Comuni
     sectionId: misura-1-4-1-comuni
+    sectionActive: false
+  - sectionTitle: Misura 1.4.1 Scuole
+    sectionId: misura-1-4-1-scuole
     sectionActive: false
   - sectionTitle: Misura 1.4.3 pagoPA
     sectionId: measure-1-4-3-pagopa
@@ -218,6 +224,36 @@ questions:
         ariaLabel: Vedi ulteriori informazioni sulla migrazione della pubblica amministrazione (Collegamento esterno - Apre su nuova scheda)
       - title: Come avviene la migrazione verso i servizi cloud qualificati?
         content: La migrazione verso i diversi servizi Cloud qualificati e eventualmente all’interno del PSN dovrà essere governata tramite un processo centralizzato, agevole e uniforme per tutte le amministrazioni. I piani di migrazione saranno quindi definiti in accordo con il risultato della classificazione dei dati e dei servizi. La classificazione e la redazione del piano di migrazione saranno definiti e supportati, per i rispettivi profili di competenza, dell’Agenzia per la Cybersicurezza Nazionale (ACN) e del Dipartimento per la Trasformazione Digitale (DTD).
+  - title: Misura 1.2 Scuole
+    description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
+    sectionId: misura-1-2-scuole
+    accordions:
+      - title: Il Canone del primo anno è incluso nel finanziamento?
+        content: Si, il canone del primo anno è incluso nell’importo forfettario come definito dall'Allegato 2.
+      - title: Come deve essere rendicontato il contributo?
+        content: Il contributo consiste in una somma forfettaria che viene erogata al raggiungimento del risultato come indicato dall'Avviso. Non è prevista la rendicontazione a costi reali.
+      - title: Quali enti della PA possono presentare domanda per accedere al finanziamento dall'Avviso "Abilitazione al Cloud per le PA locali" Scuole, riferito alla Misura 1.2?
+        content: "I Soggetti Attuatori, ovvero coloro che possono accedere allo strumento predisposto dall'Avviso, sono le Scuole sedi di Direttivo dislocate su tutto il territorio nazionale. Non sono ritenute ammissibili le proposte presentate da scuole non statali paritarie, non paritarie e straniere."
+      - title: È possibile accedere al finanziamento in caso di realizzazione della migrazione al cloud prima della pubblicazione dall'Avviso "Abilitazione al Cloud per le PA locali" Scuole, riferito alla Misura 1.2?
+        content: Si, è possibile accedere al finanziamento previsto dall'Avviso, riferito alla Misura 1.2, nel caso in cui il processo di migrazione al cloud sia stato realizzato a decorrere dal 01 Febbraio 2020 con risorse finanziarie proprie.
+      - title: È possibile accedere al finanziamento in caso di realizzazione della migrazione al cloud, con l'ausilio di Fondi pubblici,nazionali, regionali o europei prima della pubblicazione dell'Avviso riferito alla Misura 1.2?
+        content: No, non è possibile accedere al finanziamento previsto dall'Avviso, riferito alla Misura 1.2, nel caso in cui il processo di migrazione al cloud sia stato realizzato con Fondi pubblici, nazionali, regionali o europei, secondo quanto previsto dall'art. 8 comma 5 dell'Avviso.
+      - title: Entro quando è possibile inoltrare la domanda di accesso al finanziamento?
+        content: La domanda può essere presentata a partire dalla data di pubblicazione fino ad esaurimento delle risorse e comunque entro e non oltre le ore 23:59 del 21/10/2022, come specificato nell'Avviso 1.2.
+      - title: Quali tipologie di servizi potranno essere oggetto di migrazione?
+        content: Oggetto di migrazione potranno essere tutti i servizi erogati in tutte le loro forme dal singolo Ente e il cui livello complessivo di efficienza possa essere ottimizzato attraverso una migrazione verso  piattaforme Cloud Qualificate o presso Infrastrutture della PA idonee
+      - title: Di quante modalità di migrazione può avvalersi una scuola al fine di rispondere correttamente ai requisiti previsti dall'Avviso riferito alla Misura 1.2?
+        content: "La Scuola potrà effettuare la migrazione sfruttando le diverse tipologie di migrazione delineate  nella Strategia Nazionale per il Cloud, selezionando tra le modalità:</br>- Trasferimento in sicurezza dell’infrastruttura IT</br>- Aggiornamento di applicazioni sicure in Cloud"
+      - title: Quali sono le caratteristiche del modello di migrazione "Trasferimento in sicurezza dell’infrastruttura IT"?
+        content: L’opzione "Trasferimento in sicurezza dell’infrastruttura IT" consente di sfruttare la strategia di migrazione Lift&Shift (anche detta Rehost), cioè la migrazione al Cloud dell’infrastruttura già esistente, senza la necessità di reingegnerizzare le applicazioni. Tale modalità consiste nel migrare l’intero servizio, comprensivo di applicazioni e dati su un hosting cloud senza apportare modifiche agli applicativi, ovvero replicando il servizio esistente in un ambiente cloud.
+      - title: Una scuola è obbligata ad adottare la stessa modalità di migrazione per tutti i servizi?
+        content: No, La Scuola può decidere singolarmente per ognuno dei servizi oggetto della migrazione. L’Ente potrà selezionare il modello di migrazione più adatto da presentare all’interno del piano di migrazione.
+      - title: In cosa consiste la classificazione di dati e servizi? A cosa serve?
+        content: "La classificazione dei dati e dei servizi gestiti dalle PA consente di uniformare e guidare il processo di migrazione al Cloud della PA. Le classi dei dati e servizi sono identificate sulla base del danno che una loro compromissione, in termini di confidenzialità, integrità e disponibilità, provocherebbe al sistema Paese. Ulteriori informazioni sono disponibili al seguente link: <a href=\"https://docs.italia.it/italia/cloud-italia/strategia-cloud-italia-docs/it/stabile/4_la_strategia_cloud_per_la_pubblica_amministrazione.html#la-classificazione-dei-dati-e-dei-servizi\">https://docs.italia.it/italia/cloud-italia/strategia-cloud-italia-docs/it/stabile/4_la_strategia_cloud_per_la_pubblica_amministrazione.html#la-classificazione-dei-dati-e-dei-servizi</a>"
+      - title: A quanto ammonta l'importo del finanziamento previsto dall'Avviso riferito alla Misura 1.2?
+        content: 'L’importo del finanziamento concedibile alle Scuole è individuato in un importo forfettario determinato secondo il seguente criterio: per ogni servizio che verrà migrato verrà corrisposto un costo unitario di € 553 iva inclusa, con un importo minimo quindi pari a € 1.659 per 3 servizi fino ad un massimo di € 9.954, equivalente a 18 servizi. L’importo definitivo, tuttavia, sarà calcolato sulla base della sommatoria dei servizi che saranno migrati.'
+      - title: Quali sono le caratteristiche del modello di migrazione "Aggiornamento in sicurezza di applicazioni in Cloud"?
+        content: L’opzione di "Aggiornamento di applicazioni sicure in Cloud" offre la possibilità di migrare le applicazioni utilizzando una tra le strategie repurchase/replace e replatform. Per repurchase/replace si intende l’acquisto di una soluzione nativa in cloud, in genere erogata in modalità Software as a Service, mentre per replatforming si intende la riorganizzazione dell’architettura applicativa sostituendo intere componenti del servizio in favore di soluzioni Cloud native in modo da usufruire dei benefici dell’infrastruttura Cloud.
   - title: Misura 1.4.1 Comuni
     description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
     sectionId: misura-1-4-1-comuni
@@ -240,6 +276,28 @@ questions:
         comuni: L’importo del finanziamento concedibile ai Comuni è individuato in un importo forfettario (lump sum) determinato in funzione della tipologia degli interventi previsti ed in funzione della classe di popolazione residente di riferimento del medesimo Comune aggiornata al dato ISTAT 2021.(Art. 1, comma 3 dell'Avviso).
       - title: Qual è l'obiettivo dell'Avviso “Esperienza del cittadino nei servizi pubblici” COMUNI (Aprile 2022) per i Comuni riferito alla Misura 1.4.1?
         content: "Per quanto riguarda i siti comunali, l’obiettivo del presente avviso è di mettere a disposizione dei cittadini interfacce coerenti, fruibili e accessibili, secondo il modello di sito comunale, e in conformità con le Linee guida emanate ai sensi del CAD e l’e-government benchmark relativamente agli indicatori della ‘user-centricity’ e della trasparenza, come indicato dall’Egovernment benchmark Method Paper 2020-2023. Per quanto riguarda i servizi digitali per il cittadino, l’obiettivo del presente avviso è di mettere a disposizione dei cittadini una serie di procedure erogate a livello comunale, tramite interfacce coerenti, fruibili e accessibili, con flussi di servizio quanto più uniformi, trasparenti e utente-centrici."
+  - title: Misura 1.4.1 Scuole
+    description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
+    sectionId: misura-1-4-1-scuole
+    accordions:
+      - title: Quali enti della PA possono presentare domanda?
+        content: "I Soggetti Attuatori, ovvero coloro che possono accedere allo strumento predisposto dall'Avviso,  sono le Scuole sedi di Direttivo comprensive di scuole secondarie di 1° e 2° grado dislocate su tutto il territorio nazionale."
+      - title: È possibile accedere al finanziamento in caso di realizzazione del progetto prima della pubblicazione dell'Avviso "Esperienza del cittadino nei servizi pubblici” SCUOLE (Aprile 2022) per le scuole riferito alla Misura 1.4.1?
+        content: "Si, è possibile accedere al finanziamento previsto dall'Avviso nel caso in cui tutte le attività necessarie per l’implementazione di un modello standard di siti web destinati alle comunità scolastiche siano state realizzate a decorrere dal 1 Febbraio 2020, con risorse finanziarie proprie."
+      - title: Entro quando è possibile inoltrare la domanda di accesso al finanziamento?
+        content: La domanda di partecipazione può essere presentata a partire dalla data di pubblicazione dell'Avviso fino ad esaurimento delle risorse disponibili, e comunque non oltre le ore 23.59 del 2 settembre 2022.
+      - title: Ci sono dei modelli di siti web già predisposti per il Soggetto Attuatore che presenta candidatura per l'Avviso riferito alla Misura 1.4.1?
+        content: Il Ministero dell’istruzione e il Dipartimento per la trasformazione digitale hanno messo a punto un modello standard di sito web istituzionale per le scuole italiane Sedi di Direttivo di 1° e 2° grado, in modo da offrire a genitori, studenti e all’intera comunità scolastica un punto di accesso semplice e trasversale alle esigenze degli utenti, realizzato sulla base dei principi di progettazione user centred e realizzato grazie alle risorse che compongono il design system del Paese, messo a disposizione tramite il progetto Designers Italia all’indirizzo <a href="https://designers.italia.it/modello/scuole">https://designers.italia.it/modello/scuole</a>.
+      - title: Cosa contiene il modello del sito messo a disposizione da Designers Italia?
+        content: "Il modello di sito istituzionale per le scuole, messo a disposizione all’indirizzo https://designers.italia.it/modello/scuole comprende tre strumenti fondamentali: l’architettura dell’informazione del sito, il codice HTML del sito e il tema Wordpress del sito stesso."
+      - title: È possibile accedere al finanziamento in caso di realizzazione del progetto, con l'ausilio di Fondi pubblici, prima della pubblicazione dell'Avviso “Esperienza del cittadino nei servizi pubblici” SCUOLE (Aprile 2022)” riferito alla Misura 1.4.1?
+        content: No, non è possibile accedere al finanziamento previsto dall'Avviso riferito alla Misura 1.4.1 nel caso in cui le attività necessarie per l'implementazione del sito web della PA siano state realizzate con altri finanziamenti pubblici, nazionali, regionali o europei, secondo quanto previsto dall'art. 7 dell'Avviso.
+      - title: Entro quanto tempo dovrà essere contrattualizzato il fornitore rispetto al Decreto di Finanziamento?
+        content: Il fornitore dovà essere contrattualizzato al massimo entro 6 mesi (180 gg) dalla data di notifica del Decreto di Finanziamento.
+      - title: Quando il processo si intende concluso?
+        content: "Al termine del processo di rilascio del sito istituzionale per le scuole, l’ente dovrà attestare mediante dichiarazione da caricare sulla piattaforma di adesione <a href=\"https://padigitale2026.gov.it/\">https://padigitale2026.gov.it/</a> il raggiungimento di alcune caratteristiche, che rappresentano ai fini dell'Avviso riferito alla Misura 1.4.1, la dichiarazione di conformità del sito per le scuole realizzato rispetto al modello fornito.</br>In particolare, le attività si intendono concluse con esito positivo al momento in cui:</br></br>- Il sito è disponibile online</br>- È stata compilata la checklist di conformità indicata nel paragrafo Verifica della conformità dell'Allegato 2 all'avviso"
+      - title: A quanto ammonta l'importo del finanziamento previsto dall'Avviso riferito alla Misura 1.4.1 “Esperienza del cittadino nei servizi pubblici” SCUOLE (Aprile 2022)”?
+        content: "L’importo del finanziamento, riconosciuto per il rifacimento del sito web istituzionale è pari a 7.301 euro Iva inclusa. L’importo del finanziamento sarà riconosciuto al Soggetto Attuatore solo a seguito del conseguimento del risultato atteso."
   - title: Misura 1.4.3 pagoPA
     description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
     sectionId: measure-1-4-3-pagopa
