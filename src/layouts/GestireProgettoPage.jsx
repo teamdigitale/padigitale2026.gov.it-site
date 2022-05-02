@@ -225,7 +225,7 @@ export const GestireProgettoPage = () => {
               </div>
             </Col>
             <Col xs={12} lg={4} className="offset-lg-1 mt-5 mt-lg-0 d-flex justify-content-center align-items-center">
-              <img src={`/assets/Gestire_Progetti.svg`} alt="" className={classes.heroImg} />
+              <img src={`/assets/come-fare/Gestire_Progetti_alt.svg`} alt="" className={classes.heroImg} />
             </Col>
           </Row>
           <div className={classes.navigationContainer}>
@@ -255,7 +255,14 @@ export const GestireProgettoPage = () => {
                     <br />
                     <br /> Le amministrazioni saranno guidate sulla piattaforma ad hoc gestita dal DIPE (Dipartimento
                     per la programmazione ed il coordinamento della politica economica) in cui, attraverso un{' '}
-                    <a className={`${classes.externalLink}`} href="#">
+                    <a
+                      target="_blank"
+                      className={`${classes.externalLink}`}
+                      href="https://opencup.gov.it/template-cup"
+                      title="Link al template cup ( Link esterno - Apre su nuova scheda )"
+                      aria-label="Link al template cup ( Link esterno - Apre su nuova scheda )"
+                      rel="noreferrer"
+                    >
                       Template CUP
                       <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -268,7 +275,14 @@ export const GestireProgettoPage = () => {
                     </a>
                     , potranno acquisire in modo rapido e agile il Codice Unico di Progetto. Sul sito Open Cup sono
                     disponibili le{' '}
-                    <a className={`${classes.externalLink}`} href="#">
+                    <a
+                      target="_blank"
+                      className={`${classes.externalLink}`}
+                      href="https://opencup.gov.it/-/dipartimento-per-la-transizione-digitale-online-le-faq-codice-unico-di-progetto-sulle-iniziative-pnrr-per-la-pa-digitale-2026"
+                      title="Link alle domande frequenti ( Link esterno - Apre su nuova scheda )"
+                      aria-label="Link alle domande frequenti ( Link esterno - Apre su nuova scheda )"
+                      rel="noreferrer"
+                    >
                       “Domande frequenti”
                       <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -286,7 +300,13 @@ export const GestireProgettoPage = () => {
                   </p>
                   <h4 className={`${classes.contentTitle} mt-5`}>Approfondimenti</h4>
                   <div className={`${classes.linkWrapper}`}>
-                    <a href="#">
+                    <a
+                      target="_blank"
+                      href="https://opencup.gov.it/template-cup"
+                      title="Link al template cup ( Link esterno - Apre su nuova scheda )"
+                      aria-label="Link al template cup ( Link esterno - Apre su nuova scheda )"
+                      rel="noreferrer"
+                    >
                       Cos'è il Template CUP{' '}
                       <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -297,7 +317,13 @@ export const GestireProgettoPage = () => {
                         />
                       </svg>
                     </a>
-                    <a href="#">
+                    <a
+                      target="_blank"
+                      href="https://opencup.gov.it/-/dipartimento-per-la-transizione-digitale-online-le-faq-codice-unico-di-progetto-sulle-iniziative-pnrr-per-la-pa-digitale-2026"
+                      title="Link alle FAQ per i CUP di PA digitale 2026 ( Link esterno - Apre su nuova scheda )"
+                      aria-label="Link alle FAQ per i CUP di PA digitale 2026 ( Link esterno - Apre su nuova scheda )"
+                      rel="noreferrer"
+                    >
                       FAQ per i CUP di PA digitale 2026
                       <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -327,10 +353,11 @@ export const GestireProgettoPage = () => {
                       la scelta del fornitore deve essere comunicata sulla piattaforma PA digitale 2026
                     </strong>{' '}
                     entro un periodo determinato di tempo, che varia a seconda dell’avviso pubblico. Qualora il
-                    <strong> fornitore fosse già contrattualizzato</strong> o si trattasse di una società in-house, la
-                    PA deve fornire un documento equivalente a quello di ingaggio del fornitore, ad esempio un ordine di
-                    servizio. Ricordati quindi che è possibile indicare anche un fornitore contrattualizzato prima del
-                    decreto di finanziamento per attività già avviate o realizzate a decorrere dal 1° febbraio 2020.
+                    <strong> fornitore fosse già contrattualizzato</strong> o si trattasse di una società{' '}
+                    <strong>in-house</strong>, la PA deve fornire un documento equivalente a quello di ingaggio del
+                    fornitore, ad esempio un ordine di servizio. Ricordati quindi che è possibile indicare anche un
+                    fornitore contrattualizzato prima del decreto di finanziamento per attività già avviate o realizzate
+                    a decorrere dal 1° febbraio 2020.
                     <br />
                     <br /> È necessario fare la dichiarazione DNHS (Do No Significant Harm) per ogni singolo fornitore
                     coinvolto. Tale principio prevede che gli interventi del PNRR non arrechino nessun danno
@@ -340,7 +367,14 @@ export const GestireProgettoPage = () => {
                     seconda delle risorse, i vari strumenti messi a disposizione da Consip, la centrale acquisti della
                     Pubblica Amministrazione. In particolare, per le procedure sotto soglia, le PA possono anche
                     utilizzare il{' '}
-                    <a href="#" className={`${classes.externalLink}`}>
+                    <a
+                      target="_blank"
+                      href="https://www.acquistinretepa.it/opencms/opencms/index.html"
+                      className={`${classes.externalLink}`}
+                      title="Link a MePA ( Link esterno - Apre su nuova scheda )"
+                      aria-label="Link a MePA ( Link esterno - Apre su nuova scheda )"
+                      rel="noreferrer"
+                    >
                       MePA
                       <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -357,7 +391,14 @@ export const GestireProgettoPage = () => {
                     misure 1.2 (migrazione al cloud) e 1.4.1 (esperienza del cittadino nei servizi pubblici) sono
                     previsti cataloghi in cui i fornitori accreditati hanno modo di presentare offerte dedicate,
                     funzionali al raggiungimento degli obiettivi previsti dal PNRR, all’interno del{' '}
-                    <a href="#" className={`${classes.externalLink}`}>
+                    <a
+                      target="_blank"
+                      href="https://www.acquistinretepa.it/opencms/opencms/scheda_iniziativa.html?idIniziativa=b577cd18b64b21a3"
+                      className={`${classes.externalLink}`}
+                      title="Link al Bando del Mercato elettronico servizi ( Link esterno - Apre su nuova scheda )"
+                      aria-label="Link al Bando del Mercato elettronico servizi ( Link esterno - Apre su nuova scheda )"
+                      rel="noreferrer"
+                    >
                       Bando del Mercato elettronico SERVIZI (categoria merceologica Servizi per l’information
                       communication technology).
                       <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -373,7 +414,13 @@ export const GestireProgettoPage = () => {
                   </p>
                   <h4 className={`${classes.contentTitle} mt-5`}>Approfondimenti</h4>
                   <div className={`${classes.linkWrapper}`}>
-                    <a href="#">
+                    <a
+                      target="_blank"
+                      href="https://www.acquistinretepa.it/opencms/opencms/scheda_iniziativa.html?idIniziativa=b577cd18b64b21a3"
+                      title="Link al Bando del Mercato elettronico servizi ( Link esterno - Apre su nuova scheda )"
+                      aria-label="Link al Bando del Mercato elettronico servizi ( Link esterno - Apre su nuova scheda )"
+                      rel="noreferrer"
+                    >
                       Bando del Mercato elettronico SERVIZI
                       <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -384,7 +431,13 @@ export const GestireProgettoPage = () => {
                         />
                       </svg>
                     </a>
-                    <a href="#">
+                    <a
+                      target="_blank"
+                      href="https://www.acquistinretepa.it/opencms/opencms/scheda_iniziativa.html?idIniziativa=c9c346967a0548c7"
+                      title="Link all'accordo quadro Public Cloud IaaS e PaaS ( Link esterno - Apre su nuova scheda )"
+                      aria-label="Link all'accordo quadro Public Cloud IaaS e PaaS ( Link esterno - Apre su nuova scheda )"
+                      rel="noreferrer"
+                    >
                       Accordo quadro Public Cloud IaaS e PaaS
                       <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -395,7 +448,13 @@ export const GestireProgettoPage = () => {
                         />
                       </svg>
                     </a>
-                    <a href="#">
+                    <a
+                      target="_blank"
+                      href="https://www.acquistinretepa.it/opencms/opencms/come_acquistare.html"
+                      title="Link a come acquistare su MePA ( Link esterno - Apre su nuova scheda )"
+                      aria-label="Link a come acquistare su MePA ( Link esterno - Apre su nuova scheda )"
+                      rel="noreferrer"
+                    >
                       Come acquistare su MePA
                       <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -406,7 +465,13 @@ export const GestireProgettoPage = () => {
                         />
                       </svg>
                     </a>
-                    <a href="#">
+                    <a
+                      target="_blank"
+                      href="https://www.acquistinretepa.it/opencms/opencms/faq.html"
+                      title="Link alle domande frequenti MePA ( Link esterno - Apre su nuova scheda )"
+                      aria-label="Link alle domande frequenti MePA ( Link esterno - Apre su nuova scheda )"
+                      rel="noreferrer"
+                    >
                       Domande frequenti MePA
                       <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -417,7 +482,13 @@ export const GestireProgettoPage = () => {
                         />
                       </svg>
                     </a>
-                    <a href="#">
+                    <a
+                      target="_blank"
+                      href="https://www.acquistinretepa.it/opencms/opencms/programma_media_acquistinreteperte_iniziativeICT.html"
+                      title="Link alle Gare strategiche ICT per la digitalizzazione della PA ( Link esterno - Apre su nuova scheda )"
+                      aria-label="Link alle Gare strategiche ICT per la digitalizzazione della PA ( Link esterno - Apre su nuova scheda )"
+                      rel="noreferrer"
+                    >
                       Gare strategiche ICT per la digitalizzazione della PA
                       <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -428,7 +499,13 @@ export const GestireProgettoPage = () => {
                         />
                       </svg>
                     </a>
-                    <a href="#">
+                    <a
+                      target="_blank"
+                      href="https://www.consip.it/le-iniziative-consip-a-supporto-del-pnrr"
+                      title="Link alle iniziative Consip in ambito PNRR ( Link esterno - Apre su nuova scheda )"
+                      aria-label="Link alle iniziative Consip in ambito PNRR ( Link esterno - Apre su nuova scheda )"
+                      rel="noreferrer"
+                    >
                       Iniziative Consip in ambito PNRR
                       <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -439,7 +516,13 @@ export const GestireProgettoPage = () => {
                         />
                       </svg>
                     </a>
-                    <a href="#">
+                    <a
+                      target="_blank"
+                      href="https://www.acquistinretepa.it/opencms/opencms/supporto_guide.html"
+                      title="Link a tutte le guide Consip ( Link esterno - Apre su nuova scheda )"
+                      aria-label="Link a tutte le guide Consip ( Link esterno - Apre su nuova scheda )"
+                      rel="noreferrer"
+                    >
                       Tutte le guide Consip
                       <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
