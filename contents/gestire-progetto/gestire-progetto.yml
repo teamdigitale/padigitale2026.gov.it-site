@@ -1,0 +1,14 @@
+name: FAQ - PA digitale 2026
+hero:
+  title: Domande frequenti
+  subtitle: Esplora le risposte alle domande più frequenti o fai una ricerca per parola chiave
+sidebar:
+  - sectionTitle: Inserisci il codice CUP
+    sectionId: digital-identity
+    sectionActive: true
+  - sectionTitle: Scegli il fornitore
+    sectionId: select-administration
+    sectionActive: false
+  - sectionTitle: Raggiungi gli obiettivi previsti
+    sectionId: verify-data
+    sectionActive: false
