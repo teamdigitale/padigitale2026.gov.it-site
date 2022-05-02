@@ -210,7 +210,7 @@ export const GestireProgettoPage = () => {
                   <span className="separator"></span>
                 </BreadcrumbItem>
                 <BreadcrumbItem active className={classes.breadcrumbItemActive}>
-                  <a>Gestire un progetto</a>
+                  <a>Avvia un progetto e coinvolgi il fornitore</a>
                 </BreadcrumbItem>
               </Breadcrumb>
             </Col>
