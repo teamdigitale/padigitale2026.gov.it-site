@@ -148,7 +148,8 @@ export const Keypoints = (props) => {
                     lg="3"
                     className={`${index + 1 === array.length ? 'mb-lg-0' : 'mb-5 mb-lg-0'} ${
                       listItem.transparent === true ? classes.cardTransparent : ''
-                    }`}
+                    } ${index <= array.length - 4 ? 'mb-lg-5' : ''}
+                    `}
                   >
                     <div className={classes.iconContainer}>
                       <img src={`/assets/${listItem.image}`} alt=""></img>
