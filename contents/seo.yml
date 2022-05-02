@@ -67,5 +67,8 @@ updateSuccessPage:
 updateErrorPage:
   title: Attenzione, non è possibile completare la richiesta - PA digitale 2026
   description: Si è verificato un errore durante l’invio dei dati.
+gestireProgettoPage:
+  title: Gestire Progetto - PA digitale 2026
+  description: Gestione progetto
 
 
