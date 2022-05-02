@@ -225,7 +225,7 @@ export const GestireProgettoPage = () => {
               </div>
             </Col>
             <Col xs={12} lg={4} className="offset-lg-1 mt-5 mt-lg-0 d-flex justify-content-center align-items-center">
-              <img src={`/assets/come-fare/Gestire_Progetti.svg`} alt="" className={classes.heroImg} />
+              <img src={`/assets/come-fare/Gestire_Progetti_alt.svg`} alt="" className={classes.heroImg} />
             </Col>
           </Row>
           <div className={classes.navigationContainer}>
@@ -353,10 +353,11 @@ export const GestireProgettoPage = () => {
                       la scelta del fornitore deve essere comunicata sulla piattaforma PA digitale 2026
                     </strong>{' '}
                     entro un periodo determinato di tempo, che varia a seconda dell’avviso pubblico. Qualora il
-                    <strong> fornitore fosse già contrattualizzato</strong> o si trattasse di una società in-house, la
-                    PA deve fornire un documento equivalente a quello di ingaggio del fornitore, ad esempio un ordine di
-                    servizio. Ricordati quindi che è possibile indicare anche un fornitore contrattualizzato prima del
-                    decreto di finanziamento per attività già avviate o realizzate a decorrere dal 1° febbraio 2020.
+                    <strong> fornitore fosse già contrattualizzato</strong> o si trattasse di una società{' '}
+                    <strong>in-house</strong>, la PA deve fornire un documento equivalente a quello di ingaggio del
+                    fornitore, ad esempio un ordine di servizio. Ricordati quindi che è possibile indicare anche un
+                    fornitore contrattualizzato prima del decreto di finanziamento per attività già avviate o realizzate
+                    a decorrere dal 1° febbraio 2020.
                     <br />
                     <br /> È necessario fare la dichiarazione DNHS (Do No Significant Harm) per ogni singolo fornitore
                     coinvolto. Tale principio prevede che gli interventi del PNRR non arrechino nessun danno
