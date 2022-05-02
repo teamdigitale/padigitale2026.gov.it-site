@@ -125,40 +125,40 @@ opportunity:
 heroCarouselNews:
   - id: 1
     category: Avvisi pubblici
+    title: "Mobility as a Service for Italy - fondo complementare al PNRR"
+    description: Dopo il successo del primo Avviso, nuovi fondi per estendere i servizi MaaS ad altri tre comuni capoluogo di città metropolitane
+    source: 'innovazione.gov.it'
+    linkTo: 'https://innovazione.gov.it/notizie/avvisi-pubblici/mobility-as-a-service-for-italy-fondo-complementare/'
+  - id: 2
+    category: Avvisi pubblici
     title: "Digitale, dal PNRR 400 milioni per aggiornare siti e servizi dei Comuni"
     description: Voucher economici per servizi pubblici digitali sempre più a misura di cittadino
     source: 'innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/articoli/digitale-dal-pnrr-400-milioni-per-aggiornare-siti-e-servizi-dei-comuni/'
-  - id: 2
+  - id: 3
     category: Avvisi pubblici
     title: "Al via gli avvisi per la transizione digitale delle scuole"
     description: Risorse economiche dedicate alle scuole per la migrazione al cloud e il rinnovamento dei siti web
     source: 'innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/articoli/al-via-gli-avvisi-per-la-transizione-digitale-delle-scuole/'
-  - id: 3
+  - id: 4
     category: Novità
     title: "Cloud Italia: pubblicata la metodologia di classificazione di dati e servizi"
     description: Le amministrazioni possono classificare i propri dati e servizi, secondo le indicazioni dell'Agenzia per la Cybersicurezza Nazionale
     source: 'innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/articoli/cloud-italia-pubblicata-la-metodologia-di-classificazione-di-dati-e-servizi/'
-  - id: 4
+  - id: 5
     category: Avvisi pubblici
     title: "PNRR: 500 milioni per la migrazione al cloud dei Comuni"
     description: I 7.904 Comuni italiani possono candidarsi e richiedere contributi per la migrazione dei propri servizi al cloud
     source: 'innovazione.gov.it'
     linkTo: 'https://innovazione-gov-it.vercel.app/notizie/articoli/pnrr-500-milioni-per-la-migrazione-al-cloud-dei-comuni'
-  - id: 5
+  - id: 6
     category: Avvisi pubblici
     title: "Parte la digitalizzazione dei Comuni con identità digitale, pagoPA e app IO"
     description: Sulla piattaforma PA digitale 2026 i Comuni italiani possono richiedere i primi voucher economici
     source: 'innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/articoli/parte-la-digitalizzazione-dei-comuni-con-identita-digitale-pagopa-e-app-io/'
-  - id: 6
-    category: Eventi
-    title: "Verso #PAdigitale2026, marzo 2022"
-    description: Nuovo mese di incontri con le amministrazioni locali e il mondo della fornitura per presentare le grandi opportunità PNRR dedicate al digitale
-    source: 'innovazione.gov.it'
-    linkTo: 'https://innovazione.gov.it/notizie/articoli/verso-padigitale2026-marzo-2022/'
   - id: 7
     category: Novità
     title: "Cybersicurezza e resilienza per la trasformazione digitale della PA"
