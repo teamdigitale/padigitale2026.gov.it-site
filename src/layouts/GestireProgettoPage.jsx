@@ -256,10 +256,12 @@ export const GestireProgettoPage = () => {
                     <br /> Le amministrazioni saranno guidate sulla piattaforma ad hoc gestita dal DIPE (Dipartimento
                     per la programmazione ed il coordinamento della politica economica) in cui, attraverso un{' '}
                     <a
+                      target="_blank"
                       className={`${classes.externalLink}`}
                       href="https://opencup.gov.it/template-cup"
                       title="Link al template cup ( Link esterno - Apre su nuova scheda )"
                       aria-label="Link al template cup ( Link esterno - Apre su nuova scheda )"
+                      rel="noreferrer"
                     >
                       Template CUP
                       <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -274,10 +276,12 @@ export const GestireProgettoPage = () => {
                     , potranno acquisire in modo rapido e agile il Codice Unico di Progetto. Sul sito Open Cup sono
                     disponibili le{' '}
                     <a
+                      target="_blank"
                       className={`${classes.externalLink}`}
                       href="https://opencup.gov.it/-/dipartimento-per-la-transizione-digitale-online-le-faq-codice-unico-di-progetto-sulle-iniziative-pnrr-per-la-pa-digitale-2026"
                       title="Link alle domande frequenti ( Link esterno - Apre su nuova scheda )"
                       aria-label="Link alle domande frequenti ( Link esterno - Apre su nuova scheda )"
+                      rel="noreferrer"
                     >
                       “Domande frequenti”
                       <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -297,9 +301,11 @@ export const GestireProgettoPage = () => {
                   <h4 className={`${classes.contentTitle} mt-5`}>Approfondimenti</h4>
                   <div className={`${classes.linkWrapper}`}>
                     <a
+                      target="_blank"
                       href="https://opencup.gov.it/template-cup"
                       title="Link al template cup ( Link esterno - Apre su nuova scheda )"
                       aria-label="Link al template cup ( Link esterno - Apre su nuova scheda )"
+                      rel="noreferrer"
                     >
                       Cos'è il Template CUP{' '}
                       <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -312,9 +318,11 @@ export const GestireProgettoPage = () => {
                       </svg>
                     </a>
                     <a
+                      target="_blank"
                       href="https://opencup.gov.it/-/dipartimento-per-la-transizione-digitale-online-le-faq-codice-unico-di-progetto-sulle-iniziative-pnrr-per-la-pa-digitale-2026"
                       title="Link alle FAQ per i CUP di PA digitale 2026 ( Link esterno - Apre su nuova scheda )"
                       aria-label="Link alle FAQ per i CUP di PA digitale 2026 ( Link esterno - Apre su nuova scheda )"
+                      rel="noreferrer"
                     >
                       FAQ per i CUP di PA digitale 2026
                       <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -359,10 +367,12 @@ export const GestireProgettoPage = () => {
                     Pubblica Amministrazione. In particolare, per le procedure sotto soglia, le PA possono anche
                     utilizzare il{' '}
                     <a
+                      target="_blank"
                       href="https://www.acquistinretepa.it/opencms/opencms/index.html"
                       className={`${classes.externalLink}`}
                       title="Link a MePA ( Link esterno - Apre su nuova scheda )"
                       aria-label="Link a MePA ( Link esterno - Apre su nuova scheda )"
+                      rel="noreferrer"
                     >
                       MePA
                       <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -381,10 +391,12 @@ export const GestireProgettoPage = () => {
                     previsti cataloghi in cui i fornitori accreditati hanno modo di presentare offerte dedicate,
                     funzionali al raggiungimento degli obiettivi previsti dal PNRR, all’interno del{' '}
                     <a
+                      target="_blank"
                       href="https://www.acquistinretepa.it/opencms/opencms/scheda_iniziativa.html?idIniziativa=b577cd18b64b21a3"
                       className={`${classes.externalLink}`}
                       title="Link al Bando del Mercato elettronico servizi ( Link esterno - Apre su nuova scheda )"
                       aria-label="Link al Bando del Mercato elettronico servizi ( Link esterno - Apre su nuova scheda )"
+                      rel="noreferrer"
                     >
                       Bando del Mercato elettronico SERVIZI (categoria merceologica Servizi per l’information
                       communication technology).
@@ -402,9 +414,11 @@ export const GestireProgettoPage = () => {
                   <h4 className={`${classes.contentTitle} mt-5`}>Approfondimenti</h4>
                   <div className={`${classes.linkWrapper}`}>
                     <a
+                      target="_blank"
                       href="https://www.acquistinretepa.it/opencms/opencms/scheda_iniziativa.html?idIniziativa=b577cd18b64b21a3"
                       title="Link al Bando del Mercato elettronico servizi ( Link esterno - Apre su nuova scheda )"
                       aria-label="Link al Bando del Mercato elettronico servizi ( Link esterno - Apre su nuova scheda )"
+                      rel="noreferrer"
                     >
                       Bando del Mercato elettronico SERVIZI
                       <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -417,9 +431,11 @@ export const GestireProgettoPage = () => {
                       </svg>
                     </a>
                     <a
+                      target="_blank"
                       href="https://www.acquistinretepa.it/opencms/opencms/scheda_iniziativa.html?idIniziativa=c9c346967a0548c7"
                       title="Link all'accordo quadro Public Cloud IaaS e PaaS ( Link esterno - Apre su nuova scheda )"
                       aria-label="Link all'accordo quadro Public Cloud IaaS e PaaS ( Link esterno - Apre su nuova scheda )"
+                      rel="noreferrer"
                     >
                       Accordo quadro Public Cloud IaaS e PaaS
                       <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -432,9 +448,11 @@ export const GestireProgettoPage = () => {
                       </svg>
                     </a>
                     <a
+                      target="_blank"
                       href="https://www.acquistinretepa.it/opencms/opencms/come_acquistare.html"
                       title="Link a come acquistare su MePA ( Link esterno - Apre su nuova scheda )"
                       aria-label="Link a come acquistare su MePA ( Link esterno - Apre su nuova scheda )"
+                      rel="noreferrer"
                     >
                       Come acquistare su MePA
                       <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -447,9 +465,11 @@ export const GestireProgettoPage = () => {
                       </svg>
                     </a>
                     <a
+                      target="_blank"
                       href="https://www.acquistinretepa.it/opencms/opencms/faq.html"
                       title="Link alle domande frequenti MePA ( Link esterno - Apre su nuova scheda )"
                       aria-label="Link alle domande frequenti MePA ( Link esterno - Apre su nuova scheda )"
+                      rel="noreferrer"
                     >
                       Domande frequenti MePA
                       <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -462,9 +482,11 @@ export const GestireProgettoPage = () => {
                       </svg>
                     </a>
                     <a
+                      target="_blank"
                       href="https://www.acquistinretepa.it/opencms/opencms/programma_media_acquistinreteperte_iniziativeICT.html"
                       title="Link alle Gare strategiche ICT per la digitalizzazione della PA ( Link esterno - Apre su nuova scheda )"
                       aria-label="Link alle Gare strategiche ICT per la digitalizzazione della PA ( Link esterno - Apre su nuova scheda )"
+                      rel="noreferrer"
                     >
                       Gare strategiche ICT per la digitalizzazione della PA
                       <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -477,9 +499,11 @@ export const GestireProgettoPage = () => {
                       </svg>
                     </a>
                     <a
+                      target="_blank"
                       href="https://www.consip.it/le-iniziative-consip-a-supporto-del-pnrr"
                       title="Link alle iniziative Consip in ambito PNRR ( Link esterno - Apre su nuova scheda )"
                       aria-label="Link alle iniziative Consip in ambito PNRR ( Link esterno - Apre su nuova scheda )"
+                      rel="noreferrer"
                     >
                       Iniziative Consip in ambito PNRR
                       <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -492,9 +516,11 @@ export const GestireProgettoPage = () => {
                       </svg>
                     </a>
                     <a
+                      target="_blank"
                       href="https://www.acquistinretepa.it/opencms/opencms/supporto_guide.html"
                       title="Link a tutte le guide Consip ( Link esterno - Apre su nuova scheda )"
                       aria-label="Link a tutte le guide Consip ( Link esterno - Apre su nuova scheda )"
+                      rel="noreferrer"
                     >
                       Tutte le guide Consip
                       <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
