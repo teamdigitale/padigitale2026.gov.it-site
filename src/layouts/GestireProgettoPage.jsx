@@ -225,7 +225,7 @@ export const GestireProgettoPage = () => {
               </div>
             </Col>
             <Col xs={12} lg={4} className="offset-lg-1 mt-5 mt-lg-0 d-flex justify-content-center align-items-center">
-              <img src={`/assets/Gestire_Progetti.svg`} alt="" className={classes.heroImg} />
+              <img src={`/assets/come-fare/Gestire_Progetti.svg`} alt="" className={classes.heroImg} />
             </Col>
           </Row>
           <div className={classes.navigationContainer}>
