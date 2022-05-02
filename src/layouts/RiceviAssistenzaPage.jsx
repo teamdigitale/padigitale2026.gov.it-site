@@ -10,12 +10,13 @@ import { SEO } from '../components/SEO';
 import seo from '../../contents/seo.yml';
 import content from '../../contents/ricevi-assistenza/ricevi-assistenza.yml';
 import { TimelineVerticalCards } from '../components/TimelineVerticalCards';
+import { HeroVideo } from '../components/HeroVideo';
 /* import { Totop } from '../components/Totop'; */
 import { SideNavigationAccordion } from './sideNavigationAccordion';
 
 const { title: seoTitle, description: seoDescription } = seo.riceviAssistenzaPage;
 
-const { sidebar, verticalTimeline } = content;
+const { sidebar, verticalTimeline, video } = content;
 
 const useStyles = createUseStyles({
   breadcrumb: {
@@ -229,6 +230,9 @@ export const RiceviAssistenzaPage = () => {
                 </section>
               </Container>
               <TimelineVerticalCards item={verticalTimeline} />
+              <section id="watch-video">
+                <HeroVideo src={video.src} description={video.description} videoText={video.videoText} />
+              </section>
             </div>
           </div>
         </Container>

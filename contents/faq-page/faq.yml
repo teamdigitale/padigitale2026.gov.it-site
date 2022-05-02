@@ -18,8 +18,11 @@ sidebar:
   - sectionTitle: Supporto tecnico
     sectionId: supporto-tecnico
     sectionActive: false
-  - sectionTitle: Misura 1.2
-    sectionId: misura-1-2
+  - sectionTitle: Misura 1.2 Comuni
+    sectionId: misura-1-2-comuni
+    sectionActive: false
+  - sectionTitle: Misura 1.4.1 Comuni
+    sectionId: misura-1-4-1-comuni
     sectionActive: false
   - sectionTitle: Misura 1.4.3 pagoPA
     sectionId: measure-1-4-3-pagopa
@@ -32,6 +35,9 @@ sidebar:
     sectionActive: false
   - sectionTitle: Classificazione dati e servizi
     sectionId: classification-data-services
+    sectionActive: false
+  - sectionTitle: Fondo Innovazione
+    sectionId: fondo-innovazione
     sectionActive: false
 questions:
   - title: Generali
@@ -159,9 +165,9 @@ questions:
         ariaLabel: Vai alla pagina di assistenza
       - title: Come posso annullare la mia iscrizione agli aggiornamenti?
         content: Se desideri interrompere la ricezione di comunicazioni e aggiornamenti da PA digitale 2026, usa il link “Annulla iscrizione” presente nella sezione finale di ogni email.
-  - title: Misura 1.2
+  - title: Misura 1.2 Comuni
     description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
-    sectionId: misura-1-2
+    sectionId: misura-1-2-comuni
     accordions:
       - title: Quali enti della PA possono presentare domanda per accedere al finanziamento dall'Avviso riferito alla Misura 1.2?
         content: I Soggetti Attuatori, ovvero coloro che possono accedere allo strumento predisposto dall'Avviso, sono i Comuni.
@@ -212,6 +218,28 @@ questions:
         ariaLabel: Vedi ulteriori informazioni sulla migrazione della pubblica amministrazione (Collegamento esterno - Apre su nuova scheda)
       - title: Come avviene la migrazione verso i servizi cloud qualificati?
         content: La migrazione verso i diversi servizi Cloud qualificati e eventualmente all’interno del PSN dovrà essere governata tramite un processo centralizzato, agevole e uniforme per tutte le amministrazioni. I piani di migrazione saranno quindi definiti in accordo con il risultato della classificazione dei dati e dei servizi. La classificazione e la redazione del piano di migrazione saranno definiti e supportati, per i rispettivi profili di competenza, dell’Agenzia per la Cybersicurezza Nazionale (ACN) e del Dipartimento per la Trasformazione Digitale (DTD).
+  - title: Misura 1.4.1 Comuni
+    description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
+    sectionId: misura-1-4-1-comuni
+    accordions:
+      - title: Quali enti della PA possono presentare domanda?
+        content: I Soggetti Attuatori, ovvero coloro che possono accedere allo strumento predisposto dall'Avviso, sono esclusivamente i Comuni.
+      - title: È possibile accedere al finanziamento in caso di realizzazione del progetto prima della pubblicazione dell'Avviso “Esperienza del cittadino nei servizi pubblici” COMUNI (Aprile 2022) per i Comuni riferito alla Misura 1.4.1?
+        content: Si, è possibile accedere al finanziamento previsto dall'Avviso nel caso in cui l'implementazione delle attività di miglioramento oggetto del finanziamento siano state realizzate a decorrere dal 1° Febbraio 2020, con risorse finanziarie proprie.
+      - title: Entro quando è possibile inoltrare la domanda di accesso al finanziamento?
+        content: La domanda di partecipazione può essere presentata a partire dalla data di pubblicazione dell'Avviso fino ad esaurimento delle risorse disponibili, e comunque non oltre le ore 23.59 del 2 Settembre 2022.
+      - title: Entro quando dovrà essere rilasciato il sito istituzionale per i Comuni?
+        content: Il rilascio del sito istituzionale deve essere concluso nel termine perentorio previsto dall'Allegato 2 corrispondente alla fascia di popolazione del Comune.
+      - title: Cosa prevede il “Pacchetto cittadino informato”?
+        content: L’Ente che aderisce all’Avviso dovrà obbligatoriamente implementare il modello per il sito dei Comuni (“Pacchetto cittadino informato”), attraverso le modalità descritte nel paragrafo “Implementazione di sito comunale” dell'Allegato 2. Per il riconoscimento dell’obiettivo conseguito, l’Ente dovrà provvedere a rendere disponibile il proprio sito comunale e attenersi ai criteri di conformità secondo quanto previsto dal paragrafo "Raggiungimento dell’obiettivo di conformità al modello sito comunale" dell'Allegato 2.
+      - title: Cosa prevede il “Pacchetto cittadino attivo”?
+        content: L’Ente ha  la possibilità di selezionare, a seconda della dimensione del Comune, un numero massimo di servizi digitali per il cittadino, selezionabili dalla lista di servizi digitali per il cittadino (“Pacchetto cittadino attivo”). In questo caso l’Ente dovrà provvedere al ridisegno dei servizi scelti utilizzando le tipologie di flussi di interfaccia descritte nel relativo paragrafo, o comunque garantire i criteri di conformità descritti nel paragrafo "Raggiungimento dell’obiettivo per i servizi digitali per il cittadino" di cui all'Allegato 2.
+      - title: Cosa comprende il sito istituzionale per i Comuni messo a disposizione all’indirizzo https://designers.italia.it/modello/comuni/ ?
+        content: "Il modello di sito comunale, messo a disposizione all’indirizzo <a href=\"https://designers.italia.it/modello/comuni/\">https://designers.italia.it/modello/comuni/</a> comprende due strumenti fondamentali: l’architettura dell’informazione del sito comunale e i template html del sito comunale."
+      - title: Come viene calcolato l'importo forfettario previsto dall'Avviso “Esperienza del cittadino nei servizi pubblici” COMUNI (Aprile 2022) per i Comuni riferito alla Misura 1.4.1?
+        comuni: L’importo del finanziamento concedibile ai Comuni è individuato in un importo forfettario (lump sum) determinato in funzione della tipologia degli interventi previsti ed in funzione della classe di popolazione residente di riferimento del medesimo Comune aggiornata al dato ISTAT 2021.(Art. 1, comma 3 dell'Avviso).
+      - title: Qual è l'obiettivo dell'Avviso “Esperienza del cittadino nei servizi pubblici” COMUNI (Aprile 2022) per i Comuni riferito alla Misura 1.4.1?
+        content: "Per quanto riguarda i siti comunali, l’obiettivo del presente avviso è di mettere a disposizione dei cittadini interfacce coerenti, fruibili e accessibili, secondo il modello di sito comunale, e in conformità con le Linee guida emanate ai sensi del CAD e l’e-government benchmark relativamente agli indicatori della ‘user-centricity’ e della trasparenza, come indicato dall’Egovernment benchmark Method Paper 2020-2023. Per quanto riguarda i servizi digitali per il cittadino, l’obiettivo del presente avviso è di mettere a disposizione dei cittadini una serie di procedure erogate a livello comunale, tramite interfacce coerenti, fruibili e accessibili, con flussi di servizio quanto più uniformi, trasparenti e utente-centrici."
   - title: Misura 1.4.3 pagoPA
     description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
     sectionId: measure-1-4-3-pagopa
@@ -339,7 +367,19 @@ questions:
       - title: 'Ho ricevuto una notifica e una PEC con richieste di integrazione alla classificazione dati e servizi da parte dell’Agenzia per la Cybersicurezza Nazionale (ACN): cosa devo fare?'
         content: È necessario entrare nell’area riservata di PA digitale 2026, accedere alla Scrivania della PA per la quale si sono ricevuto le richieste di integrazioni e apportare le modifiche segnalate da ACN. Una volta apportate le modifiche, è necessario inviare nuovamente la classificazione. In questo momento, lo stato della procedura passerà da “Da modificare” a “In valutazione”. È in ogni caso necessario apportare le modifiche richieste entro 30 giorni dalla ricezione della PEC e della notifica.
       - title: Posso indicare dei numeri approssimativi di dati personali nella compilazione della sezione 4 – Riservatezza delle informazioni?
-        content: Si, l’obiettivo è di avere un ordine di grandezza il più realistico possibile della numerosità di dati trattati, pertanto anche eventuali arrotondamenti sono accettati (ad esempio, 1.224.000 dati anagrafici possono essere indicati come 1.200.000). Non è invece possibile indicare numeri decimali o minori di zero.
+        content: Sì, l’obiettivo è di avere un ordine di grandezza il più realistico possibile della numerosità di dati trattati, pertanto anche eventuali arrotondamenti sono accettati (ad esempio, 1.224.000 dati anagrafici possono essere indicati come 1.200.000). Non è invece possibile indicare numeri decimali o minori di zero.
+  - title: Fondo Innovazione
+    description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
+    sectionId: fondo-innovazione
+    accordions:
+      - title: Posso aderire agli avvisi del PNRR relativi alla piattaforma pagoPA e all’App IO se ho già partecipato all’Avviso Pubblico Fondo Innovazione e ho già ricevuto i relativi contributi?
+        content: Sì, ma sarà possibile richiedere i contributi soltanto in relazione all’integrazione di servizi (sia per la piattaforma pagoPA che per l’App IO) che non sono stati già finanziati con l’Avviso Pubblico Fondo Innovazione.
+      - title: Se un Comune ha già ricevuto i finanziamenti relativi alla Fase I dell’Avviso Pubblico Fondo Innovazione, l’ente può aderire agli avvisi del PNRR relativi alla piattaforma pagoPA e all’App IO?
+        content: Sì, i Comuni in questo caso possono aderire agli avvisi del PNRR richiedendo i contributi per l’integrazione di servizi diversi e ulteriori rispetto a quelli per cui hanno già ricevuto il finanziamento.
+      - title: I Comuni che hanno ricevuto i contributi della Fase I dell’Avviso Pubblico Fondo Innovazione, dichiarando più servizi rispetto ai minimi richiesti (1 o 2 nuovi servizi per la piattaforma pagoPA e 1 servizio sull’App IO) come devono comportarsi rispetto agli avvisi del PNRR?
+        content: "I Comuni potranno richiedere i finanziamenti degli avvisi del PNRR solo per quei servizi eccedenti rispetto ai minimi richiesti dall’Avviso Pubblico Fondo Innovazione. Nello specifico, saranno considerati già finanziati (e quindi esclusi): <ul><li>il primo servizio dichiarato nella richiesta di erogazione del contributo, per chi ha aderito alla piattaforma pagoPA durante la vigenza dell’Avviso Pubblico</li><li>i primi due servizi dichiarati nella richiesta di erogazione del contributo, per chi ha aderito alla piattaforma pagoPA prima della pubblicazione dell’Avviso Pubblico</li><li>il primo servizio dichiarato nella richiesta di erogazione del contributo, per App IO</li></ul>"
+      - title: Se sono un Comune aderente al progetto cd. “Regionale”, come faccio a rinunciare ai finanziamenti del Fondo Innovazione della Fase II?
+        content: A tal riguardo, dovrai richiedere le modalità di gestione alla Regione, in coerenza con gli specifici accordi regionali con il DTD
 
 noResults: Nessun risultato trovato
 support:

@@ -15,6 +15,9 @@ sidebar:
   - sectionTitle: 4. Ricevi aggiornamenti
     sectionId: confirm-subscription
     sectionActive: false
+  - sectionTitle: Guarda il video dedicato
+    sectionId: watch-video
+    sectionActive: false
 verticalTimeline:
   - index: 0
     title: 'Trova le risposte ai dubbi più comuni'
@@ -36,3 +39,7 @@ verticalTimeline:
     icon: '/assets/ricevi-assistenza-4.svg'
     headerParagraph: '<strong>Rimani aggiornato sull’evoluzione delle tue richieste</strong> di assistenza grazie alle notifiche della tua area riservata. Puoi inoltre consultare lo storico delle richieste.'
     sectionId: 'confirm-subscription'
+video:
+  src: https://www.youtube-nocookie.com/embed/zgmLLRoS4H4
+  description: Scopri come trovare le risposte ai dubbi più comuni o ricevere assistenza su PA digitale 2026.
+  videoText: "PA digitale 2026 è il punto di accesso alle risorse previste dal PNRR per la transizione digitale della PA. Grazie a una sezione dedicata, puoi risolvere tutti i tuoi dubbi: puoi consultare le risposte alle domande frequenti, aprire una richiesta di assistenza semplicemente compilando un modulo: puoi selezionare l’ambito, l’argomento o indicare l’avviso per cui vuoi qualche chiarimento. Puoi richiedere supporto ulteriore, anche telefonico. Hai sempre tutto sotto controllo: nell’area riservata puoi monitorare le tue richieste, anche grazie a notifiche dedicate. Con PA digitale 2026 puoi candidare la tua amministrazione agli avvisi pubblici per renderla più digitale, sicura ed efficiente."
