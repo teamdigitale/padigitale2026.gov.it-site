@@ -124,42 +124,56 @@ opportunity:
       id: centri-facili
 heroCarouselNews:
   - id: 1
+    type: internal
+    category: AGGIORNAMENTO
+    title: Documentazione avviso 1.2
+    description: È stato aggiornato l’elenco dei servizi e dei riferimenti normativi dell’Allegato 2 nell’avviso dedicato ai Comuni
+    source: 'Avviso 1.2 - Comuni'
+    linkTo: 'https://areariservata.padigitale2026.gov.it/Pa_digitale2026_dettagli_avviso?id=a017Q00000c8mFyQAI'
+  - id: 2
+    type: internal
+    category: AGGIORNAMENTO
+    title: Documentazione avvisi 1.4.3 e 1.4.4
+    description: Sono state pubblicate le risposte alle domande delle PA nella sezione “Allegati” degli avvisi
+    source: 'Sezione avvisi'
+    linkTo: 'https://areariservata.padigitale2026.gov.it/Pa_digitale2026_avvisi'
+  - id: 3
     category: Avvisi pubblici
     title: "Mobility as a Service for Italy - fondo complementare al PNRR"
     description: Dopo il successo del primo Avviso, nuovi fondi per estendere i servizi MaaS ad altri tre comuni capoluogo di città metropolitane
     source: 'innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/avvisi-pubblici/mobility-as-a-service-for-italy-fondo-complementare/'
-  - id: 2
+  - id: 4
     category: Avvisi pubblici
     title: "Digitale, dal PNRR 400 milioni per aggiornare siti e servizi dei Comuni"
     description: Voucher economici per servizi pubblici digitali sempre più a misura di cittadino
     source: 'innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/articoli/digitale-dal-pnrr-400-milioni-per-aggiornare-siti-e-servizi-dei-comuni/'
-  - id: 3
+  - id: 5
     category: Avvisi pubblici
     title: "Al via gli avvisi per la transizione digitale delle scuole"
     description: Risorse economiche dedicate alle scuole per la migrazione al cloud e il rinnovamento dei siti web
     source: 'innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/articoli/al-via-gli-avvisi-per-la-transizione-digitale-delle-scuole/'
-  - id: 4
+  - id: 6
     category: Novità
     title: "Cloud Italia: pubblicata la metodologia di classificazione di dati e servizi"
     description: Le amministrazioni possono classificare i propri dati e servizi, secondo le indicazioni dell'Agenzia per la Cybersicurezza Nazionale
     source: 'innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/articoli/cloud-italia-pubblicata-la-metodologia-di-classificazione-di-dati-e-servizi/'
-  - id: 5
+  - id: 7
     category: Avvisi pubblici
     title: "PNRR: 500 milioni per la migrazione al cloud dei Comuni"
     description: I 7.904 Comuni italiani possono candidarsi e richiedere contributi per la migrazione dei propri servizi al cloud
     source: 'innovazione.gov.it'
     linkTo: 'https://innovazione-gov-it.vercel.app/notizie/articoli/pnrr-500-milioni-per-la-migrazione-al-cloud-dei-comuni'
-  - id: 6
+  - id: 8
     category: Avvisi pubblici
     title: "Parte la digitalizzazione dei Comuni con identità digitale, pagoPA e app IO"
     description: Sulla piattaforma PA digitale 2026 i Comuni italiani possono richiedere i primi voucher economici
     source: 'innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/articoli/parte-la-digitalizzazione-dei-comuni-con-identita-digitale-pagopa-e-app-io/'
-  - id: 7
+  - id: 9
     category: Novità
     title: "Cybersicurezza e resilienza per la trasformazione digitale della PA"
     description: Grazie al PNRR, un piano di interventi per rafforzare la resilienza cyber dell’ecosistema digitale nazionale
