@@ -167,18 +167,6 @@ heroCarouselNews:
     description: I 7.904 Comuni italiani possono candidarsi e richiedere contributi per la migrazione dei propri servizi al cloud
     source: 'innovazione.gov.it'
     linkTo: 'https://innovazione-gov-it.vercel.app/notizie/articoli/pnrr-500-milioni-per-la-migrazione-al-cloud-dei-comuni'
-  - id: 8
-    category: Avvisi pubblici
-    title: "Parte la digitalizzazione dei Comuni con identità digitale, pagoPA e app IO"
-    description: Sulla piattaforma PA digitale 2026 i Comuni italiani possono richiedere i primi voucher economici
-    source: 'innovazione.gov.it'
-    linkTo: 'https://innovazione.gov.it/notizie/articoli/parte-la-digitalizzazione-dei-comuni-con-identita-digitale-pagopa-e-app-io/'
-  - id: 9
-    category: Novità
-    title: "Cybersicurezza e resilienza per la trasformazione digitale della PA"
-    description: Grazie al PNRR, un piano di interventi per rafforzare la resilienza cyber dell’ecosistema digitale nazionale
-    source: 'innovazione.gov.it'
-    linkTo: 'https://innovazione.gov.it/notizie/articoli/cybersicurezza-e-resilienza-per-la-trasformazione-digitale-della-pa/'    
 support:
   tag: Supporto
   title: Consulta le domande frequenti o scrivici per ricevere assistenza
