@@ -23,6 +23,10 @@ keypoints:
       image: 'invia-candidatura.svg'
       title: 'Candidare una PA agli avvisi'
       desc: 'Attraverso la creazione e l’invio del documento di candidatura.'
+    - number: "05"
+      image: 'gest-prog-icon.svg'
+      title: 'Gestire un progetto'
+      desc: Per completare le attività previste e richiedere il finanziamento.
 sectionFirst:
   number: '01'
   title: 'Attivare la tua  PA'
@@ -68,3 +72,12 @@ sectionFourth:
   image: 'assistenza.svg'
   reverse: true
   ariaLabel: "Scopri di più su come ricevere assistenza"
+sectionFifth:
+  number: '05'
+  title: 'Gestire un progetto'
+  text: PA digitale 2026 permette di gestire i progetti all’interno della piattaforma, così da <strong>completare le attività</strong> previste <strong>e richiedere il finanziamento</strong>.</br></br>Inserimento del CUP, ingaggio dei fornitori e completamento delle attività, questi sono i passaggi principali per ottenere il finanziamento e <strong>raggiungere gli obiettivi della candidatura</strong>.
+  linkTo: '/come-partecipare/gestire-progetto'
+  button: true
+  lBlue: true
+  image: 'Gestire_Progetti.svg'
+  ariaLabel: "Scopri di più su come gestire un progetto"

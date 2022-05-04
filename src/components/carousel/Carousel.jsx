@@ -3,6 +3,7 @@ import React from 'react';
 import { createUseStyles } from 'react-jss';
 import { Row, Col, Card, CardBody, CardTitle, CardText } from 'design-react-kit';
 import PropTypes from 'prop-types';
+import { Link } from 'gatsby';
 import { DesktopSwiper } from '../DesktopSwiper';
 import { ExternalLink } from '../ExternalLink';
 
@@ -148,16 +149,27 @@ export const HeroCarousel = ({ content, title }) => {
           </div>
           <CardText>{element.description}</CardText>
           <div className="source">
-            Fonte:
-            <ExternalLink
-              linkTo={element.linkTo}
-              alt=""
-              className={classes.heroLink}
-              ariaLabel={`${element.source} ${element.title} (Collegamento sito esterno apre su nuova scheda)`}
-            >
-              {element.source}
-              <img src={`/assets/external-link.svg`} alt="" />
-            </ExternalLink>
+            {element?.type !== 'internal' ? (
+              <>
+                Fonte:
+                <ExternalLink
+                  linkTo={element.linkTo}
+                  alt=""
+                  className={classes.heroLink}
+                  ariaLabel={`${element.source} ${element.title} (Collegamento sito esterno apre su nuova scheda)`}
+                >
+                  {element.source}
+                  <img src={`/assets/external-link.svg`} alt="" />
+                </ExternalLink>
+              </>
+            ) : (
+              <>
+                Scopri di più:
+                <Link to={element.linkTo} className={classes.heroLink} ariaLabel={`${element.source} ${element.title}`}>
+                  {element.source}
+                </Link>
+              </>
+            )}
           </div>
         </CardBody>
       </Card>
