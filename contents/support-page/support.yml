@@ -25,5 +25,8 @@ heroAssistance:
   title: Richiedi assistenza
   body: 'Se non hai trovato le informazioni che cercavi fra le domande frequenti, <strong>scrivici</strong>: ti risponderemo al più presto'
   altImg: immagine placeholder
-  btnText: scrivici
-bottomBanner: Per segnalazioni o suggerimenti sull'accessibilità del sito da parte di utenti che utilizzano tecnologie assistive o particolari configurazioni, scrivi a <a href="mailto:accessibilita@innovazione.gov.it">accessibilita@innovazione.gov.it</a>
+  btnText: contattaci
+bottomBannerText: Per segnalazioni o suggerimenti sull’accessibilità di questo sito web padigitale2026.gov.it contattaci alla casella di posta dedicata <a href="mailto:accessibilita@innovazione.gov.it">casella di posta dedicata</a>
+bottomBannerExtLink:
+  linkTo: https://google.it
+  text: Scopri di più sull'accessibilità

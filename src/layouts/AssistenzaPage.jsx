@@ -9,7 +9,6 @@ import { Row, Col, Input, Breadcrumb, BreadcrumbItem } from 'design-react-kit';
 import Select from 'react-select';
 import ReCAPTCHA from 'react-google-recaptcha';
 import content from '../../contents/assistenza/assistenza.yml';
-import { bottomBanner } from '../../contents/support-page/support.yml';
 import labels from '../../contents/labels.yml';
 import links from '../../contents/links.yml';
 const { privacy } = links.internalLinks;
@@ -714,7 +713,7 @@ export const AssistenzaPage = () => {
         <Row>
           <Col xs={12} lg={9}>
             <hr />
-            <SupportBanner text={bottomBanner} />
+            <SupportBanner />
           </Col>
         </Row>
       </div>
