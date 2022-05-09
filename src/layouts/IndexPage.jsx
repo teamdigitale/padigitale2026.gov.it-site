@@ -54,6 +54,7 @@ export const IndexPage = () => {
         heroTitleId="home-hero-title"
       />
       <NoticesCarousel content={newsList} title={noticesCarouselTitle} />
+      <HeroCarousel content={heroCarouselNews} title={heroCarouselNewsTitle} />
       <HeroImage
         light={true}
         ctaContainer={true}
@@ -68,7 +69,6 @@ export const IndexPage = () => {
         firstButtonAriaLabel={heroPnrr.firstButtonAriaLabel}
         heroTitleId="home-hero-title-candidature"
       />
-      <HeroCarousel content={heroCarouselNews} title={heroCarouselNewsTitle} />
       <HeroImage
         ctaContainer={true}
         category={heroClassificazione.category}

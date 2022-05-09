@@ -71,7 +71,7 @@ const useStyles = createUseStyles({
   },
   noticesSection: {
     backgroundColor: '#fff',
-    padding: '5.556rem 0',
+    padding: '5.556rem 0 1rem 0',
     '& .swiper': {
       margin: '0 -1.111rem',
       '@media (max-width: 992px)': {
