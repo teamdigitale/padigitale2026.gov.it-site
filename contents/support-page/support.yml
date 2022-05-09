@@ -26,4 +26,4 @@ heroAssistance:
   body: 'Se non hai trovato le informazioni che cercavi fra le domande frequenti, <strong>scrivici</strong>: ti risponderemo al più presto'
   altImg: immagine placeholder
   btnText: scrivici
-bottomBanner: Per segnalazioni ed eventuali suggerimenti sull'accessibilità del sito, scrivi a <strong><a href="mailto:accessibilita@innovazione.gov.it">accessibilita@innovazione.gov.it</a></strong>
+bottomBanner: Per segnalazioni o suggerimenti sull'accessibilità del sito da parte di utenti che utilizzano tecnologie assistive o particolari configurazioni, scrivi a <a href="mailto:accessibilita@innovazione.gov.it">accessibilita@innovazione.gov.it</a>

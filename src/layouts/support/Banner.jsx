@@ -6,22 +6,19 @@ import { Row, Col } from 'design-react-kit';
 
 const useStyle = createUseStyles({
   supportBanner: {
-    backgroundColor: '#F0F6FC',
-    padding: '3rem 0 3rem 0',
+    padding: '0 0 1rem 0',
     '@media (min-width: 992px)': {
-      padding: '3rem 0 3rem 0'
+      padding: '0 0 1rem 0'
     },
     '& .text': {
       color: '#33485C',
-      '& strong': {
-        '& a': {
-          color: '#06c',
-          textDecoration: 'none',
-          '&:hover': {
-            textDecoration: 'underline',
-          },
-        }
-      },
+      '& a': {
+        color: '#33485C',
+        textDecoration: 'none',
+        '&:hover': {
+          textDecoration: 'underline',
+        },
+      }
     },
   },
 });
@@ -34,7 +31,7 @@ export const SupportBanner = ({ text }) => {
       <div className={classes.supportBanner}>
         <section className="container px-3">
           <Row>
-            <Col xs="12" lg="5" >
+            <Col xs="12" lg="12" >
               <span className="text d-block text-center text-md-left" dangerouslySetInnerHTML={{ __html: text }}/>
             </Col>
           </Row>

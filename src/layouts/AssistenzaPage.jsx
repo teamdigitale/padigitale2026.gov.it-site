@@ -9,11 +9,13 @@ import { Row, Col, Input, Breadcrumb, BreadcrumbItem } from 'design-react-kit';
 import Select from 'react-select';
 import ReCAPTCHA from 'react-google-recaptcha';
 import content from '../../contents/assistenza/assistenza.yml';
+import { bottomBanner } from '../../contents/support-page/support.yml';
 import labels from '../../contents/labels.yml';
 import links from '../../contents/links.yml';
 const { privacy } = links.internalLinks;
 import seo from '../../contents/seo.yml';
 import { SEO } from '../components/SEO';
+import { SupportBanner } from './support/Banner';
 
 const { title: seoTitle, description: seoDescription } = seo.assistenzaPage;
 const { errors } = labels;
@@ -319,7 +321,7 @@ const useStyles = createUseStyles({
     },
   },
   submitContainer: {
-    marginBottom: '12.5rem',
+    marginBottom: '6rem',
     '@media (max-width: 991px)': {
       marginBottom: '6rem',
     },
@@ -707,6 +709,12 @@ export const AssistenzaPage = () => {
                 </div>
               </div>
             </form>
+          </Col>
+        </Row>
+        <Row>
+          <Col xs={12} lg={9}>
+            <hr />
+            <SupportBanner text={bottomBanner} />
           </Col>
         </Row>
       </div>
