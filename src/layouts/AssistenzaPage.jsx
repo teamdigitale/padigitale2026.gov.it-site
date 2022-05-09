@@ -710,12 +710,7 @@ export const AssistenzaPage = () => {
             </form>
           </Col>
         </Row>
-        <Row>
-          <Col xs={12} lg={9}>
-            <hr />
-            <SupportBanner />
-          </Col>
-        </Row>
+        <SupportBanner />
       </div>
     </>
   );

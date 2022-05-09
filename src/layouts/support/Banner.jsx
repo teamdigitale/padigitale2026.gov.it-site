@@ -10,6 +10,7 @@ import {
 
 const useStyle = createUseStyles({
   supportBanner: {
+    fontSize: '16px',
     padding: '0 0 1rem 0',
     '@media (min-width: 992px)': {
       padding: '0 0 1rem 0',
@@ -27,7 +28,8 @@ const useStyle = createUseStyles({
     },
   },
   externalLinkImage: {
-    marginLeft: '1rem',
+    marginTop: '-5px',
+    marginLeft: '12px',
   },
 });
 
@@ -39,7 +41,9 @@ export const SupportBanner = () => {
       <div className={classes.supportBanner}>
         <section className="container px-3">
           <Row>
-            <Col xs="12" lg="12">
+            <Col xs="12" lg="5"></Col>
+            <Col xs="12" lg="7">
+              <hr />
               <span
                 className="text d-block text-center text-md-left"
                 dangerouslySetInnerHTML={{ __html: bottomBannerText }}
@@ -47,8 +51,10 @@ export const SupportBanner = () => {
             </Col>
           </Row>
           <Row>
-            <Col xs="12" lg="12">
+            <Col xs="12" lg="5"></Col>
+            <Col xs="12" lg="7">
               <ExternalLink
+                className="text d-block text-center text-md-left"
                 linkTo={bottomBannerExtLink.linkTo}
                 alt=""
                 ariaLabel={`${bottomBannerExtLink.text} (Collegamento sito esterno apre su nuova scheda)`}
