@@ -10,7 +10,7 @@ import {
 
 const useStyle = createUseStyles({
   supportBanner: {
-    fontSize: '16px',
+    fontSize: '0.9rem',
     padding: '0 0 1rem 0',
     '@media (min-width: 992px)': {
       padding: '0 0 1rem 0',
