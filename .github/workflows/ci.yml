@@ -24,4 +24,4 @@ jobs:
       - name: spid-sp-test
         run: |
           pip install spid-sp-test>=0.9.2
-          spid_sp_test --metadata-url file://$GITHUB_WORKSPACE/static/saml2/metadata.xml--extra --debug ERROR
+          spid_sp_test --metadata-url file://$GITHUB_WORKSPACE/static/saml2/metadata.xml --extra --debug ERROR
