@@ -106,6 +106,8 @@ questions:
         content: Bisogna accertarsi che la persona che ha mandato l'invito a entrare in PA digitale 2026 per conto di una PA, abbia inserito correttamente i dati.
       - title: Cosa fare se in qualità di utente invitato non si riesce ad accedere a PA digitale 2026?
         content: Dopo aver ricevuto l'email di invito e aver verificato la correttezza dei dati, bisogna accertarsi di aver completato la procedura di accesso facendo click sul link di verifica all'interno dell'email.
+      - title: É possibile accedere a PA digitale 2026 come rappresentante legale di più Scuole?
+        content: Sì. Per gestire più Scuole contemporaneamente in qualità di rappresentante legale, è necessario:<br><br>1. completare la procedura di primo accesso e attivare il profilo di una delle Scuole;<br>2. contattare l'assistenza mediante il modulo presente nella sezione "Supporto" dell'area riservata di PA digitale 2026, indicando nel messaggio i nomi e il codice IPA delle ulteriori Scuole per le quali si richiede l'attivazione del profilo.
   - title: Gestione utenti
     description: La strategia di ripresa economica e gli interventi previsti per il rilancio digitale del Paese
     sectionId: gestione-utenti
