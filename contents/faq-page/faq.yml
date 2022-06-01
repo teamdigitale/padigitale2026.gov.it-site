@@ -48,6 +48,15 @@ sidebar:
   - sectionTitle: Rendicontazione
     sectionId: rendicontazione
     sectionActive: false
+  - sectionTitle: 1.4.3 pagoPA Altri Enti
+    sectionId: pagopa-altri-enti
+    sectionActive: false
+  - sectionTitle: 1.4.3 appIO Altri Enti
+    sectionId: appio-altri-enti
+    sectionActive: false
+  - sectionTitle: 1.4.4 Altri Enti
+    sectionId: altri-enti
+    sectionActive: false
 questions:
   - title: Generali
     description: La strategia di ripresa economica e gli interventi previsti per il rilancio digitale del Paese
@@ -185,7 +194,7 @@ questions:
       - title: È possibile accedere al finanziamento in caso di realizzazione della migrazione al cloud prima della pubblicazione dall'Avviso riferito alla Misura 1.2?
         content: Si, è possibile accedere al finanziamento previsto dall'Avviso, riferito alla Misura 1.2, nel caso in cui il processo di migrazione al cloud sia stato realizzato a decorrere dal 01 Febbraio 2020 con risorse finanziarie proprie.
       - title: È possibile accedere al finanziamento in caso di realizzazione della migrazione al cloud, con l'ausilio di Fondi pubblici,nazionali, regionali o europei prima della pubblicazione dell'Avviso riferito alla Misura 1.2?
-        content: No, non è possibile accedere al finanziamento previsto dall'Avviso, riferito alla Misura 1.2, nel caso in cui il processo di migrazione al cloud sia stato realizzato con Fondi pubblici, nazionali, regionali o europei, secondo quanto previsto dall'art. 8 comma 5 dell'Avviso. 
+        content: No, non è possibile accedere al finanziamento previsto dall'Avviso, riferito alla Misura 1.2, nel caso in cui il processo di migrazione al cloud sia stato realizzato con Fondi pubblici, nazionali, regionali o europei, secondo quanto previsto dall'art. 8 comma 5 dell'Avviso.
       - title: Entro quando è possibile inoltrare la domanda di accesso al finanziamento?
         content: La domanda può essere presentata a partire dalla data di pubblicazione fino ad esaurimento delle risorse e comunque entro e non oltre le ore 23:59 del 22/07/2022, come specificato nell'Avviso 1.2.
       - title: Quali tipologie di servizi potranno essere oggetto di migrazione?
@@ -198,7 +207,7 @@ questions:
         content: No, il Comune può decidere singolarmente per ognuno dei servizi oggetto della migrazione. L’Ente potrà selezionare il modello di migrazione più adatto da presentare all’interno del piano di migrazione.
       - title: Se ho già migrato un servizio in cloud in modalità "Trasferimento in sicurezza dell’infrastruttura IT" posso aderire al finanziamento per implementare la modalità "Aggiornamento in sicurezza di applicazioni in Cloud"?
         content: Si, se il Comune ha già migrato un servizio in cloud in modalità "Trasferimento in sicurezza dell’infrastruttura IT" può accedere al finanziamento previsto dall'Avviso, riferito alla Misura 1.2, per l'implementazione della modalità "Aggiornamento in sicurezza di applicazioni in Cloud".In ogni caso, il processo di migrazione al cloud deve essere stato realizzato a decorrere dal 01 Febbraio 2020 con risorse finanziarie proprie.
-      - title: Il Canone del primo anno è incluso nel finanziamento? 
+      - title: Il Canone del primo anno è incluso nel finanziamento?
         content: Si, il canone del primo anno è incluso nell'importo forfettario come definito dagli allegati 2.
       - title: Come deve essere rendicontato il contributo?
         content: Il contributo consiste in una somma forfettaria che viene erogata al raggiungimento del risultato come indicato dall'Avviso. Non è prevista la rendicontazione a costi reali.
@@ -213,7 +222,7 @@ questions:
         link: 'https://innovazione.gov.it/notizie/articoli/cloud-e-infrastrutture-digitali/'
         ariaLabel: Vedi ulteriori informazioni sul cloud e le infrastrutture digitali (Collegamento esterno - Apre su nuova scheda)
       - title: In cosa consiste la classificazione di dati e servizi? A cosa serve?
-        content: La classificazione dei dati e dei servizi gestiti dalle PA consente di uniformare e guidare il processo di migrazione al Cloud della PA. Le classi dei dati e servizi sono identificate sulla base del danno che una loro compromissione, in termini di confidenzialità, integrità e disponibilità, provocherebbe al sistema Paese. 
+        content: La classificazione dei dati e dei servizi gestiti dalle PA consente di uniformare e guidare il processo di migrazione al Cloud della PA. Le classi dei dati e servizi sono identificate sulla base del danno che una loro compromissione, in termini di confidenzialità, integrità e disponibilità, provocherebbe al sistema Paese.
         linkLabel: Ulteriori informazioni sono disponibili al seguente link
         link: 'https://docs.italia.it/italia/cloud-italia/strategia-cloud-italia-docs/it/stabile/4_la_strategia_cloud_per_la_pubblica_amministrazione.html#la-classificazione-dei-dati-e-dei-servizi'
         ariaLabel: Vedi ulteriori informazioni sulla classificazione dei dati e dei servizi gestiti dalle PA (Collegamento esterno - Apre su nuova scheda)
@@ -248,7 +257,7 @@ questions:
       - title: Quali tipologie di servizi potranno essere oggetto di migrazione?
         content: Oggetto di migrazione potranno essere tutti i servizi erogati in tutte le loro forme dal singolo Ente e il cui livello complessivo di efficienza possa essere ottimizzato attraverso una migrazione verso  piattaforme Cloud Qualificate o presso Infrastrutture della PA idonee
       - title: Di quante modalità di migrazione può avvalersi una scuola al fine di rispondere correttamente ai requisiti previsti dall'Avviso riferito alla Misura 1.2?
-        content: "La Scuola potrà effettuare la migrazione sfruttando le diverse tipologie di migrazione delineate  nella Strategia Nazionale per il Cloud, selezionando tra le modalità:</br>- Trasferimento in sicurezza dell’infrastruttura IT</br>- Aggiornamento di applicazioni sicure in Cloud"
+        content: 'La Scuola potrà effettuare la migrazione sfruttando le diverse tipologie di migrazione delineate  nella Strategia Nazionale per il Cloud, selezionando tra le modalità:</br>- Trasferimento in sicurezza dell’infrastruttura IT</br>- Aggiornamento di applicazioni sicure in Cloud'
       - title: Quali sono le caratteristiche del modello di migrazione "Trasferimento in sicurezza dell’infrastruttura IT"?
         content: L’opzione "Trasferimento in sicurezza dell’infrastruttura IT" consente di sfruttare la strategia di migrazione Lift&Shift (anche detta Rehost), cioè la migrazione al Cloud dell’infrastruttura già esistente, senza la necessità di reingegnerizzare le applicazioni. Tale modalità consiste nel migrare l’intero servizio, comprensivo di applicazioni e dati su un hosting cloud senza apportare modifiche agli applicativi, ovvero replicando il servizio esistente in un ambiente cloud.
       - title: Una scuola è obbligata ad adottare la stessa modalità di migrazione per tutti i servizi?
@@ -276,11 +285,11 @@ questions:
       - title: Cosa prevede il “Pacchetto cittadino attivo”?
         content: L’Ente ha  la possibilità di selezionare, a seconda della dimensione del Comune, un numero massimo di servizi digitali per il cittadino, selezionabili dalla lista di servizi digitali per il cittadino (“Pacchetto cittadino attivo”). In questo caso l’Ente dovrà provvedere al ridisegno dei servizi scelti utilizzando le tipologie di flussi di interfaccia descritte nel relativo paragrafo, o comunque garantire i criteri di conformità descritti nel paragrafo "Raggiungimento dell’obiettivo per i servizi digitali per il cittadino" di cui all'Allegato 2.
       - title: Cosa comprende il sito istituzionale per i Comuni messo a disposizione all’indirizzo https://designers.italia.it/modello/comuni/ ?
-        content: "Il modello di sito comunale, messo a disposizione all’indirizzo <a href=\"https://designers.italia.it/modello/comuni/\">https://designers.italia.it/modello/comuni/</a> comprende due strumenti fondamentali: l’architettura dell’informazione del sito comunale e i template html del sito comunale."
+        content: 'Il modello di sito comunale, messo a disposizione all’indirizzo <a href="https://designers.italia.it/modello/comuni/">https://designers.italia.it/modello/comuni/</a> comprende due strumenti fondamentali: l’architettura dell’informazione del sito comunale e i template html del sito comunale.'
       - title: Come viene calcolato l'importo forfettario previsto dall'Avviso “Esperienza del cittadino nei servizi pubblici” COMUNI (Aprile 2022) per i Comuni riferito alla Misura 1.4.1?
         content: L’importo del finanziamento concedibile ai Comuni è individuato in un importo forfettario (lump sum) determinato in funzione della tipologia degli interventi previsti ed in funzione della classe di popolazione residente di riferimento del medesimo Comune (Art. 1, comma 3 dell'Avviso).
       - title: Qual è l'obiettivo dell'Avviso “Esperienza del cittadino nei servizi pubblici” COMUNI (Aprile 2022) per i Comuni riferito alla Misura 1.4.1?
-        content: "Per quanto riguarda i siti comunali, l’obiettivo del presente avviso è di mettere a disposizione dei cittadini interfacce coerenti, fruibili e accessibili, secondo il modello di sito comunale, e in conformità con le Linee guida emanate ai sensi del CAD e l’e-government benchmark relativamente agli indicatori della ‘user-centricity’ e della trasparenza, come indicato dall’Egovernment benchmark Method Paper 2020-2023. Per quanto riguarda i servizi digitali per il cittadino, l’obiettivo del presente avviso è di mettere a disposizione dei cittadini una serie di procedure erogate a livello comunale, tramite interfacce coerenti, fruibili e accessibili, con flussi di servizio quanto più uniformi, trasparenti e utente-centrici."
+        content: 'Per quanto riguarda i siti comunali, l’obiettivo del presente avviso è di mettere a disposizione dei cittadini interfacce coerenti, fruibili e accessibili, secondo il modello di sito comunale, e in conformità con le Linee guida emanate ai sensi del CAD e l’e-government benchmark relativamente agli indicatori della ‘user-centricity’ e della trasparenza, come indicato dall’Egovernment benchmark Method Paper 2020-2023. Per quanto riguarda i servizi digitali per il cittadino, l’obiettivo del presente avviso è di mettere a disposizione dei cittadini una serie di procedure erogate a livello comunale, tramite interfacce coerenti, fruibili e accessibili, con flussi di servizio quanto più uniformi, trasparenti e utente-centrici.'
   - title: Misura 1.4.1 Scuole
     description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
     sectionId: misura-1-4-1-scuole
@@ -440,27 +449,93 @@ questions:
       - title: Se un Comune ha già ricevuto i finanziamenti relativi alla Fase I dell’Avviso Pubblico Fondo Innovazione, l’ente può aderire agli avvisi del PNRR relativi alla piattaforma pagoPA e all’App IO?
         content: Sì, i Comuni in questo caso possono aderire agli avvisi del PNRR richiedendo i contributi per l’integrazione di servizi diversi e ulteriori rispetto a quelli per cui hanno già ricevuto il finanziamento.
       - title: I Comuni che hanno ricevuto i contributi della Fase I dell’Avviso Pubblico Fondo Innovazione, dichiarando più servizi rispetto ai minimi richiesti (1 o 2 nuovi servizi per la piattaforma pagoPA e 1 servizio sull’App IO) come devono comportarsi rispetto agli avvisi del PNRR?
-        content: "I Comuni potranno richiedere i finanziamenti degli avvisi del PNRR solo per quei servizi eccedenti rispetto ai minimi richiesti dall’Avviso Pubblico Fondo Innovazione. Nello specifico, saranno considerati già finanziati (e quindi esclusi): <ul><li>il primo servizio dichiarato nella richiesta di erogazione del contributo, per chi ha aderito alla piattaforma pagoPA durante la vigenza dell’Avviso Pubblico,</li><li>i primi due servizi dichiarati nella richiesta di erogazione del contributo, per chi ha aderito alla piattaforma pagoPA prima della pubblicazione dell’Avviso Pubblico,</li><li>il primo servizio dichiarato nella richiesta di erogazione del contributo, per App IO. Fermo restando il rispetto della retroattività, nello specifico servizio attivo dopo il 1° aprile 2021.</li></ul>"
+        content: 'I Comuni potranno richiedere i finanziamenti degli avvisi del PNRR solo per quei servizi eccedenti rispetto ai minimi richiesti dall’Avviso Pubblico Fondo Innovazione. Nello specifico, saranno considerati già finanziati (e quindi esclusi): <ul><li>il primo servizio dichiarato nella richiesta di erogazione del contributo, per chi ha aderito alla piattaforma pagoPA durante la vigenza dell’Avviso Pubblico,</li><li>i primi due servizi dichiarati nella richiesta di erogazione del contributo, per chi ha aderito alla piattaforma pagoPA prima della pubblicazione dell’Avviso Pubblico,</li><li>il primo servizio dichiarato nella richiesta di erogazione del contributo, per App IO. Fermo restando il rispetto della retroattività, nello specifico servizio attivo dopo il 1° aprile 2021.</li></ul>'
       - title: Se sono un Comune aderente al progetto cd. “Regionale”, come faccio a rinunciare ai finanziamenti del Fondo Innovazione della Fase II?
         content: A tal riguardo, dovrai richiedere le modalità di gestione alla Regione, in coerenza con gli specifici accordi regionali con il DTD
       - title: I Comuni che hanno implementato dei servizi sulla Piattaforma pagoPA e sull’App IO quale data devono considerare ai fini della retroattività?
-        content: "Ai fini del PNRR un servizio è considerato attivo: <ul><li>per la piattaforma pagoPA, dalla data di visibilità della prima transazione con esito positivo con la corretta assegnazione del codice tassonomico</li><li>per l’App IO, dalla data di visibilità del servizio in App.</li></ul>"
+        content: 'Ai fini del PNRR un servizio è considerato attivo: <ul><li>per la piattaforma pagoPA, dalla data di visibilità della prima transazione con esito positivo con la corretta assegnazione del codice tassonomico</li><li>per l’App IO, dalla data di visibilità del servizio in App.</li></ul>'
       - title: Un comune che ha raggiunto la misura del 70% dei servizi di incasso previsti come risultato necessario per ottenere i contributi previsti dal Fondo di Innovazione, può presentare al bando per la Misura 1.4.3 "Adozione di PagoPA" un numero di servizi aggiuntivi che vanno a coprire il perimetro totale attuale dei servizi di incasso?
         content: Si, in quanto un Comune potrebbe nel tempo aver aumentato la platea dei servizi offerti nel rispetto dell'elenco previsto dalla tassonomia vigente; nel caso di servizi erogati in via indiretta rimane comunque il vincolo della titolarità del credito come requisito per legittimare la richiesta.
   - title: Rendicontazione
     description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
     sectionId: rendicontazione
     accordions:
-      - title: Come posso utilizzare l'importo per conto capitale o spese correnti? 
+      - title: Come posso utilizzare l'importo per conto capitale o spese correnti?
         content: "In merito alla domanda posta si rimanda alla normativa contabile di riferimento e alle indicazioni dell'Amministrazione competente in materia. A titolo indicativo e non vincolante si  ricorda che il legislatore è intervenuto sul punto con l’articolo 27 comma 2 quinquies del D.L. 152/2021 come modificato in occasione della legge di conversione, nonché si suggerisce la lettura della FAQ 49 ARCONET dove si precisa che “Le spese per l’acquisto di servizi infrastrutturali Cloud sono classificate tra le spese per l’informatica nel titolo 1 della spesa. A titolo esemplificativo si riportano di seguito le voci di parte corrente della spesa per informatica che possono essere ricondotte all’acquisto di servizi cloud infrastrutturali previste nel modulo finanziario del piano dei conti integrato di cui all’allegato 6 al d.lgs. n. 118 del 2011. I servizi di assistenza e di consulenza rientrano nella spesa di servizi cloud infrastrutturali.” Si ricorda infine quanto previsto al punto 3.12 del principio contabile 4/2 con riferimento ai Finanziamenti UE: 3.12 … Le entrate derivanti dai finanziamenti UE utilizzate per il finanziamento di spese correnti sono classificate tra i Trasferimenti correnti, comprese le quote dei Fondi UE destinati agli investimenti utilizzate per finanziare spesa corrente (nel rispetto dei regolamenti comunitari)."
-      - title: Come inserire l'eventuale avanzo? l’importo è messo a bilancio vincolato? 
+      - title: Come inserire l'eventuale avanzo? l’importo è messo a bilancio vincolato?
         content: "In merito alle domande poste si rimanda alla normativa contabile di riferimento e alle indicazioni dell'Amministrazione competente in materia. A titolo indicativo e non vincolante si suggerisce di visionare  la FAQ ARCONET n. 48 pubblicata sul sito del MEF RGS che disciplina le modalità di contabilizzazione di detti fondi prevedendo: <br>- al punto b) che “ Alla fine dell’esercizio, nelle more del perfezionamento delle obbligazioni di spesa, le risorse accertate confluiscono nel risultato di amministrazione e, trattandosi di risorse vincolate, possono essere applicate al bilancio di previsione del triennio successivo. L’utilizzo di tali risorse è consentito anche agli enti in disavanzo in deroga ai limiti previsti dall’art. 1, commi 897 e 898, della legge 30 dicembre 2018, n. 145 (art. 15, comma 3 DL n. 77 del 2021).<br>- al punto c) la FAQ 48 prosegue prevedendo “Per le risorse del PNRR e del PNC, trattandosi di entrate vincolate, gli enti possono variare il bilancio fino al 31 dicembre per iscrivere nuove o maggiori entrate, stanziare i correlati programmi di spesa e procedere con l’accertamento delle relative entrate (art. 175, comma 3, lettera a) del d.lgs. n. 267 del 2000 e art. 51, comma 6, lettera a del d.lgs. n. 118 del 2011). Dal 2021 al 2026, gli enti locali possono variare il bilancio anche nel corso dell’esercizio provvisorio o della gestione provvisoria per iscrivere in bilancio i finanziamenti di derivazione statale ed europea per investimenti (art. 15, comma 4-bis DL n. 77 del 2021).” Una volta confluite nell’avanzo di amministrazione vincolato dette somme possono essere reiscritte nel bilancio dell’esercizio successivo nel rispetto del cronoprogramma di spesa, anche nel caso di enti che chiudano in disavanzo ai sensi dell’art. 15 c. 3 del D. L. 77/2021."
-      - title: Come va inserito a bilancio l'importo forfettario? 
+      - title: Come va inserito a bilancio l'importo forfettario?
         content: "In merito alla domanda posta si rimanda alla normativa contabile di riferimento e alle indicazioni dell'Amministrazione competente in materia. A titolo indicativo e non vincolante si suggerisce di visionare la FAQ ARCONET n. 48 pubblicata sul sito del MEF RGS che disciplina le modalità di contabilizzazione di detti fondi prevedendo al punto a) che “Gli enti possono accertare le risorse del PNRR e del PNC sulla base della formale deliberazione di riparto o assegnazione del contributo a proprio favore, senza dover attendere l'impegno dell'amministrazione erogante, con imputazione agli esercizi di esigibilità ivi previsti (art. 15, comma 4 DL n. 77 del 2021).  Pertanto, a seguito dei decreti ministeriali di assegnazione delle risorse gli enti possono procedere all’accertamento delle entrate nel rispetto dei principi della competenza finanziaria potenziata, al fine di consentire, a seguito del perfezionamento delle obbligazioni di spesa, la registrazione degli impegni con imputazione agli esercizi previsti nel cronoprogramma.” Nel caso di importo forfettario le somme sono preventivamente assegnate da questo dipartimento con apposito decreto a ciascun ente ma subordinate, nell'erogazione, alla verifica della realizzazione del progetto. In tal caso l’ente provvede a contabilizzare le voci di entrata e di spesa così come riportato nella FAQ 48 lett a) sopra riportata."
       - title: Quali attività contabili vanno effettuate per le spesa in economia  del progetto?
         content: In merito alla domanda posta si rimanda alla normativa contabile di riferimento e alle indicazioni dell'Amministrazione competente in materia. A titolo indicativo e non vincolante, con riferimento alla natura della spesa in economia non sono da rilevare attività contabili specifiche se non quelle che consentono di ricondurre, ad es. con apposito codice, dette spese al progetto PNRR così come previsto dal D.L. 77/2021 art 9 c.4.
       - title: Il contributo è a fondo perduto? Quando viene erogato? E' necessario rendicontare i costi sostenuti?
         content: Il contributo concesso è una somma forfettaria (lump sum) che sarà erogata in un'unica soluzione a seguito del perfezionamento delle attività oggetto del finanziamento come disposto dall'art. 13 dell'Avviso. L'entità del finanziamento è indicata nell'Allegato 2 dell'Avviso, come previsto dall'art. 8. Trattandosi di una somma forfettaria non devono essere rendicontati i costi sostenuti.
+  - title: 1.4.3 pagoPA Altri Enti
+    description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
+    sectionId: pagopa-altri-enti
+    accordions:
+      - title: Quali enti della PA possono presentare domanda?
+        content: 'Sono invitate a presentare proposte a valere sul presente Avviso:<br>a. Le Regioni e le Province Autonome;<br>b. Le  Aziende sanitarie locali e le Aziende ospedaliere pubbliche;<br>c. Le Università e gli Istituti di Istruzione Universitaria pubblici, gli Enti e le Istituzioni di ricerca pubblici e le Istituzioni per l’Alta Formazione Artistica, Musicale e Coreutica - (AFAM) pubbliche.'
+      - title: È possibile accedere al finanziamento in caso di realizzazione del progetto prima della pubblicazione dell'Avviso "Adozione pagoPA" della Misura 1.4.3?
+        content: Si, è possibile accedere al finanziamento previsto dall'Avviso nel caso in cui l'attivazione dei servizi di incasso (pagoPA) sia stata realizzata dopo il 01 Aprile 2021 con risorse finanziarie proprie.
+      - title: Quali interventi possono essere finanziati dall'Avviso 1.4.3 per pagoPA?
+        content: I servizi oggetto di migrazione possono essere tutti i servizi di incasso erogati da ciascun Ente facendo valere il principio della titolarità del credito, cioè, potranno essere migrati tutti i servizi di incasso gestiti direttamente dal singolo Ente e/o affidati a soggetti esterni (es. Riscossori; Unioni di Comuni; Comunità Montane) fermo restando che l’Ente mantenga la titolarità del credito vantato.
+      - title: Entro quando è possibile inoltrare la domanda di accesso al finanziamento?
+        content: La domanda può essere presentata a partire dalla data di pubblicazione dell'Avviso fino ad esaurimento delle risorse disponibili, e comunque non oltre alle ore 23.59 del 9 settembre 2022.
+      - title: Quando sarà emesso il Decreto di Finanziamento e quali informazioni saranno in esso contenute?
+        content: Dopo la chiusura della finestra temporale, il Dipartimento per la trasformazione digitale provvede alla definizione del decreto di ammissione a finanziamento dei progetti presentati nella relativa finestra temporale e per i quali i Soggetti Attuatori hanno provveduto all’accettazione del finanziamento con la comunicazione del codice CUP attraverso la Piattaforma. In allegato al decreto di finanziamento sarà riportato l’elenco dei soggetti finanziati in ordine cronologico con il relativo CUP e importo finanziato.
+      - title: Entro quanto tempo dovrà essere contrattualizzato il fornitore rispetto al Decreto di Finanziamento?
+        content: Il fornitore dovà essere contrattualizzato al massimo entro 6 mesi (180 gg) dalla data di notifica del Decreto di Finanziamento.
+      - title: Entro quando dovranno essere portate a termine le attività di migrazione e di attivazione dei servizi?
+        content: Le attività di migrazione e di attivazione dei servizi dovranno essere portate a termine entro 8 mesi (240 gg), a partire dalla data di contrattualizzazione del fornitore.
+      - title: Cosa si intende per transazione con esito positivo per pagoPA?
+        content: Per transazione con esito positivo si intende sia una transazione reale eseguita da un cittadino, nel caso in cui la stagionalità del singolo servizio di incasso lo consenta, oppure - in caso contrario - una transazione reale con importo di valore simbolico (es. 0,01€) ma con codice tassonomico e IUV reale, al fine di poter verificare l’effettiva e corretta integrazione del servizio di incasso in modalità end-to-end (cd. transazione di test)
+  - title: 1.4.3 appIO Altri Enti
+    description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
+    sectionId: appio-altri-enti
+    accordions:
+      - title: Quali enti della PA possono presentare domanda?
+        content: "Sono invitate a presentare proposta a valere sull'Avviso:<br>a. Le Regioni e le Province Autonome;<br>b. Le  Aziende sanitarie locali e le Aziende ospedaliere pubbliche;<br>c. Le Università e gli Istituti di Istruzione Universitaria pubblici, gli Enti e le Istituzioni di ricerca pubblici e le Istituzioni per l’Alta Formazione Artistica, Musicale e Coreutica - AFAM pubbliche."
+      - title: Qual è l'obiettivo dell'Avviso "Adozione appIO" della Misura 1.4.3?
+        content: L'obiettivo del presente Avviso riferito alla Misura 1.4.3 è la migrazione e l’attivazione dei servizi digitali (appIO) seguendo una logica di “pacchetti” che identificano il numero minimo di servizi da integrare a fronte di una singola adesione all’Avviso con il fine ultimo di raggiungere una integrazione cd. full per ciascun Ente, come specificato nell'Allegato 2.
+      - title: È possibile accedere al finanziamento in caso di realizzazione del progetto prima della pubblicazione dell'Avviso "Adozione appIO" riferito della Misura 1.4.3?
+        content: Si, è possibile accedere al finanziamento previsto dall'Avviso nel caso in cui l'implementazione dei servizi digitali (appIO) sia stata realizzata a decorrere dal 01 Aprile 2021, con risorse finanziarie proprie.
+      - title: È possibile accedere al finanziamento in caso di realizzazione del progetto, con l'ausilio di Fondi pubblici, prima della pubblicazione dell'Avviso "Adozione appIO" della Misura 1.4.3?
+        content: No, non è possibile accedere al finanziamento previsto dall'Avviso riferito alla Misura 1.4.3 nel caso in cui l'attivazione degli stessi servizi digitali (appIO) sia stata realizzata con altri finanziamenti pubblici, nazionali, regionali o europei, secondo quanto previsto dall'art. 7 dell'Avviso. Può essere invece finanziata l'attivazione di nuovi servizi, non inclusi nel precedente finanziamento.
+      - title: Entro quando è possibile inoltrare la domanda di accesso al finanziamento?
+        content: La domanda di partecipazione può essere presentata a partire dalla data di pubblicazione dell'Avviso fino ad esaurimento delle risorse disponibili, e comunque non oltre alle ore 23.59 del 9 settembre 2022.
+      - title: Entro quanto tempo dovrà essere contrattualizzato il fornitore rispetto al Decreto di Finanziamento?
+        content: Il fornitore dovà essere contrattualizzato al massimo entro 6 mesi (180 gg) dalla data di notifica del Decreto di Finanziamento.
+      - title: Entro quando dovranno essere portate a termine le attività di migrazione e di attivazione dei servizi?
+        content: Le attività di migrazione e di attivazione dei servizi dovranno essere portate a termine entro 8 mesi (240 gg), a partire dalla data di contrattualizzazione del fornitore.
+      - title: Quando il processo di migrazione e attivazione dei servizi si intende concluso con esito positivo per i servizi attivati sull’appIO?
+        content: Il processo si riterrà concluso con esito positivo quando le richieste di pubblicazione saranno approvate dalla pagoPA S.p.A  e tutti i servizi saranno visibili in App.
+  - title: 1.4.4 Altri Enti
+    description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
+    sectionId: altri-enti
+    accordions:
+      - title: Qual è l'importo del finanziamento concedibile?
+        content: L'importo riconoscibile per l'implementazione del pacchetto  per l'Identità digitale è pari a 14.000,00 euro e sarà erogato all'ente successivamente alla verifica da parte del Dipartimento della corretta alimentazione della Piattaforma e del raggiungimento degli obiettivi prefissati attraverso AgID e IPZS, secondo quanto previsto dall'Art. 13 dell'Avviso.
+      - title: Sono previste risorse espressamente dedicate ai territori delle regioni Abruzzo, Basilicata, Campania, Calabria, Molise, Puglia, Sardegna, Sicilia?
+        content: Si, l'Avviso destina il 40% delle risorse al finanziamento di Soggetti Attuatori ubicati nelle regioni Abruzzo, Basilicata, Campania, Calabria, Molise, Puglia, Sardegna, Sicilia, nel rispetto della priorità trasversale del PNRR relativa al “superamento dei divari territoriali” di cui all’art. 2 comma 6 bis del decreto- legge 31 maggio 2021 n.77, convertito in legge 29 luglio 2021, n. 108. 
+      - title: Quali enti della PA possono presentare domanda?
+        content: I soggetti attuatori, ovvero coloro che possono accedere allo strumento predisposto dall'Avviso, sono tutte le amministrazioni pubbliche, esclusi i Comuni e le Istituzioni Scolastiche.
+      - title: Quali interventi possono essere finanziati dall'Avviso della Misura 1.4.4?
+        content: "Gli interventi che possono essere finanziati sono: adesione alla piattaforma di identità digitale SPID, adesione alla piattaforma di identità digitale CIE ed erogazione di un piano formativo su disposizioni normative, linee guida e best practices in caso di integrazione a SPID e CIE con protocollo SAML2. Per ulteriori dettagli si rimanda all'Allegato 2 del presente Avviso."
+      - title: È possibile accedere al finanziamento per l'adozione di una sola delle due piattaforme di identità digitale SPID/CIE? 
+        content: Si, è possibile accedere al finanziamento previsto dall'Avviso al fine di adottare una sola delle due piattaforme, SPID o CIE, qualora una di esse sia stata già adottata dall'ente con protocollo SAML2, come specificato nell'Allegato 2.
+      - title: Nel caso in cui l'ente non abbia adottato nessuna piattaforma di identità digitale SPID e CIE, può fare richiesta per l'adozione di una sola delle due?
+        content: No, qualora lo scenario di partenza dell'ente sia qualificato dall'assenza di entrambe le piattaforme di identità digitale SPID e CIE, dovrà necessariamente adottarle entrambe, come specificato nell'Allegato 2.
+      - title: In quanto tempo deve essere concluso il progetto di integrazione?
+        content: Il progetto di integrazione deve essere concluso nel termine perentorio di 10 mesi dalla data di contrattualizzazione del fornitore, come specificato nell'Allegato 2.
+      - title: Quale standard di autenticazione deve applicare l'ente nell'adozione delle piattaforme di identità digitale?
+        content: OpenID Connect (OIDC) è lo standard di autenticazione attualmente utilizzato dalla quasi totalità delle moderne applicazioni web e mobile nel mondo privato ed è fortemente raccomandato, come specificato nell'Allegato 2. In alternativa è necessaria l'erogazione di un piano formativo, idoneo a costruire le basi per un successivo passaggio tecnologico.
+      - title: È possibile accedere al finanziamento in caso di progetti già avviati per integrazione SPID/CIE?
+        content: Si, è possibile accedere al finanziamento previsto dall'Avviso nel caso in cui il processo di adozione della piattaforma di identità digitale SPID/CIE sia stato avviato a decorrere dal 1° febbraio 2020 con fondi propri.
+      - title: È possibile accedere al finanziamento nel caso di progetti di integrazione di SPID e CIE in data antecedente al 1° febbraio 2020?
+        content: No, non è possibile accedere al finanziamento previsto dall'Avviso riferito alla Misura 1.4.4 nel caso in cui il processo di adozione della piattaforma di identità digitale SPID/CIE sia stato realizzato prima del 1° febbraio 2020, indipendemente dai fondi/risorse utilizzati.
+      - title: Entro quando è possibile inoltrare la domanda di accesso al finanziamento?
+        content: La domanda può essere presentata a partire dalla data di pubblicazione dell'Avviso fino ad esaurimento delle risorse disponibili, e comunque, entro e non oltre le ore 23:59 del 09/09/2022.
 
 noResults: Nessun risultato trovato
 support:
