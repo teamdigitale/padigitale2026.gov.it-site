@@ -28,11 +28,8 @@ export const IndexPage = () => {
         )
           .then((res) => res.json())
           .then((data) => {
-            // Entries are ordered from oldest to latest in the json file, but we want
-            // to show the latest one first in the carousel.
-            //
-            // Also, show only at most 7 of the most recent ones.
-            setNewsList(data.windows.reverse().slice(0, 7));
+            const dataReversed = Array.prototype.slice.call(data.windows.reverse());
+            setNewsList(dataReversed.slice(0, 7));
           });
       } catch (error) {
         console.log(error);
