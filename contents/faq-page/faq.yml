@@ -523,7 +523,7 @@ questions:
       - title: Quali interventi possono essere finanziati dall'Avviso della Misura 1.4.4?
         content: "Gli interventi che possono essere finanziati sono: adesione alla piattaforma di identità digitale SPID, adesione alla piattaforma di identità digitale CIE ed erogazione di un piano formativo su disposizioni normative, linee guida e best practices in caso di integrazione a SPID e CIE con protocollo SAML2. Per ulteriori dettagli si rimanda all'Allegato 2 del presente Avviso."
       - title: È possibile accedere al finanziamento per l'adozione di una sola delle due piattaforme di identità digitale SPID/CIE? 
-        content: Si, è possibile accedere al finanziamento previsto dall'Avviso al fine di adottare una sola delle due piattaforme, SPID o CIE, qualora una di esse sia stata già adottata dall'ente con protocollo SAML2, come specificato nell'Allegato 2.
+        content: Sì, è possibile accedere al finanziamento previsto dall'Avviso al fine di adottare una sola delle due piattaforme, SPID o CIE, qualora una di esse sia stata già adottata dall'ente con protocollo SAML2, come specificato nell'Allegato 2.
       - title: Nel caso in cui l'ente non abbia adottato nessuna piattaforma di identità digitale SPID e CIE, può fare richiesta per l'adozione di una sola delle due?
         content: No, qualora lo scenario di partenza dell'ente sia qualificato dall'assenza di entrambe le piattaforme di identità digitale SPID e CIE, dovrà necessariamente adottarle entrambe, come specificato nell'Allegato 2.
       - title: In quanto tempo deve essere concluso il progetto di integrazione?
