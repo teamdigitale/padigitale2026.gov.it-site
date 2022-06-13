@@ -3,7 +3,7 @@ sidebar:
   - sectionTitle: 1. Verifica la classificazione automatica
     sectionId: verify-classification
     sectionActive: true
-  - sectionTitle: 2. Compila il questionario per modificare la classificazione automatica
+  - sectionTitle: 2. Compila il questionario per modificare o classificare nuovi servizi
     sectionId: questionario
     sectionActive: false
   - sectionTitle: 3. Invia la classificazione
@@ -19,17 +19,17 @@ verticalTimeline:
   - index: 0
     title: 'Verifica la classificazione automatica'
     icon: '/assets/candida-pa-lens.svg'
-    headerParagraph: "Per semplificare il processo, per ciascuna PA è stato identificato un elenco di servizi applicabili e pre-individuato per tutti questi un livello di classificazione. <strong>Se corretto, lo puoi confermare direttamente.</strong>"
+    headerParagraph: "Per alcune amministrazioni sono predisposti alcuni elenchi di servizi pre-classificati, ad esempio, per semplificare il processo <strong>di ASL, comuni e istituti scolastici. Se esaustivo, lo puoi confermare direttamente. Se</strong> invece <strong>vuoi modificare</strong> la pre-classificazione <strong>o aggiungere</strong> nuovi servizi, <strong>dovrai compilare il questionario.</strong>"
     sectionId: 'verify-classification'
   - index: 1
-    title: 'Compila il questionario per modificare la classificazione automatica'
+    title: 'Compila il questionario per modificare o classificare nuovi servizi'
     icon: '/assets/goals-card.svg'
-    headerParagraph: "<strong>Nel caso avessi bisogno di aggiungere un servizio oppure di modificare la classificazione</strong> automatica proposta, puoi compilare il questionario per determinare una nuova classificazione."
+    headerParagraph: "<strong>Se sei una ASL, un comune o un istituto scolastico</strong> e avessi bisogno di aggiungere un servizio oppure di modificare la classificazione automatica proposta, devi compilare il questionario per determinare una nuova classificazione. Tutte le altre amministrazioni troveranno una lista minima di servizi pre-classificati, che corrisponde ai servizi di funzionamento tipici. Per gli altri servizi erogati, ogni PA deve compilare il questionario."
     sectionId: 'questionario'
   - index: 2
     title: 'Invia la classificazione'
     icon: '/assets/invia-candidatura.svg'
-    headerParagraph: "Una volta inviato il questionario di classificazione, <strong>l’Agenzia per la Cybersicurezza Nazionale eseguirà le verifiche di fattibilità</strong> entro 90 giorni."
+    headerParagraph: "Una volta inviato la classificazione, <strong>l’Agenzia per la Cybersicurezza Nazionale eseguirà le verifiche di conformità</strong> entro 90 giorni."
     sectionId: 'send-classification'
   - index: 3
     title: 'Ricevi aggiornamenti'
