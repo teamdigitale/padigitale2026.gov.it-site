@@ -208,10 +208,54 @@ const useStyles = createUseStyles({
       },
     },
   },
+  keypointsTitle: {
+    fontSize: '1rem',
+    fontWeight: '600',
+    color: '#fff',
+    display: 'block',
+    marginBottom: '10px',
+  },
+  keypointsList: {
+    listStyleType: 'none',
+    padding: '0',
+    display: 'flex',
+    flexWrap: 'wrap',
+    flexDirection: 'column',
+    '@media (min-width: 992px)': {
+      maxHeight: '150px',
+    },
+    '& .keypoint-anchor': {
+      fontSize: '1rem',
+      fontWeight: '600',
+      color: '#fff',
+      textDecoration: 'underline',
+      textDecorationThickness: '0.9px',
+      textUnderlineOffset: '1px',
+    },
+    '& li': {
+      flexBasis: '100%',
+      marginBottom: '16px',
+      '@media (min-width: 992px)': {
+        flexBasis: '50%',
+      },
+      '&:nth-child(n+4)': {
+        '@media (min-width: 992px)': {
+          marginLeft: '20px',
+        },
+      },
+    },
+  },
 });
 
-export const HeroHowToDo = ({ title, body, image, imageMob }) => {
+export const HeroHowToDo = ({ title, body, image, imageMob, keypoints }) => {
   const classes = useStyles();
+
+  const setKeypoints = (keypoints) =>
+    keypoints
+      .map(
+        (keypoint) => `<li><a class="keypoint-anchor" href="#keypoint-${keypoint.number}">${keypoint.title}</a></li>`
+      )
+      .join('');
 
   return (
     <Hero className="position-relative">
@@ -241,6 +285,17 @@ export const HeroHowToDo = ({ title, body, image, imageMob }) => {
               </div>
             </Col>
           </Row>
+          <Row>
+            <Col lg="12">
+              <span className={classes.keypointsTitle}>I PUNTI CHIAVE</span>
+            </Col>
+            <Col lg="6" sm="12">
+              <ul
+                className={classes.keypointsList}
+                dangerouslySetInnerHTML={{ __html: setKeypoints(keypoints.list) }}
+              ></ul>
+            </Col>
+          </Row>
         </Container>
       </div>
       <HeroBackground image={image} className={`${classes.heroImg} d-none d-lg-block`} />
@@ -254,4 +309,5 @@ HeroHowToDo.propTypes = {
   image: PropTypes.string,
   imageMob: PropTypes.string,
   list: PropTypes.array,
+  keypoints: PropTypes.array,
 };
