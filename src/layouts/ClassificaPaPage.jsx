@@ -197,9 +197,9 @@ export const ClassificaPaPage = () => {
             <Col xs={12} lg={7}>
               <h1 className={classes.titleUpdate}>Classifica i dati e i servizi della tua PA</h1>
               <div className={classes.subtitleUpdate}>
-                La classificazione dati e servizi è un requisito fondamentale da completare entro il 18 luglio 2022 ed è{' '}
-                <strong>necessaria per avviare il processo di migrazione al cloud</strong> e garantire così sicurezza,
-                efficienza e affidabilità dei servizi e delle infrastrutture.
+                La classificazione dati e servizi è un requisito fondamentale per tutte le Pubbliche Amministrazioni ed
+                è <strong>necessaria per avviare il processo di migrazione al cloud</strong> e garantire così efficienza
+                e affidabilità dei servizi e delle infrastrutture.
               </div>
             </Col>
             <Col xs={12} lg={4} className="offset-lg-1 mt-5 mt-lg-0 d-flex justify-content-center align-items-center">
@@ -223,7 +223,7 @@ export const ClassificaPaPage = () => {
                     Classifica i dati e i servizi della tua amministrazione
                   </h4>
                   <p className={`${classes.contentParagraph} mb-0`}>
-                    Il processo di classificazione dati e servizi prevede <strong>quattro passaggi</strong>:
+                    Segui il processo di classificazione dati e servizi:
                   </p>
                 </section>
               </Container>
