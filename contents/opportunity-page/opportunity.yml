@@ -149,7 +149,7 @@ beneficiaries:
     updates: Il Dipartimento per la trasformazione digitale ha siglato un <a href="https://www.agid.gov.it/it/agenzia/stampa-e-comunicazione/notizie/2022/02/21/pa-digitale-2026-i-progetti-sportello-digitale-unico-accessibilita-entrano-vivo" target="_blank" aria-label="Leggi di più sull'accordo di collaborazione con AgID (Collegamento esterno - Apre su nuova scheda)">accordo di collaborazione con AgID</a>, in quanto soggetto attuatore, per l’implementazione della misure. La Corte dei Conti ha registrato l’accordo rendendolo pienamente operativo. Per tutti gli aggiornamenti visita la <a href="https://www.agid.gov.it/it/agenzia/attuazione-misure-pnrr" target="_blank" aria-label="sezione dedicata del sito AgID (Collegamento esterno - Apre su nuova scheda)">sezione dedicata del sito AgID</a>.
   - number: 1.4.1
     id: esp-serv-pubb
-    title: Esperienza dei servizi pubblici
+    title: Esperienza del Cittadino nei servizi pubblici
     money: '613 <span>milioni di euro<span>'
     tags:
       - value: comuni
@@ -421,7 +421,7 @@ modal:
   modalMessageTitle: Scrivici
   updatesLabel: AGGIORNAMENTI
   updatesInfo: Lascia i tuoi contatti per ricevere <strong>materiali e <br>informazioni</strong> sulle novità e gli avvisi di Italia digitale 2026
-  mandatoryAdvise: I campi con * sono obbligatori
+  mandatoryAdvise: I campi con asterisco sono obbligatori
   requiredLabel: Questo campo è richiesto
   emailLabel: EMAIL*
   emailValidationLabel: Per favore inserisci un'indirizzo email valido.

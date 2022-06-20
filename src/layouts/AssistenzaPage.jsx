@@ -556,7 +556,7 @@ export const AssistenzaPage = () => {
         <Row>
           <Col xs={12}>
             <div className={classes.mandatory} id="mandatory-label">
-              I campi con * sono obbligatori
+              I campi con asterisco sono obbligatori
             </div>
           </Col>
         </Row>
