@@ -41,7 +41,7 @@ modal:
   modalMessageTitle: Scrivici
   updatesLabel: AGGIORNAMENTI
   updatesInfo: Lascia i tuoi contatti per ricevere <strong>materiali e <br>informazioni</strong> sulle novità e gli avvisi di Italia digitale 2026
-  mandatoryAdvise: I campi con * sono obbligatori
+  mandatoryAdvise: I campi con asterisco sono obbligatori
   requiredLabel: Questo campo è richiesto
   emailLabel: EMAIL*
   emailValidationLabel: Per favore inserisci un'indirizzo email valido.
