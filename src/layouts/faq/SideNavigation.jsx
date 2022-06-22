@@ -1,6 +1,7 @@
+/* eslint-disable react/jsx-key */
 /* eslint-disable react-hooks/exhaustive-deps */
 import React from 'react';
-import { Sidebar, LinkListItem, LinkList } from 'design-react-kit';
+import { Sidebar, LinkListItem, LinkList, Accordion, AccordionHeader, AccordionBody } from 'design-react-kit';
 import PropTypes from 'prop-types';
 import { createUseStyles } from 'react-jss';
 import { useState } from 'react';
@@ -12,6 +13,12 @@ const useStyles = createUseStyles({
       borderRight: '1px solid #d9dadb',
       position: 'sticky',
       top: '0.833rem',
+    },
+    '& .collapse-div': {
+      border: 'none',
+      '& button': {
+        border: 'none',
+      },
     },
     '& .sidebar-linklist-wrapper': {
       '& .link-list-wrapper': {
@@ -98,6 +105,7 @@ export const SideNavigation = (props) => {
   const [isMobile, setIsMobile] = useState();
   const itemSel = '.sidebar-wrapper .link-list .list-item';
   const { activeList, searchValue, list } = props;
+  const [indexIsOpen, setIndexIsOpen] = useState(-1);
 
   useEffect(() => {
     setIsMobile(window.innerWidth < 992);
@@ -204,20 +212,36 @@ export const SideNavigation = (props) => {
             </LinkListItem>
           )}
 
-          {list.map((anchor) => (
+          {list.map((anchor, i) => (
             <React.Fragment key={anchor.sectionId}>
-              {anchor.sectionActive ? (
-                <LinkListItem
-                  key={anchor.sectionId}
-                  size="medium"
-                  href={`#` + anchor.sectionId}
-                  data-id={anchor.sectionId}
-                  className="text-decoration-none"
-                  onClick={(evt) => handleClik(evt)}
-                  active={!isMobile}
-                >
-                  <span>{anchor.sectionTitle}</span>
-                </LinkListItem>
+              {anchor.accordion ? (
+                <Accordion>
+                  <AccordionHeader
+                    onToggle={() => setIndexIsOpen((state) => (state === i ? -1 : i))}
+                    active={i === indexIsOpen}
+                    className={classes.accordionTitle}
+                    id={anchor.sectionId}
+                  >
+                    {anchor.sectionTitle}
+                  </AccordionHeader>
+                  <AccordionBody active={i === indexIsOpen} className={classes.accordionBody}>
+                    <ul>
+                      {anchor.sublist.map((listItem, index) => (
+                        <LinkListItem
+                          key={listItem.sectionId}
+                          size="medium"
+                          href={`#` + listItem.sectionId}
+                          data-id={listItem.sectionId}
+                          className="text-decoration-none"
+                          onClick={(evt) => handleClik(evt)}
+                          active={!isMobile}
+                        >
+                          <span>{listItem.sectionTitle}</span>
+                        </LinkListItem>
+                      ))}
+                    </ul>
+                  </AccordionBody>
+                </Accordion>
               ) : (
                 <LinkListItem
                   key={anchor.sectionId}
@@ -226,6 +250,7 @@ export const SideNavigation = (props) => {
                   data-id={anchor.sectionId}
                   className="text-decoration-none"
                   onClick={(evt) => handleClik(evt)}
+                  active={!isMobile}
                 >
                   <span>{anchor.sectionTitle}</span>
                 </LinkListItem>

@@ -83,6 +83,7 @@ const useStyles = createUseStyles({
 export const QuestionSection = (props) => {
   const classes = useStyles();
   const { title, accordions, sectionId } = props.item;
+  const chips = props.item.chips;
 
   const [indexIsOpen, setIndexIsOpen] = useState(-1);
   const [{ faqId }] = useContext(GlobalStateContext);
@@ -97,12 +98,17 @@ export const QuestionSection = (props) => {
     }
   }, [faqId, accordions]);
 
+  const setChips = (chips) => {
+    console.log(chips);
+  };
+
   return (
     <>
       <section id={sectionId} className={classes.section} aria-labelledby={sectionId + '-headings'}>
         <h3 id={sectionId + '-headings'} className={`${classes.sectionTitle} mb-4`}>
           {title}
         </h3>
+        {chips ? setChips(chips) : ''}
         <Accordion>
           {accordions.map((accordion, i) => (
             <div key={accordion.title} className={classes.accordionWrapper}>

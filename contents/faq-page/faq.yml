@@ -6,56 +6,51 @@ sidebar:
   - sectionTitle: Generali
     sectionId: generali
     sectionActive: true
-  - sectionTitle: Accesso
-    sectionId: accesso
+  - sectionTitle: Utilizzo piattaforma
+    sectionId: platform
     sectionActive: false
-  - sectionTitle: Gestione utenti
-    sectionId: gestione-utenti
-    sectionActive: false
-  - sectionTitle: Candidatura
-    sectionId: candidatura
-    sectionActive: false
-  - sectionTitle: Supporto tecnico
-    sectionId: supporto-tecnico
-    sectionActive: false
-  - sectionTitle: Misura 1.2 Comuni
-    sectionId: misura-1-2-comuni
-    sectionActive: false
-  - sectionTitle: Misura 1.2 Scuole
-    sectionId: misura-1-2-scuole
-    sectionActive: false
-  - sectionTitle: Misura 1.4.1 Comuni
-    sectionId: misura-1-4-1-comuni
-    sectionActive: false
-  - sectionTitle: Misura 1.4.1 Scuole
-    sectionId: misura-1-4-1-scuole
-    sectionActive: false
-  - sectionTitle: Misura 1.4.3 pagoPA
-    sectionId: measure-1-4-3-pagopa
-    sectionActive: false
-  - sectionTitle: Misura 1.4.3 app IO
-    sectionId: measure-1-4-3-appio
-    sectionActive: false
-  - sectionTitle: Misura 1.4.4
-    sectionId: measure-1-4-4
-    sectionActive: false
+    accordion: true
+    sublist: 
+    - sectionTitle: Accesso
+      sectionId: accesso
+      sectionActive: false  
+    - sectionTitle: Gestione utenti
+      sectionId: gestione-utenti
+      sectionActive: false
+    - sectionTitle: Candidatura
+      sectionId: candidatura
+      sectionActive: false
+    - sectionTitle: Supporto tecnico
+      sectionId: supporto-tecnico
+      sectionActive: false
   - sectionTitle: Classificazione dati e servizi
     sectionId: classification-data-services
     sectionActive: false
+  - sectionTitle: Misure
+    sectionId: misure
+    sectionActive: false
+    accordion: true
+    sublist: 
+    - sectionTitle: 1.2
+      sectionId: misura-1-2
+      sectionActive: false
+    - sectionTitle: 1.4.1
+      sectionId: misura-1-4-1
+      sectionActive: false
+    - sectionTitle: 1.4.2
+      sectionId: misura-1-4-2
+      sectionActive: false
+    - sectionTitle: 1.4.3
+      sectionId: measure-1-4-3
+      sectionActive: false
+    - sectionTitle: 1.4.4
+      sectionId: measure-1-4-4
+      sectionActive: false
   - sectionTitle: Fondo Innovazione
     sectionId: fondo-innovazione
     sectionActive: false
   - sectionTitle: Rendicontazione
     sectionId: rendicontazione
-    sectionActive: false
-  - sectionTitle: 1.4.3 pagoPA Altri Enti
-    sectionId: pagopa-altri-enti
-    sectionActive: false
-  - sectionTitle: 1.4.3 appIO Altri Enti
-    sectionId: appio-altri-enti
-    sectionActive: false
-  - sectionTitle: 1.4.4 Altri Enti
-    sectionId: altri-enti
     sectionActive: false
 questions:
   - title: Generali
@@ -188,6 +183,17 @@ questions:
   - title: Misura 1.2 Comuni
     description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
     sectionId: misura-1-2-comuni
+    chips:
+      - title: Scuole
+        id: scuole
+      - title: Comuni
+        id: comuni
+      - title: Altri enti
+        id: altri-enti
+      - title: pagoPA
+        id: pagopa
+      - title: app IO
+        id: appio
     accordions:
       - title: Quali enti della PA possono presentare domanda per accedere al finanziamento dall'Avviso riferito alla Misura 1.2?
         content: I Soggetti Attuatori, ovvero coloro che possono accedere allo strumento predisposto dall'Avviso, sono i Comuni.
