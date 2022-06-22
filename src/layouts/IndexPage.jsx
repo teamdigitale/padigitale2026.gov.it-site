@@ -32,6 +32,21 @@ export const IndexPage = () => {
             // to show the latest one first in the carousel.
             //
             // Also, show only at most 7 of the most recent ones.
+            const newsArr = data.windows;
+            newsArr.forEach((news) => {
+              const startDate = new Date(news.dataInizioBando);
+              const endDate = new Date(news.dataFineBando);
+              const currentDate = new Date();
+              const daysFromStart = Math.abs(currentDate - startDate) / 1000 / 60 / 60 / 24;
+              const daysToEnd = Math.abs(currentDate - endDate) / 1000 / 60 / 60 / 24;
+
+              if (daysFromStart < 14) {
+                news.new = true;
+              }
+              if (daysToEnd < 14) {
+                news.expiring = true;
+              }
+            });
             setNewsList(data.windows.reverse().slice(0, 7));
           });
       } catch (error) {
