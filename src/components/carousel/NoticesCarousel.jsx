@@ -143,6 +143,33 @@ const useStyles = createUseStyles({
       },
     },
   },
+  badgeNew: {
+    display: 'block',
+    textAlign: 'left',
+    borderRadius: '4px',
+    background: '#0066CC',
+    fontSize: '14px',
+    color: '#fff',
+    width: 'fit-content',
+    padding: '1.5px 11px',
+    fontWeight: '700',
+    marginBottom: '15px',
+  },
+  badgeExp: {
+    display: 'block',
+    textAlign: 'left',
+    borderRadius: '4px',
+    background: '#FFB54D',
+    fontSize: '14px',
+    color: '#33485C',
+    width: 'fit-content',
+    padding: '1.5px 11px',
+    fontWeight: '700',
+    marginBottom: '15px',
+  },
+  empty: {
+    height: '40px',
+  },
 });
 
 export const NoticesCarousel = ({ content, title }) => {
@@ -153,6 +180,30 @@ export const NoticesCarousel = ({ content, title }) => {
     return date.toLocaleDateString('it-IT');
   };
 
+  const setLabel = (element) => {
+    if (element.new) {
+      return (
+        <span
+          className={classes.badgeNew}
+          aria-label="nuovo avviso"
+          dangerouslySetInnerHTML={{ __html: 'NUOVO' }}
+        ></span>
+      );
+    } else {
+      if (element.expiring) {
+        return (
+          <span
+            className={classes.badgeExp}
+            aria-label="avviso in scadenza"
+            dangerouslySetInnerHTML={{ __html: 'IN SCADENZA' }}
+          ></span>
+        );
+      } else {
+        return <span className={classes.empty} dangerouslySetInnerHTML={{ __html: '' }}></span>;
+      }
+    }
+  };
+
   const slides = records.map((element) => (
     <>
       <Card key={element.codiceBando} className={classes.heroCards} spacing noWrapper>
@@ -161,6 +212,7 @@ export const NoticesCarousel = ({ content, title }) => {
           className={classes.cardWrapper}
         >
           <CardBody>
+            {setLabel(element)}
             <span className={classes.dueDate}>
               SCADENZA AVVISO <span className={classes.dueDateDigit}>{formatDate(element.dataFineBando)}</span>
             </span>
