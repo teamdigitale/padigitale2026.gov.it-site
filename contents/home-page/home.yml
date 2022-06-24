@@ -124,50 +124,44 @@ opportunity:
       id: centri-facili
 heroCarouselNews:
   - id: 1
+    category: Chiusura Avviso Pubblico
+    title: "Esperienza del cittadino nei servizi pubblici, già richiesti 400 milioni"
+    description: Grande successo per l’Avviso 1.4.1 del PNNR. Previste nuove risorse
+    source: 'innovazione.gov.it'
+    linkTo: 'https://innovazione.gov.it/notizie/articoli/esperienza-del-cittadino-nei-servizi-pubblici-gia-richiesti-400-milioni/'
+  - id: 2
     type: internal
     category: AGGIORNAMENTO
     title: Documentazione avviso 1.4.4
     description: È stato pubblicato un Decreto di rettifica per l'avviso 1.4.4 dedicato ai Comuni
     source: 'Avviso 1.4.4 - Comuni'
     linkTo: 'https://areariservata.padigitale2026.gov.it/Pa_digitale2026_dettagli_avviso?id=a017Q00000Z9i2jQAB'
-  - id: 2
+  - id: 3
     category: Avvisi pubblici
     title: "Nuovi avvisi per identità digitale (SPID/CIE), pagoPA e app IO"
     description: Aumenta la platea di beneficiari per le misure dedicate al rafforzamento delle piattaforme abilitanti sul territorio nazionale
     source: 'innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/articoli/nuovi-avvisi-per-identita-digitale-spid-cie-pagopa-e-app-io/'
-  - id: 3
+  - id: 4
     type: internal
     category: AGGIORNAMENTO
     title: Documentazione avviso 1.2
     description: È stato aggiornato l’elenco dei servizi e dei riferimenti normativi dell’Allegato 2 nell’avviso dedicato ai Comuni
     source: 'Avviso 1.2 - Comuni'
     linkTo: 'https://areariservata.padigitale2026.gov.it/Pa_digitale2026_dettagli_avviso?id=a017Q00000c8mFyQAI'
-  - id: 4
+  - id: 5
     type: internal
     category: AGGIORNAMENTO
     title: Documentazione avvisi 1.4.3 e 1.4.4
     description: Sono state pubblicate le risposte alle domande delle PA nella sezione “Allegati” degli avvisi
     source: 'Sezione avvisi'
     linkTo: 'https://areariservata.padigitale2026.gov.it/Pa_digitale2026_avvisi'
-  - id: 5
+  - id: 6
     category: Avvisi pubblici
     title: "Mobility as a Service for Italy - fondo complementare al PNRR"
     description: Dopo il successo del primo Avviso, nuovi fondi per estendere i servizi MaaS ad altri tre comuni capoluogo di città metropolitane
     source: 'innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/avvisi-pubblici/mobility-as-a-service-for-italy-fondo-complementare/'
-  - id: 6
-    category: Avvisi pubblici
-    title: "Digitale, dal PNRR 400 milioni per aggiornare siti e servizi dei Comuni"
-    description: Voucher economici per servizi pubblici digitali sempre più a misura di cittadino
-    source: 'innovazione.gov.it'
-    linkTo: 'https://innovazione.gov.it/notizie/articoli/digitale-dal-pnrr-400-milioni-per-aggiornare-siti-e-servizi-dei-comuni/'
-  - id: 7
-    category: Avvisi pubblici
-    title: "Al via gli avvisi per la transizione digitale delle scuole"
-    description: Risorse economiche dedicate alle scuole per la migrazione al cloud e il rinnovamento dei siti web
-    source: 'innovazione.gov.it'
-    linkTo: 'https://innovazione.gov.it/notizie/articoli/al-via-gli-avvisi-per-la-transizione-digitale-delle-scuole/'
 support:
   tag: Supporto
   title: Consulta le domande frequenti o scrivici per ricevere assistenza
