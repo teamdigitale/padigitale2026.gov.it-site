@@ -1,3 +1,5 @@
+/* eslint-disable sonarjs/no-use-of-empty-return-value */
+/* eslint-disable sonarjs/no-identical-functions */
 import React, { useState, useEffect, useContext } from 'react';
 import { Accordion, AccordionHeader, AccordionBody } from 'design-react-kit';
 import { createUseStyles } from 'react-jss';
@@ -78,15 +80,22 @@ const useStyles = createUseStyles({
     textDecoration: 'none',
     display: 'block',
   },
+  chipsList: {
+    listStyleType: 'none',
+    display: 'flex',
+    padding: '0',
+  },
 });
 
 export const QuestionSection = (props) => {
   const classes = useStyles();
   const { title, accordions, sectionId } = props.item;
   const chips = props.item.chips;
+  const chipsIdArr = chips?.map((chip) => chip.id);
 
   const [indexIsOpen, setIndexIsOpen] = useState(-1);
   const [{ faqId }] = useContext(GlobalStateContext);
+  const [filters, setFilters] = useState(chipsIdArr);
 
   useEffect(() => {
     if (faqId) {
@@ -98,9 +107,74 @@ export const QuestionSection = (props) => {
     }
   }, [faqId, accordions]);
 
-  const setChips = (chips) => {
-    console.log(chips);
+  const renderFilterActive = (id, filters) => {
+    const isFilterActive = filters.find((filter) => {
+      if (filter === id) {
+        return true;
+      }
+    });
+
+    if (isFilterActive) {
+      return 'V';
+    } else {
+      return 'X';
+    }
   };
+
+  const setChips = (chips) =>
+    chips
+      .map(
+        (chip) =>
+          `<li><button class="chip" id="${chip.id}">${chip.title}<span class="chip-icon">${renderFilterActive(
+            chip.id,
+            filters
+          )}</span></button></li>`
+      )
+      .join('');
+
+  useEffect(() => {
+    if (filters) {
+      const setFilterActive = (id, currentFilters) => {
+        if (id) {
+          const currentChip = document.querySelector(`#${id}`);
+          const icon = currentChip.querySelector('.chip-icon');
+          const isFilterActive = currentFilters.find((filter) => {
+            if (filter === id) {
+              return true;
+            }
+          });
+          if (isFilterActive) {
+            icon.innerHTML = 'V';
+          } else {
+            icon.innerHTML = 'X';
+          }
+        }
+      };
+      const filterHandler = (event) => {
+        const id = event.target.id;
+        const currentFilters = filters;
+        const isFilterActive = currentFilters.find((filter) => {
+          if (filter === id) {
+            return true;
+          }
+        });
+
+        if (isFilterActive) {
+          const index = currentFilters.indexOf(id);
+          currentFilters.splice(index, 1);
+        } else {
+          currentFilters.push(id);
+        }
+        setFilterActive(id, currentFilters);
+        setFilters(currentFilters);
+      };
+
+      const chipsBtn = document.querySelectorAll('.chip');
+      chipsBtn.forEach((chip) => {
+        chip.addEventListener('click', filterHandler);
+      });
+    }
+  }, [filters]);
 
   return (
     <>
@@ -108,7 +182,17 @@ export const QuestionSection = (props) => {
         <h3 id={sectionId + '-headings'} className={`${classes.sectionTitle} mb-4`}>
           {title}
         </h3>
-        {chips ? setChips(chips) : ''}
+        {chips ? (
+          <>
+            <span className={classes.filter}>
+              Totale filtri selezionati <span id="filter-selected">{filters}</span>/
+              <span id="filter-available">5</span>
+            </span>
+            <ul className={classes.chipsList} dangerouslySetInnerHTML={{ __html: setChips(chips) }}></ul>
+          </>
+        ) : (
+          ''
+        )}
         <Accordion>
           {accordions.map((accordion, i) => (
             <div key={accordion.title} className={classes.accordionWrapper}>
