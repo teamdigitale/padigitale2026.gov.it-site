@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/no-unused-collection */
 /* eslint-disable sonarjs/no-identical-functions */
 /* eslint-disable max-lines-per-function */
 /* eslint-disable react/no-unescaped-entities */
@@ -237,6 +238,65 @@ export const FaqPage = () => {
     searchInput.value = '';
     setQuestions(faq.questions);
   };
+
+  useEffect(() => {
+    const chipHandler = (event) => {
+      const questionsModel = JSON.parse(JSON.stringify(faq.questions));
+      let currentTarget;
+      if (event.target.classList.contains('chip')) {
+        currentTarget = event.target;
+      } else {
+        currentTarget = event.target.closest('.chip');
+      }
+      if (currentTarget.classList.contains('active')) {
+        currentTarget.classList.remove('active');
+        const icon = currentTarget.querySelector('.chip-icon');
+        icon.classList.remove('active');
+      } else {
+        currentTarget.classList.add('active');
+        const icon = currentTarget.querySelector('.chip-icon');
+        icon.classList.add('active');
+      }
+      const currentActiveArr = document.querySelectorAll('.chip.active');
+      const chipsContainerArr = [];
+      currentActiveArr.forEach((activeChip) => {
+        chipsContainerArr.push(activeChip.closest('ul'));
+      });
+      const sectionIdArr = chipsContainerArr.map((chipsContainer) => chipsContainer.getAttribute('data-measure'));
+      console.log(sectionIdArr);
+      /* const activeIdArr = Array.prototype.slice.call(currentActiveArr).map((chip) => chip.id);
+      const filteredCategory = questionsModel.filter((category) => category.sectionId === sectionId);
+      const filteredCategoryArr = questionsModel.filter((category) => {
+        const found = sectionIdArr.includes(category.sectionId);
+        if (found) {
+          return category;
+        }
+      });
+      const { accordions } = filteredCategory[0];
+      const accordionsFiltered = accordions.filter((accordion) => {
+        const tagArr = accordion.tag;
+        const found = tagArr.some((r) => activeIdArr.includes(r));
+        if (found) {
+          return accordion;
+        }
+      });
+      let questionsFiltered = questionsModel.map((question) => {
+        if (question.sectionId === sectionId) {
+          question.accordions = accordionsFiltered;
+        }
+        return question;
+      });
+
+      questionsFiltered = questionsFiltered.filter((question) => question !== undefined);
+
+      setQuestions(questionsFiltered); */
+    };
+
+    const chipsArr = document.querySelectorAll('.chip');
+    chipsArr.forEach((chip) => {
+      chip.addEventListener('click', chipHandler, true);
+    });
+  }, []);
 
   return (
     <>
