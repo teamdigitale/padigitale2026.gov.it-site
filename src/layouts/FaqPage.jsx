@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/prefer-object-literal */
 /* eslint-disable sonarjs/no-unused-collection */
 /* eslint-disable sonarjs/no-identical-functions */
 /* eslint-disable max-lines-per-function */
@@ -258,12 +259,58 @@ export const FaqPage = () => {
         icon.classList.add('active');
       }
       const currentActiveArr = document.querySelectorAll('.chip.active');
-      const chipsContainerArr = [];
+      let chipsContainerArr = [];
       currentActiveArr.forEach((activeChip) => {
         chipsContainerArr.push(activeChip.closest('ul'));
       });
-      const sectionIdArr = chipsContainerArr.map((chipsContainer) => chipsContainer.getAttribute('data-measure'));
-      console.log(sectionIdArr);
+      chipsContainerArr = [...new Set(chipsContainerArr)];
+      const activeQuestions = {};
+      activeQuestions.list = [];
+      chipsContainerArr.forEach((activeQuestion, index) => {
+        let activeChips = activeQuestion.querySelectorAll('.chip.active');
+        activeChips = Array.prototype.slice.call(activeChips).map((chip) => chip.id);
+        activeQuestions.list.push({
+          id: index,
+          sectionId: activeQuestion.getAttribute('data-measure'),
+          chips: activeChips,
+        });
+      });
+      const result = (questionsModel, activeQuestions) => {
+        let filtered = questionsModel;
+        filtered.forEach((category) => {
+          if (category.chips) {
+            const activeSectionIdArr = activeQuestions.map((question) => question.sectionId);
+            if (activeSectionIdArr.includes(category.sectionId)) {
+              activeQuestions.forEach((activeQuestion) => {
+                if (activeQuestion.sectionId === category.sectionId) {
+                  const tagActiveArr = activeQuestion.chips;
+                  const questions = category.accordions;
+                  questions.forEach((question, index, questions) => {
+                    const tagArr = question.tag;
+                    tagArr.forEach((tag) => {
+                      if (!tagActiveArr.includes(tag)) {
+                        questions[index] = '';
+                      }
+                    });
+                  });
+                }
+              });
+            } else {
+              category.accordions = [];
+            }
+          }
+        });
+        filtered = filtered.filter((category) =>
+          category.accordions.filter((question) => {
+            if (question !== '') {
+              return question;
+            }
+          })
+        );
+        setQuestions(filtered);
+      };
+
+      result(questionsModel, activeQuestions.list);
       /* const activeIdArr = Array.prototype.slice.call(currentActiveArr).map((chip) => chip.id);
       const filteredCategory = questionsModel.filter((category) => category.sectionId === sectionId);
       const filteredCategoryArr = questionsModel.filter((category) => {

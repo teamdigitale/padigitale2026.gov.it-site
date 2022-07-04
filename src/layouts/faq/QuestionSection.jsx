@@ -121,13 +121,16 @@ const useStyles = createUseStyles({
 
 export const QuestionSection = (props) => {
   const classes = useStyles();
-  const { title, accordions, sectionId } = props.item;
+  const { title, sectionId } = props.item;
+  let { accordions } = props.item;
   const chips = props.item.chips;
   const chipsIdArr = chips?.filter((chip) => {
     if (chip.id) {
       return chip.id;
     }
   });
+
+  accordions = accordions.filter((accordion) => accordion !== '');
 
   const [indexIsOpen, setIndexIsOpen] = useState(-1);
   const [{ faqId }] = useContext(GlobalStateContext);
