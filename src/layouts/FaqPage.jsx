@@ -59,6 +59,7 @@ export const FaqPage = () => {
   const [questions, setQuestions] = useState(faq.questions);
   const [isMobile, setIsMobile] = useState();
   const [questNum, setquestNum] = useState(countInitQuestions());
+  const [search, setSearch] = useState(0);
 
   useEffect(() => {
     setIsMobile(window.innerWidth < 992);
@@ -91,7 +92,16 @@ export const FaqPage = () => {
   }
 
   const handleChange = (event) => {
+    setSearch(search + 1);
     const value = event.target.value;
+    const tagListArr = document.querySelectorAll('.tags-container');
+    tagListArr.forEach((tagList) => {
+      if (value !== '') {
+        tagList.classList.add('d-none');
+      } else {
+        tagList.classList.remove('d-none');
+      }
+    });
     setInputValue(value);
     if (value.length >= 3) {
       if (isMobile && filterId !== 'all') {
@@ -234,7 +244,12 @@ export const FaqPage = () => {
   }, []);
 
   const resetInput = () => {
+    const tagListArr = document.querySelectorAll('.tags-container');
+    tagListArr.forEach((tagList) => {
+      tagList.classList.remove('d-none');
+    });
     setInputValue('');
+    setSearch(search + 1);
     const searchInput = document.querySelector('#faq-search');
     searchInput.value = '';
     setQuestions(faq.questions);
@@ -280,10 +295,14 @@ export const FaqPage = () => {
         filtered.forEach((category) => {
           if (category.chips) {
             const activeSectionIdArr = activeQuestions.map((question) => question.sectionId);
+            const currentSection = document.querySelector(`#${category.sectionId}`);
+            const filterNumber = currentSection.querySelector('.filter-selected');
             if (activeSectionIdArr.includes(category.sectionId)) {
               activeQuestions.forEach((activeQuestion) => {
                 if (activeQuestion.sectionId === category.sectionId) {
                   const tagActiveArr = activeQuestion.chips;
+                  const activeTagLength = tagActiveArr.length;
+                  filterNumber.innerHTML = activeTagLength;
                   const questions = category.accordions;
                   questions.forEach((question, index, questions) => {
                     const tagArr = question.tag;
@@ -297,6 +316,7 @@ export const FaqPage = () => {
               });
             } else {
               category.accordions = [];
+              filterNumber.innerHTML = 0;
             }
           }
         });
@@ -311,39 +331,12 @@ export const FaqPage = () => {
       };
 
       result(questionsModel, activeQuestions.list);
-      /* const activeIdArr = Array.prototype.slice.call(currentActiveArr).map((chip) => chip.id);
-      const filteredCategory = questionsModel.filter((category) => category.sectionId === sectionId);
-      const filteredCategoryArr = questionsModel.filter((category) => {
-        const found = sectionIdArr.includes(category.sectionId);
-        if (found) {
-          return category;
-        }
-      });
-      const { accordions } = filteredCategory[0];
-      const accordionsFiltered = accordions.filter((accordion) => {
-        const tagArr = accordion.tag;
-        const found = tagArr.some((r) => activeIdArr.includes(r));
-        if (found) {
-          return accordion;
-        }
-      });
-      let questionsFiltered = questionsModel.map((question) => {
-        if (question.sectionId === sectionId) {
-          question.accordions = accordionsFiltered;
-        }
-        return question;
-      });
-
-      questionsFiltered = questionsFiltered.filter((question) => question !== undefined);
-
-      setQuestions(questionsFiltered); */
     };
-
     const chipsArr = document.querySelectorAll('.chip');
     chipsArr.forEach((chip) => {
       chip.addEventListener('click', chipHandler, true);
     });
-  }, []);
+  }, [search]);
 
   return (
     <>

@@ -182,17 +182,17 @@ export const QuestionSection = (props) => {
           {title}
         </h3>
         {chips ? (
-          <>
+          <div className="tags-container">
             <span className={classes.filter}>
-              Totale filtri selezionati <span id="filter-selected">{filtersLength}</span>/
-              <span id="filter-available">{chipsIdArr.length}</span>
+              Totale filtri selezionati <span className="filter-selected">{filtersLength}</span>/
+              <span className="filter-available">{chipsIdArr.length}</span>
             </span>
             <ul
               data-measure={sectionId}
               className={classes.chipsList}
               dangerouslySetInnerHTML={{ __html: setChips(chips) }}
             ></ul>
-          </>
+          </div>
         ) : (
           ''
         )}
