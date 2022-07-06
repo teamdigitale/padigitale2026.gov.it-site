@@ -37,9 +37,6 @@ sidebar:
     - sectionTitle: 1.4.1
       sectionId: measure-1-4-1
       sectionActive: false
-    - sectionTitle: 1.4.2
-      sectionId: measure-1-4-2
-      sectionActive: false
     - sectionTitle: 1.4.3
       sectionId: measure-1-4-3
       sectionActive: false
