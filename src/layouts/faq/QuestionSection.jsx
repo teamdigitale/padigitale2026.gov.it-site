@@ -87,6 +87,9 @@ const useStyles = createUseStyles({
     display: 'flex',
     padding: '0',
     flexWrap: 'wrap',
+    '& li+li': {
+      marginLeft: '16px',
+    },
     '& .chip': {
       height: '30px',
       padding: '3px 7px 3px 20px',
@@ -95,12 +98,15 @@ const useStyles = createUseStyles({
       alignItems: 'center',
       position: 'relative',
       paddingRight: '53px',
-      border: '1px solid #B8C5D0',
-      color: '#5A768A',
+      border: '1px solid #dfe4f2',
+      color: '#33485C',
       fontSize: '0.889rem',
       fontWeight: '700',
+      '&:hover': {
+        color: '#fff',
+      },
       '&.active': {
-        border: '1px solid #5A768A',
+        border: '1px solid #33485C',
       },
     },
     '& .chip-icon': {

@@ -84,6 +84,14 @@ const useStyles = createUseStyles({
     },
     '@media (max-width: 991px)': {
       background: '#F0F6FC',
+      '&[data-toggle=collapse][aria-expanded=false]': {
+        color: '#33485C',
+        padding: '14px 6px',
+      },
+      '&[data-toggle=collapse][aria-expanded=true]': {
+        color: '#33485C',
+        padding: '14px 6px',
+      },
     },
     '& .scroll-indicator': {
       width: '100%',
@@ -272,7 +280,7 @@ export const SideNavigation = (props) => {
             active={collapseMenu}
             onToggle={() => setCollapseMenu(!collapseMenu)}
           >
-            Indice della pagina
+            INDICE DELLA PAGINA
             <div className="scroll-indicator">
               <div className="scroll-active"></div>
             </div>
