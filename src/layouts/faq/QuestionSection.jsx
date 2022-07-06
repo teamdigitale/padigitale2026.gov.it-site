@@ -87,8 +87,12 @@ const useStyles = createUseStyles({
     display: 'flex',
     padding: '0',
     flexWrap: 'wrap',
-    '& li+li': {
-      marginLeft: '16px',
+    '& li': {
+      marginTop: '10px',
+      marginRight: '16px',
+      '&:last-child': {
+        marginRight: '0',
+      },
     },
     '& .chip': {
       height: '30px',
@@ -132,7 +136,7 @@ const useStyles = createUseStyles({
   },
   filter: {
     fontSize: '1rem',
-    marginBottom: '15px',
+    marginBottom: '5px',
     display: 'block',
     '& .filter-selected': {
       fontWeight: '700',
