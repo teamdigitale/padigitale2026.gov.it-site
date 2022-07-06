@@ -82,6 +82,7 @@ questions:
   - title: Accesso
     description: La strategia di ripresa economica e gli interventi previsti per il rilancio digitale del Paese
     sectionId: accesso
+    sectionTitle: Utilizzo piattaforma
     accordions:
       - title: Chi può accedere a PA digitale 2026?
         content: Il rappresentante legale dell'amministrazione, o una persona incaricata ad agire per suo conto, può accedere con SPID/CIE alla piattaforma. Durante la procedura di primo accesso alla piattaforma, è necessario selezionare e attivare il profilo della PA di riferimento.
@@ -226,7 +227,8 @@ questions:
         content: Sì, l’obiettivo è di avere un ordine di grandezza il più realistico possibile della numerosità di dati trattati, pertanto anche eventuali arrotondamenti sono accettati (ad esempio, 1.224.000 dati anagrafici possono essere indicati come 1.200.000). Non è invece possibile indicare numeri decimali o minori di zero.
       - title: È possibile richiedere l’aggiornamento della classificazione dati e servizi?
         content: Sì. Una PA può inviare una PEC all’Agenzia Nazionale per la Cybersicurezza per aggiornare la classificazione dati e servizi precedentemente inviata. Accolta la richiesta dall’Agenzia, la classificazione verrà riportata in stato "In bozza". La PA riceverà una PEC e una notifica in piattaforma e sarà informata che la classificazione è disponibile per gli opportuni aggiornamenti. Nel caso in cui la PA abbia una candidatura 1.2 <strong>in stato "In bozza"</strong> verrà annullata in automatico. Invece, nel caso in cui la PA abbia una candidatura 1.2 <strong>inviata</strong>, non potrà eliminare i servizi selezionati nella candidatura 1.2 e visualizzerà un messaggio di errore. Qualora la PA fosse intenzionata a eliminare alcuni servizi dalla classificazione, dovrà ritirare la candidatura all’avviso 1.2 per avviare una nuova classificazione. In questo modo, si potrà ricandidare all’avviso 1.2 con la lista di servizi aggiornata.
-  - title: Misura 1.2
+  - title: 1.2
+    sectionTitle: Misure
     description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
     sectionId: measure-1-2
     chips:
@@ -371,7 +373,7 @@ questions:
         content: L’opzione di "Aggiornamento di applicazioni sicure in Cloud" offre la possibilità di migrare le applicazioni utilizzando una tra le strategie repurchase/replace e replatform. Per repurchase/replace si intende l’acquisto di una soluzione nativa in cloud, in genere erogata in modalità Software as a Service, mentre per replatforming si intende la riorganizzazione dell’architettura applicativa sostituendo intere componenti del servizio in favore di soluzioni Cloud native in modo da usufruire dei benefici dell’infrastruttura Cloud.
         tag: 
           - scuole
-  - title: Misura 1.4.1
+  - title: 1.4.1
     description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
     sectionId: measure-1-4-1
     chips:
@@ -453,7 +455,7 @@ questions:
         content: L’importo del finanziamento, riconosciuto per il rifacimento del sito web istituzionale è pari a 7.301 euro Iva inclusa. L’importo del finanziamento sarà riconosciuto al Soggetto Attuatore solo a seguito del conseguimento del risultato atteso.
         tag: 
           - scuole
-  - title: Misura 1.4.3
+  - title: 1.4.3
     description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
     sectionId: measure-1-4-3
     chips:
@@ -633,41 +635,71 @@ questions:
         tag: 
           - altri-enti
           - appio
-  - title: Misura 1.4.4
+  - title: 1.4.4
     description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
     sectionId: measure-1-4-4
     chips:
       - title: Altri Enti
         id: altri-enti
+      - title: Generale
+        id: general
     accordions:
       - title: Qual è l'importo del finanziamento concedibile?
         content: L'importo del finanziamento riconoscibile è pari a €14.000 al termine della realizzazione del progetto.
+        tag: 
+          - general
       - title: Sono previste risorse espressamente dedicate ai territori delle regioni Abruzzo, Basilicata, Campania, Calabria, Molise, Puglia, Sardegna, Sicilia?
         content: Sì, l'Avviso destina il 40% delle risorse al finanziamento di Soggetti Attuatori ubicati nelle regioni Abruzzo, Basilicata, Campania, Calabria, Molise, Puglia, Sardegna, Sicilia, nel rispetto della priorità trasversale del PNRR relativa al “superamento dei divari territoriali” di cui all’art. 2 comma 6 bis del decreto- legge 31 maggio 2021 n.77, convertito in legge 29 luglio 2021, n. 108.
+        tag: 
+          - general 
       - title: Quali enti della PA possono presentare domanda?
         content: I soggetti attuatori, ovvero coloro che possono accedere allo strumento predisposto dall'Avviso, sono i Comuni. In seguito saranno pubblicati avvisi ad hoc per altre tipologie di pubbliche amministrazioni.
+        tag: 
+          - general 
       - title: Quali interventi possono essere finanziati dall'Avviso della Misura 1.4.4?
         content: "Gli interventi che possono essere finanziati sono: adesione alla piattaforma di identità digitale SPID, adesione alla piattaforma di identità digitale CIE ed erogazione di un piano formativo su disposizioni normative, linee guida e best practices in caso di integrazione a SPID e CIE con protocollo SAML2. Per ulteriori dettagli si rimanda all'Allegato 2 del presente Avviso."
+        tag: 
+          - general 
       - title: È possibile accedere al finanziamento per l'adozione di una sola delle due piattaforme di identità digitale SPID/CIE?
         content: Si, è possibile accedere al finanziamento previsto dall'Avviso al fine di adottare una sola delle due piattaforme, SPID o CIE, qualora una di esse sia stata già adottata dall'ente con protocollo SAML2, come specificato nell'Allegato 2.
+        tag: 
+          - general
       - title: Nel caso in cui il Comune non abbia adottato nessuna piattaforma di identità digitale SPID e CIE, può fare richiesta per l'adozione di una sola delle due?
         content: No, qualora lo scenario di partenza dell'ente sia qualificato dall'assenza di entrambe le piattaforme di identità digitale SPID e CIE, dovrà necessariamente adottarle entrambe, come specificato nell'Allegato 2.
+        tag: 
+          - general
       - title: In quanto tempo deve essere concluso il progetto di integrazione?
         content: Il progetto di integrazione deve essere concluso nel termine perentorio di 10 mesi dalla data di contrattualizzazione del fornitore, come specificato nell'Allegato 2.
+        tag: 
+          - general
       - title: Quale standard di autenticazione deve applicare il Comune nell'adozione delle piattaforme di identità digitale?
         content: OpenID Connect (OIDC) è lo standard di autenticazione attualmente utilizzato dalla quasi totalità delle moderne applicazioni web e mobile nel mondo privato ed è fortemente raccomandato, come specificato nell'Allegato 2. In alternativa è necessaria l'erogazione di un piano formativo, idoneo a costruire le basi per un successivo passaggio tecnologico.
+        tag: 
+          - general
       - title: È possibile accedere al finanziamento in caso di progetti già avviati per integrazione SPID/CIE?
         content: Si, è possibile accedere al finanziamento previsto dall'Avviso nel caso in cui il processo di adozione della piattaforma di identità digitale SPID/CIE sia stato avviato a decorrere dal 1° febbraio 2020 con fondi propri.
+        tag: 
+          - general
       - title: Entro quando è possibile inoltrare la domanda di accesso al finanziamento?
         content: La domanda può essere presentata a partire dalla data di pubblicazione fino ad esaurimento delle risorse disponibili, e comunque, entro e non oltre le ore 23:59 del 02/09/2022, come specificato nell'Avviso.
+        tag: 
+          - general
       - title: Quando si considera raggiunto l’obiettivo di integrazione a CIE?
         content: Per CIE sarà necessario che il soggetto attuatore abbia pubblicato l'adesione a CIE e messo in esercizio i servizi online. Farà fede la data di richiesta di adesione, purché la pubblicazione e messa in esercizio dei servizi avvenga entro e non oltre i 60 giorni decorrenti dalla data della richiesta di adesione a CIE.
+        tag: 
+          - general
       - title: Quando si considera raggiunto l’obiettivo di integrazione a SPID?
         content: Per SPID sarà necessario che il soggetto attuatore abbia eseguito i test tecnici di integrazione e abilitato i servizi online all’accesso tramite SPID. Farà fede la data di richiesta per il primo collaudo tecnico ad AgID il cui esito è positivo.
+        tag: 
+          - general
       - title: Link utili per tematiche tecniche su SPID
         content: 'Domande frequenti: <br><a target="_blank" href="https://www.spid.gov.it/domande-frequenti/">https://www.spid.gov.it/domande-frequenti/</a><br><a target="_blank" href="https://helpdesk.spid.gov.it/knowledgebase.php?category=2">https://helpdesk.spid.gov.it/knowledgebase.php?category=2</a><br></br>Risorse per sviluppatori:<br><a target="_blank" href="https://developers.italia.it/it/spid/#resourcecontent-1">https://developers.italia.it/it/spid/#resourcecontent-1</a>'
+        tag: 
+          - general
       - title: Link utili per tematiche tecniche su CIE
         content: 'Domande frequenti: <br><a target="_blank" href="https://federazione.servizicie.interno.gov.it/faq">https://federazione.servizicie.interno.gov.it/faq</a><br></br>Risorse per sviluppatori:<br><a target="_blank" href="https://developers.italia.it/it/cie">https://developers.italia.it/it/cie</a>'
+        tag: 
+          - general
       - title: Qual è l'importo del finanziamento concedibile?
         content: L'importo riconoscibile per l'implementazione del pacchetto  per l'Identità digitale è pari a 14.000,00 euro e sarà erogato all'ente successivamente alla verifica da parte del Dipartimento della corretta alimentazione della Piattaforma e del raggiungimento degli obiettivi prefissati attraverso AgID e IPZS, secondo quanto previsto dall'Art. 13 dell'Avviso.
         tag:

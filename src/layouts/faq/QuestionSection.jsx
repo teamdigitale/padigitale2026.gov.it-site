@@ -95,6 +95,13 @@ const useStyles = createUseStyles({
       alignItems: 'center',
       position: 'relative',
       paddingRight: '53px',
+      border: '1px solid #B8C5D0',
+      color: '#5A768A',
+      fontSize: '0.889rem',
+      fontWeight: '700',
+      '&.active': {
+        border: '1px solid #5A768A',
+      },
     },
     '& .chip-icon': {
       transform: 'scale(0)',
@@ -117,11 +124,20 @@ const useStyles = createUseStyles({
       transition: 'transform .1s ease',
     },
   },
+  filter: {
+    fontSize: '1rem',
+    marginBottom: '15px',
+    display: 'block',
+    '& .filter-selected': {
+      fontWeight: '700',
+    },
+  },
 });
 
 export const QuestionSection = (props) => {
   const classes = useStyles();
   const { title, sectionId } = props.item;
+  const { sectionTitle } = props.item;
   let { accordions } = props.item;
   const chips = props.item.chips;
   const chipsIdArr = chips?.filter((chip) => {
@@ -178,13 +194,24 @@ export const QuestionSection = (props) => {
   return (
     <>
       <section id={sectionId} className={classes.section} aria-labelledby={sectionId + '-headings'}>
-        <h3 id={sectionId + '-headings'} className={`${classes.sectionTitle} mb-4`}>
-          {title}
-        </h3>
+        {sectionTitle ? (
+          <>
+            <h3 id={sectionId + '-headings'} className={`${classes.sectionTitle} mb-4`}>
+              {sectionTitle}
+            </h3>
+            <h4 id={sectionId + '-headings'} className={`${classes.sectionSubtitle} mb-4`}>
+              {title}
+            </h4>
+          </>
+        ) : (
+          <h3 id={sectionId + '-headings'} className={`${classes.sectionTitle} mb-4`}>
+            {title}
+          </h3>
+        )}
         {chips ? (
           <div className="tags-container">
             <span className={classes.filter}>
-              Totale filtri selezionati <span className="filter-selected">{filtersLength}</span>/
+              Totale filtri selezionati: <span className="filter-selected">{filtersLength}</span>/
               <span className="filter-available">{chipsIdArr.length}</span>
             </span>
             <ul

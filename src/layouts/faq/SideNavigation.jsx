@@ -1,3 +1,5 @@
+/* eslint-disable sonarjs/no-duplicate-string */
+/* eslint-disable max-lines-per-function */
 /* eslint-disable sonarjs/cognitive-complexity */
 /* eslint-disable react/jsx-key */
 /* eslint-disable react-hooks/exhaustive-deps */
@@ -103,6 +105,10 @@ const useStyles = createUseStyles({
     },
     '& .collapse-body': {
       padding: '0',
+      '& .collapse-header button[aria-expanded=true]:before': {
+        height: '1.5rem',
+        width: '1.5rem',
+      },
 
       '& .collapse-body': {
         padding: '1.111rem 1.111rem 2.222rem',
@@ -159,9 +165,35 @@ export const SideNavigation = (props) => {
 
   function disableLinks() {
     if (searchValue && searchValue.length >= 3) {
-      const activeItems = list.filter((el) => activeList.some((f) => f.sectionId === el.sectionId));
+      const subActiveArr = [];
+      const subDisabledArr = [];
+      const activeItems = list.filter((el) => {
+        if (el.sublist) {
+          subActiveArr.push(el.sublist.filter((subEl) => activeList.some((f) => f.sectionId === subEl.sectionId)));
+        } else {
+          return activeList.some((f) => f.sectionId === el.sectionId);
+        }
+      });
 
-      const disabledItems = list.filter((ad) => activeList.every((fd) => fd.sectionId !== ad.sectionId));
+      if (subActiveArr.length > 0) {
+        subActiveArr.forEach((subActive) => {
+          subActive.forEach((el) => activeItems.push(el));
+        });
+      }
+
+      const disabledItems = list.filter((ad) => {
+        if (ad.sublist) {
+          subDisabledArr.push(ad.sublist.filter((subEl) => activeList.every((fd) => fd.sectionId !== subEl.sectionId)));
+        } else {
+          return activeList.every((fd) => fd.sectionId !== ad.sectionId);
+        }
+      });
+
+      if (subDisabledArr.length > 0) {
+        subDisabledArr.forEach((subDisabled) => {
+          subDisabled.forEach((el) => disabledItems.push(el));
+        });
+      }
 
       if (!isMobile) {
         removeActive();
@@ -188,8 +220,12 @@ export const SideNavigation = (props) => {
     if (!list.length) {
       return;
     }
-    const activeItem = document.querySelector('[data-id="' + list[0].sectionId + '"]');
-    activeItem.classList.add('active');
+    if (list[0].sublist) {
+      console.log('listSublist', list.sublist);
+    } else {
+      const activeItem = document.querySelector('[data-id="' + list[0].sectionId + '"]');
+      activeItem.classList.add('active');
+    }
   }
 
   function handleClik(evt) {
