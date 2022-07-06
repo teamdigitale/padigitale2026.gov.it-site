@@ -196,9 +196,7 @@ export const QuestionSection = (props) => {
       <section id={sectionId} className={classes.section} aria-labelledby={sectionId + '-headings'}>
         {sectionTitle ? (
           <>
-            <h3 id={sectionId + '-headings'} className={`${classes.sectionTitle} mb-4`}>
-              {sectionTitle}
-            </h3>
+            <h3 className={`${classes.sectionTitle} mb-4`}>{sectionTitle}</h3>
             <h4 id={sectionId + '-headings'} className={`${classes.sectionSubtitle} mb-4`}>
               {title}
             </h4>
