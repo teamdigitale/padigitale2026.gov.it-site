@@ -183,7 +183,7 @@ export const QuestionSection = (props) => {
     return chips
       .map((chip) => {
         if (chip.title) {
-          return `<li><button class="chip ${findFilter(chipsId, chip.id) ? 'active' : ''}" id="${chip.id}">${
+          return `<li><button class="chip ${findFilter(chipsId, chip.id) ? 'active' : ''}" data-id="${chip.id}">${
             chip.title
           }<span class="chip-icon-container">${renderFilterActive(chip.id, chipsId)}</span></button></li>`;
         }

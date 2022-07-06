@@ -293,7 +293,7 @@ export const FaqPage = () => {
       activeQuestions.list = [];
       chipsContainerArr.forEach((activeQuestion, index) => {
         let activeChips = activeQuestion.querySelectorAll('.chip.active');
-        activeChips = Array.prototype.slice.call(activeChips).map((chip) => chip.id);
+        activeChips = Array.prototype.slice.call(activeChips).map((chip) => chip.getAttribute('data-id'));
         activeQuestions.list.push({
           id: index,
           sectionId: activeQuestion.getAttribute('data-measure'),
