@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/cognitive-complexity */
 /* eslint-disable react/jsx-key */
 /* eslint-disable react-hooks/exhaustive-deps */
 import React from 'react';
@@ -31,19 +32,16 @@ const useStyles = createUseStyles({
           },
           '& li': {
             '& + li': {
-              marginLeft: '0.555rem',
               '@media (min-width: 992px)': {
                 marginLeft: '0',
               },
             },
             '&:last-child': {
-              marginRight: '0.833rem',
               '@media (min-width: 992px)': {
                 marginRight: '0',
               },
             },
             '&:first-child': {
-              marginLeft: '0.833rem',
               '@media (min-width: 992px)': {
                 marginLeft: '0',
               },
@@ -82,13 +80,33 @@ const useStyles = createUseStyles({
     '@media (min-width: 992px)': {
       display: 'none',
     },
+    '@media (max-width: 991px)': {
+      background: '#F0F6FC',
+    },
+    '& .scroll-indicator': {
+      width: '100%',
+      background: '#F0F6FC',
+      height: '4px',
+      marginTop: '20px',
+      '@media (min-width: 992px)': {
+        display: 'none',
+      },
+    },
+    '& .scroll-active': {
+      background: '#06c',
+      height: '100%',
+    },
   },
   accordionBody: {
+    '@media (max-width: 991px)': {
+      background: '#F0F6FC',
+    },
     '& .collapse-body': {
       padding: '0',
-    },
-    '& .link-list li': {
-      marginLeft: '0',
+
+      '& .collapse-body': {
+        padding: '1.111rem 1.111rem 2.222rem',
+      },
     },
   },
 });
@@ -107,6 +125,19 @@ export const SideNavigation = (props) => {
       setIsMobile(window.innerWidth < 992);
     });
   }, []);
+
+  useEffect(() => {
+    const scrollHandler = () => {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      const indicator = document.querySelector('.scroll-active');
+      indicator.style.width = `${scrolled}%`;
+    };
+    if (isMobile) {
+      window.addEventListener('scroll', scrollHandler);
+    }
+  }, [isMobile]);
 
   useEffect(() => {
     disableLinks();
@@ -172,8 +203,10 @@ export const SideNavigation = (props) => {
         behavior: 'smooth',
       });
     }
-
     if (isMobile) {
+      const position = document.querySelector(linkTag.getAttribute('href')).getBoundingClientRect();
+      window.scrollTo({ left: position.left, top: position.top + window.scrollY - 420, behavior: 'smooth' });
+      setCollapseMenu(false);
       props.getFilter(linkTag.getAttribute('data-id'));
     }
   }
@@ -204,6 +237,9 @@ export const SideNavigation = (props) => {
             onToggle={() => setCollapseMenu(!collapseMenu)}
           >
             Indice della pagina
+            <div className="scroll-indicator">
+              <div className="scroll-active"></div>
+            </div>
           </AccordionHeader>
           <AccordionBody className={classes.accordionBody} active={collapseMenu}>
             <LinkList>

@@ -49,6 +49,16 @@ const useStyles = createUseStyles({
       outline: '2px solid #ff9900',
     },
   },
+  sidenav: {
+    '@media (max-width: 991px)': {
+      position: 'sticky',
+      top: '0',
+      zIndex: '2',
+      background: '#fff',
+      padding: '0',
+      marginBottom: '20px',
+    },
+  },
 });
 
 // eslint-disable-next-line sonarjs/cognitive-complexity
@@ -304,14 +314,31 @@ export const FaqPage = () => {
                   const activeTagLength = tagActiveArr.length;
                   filterNumber.innerHTML = activeTagLength;
                   const questions = category.accordions;
-                  questions.forEach((question, index, questions) => {
+                  const temp = [];
+                  questions.forEach((question) => {
                     const tagArr = question.tag;
-                    tagArr.forEach((tag) => {
-                      if (!tagActiveArr.includes(tag)) {
-                        questions[index] = '';
-                      }
-                    });
+                    if (tagArr) {
+                      tagArr.forEach((tag) => {
+                        if (tagActiveArr.includes('altri-enti')) {
+                          if (tagActiveArr.length === 1 || tagActiveArr.length > 2) {
+                            if (tagActiveArr.includes(tag)) {
+                              temp.push(question);
+                            }
+                          } else {
+                            const tagActiveFiltered = tagActiveArr.filter((tag) => tag !== 'altri-enti');
+                            if (tagActiveFiltered.includes(tag)) {
+                              temp.push(question);
+                            }
+                          }
+                        } else {
+                          if (tagActiveArr.includes(tag)) {
+                            temp.push(question);
+                          }
+                        }
+                      });
+                    }
                   });
+                  category.accordions = temp;
                 }
               });
             } else {
@@ -372,7 +399,7 @@ export const FaqPage = () => {
             </Col>
           </Row>
           <Row>
-            <Col lg={3}>
+            <Col lg={3} className={classes.sidenav}>
               <SideNavigation
                 getFilter={setFilterId}
                 activeList={questions}
