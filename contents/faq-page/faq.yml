@@ -37,8 +37,11 @@ sidebar:
     - sectionTitle: 1.4.1
       sectionId: measure-1-4-1
       sectionActive: false
-    - sectionTitle: 1.4.3
-      sectionId: measure-1-4-3
+    - sectionTitle: 1.4.3 pagoPA
+      sectionId: measure-1-4-3-pagopa
+      sectionActive: false
+    - sectionTitle: 1.4.3 appIO
+      sectionId: measure-1-4-3-appio
       sectionActive: false
     - sectionTitle: 1.4.4
       sectionId: measure-1-4-4
@@ -224,7 +227,7 @@ questions:
         content: Sì, l’obiettivo è di avere un ordine di grandezza il più realistico possibile della numerosità di dati trattati, pertanto anche eventuali arrotondamenti sono accettati (ad esempio, 1.224.000 dati anagrafici possono essere indicati come 1.200.000). Non è invece possibile indicare numeri decimali o minori di zero.
       - title: È possibile richiedere l’aggiornamento della classificazione dati e servizi?
         content: Sì. Una PA può inviare una PEC all’Agenzia Nazionale per la Cybersicurezza per aggiornare la classificazione dati e servizi precedentemente inviata. Accolta la richiesta dall’Agenzia, la classificazione verrà riportata in stato "In bozza". La PA riceverà una PEC e una notifica in piattaforma e sarà informata che la classificazione è disponibile per gli opportuni aggiornamenti. Nel caso in cui la PA abbia una candidatura 1.2 <strong>in stato "In bozza"</strong> verrà annullata in automatico. Invece, nel caso in cui la PA abbia una candidatura 1.2 <strong>inviata</strong>, non potrà eliminare i servizi selezionati nella candidatura 1.2 e visualizzerà un messaggio di errore. Qualora la PA fosse intenzionata a eliminare alcuni servizi dalla classificazione, dovrà ritirare la candidatura all’avviso 1.2 per avviare una nuova classificazione. In questo modo, si potrà ricandidare all’avviso 1.2 con la lista di servizi aggiornata.
-  - title: 1.2
+  - title: 1.2 Abilitazione e facilitazione migrazione al Cloud
     sectionTitle: Misure
     description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
     sectionId: measure-1-2
@@ -370,7 +373,7 @@ questions:
         content: L’opzione di "Aggiornamento di applicazioni sicure in Cloud" offre la possibilità di migrare le applicazioni utilizzando una tra le strategie repurchase/replace e replatform. Per repurchase/replace si intende l’acquisto di una soluzione nativa in cloud, in genere erogata in modalità Software as a Service, mentre per replatforming si intende la riorganizzazione dell’architettura applicativa sostituendo intere componenti del servizio in favore di soluzioni Cloud native in modo da usufruire dei benefici dell’infrastruttura Cloud.
         tag: 
           - scuole
-  - title: 1.4.1
+  - title: 1.4.1 Esperienza del Cittadino nei servizi pubblici
     description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
     sectionId: measure-1-4-1
     chips:
@@ -452,210 +455,179 @@ questions:
         content: L’importo del finanziamento, riconosciuto per il rifacimento del sito web istituzionale è pari a 7.301 euro Iva inclusa. L’importo del finanziamento sarà riconosciuto al Soggetto Attuatore solo a seguito del conseguimento del risultato atteso.
         tag: 
           - scuole
-  - title: 1.4.3
+  - title: 1.4.3 Adozione PagoPA
     description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
-    sectionId: measure-1-4-3
+    sectionId: measure-1-4-3-pagopa
     chips:
-      - chipsId: measure-1-4-3
+      - chipsId: measure-1-4-3-pagopa
       - title: Comuni
         id: comuni
-      - title: pagoPA
-        id: pagopa
-      - title: appIO
-        id: appio
       - title: Altri Enti
         id: altri-enti
     accordions:
       - title: A quanto ammonta l'importo del finanziamento previsto dall'Avviso "Adozione pagoPA" della Misura 1.4.3?
         content: "L'importo del finanziamento concedibile ai Comuni è individuato in un importo forfettario determinato secondo il seguente criterio:<br></br>a. per i Comuni fino a 5.000 ab.: pagoPA: €607 per servizio (min.3 max 109);<br>b. per i Comuni 5.001 - 20.000 ab. pagoPA: €857 per servizio (min.3 max 109);<br>c. per i Comuni 20.001 - 100.000 ab. pagoPA: €1821 per servizio (min.5 max 109);<br>d. per i Comuni 100.001 - 250.000 ab. pagoPA: €2747 per servizio (min.5 max 109);<br>e. per i Comuni > 250.000 ab. pagoPA: €7967 per servizio (min.5 max 109)."
         tag: 
-          - comuni  
-          - pagopa
+          - comuni
       - title: Quali enti della PA possono presentare domanda?
         content: I soggetti attuatori, ovvero coloro che possono accedere allo strumento predisposto dall'Avviso, sono i Comuni.
         tag: 
           - comuni
-          - pagopa
       - title: È possibile accedere al finanziamento in caso di realizzazione del progetto prima della pubblicazione dell'Avviso "Adozione pagoPA" della Misura 1.4.3?
         content: Si, è possibile accedere al finanziamento previsto dall'Avviso nel caso in cui l'attivazione dei servizi di incasso (pagoPA) sia stata realizzata dopo il 01 Aprile 2021 con risorse finanziarie proprie.
         tag: 
           - comuni
-          - pagopa
       - title: È possibile accedere al finanziamento in caso di realizzazione del progetto in data antecedente al 01 Aprile 2021?
         content: No, non è possibile accedere al finanziamento previsto dall'Avviso nel caso in cui il processo di l'attuazione dei servizi di incasso (pagoPA) sia stata realizzatao prima del 01 Aprile 2021, indipendemente dai fondi/risorse utilizzati. Può essere invece finanziata l'attivazione di nuovi servizi, non inclusi nel precedente finanziamento.
         tag: 
-          - pagopa
+          - comuni
       - title: Quali interventi possono essere finanziati dall'Avviso 1.4.3 per pagoPA?
         content: I servizi oggetto di migrazione possono essere tutti i servizi di incasso erogati da ciascun Ente facendo valere il principio della titolarità del credito, cioè, potranno essere migrati tutti i servizi di incasso gestiti direttamente dal singolo Ente e/o affidati a soggetti esterni (es. Riscossori; Unioni di Comuni; Comunità Montane) fermo restando che l’Ente mantenga la titolarità del credito vantato.
         tag: 
           - comuni
-          - pagopa
       - title: Entro quando è possibile inoltrare la domanda di accesso al finanziamento?
         content: La domanda può essere presentata a partire  dalla data di pubblicazione dell'Avviso fino ad esaurimento delle risorse disponibili, e comunque non oltre alle ore 23.59 del 2 settembre 2022.
         tag: 
           - comuni
-          - pagopa
       - title: Quando sarà emesso il Decreto di Finanziamento e quali informazioni saranno in esso contenute?
         content: Ogni 30 giorni, dopo la chiusura della finestra temporale, il Dipartimento per la trasformazione digitale provvede alla definizione del decreto di ammissione a finanziamento dei progetti presentati nella relativa finestra temporale e per i quali i Comuni hanno provveduto all’accettazione del finanziamento e alla comunicazione del codice CUP attraverso la Piattaforma. In allegato al decreto di finanziamento sarà riportato l’elenco dei soggetti finanziati in ordine cronologico con il relativo CUP e importo finanziato.
         tag: 
           - comuni
-          - pagopa
       - title: Quali sono i documenti necessari al fine di predisporre correttamente la richiesta di trasferimento delle risorse?
         content: 'Alla domanda di erogazione del finanziamento, il Comune dovrà allegare: Il certificato di regolare esecuzione del RUP; l’eventuale check list applicabile compilata secondo le indicazione delle linee guida fornite.'
         tag: 
           - comuni
-          - pagopa
       - title: Entro quanto tempo dovrà essere contrattualizzato il fornitore rispetto al Decreto di Finanziamento?
         content: Il fornitore dovà essere contrattualizzato al massimo entro 6 mesi (180 gg) dalla data di notifica del Decreto di Finanziamento.
         tag: 
           - comuni
-          - pagopa
       - title: Entro quando dovranno essere portate a termine le attività di migrazione e di attivazione dei servizi?
         content: Le attività di migrazione e di attivazione dei servizi dovranno essere portate a termine entro 8 mesi (240 gg), a partire dalla data di contrattualizzazione del fornitore.
         tag: 
           - comuni
-          - pagopa
       - title: Quando il processo di migrazione e attivazione dei servizi si intende concluso con esito positivo per per i servizi attivati sulla Piattaforma pagoPA?
         content: Il processo di riterrà concluso quando sarà stata effettuata una transazione con esito positivo con la corretta applicazione del codice tassonomico per ogni singolo servizio incluso nel progetto.
         tag: 
           - comuni
-          - pagopa
       - title: Cosa si intende per transazione con esito positivo per pagoPA?
         content: Per transazione con esito positivo si intende sia una transazione reale eseguita da un cittadino, nel caso in cui la stagionalità del singolo servizio di incasso lo consenta, oppure - in caso contrario - una transazione reale con importo di valore simbolico (es. 0,01€) ma con codice tassonomico e IUV reale, al fine di poter verificare l’effettiva e corretta integrazione del servizio di incasso in modalità end-to-end (cd. transazione di test)
         tag: 
           - comuni
-          - pagopa
       - title: Qual è il metodo di calcolo del voucher?
         content: L’importo del voucher è determinato dal prodotto dell'importo unitario dei servizi attivati (in funzione della classe di popolazione residente del Soggetto Attuatore) e il numero totale dei servizi attivati.
         tag: 
           - comuni
-          - pagopa
-      - title: "Come viene calcolato l'importo forfettario previsto dall'Avviso ''Adozione app IO'' della Misura 1.4.3?"
-        content: "L'importo del finanziamento concedibile ai Comuni è individuato in un importo forfettario determinato secondo il seguente criterio:<br></br>a. per i Comuni fino a 5.000 ab.: app IO: €243 per servizio (min.3 max 50);<br>b. per i Comuni 5.001 - 20.000 ab. app IO: €343 per servizio (min.3 max 50);<br>c. per i Comuni 20.001 - 100.000 ab. app IO: €728 per servizio (min.5 max 50);<br>d. per i Comuni 100.001 - 250.000 ab. app IO: €1.099 per servizio (min.5 max 50);<br>e. per i Comuni > 250.000 ab. app IO: €3.187 per servizio (min.5 max 50)."
-        tag: 
-          - comuni
-          - appio
-      - title: Quali enti della PA possono presentare domanda?
-        content: I Soggetti Attuatori, ovvero coloro che possono accedere allo strumento predisposto dall'Avviso, sono i Comuni.
-        tag: 
-          - comuni
-          - appio
-      - title: Qual è l'obiettivo dell'Avviso "Adozione app IO" della Misura 1.4.3?
-        content: L'obiettivo del presente Avviso riferito alla Misura 1.4.3 è la migrazione e l’attivazione dei servizi digitali (app IO) seguendo una logica di “pacchetti” che identificano il numero minimo di servizi da integrare a fronte di una singola adesione all’Avviso con il fine ultimo di raggiungere una integrazione cd. full per ciascun Comune, come specificato nell'Allegato 2.
-        tag: 
-          - comuni
-          - appio
-      - title: È possibile accedere al finanziamento in caso di realizzazione del progetto prima della pubblicazione dell'Avviso "Adozione app IO" riferito della Misura 1.4.3?
-        content: Si, è possibile accedere al finanziamento previsto dal presente Avviso nel caso in cui l'attuazione dei servizi digitali (app IO) sia stata realizzata a decorrere dal 01 Aprile 2021, con risorse finanziarie proprie.
-        tag: 
-          - comuni
-          - appio
-      - title: È possibile accedere al finanziamento in caso di realizzazione del progetto, con l'ausilio di Fondi pubblici, prima della pubblicazione dell'Avviso "Adozione app IO" della Misura 1.4.3?
-        content: No, non è possibile accedere al finanziamento previsto dall'Avviso riferito alla Misura 1.4.3 nel caso in cui l'attuazione degli stessi servizi digitali (app IO) sia stata realizzata con altri finanziamenti pubblici, nazionali, regionali o europei, secondo quanto previsto dall'art. 7 dell'Avviso. Può essere invece finanziata l'attivazione di nuovi servizi, non inclusi nel precedente finanziamento.
-        tag: 
-          - comuni
-          - appio
-      - title: Entro quando è possibile inoltrare la domanda di accesso al finanziamento?
-        content: La domanda di partecipazione può essere presentata a partire dalla data di pubblicazione dell'Avviso fino ad esaurimento delle risorse disponibili, e comunque non oltre alle ore 23.59 del 2 settembre 2022.
-        tag: 
-          - comuni
-          - appio
-      - title: Entro quanto tempo dovrà essere contrattualizzato il fornitore rispetto al Decreto di Finanziamento?
-        content: Il fornitore dovà essere contrattualizzato al massimo entro 6 mesi (180 gg) dalla data di notifica del Decreto di Finanziamento.
-        tag: 
-          - comuni
-          - appio
-      - title: Entro quando dovranno essere portate a termine le attività di migrazione e di attivazione dei servizi?
-        content: Le attività di migrazione e di attivazione dei servizi dovranno essere portate a termine entro 8 mesi (240 gg), a partire dalla data di contrattualizzazione del fornitore.
-        tag: 
-          - comuni
-          - appio
-      - title: Quando il processo di migrazione e attivazione dei servizi si intende concluso con esito positivo per i servizi attivati sull’app IO?
-        content: Il processo si riterrà concluso con esito positivo quando le richieste di pubblicazione saranno approvate dalla pagoPA S.p.A  e tutti i servizi saranno visibili in App.
-        tag: 
-          - comuni
-          - appio
       - title: Quali enti della PA possono presentare domanda?
         content: 'Sono invitate a presentare proposte a valere sul presente Avviso:<br>a. Le Regioni e le Province Autonome;<br>b. Le  Aziende sanitarie locali e le Aziende ospedaliere pubbliche;<br>c. Le Università e gli Istituti di Istruzione Universitaria pubblici, gli Enti e le Istituzioni di ricerca pubblici e le Istituzioni per l’Alta Formazione Artistica, Musicale e Coreutica - (AFAM) pubbliche.'
         tag: 
           - altri-enti
-          - pagopa
       - title: È possibile accedere al finanziamento in caso di realizzazione del progetto prima della pubblicazione dell'Avviso "Adozione pagoPA" della Misura 1.4.3?
         content: Sì, è possibile accedere al finanziamento previsto dall'Avviso nel caso in cui l'attivazione dei servizi di incasso (pagoPA) sia stata realizzata dopo il 01 Aprile 2021 con risorse finanziarie proprie.
         tag: 
           - altri-enti
-          - pagopa
       - title: Quali interventi possono essere finanziati dall'Avviso 1.4.3 per pagoPA?
         content: I servizi oggetto di migrazione possono essere tutti i servizi di incasso erogati da ciascun Ente facendo valere il principio della titolarità del credito, cioè, potranno essere migrati tutti i servizi di incasso gestiti direttamente dal singolo Ente e/o affidati a soggetti esterni (es. Riscossori; Unioni di Comuni; Comunità Montane) fermo restando che l’Ente mantenga la titolarità del credito vantato.
         tag: 
           - altri-enti
-          - pagopa
       - title: Entro quando è possibile inoltrare la domanda di accesso al finanziamento?
         content: La domanda può essere presentata a partire dalla data di pubblicazione dell'Avviso fino ad esaurimento delle risorse disponibili, e comunque non oltre alle ore 23.59 del 9 settembre 2022.
         tag: 
           - altri-enti
-          - pagopa
       - title: Quando sarà emesso il Decreto di Finanziamento e quali informazioni saranno in esso contenute?
         content: Dopo la chiusura della finestra temporale, il Dipartimento per la trasformazione digitale provvede alla definizione del decreto di ammissione a finanziamento dei progetti presentati nella relativa finestra temporale e per i quali i Soggetti Attuatori hanno provveduto all’accettazione del finanziamento con la comunicazione del codice CUP attraverso la Piattaforma. In allegato al decreto di finanziamento sarà riportato l’elenco dei soggetti finanziati in ordine cronologico con il relativo CUP e importo finanziato.
         tag: 
           - altri-enti
-          - pagopa
       - title: Entro quanto tempo dovrà essere contrattualizzato il fornitore rispetto al Decreto di Finanziamento?
         content: Il fornitore dovà essere contrattualizzato al massimo entro 6 mesi (180 gg) dalla data di notifica del Decreto di Finanziamento.
         tag: 
           - altri-enti
-          - pagopa
       - title: Entro quando dovranno essere portate a termine le attività di migrazione e di attivazione dei servizi?
         content: Le attività di migrazione e di attivazione dei servizi dovranno essere portate a termine entro 8 mesi (240 gg), a partire dalla data di contrattualizzazione del fornitore.
         tag: 
           - altri-enti
-          - pagopa
       - title: Cosa si intende per transazione con esito positivo per pagoPA?
         content: Per transazione con esito positivo si intende sia una transazione reale eseguita da un cittadino, nel caso in cui la stagionalità del singolo servizio di incasso lo consenta, oppure - in caso contrario - una transazione reale con importo di valore simbolico (es. 0,01€) ma con codice tassonomico e IUV reale, al fine di poter verificare l’effettiva e corretta integrazione del servizio di incasso in modalità end-to-end (cd. transazione di test)
         tag: 
           - altri-enti
-          - pagopa
+  - title: 1.4.3 Adozione AppIO
+    description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
+    sectionId: measure-1-4-3-appio
+    chips:
+      - chipsId: measure-1-4-3-appio
+      - title: Comuni
+        id: comuni
+      - title: Altri Enti
+        id: altri-enti
+    accordions:
+      - title: "Come viene calcolato l'importo forfettario previsto dall'Avviso ''Adozione app IO'' della Misura 1.4.3?"
+        content: "L'importo del finanziamento concedibile ai Comuni è individuato in un importo forfettario determinato secondo il seguente criterio:<br></br>a. per i Comuni fino a 5.000 ab.: app IO: €243 per servizio (min.3 max 50);<br>b. per i Comuni 5.001 - 20.000 ab. app IO: €343 per servizio (min.3 max 50);<br>c. per i Comuni 20.001 - 100.000 ab. app IO: €728 per servizio (min.5 max 50);<br>d. per i Comuni 100.001 - 250.000 ab. app IO: €1.099 per servizio (min.5 max 50);<br>e. per i Comuni > 250.000 ab. app IO: €3.187 per servizio (min.5 max 50)."
+        tag: 
+          - comuni
+      - title: Quali enti della PA possono presentare domanda?
+        content: I Soggetti Attuatori, ovvero coloro che possono accedere allo strumento predisposto dall'Avviso, sono i Comuni.
+        tag: 
+          - comuni
+      - title: Qual è l'obiettivo dell'Avviso "Adozione app IO" della Misura 1.4.3?
+        content: L'obiettivo del presente Avviso riferito alla Misura 1.4.3 è la migrazione e l’attivazione dei servizi digitali (app IO) seguendo una logica di “pacchetti” che identificano il numero minimo di servizi da integrare a fronte di una singola adesione all’Avviso con il fine ultimo di raggiungere una integrazione cd. full per ciascun Comune, come specificato nell'Allegato 2.
+        tag: 
+          - comuni
+      - title: È possibile accedere al finanziamento in caso di realizzazione del progetto prima della pubblicazione dell'Avviso "Adozione app IO" riferito della Misura 1.4.3?
+        content: Si, è possibile accedere al finanziamento previsto dal presente Avviso nel caso in cui l'attuazione dei servizi digitali (app IO) sia stata realizzata a decorrere dal 01 Aprile 2021, con risorse finanziarie proprie.
+        tag: 
+          - comuni
+      - title: È possibile accedere al finanziamento in caso di realizzazione del progetto, con l'ausilio di Fondi pubblici, prima della pubblicazione dell'Avviso "Adozione app IO" della Misura 1.4.3?
+        content: No, non è possibile accedere al finanziamento previsto dall'Avviso riferito alla Misura 1.4.3 nel caso in cui l'attuazione degli stessi servizi digitali (app IO) sia stata realizzata con altri finanziamenti pubblici, nazionali, regionali o europei, secondo quanto previsto dall'art. 7 dell'Avviso. Può essere invece finanziata l'attivazione di nuovi servizi, non inclusi nel precedente finanziamento.
+        tag: 
+          - comuni
+      - title: Entro quando è possibile inoltrare la domanda di accesso al finanziamento?
+        content: La domanda di partecipazione può essere presentata a partire dalla data di pubblicazione dell'Avviso fino ad esaurimento delle risorse disponibili, e comunque non oltre alle ore 23.59 del 2 settembre 2022.
+        tag: 
+          - comuni
+      - title: Entro quanto tempo dovrà essere contrattualizzato il fornitore rispetto al Decreto di Finanziamento?
+        content: Il fornitore dovà essere contrattualizzato al massimo entro 6 mesi (180 gg) dalla data di notifica del Decreto di Finanziamento.
+        tag: 
+          - comuni
+      - title: Entro quando dovranno essere portate a termine le attività di migrazione e di attivazione dei servizi?
+        content: Le attività di migrazione e di attivazione dei servizi dovranno essere portate a termine entro 8 mesi (240 gg), a partire dalla data di contrattualizzazione del fornitore.
+        tag: 
+          - comuni
+      - title: Quando il processo di migrazione e attivazione dei servizi si intende concluso con esito positivo per i servizi attivati sull’app IO?
+        content: Il processo si riterrà concluso con esito positivo quando le richieste di pubblicazione saranno approvate dalla pagoPA S.p.A  e tutti i servizi saranno visibili in App.
+        tag: 
+          - comuni
       - title: Quali enti della PA possono presentare domanda?
         content: "Sono invitate a presentare proposta a valere sull'Avviso:<br>a. Le Regioni e le Province Autonome;<br>b. Le  Aziende sanitarie locali e le Aziende ospedaliere pubbliche;<br>c. Le Università e gli Istituti di Istruzione Universitaria pubblici, gli Enti e le Istituzioni di ricerca pubblici e le Istituzioni per l’Alta Formazione Artistica, Musicale e Coreutica - AFAM pubbliche."
         tag: 
           - altri-enti
-          - appio
       - title: Qual è l'obiettivo dell'Avviso "Adozione appIO" della Misura 1.4.3?
         content: L'obiettivo del presente Avviso riferito alla Misura 1.4.3 è la migrazione e l’attivazione dei servizi digitali (appIO) seguendo una logica di “pacchetti” che identificano il numero minimo di servizi da integrare a fronte di una singola adesione all’Avviso con il fine ultimo di raggiungere una integrazione cd. full per ciascun Ente, come specificato nell'Allegato 2.
         tag: 
           - altri-enti
-          - appio
       - title: È possibile accedere al finanziamento in caso di realizzazione del progetto prima della pubblicazione dell'Avviso "Adozione appIO" riferito della Misura 1.4.3?
         content: Sì, è possibile accedere al finanziamento previsto dall'Avviso nel caso in cui l'implementazione dei servizi digitali (appIO) sia stata realizzata a decorrere dal 01 Aprile 2021, con risorse finanziarie proprie.
         tag: 
           - altri-enti
-          - appio
       - title: È possibile accedere al finanziamento in caso di realizzazione del progetto, con l'ausilio di Fondi pubblici, prima della pubblicazione dell'Avviso "Adozione appIO" della Misura 1.4.3?
         content: No, non è possibile accedere al finanziamento previsto dall'Avviso riferito alla Misura 1.4.3 nel caso in cui l'attivazione degli stessi servizi digitali (appIO) sia stata realizzata con altri finanziamenti pubblici, nazionali, regionali o europei, secondo quanto previsto dall'art. 7 dell'Avviso. Può essere invece finanziata l'attivazione di nuovi servizi, non inclusi nel precedente finanziamento.
         tag: 
           - altri-enti
-          - appio
       - title: Entro quando è possibile inoltrare la domanda di accesso al finanziamento?
         content: La domanda di partecipazione può essere presentata a partire dalla data di pubblicazione dell'Avviso fino ad esaurimento delle risorse disponibili, e comunque non oltre alle ore 23.59 del 9 settembre 2022.
         tag: 
           - altri-enti
-          - appio
       - title: Entro quanto tempo dovrà essere contrattualizzato il fornitore rispetto al Decreto di Finanziamento?
         content: Il fornitore dovà essere contrattualizzato al massimo entro 6 mesi (180 gg) dalla data di notifica del Decreto di Finanziamento.
         tag: 
           - altri-enti
-          - appio
       - title: Entro quando dovranno essere portate a termine le attività di migrazione e di attivazione dei servizi?
         content: Le attività di migrazione e di attivazione dei servizi dovranno essere portate a termine entro 8 mesi (240 gg), a partire dalla data di contrattualizzazione del fornitore.
         tag: 
           - altri-enti
-          - appio
       - title: Quando il processo di migrazione e attivazione dei servizi si intende concluso con esito positivo per i servizi attivati sull’appIO?
         content: Il processo si riterrà concluso con esito positivo quando le richieste di pubblicazione saranno approvate dalla pagoPA S.p.A  e tutti i servizi saranno visibili in App.
         tag: 
           - altri-enti
-          - appio
-  - title: 1.4.4
+  - title: 1.4.4 Adozione identità digitale
     description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
     sectionId: measure-1-4-4
     chips:
