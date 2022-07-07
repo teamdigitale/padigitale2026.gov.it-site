@@ -312,6 +312,8 @@ questions:
         content: "Al termine del processo di rilascio del sito istituzionale per le scuole, l’ente dovrà attestare mediante dichiarazione da caricare sulla piattaforma di adesione https://padigitale2026.gov.it/ il raggiungimento di alcune caratteristiche, che rappresentano ai fini dell'Avviso riferito alla Misura 1.4.1, la dichiarazione di conformità del sito per le scuole realizzato rispetto al modello fornito.<br>In particolare, le attività si intendono concluse con esito positivo al momento in cui:<br>- Il sito è disponibile online<br>- È stata compilata la checklist di conformità indicata nel paragrafo Verifica della conformità dell'Allegato 2 all'avviso"
       - title: A quanto ammonta l'importo del finanziamento previsto dall'Avviso riferito alla Misura 1.4.1 “Esperienza del cittadino nei servizi pubblici” SCUOLE (Aprile 2022)”?
         content: L’importo del finanziamento, riconosciuto per il rifacimento del sito web istituzionale è pari a 7.301 euro Iva inclusa. L’importo del finanziamento sarà riconosciuto al Soggetto Attuatore solo a seguito del conseguimento del risultato atteso.
+      - title: Quali enti della PA possono presentare domanda?
+        content: I Soggetti Attuatori, ovvero coloro che possono accedere allo strumento predisposto dall'Avviso, sono le Scuole sedi di Direttivo dislocate su tutto il territorio nazionale. Non sono ritenute ammissibili le proposte presentate da scuole non statali paritarie, non paritarie e straniere.
   - title: Misura 1.4.3 pagoPA
     description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
     sectionId: measure-1-4-3-pagopa
@@ -342,6 +344,8 @@ questions:
         content: Per transazione con esito positivo si intende sia una transazione reale eseguita da un cittadino, nel caso in cui la stagionalità del singolo servizio di incasso lo consenta, oppure - in caso contrario - una transazione reale con importo di valore simbolico (es. 0,01€) ma con codice tassonomico e IUV reale, al fine di poter verificare l’effettiva e corretta integrazione del servizio di incasso in modalità end-to-end (cd. transazione di test)
       - title: Qual è il metodo di calcolo del voucher?
         content: L’importo del voucher è determinato dal prodotto dell'importo unitario dei servizi attivati (in funzione della classe di popolazione residente del Soggetto Attuatore) e il numero totale dei servizi attivati.
+      - title: "Ho integrato dei servizi tramite una piattaforma regionale a titolo gratuito. Posso richiedere il finanziamento per l’integrazione nella stessa piattaforma dei servizi aggiuntivi?"
+        content: "Sì, è possibile accedere al finanziamento previsto dall'Avviso per l'implementazione dei servizi aggiuntivi purché siano finanziati con fondi propri dopo il 1 aprile 2021."
   - title: Misura 1.4.3 app IO
     description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
     sectionId: measure-1-4-3-appio
@@ -364,6 +368,8 @@ questions:
         content: Le attività di migrazione e di attivazione dei servizi dovranno essere portate a termine entro 8 mesi (240 gg), a partire dalla data di contrattualizzazione del fornitore.
       - title: Quando il processo di migrazione e attivazione dei servizi si intende concluso con esito positivo per i servizi attivati sull’app IO?
         content: Il processo si riterrà concluso con esito positivo quando le richieste di pubblicazione saranno approvate dalla pagoPA S.p.A  e tutti i servizi saranno visibili in App.
+      - title: "Ho integrato dei servizi tramite una piattaforma regionale a titolo gratuito. Posso richiedere il finanziamento per l’integrazione nella stessa piattaforma dei servizi aggiuntivi?"
+        content: "Sì, è possibile accedere al finanziamento previsto dall'Avviso per l'implementazione dei servizi aggiuntivi purché siano finanziati con fondi propri dopo il 1 aprile 2021."
   - title: Misura 1.4.4
     description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
     sectionId: measure-1-4-4
@@ -396,6 +402,8 @@ questions:
         content: 'Domande frequenti: <br><a target="_blank" href="https://www.spid.gov.it/domande-frequenti/">https://www.spid.gov.it/domande-frequenti/</a><br><a target="_blank" href="https://helpdesk.spid.gov.it/knowledgebase.php?category=2">https://helpdesk.spid.gov.it/knowledgebase.php?category=2</a><br></br>Risorse per sviluppatori:<br><a target="_blank" href="https://developers.italia.it/it/spid/#resourcecontent-1">https://developers.italia.it/it/spid/#resourcecontent-1</a>'
       - title: Link utili per tematiche tecniche su CIE
         content: 'Domande frequenti: <br><a target="_blank" href="https://federazione.servizicie.interno.gov.it/faq">https://federazione.servizicie.interno.gov.it/faq</a><br></br>Risorse per sviluppatori:<br><a target="_blank" href="https://developers.italia.it/it/cie">https://developers.italia.it/it/cie</a>'
+      - title:  È possibile richiedere il finanziamento se ho già integrato SPID e/o CIE a titolo gratuito tramite una piattaforma regionale? 
+        content: No, si considera ammissibile solo la prima integrazione fatta dagli enti purché finanziata con fondi propri dopo il 1 febbraio 2020.
   - title: Classificazione dati e servizi
     description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
     sectionId: classification-data-services
