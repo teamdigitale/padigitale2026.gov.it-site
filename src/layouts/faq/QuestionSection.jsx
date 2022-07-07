@@ -111,6 +111,8 @@ const useStyles = createUseStyles({
       },
       '&.active': {
         border: '1px solid #33485C',
+        background: '#06c',
+        color: '#fff',
       },
     },
     '& .chip-icon': {
@@ -120,7 +122,7 @@ const useStyles = createUseStyles({
       position: 'absolute',
       right: '7px',
       top: '3px',
-      background: '#0F69C9',
+      background: '#fff',
       height: '23px',
       width: '23px',
       borderRadius: '50%',
@@ -160,14 +162,14 @@ export const QuestionSection = (props) => {
 
   const [indexIsOpen, setIndexIsOpen] = useState(-1);
   const [{ faqId }] = useContext(GlobalStateContext);
-  const [filtersLength] = useState(chipsIdArr?.length);
 
-  const findFilter = (filterArr, id) =>
+  const findFilter = (filterArr, id) => {
     filterArr.find((filter) => {
       if (filter === id) {
-        return true;
+        return false;
       }
     });
+  };
 
   useEffect(() => {
     if (faqId) {
@@ -179,15 +181,6 @@ export const QuestionSection = (props) => {
     }
   }, [faqId, accordions]);
 
-  const renderFilterActive = (id, filters) => {
-    const result = findFilter(filters, id);
-    if (result) {
-      return '<div class="chip-icon active"><svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 4.5L6 9.5L14.5 1" stroke="white"/></svg></div>';
-    } else {
-      return '<div class="chip-icon"></div>';
-    }
-  };
-
   const setChips = (chips) => {
     const chipsId = chips.map((chip) => chip.id);
     return chips
@@ -195,7 +188,7 @@ export const QuestionSection = (props) => {
         if (chip.title) {
           return `<li><button class="chip ${findFilter(chipsId, chip.id) ? 'active' : ''}" data-id="${chip.id}">${
             chip.title
-          }<span class="chip-icon-container">${renderFilterActive(chip.id, chipsId)}</span></button></li>`;
+          }<span class="chip-icon-container"><div class="chip-icon"><svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 4.5L6 9.5L14.5 1" stroke="#06c"/></svg></div></span></button></li>`;
         }
       })
       .join('');
@@ -219,7 +212,7 @@ export const QuestionSection = (props) => {
         {chips ? (
           <div className="tags-container">
             <span className={classes.filter}>
-              Totale filtri selezionati: <span className="filter-selected">{filtersLength}</span>/
+              Totale filtri selezionati: <span className="filter-selected">0</span>/
               <span className="filter-available">{chipsIdArr.length}</span>
             </span>
             <ul

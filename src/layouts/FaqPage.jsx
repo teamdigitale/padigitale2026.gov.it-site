@@ -318,21 +318,8 @@ export const FaqPage = () => {
                     const tagArr = question.tag;
                     if (tagArr) {
                       tagArr.forEach((tag) => {
-                        if (tagActiveArr.includes('altri-enti')) {
-                          if (tagActiveArr.length === 1 || tagActiveArr.length > 2) {
-                            if (tagActiveArr.includes(tag)) {
-                              temp.push(question);
-                            }
-                          } else {
-                            const tagActiveFiltered = tagActiveArr.filter((tag) => tag !== 'altri-enti');
-                            if (tagActiveFiltered.includes(tag)) {
-                              temp.push(question);
-                            }
-                          }
-                        } else {
-                          if (tagActiveArr.includes(tag)) {
-                            temp.push(question);
-                          }
+                        if (tagActiveArr.includes(tag)) {
+                          temp.push(question);
                         }
                       });
                     }
@@ -341,7 +328,6 @@ export const FaqPage = () => {
                 }
               });
             } else {
-              category.accordions = [];
               filterNumber.innerHTML = 0;
             }
           }
