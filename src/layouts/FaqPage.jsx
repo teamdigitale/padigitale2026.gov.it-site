@@ -13,11 +13,11 @@ import faq from '../../contents/faq-page/faq.yml';
 import { SEO } from '../components/SEO';
 import seo from '../../contents/seo.yml';
 import content from '../../contents/faq-page/faq.yml';
+import { Totop } from '../components/Totop';
 import { SideNavigation } from './faq/SideNavigation';
 import { QuestionSection } from './faq/QuestionSection';
 import { SupportSection } from './faq/SupportSection';
 import { HeroSupport } from './support/Hero';
-import { Totop } from '../components/Totop';
 
 const { title: seoTitle, description: seoDescription } = seo.faqPage;
 
