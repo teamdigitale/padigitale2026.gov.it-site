@@ -18,6 +18,7 @@ export const ComeParteciparePage = () => (
       image="come-fare-hero.svg"
       imageMob="come-fare/howToDoMobile.svg"
       keypoints={content.keypoints}
+      listMenu={content.listMenu}
     />
     <KeypointSection item={content.sectionFirst} />
     <KeypointSection item={content.sectionFourth} />

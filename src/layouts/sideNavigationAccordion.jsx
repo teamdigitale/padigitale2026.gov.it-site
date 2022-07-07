@@ -112,7 +112,7 @@ export const SideNavigationAccordion = (props) => {
   const [isMobile, setIsMobile] = useState();
   const [collapseOpen, setCollapseOpen] = useState(true);
   const itemSel = '.sidebar-wrapper .link-list .list-item';
-  const { activeList, searchValue, list } = props;
+  const { activeList, searchValue, list, customClass } = props;
   useEffect(() => {
     setIsMobile(window.innerWidth < 992);
     window.addEventListener('resize', () => {
@@ -232,7 +232,7 @@ export const SideNavigationAccordion = (props) => {
   }
 
   return (
-    <Sidebar className={`${classes.wrapper} p-0`}>
+    <Sidebar className={`${classes.wrapper} p-0 ${customClass ? customClass : ''}`}>
       <nav aria-labelledby="table-of-contents">
         <Accordion>
           <AccordionHeader active={collapseOpen} onToggle={() => setCollapseOpen(!collapseOpen)}>
@@ -285,5 +285,6 @@ export const SideNavigationAccordion = (props) => {
 SideNavigationAccordion.propTypes = {
   activeList: PropTypes.array,
   searchValue: PropTypes.string,
+  customClass: PropTypes.string,
   list: PropTypes.array,
 };
