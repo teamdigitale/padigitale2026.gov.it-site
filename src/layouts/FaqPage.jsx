@@ -17,6 +17,7 @@ import { SideNavigation } from './faq/SideNavigation';
 import { QuestionSection } from './faq/QuestionSection';
 import { SupportSection } from './faq/SupportSection';
 import { HeroSupport } from './support/Hero';
+import { Totop } from '../components/Totop';
 
 const { title: seoTitle, description: seoDescription } = seo.faqPage;
 
@@ -418,6 +419,7 @@ export const FaqPage = () => {
               <span className="sr-only" id="numberfaq" aria-live="assertive">
                 Numero faq filtrate {questNum}
               </span>
+              <Totop />
               {questions.map((question) => (
                 <QuestionSection
                   key={question.title}
