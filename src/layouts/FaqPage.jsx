@@ -1,10 +1,8 @@
 /* eslint-disable sonarjs/prefer-object-literal */
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable sonarjs/no-unused-collection */
 /* eslint-disable sonarjs/no-identical-functions */
 /* eslint-disable max-lines-per-function */
-/* eslint-disable react/no-unescaped-entities */
-/* eslint-disable react-hooks/exhaustive-deps */
-/* eslint-disable no-undef */
 import React, { useState, useEffect } from 'react';
 import { Container, Input, Row, Col } from 'design-react-kit';
 import { createUseStyles } from 'react-jss';
