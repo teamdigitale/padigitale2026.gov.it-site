@@ -222,6 +222,7 @@ const useStyles = createUseStyles({
     display: 'flex',
     flexWrap: 'wrap',
     flexDirection: 'column',
+    marginBottom: '2.444rem',
     '@media (min-width: 992px)': {
       maxHeight: '150px',
     },
