@@ -163,14 +163,6 @@ export const QuestionSection = (props) => {
   const [indexIsOpen, setIndexIsOpen] = useState(-1);
   const [{ faqId }] = useContext(GlobalStateContext);
 
-  const findFilter = (filterArr, id) => {
-    filterArr.find((filter) => {
-      if (filter === id) {
-        return false;
-      }
-    });
-  };
-
   useEffect(() => {
     if (faqId) {
       document.querySelector('#' + faqId).scrollIntoView({
@@ -181,18 +173,14 @@ export const QuestionSection = (props) => {
     }
   }, [faqId, accordions]);
 
-  const setChips = (chips) => {
-    const chipsId = chips.map((chip) => chip.id);
-    return chips
+  const setChips = (chips) =>
+    chips
       .map((chip) => {
         if (chip.title) {
-          return `<li><button class="chip ${findFilter(chipsId, chip.id) ? 'active' : ''}" data-id="${chip.id}">${
-            chip.title
-          }<span class="chip-icon-container"><div class="chip-icon"><svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 4.5L6 9.5L14.5 1" stroke="#06c"/></svg></div></span></button></li>`;
+          return `<li><button class="chip" data-id="${chip.id}">${chip.title}<span class="chip-icon-container"><div class="chip-icon"><svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 4.5L6 9.5L14.5 1" stroke="#06c"/></svg></div></span></button></li>`;
         }
       })
       .join('');
-  };
 
   return (
     <>

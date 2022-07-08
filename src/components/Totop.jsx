@@ -15,14 +15,15 @@ const useStyle = createUseStyles({
     zIndex: '99',
     composes: 'totop',
     cursor: 'pointer',
-    top: '35px',
+    top: 'calc(100% - 170px)',
     left: 'calc(100% - 80px)',
     marginRight: '-75px',
+    marginTop: '20px',
     '@media (max-width: 1099px)': {
       marginRight: '0',
     },
     '@media (max-width: 991px)': {
-      top: '85px',
+      top: 'calc(100% - 170px)',
       marginTop: '40px',
     },
   },

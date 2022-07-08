@@ -77,6 +77,9 @@ const useStyles = createUseStyles({
         },
       },
     },
+    '& .collapse-header [data-toggle=collapse][aria-expanded=false].disabled': {
+      color: '#DAE3EC',
+    },
   },
   accordionHeader: {
     '@media (min-width: 992px)': {
@@ -174,10 +177,17 @@ export const SideNavigation = (props) => {
   function disableLinks() {
     if (searchValue && searchValue.length >= 3) {
       const subActiveArr = [];
+      let topActiveArr = [];
       const subDisabledArr = [];
+      const topDisabledArr = [];
+
       const activeItems = list.filter((el) => {
         if (el.sublist) {
-          subActiveArr.push(el.sublist.filter((subEl) => activeList.some((f) => f.sectionId === subEl.sectionId)));
+          const sublistFiltered = el.sublist.filter((subEl) => activeList.some((f) => f.sectionId === subEl.sectionId));
+          subActiveArr.push(sublistFiltered);
+          if (el.sublist.length > 0 && sublistFiltered.length > 0) {
+            topActiveArr.push(el);
+          }
         } else {
           return activeList.some((f) => f.sectionId === el.sectionId);
         }
@@ -191,7 +201,13 @@ export const SideNavigation = (props) => {
 
       const disabledItems = list.filter((ad) => {
         if (ad.sublist) {
-          subDisabledArr.push(ad.sublist.filter((subEl) => activeList.every((fd) => fd.sectionId !== subEl.sectionId)));
+          const sublistFiltered = ad.sublist.filter((subEl) =>
+            activeList.every((fd) => fd.sectionId !== subEl.sectionId)
+          );
+          subDisabledArr.push(sublistFiltered);
+          if (ad.sublist.length === sublistFiltered.length) {
+            topDisabledArr.push(ad);
+          }
         } else {
           return activeList.every((fd) => fd.sectionId !== ad.sectionId);
         }
@@ -200,6 +216,19 @@ export const SideNavigation = (props) => {
       if (subDisabledArr.length > 0) {
         subDisabledArr.forEach((subDisabled) => {
           subDisabled.forEach((el) => disabledItems.push(el));
+        });
+      }
+
+      if (topDisabledArr.length > 0) {
+        topDisabledArr.forEach((topDisabled) => {
+          disabledItems.push(topDisabled);
+        });
+      }
+
+      topActiveArr = [...new Set(topActiveArr)];
+      if (topActiveArr.length > 0) {
+        topActiveArr.forEach((topActive) => {
+          activeItems.push(topActive);
         });
       }
 
@@ -228,12 +257,12 @@ export const SideNavigation = (props) => {
     if (!list.length) {
       return;
     }
-    if (list[0].sublist) {
-      console.log('listSublist', list.sublist);
-    } else {
-      const activeItem = document.querySelector('[data-id="' + list[0].sectionId + '"]');
-      activeItem.classList.add('active');
-    }
+    list.forEach((item) => {
+      if (item.sublist) {
+        const activeItem = document.querySelector('[data-id="' + item.sectionId + '"]');
+        activeItem.classList.remove('disabled');
+      }
+    });
   }
 
   function handleClik(evt) {
@@ -307,7 +336,7 @@ export const SideNavigation = (props) => {
                         onToggle={() => setIndexIsOpen((state) => (state === i ? -1 : i))}
                         active={i === indexIsOpen}
                         className={classes.accordionTitle}
-                        id={anchor.sectionId}
+                        data-id={anchor.sectionId}
                       >
                         {anchor.sectionTitle}
                       </AccordionHeader>
