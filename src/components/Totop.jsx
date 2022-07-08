@@ -15,7 +15,7 @@ const useStyle = createUseStyles({
     zIndex: '99',
     composes: 'totop',
     cursor: 'pointer',
-    top: 'calc(100% - 170px)',
+    top: 'calc(100% - 100px)',
     left: 'calc(100% - 80px)',
     marginRight: '-75px',
     marginTop: '20px',
@@ -23,7 +23,6 @@ const useStyle = createUseStyles({
       marginRight: '0',
     },
     '@media (max-width: 991px)': {
-      top: 'calc(100% - 170px)',
       marginTop: '40px',
     },
   },

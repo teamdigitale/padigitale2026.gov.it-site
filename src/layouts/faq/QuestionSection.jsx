@@ -24,6 +24,9 @@ const useStyles = createUseStyles({
     lineHeight: '1.4',
     marginBottom: '0',
   },
+  sectionTitleSmall: {
+    fontSize: '1.222rem',
+  },
   accordionWrapper: {
     '& > .collapse-header [data-toggle=collapse]': {
       fontWeight: 'normal',
@@ -96,35 +99,35 @@ const useStyles = createUseStyles({
     },
     '& .chip': {
       height: '30px',
-      padding: '3px 7px 3px 20px',
+      padding: '3px 20px',
       borderRadius: '30px',
       display: 'inline-flex',
       alignItems: 'center',
       position: 'relative',
-      paddingRight: '53px',
       border: '1px solid #dfe4f2',
       color: '#33485C',
       fontSize: '0.889rem',
       fontWeight: '700',
+      transition: '.2s ease',
       '&:hover': {
         color: '#fff',
+        background: '#06c',
       },
       '&.active': {
-        border: '1px solid #33485C',
+        border: '1px solid #06c',
+        padding: '3px 20px',
         background: '#06c',
         color: '#fff',
+        transition: '.2s ease',
       },
     },
     '& .chip-icon': {
       transform: 'scale(0)',
       transformOrigin: 'center',
-      transition: 'transform .1s ease',
-      position: 'absolute',
-      right: '7px',
-      top: '3px',
+      transition: 'transform .4s ease',
       background: '#fff',
-      height: '23px',
-      width: '23px',
+      width: '0',
+      height: '0',
       borderRadius: '50%',
       display: 'inline-flex',
       alignItems: 'center',
@@ -133,7 +136,11 @@ const useStyles = createUseStyles({
     '& .chip-icon.active': {
       transform: 'scale(1)',
       transformOrigin: 'center',
-      transition: 'transform .1s ease',
+      marginLeft: '20px',
+      marginRight: '-10px',
+      transition: 'transform .4s ease',
+      height: '23px',
+      width: '23px',
     },
   },
   filter: {
@@ -149,7 +156,7 @@ const useStyles = createUseStyles({
 export const QuestionSection = (props) => {
   const classes = useStyles();
   const { title, sectionId } = props.item;
-  const { sectionTitle } = props.item;
+  const { sectionTitle, smallTitle } = props.item;
   let { accordions } = props.item;
   const chips = props.item.chips;
   const chipsIdArr = chips?.filter((chip) => {
@@ -188,10 +195,14 @@ export const QuestionSection = (props) => {
         {sectionTitle ? (
           <>
             <h3 className={`${classes.sectionTitle} mb-4`}>{sectionTitle}</h3>
-            <h4 id={sectionId + '-headings'} className={`${classes.sectionSubtitle} mb-4`}>
+            <h4 id={sectionId + '-headings'} className={`${classes.sectionTitleSmall} mb-4`}>
               {title}
             </h4>
           </>
+        ) : smallTitle ? (
+          <h4 id={sectionId + '-headings'} className={`${classes.sectionTitleSmall} mb-4`}>
+            {title}
+          </h4>
         ) : (
           <h3 id={sectionId + '-headings'} className={`${classes.sectionTitle} mb-4`}>
             {title}

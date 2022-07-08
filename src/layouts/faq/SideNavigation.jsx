@@ -54,6 +54,7 @@ const useStyles = createUseStyles({
                 color: '#06c',
                 textDecoration: 'none',
                 fontWeight: '600',
+                lineHeight: '1.3em',
               },
               '&.disabled': {
                 pointerEvents: 'none',
@@ -90,10 +91,12 @@ const useStyles = createUseStyles({
       '&[data-toggle=collapse][aria-expanded=false]': {
         color: '#33485C',
         padding: '14px 6px',
+        lineHeight: '1.3em',
       },
       '&[data-toggle=collapse][aria-expanded=true]': {
         color: '#33485C',
         padding: '14px 6px',
+        lineHeight: '1.3em',
       },
     },
     '& .scroll-indicator': {

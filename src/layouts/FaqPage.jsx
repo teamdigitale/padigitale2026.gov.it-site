@@ -26,7 +26,7 @@ const useStyles = createUseStyles({
     margin: '0.833rem 0',
   },
   inputContainer: {
-    composes: 'mt-2',
+    composes: 'mt-4',
     position: 'relative',
     '& .reset-btn': {
       background: 'transparent',
