@@ -69,9 +69,9 @@ const useStyles = createUseStyles({
       },
     },
     '& .scroll-indicator': {
-      height: '2px',
+      height: '4px',
       width: '100%',
-      background: '#A9B9C3',
+      background: '#F0F6FC',
       position: 'absolute',
       left: '0',
       bottom: '0',

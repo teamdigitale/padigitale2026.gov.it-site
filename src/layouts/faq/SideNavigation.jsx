@@ -89,14 +89,16 @@ const useStyles = createUseStyles({
     '@media (max-width: 991px)': {
       background: '#F0F6FC',
       '&[data-toggle=collapse][aria-expanded=false]': {
-        color: '#33485C',
+        color: '#5A768A',
         padding: '14px 6px',
         lineHeight: '1.3em',
+        fontSize: '0.778rem',
       },
       '&[data-toggle=collapse][aria-expanded=true]': {
-        color: '#33485C',
+        color: '#5A768A',
         padding: '14px 6px',
         lineHeight: '1.3em',
+        fontSize: '0.778rem',
       },
     },
     '& .scroll-indicator': {
