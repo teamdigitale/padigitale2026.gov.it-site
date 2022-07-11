@@ -293,22 +293,24 @@ beneficiaries:
   - number: 1.4.6
     id: maas
     title: MaaS
-    money: '40 <span>milioni di euro<span>'
+    money: '57 <span>milioni di euro<span>'
     tags:
       - value: citta-metropolitane
         label: "Città metropolitane"
+      - value: regioni
+        label: Regioni
     description: |
-      Promuovere l'adozione di Mobility as a Service (MaaS) nei comuni per digitalizzare il trasporto locale e fornire ai cittadini un'esperienza di mobilità integrata: dalla pianificazione del viaggio ai pagamenti.
+      Promuovere l’adozione di Mobility as a Service (Maas), un concetto globale di mobilità che prevede l'integrazione di molteplici servizi di trasporto pubblico e privato accessibili grazie ad un unico canale digitale.
       <p><strong></strong></p>
       <p><strong>Vantaggi per la PA</strong><strong></strong></p>
-      <p><span style="font-weight: 400;">Ogni Pubblica Amministrazione avr&agrave; la possibilit&agrave; di allocare ed ottimizzare in modo efficiente le risorse destinate alla mobilit&agrave; potenziando interventi di pianificazione territoriale secondo i reali bisogni dei cittadini.</span></p>
-      <p><span style="font-weight: 400;">L'utilizzo di soluzioni di Mobility as a Service (MaaS) miglioreranno i sistemi di trasporto, ridurranno il traffico urbano, gli incidenti stradali e, grazie ad un minore utilizzo dell&rsquo;auto privata, vi sar&agrave; un&rsquo;importante diminuzione dei consumi energetici, delle emissioni e dell&rsquo;inquinamento.&nbsp;</span></p>
-      <p><span style="font-weight: 400;">La PA potr&agrave; quindi raggiungere obiettivi di sostenibilit&agrave; economica, ambientale e sociale per l&rsquo;intera collettivit&agrave;.</span></p>
-    stalls: '10 enti'
+      <p><span style="font-weight: 400;">La progressiva diffusione di MaaS consente di trasformare le abitudini di mobilità e la fruizione dei servizi di trasporto grazie all’uso delle piattaforme digitali.
+      <p><span style="font-weight: 400;">Le politiche pubbliche potranno permettere di raggiungere significativi risultati in termini di omogeneità del servizio offerto ai cittadini, di sviluppo economico per le imprese del settore e di benefici per la collettività e per l’ambiente. 
+      <p><span style="font-weight: 400;">Questo nuovo paradigma per la mobilità che è stato declinato dal Governo italiano attraverso il progetto “Mobility as a Service for Italy” rappresenta la volontà di crescita e miglioramento di un settore tradizionale, come quello dei trasporti, per offrire agli utenti un'esperienza sempre più agile, accessibile e moderna.
+    stalls: '13 enti'
     solutionType: '/iniziativa/presentazione-progetti'
     accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
-    updates: <a href="https://innovazione.gov.it/notizie/avvisi-pubblici/mobility-as-a-service-for-italy/" target="_blank" aria-label="Leggi di più sull'avviso pubblico del 22 Novembre 2021 (Collegamento esterno - Apre su nuova scheda)">L’avviso pubblico del 22 novembre 2021</a> ha portato alla selezione di Milano, Napoli e Roma come città capofila per il progetto Mobility as a Service for Italy. Il 2 maggio 2022 è stato pubblicato <a href="https://innovazione.gov.it/notizie/avvisi-pubblici/mobility-as-a-service-for-italy-fondo-complementare/" target="_blank" aria-label="Leggi di più sul nuovo bando per ampliare l'iniziativa (Collegamento esterno - Apre su nuova scheda)">un nuovo avviso</a> per estendere i servizi MaaS ad altri tre comuni capoluogo di città metropolitane. 
+    updates: <a href="https://innovazione.gov.it/notizie/avvisi-pubblici/mobility-as-a-service-for-italy/" target="_blank" aria-label="Leggi di più sull'avviso pubblico del 22 Novembre 2021 (Collegamento esterno - Apre su nuova scheda)">L’avviso pubblico del 22 novembre 2021</a> ha portato alla selezione di Milano, Napoli e Roma come città capofila per il progetto Mobility as a Service for Italy. Grazie ad ulteriori risorse stanziate dal Fondo complementare (16,9 milioni che si aggiungono ai 40 previsti dal PNRR), il 2 maggio 2022 è stato pubblicato <a href="https://innovazione.gov.it/notizie/avvisi-pubblici/mobility-as-a-service-for-italy-fondo-complementare/" target="_blank" aria-label="Leggi di più sul nuovo bando per ampliare l'iniziativa (Collegamento esterno - Apre su nuova scheda)">un nuovo avviso</a> per estendere i servizi MaaS ad altri tre comuni capoluogo di città metropolitane. Per tutti gli aggiornamenti visita la <a href="https://innovazione.gov.it/progetti/mobility-as-a-service-for-italy/" target="_blank" aria-label="pagina progetto su innovazione.gov.it (Collegamento esterno - Apre su nuova scheda)">pagina progetto su innovazione.gov.it</a>. 
   - number: 1.5
     id: cyber
     title: Cybersecurity
