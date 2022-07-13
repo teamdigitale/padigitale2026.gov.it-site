@@ -216,7 +216,7 @@ export const QuestionSection = (props) => {
             </span>
             <ul
               data-measure={sectionId}
-              className={classes.chipsList}
+              className={`chips-list ${classes.chipsList}`}
               dangerouslySetInnerHTML={{ __html: setChips(chips) }}
             ></ul>
           </div>

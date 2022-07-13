@@ -266,6 +266,63 @@ export const FaqPage = () => {
   };
 
   useEffect(() => {
+    const toggleChip = (isActive, currentTarget) => {
+      if (isActive) {
+        currentTarget.classList.remove('active');
+        const icon = currentTarget.querySelector('.chip-icon');
+        icon.classList.remove('active');
+      } else {
+        currentTarget.classList.add('active');
+        const icon = currentTarget.querySelector('.chip-icon');
+        icon.classList.add('active');
+      }
+    };
+
+    const chipActiveValue = '.chip.active';
+
+    const result = (questionsModel, activeQuestions) => {
+      let filtered = questionsModel;
+      filtered.forEach((category) => {
+        if (category.chips) {
+          const activeSectionIdArr = activeQuestions.map((question) => question.sectionId);
+          const currentSection = document.querySelector(`#${category.sectionId}`);
+          const filterNumber = currentSection.querySelector('.filter-selected');
+          if (activeSectionIdArr.includes(category.sectionId)) {
+            activeQuestions.forEach((activeQuestion) => {
+              if (activeQuestion.sectionId === category.sectionId) {
+                const tagActiveArr = activeQuestion.chips;
+                const activeTagLength = tagActiveArr.length;
+                filterNumber.innerHTML = activeTagLength;
+                const questions = category.accordions;
+                const temp = [];
+                questions.forEach((question) => {
+                  const tagArr = question.tag;
+                  if (tagArr) {
+                    tagArr.forEach((tag) => {
+                      if (tagActiveArr.includes(tag)) {
+                        temp.push(question);
+                      }
+                    });
+                  }
+                });
+                category.accordions = temp;
+              }
+            });
+          } else {
+            filterNumber.innerHTML = 0;
+          }
+        }
+      });
+      filtered = filtered.filter((category) =>
+        category.accordions.filter((question) => {
+          if (question !== '') {
+            return question;
+          }
+        })
+      );
+      setQuestions(filtered);
+    };
+
     const chipHandler = (event) => {
       const questionsModel = JSON.parse(JSON.stringify(faq.questions));
       let currentTarget;
@@ -275,24 +332,25 @@ export const FaqPage = () => {
         currentTarget = event.target.closest('.chip');
       }
       if (currentTarget.classList.contains('active')) {
-        currentTarget.classList.remove('active');
-        const icon = currentTarget.querySelector('.chip-icon');
-        icon.classList.remove('active');
+        toggleChip(true, currentTarget);
       } else {
-        currentTarget.classList.add('active');
-        const icon = currentTarget.querySelector('.chip-icon');
-        icon.classList.add('active');
+        toggleChip(false, currentTarget);
       }
-      const currentActiveArr = document.querySelectorAll('.chip.active');
-      let chipsContainerArr = [];
+
+      const currentActiveArr = document.querySelectorAll(chipActiveValue);
+      let chipsContainerArr = document.querySelectorAll('.chips-list');
+      chipsContainerArr = Array.prototype.slice.call(chipsContainerArr).filter((chipsContainer) => {
+        if (chipsContainer.querySelector(chipActiveValue)) {
+          return chipsContainer;
+        }
+      });
       currentActiveArr.forEach((activeChip) => {
         chipsContainerArr.push(activeChip.closest('ul'));
       });
-      chipsContainerArr = [...new Set(chipsContainerArr)];
       const activeQuestions = {};
       activeQuestions.list = [];
       chipsContainerArr.forEach((activeQuestion, index) => {
-        let activeChips = activeQuestion.querySelectorAll('.chip.active');
+        let activeChips = activeQuestion.querySelectorAll(chipActiveValue);
         activeChips = Array.prototype.slice.call(activeChips).map((chip) => chip.getAttribute('data-id'));
         activeQuestions.list.push({
           id: index,
@@ -300,48 +358,6 @@ export const FaqPage = () => {
           chips: activeChips,
         });
       });
-      const result = (questionsModel, activeQuestions) => {
-        let filtered = questionsModel;
-        filtered.forEach((category) => {
-          if (category.chips) {
-            const activeSectionIdArr = activeQuestions.map((question) => question.sectionId);
-            const currentSection = document.querySelector(`#${category.sectionId}`);
-            const filterNumber = currentSection.querySelector('.filter-selected');
-            if (activeSectionIdArr.includes(category.sectionId)) {
-              activeQuestions.forEach((activeQuestion) => {
-                if (activeQuestion.sectionId === category.sectionId) {
-                  const tagActiveArr = activeQuestion.chips;
-                  const activeTagLength = tagActiveArr.length;
-                  filterNumber.innerHTML = activeTagLength;
-                  const questions = category.accordions;
-                  const temp = [];
-                  questions.forEach((question) => {
-                    const tagArr = question.tag;
-                    if (tagArr) {
-                      tagArr.forEach((tag) => {
-                        if (tagActiveArr.includes(tag)) {
-                          temp.push(question);
-                        }
-                      });
-                    }
-                  });
-                  category.accordions = temp;
-                }
-              });
-            } else {
-              filterNumber.innerHTML = 0;
-            }
-          }
-        });
-        filtered = filtered.filter((category) =>
-          category.accordions.filter((question) => {
-            if (question !== '') {
-              return question;
-            }
-          })
-        );
-        setQuestions(filtered);
-      };
 
       result(questionsModel, activeQuestions.list);
     };
@@ -349,7 +365,7 @@ export const FaqPage = () => {
     chipsArr.forEach((chip) => {
       chip.addEventListener('click', chipHandler, true);
     });
-  }, [search]);
+  }, []);
 
   return (
     <>
