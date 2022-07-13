@@ -1,8 +1,8 @@
+/* eslint-disable sonarjs/prefer-object-literal */
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable sonarjs/no-unused-collection */
 /* eslint-disable sonarjs/no-identical-functions */
 /* eslint-disable max-lines-per-function */
-/* eslint-disable react/no-unescaped-entities */
-/* eslint-disable react-hooks/exhaustive-deps */
-/* eslint-disable no-undef */
 import React, { useState, useEffect } from 'react';
 import { Container, Input, Row, Col } from 'design-react-kit';
 import { createUseStyles } from 'react-jss';
@@ -11,6 +11,7 @@ import faq from '../../contents/faq-page/faq.yml';
 import { SEO } from '../components/SEO';
 import seo from '../../contents/seo.yml';
 import content from '../../contents/faq-page/faq.yml';
+import { Totop } from '../components/Totop';
 import { SideNavigation } from './faq/SideNavigation';
 import { QuestionSection } from './faq/QuestionSection';
 import { SupportSection } from './faq/SupportSection';
@@ -25,6 +26,7 @@ const useStyles = createUseStyles({
     margin: '0.833rem 0',
   },
   inputContainer: {
+    composes: 'mt-4',
     position: 'relative',
     '& .reset-btn': {
       background: 'transparent',
@@ -47,6 +49,16 @@ const useStyles = createUseStyles({
       outline: '2px solid #ff9900',
     },
   },
+  sidenav: {
+    '@media (max-width: 991px)': {
+      position: 'sticky',
+      top: '0',
+      zIndex: '2',
+      background: '#fff',
+      padding: '0',
+      marginBottom: '20px',
+    },
+  },
 });
 
 // eslint-disable-next-line sonarjs/cognitive-complexity
@@ -57,6 +69,7 @@ export const FaqPage = () => {
   const [questions, setQuestions] = useState(faq.questions);
   const [isMobile, setIsMobile] = useState();
   const [questNum, setquestNum] = useState(countInitQuestions());
+  const [search, setSearch] = useState(0);
 
   useEffect(() => {
     setIsMobile(window.innerWidth < 992);
@@ -89,7 +102,16 @@ export const FaqPage = () => {
   }
 
   const handleChange = (event) => {
+    setSearch(search + 1);
     const value = event.target.value;
+    const tagListArr = document.querySelectorAll('.tags-container');
+    tagListArr.forEach((tagList) => {
+      if (value !== '') {
+        tagList.classList.add('d-none');
+      } else {
+        tagList.classList.remove('d-none');
+      }
+    });
     setInputValue(value);
     if (value.length >= 3) {
       if (isMobile && filterId !== 'all') {
@@ -232,11 +254,118 @@ export const FaqPage = () => {
   }, []);
 
   const resetInput = () => {
+    const tagListArr = document.querySelectorAll('.tags-container');
+    tagListArr.forEach((tagList) => {
+      tagList.classList.remove('d-none');
+    });
     setInputValue('');
+    setSearch(search + 1);
     const searchInput = document.querySelector('#faq-search');
     searchInput.value = '';
     setQuestions(faq.questions);
   };
+
+  useEffect(() => {
+    const toggleChip = (isActive, currentTarget) => {
+      if (isActive) {
+        currentTarget.classList.remove('active');
+        const icon = currentTarget.querySelector('.chip-icon');
+        icon.classList.remove('active');
+      } else {
+        currentTarget.classList.add('active');
+        const icon = currentTarget.querySelector('.chip-icon');
+        icon.classList.add('active');
+      }
+    };
+
+    const chipActiveValue = '.chip.active';
+
+    const result = (questionsModel, activeQuestions) => {
+      let filtered = questionsModel;
+      filtered.forEach((category) => {
+        if (category.chips) {
+          const activeSectionIdArr = activeQuestions.map((question) => question.sectionId);
+          const currentSection = document.querySelector(`#${category.sectionId}`);
+          const filterNumber = currentSection.querySelector('.filter-selected');
+          if (activeSectionIdArr.includes(category.sectionId)) {
+            activeQuestions.forEach((activeQuestion) => {
+              if (activeQuestion.sectionId === category.sectionId) {
+                const tagActiveArr = activeQuestion.chips;
+                const activeTagLength = tagActiveArr.length;
+                filterNumber.innerHTML = activeTagLength;
+                const questions = category.accordions;
+                const temp = [];
+                questions.forEach((question) => {
+                  const tagArr = question.tag;
+                  if (tagArr) {
+                    tagArr.forEach((tag) => {
+                      if (tagActiveArr.includes(tag)) {
+                        temp.push(question);
+                      }
+                    });
+                  }
+                });
+                category.accordions = temp;
+              }
+            });
+          } else {
+            filterNumber.innerHTML = 0;
+          }
+        }
+      });
+      filtered = filtered.filter((category) =>
+        category.accordions.filter((question) => {
+          if (question !== '') {
+            return question;
+          }
+        })
+      );
+      setQuestions(filtered);
+    };
+
+    const chipHandler = (event) => {
+      const questionsModel = JSON.parse(JSON.stringify(faq.questions));
+      let currentTarget;
+      if (event.target.classList.contains('chip')) {
+        currentTarget = event.target;
+      } else {
+        currentTarget = event.target.closest('.chip');
+      }
+      if (currentTarget.classList.contains('active')) {
+        toggleChip(true, currentTarget);
+      } else {
+        toggleChip(false, currentTarget);
+      }
+
+      const currentActiveArr = document.querySelectorAll(chipActiveValue);
+      let chipsContainerArr = document.querySelectorAll('.chips-list');
+      chipsContainerArr = Array.prototype.slice.call(chipsContainerArr).filter((chipsContainer) => {
+        if (chipsContainer.querySelector(chipActiveValue)) {
+          return chipsContainer;
+        }
+      });
+      currentActiveArr.forEach((activeChip) => {
+        chipsContainerArr.push(activeChip.closest('ul'));
+      });
+      const activeQuestions = {};
+      activeQuestions.list = [];
+      chipsContainerArr.forEach((activeQuestion, index) => {
+        let activeChips = activeQuestion.querySelectorAll(chipActiveValue);
+        activeChips = Array.prototype.slice.call(activeChips).map((chip) => chip.getAttribute('data-id'));
+        activeQuestions.list.push({
+          id: index,
+          sectionId: activeQuestion.getAttribute('data-measure'),
+          chips: activeChips,
+        });
+      });
+
+      result(questionsModel, activeQuestions.list);
+    };
+    const chipsArr = document.querySelectorAll('.chip');
+    chipsArr.forEach((chip) => {
+      chip.addEventListener('click', chipHandler, true);
+    });
+  }, []);
 
   return (
     <>
@@ -272,7 +401,7 @@ export const FaqPage = () => {
             </Col>
           </Row>
           <Row>
-            <Col lg={3}>
+            <Col lg={3} className={classes.sidenav}>
               <SideNavigation
                 getFilter={setFilterId}
                 activeList={questions}
@@ -291,6 +420,7 @@ export const FaqPage = () => {
               <span className="sr-only" id="numberfaq" aria-live="assertive">
                 Numero faq filtrate {questNum}
               </span>
+              <Totop />
               {questions.map((question) => (
                 <QuestionSection
                   key={question.title}

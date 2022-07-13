@@ -15,14 +15,14 @@ const useStyle = createUseStyles({
     zIndex: '99',
     composes: 'totop',
     cursor: 'pointer',
-    top: '35px',
+    top: 'calc(100% - 100px)',
     left: 'calc(100% - 80px)',
     marginRight: '-75px',
+    marginTop: '20px',
     '@media (max-width: 1099px)': {
       marginRight: '0',
     },
     '@media (max-width: 991px)': {
-      top: '75px',
       marginTop: '40px',
     },
   },
@@ -32,25 +32,27 @@ export const Totop = () => {
   useEffect(() => {
     const sectionsContainer = document.querySelector('.timeline-vertical');
 
-    const scrollIndicatorHandler = () => {
-      const timelineYpos = sectionsContainer.getBoundingClientRect();
-      let top = timelineYpos.top;
-      let bottom = timelineYpos.bottom;
-      if (top <= '100' && bottom >= '700') {
-        const sectionsContainerHeight = sectionsContainer.getBoundingClientRect().height;
-        const scrollIndicator = sectionsContainer.querySelector('.scroll-indicator-active');
-        if (top < 0) {
-          top = top * -1;
+    if (sectionsContainer) {
+      const scrollIndicatorHandler = () => {
+        const timelineYpos = sectionsContainer.getBoundingClientRect();
+        let top = timelineYpos.top;
+        let bottom = timelineYpos.bottom;
+        if (top <= '100' && bottom >= '700') {
+          const sectionsContainerHeight = sectionsContainer.getBoundingClientRect().height;
+          const scrollIndicator = sectionsContainer.querySelector('.scroll-indicator-active');
+          if (top < 0) {
+            top = top * -1;
+          }
+          if (bottom < 0) {
+            bottom = bottom * -1;
+          }
+          const partialValue = bottom - top;
+          const percentageScroll = 100 - (100 * partialValue) / sectionsContainerHeight;
+          scrollIndicator.style.height = `${percentageScroll}%`;
         }
-        if (bottom < 0) {
-          bottom = bottom * -1;
-        }
-        const partialValue = bottom - top;
-        const percentageScroll = 100 - (100 * partialValue) / sectionsContainerHeight;
-        scrollIndicator.style.height = `${percentageScroll}%`;
-      }
-    };
-    window.addEventListener('scroll', scrollIndicatorHandler);
+      };
+      window.addEventListener('scroll', scrollIndicatorHandler);
+    }
   }, []);
   const classes = useStyle();
 
