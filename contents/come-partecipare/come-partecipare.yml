@@ -11,7 +11,7 @@ keypoints:
       image: 'pc-card.svg'
       title: 'Attivare la tua PA'
       desc: 'Per partecipare agli avvisi pubblici e richiedere i finanziamenti'
-    - number: "02"
+    - number: "04"
       image: 'icon-chat.svg'
       title: 'Ricevere assistenza'
       desc: 'Per risolvere dubbi o problemi riguardo la piattaforma e le candidature.'
@@ -19,7 +19,7 @@ keypoints:
       image: 'candida-pa-lens.svg'
       title: 'Classificare dati e servizi'
       desc: 'Per abilitare il processo di migrazione delle PA al cloud.'
-    - number: "04"
+    - number: "02"
       image: 'invia-candidatura.svg'
       title: 'Candidare una PA agli avvisi'
       desc: 'Attraverso la creazione e l’invio del documento di candidatura.'
@@ -27,6 +27,17 @@ keypoints:
       image: 'gest-prog-icon.svg'
       title: 'Gestire un progetto'
       desc: Per completare le attività previste e richiedere il finanziamento.
+listMenu:
+  - sectionTitle: Attivare la tua PA
+    sectionId: "keypoint-01"
+  - sectionTitle: Ricevere assistenza
+    sectionId: "keypoint-04"
+  - sectionTitle: Classificare dati e servizi
+    sectionId: "keypoint-03"
+  - sectionTitle: Candidare una PA agli avvisi
+    sectionId: "keypoint-02"
+  - sectionTitle: Gestire un progetto
+    sectionId: "keypoint-05"
 sectionFirst:
   number: '01'
   title: 'Attivare la tua  PA'
