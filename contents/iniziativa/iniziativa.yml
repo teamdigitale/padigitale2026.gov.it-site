@@ -75,6 +75,9 @@ involved:
       image: '/assets/pagopa-logo.svg'
       text: <strong>PagoPA S.p.a</strong> è la società pubblica nata per realizzare e gestire infrastrutture che assicurino lo sviluppo e la diffusione dei servizi pubblici digitali. In quanto ente delegato, è <strong>responsabile per l’attuazione di misure nell’ambito della digitalizzazione dei servizi e piattaforme.</strong>
     - id: 5
+      image: '/assets/acn-logo.svg'
+      text: <strong>L’Agenzia per la cybersicurezza nazionale</strong> garantisce l’implementazione della Strategia Nazionale di Cybersicurezza e, insieme al Dipartimento, l’attuazione della Strategia Cloud Italia. È responsabile per la classificazione dati e servizi della PA, nonché per l’attuazione della misura PNRR in ambito di cybersicurezza.
+    - id: 6
       image: '/assets/consip-logo.svg'
       text: <strong>Consip</strong> è la centrale acquisti della Pubblica Amministrazione. Per il PNRR <strong>mette a disposizione strumenti per agevolare la realizzazione degli interventi</strong>, semplificando il processo di acquisto delle PA attraverso contratti quadro o piattaforme per la negoziazione.
 timeline:
