@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { createUseStyles } from 'react-jss';
 import { Row, Col, Hero, Container, Breadcrumb, BreadcrumbItem } from 'design-react-kit';
 import PropTypes from 'prop-types';
+import { SideNavigationAccordion } from '../../layouts/sideNavigationAccordion';
 import { HeroTitle } from './HeroTitle';
 import { HeroBackground } from './HeroBackground';
 import { HeroParagraph } from './HeroParagraph';
@@ -208,43 +209,112 @@ const useStyles = createUseStyles({
       },
     },
   },
+  keypointsTitle: {
+    fontSize: '1rem',
+    fontWeight: '600',
+    color: '#fff',
+    display: 'block',
+    marginBottom: '10px',
+  },
+  keypointsList: {
+    listStyleType: 'none',
+    padding: '0',
+    display: 'flex',
+    flexWrap: 'wrap',
+    flexDirection: 'column',
+    marginBottom: '2.444rem',
+    '@media (min-width: 992px)': {
+      maxHeight: '150px',
+    },
+    '& .keypoint-anchor': {
+      fontSize: '1rem',
+      fontWeight: '600',
+      color: '#fff',
+      textDecoration: 'underline',
+      textDecorationThickness: '0.9px',
+      textUnderlineOffset: '1px',
+    },
+    '& li': {
+      flexBasis: '100%',
+      marginBottom: '16px',
+      '@media (min-width: 992px)': {
+        flexBasis: '50%',
+      },
+      '&:nth-child(n+4)': {
+        '@media (min-width: 992px)': {
+          marginLeft: '20px',
+        },
+      },
+    },
+  },
 });
 
-export const HeroHowToDo = ({ title, body, image, imageMob }) => {
+export const HeroHowToDo = ({ title, body, image, imageMob, keypoints, listMenu }) => {
+  const [isMobile, setIsMobile] = useState();
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 992);
+    window.addEventListener('resize', () => {
+      setIsMobile(window.innerWidth < 992);
+    });
+  }, []);
+
   const classes = useStyles();
 
+  const setKeypoints = (keypoints) => {
+    if (!isMobile) {
+      return keypoints
+        .map(
+          (keypoint) => `<li><a class="keypoint-anchor" href="#keypoint-${keypoint.number}">${keypoint.title}</a></li>`
+        )
+        .join('');
+    }
+  };
+
   return (
-    <Hero className="position-relative">
-      <div className={`${classes.heroWrapper}`}>
-        <Container className="px-3">
-          <Row className="m-0">
-            <Col xs="12" lg="11" className="px-0">
-              <Breadcrumb className={classes.breadWhite}>
-                <BreadcrumbItem>
-                  <a href="/">Home</a>
-                  <span className="separator"></span>
-                </BreadcrumbItem>
-                <BreadcrumbItem active>
-                  <a>Come partecipare</a>
-                </BreadcrumbItem>
-              </Breadcrumb>
-              <div className={`${classes.contentWrapper} d-flex flex-column`}>
-                <Col lg={6} xs={12} className="pr-lg-3 pl-0 pr-0">
-                  <div className={classes.textWrapper}>
-                    <HeroTitle title={title} className={classes.heroTitle} Tag="h1" />
-                    <HeroParagraph text={body} />
-                  </div>
-                </Col>
-                <Col xs={12} lg={6} className="d-flex d-lg-none mt-4 mt-lg-0 justify-content-center">
-                  <HeroBackground image={imageMob} className={classes.heroImg} />
-                </Col>
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </div>
-      <HeroBackground image={image} className={`${classes.heroImg} d-none d-lg-block`} />
-    </Hero>
+    <>
+      <Hero className="position-relative">
+        <div className={`${classes.heroWrapper}`}>
+          <Container className="px-3">
+            <Row className="m-0">
+              <Col xs="12" lg="11" className="px-0">
+                <Breadcrumb className={classes.breadWhite}>
+                  <BreadcrumbItem>
+                    <a href="/">Home</a>
+                    <span className="separator"></span>
+                  </BreadcrumbItem>
+                  <BreadcrumbItem active>
+                    <a>Come partecipare</a>
+                  </BreadcrumbItem>
+                </Breadcrumb>
+                <div className={`${classes.contentWrapper} d-flex flex-column`}>
+                  <Col lg={6} xs={12} className="pr-lg-3 pl-0 pr-0">
+                    <div className={classes.textWrapper}>
+                      <HeroTitle title={title} className={classes.heroTitle} Tag="h1" />
+                      <HeroParagraph text={body} />
+                    </div>
+                  </Col>
+                  <Col xs={12} lg={6} className="d-flex d-lg-none mt-4 mt-lg-0 justify-content-center">
+                    <HeroBackground image={imageMob} className={classes.heroImg} />
+                  </Col>
+                </div>
+              </Col>
+            </Row>
+            <Row>
+              <Col lg="12">{isMobile ? '' : <span className={classes.keypointsTitle}>I PUNTI CHIAVE</span>}</Col>
+              <Col lg="6" sm="12">
+                <ul
+                  className={classes.keypointsList}
+                  dangerouslySetInnerHTML={{ __html: setKeypoints(keypoints.list) }}
+                ></ul>
+              </Col>
+            </Row>
+          </Container>
+        </div>
+        <HeroBackground image={image} className={`${classes.heroImg} d-none d-lg-block`} />
+      </Hero>
+      {isMobile ? <SideNavigationAccordion list={listMenu} customClass="px-3" /> : ''}
+    </>
   );
 };
 
@@ -254,4 +324,6 @@ HeroHowToDo.propTypes = {
   image: PropTypes.string,
   imageMob: PropTypes.string,
   list: PropTypes.array,
+  keypoints: PropTypes.array,
+  listMenu: PropTypes.array,
 };
