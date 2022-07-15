@@ -678,7 +678,7 @@ export const AssistenzaPage = () => {
               <Row className="mt-5">
                 <Col xs={12} md={6} lg={4}>
                   <div className="select-wrapper">
-                    <label htmlFor="argument-select-input" className={classes.selectLabel}>
+                    <label htmlFor="00N7Q000007qqtk" className={classes.selectLabel}>
                       {argumentLabel}
                     </label>
                     <Select
