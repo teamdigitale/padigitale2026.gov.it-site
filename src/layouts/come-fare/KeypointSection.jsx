@@ -119,7 +119,7 @@ export const KeypointSection = (props) => {
         <div className={classes.bgLightBlue}>
           <Container
             tag="section"
-            aria-labelledby="keypoints-section-title"
+            aria-labelledby={`keypoint-section-title-${number}`}
             className={`${classes.keypointSection} px-3`}
             id={`keypoint-${number}`}
           >

@@ -320,7 +320,7 @@ export const SideNavigation = (props) => {
             </div>
           </AccordionHeader>
           <AccordionBody className={classes.accordionBody} active={collapseMenu}>
-            <LinkList>
+            <LinkList id="table-of-contents">
               {isMobile && (
                 <LinkListItem
                   size="medium"
