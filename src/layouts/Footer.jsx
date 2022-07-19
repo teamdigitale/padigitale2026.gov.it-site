@@ -142,7 +142,11 @@ const SlimFooter = () => {
             </Link>
           </li>
           <li className={`${classes.listItem} mr-0 mr-md-5`}>
-            <Link to={privacy.linkTo} className="list-item mid-footer-link mx-4 mx-md-0">
+            <Link
+              to={privacy.linkTo}
+              className="list-item mid-footer-link mx-4 mx-md-0"
+              aria-label="vai all'argomento 'informativa privacy apertuna nuova scheda"
+            >
               {privacy.label}
             </Link>
           </li>
@@ -190,7 +194,11 @@ const MainFooter = () => {
           </div>
           <div className="info">
             <>
-              <Link to="/ricevi-aggiornamenti" className={classes.seeMore}>
+              <Link
+                to="/ricevi-aggiornamenti"
+                className={classes.seeMore}
+                aria-label="Vai alla pagina Ricevi aggiornamenti"
+              >
                 Ricevi aggiornamenti
               </Link>
             </>
