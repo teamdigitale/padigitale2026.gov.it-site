@@ -29,7 +29,7 @@ verticalTimeline:
   - index: 2
     title: 'Invia la classificazione'
     icon: '/assets/invia-candidatura.svg'
-    headerParagraph: "Una volta inviato la classificazione, <strong>l’Agenzia per la Cybersicurezza Nazionale eseguirà le verifiche di conformità</strong> entro 90 giorni."
+    headerParagraph: "Una volta inviato la classificazione, <strong>l’Agenzia per la Cybersicurezza Nazionale eseguirà le verifiche di conformità</strong> entro 90 giorni. Ricorda che è possibile aggiornare o modificare la classificazione in presenza di nuovi servizi o variazioni delle caratteristiche dei servizi già classificati."
     sectionId: 'send-classification'
   - index: 3
     title: 'Ricevi aggiornamenti'
