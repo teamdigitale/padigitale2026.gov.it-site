@@ -285,14 +285,10 @@ export const FaqPage = () => {
       filtered.forEach((category) => {
         if (category.chips) {
           const activeSectionIdArr = activeQuestions.map((question) => question.sectionId);
-          const currentSection = document.querySelector(`#${category.sectionId}`);
-          const filterNumber = currentSection.querySelector('.filter-selected');
           if (activeSectionIdArr.includes(category.sectionId)) {
             activeQuestions.forEach((activeQuestion) => {
               if (activeQuestion.sectionId === category.sectionId) {
                 const tagActiveArr = activeQuestion.chips;
-                const activeTagLength = tagActiveArr.length;
-                filterNumber.innerHTML = activeTagLength;
                 const questions = category.accordions;
                 const temp = [];
                 questions.forEach((question) => {
@@ -308,8 +304,6 @@ export const FaqPage = () => {
                 category.accordions = temp;
               }
             });
-          } else {
-            filterNumber.innerHTML = 0;
           }
         }
       });
@@ -427,6 +421,7 @@ export const FaqPage = () => {
                   item={question}
                   inputText={inputValue}
                   setQuestions={setQuestions}
+                  totalQuestions={faq.questions}
                 />
               ))}
               {!questions.length && (

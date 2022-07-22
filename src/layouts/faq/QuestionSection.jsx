@@ -145,9 +145,10 @@ const useStyles = createUseStyles({
   },
   filter: {
     fontSize: '1rem',
-    marginBottom: '5px',
+    marginBottom: '30px',
+    marginTop: '22px',
     display: 'block',
-    '& .filter-selected': {
+    '& .question-selected': {
       fontWeight: '700',
     },
   },
@@ -155,15 +156,10 @@ const useStyles = createUseStyles({
 
 export const QuestionSection = (props) => {
   const classes = useStyles();
-  const { title, sectionId } = props.item;
-  const { sectionTitle, smallTitle } = props.item;
+  const { title, sectionId, sectionTitle, smallTitle } = props.item;
+  const { totalQuestions } = props;
   let { accordions } = props.item;
   const chips = props.item.chips;
-  const chipsIdArr = chips?.filter((chip) => {
-    if (chip.id) {
-      return chip.id;
-    }
-  });
 
   accordions = accordions.filter((accordion) => accordion !== '');
 
@@ -189,6 +185,15 @@ export const QuestionSection = (props) => {
       })
       .join('');
 
+  const setTotalQuestions = (id) => {
+    const accordion = totalQuestions.find((question) => {
+      if (question.sectionId === id) {
+        return question;
+      }
+    });
+    return accordion.accordions.length;
+  };
+
   return (
     <>
       <section id={sectionId} className={classes.section} aria-labelledby={sectionId + '-headings'}>
@@ -210,15 +215,17 @@ export const QuestionSection = (props) => {
         )}
         {chips ? (
           <div className="tags-container">
-            <span className={classes.filter}>
-              Totale filtri selezionati: <span className="filter-selected">0</span>/
-              <span className="filter-available">{chipsIdArr.length}</span>
-            </span>
             <ul
               data-measure={sectionId}
               className={`chips-list ${classes.chipsList}`}
               dangerouslySetInnerHTML={{ __html: setChips(chips) }}
             ></ul>
+            <span className={classes.filter}>
+              Totale domande frequenti selezionate:
+              <span>
+                <span className="question-selected"> {accordions.length}</span>/{setTotalQuestions(sectionId)}
+              </span>
+            </span>
           </div>
         ) : (
           ''
@@ -273,4 +280,5 @@ QuestionSection.propTypes = {
   item: PropTypes.object.isRequired,
   inputText: PropTypes.string,
   setQuestions: PropTypes.func,
+  totalQuestions: PropTypes.object,
 };
