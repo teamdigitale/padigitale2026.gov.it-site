@@ -39,4 +39,20 @@ verticalTimeline:
 video:
   src: https://www.youtube-nocookie.com/embed/r2QD-uGbI7M
   description: Scopri come classificare dati e servizi della tua amministrazione su PA digitale 2026.
-  videoText: "PA digitale 2026 è il punto di accesso alle risorse previste dal PNRR per la transizione digitale della PA.<br></br>Grazie alla piattaforma puoi anche effettuare la Classificazione dati e servizi necessaria per avviare la migrazione al cloud.<br></br>Completarla è semplice: puoi verificare l’elenco dei servizi e il livello di classificazione creati automaticamente sulla base delle caratteristiche della tua PA: se sono corretti, puoi confermarli direttamente. In caso contrario, puoi determinare una nuova classificazione del servizio compilando un questionario. Inoltre, puoi anche aggiungere o eliminare un servizio. Una volta ultimata questa procedura, l’Agenzia per la Cybersicurezza Nazionale eseguirà le verifiche di fattibilità.<br></br>Hai sempre tutto sotto controllo: nell’area riservata infatti puoi monitorare lo stato della classificazione, anche grazie a notifiche dedicate.<br></br>La classificazione è il primo passo per la migrazione al cloud della PA, per garantire servizi e infrastrutture più sicuri, efficienti e affidabili."
+  videoText: "PA digitale 2026 è il punto di accesso alle risorse previste dal PNRR per la transizione
+    digitale della PA.<br><br>
+    Grazie alla piattaforma puoi anche effettuare la Classificazione dati e servizi necessaria
+    per avviare la migrazione al cloud.<br><br>
+    Completarla è semplice.Se sei un’ASL, un Comune o un istituto scolastico puoi verificare
+    l’elenco dei servizi e il livello di classificazione creati automaticamente sulla base delle
+    caratteristiche della tua PA. Se esaustivo, puoi confermarlo direttamente. In caso
+    contrario, puoi determinare una nuova classificazione di uno o più servizi compilando un
+    questionario. Inoltre, puoi anche aggiungere o eliminare un servizio. Tutte le altre
+    amministrazioni troveranno una lista minima di servizi pre-classificati, che corrisponde ai
+    servizi di funzionamento tipici. Per gli altri servizi erogati, ogni PA dovrà compilare il
+    questionario. Una volta ultimata questa procedura, l’Agenzia per la Cybersicurezza
+    Nazionale eseguirà le verifiche di conformità.<br><br>
+    Hai sempre tutto sotto controllo: nell’area riservata infatti puoi monitorare lo stato della
+    classificazione, anche grazie a notifiche dedicate.<br><br>
+    La classificazione è il primo passo per la migrazione al cloud della PA, per garantire servizi
+    e infrastrutture più sicuri, efficienti e affidabili."
