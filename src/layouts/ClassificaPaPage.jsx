@@ -213,9 +213,9 @@ export const ClassificaPaPage = () => {
             >
               <Container className="pl-lg-4 mb-4">
                 <section>
-                  <h4 className={`${classes.contentTitle} mt-5`}>
+                  <h3 className={`${classes.contentTitle} mt-5`}>
                     Classifica i dati e i servizi della tua amministrazione
-                  </h4>
+                  </h3>
                   <p className={`${classes.contentParagraph} mb-0`}>
                     Segui il processo di classificazione dati e servizi:
                   </p>

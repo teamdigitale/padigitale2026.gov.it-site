@@ -216,7 +216,7 @@ export const CandidaPaPage = () => {
               {/*  <Totop /> */}
               <Container className="pl-lg-4 mb-4">
                 <section>
-                  <h4 className={`${classes.contentTitle} mt-5`}>Candida la tua amministrazione agli avvisi</h4>
+                  <h3 className={`${classes.contentTitle} mt-5`}>Candida la tua amministrazione agli avvisi</h3>
                   <p className={`${classes.contentParagraph} mb-0`}>
                     Il processo di candidatura agli avvisi pubblici prevede <strong>quattro passaggi</strong>:
                   </p>
@@ -228,7 +228,7 @@ export const CandidaPaPage = () => {
               </section>
               {/* <Container className="pl-lg-4">
                 <section id="to-read-more">
-                  <h4 className={`${classes.contentTitle} mb-4`}>Per approfondire</h4>
+                  <h3 className={`${classes.contentTitle} mb-4`}>Per approfondire</h3>
                   <Row>
                     <Col xs={12} lg={6} xl={4}>
                       <a className={classes.cardReadMore}>
