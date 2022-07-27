@@ -262,6 +262,11 @@ const useStyle = createUseStyles({
     '& .it-header-center-content-wrapper': {
       padding: '0',
     },
+    '& .navbar .navbar-collapsable .menu-wrapper .navbar-nav': {
+      '@media (max-width:991px)': {
+        overflowY: 'auto',
+      },
+    },
     '& .it-header-wrapper .it-nav-wrapper .it-header-navbar-wrapper': {
       top: '27%',
     },
@@ -333,6 +338,17 @@ const useStyle = createUseStyles({
       fontSize: '1.11111rem',
       fontWeight: '400',
     },
+  },
+  closeMenuBtn: {
+    border: '0',
+    padding: '0',
+    backgroundColor: 'transparent',
+    boxShadow: 'none',
+    display: 'flex',
+    alignItems: 'center',
+    position: 'absolute',
+    right: '0',
+    top: '0',
   },
 });
 
@@ -487,6 +503,9 @@ const NavHeader = () => {
 
         <HeaderNav isOpen={isOpen} onCloseMenu={toogleMenu}>
           <div className={classes.menuWrapper}>
+            <Button className={classes.closeMenuBtn} aria-label="Chiudi il menu" onClick={toogleMenu}>
+              <Icon color="primary" icon="it-close" padding size="xl" />
+            </Button>
             <Nav navbar className={classes.navbarNav}>
               <li className={classes.offCanvasWrapper}>
                 <a href="/" className={classes.offCanvasTitle}>
