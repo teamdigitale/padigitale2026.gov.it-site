@@ -47,7 +47,18 @@ export const IndexPage = () => {
                 news.expiring = true;
               }
             });
-            setNewsList(data.windows.reverse().slice(0, 7));
+            const listSorted = [];
+            newsArr.forEach((notice) => {
+              if (!notice.expiring) {
+                listSorted.push(notice);
+              }
+            });
+            newsArr.forEach((notice) => {
+              if (notice.expiring === true) {
+                listSorted.push(notice);
+              }
+            });
+            setNewsList(listSorted.reverse().slice(0, 7));
           });
       } catch (error) {
         console.log(error);
