@@ -253,16 +253,8 @@ questions:
         content: No, non è possibile accedere al finanziamento previsto dall'Avviso, riferito alla Misura 1.2, nel caso in cui il processo di migrazione al cloud sia stato realizzato con Fondi pubblici, nazionali, regionali o europei, secondo quanto previsto dall'art. 8 comma 5 dell'Avviso.
         tag: 
           - comuni
-      - title: Quali tipologie di servizi potranno essere oggetto di migrazione?
-        content: Oggetto di migrazione potranno essere tutti i servizi - presenti in lista nell'Allegato 2 corrispondente alla fascia di popolazione del tuo Comune - erogati in tutte le loro forme dal singolo Ente e il cui livello complessivo di efficienza possa essere ottimizzato attraverso una migrazione verso piattaforme Cloud qualificate.
-        tag: 
-          - comuni
       - title: Di quante modalità di migrazione può avvalersi un Comune al fine di rispondere correttamente ai requisiti previsti dall'Avviso riferito alla Misura 1.2?
         content: Il Comune potrà effettuare la migrazione avvalendosi dei due modelli di migrazione ""Trasferimento in sicurezza dell’infrastruttura IT"" e ""Aggiornamento in sicurezza di applicazioni in Cloud"" come delineato nella Strategia Nazionale per il Cloud.Per ulteriori approfondimenti si rimanda all'Allegato 2 corrispondente alla fascia di popolazione del tuo Comune.
-        tag: 
-          - comuni
-      - title: Quali sono le caratteristiche del modello di migrazione "Trasferimento in sicurezza dell’infrastruttura IT"?
-        content: L’opzione "Trasferimento in sicurezza dell'infrastruttura IT" consente di sfruttare la strategia di migrazione Lift&Shift (anche detta Rehost), cioè la migrazione al Cloud dell’infrastruttura già esistente, senza la necessità di reingegnerizzare le applicazioni. Tale modalità consiste nel migrare l’intero servizio, comprensivo di applicazioni e dati su un hosting cloud senza apportare modifiche agli applicativi, ovvero replicando il servizio esistente in un ambiente cloud.
         tag: 
           - comuni
       - title: Un Comune è obbligato ad adottare la stessa modalità di migrazione per tutti i servizi?
@@ -281,20 +273,6 @@ questions:
         content: Il contributo consiste in una somma forfettaria che viene erogata al raggiungimento del risultato come indicato dall'Avviso. Non è prevista la rendicontazione a costi reali.
         tag: 
           - comuni
-      - title: Cosa è e come è strutturata la Strategia Cloud Italia?
-        content: La Strategia Cloud Italia, realizzata dal Dipartimento per la trasformazione digitale e dall'Agenzia per la cybersicurezza nazionale (ACN), contiene gli indirizzi strategici per il percorso di migrazione verso il cloud di dati e servizi digitali della Pubblica Amministrazione. Il documento illustra i criteri di classificazione di dati e servizi e la composizione della infrastruttura ad alta affidabilità (Polo Strategico Nazionale) che ospiterà i servizi strategici e critici.
-        tag: 
-          - comuni
-        linkLabel: Ulteriori informazioni sono disponibili al seguente link
-        link: 'https://innovazione.gov.it/dipartimento/focus/strategia-cloud-italia/'
-        ariaLabel: Vedi ulteriori informazioni sulla strategia cloud italia (Collegamento esterno - Apre su nuova scheda)
-      - title: Quali sono gli obiettivi relativi a Cloud e Infrastrutture digitali nell'ambito del Piano Nazionale di Ripresa e Resilienza?
-        content: La trasformazione digitale della Pubblica Amministrazione (PA) segue un approccio “cloud first”, orientato alla migrazione dei dati e degli applicativi informatici delle singole amministrazioni verso un ambiente cloud. Il processo consentirà di razionalizzare e consolidare molti dei data center oggi distribuiti sul territorio, a partire da quelli meno efficienti e sicuri. Ad oggi il 95% dei circa 11 mila data center utilizzati dagli enti pubblici italiani presenta carenze nei requisiti minimi di sicurezza, affidabilità, capacità elaborativa ed efficienza.
-        tag: 
-          - comuni
-        linkLabel: Ulteriori informazioni sono disponibili al seguente link
-        link: 'https://innovazione.gov.it/notizie/articoli/cloud-e-infrastrutture-digitali/'
-        ariaLabel: Vedi ulteriori informazioni sul cloud e le infrastrutture digitali (Collegamento esterno - Apre su nuova scheda)
       - title: In cosa consiste la classificazione di dati e servizi? A cosa serve?
         content: La classificazione dei dati e dei servizi gestiti dalle PA consente di uniformare e guidare il processo di migrazione al Cloud della PA. Le classi dei dati e servizi sono identificate sulla base del danno che una loro compromissione, in termini di confidenzialità, integrità e disponibilità, provocherebbe al sistema Paese.
         tag: 
@@ -316,10 +294,6 @@ questions:
         linkLabel: Ulteriori informazioni sono disponibili al seguente link
         link: 'https://docs.italia.it/italia/cloud-italia/strategia-cloud-italia-docs/it/stabile/5_la_migrazione_della_pubblica_amministrazione_sul_cloud.html'
         ariaLabel: Vedi ulteriori informazioni sulla migrazione della pubblica amministrazione (Collegamento esterno - Apre su nuova scheda)
-      - title: Come avviene la migrazione verso i servizi cloud qualificati?
-        content: La migrazione verso i diversi servizi Cloud qualificati e eventualmente all’interno del PSN dovrà essere governata tramite un processo centralizzato, agevole e uniforme per tutte le amministrazioni. I piani di migrazione saranno quindi definiti in accordo con il risultato della classificazione dei dati e dei servizi. La classificazione e la redazione del piano di migrazione saranno definiti e supportati, per i rispettivi profili di competenza, dell’Agenzia per la Cybersicurezza Nazionale (ACN) e del Dipartimento per la Trasformazione Digitale (DTD).
-        tag: 
-          - comuni
       - title: Il Canone del primo anno è incluso nel finanziamento?
         content: Si, il canone del primo anno è incluso nell’importo forfettario come definito dall'Allegato 2.
         tag: 
@@ -340,16 +314,8 @@ questions:
         content: No, non è possibile accedere al finanziamento previsto dall'Avviso, riferito alla Misura 1.2, nel caso in cui il processo di migrazione al cloud sia stato realizzato con Fondi pubblici, nazionali, regionali o europei, secondo quanto previsto dall'art. 8 comma 5 dell'Avviso.
         tag: 
           - scuole
-      - title: Quali tipologie di servizi potranno essere oggetto di migrazione?
-        content: Oggetto di migrazione potranno essere tutti i servizi erogati in tutte le loro forme dal singolo Ente e il cui livello complessivo di efficienza possa essere ottimizzato attraverso una migrazione verso  piattaforme Cloud Qualificate o presso Infrastrutture della PA idonee
-        tag: 
-          - scuole
       - title: Di quante modalità di migrazione può avvalersi una scuola al fine di rispondere correttamente ai requisiti previsti dall'Avviso riferito alla Misura 1.2?
         content: 'La Scuola potrà effettuare la migrazione sfruttando le diverse tipologie di migrazione delineate  nella Strategia Nazionale per il Cloud, selezionando tra le modalità:</br>- Trasferimento in sicurezza dell’infrastruttura IT</br>- Aggiornamento di applicazioni sicure in Cloud'
-        tag: 
-          - scuole
-      - title: Quali sono le caratteristiche del modello di migrazione "Trasferimento in sicurezza dell’infrastruttura IT"?
-        content: L’opzione "Trasferimento in sicurezza dell’infrastruttura IT" consente di sfruttare la strategia di migrazione Lift&Shift (anche detta Rehost), cioè la migrazione al Cloud dell’infrastruttura già esistente, senza la necessità di reingegnerizzare le applicazioni. Tale modalità consiste nel migrare l’intero servizio, comprensivo di applicazioni e dati su un hosting cloud senza apportare modifiche agli applicativi, ovvero replicando il servizio esistente in un ambiente cloud.
         tag: 
           - scuole
       - title: Una scuola è obbligata ad adottare la stessa modalità di migrazione per tutti i servizi?
@@ -362,10 +328,6 @@ questions:
           - scuole
       - title: A quanto ammonta l'importo del finanziamento previsto dall'Avviso riferito alla Misura 1.2?
         content: 'L’importo del finanziamento concedibile alle Scuole è individuato in un importo forfettario determinato secondo il seguente criterio: per ogni servizio che verrà migrato verrà corrisposto un costo unitario di € 553 iva inclusa, con un importo minimo quindi pari a € 1.659 per 3 servizi fino ad un massimo di € 12.719 equivalente a 23 servizi. L’importo definitivo, tuttavia, sarà calcolato sulla base della sommatoria dei servizi che saranno migrati.'
-        tag: 
-          - scuole
-      - title: Quali sono le caratteristiche del modello di migrazione "Aggiornamento in sicurezza di applicazioni in Cloud"?
-        content: L’opzione di "Aggiornamento di applicazioni sicure in Cloud" offre la possibilità di migrare le applicazioni utilizzando una tra le strategie repurchase/replace e replatform. Per repurchase/replace si intende l’acquisto di una soluzione nativa in cloud, in genere erogata in modalità Software as a Service, mentre per replatforming si intende la riorganizzazione dell’architettura applicativa sostituendo intere componenti del servizio in favore di soluzioni Cloud native in modo da usufruire dei benefici dell’infrastruttura Cloud.
         tag: 
           - scuole
   - title: 1.4.1 Esperienza del Cittadino nei servizi pubblici
@@ -407,10 +369,6 @@ questions:
         content: L’importo del finanziamento concedibile ai Comuni è individuato in un importo forfettario (lump sum) determinato in funzione della tipologia degli interventi previsti ed in funzione della classe di popolazione residente di riferimento del medesimo Comune (Art. 1, comma 3 dell'Avviso).
         tag: 
           - comuni
-      - title: Qual è l'obiettivo dell'Avviso “Esperienza del cittadino nei servizi pubblici” COMUNI (Aprile 2022) per i Comuni riferito alla Misura 1.4.1?
-        content: 'Per quanto riguarda i siti comunali, l’obiettivo del presente avviso è di mettere a disposizione dei cittadini interfacce coerenti, fruibili e accessibili, secondo il modello di sito comunale, e in conformità con le Linee guida emanate ai sensi del CAD e l’e-government benchmark relativamente agli indicatori della ‘user-centricity’ e della trasparenza, come indicato dall’Egovernment benchmark Method Paper 2020-2023. Per quanto riguarda i servizi digitali per il cittadino, l’obiettivo del presente avviso è di mettere a disposizione dei cittadini una serie di procedure erogate a livello comunale, tramite interfacce coerenti, fruibili e accessibili, con flussi di servizio quanto più uniformi, trasparenti e utente-centrici.'
-        tag: 
-          - comuni
       - title: Quali enti della PA possono presentare domanda?
         content: "I Soggetti Attuatori, ovvero coloro che possono accedere allo strumento predisposto dall'Avviso,  sono le Scuole sedi di Direttivo comprensive di scuole secondarie di 1° e 2° grado dislocate su tutto il territorio nazionale."
         tag: 
@@ -429,10 +387,6 @@ questions:
           - scuole
       - title: È possibile accedere al finanziamento in caso di realizzazione del progetto, con l'ausilio di Fondi pubblici, prima della pubblicazione dell'Avviso “Esperienza del cittadino nei servizi pubblici” SCUOLE (Aprile 2022)” riferito alla Misura 1.4.1?
         content: No, non è possibile accedere al finanziamento previsto dall'Avviso riferito alla Misura 1.4.1 nel caso in cui le attività necessarie per l'implementazione del sito web della PA siano state realizzate con altri finanziamenti pubblici, nazionali, regionali o europei, secondo quanto previsto dall'art. 7 dell'Avviso.
-        tag: 
-          - scuole
-      - title: Entro quanto tempo dovrà essere contrattualizzato il fornitore rispetto al Decreto di Finanziamento?
-        content: Il fornitore dovà essere contrattualizzato al massimo entro 6 mesi (180 gg) dalla data di notifica del Decreto di Finanziamento.
         tag: 
           - scuole
       - title: Quando il processo si intende concluso?
@@ -474,32 +428,12 @@ questions:
         content: I servizi oggetto di migrazione possono essere tutti i servizi di incasso erogati da ciascun Ente facendo valere il principio della titolarità del credito, cioè, potranno essere migrati tutti i servizi di incasso gestiti direttamente dal singolo Ente e/o affidati a soggetti esterni (es. Riscossori; Unioni di Comuni; Comunità Montane) fermo restando che l’Ente mantenga la titolarità del credito vantato.
         tag: 
           - comuni
-      - title: Quando sarà emesso il Decreto di Finanziamento e quali informazioni saranno in esso contenute?
-        content: Ogni 30 giorni, dopo la chiusura della finestra temporale, il Dipartimento per la trasformazione digitale provvede alla definizione del decreto di ammissione a finanziamento dei progetti presentati nella relativa finestra temporale e per i quali i Comuni hanno provveduto all’accettazione del finanziamento e alla comunicazione del codice CUP attraverso la Piattaforma. In allegato al decreto di finanziamento sarà riportato l’elenco dei soggetti finanziati in ordine cronologico con il relativo CUP e importo finanziato.
-        tag: 
-          - comuni
-      - title: Quali sono i documenti necessari al fine di predisporre correttamente la richiesta di trasferimento delle risorse?
-        content: 'Alla domanda di erogazione del finanziamento, il Comune dovrà allegare: Il certificato di regolare esecuzione del RUP; l’eventuale check list applicabile compilata secondo le indicazione delle linee guida fornite.'
-        tag: 
-          - comuni
-      - title: Entro quanto tempo dovrà essere contrattualizzato il fornitore rispetto al Decreto di Finanziamento?
-        content: Il fornitore dovà essere contrattualizzato al massimo entro 6 mesi (180 gg) dalla data di notifica del Decreto di Finanziamento.
-        tag: 
-          - comuni
-      - title: Entro quando dovranno essere portate a termine le attività di migrazione e di attivazione dei servizi?
-        content: Le attività di migrazione e di attivazione dei servizi dovranno essere portate a termine entro 8 mesi (240 gg), a partire dalla data di contrattualizzazione del fornitore.
-        tag: 
-          - comuni
       - title: Quando il processo di migrazione e attivazione dei servizi si intende concluso con esito positivo per per i servizi attivati sulla Piattaforma pagoPA?
         content: Il processo di riterrà concluso quando sarà stata effettuata una transazione con esito positivo con la corretta applicazione del codice tassonomico per ogni singolo servizio incluso nel progetto.
         tag: 
           - comuni
       - title: Cosa si intende per transazione con esito positivo per pagoPA?
         content: Per transazione con esito positivo si intende sia una transazione reale eseguita da un cittadino, nel caso in cui la stagionalità del singolo servizio di incasso lo consenta, oppure - in caso contrario - una transazione reale con importo di valore simbolico (es. 0,01€) ma con codice tassonomico e IUV reale, al fine di poter verificare l’effettiva e corretta integrazione del servizio di incasso in modalità end-to-end (cd. transazione di test)
-        tag: 
-          - comuni
-      - title: Qual è il metodo di calcolo del voucher?
-        content: L’importo del voucher è determinato dal prodotto dell'importo unitario dei servizi attivati (in funzione della classe di popolazione residente del Soggetto Attuatore) e il numero totale dei servizi attivati.
         tag: 
           - comuni
       - title: Quali enti della PA possono presentare domanda?
@@ -512,14 +446,6 @@ questions:
           - altri-enti
       - title: Quali interventi possono essere finanziati dall'Avviso 1.4.3 per pagoPA?
         content: I servizi oggetto di migrazione possono essere tutti i servizi di incasso erogati da ciascun Ente facendo valere il principio della titolarità del credito, cioè, potranno essere migrati tutti i servizi di incasso gestiti direttamente dal singolo Ente e/o affidati a soggetti esterni (es. Riscossori; Unioni di Comuni; Comunità Montane) fermo restando che l’Ente mantenga la titolarità del credito vantato.
-        tag: 
-          - altri-enti
-      - title: Quando sarà emesso il Decreto di Finanziamento e quali informazioni saranno in esso contenute?
-        content: Dopo la chiusura della finestra temporale, il Dipartimento per la trasformazione digitale provvede alla definizione del decreto di ammissione a finanziamento dei progetti presentati nella relativa finestra temporale e per i quali i Soggetti Attuatori hanno provveduto all’accettazione del finanziamento con la comunicazione del codice CUP attraverso la Piattaforma. In allegato al decreto di finanziamento sarà riportato l’elenco dei soggetti finanziati in ordine cronologico con il relativo CUP e importo finanziato.
-        tag: 
-          - altri-enti
-      - title: Entro quanto tempo dovrà essere contrattualizzato il fornitore rispetto al Decreto di Finanziamento?
-        content: Il fornitore dovà essere contrattualizzato al massimo entro 6 mesi (180 gg) dalla data di notifica del Decreto di Finanziamento.
         tag: 
           - altri-enti
       - title: Entro quando dovranno essere portate a termine le attività di migrazione e di attivazione dei servizi?
@@ -541,16 +467,8 @@ questions:
       - title: Altri Enti
         id: altri-enti
     accordions:
-      - title: "Come viene calcolato l'importo forfettario previsto dall'Avviso ''Adozione app IO'' della Misura 1.4.3?"
-        content: "L'importo del finanziamento concedibile ai Comuni è individuato in un importo forfettario determinato secondo il seguente criterio:<br></br>a. per i Comuni fino a 5.000 ab.: app IO: €243 per servizio (min.3 max 50);<br>b. per i Comuni 5.001 - 20.000 ab. app IO: €343 per servizio (min.3 max 50);<br>c. per i Comuni 20.001 - 100.000 ab. app IO: €728 per servizio (min.5 max 50);<br>d. per i Comuni 100.001 - 250.000 ab. app IO: €1.099 per servizio (min.5 max 50);<br>e. per i Comuni > 250.000 ab. app IO: €3.187 per servizio (min.5 max 50)."
-        tag: 
-          - comuni
       - title: Quali enti della PA possono presentare domanda?
         content: I Soggetti Attuatori, ovvero coloro che possono accedere allo strumento predisposto dall'Avviso, sono i Comuni.
-        tag: 
-          - comuni
-      - title: Qual è l'obiettivo dell'Avviso "Adozione app IO" della Misura 1.4.3?
-        content: L'obiettivo del presente Avviso riferito alla Misura 1.4.3 è la migrazione e l’attivazione dei servizi digitali (app IO) seguendo una logica di “pacchetti” che identificano il numero minimo di servizi da integrare a fronte di una singola adesione all’Avviso con il fine ultimo di raggiungere una integrazione cd. full per ciascun Comune, come specificato nell'Allegato 2.
         tag: 
           - comuni
       - title: È possibile accedere al finanziamento in caso di realizzazione del progetto prima della pubblicazione dell'Avviso "Adozione app IO" riferito della Misura 1.4.3?
@@ -577,20 +495,12 @@ questions:
         content: "Sono invitate a presentare proposta a valere sull'Avviso:<br>a. Le Regioni e le Province Autonome;<br>b. Le  Aziende sanitarie locali e le Aziende ospedaliere pubbliche;<br>c. Le Università e gli Istituti di Istruzione Universitaria pubblici, gli Enti e le Istituzioni di ricerca pubblici e le Istituzioni per l’Alta Formazione Artistica, Musicale e Coreutica - AFAM pubbliche."
         tag: 
           - altri-enti
-      - title: Qual è l'obiettivo dell'Avviso "Adozione appIO" della Misura 1.4.3?
-        content: L'obiettivo del presente Avviso riferito alla Misura 1.4.3 è la migrazione e l’attivazione dei servizi digitali (appIO) seguendo una logica di “pacchetti” che identificano il numero minimo di servizi da integrare a fronte di una singola adesione all’Avviso con il fine ultimo di raggiungere una integrazione cd. full per ciascun Ente, come specificato nell'Allegato 2.
-        tag: 
-          - altri-enti
       - title: È possibile accedere al finanziamento in caso di realizzazione del progetto prima della pubblicazione dell'Avviso "Adozione appIO" riferito della Misura 1.4.3?
         content: Sì, è possibile accedere al finanziamento previsto dall'Avviso nel caso in cui l'implementazione dei servizi digitali (appIO) sia stata realizzata a decorrere dal 01 Aprile 2021, con risorse finanziarie proprie.
         tag: 
           - altri-enti
       - title: È possibile accedere al finanziamento in caso di realizzazione del progetto, con l'ausilio di Fondi pubblici, prima della pubblicazione dell'Avviso "Adozione appIO" della Misura 1.4.3?
         content: No, non è possibile accedere al finanziamento previsto dall'Avviso riferito alla Misura 1.4.3 nel caso in cui l'attivazione degli stessi servizi digitali (appIO) sia stata realizzata con altri finanziamenti pubblici, nazionali, regionali o europei, secondo quanto previsto dall'art. 7 dell'Avviso. Può essere invece finanziata l'attivazione di nuovi servizi, non inclusi nel precedente finanziamento.
-        tag: 
-          - altri-enti
-      - title: Entro quanto tempo dovrà essere contrattualizzato il fornitore rispetto al Decreto di Finanziamento?
-        content: Il fornitore dovà essere contrattualizzato al massimo entro 6 mesi (180 gg) dalla data di notifica del Decreto di Finanziamento.
         tag: 
           - altri-enti
       - title: Entro quando dovranno essere portate a termine le attività di migrazione e di attivazione dei servizi?
@@ -615,10 +525,6 @@ questions:
         content: L'importo del finanziamento riconoscibile è pari a €14.000 al termine della realizzazione del progetto.
         tag: 
           - comuni
-      - title: Sono previste risorse espressamente dedicate ai territori delle regioni Abruzzo, Basilicata, Campania, Calabria, Molise, Puglia, Sardegna, Sicilia?
-        content: Sì, l'Avviso destina il 40% delle risorse al finanziamento di Soggetti Attuatori ubicati nelle regioni Abruzzo, Basilicata, Campania, Calabria, Molise, Puglia, Sardegna, Sicilia, nel rispetto della priorità trasversale del PNRR relativa al “superamento dei divari territoriali” di cui all’art. 2 comma 6 bis del decreto- legge 31 maggio 2021 n.77, convertito in legge 29 luglio 2021, n. 108.
-        tag: 
-          - comuni 
       - title: Quali enti della PA possono presentare domanda?
         content: I soggetti attuatori, ovvero coloro che possono accedere allo strumento predisposto dall'Avviso, sono i Comuni. In seguito saranno pubblicati avvisi ad hoc per altre tipologie di pubbliche amministrazioni.
         tag: 
@@ -666,10 +572,6 @@ questions:
       - title: Qual è l'importo del finanziamento concedibile?
         content: L'importo riconoscibile per l'implementazione del pacchetto  per l'Identità digitale è pari a 14.000,00 euro e sarà erogato all'ente successivamente alla verifica da parte del Dipartimento della corretta alimentazione della Piattaforma e del raggiungimento degli obiettivi prefissati attraverso AgID e IPZS, secondo quanto previsto dall'Art. 13 dell'Avviso.
         tag:
-          - altri-enti
-      - title: Sono previste risorse espressamente dedicate ai territori delle regioni Abruzzo, Basilicata, Campania, Calabria, Molise, Puglia, Sardegna, Sicilia?
-        content: Sì, l'Avviso destina il 40% delle risorse al finanziamento di Soggetti Attuatori ubicati nelle regioni Abruzzo, Basilicata, Campania, Calabria, Molise, Puglia, Sardegna, Sicilia, nel rispetto della priorità trasversale del PNRR relativa al “superamento dei divari territoriali” di cui all’art. 2 comma 6 bis del decreto- legge 31 maggio 2021 n.77, convertito in legge 29 luglio 2021, n. 108. 
-        tag: 
           - altri-enti
       - title: Quali enti della PA possono presentare domanda?
         content: I soggetti attuatori, ovvero coloro che possono accedere allo strumento predisposto dall'Avviso, sono tutte le amministrazioni pubbliche, esclusi i Comuni e le Istituzioni Scolastiche.
