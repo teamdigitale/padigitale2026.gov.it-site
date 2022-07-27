@@ -68,7 +68,7 @@ sectionSecond:
 sectionThird:
   number: '03'
   title: 'Classificare dati e servizi'
-  text: La classificazione dei dati e dei servizi è fondamentale per <strong>abilitare il processo di migrazione delle PA al cloud</strong>.</br></br>La classificazione deve essere trasmessa entro il 18 luglio 2022 per identificare la tipologia del cloud di destinazione per i servizi della PA.
+  text: La classificazione dei dati e dei servizi è fondamentale per <strong>abilitare il processo di migrazione delle PA al cloud</strong>.</br></br>La classificazione deve essere inviata tramite PA digitale 2026 per identificare la tipologia del cloud di destinazione per i servizi della PA.
   image: 'kp-section-3.svg'
   button: true
   linkTo: "/come-partecipare/classifica-pa"
