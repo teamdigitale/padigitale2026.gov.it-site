@@ -122,6 +122,10 @@ const useStyles = createUseStyles({
       '&:hover': {
         color: '#004d99',
       },
+      '&:focus': {
+        borderColor: '#f90',
+        boxShadow: '0 0 0 2px #f90',
+      },
       '@media (max-width: 767px)': {
         width: '100%',
       },

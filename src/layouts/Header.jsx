@@ -347,8 +347,12 @@ const useStyle = createUseStyles({
     display: 'flex',
     alignItems: 'center',
     position: 'absolute',
-    right: '0',
     top: '0',
+    right: '0',
+    zIndex: '999',
+    '@media (min-width: 992px)': {
+      display: 'none',
+    },
   },
 });
 
