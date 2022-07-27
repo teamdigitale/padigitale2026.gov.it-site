@@ -353,6 +353,13 @@ const useStyle = createUseStyles({
     '@media (min-width: 992px)': {
       display: 'none',
     },
+    '&:focus': {
+      borderColor: '#f90',
+      boxShadow: '0 0 0 2px #f90',
+    },
+    '&:active': {
+      backgroundColor: 'transparent',
+    },
   },
 });
 
@@ -507,9 +514,9 @@ const NavHeader = () => {
 
         <HeaderNav isOpen={isOpen} onCloseMenu={toogleMenu}>
           <div className={classes.menuWrapper}>
-            <Button className={classes.closeMenuBtn} aria-label="Chiudi il menu" onClick={toogleMenu}>
+            <button type="button" className={classes.closeMenuBtn} aria-label="Chiudi il menu" onClick={toogleMenu}>
               <Icon color="primary" icon="it-close" padding size="xl" />
-            </Button>
+            </button>
             <Nav navbar className={classes.navbarNav}>
               <li className={classes.offCanvasWrapper}>
                 <a href="/" className={classes.offCanvasTitle}>
