@@ -174,7 +174,6 @@ export const QuestionSection = (props) => {
       const isAccordion = (element) => faqId === element.accordionId;
       setIndexIsOpen(accordions.findIndex(isAccordion));
     }
-
   }, [faqId, accordions]);
 
   const setChips = (chips) =>
