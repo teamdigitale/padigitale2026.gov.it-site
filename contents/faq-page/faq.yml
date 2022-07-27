@@ -253,10 +253,6 @@ questions:
         content: No, non è possibile accedere al finanziamento previsto dall'Avviso, riferito alla Misura 1.2, nel caso in cui il processo di migrazione al cloud sia stato realizzato con Fondi pubblici, nazionali, regionali o europei, secondo quanto previsto dall'art. 8 comma 5 dell'Avviso.
         tag: 
           - comuni
-      - title: Entro quando è possibile inoltrare la domanda di accesso al finanziamento?
-        content: La domanda può essere presentata a partire dalla data di pubblicazione fino ad esaurimento delle risorse e comunque entro e non oltre le ore 23:59 del 22/07/2022, come specificato nell'Avviso 1.2.
-        tag: 
-          - comuni
       - title: Quali tipologie di servizi potranno essere oggetto di migrazione?
         content: Oggetto di migrazione potranno essere tutti i servizi - presenti in lista nell'Allegato 2 corrispondente alla fascia di popolazione del tuo Comune - erogati in tutte le loro forme dal singolo Ente e il cui livello complessivo di efficienza possa essere ottimizzato attraverso una migrazione verso piattaforme Cloud qualificate.
         tag: 
@@ -344,10 +340,6 @@ questions:
         content: No, non è possibile accedere al finanziamento previsto dall'Avviso, riferito alla Misura 1.2, nel caso in cui il processo di migrazione al cloud sia stato realizzato con Fondi pubblici, nazionali, regionali o europei, secondo quanto previsto dall'art. 8 comma 5 dell'Avviso.
         tag: 
           - scuole
-      - title: Entro quando è possibile inoltrare la domanda di accesso al finanziamento?
-        content: La domanda può essere presentata a partire dalla data di pubblicazione fino ad esaurimento delle risorse e comunque entro e non oltre le ore 23:59 del 24/06/2022, come specificato nell'Avviso 1.2.
-        tag: 
-          - scuole
       - title: Quali tipologie di servizi potranno essere oggetto di migrazione?
         content: Oggetto di migrazione potranno essere tutti i servizi erogati in tutte le loro forme dal singolo Ente e il cui livello complessivo di efficienza possa essere ottimizzato attraverso una migrazione verso  piattaforme Cloud Qualificate o presso Infrastrutture della PA idonee
         tag: 
@@ -395,10 +387,6 @@ questions:
         content: Si, è possibile accedere al finanziamento previsto dall'Avviso nel caso in cui l'implementazione delle attività di miglioramento oggetto del finanziamento siano state realizzate a decorrere dal 1° Febbraio 2020, con risorse finanziarie proprie.
         tag: 
           - comuni
-      - title: Entro quando è possibile inoltrare la domanda di accesso al finanziamento?
-        content: La domanda di partecipazione può essere presentata a partire dalla data di pubblicazione dell'Avviso fino ad esaurimento delle risorse disponibili, e comunque non oltre le ore 23.59 del 2 Settembre 2022.
-        tag: 
-          - comuni
       - title: Entro quando dovrà essere rilasciato il sito istituzionale per i Comuni?
         content: Il rilascio del sito istituzionale deve essere concluso nel termine perentorio previsto dall'Allegato 2 corrispondente alla fascia di popolazione del Comune.
         tag: 
@@ -429,10 +417,6 @@ questions:
           - scuole
       - title: È possibile accedere al finanziamento in caso di realizzazione del progetto prima della pubblicazione dell'Avviso "Esperienza del cittadino nei servizi pubblici” SCUOLE (Aprile 2022) per le scuole riferito alla Misura 1.4.1?
         content: Si, è possibile accedere al finanziamento previsto dall'Avviso nel caso in cui tutte le attività necessarie per l’implementazione di un modello standard di siti web destinati alle comunità scolastiche siano state realizzate a decorrere dal 1 Febbraio 2020, con risorse finanziarie proprie.
-        tag: 
-          - scuole
-      - title: Entro quando è possibile inoltrare la domanda di accesso al finanziamento?
-        content: La domanda di partecipazione può essere presentata a partire dalla data di pubblicazione dell'Avviso fino ad esaurimento delle risorse disponibili, e comunque non oltre le ore 23.59 del 24 giugno 2022.
         tag: 
           - scuole
       - title: Ci sono dei modelli di siti web già predisposti per il Soggetto Attuatore che presenta candidatura per l'Avviso riferito alla Misura 1.4.1?
@@ -490,10 +474,6 @@ questions:
         content: I servizi oggetto di migrazione possono essere tutti i servizi di incasso erogati da ciascun Ente facendo valere il principio della titolarità del credito, cioè, potranno essere migrati tutti i servizi di incasso gestiti direttamente dal singolo Ente e/o affidati a soggetti esterni (es. Riscossori; Unioni di Comuni; Comunità Montane) fermo restando che l’Ente mantenga la titolarità del credito vantato.
         tag: 
           - comuni
-      - title: Entro quando è possibile inoltrare la domanda di accesso al finanziamento?
-        content: La domanda può essere presentata a partire  dalla data di pubblicazione dell'Avviso fino ad esaurimento delle risorse disponibili, e comunque non oltre alle ore 23.59 del 2 settembre 2022.
-        tag: 
-          - comuni
       - title: Quando sarà emesso il Decreto di Finanziamento e quali informazioni saranno in esso contenute?
         content: Ogni 30 giorni, dopo la chiusura della finestra temporale, il Dipartimento per la trasformazione digitale provvede alla definizione del decreto di ammissione a finanziamento dei progetti presentati nella relativa finestra temporale e per i quali i Comuni hanno provveduto all’accettazione del finanziamento e alla comunicazione del codice CUP attraverso la Piattaforma. In allegato al decreto di finanziamento sarà riportato l’elenco dei soggetti finanziati in ordine cronologico con il relativo CUP e importo finanziato.
         tag: 
@@ -532,10 +512,6 @@ questions:
           - altri-enti
       - title: Quali interventi possono essere finanziati dall'Avviso 1.4.3 per pagoPA?
         content: I servizi oggetto di migrazione possono essere tutti i servizi di incasso erogati da ciascun Ente facendo valere il principio della titolarità del credito, cioè, potranno essere migrati tutti i servizi di incasso gestiti direttamente dal singolo Ente e/o affidati a soggetti esterni (es. Riscossori; Unioni di Comuni; Comunità Montane) fermo restando che l’Ente mantenga la titolarità del credito vantato.
-        tag: 
-          - altri-enti
-      - title: Entro quando è possibile inoltrare la domanda di accesso al finanziamento?
-        content: La domanda può essere presentata a partire dalla data di pubblicazione dell'Avviso fino ad esaurimento delle risorse disponibili, e comunque non oltre alle ore 23.59 del 9 settembre 2022.
         tag: 
           - altri-enti
       - title: Quando sarà emesso il Decreto di Finanziamento e quali informazioni saranno in esso contenute?
@@ -585,10 +561,6 @@ questions:
         content: No, non è possibile accedere al finanziamento previsto dall'Avviso riferito alla Misura 1.4.3 nel caso in cui l'attuazione degli stessi servizi digitali (app IO) sia stata realizzata con altri finanziamenti pubblici, nazionali, regionali o europei, secondo quanto previsto dall'art. 7 dell'Avviso. Può essere invece finanziata l'attivazione di nuovi servizi, non inclusi nel precedente finanziamento.
         tag: 
           - comuni
-      - title: Entro quando è possibile inoltrare la domanda di accesso al finanziamento?
-        content: La domanda di partecipazione può essere presentata a partire dalla data di pubblicazione dell'Avviso fino ad esaurimento delle risorse disponibili, e comunque non oltre alle ore 23.59 del 2 settembre 2022.
-        tag: 
-          - comuni
       - title: Entro quanto tempo dovrà essere contrattualizzato il fornitore rispetto al Decreto di Finanziamento?
         content: Il fornitore dovà essere contrattualizzato al massimo entro 6 mesi (180 gg) dalla data di notifica del Decreto di Finanziamento.
         tag: 
@@ -615,10 +587,6 @@ questions:
           - altri-enti
       - title: È possibile accedere al finanziamento in caso di realizzazione del progetto, con l'ausilio di Fondi pubblici, prima della pubblicazione dell'Avviso "Adozione appIO" della Misura 1.4.3?
         content: No, non è possibile accedere al finanziamento previsto dall'Avviso riferito alla Misura 1.4.3 nel caso in cui l'attivazione degli stessi servizi digitali (appIO) sia stata realizzata con altri finanziamenti pubblici, nazionali, regionali o europei, secondo quanto previsto dall'art. 7 dell'Avviso. Può essere invece finanziata l'attivazione di nuovi servizi, non inclusi nel precedente finanziamento.
-        tag: 
-          - altri-enti
-      - title: Entro quando è possibile inoltrare la domanda di accesso al finanziamento?
-        content: La domanda di partecipazione può essere presentata a partire dalla data di pubblicazione dell'Avviso fino ad esaurimento delle risorse disponibili, e comunque non oltre alle ore 23.59 del 9 settembre 2022.
         tag: 
           - altri-enti
       - title: Entro quanto tempo dovrà essere contrattualizzato il fornitore rispetto al Decreto di Finanziamento?
@@ -679,10 +647,6 @@ questions:
         content: Si, è possibile accedere al finanziamento previsto dall'Avviso nel caso in cui il processo di adozione della piattaforma di identità digitale SPID/CIE sia stato avviato a decorrere dal 1° febbraio 2020 con fondi propri.
         tag: 
           - comuni
-      - title: Entro quando è possibile inoltrare la domanda di accesso al finanziamento?
-        content: La domanda può essere presentata a partire dalla data di pubblicazione fino ad esaurimento delle risorse disponibili, e comunque, entro e non oltre le ore 23:59 del 02/09/2022, come specificato nell'Avviso.
-        tag: 
-          - comuni
       - title: Quando si considera raggiunto l’obiettivo di integrazione a CIE?
         content: Per CIE sarà necessario che il soggetto attuatore abbia pubblicato l'adesione a CIE e messo in esercizio i servizi online. Farà fede la data di richiesta di adesione, purché la pubblicazione e messa in esercizio dei servizi avvenga entro e non oltre i 60 giorni decorrenti dalla data della richiesta di adesione a CIE.
         tag: 
@@ -739,8 +703,8 @@ questions:
         content: No, non è possibile accedere al finanziamento previsto dall'Avviso riferito alla Misura 1.4.4 nel caso in cui il processo di adozione della piattaforma di identità digitale SPID/CIE sia stato realizzato prima del 1° febbraio 2020, indipendemente dai fondi/risorse utilizzati.
         tag: 
           - altri-enti
-      - title: Entro quando è possibile inoltrare la domanda di accesso al finanziamento?
-        content: La domanda può essere presentata a partire dalla data di pubblicazione dell'Avviso fino ad esaurimento delle risorse disponibili, e comunque, entro e non oltre le ore 23:59 del 09/09/2022.
+      - title: È possibile partecipare alla misura 1.4.4 se ho già attivato SPID/CIE per il servizio SUAP?
+        content: Qualora un ente avesse già implementato infrastruttura per autenticazione digitale SPID/CIE per l’utilizzo del SUAP, in ottemperanza al DPR 160/2010 anche prima del 1 febbraio 2020, è comunque possibile accedere al finanziamento previsto dall’Avviso riferito alla Misura 1.4.4 per altri servizi, specificando in fase di candidatura lo stato delle attività come “da avviare”.
         tag: 
           - altri-enti
   - title: Fondo Innovazione
