@@ -119,8 +119,9 @@ export const KeypointSection = (props) => {
         <div className={classes.bgLightBlue}>
           <Container
             tag="section"
-            aria-labelledby="keypoints-section-title"
+            aria-labelledby={`keypoint-section-title-${number}`}
             className={`${classes.keypointSection} px-3`}
+            id={`keypoint-${number}`}
           >
             {!reverse ? (
               <Row>
@@ -197,6 +198,7 @@ export const KeypointSection = (props) => {
           tag="section"
           aria-labelledby={`keypoint-section-title-${number}`}
           className={`${classes.keypointSection} pl-lg-2 pr-lg-2 pl-3 pr-3`}
+          id={`keypoint-${number}`}
         >
           {!reverse ? (
             <React.Fragment>

@@ -193,9 +193,6 @@ export const GestireProgettoPage = () => {
   return (
     <>
       <SEO title={seoTitle} description={seoDescription} />
-      <div className="sr-only">
-        <h2>{faq.name}</h2>
-      </div>
       <div className="pb-5">
         <Container className="px-3">
           <Row>
@@ -217,7 +214,7 @@ export const GestireProgettoPage = () => {
           </Row>
           <Row className="mb-5 mt-5">
             <Col xs={12} lg={7}>
-              <h2 className={classes.titleUpdate}>Avvia un progetto e coinvolgi il fornitore</h2>
+              <h1 className={classes.titleUpdate}>Avvia un progetto e coinvolgi il fornitore</h1>
               <div className={classes.subtitleUpdate}>
                 Dalle attività necessarie per ricevere il decreto di finanziamento, a tutte le scadenze importanti per
                 la realizzazione dei progetti. Strumenti e informazioni per sapere come e quando coinvolgere i
@@ -229,9 +226,6 @@ export const GestireProgettoPage = () => {
             </Col>
           </Row>
           <div className={classes.navigationContainer}>
-            <h3 id="question-section" className="sr-only">
-              Sezione domande frequenti
-            </h3>
             <SideNavigationAccordion activeList={questions} searchValue={inputValue} list={sidebar} />
             <div
               className="pl-lg-3 content-container"
@@ -242,7 +236,7 @@ export const GestireProgettoPage = () => {
               {/*  <Totop /> */}
               <Container className="pl-lg-4 mb-4">
                 <section id="digital-identity">
-                  <h4 className={`${classes.contentTitle} mt-5`}>Inserisci il codice CUP</h4>
+                  <h3 className={`${classes.contentTitle} mt-5`}>Inserisci il codice CUP</h3>
                   <p>
                     L’invio della candidatura è il primo passo di un percorso guidato dedicato alle PA. Dopo
                     l'accettazione della candidatura, per ricevere l’assegnazione formale del finanziamento, la
@@ -298,7 +292,7 @@ export const GestireProgettoPage = () => {
                     <br /> <strong>Importante</strong>: il codice CUP va inserito su PA digitale 2026 entro 5 giorni
                     dalla data di notifica PEC dell’ammissibilità della domanda.
                   </p>
-                  <h4 className={`${classes.contentTitle} mt-5`}>Approfondimenti</h4>
+                  <h3 className={`${classes.contentTitle} mt-5`}>Approfondimenti</h3>
                   <div className={`${classes.linkWrapper}`}>
                     <a
                       target="_blank"
@@ -342,7 +336,7 @@ export const GestireProgettoPage = () => {
                   </Alert>
                 </section>
                 <section id="select-administration">
-                  <h4 className={`${classes.contentTitle} mt-5`}>Scegli il fornitore</h4>
+                  <h3 className={`${classes.contentTitle} mt-5`}>Scegli il fornitore</h3>
                   <p>
                     Con la pubblicazione del decreto, la tua PA può cominciare la fase implementativa dell’avviso. Per
                     raggiungere gli obiettivi previsti è possibile scegliere liberamente, nel rispetto del codice dei
@@ -412,7 +406,7 @@ export const GestireProgettoPage = () => {
                     </a>
                     <br /> È comunque sempre possibile selezionare un fornitore anche senza utilizzare il MePA.
                   </p>
-                  <h4 className={`${classes.contentTitle} mt-5`}>Approfondimenti</h4>
+                  <h3 className={`${classes.contentTitle} mt-5`}>Approfondimenti</h3>
                   <div className={`${classes.linkWrapper}`}>
                     <a
                       target="_blank"
@@ -501,7 +495,7 @@ export const GestireProgettoPage = () => {
                     </a>
                     <a
                       target="_blank"
-                      href="https://www.consip.it/le-iniziative-consip-a-supporto-del-pnrr"
+                      href="https://www.consip.it/attivit/iniziative-pnrr"
                       title="Link alle iniziative Consip in ambito PNRR ( Link esterno - Apre su nuova scheda )"
                       aria-label="Link alle iniziative Consip in ambito PNRR ( Link esterno - Apre su nuova scheda )"
                       rel="noreferrer"
@@ -541,7 +535,7 @@ export const GestireProgettoPage = () => {
                   </Alert>
                 </section>
                 <section id="verify-data">
-                  <h4 className={`${classes.contentTitle} mt-5`}>Raggiungi gli obiettivi previsti</h4>
+                  <h3 className={`${classes.contentTitle} mt-5`}>Raggiungi gli obiettivi previsti</h3>
                   <p>
                     Una volta che avrai comunicato il fornitore su PA digitale 2026,{' '}
                     <strong>la tua PA avrà un periodo fissato di tempo entro cui deve concludere i lavori</strong>.

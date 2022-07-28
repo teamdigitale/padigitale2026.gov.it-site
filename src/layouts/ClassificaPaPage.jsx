@@ -171,9 +171,6 @@ export const ClassificaPaPage = () => {
   return (
     <>
       <SEO title={seoTitle} description={seoDescription} />
-      <div className="sr-only">
-        <h2>{faq.name}</h2>
-      </div>
       <div className="pb-5">
         <Container className="px-3">
           <Row>
@@ -207,9 +204,6 @@ export const ClassificaPaPage = () => {
             </Col>
           </Row>
           <div className={classes.navigationContainer}>
-            <h3 id="question-section" className="sr-only">
-              Sezione domande frequenti
-            </h3>
             <SideNavigationAccordion activeList={questions} searchValue={inputValue} list={sidebar} />
             <div
               className="pl-lg-3 content-container"
@@ -219,9 +213,9 @@ export const ClassificaPaPage = () => {
             >
               <Container className="pl-lg-4 mb-4">
                 <section>
-                  <h4 className={`${classes.contentTitle} mt-5`}>
+                  <h3 className={`${classes.contentTitle} mt-5`}>
                     Classifica i dati e i servizi della tua amministrazione
-                  </h4>
+                  </h3>
                   <p className={`${classes.contentParagraph} mb-0`}>
                     Segui il processo di classificazione dati e servizi:
                   </p>

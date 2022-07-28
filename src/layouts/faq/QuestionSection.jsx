@@ -1,3 +1,7 @@
+/* eslint-disable max-lines-per-function */
+/* eslint-disable sonarjs/cognitive-complexity */
+/* eslint-disable sonarjs/no-use-of-empty-return-value */
+/* eslint-disable sonarjs/no-identical-functions */
 import React, { useState, useEffect, useContext } from 'react';
 import { Accordion, AccordionHeader, AccordionBody } from 'design-react-kit';
 import { createUseStyles } from 'react-jss';
@@ -19,6 +23,9 @@ const useStyles = createUseStyles({
     letterSpacing: '-0.2px',
     lineHeight: '1.4',
     marginBottom: '0',
+  },
+  sectionTitleSmall: {
+    fontSize: '1.222rem',
   },
   accordionWrapper: {
     '& > .collapse-header [data-toggle=collapse]': {
@@ -78,11 +85,83 @@ const useStyles = createUseStyles({
     textDecoration: 'none',
     display: 'block',
   },
+  chipsList: {
+    listStyleType: 'none',
+    display: 'flex',
+    padding: '0',
+    flexWrap: 'wrap',
+    '& li': {
+      marginTop: '10px',
+      marginRight: '16px',
+      '&:last-child': {
+        marginRight: '0',
+      },
+    },
+    '& .chip': {
+      height: '30px',
+      padding: '3px 20px',
+      borderRadius: '30px',
+      display: 'inline-flex',
+      alignItems: 'center',
+      position: 'relative',
+      border: '1px solid #dfe4f2',
+      color: '#33485C',
+      fontSize: '0.889rem',
+      fontWeight: '700',
+      transition: '.2s ease',
+      '&:hover': {
+        color: '#fff',
+        background: '#06c',
+      },
+      '&.active': {
+        border: '1px solid #06c',
+        padding: '3px 20px',
+        background: '#06c',
+        color: '#fff',
+        transition: '.2s ease',
+      },
+    },
+    '& .chip-icon': {
+      transform: 'scale(0)',
+      transformOrigin: 'center',
+      transition: 'transform .4s ease',
+      background: '#fff',
+      width: '0',
+      height: '0',
+      borderRadius: '50%',
+      display: 'inline-flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+    '& .chip-icon.active': {
+      transform: 'scale(1)',
+      transformOrigin: 'center',
+      marginLeft: '20px',
+      marginRight: '-10px',
+      transition: 'transform .4s ease',
+      height: '23px',
+      width: '23px',
+    },
+  },
+  filter: {
+    fontSize: '1rem',
+    marginBottom: '30px',
+    marginTop: '22px',
+    display: 'block',
+    '& .question-selected': {
+      fontWeight: '700',
+    },
+  },
 });
 
 export const QuestionSection = (props) => {
   const classes = useStyles();
-  const { title, accordions, sectionId } = props.item;
+  const { title, sectionId, sectionTitle, smallTitle } = props.item;
+  const { totalQuestions } = props;
+  let { accordions } = props.item;
+  const chips = props.item.chips;
+
+  accordions = accordions.filter((accordion) => accordion !== '');
 
   const [indexIsOpen, setIndexIsOpen] = useState(-1);
   const [{ faqId }] = useContext(GlobalStateContext);
@@ -97,51 +176,101 @@ export const QuestionSection = (props) => {
     }
   }, [faqId, accordions]);
 
+  const setChips = (chips) =>
+    chips
+      .map((chip) => {
+        if (chip.title) {
+          return `<li><button class="chip" data-id="${chip.id}">${chip.title}<span class="chip-icon-container"><div class="chip-icon"><svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 4.5L6 9.5L14.5 1" stroke="#06c"/></svg></div></span></button></li>`;
+        }
+      })
+      .join('');
+
+  const setTotalQuestions = (id) => {
+    const accordion = totalQuestions.find((question) => {
+      if (question.sectionId === id) {
+        return question;
+      }
+    });
+    return accordion.accordions.length;
+  };
+
   return (
     <>
       <section id={sectionId} className={classes.section} aria-labelledby={sectionId + '-headings'}>
-        <h3 id={sectionId + '-headings'} className={`${classes.sectionTitle} mb-4`}>
-          {title}
-        </h3>
-        <Accordion>
-          {accordions.map((accordion, i) => (
-            <div key={accordion.title} className={classes.accordionWrapper}>
-              <AccordionHeader
-                onToggle={() => setIndexIsOpen((state) => (state === i ? -1 : i))}
-                active={i === indexIsOpen}
-                className={classes.accordionTitle}
-                id={accordion.accordionId}
-              >
-                <span dangerouslySetInnerHTML={{ __html: accordion.title }}></span>
-              </AccordionHeader>
-              <AccordionBody active={i === indexIsOpen} className={classes.accordionBody}>
-                <div dangerouslySetInnerHTML={{ __html: accordion.content }}></div>
-                {accordion.link && (
-                  <div className={classes.linkAccordion}>
-                    <ExternalLink linkTo={accordion.link} ariaLabel={accordion.ariaLabel}>
-                      <span dangerouslySetInnerHTML={{ __html: accordion.linkLabel }}></span>
-                      <img src="/assets/external-icon.svg" alt="" />
-                    </ExternalLink>
-                  </div>
-                )}
-                {accordion.updates ? (
-                  <Link className={classes.modalLink} aria-label={accordion.ariaLabel} to="/ricevi-aggiornamenti">
-                    {accordion.updates}
-                  </Link>
-                ) : (
-                  ''
-                )}
-                {accordion.assistance ? (
-                  <Link className={classes.modalLink} aria-label={accordion.ariaLabel} to="/supporto/assistenza">
-                    {accordion.assistance}
-                  </Link>
-                ) : (
-                  ''
-                )}
-              </AccordionBody>
-            </div>
-          ))}
-        </Accordion>
+        {sectionTitle ? (
+          <>
+            <h3 className={`${classes.sectionTitle} mb-4`}>{sectionTitle}</h3>
+            <h4 id={sectionId + '-headings'} className={`${classes.sectionTitleSmall} mb-4`}>
+              {title}
+            </h4>
+          </>
+        ) : smallTitle ? (
+          <h4 id={sectionId + '-headings'} className={`${classes.sectionTitleSmall} mb-4`}>
+            {title}
+          </h4>
+        ) : (
+          <h3 id={sectionId + '-headings'} className={`${classes.sectionTitle} mb-4`}>
+            {title}
+          </h3>
+        )}
+        {chips ? (
+          <div className="tags-container">
+            <ul
+              data-measure={sectionId}
+              className={`chips-list ${classes.chipsList}`}
+              dangerouslySetInnerHTML={{ __html: setChips(chips) }}
+            ></ul>
+            <span className={classes.filter}>
+              Totale domande frequenti selezionate:
+              <span>
+                <span className="question-selected"> {accordions.length}</span>/{setTotalQuestions(sectionId)}
+              </span>
+            </span>
+          </div>
+        ) : (
+          ''
+        )}
+        {
+          <Accordion>
+            {accordions.map((accordion, i) => (
+              <div key={accordion.i} className={classes.accordionWrapper}>
+                <AccordionHeader
+                  onToggle={() => setIndexIsOpen((state) => (state === i ? -1 : i))}
+                  active={i === indexIsOpen}
+                  className={classes.accordionTitle}
+                  id={accordion.accordionId}
+                >
+                  <span dangerouslySetInnerHTML={{ __html: accordion.title }}></span>
+                </AccordionHeader>
+                <AccordionBody active={i === indexIsOpen} className={classes.accordionBody}>
+                  <div dangerouslySetInnerHTML={{ __html: accordion.content }}></div>
+                  {accordion.link && (
+                    <div className={classes.linkAccordion}>
+                      <ExternalLink linkTo={accordion.link} ariaLabel={accordion.ariaLabel}>
+                        <span dangerouslySetInnerHTML={{ __html: accordion.linkLabel }}></span>
+                        <img src="/assets/external-icon.svg" alt="" />
+                      </ExternalLink>
+                    </div>
+                  )}
+                  {accordion.updates ? (
+                    <Link className={classes.modalLink} aria-label={accordion.ariaLabel} to="/ricevi-aggiornamenti">
+                      {accordion.updates}
+                    </Link>
+                  ) : (
+                    ''
+                  )}
+                  {accordion.assistance ? (
+                    <Link className={classes.modalLink} aria-label={accordion.ariaLabel} to="/supporto/assistenza">
+                      {accordion.assistance}
+                    </Link>
+                  ) : (
+                    ''
+                  )}
+                </AccordionBody>
+              </div>
+            ))}
+          </Accordion>
+        }
       </section>
     </>
   );
@@ -151,4 +280,5 @@ QuestionSection.propTypes = {
   item: PropTypes.object.isRequired,
   inputText: PropTypes.string,
   setQuestions: PropTypes.func,
+  totalQuestions: PropTypes.object,
 };

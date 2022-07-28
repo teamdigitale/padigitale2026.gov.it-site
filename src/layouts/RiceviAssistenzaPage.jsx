@@ -174,9 +174,6 @@ export const RiceviAssistenzaPage = () => {
   return (
     <>
       <SEO title={seoTitle} description={seoDescription} />
-      <div className="sr-only">
-        <h2>{faq.name}</h2>
-      </div>
       <div className="pb-5">
         <Container className="px-3">
           <Row>
@@ -198,7 +195,7 @@ export const RiceviAssistenzaPage = () => {
           </Row>
           <Row className="mb-5 mt-5">
             <Col xs={12} lg={7}>
-              <h2 className={classes.titleUpdate}>Trova le risposte alle tue domande o ricevi assistenza</h2>
+              <h1 className={classes.titleUpdate}>Trova le risposte alle tue domande o ricevi assistenza</h1>
               <div className={classes.subtitleUpdate}>
                 All’interno della sezione dedicata al supporto puoi{' '}
                 <strong>consultare le risposte alle domande più frequenti</strong> o{' '}
@@ -210,9 +207,6 @@ export const RiceviAssistenzaPage = () => {
             </Col>
           </Row>
           <div className={classes.navigationContainer}>
-            <h3 id="question-section" className="sr-only">
-              Sezione domande frequenti
-            </h3>
             <SideNavigationAccordion activeList={questions} searchValue={inputValue} list={sidebar} />
             <div
               className="pl-lg-3 content-container"
@@ -223,7 +217,7 @@ export const RiceviAssistenzaPage = () => {
               {/*  <Totop /> */}
               <Container className="pl-lg-4 mb-4">
                 <section>
-                  <h4 className={`${classes.contentTitle} mt-5`}>Ricevi supporto dedicato su PA digitale 2026</h4>
+                  <h3 className={`${classes.contentTitle} mt-5`}>Ricevi supporto dedicato su PA digitale 2026</h3>
                   <p className={`${classes.contentParagraph} mb-0`}>
                     Il processo di assistenza può prevedere fino a <strong>quattro passaggi</strong>:
                   </p>

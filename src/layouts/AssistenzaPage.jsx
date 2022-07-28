@@ -8,6 +8,7 @@ import { navigate } from 'gatsby';
 import { Row, Col, Input, Breadcrumb, BreadcrumbItem } from 'design-react-kit';
 import Select from 'react-select';
 import ReCAPTCHA from 'react-google-recaptcha';
+import { Link } from 'gatsby';
 import content from '../../contents/assistenza/assistenza.yml';
 import labels from '../../contents/labels.yml';
 import links from '../../contents/links.yml';
@@ -325,6 +326,38 @@ const useStyles = createUseStyles({
       marginBottom: '6rem',
     },
   },
+  banner: {
+    display: 'flex',
+    alignItems: 'center',
+    padding: '22px 30px',
+    background: '#F0F6FC',
+    marginTop: '60px',
+    justifyContent: 'space-between',
+    '@media (max-width: 991px)': {
+      flexDirection: 'column',
+      alignItems: 'flex-start',
+    },
+  },
+  bannerLeft: {
+    flexBasis: '55%',
+    '@media (max-width: 991px)': {
+      marginBottom: '20px',
+    },
+  },
+  bannerParagraph: {
+    fontSize: '1rem',
+    lineHeight: '24px',
+    margin: '0',
+    '& .fw-600': {
+      fontWeight: '600',
+      margin: '0',
+    },
+  },
+  bannerLink: {
+    fontSize: '1.111rem',
+    fontWeight: '700',
+    textDecoration: 'none',
+  },
 });
 
 export const AssistenzaPage = () => {
@@ -555,6 +588,40 @@ export const AssistenzaPage = () => {
         </Row>
         <Row>
           <Col xs={12}>
+            <div className={classes.banner}>
+              <div className={classes.bannerLeft}>
+                <p className={classes.bannerParagraph}>
+                  <p className="fw-600">Hai già un profilo utente su PA digitale 2026?</p>
+                  Accedi all’area riservata per inviare la tua richiesta e ricevere una risposta ancora più veloce.
+                </p>
+              </div>
+              <div className={classes.bannerRight}>
+                <Link
+                  className={classes.bannerLink}
+                  aria-label="vai alla pagina Accedi"
+                  to="https://areariservata.padigitale2026.gov.it/sis_SpidPage"
+                >
+                  Accedi con identità digitale
+                  <svg
+                    className="ml-3"
+                    width="23"
+                    height="16"
+                    viewBox="0 0 23 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1 7C0.447715 7 0 7.44772 0 8C0 8.55228 0.447715 9 1 9V7ZM21.7321 8.70711C22.1226 8.31658 22.1226 7.68342 21.7321 7.29289L15.3681 0.928932C14.9776 0.538408 14.3444 0.538408 13.9539 0.928932C13.5634 1.31946 13.5634 1.95262 13.9539 2.34315L19.6108 8L13.9539 13.6569C13.5634 14.0474 13.5634 14.6805 13.9539 15.0711C14.3444 15.4616 14.9776 15.4616 15.3681 15.0711L21.7321 8.70711ZM1 9H21.025V7H1V9Z"
+                      fill="#0066CC"
+                    />
+                  </svg>
+                </Link>
+              </div>
+            </div>
+          </Col>
+        </Row>
+        <Row>
+          <Col xs={12}>
             <div className={classes.mandatory} id="mandatory-label">
               I campi con asterisco sono obbligatori
             </div>
@@ -611,7 +678,7 @@ export const AssistenzaPage = () => {
               <Row className="mt-5">
                 <Col xs={12} md={6} lg={4}>
                   <div className="select-wrapper">
-                    <label htmlFor="argument-select-input" className={classes.selectLabel}>
+                    <label htmlFor="00N7Q000007qqtk" className={classes.selectLabel}>
                       {argumentLabel}
                     </label>
                     <Select
