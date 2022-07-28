@@ -495,7 +495,7 @@ export const GestireProgettoPage = () => {
                     </a>
                     <a
                       target="_blank"
-                      href="https://www.consip.it/le-iniziative-consip-a-supporto-del-pnrr"
+                      href="https://www.consip.it/attivit/iniziative-pnrr"
                       title="Link alle iniziative Consip in ambito PNRR ( Link esterno - Apre su nuova scheda )"
                       aria-label="Link alle iniziative Consip in ambito PNRR ( Link esterno - Apre su nuova scheda )"
                       rel="noreferrer"
