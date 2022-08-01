@@ -577,7 +577,7 @@ questions:
         content: 'Domande frequenti: <br><a target="_blank" href="https://federazione.servizicie.interno.gov.it/faq">https://federazione.servizicie.interno.gov.it/faq</a><br></br>Risorse per sviluppatori:<br><a target="_blank" href="https://developers.italia.it/it/cie">https://developers.italia.it/it/cie</a>'
         tag: 
           - comuni
-      - title: E’ possibile richiedere il finanziamento se ho già integrato SPID e/o CIE a titolo gratuito tramite una piattaforma regionale?
+      - title: È possibile richiedere il finanziamento se ho già integrato SPID e/o CIE a titolo gratuito tramite una piattaforma regionale?
         content: No, si considera ammissibile solo la prima integrazione fatta dagli enti purché finanziata con fondi propri dopo il 1 febbraio 2020.
         tag: 
           - comuni
