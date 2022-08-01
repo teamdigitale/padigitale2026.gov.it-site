@@ -436,6 +436,10 @@ questions:
         content: Per transazione con esito positivo si intende sia una transazione reale eseguita da un cittadino, nel caso in cui la stagionalità del singolo servizio di incasso lo consenta, oppure - in caso contrario - una transazione reale con importo di valore simbolico (es. 0,01€) ma con codice tassonomico e IUV reale, al fine di poter verificare l’effettiva e corretta integrazione del servizio di incasso in modalità end-to-end (cd. transazione di test)
         tag: 
           - comuni
+      - title: Ho integrato dei servizi tramite una piattaforma regionale a titolo gratuito. Posso richiedere il finanziamento per l'integrazione nella stessa piattaforma dei servizi aggiuntivi?
+        content: Sì, è possibile accedere al finanziamento previsto dall'Avviso per l'implementazione dei servizi aggiuntivi purché siano finanziati con fondi propri dopo il 1 aprile 2021.
+        tag: 
+          - comuni
       - title: Quali enti della PA possono presentare domanda?
         content: 'Sono invitate a presentare proposte a valere sul presente Avviso:<br>a. Le Regioni e le Province Autonome;<br>b. Le  Aziende sanitarie locali e le Aziende ospedaliere pubbliche;<br>c. Le Università e gli Istituti di Istruzione Universitaria pubblici, gli Enti e le Istituzioni di ricerca pubblici e le Istituzioni per l’Alta Formazione Artistica, Musicale e Coreutica - (AFAM) pubbliche.'
         tag: 
@@ -489,6 +493,10 @@ questions:
           - comuni
       - title: Quando il processo di migrazione e attivazione dei servizi si intende concluso con esito positivo per i servizi attivati sull’app IO?
         content: Il processo si riterrà concluso con esito positivo quando le richieste di pubblicazione saranno approvate dalla pagoPA S.p.A  e tutti i servizi saranno visibili in App.
+        tag: 
+          - comuni
+      - title: Ho integrato dei servizi tramite una piattaforma regionale a titolo gratuito. Posso richiedere il finanziamento per l'integrazione nella stessa piattaforma dei servizi aggiuntivi?
+        content: Sì, è possibile accedere al finanziamento previsto dall'Avviso per l'implementazione dei servizi aggiuntivi purché siano finanziati con fondi propri dopo il 1 aprile 2021.
         tag: 
           - comuni
       - title: Quali enti della PA possono presentare domanda?
@@ -567,6 +575,10 @@ questions:
           - comuni
       - title: Link utili per tematiche tecniche su CIE
         content: 'Domande frequenti: <br><a target="_blank" href="https://federazione.servizicie.interno.gov.it/faq">https://federazione.servizicie.interno.gov.it/faq</a><br></br>Risorse per sviluppatori:<br><a target="_blank" href="https://developers.italia.it/it/cie">https://developers.italia.it/it/cie</a>'
+        tag: 
+          - comuni
+      - title: È possibile richiedere il finanziamento se ho già integrato SPID e/o CIE a titolo gratuito tramite una piattaforma regionale?
+        content: No, si considera ammissibile solo la prima integrazione fatta dagli enti purché finanziata con fondi propri dopo il 1 febbraio 2020.
         tag: 
           - comuni
       - title: Qual è l'importo del finanziamento concedibile?
