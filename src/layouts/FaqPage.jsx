@@ -359,7 +359,7 @@ export const FaqPage = () => {
     chipsArr.forEach((chip) => {
       chip.addEventListener('click', chipHandler, true);
     });
-  }, []);
+  }, [search]);
 
   return (
     <>
