@@ -124,43 +124,42 @@ opportunity:
       id: centri-facili
 heroCarouselNews:
   - id: 1
+    category: Novità
+    title: "Parte il bando per i volontari del Servizio Civile Digitale"
+    description: Oltre 2.000 ragazzi tra i 18 e i 28 anni potranno partecipare per diventare “facilitatori digitali” 
+    source: 'innovazione.gov.it'
+    linkTo: 'https://innovazione.gov.it/notizie/articoli/pnrr-parte-il-bando-per-i-volontari-del-servizio-civile-digitale/'
+  - id: 2
     category: Nuovo Avviso pubblico
     title: "Pubblicato l'Avviso per il potenziamento della resilienza cyber per la PA Locale"
     description: 45 milioni dall'Agenzia per la Cybersicurezza Nazionale destinati alle Regioni, Province Autonome e Città Metropolitane 
     source: 'acn.gov.it'
     linkTo: 'https://www.acn.gov.it/notizie/contenuti/pubblicato-avviso-3-2022-per-il-potenziamento-della-resilienza-cyber-per-la-PA-locale'
-  - id: 2
+  - id: 3
     category: Nuovo Avviso pubblico
     title: "Migrazione al cloud dei Comuni, nuove risorse grazie al PNRR"
     description: Esauriti i 500 milioni del primo Avviso, previsti ora ulteriori 215 milioni per favorire la migrazione al cloud di tutti Comuni
     source: 'innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/articoli/migrazione-al-cloud-dei-comuni-nuove-risorse-grazie-al-pnrr'
-  - id: 3
+  - id: 4
     type: internal
     category: AGGIORNAMENTO
     title: Decreto finanziamento 1.4.3 pagoPA
     description: È stato pubblicato il Decreto di finanziamento per la finestra temporale n. 1 (04/04/2022-03/05/2022) dell'Avviso per i Comuni
     source: 'Avviso 1.4.3 pagoPA - Comuni'
     linkTo: 'https://areariservata.padigitale2026.gov.it/Pa_digitale2026_dettagli_avviso?id=a017Q00000Z9vFUQAZ#decreti%20di%20finanziamento'
-  - id: 4
+  - id: 5
     category: Nuovi Avvisi pubblici
     title: "PA digitale 2026, pubblicati nuovi Avvisi per le scuole"
     description: Ora anche le scuole primarie potranno richiedere risorse per i siti internet. Nuovi fondi per la migrazione al cloud
     source: 'innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/articoli/pa-digitale-2026-pubblicati-nuovi-avvisi-per-le-scuole/'
-  - id: 5
+  - id: 6
     category: Chiusura Avviso pubblico
     title: "Esperienza del cittadino nei servizi pubblici, già richiesti 400 milioni"
     description: Chiude l’Avviso 1.4.1 per i Comuni del PNRR. Previste nuove risorse
     source: 'innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/articoli/esperienza-del-cittadino-nei-servizi-pubblici-gia-richiesti-400-milioni/'
-  - id: 6
-    type: internal
-    category: AGGIORNAMENTO
-    title: Documentazione avviso 1.4.4
-    description: È stato pubblicato un Decreto di rettifica per l'avviso 1.4.4 dedicato ai Comuni
-    source: 'Avviso 1.4.4 - Comuni'
-    linkTo: 'https://areariservata.padigitale2026.gov.it/Pa_digitale2026_dettagli_avviso?id=a017Q00000Z9i2jQAB'
 support:
   tag: Supporto
   title: Consulta le domande frequenti o scrivici per ricevere assistenza
