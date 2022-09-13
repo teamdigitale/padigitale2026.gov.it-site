@@ -144,4 +144,4 @@ seguito indicati. Nel caso in cui si disabilitino tutti i cookie, il Sito potreb
 
 Le presenti informazioni sono aggiornate alla data riportata in calce a questa pagina.
 
-<p class="text-right"><em>ultimo aggiornamento: 31/03/2022</em></p>
+<p class="text-right"><em>ultimo aggiornamento: 13/09/2022</em></p>
