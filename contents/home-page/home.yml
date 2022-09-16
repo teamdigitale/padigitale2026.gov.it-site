@@ -124,42 +124,41 @@ opportunity:
       id: centri-facili
 heroCarouselNews:
   - id: 1
+    category: Novità
+    title: "Avvisi per le Scuole: nuova scadenza per cloud e siti internet"
+    description: "La possibilità di partecipare agli Avvisi su PA digitale 2026 è stata estesa fino al prossimo 21 ottobre"
+    source: 'innovazione.gov.it'
+    linkTo: 'https://innovazione.gov.it/notizie/articoli/avvisi-per-le-scuole-nuova-scadenza-per-cloud-e-siti-internet/'
+  - id: 2
     category: Nuovi avvisi pubblici
     title: "Altri 310 milioni per la digitalizzazione della Pubblica Amministrazione"
     description: "Identità digitale, pagoPA, app IO e Piattaforme Notifiche Digitali: prosegue il percorso per digitalizzare il rapporto tra cittadini e Pubblica Amministrazione"
     source: 'innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/articoli/pnrr-altri-310-milioni-per-la-digitalizzazione-della-pubblica-amministrazione/'
-  - id: 2
+  - id: 3
     category: Nuovo avviso pubblico
     title: "Pubblicato l’Avviso per il potenziamento delle capacità di analisi e scrutinio software nella PA Centrale"
     description: 15 milioni dall’Agenzia per la Cybersicurezza nazionale destinati a Ministeri e Presidenza del Consiglio dei ministri, Agenzie Fiscali. Scade il 23 settembre 2022
     source: 'acn.gov.it'
     linkTo: 'https://www.acn.gov.it/notizie/contenuti/pubblicato-avviso-3-2022-per-il-potenziamento-della-resilienza-cyber-per-la-PA-locale'
-  - id: 3
+  - id: 4
     category: Novità
     title: "Parte il bando per i volontari del Servizio Civile Digitale"
     description: Oltre 2.000 ragazzi tra i 18 e i 28 anni potranno partecipare per diventare “facilitatori digitali” 
     source: 'innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/articoli/pnrr-parte-il-bando-per-i-volontari-del-servizio-civile-digitale/'
-  - id: 4
+  - id: 5
     category: Nuovo Avviso pubblico
     title: "Pubblicato l'Avviso per il potenziamento della resilienza cyber per la PA Locale"
     description: 45 milioni dall'Agenzia per la Cybersicurezza Nazionale destinati alle Regioni, Province Autonome e Città Metropolitane 
     source: 'acn.gov.it'
     linkTo: 'https://www.acn.gov.it/notizie/contenuti/pubblicato-avviso-3-2022-per-il-potenziamento-della-resilienza-cyber-per-la-PA-locale'
-  - id: 5
+  - id: 6
     category: Nuovo Avviso pubblico
     title: "Migrazione al cloud dei Comuni, nuove risorse grazie al PNRR"
     description: Esauriti i 500 milioni del primo Avviso, previsti ora ulteriori 215 milioni per favorire la migrazione al cloud di tutti Comuni
     source: 'innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/articoli/migrazione-al-cloud-dei-comuni-nuove-risorse-grazie-al-pnrr'
-  - id: 6
-    type: internal
-    category: AGGIORNAMENTO
-    title: Decreto finanziamento 1.4.3 pagoPA
-    description: È stato pubblicato il Decreto di finanziamento per la finestra temporale n. 1 (04/04/2022-03/05/2022) dell'Avviso per i Comuni
-    source: 'Avviso 1.4.3 pagoPA - Comuni'
-    linkTo: 'https://areariservata.padigitale2026.gov.it/Pa_digitale2026_dettagli_avviso?id=a017Q00000Z9vFUQAZ#decreti%20di%20finanziamento'
 support:
   tag: Supporto
   title: Consulta le domande frequenti o scrivici per ricevere assistenza
