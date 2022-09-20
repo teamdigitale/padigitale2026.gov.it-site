@@ -150,7 +150,7 @@ beneficiaries:
   - number: 1.4.1
     id: esp-serv-pubb
     title: Esperienza del Cittadino nei servizi pubblici
-    money: '613 <span>milioni di euro<span>'
+    money: '813 <span>milioni di euro<span>'
     tags:
       - value: comuni
         label: Comuni
@@ -202,7 +202,7 @@ beneficiaries:
   - number: 1.4.3
     id: adoz-pago
     title: Adozione pagoPA e app IO
-    money: '750 <span>milioni di euro<span>'
+    money: '580 <span>milioni di euro<span>'
     tags:
       - value: comuni
         label: Comuni
@@ -235,7 +235,7 @@ beneficiaries:
   - number: 1.4.4
     id: adoz-id
     title: Adozione identità digitale
-    money: '285 <span>milioni di euro<span>'
+    money: '255 <span>milioni di euro<span>'
     tags:
       - value: comuni
         label: Comuni
