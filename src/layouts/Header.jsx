@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable sonarjs/no-duplicate-string */
 import { Link } from 'gatsby';
 import React, { useState, useContext, useEffect } from 'react';
@@ -373,24 +374,14 @@ const SlimHeader = () => {
   return (
     <HeaderReactKit type="slim" theme="light">
       <HeaderContent className="px-2">
-        <HeaderBrand
-          href="https://innovazione.gov.it/"
-          target="_blank"
-          className={classes.headerLink}
-          rel="noreferrer"
-          aria-label={externalLinks.dipartimento.ariaLabel}
-        >
+        <HeaderBrand href="https://innovazione.gov.it/" target="_blank" className={classes.headerLink} rel="noreferrer">
+          <span className="sr-only">collegamento esterno apre su nuova scheda</span>
           {externalLinks.dipartimento.label}
         </HeaderBrand>
         <HeaderLinkZone aria-label="Siti esterni correlati">
           <div className={classes.headerToggler}>
-            <a
-              href="https://innovazione.gov.it/"
-              target="_blank"
-              className={classes.headerLink}
-              aria-label="Dipartimento per la Trasformazione Digitale (Collegamento esterno - Apre su nuova scheda)"
-              rel="noreferrer"
-            >
+            <a href="https://innovazione.gov.it/" target="_blank" className={classes.headerLink} rel="noreferrer">
+              <span className="sr-only">Collegamento esterno - Apre su nuova scheda</span>
               {externalLinks.dipartimento.label}
             </a>
             <Button
@@ -405,20 +396,12 @@ const SlimHeader = () => {
           <Collapse isOpen={collapse}>
             <div className={classes.linkListWrapperCustom}>
               <LinkList className={classes.topListLink}>
-                <LinkListItem
-                  href={externalLinks.italiaDigitale.linkTo}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label="VAI AL SITO Italia digitale 2026 (Collegamento esterno - Apre su nuova scheda)"
-                >
+                <LinkListItem href={externalLinks.italiaDigitale.linkTo} target="_blank" rel="noreferrer">
+                  <span className="sr-only">Collegamento esterno - Apre su nuova scheda</span>
                   {externalLinks.italiaDigitale.label}
                 </LinkListItem>
-                <LinkListItem
-                  href={externalLinks.pnrr.linkTo}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label="Italia domani - PNRR (Collegamento esterno - Apre su nuova scheda)"
-                >
+                <LinkListItem href={externalLinks.pnrr.linkTo} target="_blank" rel="noreferrer">
+                  <span className="sr-only">Collegamento esterno - Apre su nuova scheda</span>
                   {externalLinks.pnrr.label}
                 </LinkListItem>
               </LinkList>
@@ -433,10 +416,11 @@ const SlimHeader = () => {
         >
           <img className="d-none d-lg-block" src="/assets/eu-flag.svg" alt={externalLinks.eu.label}></img>
         </ExternalLink>
-        <Link className={classes.login} to={externalLinks.accedi.linkTo} aria-label={externalLinks.accedi.ariaLabel}>
+        <Link className={classes.login} to={externalLinks.accedi.linkTo}>
           <img src="/assets/user-icon.svg" alt={externalLinks.eu.label}></img>
           <img className="mobile" src="/assets/user-icon-dark.svg" alt={externalLinks.eu.label}></img>
           <span>{externalLinks.accedi.label}</span>
+          <span className="sr-only">Accedi all'area privata</span>
         </Link>
       </HeaderContent>
     </HeaderReactKit>
@@ -449,17 +433,19 @@ const CenterHeader = () => {
     <HeaderReactKit type="center" theme="light" className={classes.headerCenterWrapper}>
       <HeaderContent className={`${classes.headerCenter} px-2`}>
         <div className="it-brand-wrapper pl-5 pl-sm-0">
-          <Link
-            to="/"
-            aria-label="Pa digitale 2026 le risorse per una PA protagonista della transizione digitale - vai alla home page"
-          >
+          <Link to="/">
             <div className="it-brand-text pr-0">
               <div className="d-md-flex align-items-center">
-                <img className="icon repubblica-logo" src="/assets/repubblica-logo-blue.svg" alt="" />
-                <img className="icon site-logo" src="/assets/site-logo.svg" alt="" />
+                <img
+                  className="icon repubblica-logo"
+                  src="/assets/repubblica-logo-blue.svg"
+                  alt="logo repubblica italiana"
+                />
+                <img className="icon site-logo" src="/assets/site-logo.svg" alt="logo PA digitale" />
                 <div className="d-none d-lg-inline-block">
                   <div className="h3 mb-0">{headerTitle}</div>
                   <div className={classes.subtitle}>{headerSubtitle}</div>
+                  <span className="sr-only">Vai alla home</span>
                 </div>
               </div>
             </div>
@@ -520,8 +506,9 @@ const NavHeader = () => {
             <Nav navbar className={classes.navbarNav}>
               <li className={classes.offCanvasWrapper}>
                 <a href="/" className={classes.offCanvasTitle}>
-                  <img className="icon" src="/assets/site-logo.svg" alt="Vai alla pagina principale" />
+                  <img className="icon" src="/assets/site-logo.svg" alt="logo PA digitale" />
                   {headerTitle}
+                  <span className="sr-only">vai alla home page</span>
                 </a>
               </li>
               <NavItem active>
