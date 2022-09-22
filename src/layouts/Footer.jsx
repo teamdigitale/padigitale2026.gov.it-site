@@ -151,12 +151,9 @@ const SlimFooter = () => {
             </Link>
           </li>
           <li className={`${classes.listItem} mr-0 mr-md-5`}>
-            <ExternalLink
-              linkTo={a11y.linkTo}
-              ariaLabel={a11y.ariaLabel}
-              className="list-item mid-footer-link mx-4 mx-md-0"
-            >
+            <ExternalLink linkTo={a11y.linkTo} className="list-item mid-footer-link mx-4 mx-md-0">
               {a11y.label}
+              <span className="sr-only">Collegamento esterno - Apre su nuova scheda</span>
             </ExternalLink>
           </li>
         </ul>

@@ -486,7 +486,13 @@ export const UpdatesPage = () => {
 
   useEffect(() => {
     if (formSubmitted === true) {
-      setUser({ address: '', ente: '', enteSelect: '', representative: '', enteType: '' });
+      setUser({
+        address: '',
+        ente: '',
+        enteSelect: '',
+        representative: '',
+        enteType: '',
+      });
     }
   }, [formSubmitted]);
 
@@ -722,6 +728,7 @@ export const UpdatesPage = () => {
           Cliccando su INVIA dichiaro di aver letto e compreso{' '}
           <a target="_blank" href={privacy.linkTo} rel="noreferrer">
             l'informativa privacy
+            <span className="sr-only">Collegamento esterno - Apre su nuova scheda</span>
           </a>
         </p>
         <div className={`${classes.submitContainer} d-flex mt-5`}>

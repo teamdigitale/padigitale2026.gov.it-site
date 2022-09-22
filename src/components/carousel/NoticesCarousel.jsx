@@ -182,13 +182,7 @@ export const NoticesCarousel = ({ content, title }) => {
 
   const setLabel = (element) => {
     if (element.new) {
-      return (
-        <span
-          className={classes.badgeNew}
-          aria-label="nuovo avviso"
-          dangerouslySetInnerHTML={{ __html: 'NUOVO' }}
-        ></span>
-      );
+      return <span className={classes.badgeNew} dangerouslySetInnerHTML={{ __html: 'NUOVO' }}></span>;
     } else {
       if (element.expiring) {
         return (

@@ -65,21 +65,27 @@ involved:
     - id: 1
       image: '/assets/mitd-logo.svg'
       text: <strong>Il Ministro per l’innovazione tecnologica e transizione digitale</strong>, all’interno di Italia domani, <strong>ha promosso Italia digitale 2026</strong>, il piano d’investimenti per la digitalizzazione del paese.
+      alt: logo del MITD
     - id: 2
       image: '/assets/dipartment-logo.svg'
       text: Il <strong>Dipartimento per la trasformazione digitale</strong> della Presidenza del Consiglio dei Ministri è <strong>responsabile per l’attuazione degli investimenti di Italia digitale 2026</strong>. Per mezzo del Transformation Office assiste le PA nel processo di digitalizzazione.
+      alt: logo del Dipartimento per la traformazione digitale
     - id: 3
       image: '/assets/agid-logo-blue.svg'
       text: L’<strong>Agenzia per l'Italia digitale</strong> è l’agenzia tecnica che ha il compito di <strong>garantire la realizzazione degli obiettivi dell’Agenda digitale italiana</strong>. In quanto ente delegato, è responsabile per l’attuazione di misure nell’ambito dell’accesso ai servizi pubblici digitali.
+      alt: logo AGID
     - id: 4
       image: '/assets/pagopa-logo.svg'
       text: <strong>PagoPA S.p.a</strong> è la società pubblica nata per realizzare e gestire infrastrutture che assicurino lo sviluppo e la diffusione dei servizi pubblici digitali. In quanto ente delegato, è <strong>responsabile per l’attuazione di misure nell’ambito della digitalizzazione dei servizi e piattaforme.</strong>
+      alt: logo PagoPA
     - id: 5
       image: '/assets/acn-logo.svg'
       text: <strong>L’Agenzia per la cybersicurezza nazionale</strong> garantisce l’implementazione della Strategia Nazionale di Cybersicurezza e, insieme al Dipartimento, l’attuazione della Strategia Cloud Italia. È responsabile per la classificazione dati e servizi della PA, nonché per l’attuazione della misura PNRR in ambito di cybersicurezza.
+      alt: logo logo dell'Agenzia per la cybersicurezza nazionale
     - id: 6
       image: '/assets/consip-logo.svg'
       text: <strong>Consip</strong> è la centrale acquisti della Pubblica Amministrazione. Per il PNRR <strong>mette a disposizione strumenti per agevolare la realizzazione degli interventi</strong>, semplificando il processo di acquisto delle PA attraverso contratti quadro o piattaforme per la negoziazione.
+      alt: logo consip
 timeline:
   category: "Calendario"
   title: "Le fasi per la transizione digitale della PA"
