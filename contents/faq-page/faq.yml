@@ -10,19 +10,19 @@ sidebar:
     sectionId: platform
     sectionActive: false
     accordion: true
-    sublist: 
-    - sectionTitle: Accesso
-      sectionId: accesso
-      sectionActive: false  
-    - sectionTitle: Gestione utenti
-      sectionId: gestione-utenti
-      sectionActive: false
-    - sectionTitle: Candidatura
-      sectionId: candidatura
-      sectionActive: false
-    - sectionTitle: Supporto tecnico
-      sectionId: supporto-tecnico
-      sectionActive: false
+    sublist:
+      - sectionTitle: Accesso
+        sectionId: accesso
+        sectionActive: false
+      - sectionTitle: Gestione utenti
+        sectionId: gestione-utenti
+        sectionActive: false
+      - sectionTitle: Candidatura
+        sectionId: candidatura
+        sectionActive: false
+      - sectionTitle: Supporto tecnico
+        sectionId: supporto-tecnico
+        sectionActive: false
   - sectionTitle: Classificazione dati e servizi
     sectionId: classification-data-services
     sectionActive: false
@@ -30,22 +30,25 @@ sidebar:
     sectionId: misure
     sectionActive: false
     accordion: true
-    sublist: 
-    - sectionTitle: 1.2
-      sectionId: measure-1-2
-      sectionActive: false
-    - sectionTitle: 1.4.1
-      sectionId: measure-1-4-1
-      sectionActive: false
-    - sectionTitle: 1.4.3 pagoPA
-      sectionId: measure-1-4-3-pagopa
-      sectionActive: false
-    - sectionTitle: 1.4.3 appIO
-      sectionId: measure-1-4-3-appio
-      sectionActive: false
-    - sectionTitle: 1.4.4
-      sectionId: measure-1-4-4
-      sectionActive: false
+    sublist:
+      - sectionTitle: 1.2
+        sectionId: measure-1-2
+        sectionActive: false
+      - sectionTitle: 1.4.1
+        sectionId: measure-1-4-1
+        sectionActive: false
+      - sectionTitle: 1.4.3 pagoPA
+        sectionId: measure-1-4-3-pagopa
+        sectionActive: false
+      - sectionTitle: 1.4.3 appIO
+        sectionId: measure-1-4-3-appio
+        sectionActive: false
+      - sectionTitle: 1.4.4
+        sectionId: measure-1-4-4
+        sectionActive: false
+      - sectionTitle: 1.4.5
+        sectionId: measure-1-4-5
+        sectionActive: false
   - sectionTitle: Fondo Innovazione
     sectionId: fondo-innovazione
     sectionActive: false
@@ -243,92 +246,92 @@ questions:
     accordions:
       - title: Quali enti della PA possono presentare domanda per accedere al finanziamento dall'Avviso riferito alla Misura 1.2?
         content: I Soggetti Attuatori, ovvero coloro che possono accedere allo strumento predisposto dall'Avviso, sono i Comuni.
-        tag: 
+        tag:
           - comuni
       - title: È possibile accedere al finanziamento in caso di realizzazione della migrazione al cloud prima della pubblicazione dall'Avviso riferito alla Misura 1.2?
         content: Si, è possibile accedere al finanziamento previsto dall'Avviso, riferito alla Misura 1.2, nel caso in cui il processo di migrazione al cloud sia stato realizzato a decorrere dal 01 Febbraio 2020 con risorse finanziarie proprie.
-        tag: 
+        tag:
           - comuni
       - title: È possibile accedere al finanziamento in caso di realizzazione della migrazione al cloud, con l'ausilio di Fondi pubblici,nazionali, regionali o europei prima della pubblicazione dell'Avviso riferito alla Misura 1.2?
         content: No, non è possibile accedere al finanziamento previsto dall'Avviso, riferito alla Misura 1.2, nel caso in cui il processo di migrazione al cloud sia stato realizzato con Fondi pubblici, nazionali, regionali o europei, secondo quanto previsto dall'art. 8 comma 5 dell'Avviso.
-        tag: 
+        tag:
           - comuni
       - title: Di quante modalità di migrazione può avvalersi un Comune al fine di rispondere correttamente ai requisiti previsti dall'Avviso riferito alla Misura 1.2?
         content: Il Comune potrà effettuare la migrazione avvalendosi dei due modelli di migrazione ""Trasferimento in sicurezza dell’infrastruttura IT"" e ""Aggiornamento in sicurezza di applicazioni in Cloud"" come delineato nella Strategia Nazionale per il Cloud.Per ulteriori approfondimenti si rimanda all'Allegato 2 corrispondente alla fascia di popolazione del tuo Comune.
-        tag: 
+        tag:
           - comuni
       - title: Un Comune è obbligato ad adottare la stessa modalità di migrazione per tutti i servizi?
         content: No, il Comune può decidere singolarmente per ognuno dei servizi oggetto della migrazione. L’Ente potrà selezionare il modello di migrazione più adatto da presentare all’interno del piano di migrazione.
-        tag: 
+        tag:
           - comuni
       - title: Se ho già migrato un servizio in cloud in modalità "Trasferimento in sicurezza dell’infrastruttura IT" posso aderire al finanziamento per implementare la modalità "Aggiornamento in sicurezza di applicazioni in Cloud"?
         content: Si, se il Comune ha già migrato un servizio in cloud in modalità "Trasferimento in sicurezza dell’infrastruttura IT" può accedere al finanziamento previsto dall'Avviso, riferito alla Misura 1.2, per l'implementazione della modalità "Aggiornamento in sicurezza di applicazioni in Cloud".In ogni caso, il processo di migrazione al cloud deve essere stato realizzato a decorrere dal 01 Febbraio 2020 con risorse finanziarie proprie.
-        tag: 
+        tag:
           - comuni
       - title: Il Canone del primo anno è incluso nel finanziamento?
         content: Si, il canone del primo anno è incluso nell'importo forfettario come definito dagli allegati 2.
-        tag: 
+        tag:
           - comuni
       - title: Come deve essere rendicontato il contributo?
         content: Il contributo consiste in una somma forfettaria che viene erogata al raggiungimento del risultato come indicato dall'Avviso. Non è prevista la rendicontazione a costi reali.
-        tag: 
+        tag:
           - comuni
       - title: In cosa consiste la classificazione di dati e servizi? A cosa serve?
         content: La classificazione dei dati e dei servizi gestiti dalle PA consente di uniformare e guidare il processo di migrazione al Cloud della PA. Le classi dei dati e servizi sono identificate sulla base del danno che una loro compromissione, in termini di confidenzialità, integrità e disponibilità, provocherebbe al sistema Paese.
-        tag: 
+        tag:
           - comuni
         linkLabel: Ulteriori informazioni sono disponibili al seguente link
         link: 'https://docs.italia.it/italia/cloud-italia/strategia-cloud-italia-docs/it/stabile/4_la_strategia_cloud_per_la_pubblica_amministrazione.html#la-classificazione-dei-dati-e-dei-servizi'
         ariaLabel: Vedi ulteriori informazioni sulla classificazione dei dati e dei servizi gestiti dalle PA (Collegamento esterno - Apre su nuova scheda)
       - title: Come avviene l'acquisizione di servizi cloud qualificati?
         content: I fornitori cloud che intendono erogare servizi Infrastructure as a Service (IaaS), Platform as a Service (PaaS) e Software as a Service (SaaS) destinati alle pubbliche amministrazioni devono ottenere, per questi servizi, la qualificazione rilasciata dall’Agenzia per l’Italia digitale (AgID), utilizzando la piattaforma dedicata alla qualificazione dei cloud service provider e dei servizi cloud.
-        tag: 
+        tag:
           - comuni
         linkLabel: Ulteriori informazioni sono disponibili al seguente link
         link: 'https://docs.italia.it/italia/cloud-italia/strategia-cloud-italia-docs/it/stabile/5_la_migrazione_della_pubblica_amministrazione_sul_cloud.html'
         ariaLabel: Vedi ulteriori informazioni sulla migrazione della pubblica amministrazione (Collegamento esterno - Apre su nuova scheda)
       - title: Perchè è necessario migrare verso il cloud qualificato?
         content: La migrazione verso il cloud qualificato è necessaria per responsabilzzare il soggetto pubblico e individuare e catalogare i dati e i servizi gestiti, applicando una categorizzazione rispetto agli impatti di eventuali compromissioni, dei vincoli normativi e di sicurezza.
-        tag: 
+        tag:
           - comuni
         linkLabel: Ulteriori informazioni sono disponibili al seguente link
         link: 'https://docs.italia.it/italia/cloud-italia/strategia-cloud-italia-docs/it/stabile/5_la_migrazione_della_pubblica_amministrazione_sul_cloud.html'
         ariaLabel: Vedi ulteriori informazioni sulla migrazione della pubblica amministrazione (Collegamento esterno - Apre su nuova scheda)
       - title: Il Canone del primo anno è incluso nel finanziamento?
         content: Si, il canone del primo anno è incluso nell’importo forfettario come definito dall'Allegato 2.
-        tag: 
+        tag:
           - scuole
       - title: Come deve essere rendicontato il contributo?
         content: Il contributo consiste in una somma forfettaria che viene erogata al raggiungimento del risultato come indicato dall'Avviso. Non è prevista la rendicontazione a costi reali.
-        tag: 
+        tag:
           - scuole
       - title: Quali enti della PA possono presentare domanda per accedere al finanziamento dall'Avviso "Abilitazione al Cloud per le PA locali" Scuole, riferito alla Misura 1.2?
         content: "I Soggetti Attuatori, ovvero coloro che possono accedere allo strumento predisposto dall'Avviso, sono le Scuole sedi di Direttivo dislocate su tutto il territorio nazionale. Non sono ritenute ammissibili le proposte presentate da scuole non statali paritarie, non paritarie e straniere."
-        tag: 
+        tag:
           - scuole
       - title: È possibile accedere al finanziamento in caso di realizzazione della migrazione al cloud prima della pubblicazione dall'Avviso "Abilitazione al Cloud per le PA locali" Scuole, riferito alla Misura 1.2?
         content: Si, è possibile accedere al finanziamento previsto dall'Avviso, riferito alla Misura 1.2, nel caso in cui il processo di migrazione al cloud sia stato realizzato a decorrere dal 01 Febbraio 2020 con risorse finanziarie proprie.
-        tag: 
+        tag:
           - scuole
       - title: È possibile accedere al finanziamento in caso di realizzazione della migrazione al cloud, con l'ausilio di Fondi pubblici,nazionali, regionali o europei prima della pubblicazione dell'Avviso riferito alla Misura 1.2?
         content: No, non è possibile accedere al finanziamento previsto dall'Avviso, riferito alla Misura 1.2, nel caso in cui il processo di migrazione al cloud sia stato realizzato con Fondi pubblici, nazionali, regionali o europei, secondo quanto previsto dall'art. 8 comma 5 dell'Avviso.
-        tag: 
+        tag:
           - scuole
       - title: Di quante modalità di migrazione può avvalersi una scuola al fine di rispondere correttamente ai requisiti previsti dall'Avviso riferito alla Misura 1.2?
         content: 'La Scuola potrà effettuare la migrazione sfruttando le diverse tipologie di migrazione delineate  nella Strategia Nazionale per il Cloud, selezionando tra le modalità:</br>- Trasferimento in sicurezza dell’infrastruttura IT</br>- Aggiornamento di applicazioni sicure in Cloud'
-        tag: 
+        tag:
           - scuole
       - title: Una scuola è obbligata ad adottare la stessa modalità di migrazione per tutti i servizi?
         content: No, La Scuola può decidere singolarmente per ognuno dei servizi oggetto della migrazione. L’Ente potrà selezionare il modello di migrazione più adatto da presentare all’interno del piano di migrazione.
-        tag: 
+        tag:
           - scuole
       - title: In cosa consiste la classificazione di dati e servizi? A cosa serve?
         content: 'La classificazione dei dati e dei servizi gestiti dalle PA consente di uniformare e guidare il processo di migrazione al Cloud della PA. Le classi dei dati e servizi sono identificate sulla base del danno che una loro compromissione, in termini di confidenzialità, integrità e disponibilità, provocherebbe al sistema Paese.<br><br>Ulteriori informazioni sono disponibili al seguente link: <a href="https://docs.italia.it/italia/cloud-italia/strategia-cloud-italia-docs/it/stabile/4_la_strategia_cloud_per_la_pubblica_amministrazione.html#la-classificazione-dei-dati-e-dei-servizi" aria-label="link esterno">https://docs.italia.it/italia/cloud-italia/strategia-cloud-italia-docs/it/stabile/4_la_strategia_cloud_per_la_pubblica_amministrazione.html#la-classificazione-dei-dati-e-dei-servizi</a>'
-        tag: 
+        tag:
           - scuole
       - title: A quanto ammonta l'importo del finanziamento previsto dall'Avviso riferito alla Misura 1.2?
         content: 'L’importo del finanziamento concedibile alle Scuole è individuato in un importo forfettario determinato secondo il seguente criterio: per ogni servizio che verrà migrato verrà corrisposto un costo unitario di € 553 iva inclusa, con un importo minimo quindi pari a € 1.659 per 3 servizi fino ad un massimo di € 12.719 equivalente a 23 servizi. L’importo definitivo, tuttavia, sarà calcolato sulla base della sommatoria dei servizi che saranno migrati.'
-        tag: 
+        tag:
           - scuole
   - title: 1.4.1 Esperienza del Cittadino nei servizi pubblici
     description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
@@ -343,59 +346,59 @@ questions:
     accordions:
       - title: Quali enti della PA possono presentare domanda?
         content: I Soggetti Attuatori, ovvero coloro che possono accedere allo strumento predisposto dall'Avviso, sono esclusivamente i Comuni.
-        tag: 
+        tag:
           - comuni
       - title: È possibile accedere al finanziamento in caso di realizzazione del progetto prima della pubblicazione dell'Avviso “Esperienza del cittadino nei servizi pubblici” COMUNI (Aprile 2022) per i Comuni riferito alla Misura 1.4.1?
         content: Si, è possibile accedere al finanziamento previsto dall'Avviso nel caso in cui l'implementazione delle attività di miglioramento oggetto del finanziamento siano state realizzate a decorrere dal 1° Febbraio 2020, con risorse finanziarie proprie.
-        tag: 
+        tag:
           - comuni
       - title: Entro quando dovrà essere rilasciato il sito istituzionale per i Comuni?
         content: Il rilascio del sito istituzionale deve essere concluso nel termine perentorio previsto dall'Allegato 2 corrispondente alla fascia di popolazione del Comune.
-        tag: 
+        tag:
           - comuni
       - title: Cosa prevede il “Pacchetto cittadino informato”?
         content: L’Ente che aderisce all’Avviso dovrà obbligatoriamente implementare il modello per il sito dei Comuni (“Pacchetto cittadino informato”), attraverso le modalità descritte nel paragrafo “Implementazione di sito comunale” dell'Allegato 2. Per il riconoscimento dell’obiettivo conseguito, l’Ente dovrà provvedere a rendere disponibile il proprio sito comunale e attenersi ai criteri di conformità secondo quanto previsto dal paragrafo "Raggiungimento dell’obiettivo di conformità al modello sito comunale" dell'Allegato 2.
-        tag: 
+        tag:
           - comuni
       - title: Cosa prevede il “Pacchetto cittadino attivo”?
         content: L’Ente ha  la possibilità di selezionare, a seconda della dimensione del Comune, un numero massimo di servizi digitali per il cittadino, selezionabili dalla lista di servizi digitali per il cittadino (“Pacchetto cittadino attivo”). In questo caso l’Ente dovrà provvedere al ridisegno dei servizi scelti utilizzando le tipologie di flussi di interfaccia descritte nel relativo paragrafo, o comunque garantire i criteri di conformità descritti nel paragrafo "Raggiungimento dell’obiettivo per i servizi digitali per il cittadino" di cui all'Allegato 2.
-        tag: 
+        tag:
           - comuni
       - title: Cosa comprende il sito istituzionale per i Comuni messo a disposizione all’indirizzo https://designers.italia.it/modello/comuni/ ?
         content: 'Il modello di sito comunale, messo a disposizione all’indirizzo <a href="https://designers.italia.it/modello/comuni/">https://designers.italia.it/modello/comuni/</a> comprende due strumenti fondamentali: l’architettura dell’informazione del sito comunale e i template html del sito comunale.'
-        tag: 
+        tag:
           - comuni
       - title: Come viene calcolato l'importo forfettario previsto dall'Avviso “Esperienza del cittadino nei servizi pubblici” COMUNI (Aprile 2022) per i Comuni riferito alla Misura 1.4.1?
         content: L’importo del finanziamento concedibile ai Comuni è individuato in un importo forfettario (lump sum) determinato in funzione della tipologia degli interventi previsti ed in funzione della classe di popolazione residente di riferimento del medesimo Comune (Art. 1, comma 3 dell'Avviso).
-        tag: 
+        tag:
           - comuni
       - title: Quali enti della PA possono presentare domanda?
         content: "I Soggetti Attuatori, ovvero coloro che possono accedere allo strumento predisposto dall'Avviso,  sono le Scuole sedi di Direttivo comprensive di scuole secondarie di 1° e 2° grado dislocate su tutto il territorio nazionale."
-        tag: 
+        tag:
           - scuole
       - title: È possibile accedere al finanziamento in caso di realizzazione del progetto prima della pubblicazione dell'Avviso "Esperienza del cittadino nei servizi pubblici” SCUOLE (Aprile 2022) per le scuole riferito alla Misura 1.4.1?
         content: Si, è possibile accedere al finanziamento previsto dall'Avviso nel caso in cui tutte le attività necessarie per l’implementazione di un modello standard di siti web destinati alle comunità scolastiche siano state realizzate a decorrere dal 1 Febbraio 2020, con risorse finanziarie proprie.
-        tag: 
+        tag:
           - scuole
       - title: Ci sono dei modelli di siti web già predisposti per il Soggetto Attuatore che presenta candidatura per l'Avviso riferito alla Misura 1.4.1?
         content: Il Ministero dell’istruzione e il Dipartimento per la trasformazione digitale hanno messo a punto un modello standard di sito web istituzionale per le scuole italiane Sedi di Direttivo di 1° e 2° grado, in modo da offrire a genitori, studenti e all’intera comunità scolastica un punto di accesso semplice e trasversale alle esigenze degli utenti, realizzato sulla base dei principi di progettazione user centred e realizzato grazie alle risorse che compongono il design system del Paese, messo a disposizione tramite il progetto Designers Italia all’indirizzo <a href="https://designers.italia.it/modello/scuole" aria-label="link esterno">https://designers.italia.it/modello/scuole</a>.
-        tag: 
+        tag:
           - scuole
       - title: Cosa contiene il modello del sito messo a disposizione da Designers Italia?
         content: 'Il modello di sito istituzionale per le scuole, messo a disposizione all’indirizzo <a href="https://designers.italia.it/modello/scuole" aria-label="link esterno">https://designers.italia.it/modello/scuole</a> comprende tre strumenti fondamentali: l’architettura dell’informazione del sito, il codice HTML del sito e il tema Wordpress del sito stesso.'
-        tag: 
+        tag:
           - scuole
       - title: È possibile accedere al finanziamento in caso di realizzazione del progetto, con l'ausilio di Fondi pubblici, prima della pubblicazione dell'Avviso “Esperienza del cittadino nei servizi pubblici” SCUOLE (Aprile 2022)” riferito alla Misura 1.4.1?
         content: No, non è possibile accedere al finanziamento previsto dall'Avviso riferito alla Misura 1.4.1 nel caso in cui le attività necessarie per l'implementazione del sito web della PA siano state realizzate con altri finanziamenti pubblici, nazionali, regionali o europei, secondo quanto previsto dall'art. 7 dell'Avviso.
-        tag: 
+        tag:
           - scuole
       - title: Quando il processo si intende concluso?
         content: "Al termine del processo di rilascio del sito istituzionale per le scuole, l’ente dovrà attestare mediante dichiarazione da caricare sulla piattaforma di adesione https://padigitale2026.gov.it/ il raggiungimento di alcune caratteristiche, che rappresentano ai fini dell'Avviso riferito alla Misura 1.4.1, la dichiarazione di conformità del sito per le scuole realizzato rispetto al modello fornito.<br>In particolare, le attività si intendono concluse con esito positivo al momento in cui:<br>- Il sito è disponibile online<br>- È stata compilata la checklist di conformità indicata nel paragrafo Verifica della conformità dell'Allegato 2 all'avviso"
-        tag: 
+        tag:
           - scuole
       - title: A quanto ammonta l'importo del finanziamento previsto dall'Avviso riferito alla Misura 1.4.1 “Esperienza del cittadino nei servizi pubblici” SCUOLE (Aprile 2022)”?
         content: L’importo del finanziamento, riconosciuto per il rifacimento del sito web istituzionale è pari a 7.301 euro Iva inclusa. L’importo del finanziamento sarà riconosciuto al Soggetto Attuatore solo a seguito del conseguimento del risultato atteso.
-        tag: 
+        tag:
           - scuole
   - title: 1.4.3 Adozione PagoPA
     smallTitle: true
@@ -409,56 +412,56 @@ questions:
         id: altri-enti
     accordions:
       - title: A quanto ammonta l'importo del finanziamento previsto dall'Avviso "Adozione pagoPA" della Misura 1.4.3?
-        content: "L'importo del finanziamento concedibile ai Comuni è individuato in un importo forfettario determinato secondo il seguente criterio:<br></br>a. per i Comuni fino a 5.000 ab.: pagoPA: €607 per servizio (min.3 max 109);<br>b. per i Comuni 5.001 - 20.000 ab. pagoPA: €857 per servizio (min.3 max 109);<br>c. per i Comuni 20.001 - 100.000 ab. pagoPA: €1821 per servizio (min.5 max 109);<br>d. per i Comuni 100.001 - 250.000 ab. pagoPA: €2747 per servizio (min.5 max 109);<br>e. per i Comuni > 250.000 ab. pagoPA: €7967 per servizio (min.5 max 109)."
-        tag: 
+        content: 'L’importo del finanziamento concedibile ai Comuni è individuato in un importo forfettario determinato secondo il seguente criterio:<br>a. per i Comuni fino a 5.000 ab. pagoPA: €607 per servizio (min.3 max 117);<br>b. per i Comuni 5.001 - 20.000 ab. pagoPA: €857 per servizio (min.3 max 117);<br>c. per i Comuni 20.001 - 100.000 ab. pagoPA: €1821 per servizio (min.5 max 117);<br>d. per i Comuni 100.001 - 250.000 ab. pagoPA: €2747 per servizio (min.5 max 117);<br>e. per i Comuni > 250.000 ab. pagoPA: €7967 per servizio (min.5 max 117).'
+        tag:
           - comuni
       - title: Quali enti della PA possono presentare domanda?
         content: I soggetti attuatori, ovvero coloro che possono accedere allo strumento predisposto dall'Avviso, sono i Comuni.
-        tag: 
+        tag:
           - comuni
       - title: È possibile accedere al finanziamento in caso di realizzazione del progetto prima della pubblicazione dell'Avviso "Adozione pagoPA" della Misura 1.4.3?
         content: Si, è possibile accedere al finanziamento previsto dall'Avviso nel caso in cui l'attivazione dei servizi di incasso (pagoPA) sia stata realizzata dopo il 01 Aprile 2021 con risorse finanziarie proprie.
-        tag: 
+        tag:
           - comuni
       - title: È possibile accedere al finanziamento in caso di realizzazione del progetto in data antecedente al 01 Aprile 2021?
         content: No, non è possibile accedere al finanziamento previsto dall'Avviso nel caso in cui il processo di l'attuazione dei servizi di incasso (pagoPA) sia stata realizzatao prima del 01 Aprile 2021, indipendemente dai fondi/risorse utilizzati. Può essere invece finanziata l'attivazione di nuovi servizi, non inclusi nel precedente finanziamento.
-        tag: 
+        tag:
           - comuni
       - title: Quali interventi possono essere finanziati dall'Avviso 1.4.3 per pagoPA?
         content: I servizi oggetto di migrazione possono essere tutti i servizi di incasso erogati da ciascun Ente facendo valere il principio della titolarità del credito, cioè, potranno essere migrati tutti i servizi di incasso gestiti direttamente dal singolo Ente e/o affidati a soggetti esterni (es. Riscossori; Unioni di Comuni; Comunità Montane) fermo restando che l’Ente mantenga la titolarità del credito vantato.
-        tag: 
+        tag:
           - comuni
       - title: Quando il processo di migrazione e attivazione dei servizi si intende concluso con esito positivo per per i servizi attivati sulla Piattaforma pagoPA?
         content: Il processo di riterrà concluso quando sarà stata effettuata una transazione con esito positivo con la corretta applicazione del codice tassonomico per ogni singolo servizio incluso nel progetto.
-        tag: 
+        tag:
           - comuni
       - title: Cosa si intende per transazione con esito positivo per pagoPA?
         content: Per transazione con esito positivo si intende sia una transazione reale eseguita da un cittadino, nel caso in cui la stagionalità del singolo servizio di incasso lo consenta, oppure - in caso contrario - una transazione reale con importo di valore simbolico (es. 0,01€) ma con codice tassonomico e IUV reale, al fine di poter verificare l’effettiva e corretta integrazione del servizio di incasso in modalità end-to-end (cd. transazione di test)
-        tag: 
+        tag:
           - comuni
       - title: Ho integrato dei servizi tramite una piattaforma regionale a titolo gratuito. Posso richiedere il finanziamento per l'integrazione nella stessa piattaforma dei servizi aggiuntivi?
         content: Sì, è possibile accedere al finanziamento previsto dall'Avviso per l'implementazione dei servizi aggiuntivi purché siano finanziati con fondi propri dopo il 1 aprile 2021.
-        tag: 
+        tag:
           - comuni
       - title: Quali enti della PA possono presentare domanda?
-        content: 'Sono invitate a presentare proposte a valere sul presente Avviso:<br>a. Le Regioni e le Province Autonome;<br>b. Le  Aziende sanitarie locali e le Aziende ospedaliere pubbliche;<br>c. Le Università e gli Istituti di Istruzione Universitaria pubblici, gli Enti e le Istituzioni di ricerca pubblici e le Istituzioni per l’Alta Formazione Artistica, Musicale e Coreutica - (AFAM) pubbliche.'
-        tag: 
+        content: 'Sono invitate a presentare proposte a valere sul presente Avviso:<br>a. Le Regioni e le Province Autonome;<br>b. Le  Aziende sanitarie locali e le Aziende ospedaliere pubbliche e le Agenzie sanitarie regionali;<br>c. Le Università e gli Istituti di Istruzione Universitaria pubblici, gli Enti e le Istituzioni di ricerca pubblici, gli Enti e Consorzi per il diritto allo studio, i Consorzi interuniversitari di ricerca e le Istituzioni per l’Alta Formazione Artistica, Musicale e Coreutica - (AFAM) pubbliche.'
+        tag:
           - altri-enti
       - title: È possibile accedere al finanziamento in caso di realizzazione del progetto prima della pubblicazione dell'Avviso "Adozione pagoPA" della Misura 1.4.3?
         content: Sì, è possibile accedere al finanziamento previsto dall'Avviso nel caso in cui l'attivazione dei servizi di incasso (pagoPA) sia stata realizzata dopo il 01 Aprile 2021 con risorse finanziarie proprie.
-        tag: 
+        tag:
           - altri-enti
       - title: Quali interventi possono essere finanziati dall'Avviso 1.4.3 per pagoPA?
         content: I servizi oggetto di migrazione possono essere tutti i servizi di incasso erogati da ciascun Ente facendo valere il principio della titolarità del credito, cioè, potranno essere migrati tutti i servizi di incasso gestiti direttamente dal singolo Ente e/o affidati a soggetti esterni (es. Riscossori; Unioni di Comuni; Comunità Montane) fermo restando che l’Ente mantenga la titolarità del credito vantato.
-        tag: 
+        tag:
           - altri-enti
       - title: Entro quando dovranno essere portate a termine le attività di migrazione e di attivazione dei servizi?
         content: Le attività di migrazione e di attivazione dei servizi dovranno essere portate a termine entro 8 mesi (240 gg), a partire dalla data di contrattualizzazione del fornitore.
-        tag: 
+        tag:
           - altri-enti
       - title: Cosa si intende per transazione con esito positivo per pagoPA?
         content: Per transazione con esito positivo si intende sia una transazione reale eseguita da un cittadino, nel caso in cui la stagionalità del singolo servizio di incasso lo consenta, oppure - in caso contrario - una transazione reale con importo di valore simbolico (es. 0,01€) ma con codice tassonomico e IUV reale, al fine di poter verificare l’effettiva e corretta integrazione del servizio di incasso in modalità end-to-end (cd. transazione di test)
-        tag: 
+        tag:
           - altri-enti
   - title: 1.4.3 Adozione AppIO
     smallTitle: true
@@ -473,51 +476,51 @@ questions:
     accordions:
       - title: Quali enti della PA possono presentare domanda?
         content: I Soggetti Attuatori, ovvero coloro che possono accedere allo strumento predisposto dall'Avviso, sono i Comuni.
-        tag: 
+        tag:
           - comuni
       - title: È possibile accedere al finanziamento in caso di realizzazione del progetto prima della pubblicazione dell'Avviso "Adozione app IO" riferito della Misura 1.4.3?
         content: Si, è possibile accedere al finanziamento previsto dal presente Avviso nel caso in cui l'attuazione dei servizi digitali (app IO) sia stata realizzata a decorrere dal 01 Aprile 2021, con risorse finanziarie proprie.
-        tag: 
+        tag:
           - comuni
       - title: È possibile accedere al finanziamento in caso di realizzazione del progetto, con l'ausilio di Fondi pubblici, prima della pubblicazione dell'Avviso "Adozione app IO" della Misura 1.4.3?
         content: No, non è possibile accedere al finanziamento previsto dall'Avviso riferito alla Misura 1.4.3 nel caso in cui l'attuazione degli stessi servizi digitali (app IO) sia stata realizzata con altri finanziamenti pubblici, nazionali, regionali o europei, secondo quanto previsto dall'art. 7 dell'Avviso. Può essere invece finanziata l'attivazione di nuovi servizi, non inclusi nel precedente finanziamento.
-        tag: 
+        tag:
           - comuni
       - title: Entro quanto tempo dovrà essere contrattualizzato il fornitore rispetto al Decreto di Finanziamento?
         content: Il fornitore dovà essere contrattualizzato al massimo entro 6 mesi (180 gg) dalla data di notifica del Decreto di Finanziamento.
-        tag: 
+        tag:
           - comuni
       - title: Entro quando dovranno essere portate a termine le attività di migrazione e di attivazione dei servizi?
         content: Le attività di migrazione e di attivazione dei servizi dovranno essere portate a termine entro 8 mesi (240 gg), a partire dalla data di contrattualizzazione del fornitore.
-        tag: 
+        tag:
           - comuni
       - title: Quando il processo di migrazione e attivazione dei servizi si intende concluso con esito positivo per i servizi attivati sull’app IO?
         content: Il processo si riterrà concluso con esito positivo quando le richieste di pubblicazione saranno approvate dalla pagoPA S.p.A  e tutti i servizi saranno visibili in App.
-        tag: 
+        tag:
           - comuni
       - title: Ho integrato dei servizi tramite una piattaforma regionale a titolo gratuito. Posso richiedere il finanziamento per l'integrazione nella stessa piattaforma dei servizi aggiuntivi?
         content: Sì, è possibile accedere al finanziamento previsto dall'Avviso per l'implementazione dei servizi aggiuntivi purché siano finanziati con fondi propri dopo il 1 aprile 2021.
-        tag: 
+        tag:
           - comuni
       - title: Quali enti della PA possono presentare domanda?
-        content: "Sono invitate a presentare proposta a valere sull'Avviso:<br>a. Le Regioni e le Province Autonome;<br>b. Le  Aziende sanitarie locali e le Aziende ospedaliere pubbliche;<br>c. Le Università e gli Istituti di Istruzione Universitaria pubblici, gli Enti e le Istituzioni di ricerca pubblici e le Istituzioni per l’Alta Formazione Artistica, Musicale e Coreutica - AFAM pubbliche."
-        tag: 
+        content: "Sono invitate a presentare proposta a valere sull'Avviso:<br>a. Le Regioni e le Province Autonome;<br>b. Le  Aziende sanitarie locali, Aziende ospedaliere pubbliche e le Agenzie sanitarie regionali;<br>c. Le Università e gli Istituti di Istruzione Universitaria pubblici, gli Enti e le Istituzioni di ricerca pubblici, gli Enti e Consorzi per il diritto allo studio, i Consorzi interuniversitari di ricerca e le Istituzioni per l’Alta Formazione Artistica, Musicale e Coreutica - AFAM pubbliche."
+        tag:
           - altri-enti
       - title: È possibile accedere al finanziamento in caso di realizzazione del progetto prima della pubblicazione dell'Avviso "Adozione appIO" riferito della Misura 1.4.3?
         content: Sì, è possibile accedere al finanziamento previsto dall'Avviso nel caso in cui l'implementazione dei servizi digitali (appIO) sia stata realizzata a decorrere dal 01 Aprile 2021, con risorse finanziarie proprie.
-        tag: 
+        tag:
           - altri-enti
       - title: È possibile accedere al finanziamento in caso di realizzazione del progetto, con l'ausilio di Fondi pubblici, prima della pubblicazione dell'Avviso "Adozione appIO" della Misura 1.4.3?
         content: No, non è possibile accedere al finanziamento previsto dall'Avviso riferito alla Misura 1.4.3 nel caso in cui l'attivazione degli stessi servizi digitali (appIO) sia stata realizzata con altri finanziamenti pubblici, nazionali, regionali o europei, secondo quanto previsto dall'art. 7 dell'Avviso. Può essere invece finanziata l'attivazione di nuovi servizi, non inclusi nel precedente finanziamento.
-        tag: 
+        tag:
           - altri-enti
       - title: Entro quando dovranno essere portate a termine le attività di migrazione e di attivazione dei servizi?
         content: Le attività di migrazione e di attivazione dei servizi dovranno essere portate a termine entro 8 mesi (240 gg), a partire dalla data di contrattualizzazione del fornitore.
-        tag: 
+        tag:
           - altri-enti
       - title: Quando il processo di migrazione e attivazione dei servizi si intende concluso con esito positivo per i servizi attivati sull’appIO?
         content: Il processo si riterrà concluso con esito positivo quando le richieste di pubblicazione saranno approvate dalla pagoPA S.p.A  e tutti i servizi saranno visibili in App.
-        tag: 
+        tag:
           - altri-enti
   - title: 1.4.4 Adozione identità digitale
     smallTitle: true
@@ -531,55 +534,55 @@ questions:
     accordions:
       - title: Qual è l'importo del finanziamento concedibile?
         content: L'importo del finanziamento riconoscibile è pari a €14.000 al termine della realizzazione del progetto.
-        tag: 
+        tag:
           - comuni
       - title: Quali enti della PA possono presentare domanda?
         content: I soggetti attuatori, ovvero coloro che possono accedere allo strumento predisposto dall'Avviso, sono i Comuni. In seguito saranno pubblicati avvisi ad hoc per altre tipologie di pubbliche amministrazioni.
-        tag: 
-          - comuni 
+        tag:
+          - comuni
       - title: Quali interventi possono essere finanziati dall'Avviso della Misura 1.4.4?
         content: "Gli interventi che possono essere finanziati sono: adesione alla piattaforma di identità digitale SPID, adesione alla piattaforma di identità digitale CIE ed erogazione di un piano formativo su disposizioni normative, linee guida e best practices in caso di integrazione a SPID e CIE con protocollo SAML2. Per ulteriori dettagli si rimanda all'Allegato 2 del presente Avviso."
-        tag: 
-          - comuni 
+        tag:
+          - comuni
       - title: È possibile accedere al finanziamento per l'adozione di una sola delle due piattaforme di identità digitale SPID/CIE?
         content: Si, è possibile accedere al finanziamento previsto dall'Avviso al fine di adottare una sola delle due piattaforme, SPID o CIE, qualora una di esse sia stata già adottata dall'ente con protocollo SAML2, come specificato nell'Allegato 2.
-        tag: 
+        tag:
           - comuni
       - title: Nel caso in cui il Comune non abbia adottato nessuna piattaforma di identità digitale SPID e CIE, può fare richiesta per l'adozione di una sola delle due?
         content: No, qualora lo scenario di partenza dell'ente sia qualificato dall'assenza di entrambe le piattaforme di identità digitale SPID e CIE, dovrà necessariamente adottarle entrambe, come specificato nell'Allegato 2.
-        tag: 
+        tag:
           - comuni
       - title: In quanto tempo deve essere concluso il progetto di integrazione?
         content: Il progetto di integrazione deve essere concluso nel termine perentorio di 10 mesi dalla data di contrattualizzazione del fornitore, come specificato nell'Allegato 2.
-        tag: 
+        tag:
           - comuni
       - title: Quale standard di autenticazione deve applicare il Comune nell'adozione delle piattaforme di identità digitale?
         content: OpenID Connect (OIDC) è lo standard di autenticazione attualmente utilizzato dalla quasi totalità delle moderne applicazioni web e mobile nel mondo privato ed è fortemente raccomandato, come specificato nell'Allegato 2. In alternativa è necessaria l'erogazione di un piano formativo, idoneo a costruire le basi per un successivo passaggio tecnologico.
-        tag: 
+        tag:
           - comuni
       - title: È possibile accedere al finanziamento in caso di progetti già avviati per integrazione SPID/CIE?
         content: Si, è possibile accedere al finanziamento previsto dall'Avviso nel caso in cui il processo di adozione della piattaforma di identità digitale SPID/CIE sia stato avviato a decorrere dal 1° febbraio 2020 con fondi propri.
-        tag: 
+        tag:
           - comuni
       - title: Quando si considera raggiunto l’obiettivo di integrazione a CIE?
         content: Per CIE sarà necessario che il soggetto attuatore abbia pubblicato l'adesione a CIE e messo in esercizio i servizi online. Farà fede la data di richiesta di adesione, purché la pubblicazione e messa in esercizio dei servizi avvenga entro e non oltre i 60 giorni decorrenti dalla data della richiesta di adesione a CIE.
-        tag: 
+        tag:
           - comuni
       - title: Quando si considera raggiunto l’obiettivo di integrazione a SPID?
         content: Per SPID sarà necessario che il soggetto attuatore abbia eseguito i test tecnici di integrazione e abilitato i servizi online all’accesso tramite SPID. Farà fede la data di richiesta per il primo collaudo tecnico ad AgID il cui esito è positivo.
-        tag: 
+        tag:
           - comuni
       - title: Link utili per tematiche tecniche su SPID
         content: 'Domande frequenti: <br><a target="_blank" href="https://www.spid.gov.it/domande-frequenti/">https://www.spid.gov.it/domande-frequenti/</a><br><a target="_blank" href="https://helpdesk.spid.gov.it/knowledgebase.php?category=2">https://helpdesk.spid.gov.it/knowledgebase.php?category=2</a><br></br>Risorse per sviluppatori:<br><a target="_blank" href="https://developers.italia.it/it/spid/#resourcecontent-1">https://developers.italia.it/it/spid/#resourcecontent-1</a>'
-        tag: 
+        tag:
           - comuni
       - title: Link utili per tematiche tecniche su CIE
         content: 'Domande frequenti: <br><a target="_blank" href="https://federazione.servizicie.interno.gov.it/faq">https://federazione.servizicie.interno.gov.it/faq</a><br></br>Risorse per sviluppatori:<br><a target="_blank" href="https://developers.italia.it/it/cie">https://developers.italia.it/it/cie</a>'
-        tag: 
+        tag:
           - comuni
       - title: È possibile richiedere il finanziamento se ho già integrato SPID e/o CIE a titolo gratuito tramite una piattaforma regionale?
         content: No, si considera ammissibile solo la prima integrazione fatta dagli enti purché finanziata con fondi propri dopo il 1 febbraio 2020.
-        tag: 
+        tag:
           - comuni
       - title: Qual è l'importo del finanziamento concedibile?
         content: L'importo riconoscibile per l'implementazione del pacchetto  per l'Identità digitale è pari a 14.000,00 euro e sarà erogato all'ente successivamente alla verifica da parte del Dipartimento della corretta alimentazione della Piattaforma e del raggiungimento degli obiettivi prefissati attraverso AgID e IPZS, secondo quanto previsto dall'Art. 13 dell'Avviso.
@@ -587,40 +590,84 @@ questions:
           - altri-enti
       - title: Quali enti della PA possono presentare domanda?
         content: I soggetti attuatori, ovvero coloro che possono accedere allo strumento predisposto dall'Avviso, sono tutte le amministrazioni pubbliche, esclusi i Comuni e le Istituzioni Scolastiche.
-        tag: 
+        tag:
           - altri-enti
       - title: Quali interventi possono essere finanziati dall'Avviso della Misura 1.4.4?
         content: "Gli interventi che possono essere finanziati sono: adesione alla piattaforma di identità digitale SPID, adesione alla piattaforma di identità digitale CIE ed erogazione di un piano formativo su disposizioni normative, linee guida e best practices in caso di integrazione a SPID e CIE con protocollo SAML2. Per ulteriori dettagli si rimanda all'Allegato 2 del presente Avviso."
-        tag: 
+        tag:
           - altri-enti
-      - title: È possibile accedere al finanziamento per l'adozione di una sola delle due piattaforme di identità digitale SPID/CIE? 
+      - title: È possibile accedere al finanziamento per l'adozione di una sola delle due piattaforme di identità digitale SPID/CIE?
         content: Sì, è possibile accedere al finanziamento previsto dall'Avviso al fine di adottare una sola delle due piattaforme, SPID o CIE, qualora una di esse sia stata già adottata dall'ente con protocollo SAML2, come specificato nell'Allegato 2.
-        tag: 
+        tag:
           - altri-enti
       - title: Nel caso in cui l'ente non abbia adottato nessuna piattaforma di identità digitale SPID e CIE, può fare richiesta per l'adozione di una sola delle due?
         content: No, qualora lo scenario di partenza dell'ente sia qualificato dall'assenza di entrambe le piattaforme di identità digitale SPID e CIE, dovrà necessariamente adottarle entrambe, come specificato nell'Allegato 2.
-        tag: 
+        tag:
           - altri-enti
       - title: In quanto tempo deve essere concluso il progetto di integrazione?
         content: Il progetto di integrazione deve essere concluso nel termine perentorio di 10 mesi dalla data di contrattualizzazione del fornitore, come specificato nell'Allegato 2.
-        tag: 
+        tag:
           - altri-enti
       - title: Quale standard di autenticazione deve applicare l'ente nell'adozione delle piattaforme di identità digitale?
         content: OpenID Connect (OIDC) è lo standard di autenticazione attualmente utilizzato dalla quasi totalità delle moderne applicazioni web e mobile nel mondo privato ed è fortemente raccomandato, come specificato nell'Allegato 2. In alternativa è necessaria l'erogazione di un piano formativo, idoneo a costruire le basi per un successivo passaggio tecnologico.
-        tag: 
+        tag:
           - altri-enti
       - title: È possibile accedere al finanziamento in caso di progetti già avviati per integrazione SPID/CIE?
         content: Sì, è possibile accedere al finanziamento previsto dall'Avviso nel caso in cui il processo di adozione della piattaforma di identità digitale SPID/CIE sia stato avviato a decorrere dal 1° febbraio 2020 con fondi propri.
-        tag: 
+        tag:
           - altri-enti
       - title: È possibile accedere al finanziamento nel caso di progetti di integrazione di SPID e CIE in data antecedente al 1° febbraio 2020?
         content: No, non è possibile accedere al finanziamento previsto dall'Avviso riferito alla Misura 1.4.4 nel caso in cui il processo di adozione della piattaforma di identità digitale SPID/CIE sia stato realizzato prima del 1° febbraio 2020, indipendemente dai fondi/risorse utilizzati.
-        tag: 
+        tag:
           - altri-enti
       - title: È possibile partecipare alla misura 1.4.4 se ho già attivato SPID/CIE per il servizio SUAP?
         content: Qualora un ente avesse già implementato infrastruttura per autenticazione digitale SPID/CIE per l’utilizzo del SUAP, in ottemperanza al DPR 160/2010 anche prima del 1 febbraio 2020, è comunque possibile accedere al finanziamento previsto dall’Avviso riferito alla Misura 1.4.4 per altri servizi, specificando in fase di candidatura lo stato delle attività come “da avviare”.
-        tag: 
+        tag:
           - altri-enti
+  - title: '1.4.5'
+    smallTitle: true
+    description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
+    sectionId: measure-1-4-5
+    chips:
+      - title: Comuni
+        id: comuni
+    accordions:
+      - title: Quali enti della PA possono presentare domanda?
+        content: I Soggetti Attuatori, ovvero coloro che possono accedere allo strumento predisposto dall'Avviso, sono i Comuni, inclusi quelli coinvolti nella fase di sperimentazione della Piattaforma Notifiche Digitale.
+        tag:
+          - comuni
+      - title: Entro quando è possibile inoltrare la domanda di accesso al finanziamento?
+        content: La domanda di partecipazione può essere presentata a partire dalla data di pubblicazione dell'Avviso fino ad esaurimento delle risorse disponibili, e comunque non oltre alle ore 23.59 del 11 novembre 2022.
+        tag:
+          - comuni
+      - title: Qual è l'obiettivo dell'Avviso 1.4.5?
+        content: L’obiettivo si configura nell’integrazione con PND dei processi di notificazione degli atti a valore legale attualmente in uso presso i Comuni. A prescindere dalla dimensione dell’ente, l’obiettivo è di integrare con PND le comunicazioni di due tipologie di atti amministrativi, concentrandosi inizialmente su due servizi, di cui uno, obbligatoriamente appartenente alla tipologia di atti di “Notifiche violazioni al codice della strada” e l’altro, a scelta del soggetto attuatore, da selezionare tra le altre tipologie di atti indicate nella tabella 1 dell'Allegato 2 dell'Avviso riferito alla Misura 1.4.5.
+        tag:
+          - comuni
+      - title: Quali sono i servizi attivabili?
+        content: "Il Comune è chiamato ad attivare due servizi relativi a due distinte tipologie di atti di notifica secondo la seguente formula: <br>i. la prima tipologia, obbligatoria, definita in tabella 1 dal codice 010101P e relativa alle “Notifiche violazioni al codice della strada”; <br>ii. la seconda tipologia, da selezionare ad opera del Comune stesso, indicata in tabella 1 con la numerazione dalla 2 alla 12."
+        tag:
+          - comuni
+      - title: È previsto un numero minimo di servizi da implementare?
+        content: È obbligatorio attivare e integrare n.2 servizi, secondo quanto disposto dal Paragrafo C dell'Allegato 2.
+        tag:
+          - comuni
+      - title: Entro quanto tempo devono essere completate le attività oggetto di finanziamento?
+        content: Le attività dovranno essere eseguite entro e non oltre 6 mesi (180 gg) a partire dalla data di pubblicazione del decreto di finanziamento di cui art. 10, comma 5, dell’avviso.
+        tag:
+          - comuni
+      - title: Quando si intende concluso con esito positivo il processo di integrazione e attivazione?
+        content: Il processo di integrazione e attivazione dei servizi di notifica si intende concluso con esito positivo al momento in cui viene prodotto dalla PA l’esito del processo di integrazione e viene fornita evidenza dell’invio con successo di almeno una notifica in ambiente di produzione di PND per ciascuno dei due servizi appartenenti alle tipologie di atti definite nel paragrafo C di questo allegato (l’evidenza consiste nella verifica del codice IUN e del codice tipologia atto delle notifiche).
+        tag:
+          - comuni
+      - title: Qual è l'importo riconosciuto per le attività previste dall'Avviso riferito alla Misura 1.4.5?
+        content: "Gli importi del contributo, riconosciuti sulla base della dimensione del comune, sono così definiti:<br>- per i Comuni fino a 5.000 abitanti: €23.147;<br>- per i Comuni 5.001 - 20.000 abitanti: €32.589; <br>- per i Comuni 20.001 - 100.000 abitanti: €59.966; <br>- per i Comuni 100.001 - 250.000 abitanti: €69.000; <br>- per i Comuni > 250.000 abitanti: €97.247."
+        tag:
+          - comuni
+      - title: Entro quanto tempo dovrà essere contrattualizzato il fornitore rispetto al Decreto di Finanziamento?
+        content: Il fornitore dovà essere contrattualizzato al massimo entro 3 mesi (90 gg) dalla data di notifica del Decreto di Finanziamento.
+        tag:
+          - comuni
   - title: Fondo Innovazione
     description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
     sectionId: fondo-innovazione
@@ -651,6 +698,8 @@ questions:
         content: In merito alla domanda posta si rimanda alla normativa contabile di riferimento e alle indicazioni dell'Amministrazione competente in materia. A titolo indicativo e non vincolante, con riferimento alla natura della spesa in economia non sono da rilevare attività contabili specifiche se non quelle che consentono di ricondurre, ad es. con apposito codice, dette spese al progetto PNRR così come previsto dal D.L. 77/2021 art 9 c.4.
       - title: Il contributo è a fondo perduto? Quando viene erogato? E' necessario rendicontare i costi sostenuti?
         content: Il contributo concesso è una somma forfettaria (lump sum) che sarà erogata in un'unica soluzione a seguito del perfezionamento delle attività oggetto del finanziamento come disposto dall'art. 13 dell'Avviso. L'entità del finanziamento è indicata nell'Allegato 2 dell'Avviso, come previsto dall'art. 8. Trattandosi di una somma forfettaria non devono essere rendicontati i costi sostenuti.
+      - title: Anche per gli avvisi di PA digitale 2026 occorre registrarsi ed effettuare la rendicontazione attraverso la piattaforma REGIS?
+        content: Per quanto di competenza del DTD, i soggetti attuatori degli avvisi pubblicati su PAdigitale2026 non devono alimentare il sistema informatico ReGiS in quanto sarà la Piattaforma stessa a comunicare con il suddetto sistema informatico.
 
 noResults: Nessun risultato trovato
 support:
