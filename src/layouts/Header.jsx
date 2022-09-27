@@ -417,8 +417,8 @@ const SlimHeader = () => {
           <img className="d-none d-lg-block" src="/assets/eu-flag.svg" alt={externalLinks.eu.label}></img>
         </ExternalLink>
         <Link className={classes.login} to={externalLinks.accedi.linkTo}>
-          <img src="/assets/user-icon.svg" alt={externalLinks.eu.label}></img>
-          <img className="mobile" src="/assets/user-icon-dark.svg" alt={externalLinks.eu.label}></img>
+          <img src="/assets/user-icon.svg" alt="icona area profilo"></img>
+          <img className="mobile" src="/assets/user-icon-dark.svg" alt="icona area profilo"></img>
           <span>{externalLinks.accedi.label}</span>
           <span className="sr-only">Accedi all'area privata</span>
         </Link>
