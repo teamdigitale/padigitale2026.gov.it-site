@@ -74,7 +74,7 @@ export const Involved = (props) => {
     <Col key={card.id} xs="12" lg="4" className="offset-lg-1" role="listitem">
       <Card className={classes.actorsCard} noWrapper>
         <div className={classes.actorsCardImageWrapper}>
-          <img className={classes.actorsCardImage} src={card.image} alt="" />
+          <img className={classes.actorsCardImage} src={card.image} alt={card.alt} />
         </div>
         <CardBody>
           <CardText dangerouslySetInnerHTML={{ __html: card.text }} />

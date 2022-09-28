@@ -152,14 +152,10 @@ export const HeroCarousel = ({ content, title }) => {
             {element?.type !== 'internal' ? (
               <>
                 Fonte:
-                <ExternalLink
-                  linkTo={element.linkTo}
-                  alt=""
-                  className={classes.heroLink}
-                  ariaLabel={`${element.source} ${element.title} (Collegamento sito esterno apre su nuova scheda)`}
-                >
+                <ExternalLink linkTo={element.linkTo} alt="" className={classes.heroLink}>
                   {element.source}
                   <img src={`/assets/external-link.svg`} alt="" />
+                  <span className="sr-only">Collegamento esterno - Apre su nuova scheda</span>
                 </ExternalLink>
               </>
             ) : (
@@ -188,15 +184,11 @@ export const HeroCarousel = ({ content, title }) => {
                 </h3>
               </Col>
               <Col xs="12" lg="6" className="d-lg-flex justify-content-end">
-                <ExternalLink
-                  linkTo="https://innovazione.gov.it/"
-                  alt=""
-                  className={classes.titleLink}
-                  ariaLabel={`Scopri tutto su innovazione.gov.it (Collegamento sito esterno apre su nuova scheda)`}
-                >
+                <ExternalLink linkTo="https://innovazione.gov.it/" alt="" className={classes.titleLink}>
                   <div className="source">
                     Scopri tutto su innovazione.gov.it
                     <img src={`/assets/external-link.svg`} alt="" />
+                    <span className="sr-only">Collegamento sito esterno apre su nuova scheda</span>
                   </div>
                 </ExternalLink>
               </Col>
