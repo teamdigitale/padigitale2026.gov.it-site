@@ -230,8 +230,10 @@ export const FaqPage = () => {
       };
 
       entries.forEach((entry) => {
-        if (entry.intersectionRatio > 0.6 && entry.intersectionRatio < 0.7) {
-          changeActive(entry.target.id);
+        if (entry.boundingClientRect.top < 200 && entry.boundingClientRect.top > 150) {
+          setTimeout(() => {
+            changeActive(entry.target.id);
+          }, 200);
         }
       });
     };
@@ -240,7 +242,7 @@ export const FaqPage = () => {
       const options = {
         root: null,
         rootMargin: '0px',
-        threshold: [0.6, 0.8],
+        threshold: 1.0,
         trackVisibility: true,
         delay: 200,
       };
