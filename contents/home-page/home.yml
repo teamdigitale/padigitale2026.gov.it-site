@@ -132,7 +132,7 @@ heroCarouselNews:
    - id: 2
     type: internal
     category: PROROGA AVVISO
-    title: "Migrazione al Cloud dei Comuni"
+    title: Migrazione al Cloud dei Comuni
     description: "La scadenza dell'Avviso è stata posticipata al 28 ottobre 2022"
     source: 'Avviso 1.2 - Comuni'
     linkTo: 'https://areariservata.padigitale2026.gov.it/Pa_digitale2026_dettagli_avviso?id=a017Q00000uzQmzQAE'
