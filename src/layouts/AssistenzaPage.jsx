@@ -573,8 +573,8 @@ export const AssistenzaPage = () => {
           <Col xs={12} md={6} lg={5}>
             <h1 className={classes.titleUpdate}>Assistenza</h1>
             <div className={classes.subtitleUpdate}>
-              Un team dedicato è a tua disposizione per chiarire dubbi e approfondire temi di interesse. Compila il
-              modulo sottostante e invia la richiesta.
+              Un team dedicato è a disposizione di PA locali e fornitori per chiarire dubbi e approfondire temi di
+              interesse. Compila il modulo sottostante e invia la richiesta.
             </div>
           </Col>
           <Col
