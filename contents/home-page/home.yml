@@ -129,7 +129,7 @@ heroCarouselNews:
     description: "Un Help Desk dedicato per rispondere ai quesiti dal mondo ICT sugli Avvisi"
     source: 'innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/articoli/pa-digitale-2026-un-nuovo-canale-diretto-per-i-fornitori/'
-   - id: 2
+  - id: 2
     type: internal
     category: PROROGA AVVISO
     title: Migrazione al Cloud dei Comuni
