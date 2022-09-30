@@ -384,7 +384,8 @@ export const GestireProgettoPage = () => {
                     <br /> Grazie alla collaborazione del Dipartimento per la trasformazione digitale e Consip, per le
                     misure 1.2 (migrazione al cloud) e 1.4.1 (esperienza del cittadino nei servizi pubblici) sono
                     previsti cataloghi in cui i fornitori accreditati hanno modo di presentare offerte dedicate,
-                    funzionali al raggiungimento degli obiettivi previsti dal PNRR, all’interno del{' '}
+                    funzionali al raggiungimento degli obiettivi previsti dal PNRR.
+                    <br /> All’interno del{' '}
                     <a
                       target="_blank"
                       href="https://www.acquistinretepa.it/opencms/opencms/scheda_iniziativa.html?idIniziativa=b577cd18b64b21a3"
@@ -393,8 +394,7 @@ export const GestireProgettoPage = () => {
                       aria-label="Link al Bando del Mercato elettronico servizi ( Link esterno - Apre su nuova scheda )"
                       rel="noreferrer"
                     >
-                      Bando del Mercato elettronico SERVIZI (categoria merceologica Servizi per l’information
-                      communication technology).
+                      Bando del Mercato elettronico SERVIZI
                       <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                           fillRule="evenodd"
@@ -404,18 +404,42 @@ export const GestireProgettoPage = () => {
                         />
                       </svg>
                     </a>
-                    <br /> È comunque sempre possibile selezionare un fornitore anche senza utilizzare il MePA.
+                    , filtrando per area merceologica <strong>“Informatica, elettronica e telecomunicazioni”</strong>, è
+                    possibile possibile possibile individuare i cataloghi in questione. Per la misura 1.2 è necessario
+                    selezionare
+                    <strong>“Servizi Cloud-Mepa”</strong> nella classe merceologica “Servizi ICT”, mentre per la misura
+                    1.4.1 la categoria <strong>“Licenza software-Mepa Servizi”</strong> nella classe merceologica
+                    “Software”.
+                    <br /> Si ricorda che l'ingaggio del fornitore da parte della PA non è vincolato a MePA purché
+                    rispetti il codice e la normativa vigenti in tema di affidamenti pubblici
                   </p>
                   <h3 className={`${classes.contentTitle} mt-5`}>Approfondimenti</h3>
                   <div className={`${classes.linkWrapper}`}>
                     <a
                       target="_blank"
-                      href="https://www.acquistinretepa.it/opencms/opencms/scheda_iniziativa.html?idIniziativa=b577cd18b64b21a3"
+                      href="https://www.acquistinretepa.it/opencms/opencms/scheda_bando.html?idBando=a3650b72ff192ef4"
                       title="Link al Bando del Mercato elettronico servizi ( Link esterno - Apre su nuova scheda )"
                       aria-label="Link al Bando del Mercato elettronico servizi ( Link esterno - Apre su nuova scheda )"
                       rel="noreferrer"
                     >
                       Bando del Mercato elettronico SERVIZI
+                      <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          fillRule="evenodd"
+                          clipRule="evenodd"
+                          d="M16 0H10.5C10.2238 0 9.99998 0.223694 9.99998 0.499634C9.99998 0.775574 10.2238 0.999268 10.5 0.999268H15.1999L6.83012 9.3691C6.63485 9.56437 6.63485 9.88095 6.83012 10.0762C7.02538 10.2715 7.34196 10.2715 7.53722 10.0762L16 1.61342V6.5C16 6.77614 16.2239 7 16.5 7C16.7761 7 17 6.77614 17 6.5V1C17 0.985859 16.9997 0.971786 16.9991 0.957787C16.9774 0.425152 16.5384 1.50615e-05 16 0H16ZM14.01 8.5C14.01 8.22386 14.2338 8 14.51 8C14.7784 8.00532 14.9947 8.22161 15 8.49V14C15 15.6569 13.6568 17 12 17H3C1.34314 17 0 15.6569 0 14V5C0 3.34315 1.34314 2 3 2H7.99999C8.2739 2.00532 8.49467 2.22609 8.49999 2.5C8.49999 2.77614 8.27613 3 7.99999 3H3C1.89543 3 0.999999 3.89543 0.999999 5V14C0.999999 15.1046 1.89543 16 3 16H12.01C13.1146 16 14.01 15.1046 14.01 14V8.5Z"
+                          fill="#0073E6"
+                        />
+                      </svg>
+                    </a>
+                    <a
+                      target="_blank"
+                      href="https://www.acquistinretepa.it/opencms/opencms/programma_progetti-Servizi_pnrr.html"
+                      title="Link alle iniziative Consip a supporto del PNRR ( Link esterno - Apre su nuova scheda )"
+                      aria-label="Link alle iniziative Consip a supporto del PNRR ( Link esterno - Apre su nuova scheda )"
+                      rel="noreferrer"
+                    >
+                      Iniziative Consip a supporto del PNRR
                       <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                           fillRule="evenodd"
@@ -484,23 +508,6 @@ export const GestireProgettoPage = () => {
                       rel="noreferrer"
                     >
                       Gare strategiche ICT per la digitalizzazione della PA
-                      <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          fillRule="evenodd"
-                          clipRule="evenodd"
-                          d="M16 0H10.5C10.2238 0 9.99998 0.223694 9.99998 0.499634C9.99998 0.775574 10.2238 0.999268 10.5 0.999268H15.1999L6.83012 9.3691C6.63485 9.56437 6.63485 9.88095 6.83012 10.0762C7.02538 10.2715 7.34196 10.2715 7.53722 10.0762L16 1.61342V6.5C16 6.77614 16.2239 7 16.5 7C16.7761 7 17 6.77614 17 6.5V1C17 0.985859 16.9997 0.971786 16.9991 0.957787C16.9774 0.425152 16.5384 1.50615e-05 16 0H16ZM14.01 8.5C14.01 8.22386 14.2338 8 14.51 8C14.7784 8.00532 14.9947 8.22161 15 8.49V14C15 15.6569 13.6568 17 12 17H3C1.34314 17 0 15.6569 0 14V5C0 3.34315 1.34314 2 3 2H7.99999C8.2739 2.00532 8.49467 2.22609 8.49999 2.5C8.49999 2.77614 8.27613 3 7.99999 3H3C1.89543 3 0.999999 3.89543 0.999999 5V14C0.999999 15.1046 1.89543 16 3 16H12.01C13.1146 16 14.01 15.1046 14.01 14V8.5Z"
-                          fill="#0073E6"
-                        />
-                      </svg>
-                    </a>
-                    <a
-                      target="_blank"
-                      href="https://www.consip.it/attivit/iniziative-pnrr"
-                      title="Link alle iniziative Consip in ambito PNRR ( Link esterno - Apre su nuova scheda )"
-                      aria-label="Link alle iniziative Consip in ambito PNRR ( Link esterno - Apre su nuova scheda )"
-                      rel="noreferrer"
-                    >
-                      Iniziative Consip in ambito PNRR
                       <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                           fillRule="evenodd"
