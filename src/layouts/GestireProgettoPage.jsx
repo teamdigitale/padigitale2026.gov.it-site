@@ -385,7 +385,9 @@ export const GestireProgettoPage = () => {
                     misure 1.2 (migrazione al cloud) e 1.4.1 (esperienza del cittadino nei servizi pubblici) sono
                     previsti cataloghi in cui i fornitori accreditati hanno modo di presentare offerte dedicate,
                     funzionali al raggiungimento degli obiettivi previsti dal PNRR.
-                    <br /> All’interno del{' '}
+                    <br />
+                    <br />
+                    All’interno del{' '}
                     <a
                       target="_blank"
                       href="https://www.acquistinretepa.it/opencms/opencms/scheda_bando.html?idBando=a3650b72ff192ef4"
