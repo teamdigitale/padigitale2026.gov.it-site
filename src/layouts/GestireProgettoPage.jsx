@@ -388,7 +388,7 @@ export const GestireProgettoPage = () => {
                     <br /> All’interno del{' '}
                     <a
                       target="_blank"
-                      href="https://www.acquistinretepa.it/opencms/opencms/scheda_iniziativa.html?idIniziativa=b577cd18b64b21a3"
+                      href="https://www.acquistinretepa.it/opencms/opencms/scheda_bando.html?idBando=a3650b72ff192ef4"
                       className={`${classes.externalLink}`}
                       title="Link al Bando del Mercato elettronico servizi ( Link esterno - Apre su nuova scheda )"
                       aria-label="Link al Bando del Mercato elettronico servizi ( Link esterno - Apre su nuova scheda )"
@@ -405,8 +405,7 @@ export const GestireProgettoPage = () => {
                       </svg>
                     </a>
                     , filtrando per area merceologica <strong>“Informatica, elettronica e telecomunicazioni”</strong>, è
-                    possibile possibile possibile individuare i cataloghi in questione. Per la misura 1.2 è necessario
-                    selezionare
+                    possibile individuare i cataloghi in questione. Per la misura 1.2 è necessario selezionare
                     <strong>“Servizi Cloud-Mepa”</strong> nella classe merceologica “Servizi ICT”, mentre per la misura
                     1.4.1 la categoria <strong>“Licenza software-Mepa Servizi”</strong> nella classe merceologica
                     “Software”.
