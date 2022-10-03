@@ -409,7 +409,9 @@ export const GestireProgettoPage = () => {
                     <strong>“Servizi Cloud-Mepa”</strong> nella classe merceologica “Servizi ICT”, mentre per la misura
                     1.4.1 la categoria <strong>“Licenza software-Mepa Servizi”</strong> nella classe merceologica
                     “Software”.
-                    <br /> Si ricorda che l'ingaggio del fornitore da parte della PA non è vincolato a MePA purché
+                    <br />
+                    <br />
+                    Si ricorda che l'ingaggio del fornitore da parte della PA non è vincolato a MePA purché rispetti il
                     rispetti il codice e la normativa vigenti in tema di affidamenti pubblici
                   </p>
                   <h3 className={`${classes.contentTitle} mt-5`}>Approfondimenti</h3>
