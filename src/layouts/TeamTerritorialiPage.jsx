@@ -11,12 +11,14 @@ import Select from 'react-select';
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 import { Controller, useForm } from 'react-hook-form';
 import content from '../../contents/team-territoriali/team-territoriali.yml';
+import notificationsLabel from '../../contents/notifications.yml';
 import links from '../../contents/links.yml';
 const { privacy } = links.internalLinks;
 import seo from '../../contents/seo.yml';
 import { SEO } from '../components/SEO';
 
 const { title: seoTitle, description: seoDescription } = seo.teamTerritorialiPage;
+const { successMessage: successLabels, error: errorLabels } = notificationsLabel.teamTerritoriali;
 
 const useStyles = createUseStyles({
   modalUpdatesContainer: {
@@ -429,6 +431,10 @@ export const TeamTerritoriali = () => {
     const spinner = document.querySelector('.spinner');
     spinner.classList.remove('hidden');
 
+    const notificationElement = document.querySelector('.notification');
+    const titleElement = notificationElement.querySelector('h5');
+    const descriptionElement = notificationElement.querySelector('p');
+
     fetch(`${apiUrl}/territory/messages`, {
       method: 'POST',
       headers: {
@@ -442,25 +448,18 @@ export const TeamTerritoriali = () => {
         console.log('data', data);
         setTimeout(() => {
           if (status >= 200 && status <= 299) {
-            // navigate('../../richiesta-inviata');
-            // modalCloseBtn.click();
-            // notificationElement.classList.add('show');
-            // notificationElement.classList.add('success');
-            // titleElement.innerHTML = `${successLabels.icon} ${successLabels.title}`;
-            // descriptionElement.innerHTML = successLabels.description;
-            // setTimeout(() => {
-            //   notificationElement.classList.remove('show');
-            // }, 5000);
+            notificationElement.classList.add('show');
+            notificationElement.classList.add('success');
+            titleElement.innerHTML = `${successLabels.icon} ${successLabels.title}`;
+            descriptionElement.innerHTML = successLabels.description;
+            setTimeout(() => {
+              notificationElement.classList.remove('show');
+            }, 5000);
           } else {
-            // notificationElement.classList.add('show');
-            // notificationElement.classList.add('error');
-            // if (data.success === false) {
-            //   titleElement.innerHTML = `${errorLabels.icon} ${errorAddressLabel.title}`;
-            //   descriptionElement.innerHTML = errorAddressLabel.description;
-            // } else {
-            //   titleElement.innerHTML = `${errorLabels.icon} ${errorLabels.title}`;
-            //   descriptionElement.innerHTML = errorLabels.description;
-            // }
+            notificationElement.classList.add('show');
+            notificationElement.classList.add('error');
+            titleElement.innerHTML = `${errorLabels.icon} ${errorLabels.title}`;
+            descriptionElement.innerHTML = errorLabels.description;
           }
         }, 500);
       })
@@ -471,19 +470,6 @@ export const TeamTerritoriali = () => {
         spinner.classList.add('hidden');
         announce('Invio in corso');
       });
-    // const formElements =
-    //   form.elements &
-    //   {
-    //     usernameInput: { value: string },
-    //   };
-    // const token = await executeRecaptcha();
-    // data['captcha'] = token;
-    // setTimeout(() => {
-    //   navigate('../../richiesta-inviata');
-    //   event.target.reset();
-    //   window.grecaptcha.reset();
-    //   setFormFilled(false);
-    // }, 500);
   };
 
   const {
@@ -749,6 +735,53 @@ export const TeamTerritoriali = () => {
             </form>
           </Col>
         </Row>
+        <div className="container test-docs">
+          <div className="row">
+            <div className="col-12 col-md-6">
+              <div className={classes.notification} role="alert" aria-labelledby="not2dms-title" id="not2dms">
+                <h5 id="not2dms-title">
+                  notifiche
+                  <svg className="icon" role="img" aria-hidden="true"></svg>
+                </h5>
+                <p></p>
+                <button
+                  type="button"
+                  className="btn notification-close"
+                  aria-label="Chiudi"
+                  aria-describedby="not2dms-title"
+                  onClick={() => document.querySelector('.notification').classList.remove('show')}
+                >
+                  <svg
+                    width="19"
+                    height="19"
+                    viewBox="0 0 19 19"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    focusable="false"
+                    role="img"
+                    aria-label="Chiudi"
+                  >
+                    <rect
+                      x="17.3242"
+                      y="0.5"
+                      width="1.49987"
+                      height="24.4978"
+                      transform="rotate(45 17.3242 0.5)"
+                      fill="#5C6F82"
+                    />
+                    <rect
+                      y="1.56055"
+                      width="1.49987"
+                      height="24.4978"
+                      transform="rotate(-45 0 1.56055)"
+                      fill="#5C6F82"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );
