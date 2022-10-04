@@ -412,6 +412,15 @@ export const TeamTerritoriali = () => {
   const onError = async (data) => {
     console.log('error', data);
   };
+  const notifyError = () => {
+    const notificationElement = document.querySelector('.notification');
+    const titleElement = notificationElement.querySelector('h5');
+    const descriptionElement = notificationElement.querySelector('p');
+    notificationElement.classList.add('show');
+    notificationElement.classList.add('error');
+    titleElement.innerHTML = `${errorLabels.icon} ${errorLabels.title}`;
+    descriptionElement.innerHTML = errorLabels.description;
+  };
 
   const onSubmit = async (data, event) => {
     event.preventDefault();
@@ -447,7 +456,7 @@ export const TeamTerritoriali = () => {
         const status = response.status;
         console.log('data', data);
         setTimeout(() => {
-          if (status >= 200 && status <= 299) {
+          if (status >= 200 && status <= 299 && data.success !== false) {
             notificationElement.classList.add('show');
             notificationElement.classList.add('success');
             titleElement.innerHTML = `${successLabels.icon} ${successLabels.title}`;
@@ -456,15 +465,13 @@ export const TeamTerritoriali = () => {
               notificationElement.classList.remove('show');
             }, 5000);
           } else {
-            notificationElement.classList.add('show');
-            notificationElement.classList.add('error');
-            titleElement.innerHTML = `${errorLabels.icon} ${errorLabels.title}`;
-            descriptionElement.innerHTML = errorLabels.description;
+            notifyError();
           }
         }, 500);
       })
       .catch((error) => {
         console.log(error);
+        notifyError();
       })
       .then(() => {
         spinner.classList.add('hidden');
@@ -594,6 +601,7 @@ export const TeamTerritoriali = () => {
                           aria-describedby="mandatory-label"
                           aria-labelledby={errors.name && 'error-name'}
                           type="text"
+                          id="name"
                           aria-required="true"
                           {...field}
                         />
@@ -681,6 +689,7 @@ export const TeamTerritoriali = () => {
                           aria-labelledby={errors.subject && 'error-subject'}
                           type="text"
                           aria-required="true"
+                          id="subject"
                           {...field}
                         />
                         <span className={classes.errorLabel} id="error-subject">
@@ -700,6 +709,7 @@ export const TeamTerritoriali = () => {
                       onInput={textareaInputHandler}
                       rows="3"
                       wrap="soft"
+                      id="description"
                       aria-label="messaggio"
                       {...register('description', { required: true, maxLength: textareaMaxLength })}
                     ></textarea>
