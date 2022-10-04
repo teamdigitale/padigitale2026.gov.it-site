@@ -275,6 +275,9 @@ const useStyles = createUseStyles({
     '@media (max-width: 767px)': {
       textAlign: 'center',
     },
+    '& ul': {
+      textAlign: 'left',
+    },
   },
   mandatory: {
     fontSize: '1rem',
@@ -372,7 +375,7 @@ const query = graphql`
 
 export const TeamTerritoriali = () => {
   const { executeRecaptcha } = useGoogleReCaptcha();
-  const textareaMaxLength = 700;
+  const textareaMaxLength = 300;
   const [textareaDescriptionState, setTextareaDescriptionState] = useState('not-active');
   const formGroupValue = '.form-group';
   const {
@@ -433,9 +436,7 @@ export const TeamTerritoriali = () => {
         data[key] = data[key]?.value;
       }
     });
-
     data['captcha'] = token;
-    console.log(data);
 
     const spinner = document.querySelector('.spinner');
     spinner.classList.remove('hidden');
@@ -454,7 +455,6 @@ export const TeamTerritoriali = () => {
       .then(async (response) => {
         const data = await response.json();
         const status = response.status;
-        console.log('data', data);
         setTimeout(() => {
           if (status >= 200 && status <= 299 && data.success !== false) {
             notificationElement.classList.add('show');
@@ -484,21 +484,19 @@ export const TeamTerritoriali = () => {
     name,
     modal: {
       selectTerritory,
-      selectArgument,
       emailValidationLabel,
       nameValidationLabel,
       territoryValidationLabel,
-      argumentValidationLabel,
-      subjectValidationLabel,
       descriptionValidationLabel,
+      contactNameLabel,
+      contactValidationLabel,
+      phoneLabel,
+      phoneValidationLabel,
       emailLabel,
       territoryLabel,
-      argumentLabel,
       selectTerritoryPlaceholder,
-      selectPlaceholder,
       paNameLabel,
       descriptionLabel,
-      objectLabel,
       sendButtonLabel,
       bodyText,
       mandatoryAdvise,
@@ -537,7 +535,7 @@ export const TeamTerritoriali = () => {
             xs={12}
             md={3}
             lg={3}
-            className="d-flex justify-content-start justify-content-sm-end align-items-start justify-content-lg-start m-0 mt-md-0"
+            className="d-flex justify-content-center justify-content-sm-end align-items-start justify-content-lg-start m-0 mt-md-0"
           >
             <img src={`/assets/assistenza.svg`} alt="" className={classes.heroImg} />
           </Col>
@@ -556,30 +554,26 @@ export const TeamTerritoriali = () => {
               <Row className="mt-5">
                 <Col xs={12} md={6} lg={4}>
                   <Controller
-                    name="address"
+                    name="contact"
                     control={control}
                     rules={{
                       required: true,
-                      pattern: {
-                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                        message: emailValidationLabel,
-                      },
                     }}
                     render={({ field }) => (
                       <>
                         <Input
-                          invalid={errors.address ? true : undefined}
-                          aria-invalid={errors.address && 'true'}
-                          label={emailLabel}
+                          invalid={errors.contact ? true : undefined}
+                          aria-invalid={errors.contact && 'true'}
+                          label={contactNameLabel}
                           aria-describedby="mandatory-label"
-                          aria-labelledby={errors.address && 'error-address'}
+                          aria-labelledby={errors.contact && 'error-contact'}
                           type="text"
-                          id="address"
+                          id="contact"
                           aria-required="true"
                           {...field}
                         />
-                        <span className={classes.errorLabel} id="error-address2">
-                          {errors.address && (errors.address.message || emailValidationLabel)}
+                        <span className={classes.errorLabel} id="error-contact">
+                          {errors.contact && (errors.contact.message || contactValidationLabel)}
                         </span>
                       </>
                     )}
@@ -615,6 +609,70 @@ export const TeamTerritoriali = () => {
               </Row>
               <Row className="mt-5">
                 <Col xs={12} md={6} lg={4}>
+                  <Controller
+                    name="address"
+                    control={control}
+                    rules={{
+                      required: true,
+                      pattern: {
+                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                        message: emailValidationLabel,
+                      },
+                    }}
+                    render={({ field }) => (
+                      <>
+                        <Input
+                          invalid={errors.address ? true : undefined}
+                          aria-invalid={errors.address && 'true'}
+                          label={emailLabel}
+                          aria-describedby="mandatory-label"
+                          aria-labelledby={errors.address && 'error-address'}
+                          type="text"
+                          id="address"
+                          aria-required="true"
+                          {...field}
+                        />
+                        <span className={classes.errorLabel} id="error-address2">
+                          {errors.address && (errors.address.message || emailValidationLabel)}
+                        </span>
+                      </>
+                    )}
+                  />
+                </Col>
+                <Col xs={12} md={6} lg={4} className="offset-lg-1 mt-5 mt-md-0">
+                  <Controller
+                    name="phone"
+                    control={control}
+                    rules={{
+                      pattern: {
+                        value: /\(?([0-9]{2,3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/,
+                        message: phoneValidationLabel,
+                      },
+                      required: true,
+                    }}
+                    render={({ field }) => (
+                      <>
+                        <Input
+                          invalid={errors.phone ? true : undefined}
+                          aria-invalid={errors.phone && 'true'}
+                          label={phoneLabel}
+                          aria-describedby="mandatory-label"
+                          aria-labelledby={errors.phone && 'error-phone'}
+                          type="tel"
+                          id="phone"
+                          aria-required="true"
+                          {...field}
+                        />
+                        <span className={classes.errorLabel} id="error-phone">
+                          {errors.phone && (errors.phone.message || phoneValidationLabel)}
+                        </span>
+                      </>
+                    )}
+                  />
+                </Col>
+              </Row>
+              <Row className="mt-5">
+                <Col xs={12} md={6} lg={4}>
                   <label htmlFor="territory-select" className={classes.selectLabel}>
                     {territoryLabel}
                   </label>
@@ -640,64 +698,6 @@ export const TeamTerritoriali = () => {
                   <span className={classes.area} id="error-area">
                     {errors.area && (errors.area.message || territoryValidationLabel)}
                   </span>
-                </Col>
-                <Col xs={12} md={6} lg={4} className="offset-lg-1 mt-5 mt-md-0">
-                  <div className="select-wrapper">
-                    <label htmlFor="argument-select" className={classes.selectLabel}>
-                      {argumentLabel}
-                    </label>
-                    <Controller
-                      control={control}
-                      name="argument"
-                      rules={{ required: true, message: argumentValidationLabel }}
-                      render={({ field: { onChange, value } }) => (
-                        <Select
-                          value={value}
-                          id="argument-select"
-                          onChange={onChange}
-                          options={selectArgument}
-                          placeholder={selectPlaceholder}
-                          aria-label={selectPlaceholder}
-                          aria-describedby="mandatory-label"
-                          aria-invalid={errors.argument && 'true'}
-                          aria-labelledby={errors.argument && 'error-area'}
-                          className={`select ${errors.argument && ' is-invalid'}`}
-                        />
-                      )}
-                    />
-                    <span className={classes.argument} id="error-argument">
-                      {errors.argument && (errors.argument.message || argumentValidationLabel)}
-                    </span>
-                  </div>
-                </Col>
-              </Row>
-              <Row className="mt-5">
-                <Col xs={12} lg={9}>
-                  <Controller
-                    name="subject"
-                    control={control}
-                    rules={{
-                      required: true,
-                    }}
-                    render={({ field }) => (
-                      <>
-                        <Input
-                          invalid={errors.subject ? true : undefined}
-                          aria-invalid={errors.subject && 'true'}
-                          label={objectLabel}
-                          aria-describedby="mandatory-label"
-                          aria-labelledby={errors.subject && 'error-subject'}
-                          type="text"
-                          aria-required="true"
-                          id="subject"
-                          {...field}
-                        />
-                        <span className={classes.errorLabel} id="error-subject">
-                          {errors.subject && (errors.subject.message || subjectValidationLabel)}
-                        </span>
-                      </>
-                    )}
-                  />
                 </Col>
               </Row>
               <Row className="mt-5">
@@ -745,53 +745,6 @@ export const TeamTerritoriali = () => {
             </form>
           </Col>
         </Row>
-        <div className="container test-docs">
-          <div className="row">
-            <div className="col-12 col-md-6">
-              <div className={classes.notification} role="alert" aria-labelledby="not2dms-title" id="not2dms">
-                <h5 id="not2dms-title">
-                  notifiche
-                  <svg className="icon" role="img" aria-hidden="true"></svg>
-                </h5>
-                <p></p>
-                <button
-                  type="button"
-                  className="btn notification-close"
-                  aria-label="Chiudi"
-                  aria-describedby="not2dms-title"
-                  onClick={() => document.querySelector('.notification').classList.remove('show')}
-                >
-                  <svg
-                    width="19"
-                    height="19"
-                    viewBox="0 0 19 19"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    focusable="false"
-                    role="img"
-                    aria-label="Chiudi"
-                  >
-                    <rect
-                      x="17.3242"
-                      y="0.5"
-                      width="1.49987"
-                      height="24.4978"
-                      transform="rotate(45 17.3242 0.5)"
-                      fill="#5C6F82"
-                    />
-                    <rect
-                      y="1.56055"
-                      width="1.49987"
-                      height="24.4978"
-                      transform="rotate(-45 0 1.56055)"
-                      fill="#5C6F82"
-                    />
-                  </svg>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </>
   );

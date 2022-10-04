@@ -14,11 +14,6 @@ modal:
       label: Sud ovest
     - value: sud-est
       label: Sud est
-  selectArgument:
-    - value: assistenza-tecnico-operativa
-      label: Assistenza tecnico-operativa
-    - value: gestione-fornitori
-      label: Gestione fornitori
   bodyText: |
     Per sostenere la transizione digitale dei singoli Enti il Dipartimento per la trasformazione digitale
     della Presidenza del Consiglio dei ministri ha costituito il Transformation Office.
@@ -41,32 +36,29 @@ modal:
     territoriali e centrali nelle relazioni con i rispettivi fornitori di servizi digitali.
     <br />
     <br />
-    Per domande, chiarimenti o questioni, <strong>contatta il tuo team territoriale di riferimento</strong> attraverso il modulo dedicato.
+    <strong>Per essere contattati</strong> dal team territoriale di un’area specifica, <strong>è possibile lasciare i propri riferimenti</strong>.
   updatesInfo: Lascia i tuoi contatti per ricevere <strong>materiali e <br>informazioni</strong> sulle novità e gli avvisi di Italia digitale 2026
   mandatoryAdvise: I campi con asterisco sono obbligatori
-  mandatorySubAdvise: Contatta il tuo team territoriale
+  mandatorySubAdvise: Lascia i tuoi dati per essere contattato
   requiredLabel: Questo campo è richiesto
   emailLabel: EMAIL*
   emailValidationLabel: Per favore inserisci un'indirizzo email valido.
   nameValidationLabel: Per favore inserisci un nome valido.
+  contactValidationLabel: Per favore inserisci un nome valido.
   territoryValidationLabel: Per favore seleziona un'area.
-  argumentValidationLabel: Per favore seleziona un argomento.
-  subjectValidationLabel: Per favore inserisci un oggetto.
   descriptionValidationLabel: Per favore inserisci un messaggio.
+  phoneValidationLabel: Per favore inserisci un numero di telefono valido.
   territoryLabel: Territorio*
-  argumentLabel: Argomento*
+  phoneLabel: Contatto telefonico*
   measureLabel: Misura*
   selectTerritoryPlaceholder: Seleziona un'area locale
-  selectPlaceholder: Seleziona un argomento
-  enteNameLabel: NOME STRUTTURA*
   directContactLabel: CONTATTO DIRETTO
   directContactInfo: Un <strong>Team dedicato</strong> è a tua disposizione per <strong>ricevere<br>chiarimenti</strong> sugli investimenti o approfondire alcuni temi
   addMessageLabel: Voglio aggiungere un messaggio
   nameLabel: Nome richiedente:*
-  objectLabel: Oggetto*
-  messageSelectLabel: ARGOMENTO MESSAGGIO
-  descriptionLabel: Testo messaggio*
-  paNameLabel: "Nome struttura*"
+  descriptionLabel: Note aggiuntive per essere contattati*
+  paNameLabel: "Nome ente*"
+  contactNameLabel: "Nome referente*"
   radioGroupLabel: DICHIARO
   representLabel: RAPPRESENTO*
   messageLabel: TESTO MESSAGGIO
