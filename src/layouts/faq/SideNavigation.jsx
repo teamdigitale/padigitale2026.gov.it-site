@@ -274,7 +274,9 @@ export const SideNavigation = (props) => {
     evt.preventDefault();
     removeActive();
     const linkTag = evt.target.closest('a');
-    linkTag.classList.add('active');
+    setTimeout(() => {
+      linkTag.classList.add('active');
+    }, 1000);
 
     if (!isMobile) {
       document.querySelector(linkTag.getAttribute('href')).scrollIntoView({
