@@ -489,6 +489,7 @@ export const TeamTerritoriali = () => {
       territoryValidationLabel,
       descriptionValidationLabel,
       contactNameLabel,
+      contactPlaceholder,
       contactValidationLabel,
       phoneLabel,
       phoneValidationLabel,
@@ -496,6 +497,7 @@ export const TeamTerritoriali = () => {
       territoryLabel,
       selectTerritoryPlaceholder,
       paNameLabel,
+      paNamePlaceholder,
       descriptionLabel,
       sendButtonLabel,
       bodyText,
@@ -565,6 +567,7 @@ export const TeamTerritoriali = () => {
                           invalid={errors.contact ? true : undefined}
                           aria-invalid={errors.contact && 'true'}
                           label={contactNameLabel}
+                          placeholder={contactPlaceholder}
                           aria-describedby="mandatory-label"
                           aria-labelledby={errors.contact && 'error-contact'}
                           type="text"
@@ -592,6 +595,7 @@ export const TeamTerritoriali = () => {
                           invalid={errors.name ? true : undefined}
                           aria-invalid={errors.name && 'true'}
                           label={paNameLabel}
+                          placeholder={paNamePlaceholder}
                           aria-describedby="mandatory-label"
                           aria-labelledby={errors.name && 'error-name'}
                           type="text"

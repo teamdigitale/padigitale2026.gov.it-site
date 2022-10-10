@@ -20,7 +20,7 @@ modal:
     <br />
     <br />
     Oltre ad un nucleo centrale, la struttura è dislocata su tutto il territorio attraverso dei team
-    territoriali, organizzato su 6 macro aree locali:
+    territoriali, organizzati su 6 macro aree locali:
     <br />
     <br />
     <ul>
@@ -50,47 +50,13 @@ modal:
   phoneValidationLabel: Per favore inserisci un numero di telefono valido.
   territoryLabel: Territorio*
   phoneLabel: Contatto telefonico*
-  measureLabel: Misura*
   selectTerritoryPlaceholder: Seleziona un'area locale
-  directContactLabel: CONTATTO DIRETTO
-  directContactInfo: Un <strong>Team dedicato</strong> è a tua disposizione per <strong>ricevere<br>chiarimenti</strong> sugli investimenti o approfondire alcuni temi
-  addMessageLabel: Voglio aggiungere un messaggio
-  nameLabel: Nome richiedente:*
   descriptionLabel: Note aggiuntive per essere contattati*
   paNameLabel: "Nome ente*"
+  paNamePlaceholder: Inserisci il tuo ente di appartenenza
   contactNameLabel: "Nome referente*"
-  radioGroupLabel: DICHIARO
-  representLabel: RAPPRESENTO*
-  messageLabel: TESTO MESSAGGIO
-  comunicationRadio: Acconsento a essere contattato per comunicazioni specifiche*
-  privacyRadio: Ho letto e compreso
-  privacyRadioLinkLabel: l’informativa privacy
+  contactPlaceholder: Inserisci il nome del referente
   mandatoryRadioLabel: Seleziona entrambe le voci per proseguire
   sendButtonLabel: INVIA
   privacyLabel: Cliccando su INVIA dichiaro di aver letto e compreso
   privacyLink: l'informativa privacy
-assistanceSuccess:
-  image: assets/assistance-success.svg
-  altImage: illustrazione successo
-  title: Richiesta di assistenza inviata
-  text: Abbiamo ricevuto la tua richiesta di assistenza. Riceverai un riscontro al più presto ai contatti indicati.
-  link: "/"
-  btnAriaLabel: torna alla home
-  btnLabel: TORNA ALLA HOME
-updateSuccess:
-  image: assets/assistance-success.svg
-  altImage: illustrazione successo
-  title: Indirizzo email da confermare
-  text: Per completare la richiesta, fai click sul link che ti abbiamo inviato all’indirizzo email indicato.
-  link: "/"
-  btnAriaLabel: torna alla home
-  btnLabel: TORNA ALLA HOME
-updateError:
-  image: assets/error-page.svg
-  altImage: illustrazione errore
-  title: Attenzione, non è possibile completare la richiesta
-  text: Si è verificato un errore durante l’invio dei dati.
-  link: "/ricevi-aggiornamenti"
-  btnAriaLabel: riprova
-  btnLabel: RIPROVA
-  error: true
