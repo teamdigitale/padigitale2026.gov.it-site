@@ -1,0 +1,62 @@
+breadcrumb: Home
+name: Team Territoriali
+modal:
+  selectTerritory:
+    - value: nord-est
+      label: Nord Est
+    - value: lombardia
+      label: Lombardia
+    - value: nord-ovest
+      label: Nord ovest
+    - value: centro
+      label: Centro
+    - value: sud-ovest
+      label: Sud ovest
+    - value: sud-est
+      label: Sud est
+  bodyText: |
+    Per sostenere la transizione digitale dei singoli Enti il Dipartimento per la trasformazione digitale
+    della Presidenza del Consiglio dei ministri ha costituito il Transformation Office.
+    <br />
+    <br />
+    Oltre ad un nucleo centrale, la struttura è dislocata su tutto il territorio attraverso dei team
+    territoriali, organizzati su 6 macro aree locali:
+    <br />
+    <br />
+    <ul>
+      <li><strong>Nord est:</strong> Emilia-Romagna, Veneto, Friuli-Venezia Giulia, Trentino-Alto Adige</li>
+      <li><strong>Lombardia</strong></li>
+      <li><strong>Nord ovest:</strong> Piemonte, Liguria, Valle D’Aosta</li>
+      <li><strong>Centro:</strong> Lazio, Toscana, Marche, Umbria, Sardegna</li>
+      <li><strong>Sud ovest:</strong> Campania, Calabria, Sicilia</li>
+      <li><strong>Sud est:</strong> Puglia, Basilicata, Abruzzo, Molise</li>
+    </ul>
+    I team territoriali promuovono e facilitano l’adozione e l’attuazione delle misure per il digitale del
+    PNRR. Nello specifico supportano e forniscono <strong>assistenza tecnico-operativa</strong> alle amministrazioni
+    territoriali e centrali nelle relazioni con i rispettivi fornitori di servizi digitali.
+    <br />
+    <br />
+    <strong>Per essere contattati</strong> dal team territoriale di un’area specifica, <strong>è possibile lasciare i propri riferimenti</strong>.
+  updatesInfo: Lascia i tuoi contatti per ricevere <strong>materiali e <br>informazioni</strong> sulle novità e gli avvisi di Italia digitale 2026
+  mandatoryAdvise: I campi con asterisco sono obbligatori
+  mandatorySubAdvise: Lascia i tuoi dati per essere contattato
+  requiredLabel: Questo campo è richiesto
+  emailLabel: EMAIL*
+  emailValidationLabel: Per favore inserisci un'indirizzo email valido.
+  nameValidationLabel: Per favore inserisci un nome valido.
+  contactValidationLabel: Per favore inserisci un nome valido.
+  territoryValidationLabel: Per favore seleziona un'area.
+  descriptionValidationLabel: Per favore inserisci un messaggio.
+  phoneValidationLabel: Per favore inserisci un numero di telefono valido.
+  territoryLabel: Territorio*
+  phoneLabel: Contatto telefonico*
+  selectTerritoryPlaceholder: Seleziona un'area locale
+  descriptionLabel: Note aggiuntive per essere contattati*
+  paNameLabel: "Nome ente*"
+  paNamePlaceholder: Inserisci il tuo ente di appartenenza
+  contactNameLabel: "Nome referente*"
+  contactPlaceholder: Inserisci il nome del referente
+  mandatoryRadioLabel: Seleziona entrambe le voci per proseguire
+  sendButtonLabel: INVIA
+  privacyLabel: Cliccando su INVIA dichiaro di aver letto e compreso
+  privacyLink: l'informativa privacy

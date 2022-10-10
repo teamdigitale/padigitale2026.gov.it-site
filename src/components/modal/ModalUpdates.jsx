@@ -305,6 +305,7 @@ export const ModalUpdates = () => {
     const spinner = document.querySelector('.spinner');
     spinner.classList.remove('hidden');
 
+    // eslint-disable-next-line sonarjs/no-duplicate-string
     const notificationElement = document.querySelector('.notification');
     const titleElement = notificationElement.querySelector('h5');
     const descriptionElement = notificationElement.querySelector('p');
@@ -636,16 +637,17 @@ export const ModalUpdates = () => {
         <div className="row">
           <div className="col-12 col-md-6">
             <div className={classes.notification} role="alert" aria-labelledby="not2dms-title" id="not2dms">
-              <h2 id="not2dms-title">
+              <h5 id="not2dms-title">
                 notifiche
                 <svg className="icon" role="img" aria-hidden="true"></svg>
-              </h2>
+              </h5>
               <p></p>
               <button
                 type="button"
                 className="btn notification-close"
                 aria-label="Chiudi"
                 aria-describedby="not2dms-title"
+                onClick={() => document.querySelector('.notification').classList.remove('show')}
               >
                 <svg
                   width="19"

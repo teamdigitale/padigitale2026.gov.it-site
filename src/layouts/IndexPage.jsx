@@ -3,7 +3,7 @@ import {
   heroMainBanner,
   heroPnrr,
   heroCarouselNews,
-  heroClassificazione,
+  heroTeamTerritoriali,
   heroCarouselNewsTitle,
   noticesCarouselTitle,
   support,
@@ -90,16 +90,16 @@ export const IndexPage = () => {
       />
       <HeroImage
         ctaContainer={true}
-        category={heroClassificazione.category}
-        title={heroClassificazione.title}
-        body={heroClassificazione.body}
-        imageUrl="/assets/Classificazione_Dati_e_Servizi.svg"
+        category={heroTeamTerritoriali.category}
+        title={heroTeamTerritoriali.title}
+        body={heroTeamTerritoriali.body}
+        imageUrl="/assets/Transfromation_Office_Italy.svg"
         imageAlt=""
         firstInternal={true}
-        firstButtonHref={heroClassificazione.link}
-        firstButtonLabel={heroClassificazione.firstButtonLabel}
-        firstButtonAriaLabel={heroClassificazione.firstButtonAriaLabel}
-        heroTitleId="home-hero-title-classificazione"
+        firstButtonHref={heroTeamTerritoriali.link}
+        firstButtonLabel={heroTeamTerritoriali.firstButtonLabel}
+        firstButtonAriaLabel={heroTeamTerritoriali.firstButtonAriaLabel}
+        heroTitleId="home-hero-title-territory"
       />
       <SupportSection supportList={support.cards} title={support.title} buttonLabel={support.buttonLabel} />
     </>

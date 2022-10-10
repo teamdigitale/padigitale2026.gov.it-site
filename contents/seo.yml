@@ -70,5 +70,8 @@ updateErrorPage:
 gestireProgettoPage:
   title: Gestire Progetto - PA digitale 2026
   description: Gestione progetto
+teamTerritorialiPage:
+  title: Team territoriali - PA digitale 2026
+  description: Team territoriali
 
 
