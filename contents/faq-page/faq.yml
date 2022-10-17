@@ -179,6 +179,11 @@ questions:
     description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
     sectionId: supporto-tecnico
     accordions:
+      - title: 'Come posso inviare una segnalazione o un suggerimento di accessibilità?'
+        content: "Se desideri inviare segnalazioni o suggerimenti sull’accessibilità di questo sito web padigitale2026.gov.it, puoi contattarci alla <a href='mailto:accessibilita@innovazione.gov.it'>casella di posta dedicata</a>"
+        linkLabel: "Scopri di più sull'accessibilità"
+        link: 'https://www.agid.gov.it/it/design-servizi/accessibilita'
+        ariaLabel: "Vai a un approfondimento sull'accessibilità (Collegamento esterno - Apre su nuova scheda)"
       - title: 'Quali browser sono supportati per la navigazione di PA digitale 2026?'
         content: 'È possibile navigare la piattaforma con i browser più comuni, come Chrome, Firefox e Safari, ad eccezione di Internet Explorer 11, che non è supportato dal sistema.'
       - title: "Non ho ricevuto l'email di verifica: come posso finalizzare l’iscrizione agli aggiornamenti di PA digitale 2026?"
