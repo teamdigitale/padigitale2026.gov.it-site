@@ -150,7 +150,9 @@ export const FaqPage = () => {
             if (accordion.content?.toLowerCase().includes(value.toLowerCase())) {
               const index = accordion.content.toLowerCase().indexOf(value.toLowerCase());
               const foundText = accordion.content.substring(index, index + valueLength);
-              accordion.content = accordion.content?.replaceAll(foundText, `<mark>${foundText}</mark>`);
+              // this regex will cause unreplaceable string for entities sorrounded by html tags
+              // needed to be able to specify as such links, mail, ...
+              accordion.content = accordion.content?.replaceAll(`(?<!<[^>]*)${foundText}`, `<mark>${foundText}</mark>`);
             }
             if (accordion.linkLabel?.toLowerCase().includes(value.toLowerCase())) {
               const index = accordion.linkLabel.toLowerCase().indexOf(value.toLowerCase());
