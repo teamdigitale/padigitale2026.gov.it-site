@@ -15,7 +15,6 @@ import links from '../../contents/links.yml';
 const { privacy } = links.internalLinks;
 import seo from '../../contents/seo.yml';
 import { SEO } from '../components/SEO';
-import { SupportBanner } from './support/Banner';
 
 const { title: seoTitle, description: seoDescription } = seo.assistenzaPage;
 const { errors } = labels;
@@ -777,7 +776,6 @@ export const AssistenzaPage = () => {
             </form>
           </Col>
         </Row>
-        <SupportBanner />
       </div>
     </>
   );
