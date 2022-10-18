@@ -5,7 +5,7 @@ hero:
   subtitle: "L’erogazione delle risorse si basa sul raggiungimento di specifici obiettivi: ecco come funzionano i controlli del Dipartimento per gli Avvisi di PA digitale 2026."
 sidebar:
   - sectionTitle: L'accesso
-    sectionId: accesso
+    sectionId: access
     sectionActive: true
   - sectionTitle: Il ruolo dell’asseveratore e le verifiche di conformità tecnica
     sectionId: role-verifier

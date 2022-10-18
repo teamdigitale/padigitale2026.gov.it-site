@@ -70,6 +70,9 @@ updateErrorPage:
 gestireProgettoPage:
   title: Gestire Progetto - PA digitale 2026
   description: Gestione progetto
+raggiungereObiettiviPage:
+  title: Raggiungere gli obiettivi - PA digitale 2026
+  description: Raggiungere gli obiettivi
 teamTerritorialiPage:
   title: Team territoriali - PA digitale 2026
   description: Team territoriali

@@ -12,7 +12,7 @@ import seo from '../../contents/seo.yml';
 import content from '../../contents/raggiungere-obiettivi/raggiungere-obiettivi.yml';
 import { SideNavigationAccordion } from './sideNavigationAccordion';
 
-const { title: seoTitle, description: seoDescription } = seo.gestireProgettoPage;
+const { title: seoTitle, description: seoDescription } = seo.raggiungereObiettiviPage;
 
 const { sidebar, name, breadCrumbName, hero } = content;
 
@@ -218,7 +218,7 @@ export const RaggiungereObiettiviPage = () => {
               aria-label="Lista punti da seguire"
             >
               <Container className="pl-lg-4 mb-4">
-                <section id="digital-identity">
+                <section id="access">
                   <h3 className={`${classes.contentTitle} mt-5`}>L'accesso</h3>
                   <p>
                     L’ accesso alla risorse per{' '}
@@ -230,9 +230,10 @@ export const RaggiungereObiettiviPage = () => {
                     infatti sono riconosciuti alle amministrazioni sulla base del raggiungimento di specifici obiettivi
                     predefiniti, appositamente verificati dal Dipartimento per la trasformazione digitale.
                     <br />
-                    <br /> Per rendere questo processo trasparente, sono state pubblicate “Linee guida attuatori di
-                    avvisi pubblici a lump sum”, in cui viene illustrata la metodologia applicata in fase applicata in
-                    fase di verifica, la cosiddetta asseverazione.
+                    <br /> Per rendere questo processo trasparente, sono state pubblicate{' '}
+                    <i>“Linee Guida per i Soggetti attuatori individuati tramite Avvisi Pubblici a lump sum”</i>, in cui
+                    viene illustrata la metodologia applicata in fase applicata in fase di verifica, la cosiddetta
+                    asseverazione.
                   </p>
                   <h3 className={`${classes.contentTitle} mt-5`}>Approfondimenti</h3>
                   <div className={`${classes.linkWrapper}`}>
@@ -243,7 +244,7 @@ export const RaggiungereObiettiviPage = () => {
                       aria-label="Link alle linee guida ( Link esterno - Apre su nuova scheda )"
                       rel="noreferrer"
                     >
-                      Link a linee guida{' '}
+                      Link a Linee guida per i Soggetti attuatori individuati tramite Avvisi Pubblici<i> lump sum</i>{' '}
                       <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                           fillRule="evenodd"
@@ -348,6 +349,7 @@ export const RaggiungereObiettiviPage = () => {
                     <br />
                     <br />
                     <i>App di valutazione per Enti e fornitori</i>
+                    <br />
                     L’App di valutazione dell’adesione ai modelli è un applicativo desktop a supporto degli sviluppatori
                     e a disposizione di tutti i soggetti interessati che aiuta a valutare la qualità, le caratteristiche
                     e il rispetto dei criteri di conformità, fornendo all’interno di un report le informazioni
@@ -388,9 +390,9 @@ export const RaggiungereObiettiviPage = () => {
                     Le verifiche automatiche svolte da PA digitale 2026 analizzano la presenza di alcuni parametri, e se
                     in presenza di una piena corrispondenza, l’attività viene ritenuta completa, e quindi finanziabile.
                   </p>
-                  <Table style={{ border: '0.1px solid' }}>
+                  <Table style={{ border: '0.1px solid' }} className={'mt-5'}>
                     <thead>
-                      <tr>
+                      <tr style={{ backgroundColor: '#F0F6FC' }}>
                         <th scope="col" style={{ verticalAlign: 'top' }}>
                           Misura
                         </th>
