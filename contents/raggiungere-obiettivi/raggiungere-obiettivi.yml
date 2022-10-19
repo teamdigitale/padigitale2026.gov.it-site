@@ -1,0 +1,21 @@
+name: Raggiungere obiettivi - PA digitale 2026
+breadCrumbName: Raggiungere gli obiettivi
+hero:
+  title: Raggiungere gli obiettivi
+  subtitle: "L’erogazione delle risorse si basa sul raggiungimento di specifici obiettivi: ecco come funzionano i controlli del Dipartimento per gli Avvisi di PA digitale 2026."
+sidebar:
+  - sectionTitle: L'accesso
+    sectionId: access
+    sectionActive: true
+  - sectionTitle: Il ruolo dell’asseveratore e le verifiche di conformità tecnica
+    sectionId: role-verifier
+    sectionActive: false
+  - sectionTitle: 1.2 - Abilitazione e facilitazione migrazione al Cloud
+    sectionId: cloud-enablement
+    sectionActive: false
+  - sectionTitle: 1.4.1 - Esperienza del Cittadino nei servizi pubblici
+    sectionId: citizen-experience
+    sectionActive: false
+  - sectionTitle: Piattaforme abilitanti - Misure 1.4.3 (app IO e pagoPA) e 1.4.4 (identità digitale SPID/CIE)
+    sectionId: platforms
+    sectionActive: false
