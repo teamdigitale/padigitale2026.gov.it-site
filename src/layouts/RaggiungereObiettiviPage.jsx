@@ -151,7 +151,7 @@ const useStyles = createUseStyles({
   linkWrapper: {
     '& a': {
       fontWeight: '700',
-      display: 'flex',
+      // display: 'flex',
       alignItems: 'center',
       '& svg': {
         marginLeft: '5px',
@@ -161,6 +161,17 @@ const useStyles = createUseStyles({
   externalLink: {
     fontWeight: '700',
     '& svg': {
+      marginLeft: '5px',
+    },
+  },
+  table: {
+    marginTop: '45px',
+    border: '1px solid #5A768A',
+    '& thead > tr:first-child': {
+      backgroundColor: '#F0F6FC',
+    },
+    '& tr:last-child > td': {
+      borderBottom: '1px solid #5A768A',
       marginLeft: '5px',
     },
   },
@@ -221,7 +232,7 @@ export const RaggiungereObiettiviPage = () => {
                 <section id="access">
                   <h3 className={`${classes.contentTitle} mt-5`}>L'accesso</h3>
                   <p>
-                    L’ accesso alla risorse per{' '}
+                    L’ accesso alle risorse per{' '}
                     <Link to="/iniziativa/soluzioni-standard">
                       <strong>soluzioni standard</strong>
                     </Link>{' '}
@@ -235,8 +246,9 @@ export const RaggiungereObiettiviPage = () => {
                     viene illustrata la metodologia applicata in fase applicata in fase di verifica, la cosiddetta
                     asseverazione.
                   </p>
-                  <h3 className={`${classes.contentTitle} mt-5`}>Approfondimenti</h3>
-                  <div className={`${classes.linkWrapper}`}>
+                  Per leggere le Linee guida vai nella sezione “Linee guida soggetti attuatori” e scarica la
+                  documentazioni per{' '}
+                  <span className={`${classes.linkWrapper}`}>
                     <a
                       target="_blank"
                       href="https://innovazione.gov.it/italia-digitale-2026/attuazione-misure-pnrr/#sistema-di-gestione-e-controllo"
@@ -244,7 +256,7 @@ export const RaggiungereObiettiviPage = () => {
                       aria-label="Link alle linee guida ( Link esterno - Apre su nuova scheda )"
                       rel="noreferrer"
                     >
-                      Link a Linee guida per i Soggetti attuatori individuati tramite Avvisi Pubblici<i> lump sum</i>{' '}
+                      i Soggetti attuatori individuati tramite Avvisi Pubblici a<i> lump sum</i>{' '}
                       <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                           fillRule="evenodd"
@@ -254,7 +266,7 @@ export const RaggiungereObiettiviPage = () => {
                         />
                       </svg>
                     </a>
-                  </div>
+                  </span>
                 </section>
                 <section id="role-verifier">
                   <h3 className={`${classes.contentTitle} mt-5`}>
@@ -274,9 +286,8 @@ export const RaggiungereObiettiviPage = () => {
                       <li>
                         <strong>Esito positivo:</strong> tutti i controlli vengono superati, e la PA può procedere con
                         la richiesta di erogazione del finanziamento, attraverso l’apposita sezione dell’area riservata
-                        di PA digitale 2026
+                        di PA digitale 2026.
                       </li>
-                      .
                       <li>
                         <strong>Esito parzialmente positivo:</strong> le verifiche automatiche e/o dell’asseveratore non
                         confermano la piena conformità tecnica (es. un servizio di pagamento non risulta attivo nei
@@ -327,26 +338,30 @@ export const RaggiungereObiettiviPage = () => {
                     1.4.1 - Esperienza del Cittadino nei servizi pubblici
                   </h3>
                   <p>
-                    Per monitorare il raggiungimento degli obiettivi previsti dall’Avviso sono previsti dei{' '}
+                    Per monitorare il raggiungimento degli obiettivi degli Avvisi (Comuni e scuole) sono previsti dei{' '}
                     <strong>criteri di conformità</strong>, che al termine dei lavori ogni amministrazione dovrà aver
-                    raggiunto per poter accedere ai fondi.Tali criteri sono differenti per il pacchetto “Cittadino
-                    informato” e “Cittadino Attivo”.
+                    raggiunto per poter accedere ai fondi.
                     <br />
                     Sono inoltre presenti una serie di <strong>raccomandazioni</strong> che non sono oggetto di
                     verifica, ma rimangono valide secondo le indicazioni di legge, le linee guida e le buone pratiche.
                     <br />
                     <br />
-                    <strong>CRITERI E RACCOMANDAZIONI</strong>
-                    <br />
-                    <br />
-                    <strong>Pacchetto cittadino informato:</strong>
-                    <br />
-                    20 criteri, 3 raccomandazioni
-                    <br />
-                    <strong>Pacchetto cittadino attivo:</strong>
-                    <br />
-                    18 criteri, 7 raccomandazioni
-                    <br />
+                    <strong>CRITERI E RACCOMANDAZIONI - SCUOLE</strong>
+                    <ul>
+                      <li>9 criteri, 6 raccomandazioni</li>
+                    </ul>
+                    <strong>CRITERI E RACCOMANDAZIONI - COMUNI</strong>
+                    <ul>
+                      <li>
+                        <strong>Pacchetto cittadino informato:</strong>
+                      </li>
+                      20 criteri, 3 raccomandazioni
+                      <br />
+                      <li>
+                        <strong>Pacchetto cittadino attivo:</strong>
+                      </li>
+                      18 criteri, 7 raccomandazioni
+                    </ul>
                     <br />
                     <i>App di valutazione per Enti e fornitori</i>
                     <br />
@@ -362,13 +377,7 @@ export const RaggiungereObiettiviPage = () => {
                       <li>
                         Permette la verifica on-demand del sito e dei servizi <strong>in locale e online</strong>
                       </li>
-                      <li>
-                        Aiuta a valutare il rispetto di:
-                        <ul>
-                          <li>Pacchetto cittadino informato: 18/20 criteri e 1/3 raccomandazioni</li>
-                          <li>Pacchetto cittadino attivo: 2/18 criteri e 0/7 raccomandazioni</li>
-                        </ul>
-                      </li>
+                      <li>Aiuta a valutare il rispetto di criteri e raccomandazioni</li>
                       <li>
                         Fornisce le informazioni necessarie per <strong>interpretare i risultati</strong> e capire come{' '}
                         <strong>apportare migliorie.</strong>
@@ -390,15 +399,15 @@ export const RaggiungereObiettiviPage = () => {
                     Le verifiche automatiche svolte da PA digitale 2026 analizzano la presenza di alcuni parametri, e se
                     in presenza di una piena corrispondenza, l’attività viene ritenuta completa, e quindi finanziabile.
                   </p>
-                  <Table style={{ border: '0.1px solid' }} className={'mt-5'}>
+                  <Table className={classes.table}>
                     <thead>
-                      <tr style={{ backgroundColor: '#F0F6FC' }}>
+                      <tr>
                         <th scope="col" style={{ verticalAlign: 'top' }}>
                           Misura
                         </th>
                         <th scope="col">
                           Soggetto esterno <br />
-                          certificato
+                          certificatore
                         </th>
                         <th scope="col">
                           Presenza dei parametri verificati <br />
@@ -441,7 +450,7 @@ export const RaggiungereObiettiviPage = () => {
                         <td>
                           <ul>
                             <li>Il codice IPA della PA</li>
-                            <li>La data di adesione a CIE</li>
+                            <li>La data di adesione a SPID</li>
                             <li>Il protocollo utilizzato: OIDC o SAML2</li>
                           </ul>
                         </td>

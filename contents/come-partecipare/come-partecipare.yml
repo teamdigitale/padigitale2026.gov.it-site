@@ -17,8 +17,8 @@ keypoints:
       desc: 'Per risolvere dubbi o problemi riguardo la piattaforma e le candidature.'
     - number: "03"
       image: 'candida-pa-lens.svg'
-      title: 'Classificare dati e servizi'
-      desc: 'Per abilitare il processo di migrazione delle PA al cloud.'
+      title: 'Raggiungere gli obiettivi'
+      desc: 'L’erogazione delle risorse si basa sul raggiungimento di specifici obiettivi.'
     - number: "02"
       image: 'invia-candidatura.svg'
       title: 'Candidare una PA agli avvisi'
@@ -27,17 +27,23 @@ keypoints:
       image: 'gest-prog-icon.svg'
       title: 'Gestire un progetto'
       desc: Per completare le attività previste e richiedere il finanziamento.
+    - number: "06"
+      image: 'candida-pa-lens.svg'
+      title: 'Classificare dati e servizi'
+      desc: 'Per abilitare il processo di migrazione delle PA al cloud.'
 listMenu:
   - sectionTitle: Attivare la tua PA
     sectionId: "keypoint-01"
   - sectionTitle: Ricevere assistenza
     sectionId: "keypoint-04"
-  - sectionTitle: Classificare dati e servizi
+  - sectionTitle: Raggiungere gli obiettivi
     sectionId: "keypoint-03"
   - sectionTitle: Candidare una PA agli avvisi
     sectionId: "keypoint-02"
   - sectionTitle: Gestire un progetto
     sectionId: "keypoint-05"
+  - sectionTitle: Classificare dati e servizi
+    sectionId: "keypoint-06"
 sectionFirst:
   number: '01'
   title: 'Attivare la tua  PA'
@@ -65,15 +71,15 @@ sectionSecond:
   BottomLinkLabel2: Cosa può fare il rappresentante legale
   ariaLabel: "Scopri di più su come candidare una PA agli avvisi"
   reverse: true
+  lBlue: true
 sectionThird:
   number: '03'
-  title: 'Classificare dati e servizi'
-  text: La classificazione dei dati e dei servizi è fondamentale per <strong>abilitare il processo di migrazione delle PA al cloud</strong>.</br></br>La classificazione deve essere inviata tramite PA digitale 2026 per identificare la tipologia del cloud di destinazione per i servizi della PA.
-  image: 'kp-section-3.svg'
+  title: 'Raggiungere gli obiettivi'
+  text: "L’erogazione delle risorse si basa sul <strong>raggiungimento di specifici obiettivi</strong>: ecco come funzionano i controlli del Dipartimento per gli Avvisi di PA digitale 2026."
+  image: '../come-partecipare/raggiungere-obiettivi/asseverazione.svg'
   button: true
-  linkTo: "/come-partecipare/classifica-pa"
-  lBlue: true
-  ariaLabel: "Scopri di più su come classificare dati e servizi"
+  linkTo: "/come-partecipare/raggiungere-obiettivi"
+  ariaLabel: "Scopri di più su come raggiungere gli obiettivi"
 sectionFourth:
   number: '04'
   title: 'Ricevere assistenza'
@@ -83,12 +89,21 @@ sectionFourth:
   image: 'assistenza.svg'
   reverse: true
   ariaLabel: "Scopri di più su come ricevere assistenza"
+  lBlue: true
 sectionFifth:
   number: '05'
   title: 'Gestire un progetto'
   text: PA digitale 2026 permette di gestire i progetti all’interno della piattaforma, così da <strong>completare le attività</strong> previste <strong>e richiedere il finanziamento</strong>.</br></br>Inserimento del CUP, ingaggio dei fornitori e completamento delle attività, questi sono i passaggi principali per ottenere il finanziamento e <strong>raggiungere gli obiettivi della candidatura</strong>.
   linkTo: '/come-partecipare/gestire-progetto'
   button: true
-  lBlue: true
   image: 'Gestire_Progetti.svg'
   ariaLabel: "Scopri di più su come gestire un progetto"
+sectionSixth:
+  number: '06'
+  title: 'Classificare dati e servizi'
+  text: La classificazione dei dati e dei servizi è fondamentale per <strong>abilitare il processo di migrazione delle PA al cloud</strong>.</br></br>La classificazione deve essere inviata tramite PA digitale 2026 per identificare la tipologia del cloud di destinazione per i servizi della PA.
+  image: 'kp-section-3.svg'
+  button: true
+  linkTo: "/come-partecipare/classifica-pa"
+  lBlue: true
+  ariaLabel: "Scopri di più su come classificare dati e servizi"
