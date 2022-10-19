@@ -294,7 +294,7 @@ export const FaqPage = () => {
               if (activeQuestion.sectionId === category.sectionId) {
                 const tagActiveArr = activeQuestion.chips;
                 const questions = category.accordions;
-                const temp = [];
+                let temp = [];
                 questions.forEach((question) => {
                   const tagArr = question.tag;
                   if (tagArr) {
@@ -305,6 +305,7 @@ export const FaqPage = () => {
                     });
                   }
                 });
+                temp = [...new Set(temp)];
                 category.accordions = temp;
               }
             });
