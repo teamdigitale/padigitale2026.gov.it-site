@@ -281,13 +281,6 @@ questions:
         content: Il contributo consiste in una somma forfettaria che viene erogata al raggiungimento del risultato come indicato dall'Avviso. Non è prevista la rendicontazione a costi reali.
         tag:
           - comuni
-      - title: In cosa consiste la classificazione di dati e servizi? A cosa serve?
-        content: La classificazione dei dati e dei servizi gestiti dalle PA consente di uniformare e guidare il processo di migrazione al Cloud della PA. Le classi dei dati e servizi sono identificate sulla base del danno che una loro compromissione, in termini di confidenzialità, integrità e disponibilità, provocherebbe al sistema Paese.
-        tag:
-          - comuni
-        linkLabel: Ulteriori informazioni sono disponibili al seguente link
-        link: 'https://docs.italia.it/italia/cloud-italia/strategia-cloud-italia-docs/it/stabile/4_la_strategia_cloud_per_la_pubblica_amministrazione.html#la-classificazione-dei-dati-e-dei-servizi'
-        ariaLabel: Vedi ulteriori informazioni sulla classificazione dei dati e dei servizi gestiti dalle PA (Collegamento esterno - Apre su nuova scheda)
       - title: Come avviene l'acquisizione di servizi cloud qualificati?
         content: I fornitori cloud che intendono erogare servizi Infrastructure as a Service (IaaS), Platform as a Service (PaaS) e Software as a Service (SaaS) destinati alle pubbliche amministrazioni devono ottenere, per questi servizi, la qualificazione rilasciata dall’Agenzia per l’Italia digitale (AgID), utilizzando la piattaforma dedicata alla qualificazione dei cloud service provider e dei servizi cloud.
         tag:
@@ -330,13 +323,14 @@ questions:
         content: No, La Scuola può decidere singolarmente per ognuno dei servizi oggetto della migrazione. L’Ente potrà selezionare il modello di migrazione più adatto da presentare all’interno del piano di migrazione.
         tag:
           - scuole
-      - title: In cosa consiste la classificazione di dati e servizi? A cosa serve?
-        content: 'La classificazione dei dati e dei servizi gestiti dalle PA consente di uniformare e guidare il processo di migrazione al Cloud della PA. Le classi dei dati e servizi sono identificate sulla base del danno che una loro compromissione, in termini di confidenzialità, integrità e disponibilità, provocherebbe al sistema Paese.<br><br>Ulteriori informazioni sono disponibili al seguente link: <a href="https://docs.italia.it/italia/cloud-italia/strategia-cloud-italia-docs/it/stabile/4_la_strategia_cloud_per_la_pubblica_amministrazione.html#la-classificazione-dei-dati-e-dei-servizi" aria-label="link esterno">https://docs.italia.it/italia/cloud-italia/strategia-cloud-italia-docs/it/stabile/4_la_strategia_cloud_per_la_pubblica_amministrazione.html#la-classificazione-dei-dati-e-dei-servizi</a>'
-        tag:
-          - scuole
       - title: A quanto ammonta l'importo del finanziamento previsto dall'Avviso riferito alla Misura 1.2?
         content: 'L’importo del finanziamento concedibile alle Scuole è individuato in un importo forfettario determinato secondo il seguente criterio: per ogni servizio che verrà migrato verrà corrisposto un costo unitario di € 553 iva inclusa, con un importo minimo quindi pari a € 1.659 per 3 servizi fino ad un massimo di € 12.719 equivalente a 23 servizi. L’importo definitivo, tuttavia, sarà calcolato sulla base della sommatoria dei servizi che saranno migrati.'
         tag:
+          - scuole
+      - title: Quali sono gli scenari di migrazione ammissibili?
+        content: "In base al sistema d'origine solo alcune modalità di migrazione sono ammissibili per ricevere l'erogazione del finanziamento. Gli scenari ammissibili sono i seguenti: <br>i. In caso di migrazione con modalità Trasferimento, origine della migrazione On premise strutturato; <br>ii In caso di migrazione con modalità Aggiornamento e destinazione PaaS, origine della migrazione On premise strutturato o IaaS non qualificato; <br>iii In caso di migrazione con modalità Aggiornamento e destinazione SaaS, origine della migrazione On premise destrutturato, on premise strutturato, IaaS non qualificato o Paas non qualificato. Si precisa che per On premise destrutturato si intende un sistema non dedicato e specifico, non creato nativamente per lo scopo, come ad esempio software di office automation o produttività. Con On premise strutturato si intende invece un software nativamente strutturato per assolvere il compito specifico del servizio. Le informazioni sull'origine della migrazione sono richieste all'interno del form di conformità della migrazione di cui è presente un fac simile nell'Allegato 1 delle linee guida per i Soggetti attuatori individuati tramite Avvisi Pubblici a lump sum." 
+        tag: 
+          - comuni
           - scuole
   - title: 1.4.1 Esperienza del Cittadino nei servizi pubblici
     description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
