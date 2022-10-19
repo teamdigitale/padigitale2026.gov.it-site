@@ -269,8 +269,8 @@ questions:
             </thead>
             <tbody>
               <tr style="background-color: #F0F6FC">
-                <th scope="col" rowspan="2">Origine</th>
-                <th scope="col" colspan="3">Destinazione</th>
+                <td rowspan="2"><strong>Origine</strong></td>
+                <td colspan="3"><strong>Destinazione</strong></td>
               </tr>
               <tr style="background-color: #F0F6FC">
                 <td>IaaS</td>
