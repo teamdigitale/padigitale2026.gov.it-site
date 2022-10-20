@@ -51,11 +51,9 @@ modal:
   territoryLabel: Territorio*
   phoneLabel: Contatto telefonico*
   selectTerritoryPlaceholder: Seleziona un'area locale
-  descriptionLabel: Note aggiuntive per essere contattati*
+  descriptionLabel: Note per essere contattati*
   paNameLabel: "Nome ente*"
-  paNamePlaceholder: Inserisci il tuo ente di appartenenza
   contactNameLabel: "Nome referente*"
-  contactPlaceholder: Inserisci il nome del referente
   mandatoryRadioLabel: Seleziona entrambe le voci per proseguire
   sendButtonLabel: INVIA
   privacyLabel: Cliccando su INVIA dichiaro di aver letto e compreso
