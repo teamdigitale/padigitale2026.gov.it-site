@@ -138,24 +138,24 @@ heroCarouselNews:
     source: 'Raggiungere gli obiettivi'
     linkTo: 'https://padigitale2026.gov.it/come-partecipare/raggiungere-obiettivi/'
   - id: 2
+    type: internal
+    category: PROROGA AVVISO
+    title: Migrazione al Cloud dei Comuni
+    description: "La scadenza dell'Avviso è stata posticipata al 13 gennaio 2023"
+    source: 'Avviso 1.2 - Comuni'
+    linkTo: 'https://areariservata.padigitale2026.gov.it/Pa_digitale2026_dettagli_avviso?id=a017Q00000uzQmzQAE'
+  - id: 3
     category: Aggiornamento
     title: "Aumenta la dotazione finanziaria degli Avvisi 1.4.1 e 1.4.5"
     description: "Ulteriori 75 milioni per l’Esperienza del Cittadino nei servizi pubblici e 50 milioni per la Piattaforma Notifiche Digitali"
     source: 'innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/articoli/aumenta-la-dotazione-finanziaria-degli-avvisi-1-4-1-e-1-4-5'
-  - id: 3
+  - id: 4
     category: Novità
     title: "Un nuovo canale diretto per i fornitori"
     description: "Un Help Desk dedicato per rispondere ai quesiti dal mondo ICT sugli Avvisi"
     source: 'innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/articoli/pa-digitale-2026-un-nuovo-canale-diretto-per-i-fornitori/'
-  - id: 4
-    type: internal
-    category: PROROGA AVVISO
-    title: Migrazione al Cloud dei Comuni
-    description: "La scadenza dell'Avviso è stata posticipata al 28 ottobre 2022"
-    source: 'Avviso 1.2 - Comuni'
-    linkTo: 'https://areariservata.padigitale2026.gov.it/Pa_digitale2026_dettagli_avviso?id=a017Q00000uzQmzQAE'
   - id: 5
     type: internal
     category: AGGIORNAMENTO
