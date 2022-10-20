@@ -44,7 +44,7 @@ modal:
   mandatoryAdvise: I campi con asterisco sono obbligatori
   requiredLabel: Questo campo è richiesto
   emailLabel: EMAIL*
-  emailValidationLabel: Per favore inserisci un'indirizzo email valido.
+  emailValidationLabel: Per favore inserisci un indirizzo email valido.
   argumentLabel: Argomento*
   measureLabel: Misura*
   selectPlaceholder: Scegli una voce dall’elenco

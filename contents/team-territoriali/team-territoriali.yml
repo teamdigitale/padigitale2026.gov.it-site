@@ -42,7 +42,7 @@ modal:
   mandatorySubAdvise: Lascia i tuoi dati per essere contattato
   requiredLabel: Questo campo è richiesto
   emailLabel: EMAIL*
-  emailValidationLabel: Per favore inserisci un'indirizzo email valido.
+  emailValidationLabel: Per favore inserisci un indirizzo email valido.
   nameValidationLabel: Per favore inserisci un nome valido.
   contactValidationLabel: Per favore inserisci un nome valido.
   territoryValidationLabel: Per favore seleziona un'area.
