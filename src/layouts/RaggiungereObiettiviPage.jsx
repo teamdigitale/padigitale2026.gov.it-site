@@ -243,8 +243,7 @@ export const RaggiungereObiettiviPage = () => {
                     <br />
                     <br /> Per rendere questo processo trasparente, sono state pubblicate{' '}
                     <i>“Linee Guida per i Soggetti attuatori individuati tramite Avvisi Pubblici a lump sum”</i>, in cui
-                    viene illustrata la metodologia applicata in fase di verifica, la cosiddetta
-                    asseverazione.
+                    viene illustrata la metodologia applicata in fase di verifica, la cosiddetta asseverazione.
                   </p>
                   Per leggere le Linee guida vai nella sezione “Linee guida soggetti attuatori” e scarica la
                   documentazioni per{' '}
