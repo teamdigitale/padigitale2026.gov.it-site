@@ -120,6 +120,7 @@ beneficiaries:
     accessSectionId: presentazione-progetto
     accessLabel: Presentazione Progetto
     moreInfoLink: 'https://areariservata.padigitale2026.gov.it/Pa_digitale2026_avvisi'
+    goToButton: true
   - number: 1.3.2
     id: sport-digi-unic
     title: Sportello Digitale Unico
