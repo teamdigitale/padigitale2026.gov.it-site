@@ -131,44 +131,44 @@ opportunity:
       id: centri-facili
 heroCarouselNews:
   - id: 1
+    category: Nuovo Avviso
+    title: "Al via la Piattaforma Digitale Nazionale Dati"
+    description: "La Piattaforma permette alle PA di scambiare informazioni in maniera semplice e sicura: i primi 110 milioni per favorire l’adesione dei Comuni"
+    source: 'innovazione.gov.it'
+    linkTo: 'https://innovazione.gov.it/notizie/articoli/pnrr-al-via-la-piattaforma-digitale-nazionale-dati/'
+  - id: 2
     type: internal
     category: Novità
     title: Pubblicate le Linee guida per Soggetti attuatori
     description: "Il documento contiene le indicazioni operative per aiutare le PA locali nel raggiungimento degli obiettivi previsti dagli Avvisi"
     source: 'Raggiungere gli obiettivi'
     linkTo: 'https://padigitale2026.gov.it/come-partecipare/raggiungere-obiettivi/'
-  - id: 2
+  - id: 3
     type: internal
     category: PROROGA AVVISO
     title: Migrazione al Cloud dei Comuni
     description: "La scadenza dell'Avviso è stata posticipata al 13 gennaio 2023"
     source: 'Avviso 1.2 - Comuni'
     linkTo: 'https://areariservata.padigitale2026.gov.it/Pa_digitale2026_dettagli_avviso?id=a017Q00000uzQmzQAE'
-  - id: 3
+  - id: 4
     category: Aggiornamento
     title: "Aumenta la dotazione finanziaria degli Avvisi 1.4.1 e 1.4.5"
     description: "Ulteriori 75 milioni per l’Esperienza del Cittadino nei servizi pubblici e 50 milioni per la Piattaforma Notifiche Digitali"
     source: 'innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/articoli/aumenta-la-dotazione-finanziaria-degli-avvisi-1-4-1-e-1-4-5'
-  - id: 4
+  - id: 5
     category: Novità
     title: "Un nuovo canale diretto per i fornitori"
     description: "Un Help Desk dedicato per rispondere ai quesiti dal mondo ICT sugli Avvisi"
     source: 'innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/articoli/pa-digitale-2026-un-nuovo-canale-diretto-per-i-fornitori/'
-  - id: 5
+  - id: 6
     type: internal
     category: AGGIORNAMENTO
     title: Rendicontazione
     description: Pubblicati nell'area di Supporto chiarimenti sulla piattaforma ReGiS
     source: 'Domande frequenti'
     linkTo: 'https://padigitale2026.gov.it/supporto/domande-frequenti#rendicontazione'
-  - id: 6
-    category: Webinar
-    title: "Come gestire contabilità e affidamenti"
-    description: "Due appuntamenti organizzati insieme ad ANCI e IFEL per aiutare i Comuni nella gestione dei fondi e nell’attuazione degli interventi PNRR per il digitale"
-    source: 'innovazione.gov.it'
-    linkTo: 'https://innovazione.gov.it/notizie/articoli/pa-digitale-2026-come-gestire-contabilita-e-affidamenti/'    
 support:
   tag: Supporto
   title: Consulta le domande frequenti o scrivici per ricevere assistenza
