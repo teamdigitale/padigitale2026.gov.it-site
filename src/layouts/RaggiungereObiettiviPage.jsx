@@ -382,6 +382,50 @@ export const RaggiungereObiettiviPage = () => {
                         <strong>apportare migliorie.</strong>
                       </li>
                     </ul>
+                    <br />
+                    L’app è già disponibile in versione beta e quindi soggetta a revisioni e perfezionamenti. Se ne
+                    raccomanda l’uso in tutte le fasi di sviluppo del sito per individuare prontamente eventuali aspetti
+                    di miglioramento.
+                    <br />
+                    <span className={`${classes.linkWrapper}`}>
+                      <a
+                        target="_blank"
+                        href="https://github.com/italia/pa-website-validator/releases"
+                        title="Link al download dell'app ( Link esterno - Apre su nuova scheda )"
+                        aria-label="Link al download dell'app ( Link esterno - Apre su nuova scheda )"
+                        rel="noreferrer"
+                      >
+                        Scarica l'app
+                        <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            fillRule="evenodd"
+                            clipRule="evenodd"
+                            d="M16 0H10.5C10.2238 0 9.99998 0.223694 9.99998 0.499634C9.99998 0.775574 10.2238 0.999268 10.5 0.999268H15.1999L6.83012 9.3691C6.63485 9.56437 6.63485 9.88095 6.83012 10.0762C7.02538 10.2715 7.34196 10.2715 7.53722 10.0762L16 1.61342V6.5C16 6.77614 16.2239 7 16.5 7C16.7761 7 17 6.77614 17 6.5V1C17 0.985859 16.9997 0.971786 16.9991 0.957787C16.9774 0.425152 16.5384 1.50615e-05 16 0H16ZM14.01 8.5C14.01 8.22386 14.2338 8 14.51 8C14.7784 8.00532 14.9947 8.22161 15 8.49V14C15 15.6569 13.6568 17 12 17H3C1.34314 17 0 15.6569 0 14V5C0 3.34315 1.34314 2 3 2H7.99999C8.2739 2.00532 8.49467 2.22609 8.49999 2.5C8.49999 2.77614 8.27613 3 7.99999 3H3C1.89543 3 0.999999 3.89543 0.999999 5V14C0.999999 15.1046 1.89543 16 3 16H12.01C13.1146 16 14.01 15.1046 14.01 14V8.5Z"
+                            fill="#0073E6"
+                          />
+                        </svg>
+                      </a>
+                    </span>
+                    <br />
+                    <span className={`${classes.linkWrapper}`}>
+                      <a
+                        target="_blank"
+                        href="https://docs.italia.it/italia/designers-italia/app-valutazione-modelli-docs/it/versione-attuale/"
+                        title="Link alle istruzioni dell'app di validazione ( Link esterno - Apre su nuova scheda )"
+                        aria-label="Link alle istruzioni dell'app di validazione ( Link esterno - Apre su nuova scheda )"
+                        rel="noreferrer"
+                      >
+                        Scopri di più sull’app e segui le istruzioni per l’installazione
+                        <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            fillRule="evenodd"
+                            clipRule="evenodd"
+                            d="M16 0H10.5C10.2238 0 9.99998 0.223694 9.99998 0.499634C9.99998 0.775574 10.2238 0.999268 10.5 0.999268H15.1999L6.83012 9.3691C6.63485 9.56437 6.63485 9.88095 6.83012 10.0762C7.02538 10.2715 7.34196 10.2715 7.53722 10.0762L16 1.61342V6.5C16 6.77614 16.2239 7 16.5 7C16.7761 7 17 6.77614 17 6.5V1C17 0.985859 16.9997 0.971786 16.9991 0.957787C16.9774 0.425152 16.5384 1.50615e-05 16 0H16ZM14.01 8.5C14.01 8.22386 14.2338 8 14.51 8C14.7784 8.00532 14.9947 8.22161 15 8.49V14C15 15.6569 13.6568 17 12 17H3C1.34314 17 0 15.6569 0 14V5C0 3.34315 1.34314 2 3 2H7.99999C8.2739 2.00532 8.49467 2.22609 8.49999 2.5C8.49999 2.77614 8.27613 3 7.99999 3H3C1.89543 3 0.999999 3.89543 0.999999 5V14C0.999999 15.1046 1.89543 16 3 16H12.01C13.1146 16 14.01 15.1046 14.01 14V8.5Z"
+                            fill="#0073E6"
+                          />
+                        </svg>
+                      </a>
+                    </span>
                   </p>
                 </section>
                 <section id="platforms">
