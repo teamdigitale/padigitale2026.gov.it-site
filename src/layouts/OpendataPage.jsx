@@ -456,7 +456,25 @@ export const OpendataPage = () => {
               </section>
               <section id={body.PNRRMeasure.id}>
                 <h3 className={`${classes.contentTitle} mt-5`}>{body.PNRRMeasure.title}</h3>
-                <p dangerouslySetInnerHTML={{ __html: body.PNRRMeasure.content }} />
+                <p>
+                  La Missione 1 Componente 1 (M1C1) del Piano nazionale di ripresa e resilienza è dedicata alla
+                  digitalizzazione, innovazione e sicurezza nella PA. Degli oltre 6 miliardi messi a disposizione, circa
+                  2 sono destinati alle PA locali.
+                  <br />
+                  <br />
+                  Gli open data fanno riferimento gli avvisi pubblicati su PA digitale 2026 e relativi alle seguenti
+                  misure M1C1:
+                  <br />
+                  <br />
+                  <ul>
+                    <li>1.2: Abilitazione e facilitazione migrazione al Cloud</li>
+                    <li>1.3.1: Piattaforma Digitale Nazionale Dati</li>
+                    <li>1.4.1: Esperienza del Cittadino nei servizi pubblici</li>
+                    <li>1.4.3: Adozione pagoPA e app IO</li>
+                    <li>1.4.4: Adozione identità digitale (SPID/CIE)</li>
+                    <li>1.4.5: Piattaforma Notifiche digitali</li>
+                  </ul>
+                </p>
               </section>
               <section id={body.inDepth.id}>
                 <h3 className={`${classes.contentTitle} mt-5`}>{body.inDepth.title}</h3>
