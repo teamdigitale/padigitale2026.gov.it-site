@@ -225,7 +225,7 @@ export const OpendataPage = () => {
                   <tbody>
                     <tr>
                       <td>Avvisi PA digitale 2026</td>
-                      <td>
+                      <td className="text-center">
                         <span className={`${classes.linkWrapper}`}>
                           <a
                             target="_blank"
@@ -252,7 +252,7 @@ export const OpendataPage = () => {
                           </a>
                         </span>
                       </td>
-                      <td>
+                      <td className="text-center">
                         <span className={`${classes.linkWrapper}`}>
                           <a
                             target="_blank"
@@ -282,7 +282,7 @@ export const OpendataPage = () => {
                     </tr>
                     <tr>
                       <td>Candidature finanziate Comuni</td>
-                      <td>
+                      <td className="text-center">
                         <span className={`${classes.linkWrapper}`}>
                           <a
                             target="_blank"
@@ -309,7 +309,7 @@ export const OpendataPage = () => {
                           </a>
                         </span>
                       </td>
-                      <td>
+                      <td className="text-center">
                         <span className={`${classes.linkWrapper}`}>
                           <a
                             target="_blank"
@@ -339,7 +339,7 @@ export const OpendataPage = () => {
                     </tr>
                     <tr>
                       <td>Candidature finanziate Scuole</td>
-                      <td>
+                      <td className="text-center">
                         <span className={`${classes.linkWrapper}`}>
                           <a
                             target="_blank"
@@ -366,7 +366,7 @@ export const OpendataPage = () => {
                           </a>
                         </span>
                       </td>
-                      <td>
+                      <td className="text-center">
                         <span className={`${classes.linkWrapper}`}>
                           <a
                             target="_blank"
@@ -396,7 +396,7 @@ export const OpendataPage = () => {
                     </tr>
                     <tr>
                       <td>Candidature finanziate Altri Enti</td>
-                      <td>
+                      <td className="text-center">
                         <span className={`${classes.linkWrapper}`}>
                           <a
                             target="_blank"
@@ -423,7 +423,7 @@ export const OpendataPage = () => {
                           </a>
                         </span>
                       </td>
-                      <td>
+                      <td className="text-center">
                         <span className={`${classes.linkWrapper}`}>
                           <a
                             target="_blank"
