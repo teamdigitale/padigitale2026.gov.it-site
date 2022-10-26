@@ -6,7 +6,7 @@ import { ExternalLink } from '../components/ExternalLink';
 
 const {
   internalLinks: { privacy, noteLegali },
-  externalLinks: { dipartimento, a11y, eu, repubblica, ministeroMitd },
+  externalLinks: { dipartimento, a11y, eu, repubblica },
 } = links;
 
 const useStyle = createUseStyles({
@@ -182,11 +182,8 @@ const MainFooter = () => {
                 />
               </ExternalLink>
             </div>
-            <ExternalLink linkTo={ministeroMitd.linkTo} ariaLabel={ministeroMitd.ariaLabel}>
-              <img className={classes.departmentLogo} src="/assets/mitd.svg" alt={ministeroMitd.label} />
-            </ExternalLink>
             <ExternalLink linkTo={dipartimento.linkTo} ariaLabel={dipartimento.ariaLabel}>
-              <img src="/assets/dipartimento.svg" alt={dipartimento.label} />
+              <img className={classes.departmentLogo} src="/assets/dipartimento.svg" alt={dipartimento.label} />
             </ExternalLink>
           </div>
           <div className="info">
