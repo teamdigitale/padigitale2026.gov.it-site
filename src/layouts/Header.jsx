@@ -545,6 +545,15 @@ const NavHeader = () => {
               </NavItem>
               <NavItem className={classes.updatesBtn}>
                 <Link
+                  to={internalLinks.opendata.linkTo}
+                  className={activeItem === 'opendata' ? 'nav-link active' : 'nav-link'}
+                  onClick={closeMenu}
+                >
+                  <span className="font-weight-semibold">{internalLinks.opendata.label}</span>
+                </Link>
+              </NavItem>
+              <NavItem>
+                <Link
                   to={internalLinks.support.linkTo}
                   className={activeItem === 'supporto' ? 'nav-link active' : 'nav-link'}
                   onClick={closeMenu}
