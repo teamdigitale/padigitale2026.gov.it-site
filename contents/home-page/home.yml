@@ -146,7 +146,7 @@ heroCarouselNews:
   - id: 3
     category: Nuovo Avviso
     title: "ACN: online l’Avviso n. 5 per l’attivazione di Laboratori di Prova per l’area di accreditamento Software e Network"
-    description: "L'avviso vuole contribuire al percorso di realizzazione della rete nazionale di scrutinio e valutazione tecnologica a supporto del Centro di Certificazione e Valutazione Nazionale (CVCN)"
+    description: "L'avviso vuole contribuire al percorso di realizzazione della rete nazionale di scrutinio e valutazione tecnologica a supporto del Centro di Valutazione e Certificazione Nazionale (CVCN)"
     source: 'acn.gov.it'
     linkTo: 'https://www.acn.gov.it/notizie/contenuti/pubblicato-avviso-5-2022-per-erogazione-di-contributi-attivazione-laboratori-di-prova'   
   - id: 4
