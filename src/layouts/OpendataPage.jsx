@@ -6,7 +6,6 @@ import React, { useEffect } from 'react';
 import { Breadcrumb, BreadcrumbItem, Container, Row, Col, Table } from 'design-react-kit';
 import { createUseStyles } from 'react-jss';
 import { announce } from '@react-aria/live-announcer';
-import { Link } from 'gatsby';
 import { SEO } from '../components/SEO';
 import seo from '../../contents/seo.yml';
 import content from '../../contents/opendata/opendata.yml';
@@ -190,10 +189,6 @@ export const OpendataPage = () => {
               <Breadcrumb className={classes.breadcrumb}>
                 <BreadcrumbItem className={classes.breadcrumbItem}>
                   <a href="/">Home</a>
-                  <span className="separator"></span>
-                </BreadcrumbItem>
-                <BreadcrumbItem active className={classes.breadcrumbItem}>
-                  <a href="/come-partecipare">Come partecipare</a>
                   <span className="separator"></span>
                 </BreadcrumbItem>
                 <BreadcrumbItem active className={classes.breadcrumbItemActive}>
