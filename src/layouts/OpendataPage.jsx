@@ -50,7 +50,7 @@ const useStyles = createUseStyles({
     '@media (max-width: 991px)': {
       flexDirection: 'column',
     },
-    fontSize: '1.333rem',
+    fontSize: '1rem',
     color: '#33485C',
     lineHeight: '1.5',
   },
@@ -126,7 +126,7 @@ const useStyles = createUseStyles({
     },
   },
   subtitleUpdate: {
-    fontSize: '1.333rem',
+    fontSize: '1rem',
     color: '#33485C',
     lineHeight: '1.5',
     '@media (max-width: 991px)': {
@@ -234,7 +234,7 @@ export const OpendataPage = () => {
                             aria-label="Link al dato ( Link esterno - Apre su nuova scheda )"
                             rel="noreferrer"
                           >
-                            .CSV
+                            CSV
                             <svg
                               width="17"
                               height="17"
@@ -261,7 +261,7 @@ export const OpendataPage = () => {
                             aria-label="Link al dato ( Link esterno - Apre su nuova scheda )"
                             rel="noreferrer"
                           >
-                            .JSON
+                            JSON
                             <svg
                               width="17"
                               height="17"
@@ -291,7 +291,7 @@ export const OpendataPage = () => {
                             aria-label="Link al dato ( Link esterno - Apre su nuova scheda )"
                             rel="noreferrer"
                           >
-                            .CSV
+                            CSV
                             <svg
                               width="17"
                               height="17"
@@ -318,7 +318,7 @@ export const OpendataPage = () => {
                             aria-label="Link al dato ( Link esterno - Apre su nuova scheda )"
                             rel="noreferrer"
                           >
-                            .JSON
+                            JSON
                             <svg
                               width="17"
                               height="17"
@@ -348,7 +348,7 @@ export const OpendataPage = () => {
                             aria-label="Link al dato ( Link esterno - Apre su nuova scheda )"
                             rel="noreferrer"
                           >
-                            .CSV
+                            CSV
                             <svg
                               width="17"
                               height="17"
@@ -375,7 +375,7 @@ export const OpendataPage = () => {
                             aria-label="Link al dato ( Link esterno - Apre su nuova scheda )"
                             rel="noreferrer"
                           >
-                            .JSON
+                            JSON
                             <svg
                               width="17"
                               height="17"
@@ -405,7 +405,7 @@ export const OpendataPage = () => {
                             aria-label="Link al dato ( Link esterno - Apre su nuova scheda )"
                             rel="noreferrer"
                           >
-                            .CSV
+                            CSV
                             <svg
                               width="17"
                               height="17"
@@ -432,7 +432,7 @@ export const OpendataPage = () => {
                             aria-label="Link al dato ( Link esterno - Apre su nuova scheda )"
                             rel="noreferrer"
                           >
-                            .JSON
+                            JSON
                             <svg
                               width="17"
                               height="17"

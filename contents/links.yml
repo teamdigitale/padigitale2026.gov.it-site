@@ -21,7 +21,7 @@ internalLinks:
     linkTop: '#mainTop'
   opendata:
     linkTo: '/opendata'
-    label: Opendata
+    label: Open data
     linkTop: '#mainTop'
   support:
     linkTo: '/supporto'
