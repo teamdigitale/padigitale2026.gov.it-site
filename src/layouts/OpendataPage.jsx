@@ -15,6 +15,11 @@ const { title: seoTitle, description: seoDescription } = seo.opendataPage;
 const { name, breadCrumbName, hero, body } = content;
 
 const useStyles = createUseStyles({
+  container: {
+    composes: 'mb-4',
+    paddingLeft: 0,
+    paddingRight: 0,
+  },
   breadcrumb: {
     padding: '1.563rem 0 0',
     '& .breadcrumb': {
@@ -207,7 +212,7 @@ export const OpendataPage = () => {
             </Col>
           </Row>
           <div className={classes.navigationContainer}>
-            <Container className="mb-4">
+            <Container className={classes.container}>
               <section id={body.howToAccess.id}>
                 <h3 className={`${classes.contentTitle} mt-5`}>{body.howToAccess.title}</h3>
                 <p dangerouslySetInnerHTML={{ __html: body.howToAccess.content }} />
