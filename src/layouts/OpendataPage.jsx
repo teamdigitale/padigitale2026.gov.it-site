@@ -229,7 +229,7 @@ export const OpendataPage = () => {
                         <span className={`${classes.linkWrapper}`}>
                           <a
                             target="_blank"
-                            href="https://github.com/teamdigitale/padigitale2026-opendata/blob/main/data/avvisi.csv"
+                            href="https://raw.githubusercontent.com/teamdigitale/padigitale2026-opendata/main/data/avvisi.csv"
                             title="Link al dato ( Link esterno - Apre su nuova scheda )"
                             aria-label="Link al dato ( Link esterno - Apre su nuova scheda )"
                             rel="noreferrer"
@@ -256,7 +256,7 @@ export const OpendataPage = () => {
                         <span className={`${classes.linkWrapper}`}>
                           <a
                             target="_blank"
-                            href="https://github.com/teamdigitale/padigitale2026-opendata/blob/main/data/avvisi.json"
+                            href="https://raw.githubusercontent.com/teamdigitale/padigitale2026-opendata/main/data/avvisi.json"
                             title="Link al dato ( Link esterno - Apre su nuova scheda )"
                             aria-label="Link al dato ( Link esterno - Apre su nuova scheda )"
                             rel="noreferrer"
@@ -286,7 +286,7 @@ export const OpendataPage = () => {
                         <span className={`${classes.linkWrapper}`}>
                           <a
                             target="_blank"
-                            href="https://github.com/teamdigitale/padigitale2026-opendata/blob/main/data/candidature_comuni_finanziate.csv"
+                            href="https://raw.githubusercontent.com/teamdigitale/padigitale2026-opendata/main/data/candidature_comuni_finanziate.csv"
                             title="Link al dato ( Link esterno - Apre su nuova scheda )"
                             aria-label="Link al dato ( Link esterno - Apre su nuova scheda )"
                             rel="noreferrer"
@@ -313,7 +313,7 @@ export const OpendataPage = () => {
                         <span className={`${classes.linkWrapper}`}>
                           <a
                             target="_blank"
-                            href="https://github.com/teamdigitale/padigitale2026-opendata/blob/main/data/candidature_comuni_finanziate.json"
+                            href="https://raw.githubusercontent.com/teamdigitale/padigitale2026-opendata/main/data/candidature_comuni_finanziate.json"
                             title="Link al dato ( Link esterno - Apre su nuova scheda )"
                             aria-label="Link al dato ( Link esterno - Apre su nuova scheda )"
                             rel="noreferrer"
@@ -343,7 +343,7 @@ export const OpendataPage = () => {
                         <span className={`${classes.linkWrapper}`}>
                           <a
                             target="_blank"
-                            href="https://github.com/teamdigitale/padigitale2026-opendata/blob/main/data/candidature_scuole_finanziate.csv"
+                            href="https://raw.githubusercontent.com/teamdigitale/padigitale2026-opendata/main/data/candidature_scuole_finanziate.csv"
                             title="Link al dato ( Link esterno - Apre su nuova scheda )"
                             aria-label="Link al dato ( Link esterno - Apre su nuova scheda )"
                             rel="noreferrer"
@@ -370,7 +370,7 @@ export const OpendataPage = () => {
                         <span className={`${classes.linkWrapper}`}>
                           <a
                             target="_blank"
-                            href="https://github.com/teamdigitale/padigitale2026-opendata/blob/main/data/candidature_scuole_finanziate.json"
+                            href="https://raw.githubusercontent.com/teamdigitale/padigitale2026-opendata/main/data/candidature_scuole_finanziate.json"
                             title="Link al dato ( Link esterno - Apre su nuova scheda )"
                             aria-label="Link al dato ( Link esterno - Apre su nuova scheda )"
                             rel="noreferrer"
@@ -400,7 +400,7 @@ export const OpendataPage = () => {
                         <span className={`${classes.linkWrapper}`}>
                           <a
                             target="_blank"
-                            href="https://github.com/teamdigitale/padigitale2026-opendata/blob/main/data/candidature_altrienti_finanziate.csv"
+                            href="https://raw.githubusercontent.com/teamdigitale/padigitale2026-opendata/main/data/candidature_altrienti_finanziate.csv"
                             title="Link al dato ( Link esterno - Apre su nuova scheda )"
                             aria-label="Link al dato ( Link esterno - Apre su nuova scheda )"
                             rel="noreferrer"
@@ -427,7 +427,7 @@ export const OpendataPage = () => {
                         <span className={`${classes.linkWrapper}`}>
                           <a
                             target="_blank"
-                            href="https://github.com/teamdigitale/padigitale2026-opendata/blob/main/data/candidature_altrienti_finanziate.json"
+                            href="https://raw.githubusercontent.com/teamdigitale/padigitale2026-opendata/main/data/candidature_altrienti_finanziate.json"
                             title="Link al dato ( Link esterno - Apre su nuova scheda )"
                             aria-label="Link al dato ( Link esterno - Apre su nuova scheda )"
                             rel="noreferrer"
