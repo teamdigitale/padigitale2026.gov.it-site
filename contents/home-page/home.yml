@@ -137,37 +137,37 @@ heroCarouselNews:
     source: 'innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/articoli/pnrr-al-via-la-piattaforma-digitale-nazionale-dati/'
   - id: 2
+    category: Novità
+    title: "DNSH - Pubblicata una nuova Circolare del MEF, novità per gli Avvisi di PA digitale 2026"
+    description: "Tra gli Avvisi già pubblicati coinvolta solo la misura 1.2 per la Migrazione al cloud"
+    source: 'innovazione.gov.it'
+    linkTo: 'https://innovazione.gov.it/notizie/articoli/dnsh-pubblicata-una-nuova-circolare-del-mef-novita-per-gli-avvisi-di-pa-digitale/'
+  - id: 3
     type: internal
     category: Novità
     title: Pubblicate le Linee guida per Soggetti attuatori
     description: "Il documento contiene le indicazioni operative per aiutare le PA locali nel raggiungimento degli obiettivi previsti dagli Avvisi"
     source: 'Raggiungere gli obiettivi'
     linkTo: 'https://padigitale2026.gov.it/come-partecipare/raggiungere-obiettivi/'
-  - id: 3
+  - id: 4
     category: Nuovo Avviso
     title: "ACN: online l’Avviso n. 5 per l’attivazione di Laboratori di Prova per l’area di accreditamento Software e Network"
     description: "L'avviso vuole contribuire al percorso di realizzazione della rete nazionale di scrutinio e valutazione tecnologica a supporto del Centro di Valutazione e Certificazione Nazionale (CVCN)"
     source: 'acn.gov.it'
     linkTo: 'https://www.acn.gov.it/notizie/contenuti/pubblicato-avviso-5-2022-per-erogazione-di-contributi-attivazione-laboratori-di-prova'   
-  - id: 4
+  - id: 5
     type: internal
     category: PROROGA AVVISO
     title: Migrazione al Cloud dei Comuni
     description: "La scadenza dell'Avviso è stata posticipata al 13 gennaio 2023"
     source: 'Avviso 1.2 - Comuni'
     linkTo: 'https://areariservata.padigitale2026.gov.it/Pa_digitale2026_dettagli_avviso?id=a017Q00000uzQmzQAE'
-  - id: 5
+  - id: 6
     category: Aggiornamento
     title: "Aumenta la dotazione finanziaria degli Avvisi 1.4.1 e 1.4.5"
     description: "Ulteriori 75 milioni per l’Esperienza del Cittadino nei servizi pubblici e 50 milioni per la Piattaforma Notifiche Digitali"
     source: 'innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/articoli/aumenta-la-dotazione-finanziaria-degli-avvisi-1-4-1-e-1-4-5'
-  - id: 6
-    category: Novità
-    title: "Un nuovo canale diretto per i fornitori"
-    description: "Un Help Desk dedicato per rispondere ai quesiti dal mondo ICT sugli Avvisi"
-    source: 'innovazione.gov.it'
-    linkTo: 'https://innovazione.gov.it/notizie/articoli/pa-digitale-2026-un-nuovo-canale-diretto-per-i-fornitori/'
 support:
   tag: Supporto
   title: Consulta le domande frequenti o scrivici per ricevere assistenza
