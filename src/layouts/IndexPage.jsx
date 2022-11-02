@@ -46,7 +46,8 @@ export const IndexPage = () => {
             const orderedNews = data.windows
               .reverse()
               .sort((a, b) => Number(b.new) - Number(a.new))
-              .sort((a, b) => Number(b.expiring) - Number(a.expiring));
+              .sort((a, b) => Number(b.expiring) - Number(a.expiring))
+              .slice(0, 7);
             setNewsList(orderedNews);
           });
       } catch (error) {
