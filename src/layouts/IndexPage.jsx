@@ -43,23 +43,18 @@ export const IndexPage = () => {
 
               if (daysFromStart < 14) {
                 news.new = true;
+              } else {
+                news.new = false;
               }
               if (daysToEnd < 14) {
                 news.expiring = true;
+              } else {
+                news.expiring = false;
               }
             });
             const reverseNewsArr = data.windows.reverse();
-            const expiringNewsArr = reverseNewsArr.filter((news) => news.expiring);
-            const newNewsArr = reverseNewsArr.filter((news) => news.new);
-            const normalNewsArr = reverseNewsArr.filter((news) => {
-              if (news.expiring !== true && news.new !== true) {
-                return news;
-              }
-            });
-            orderedNews.push(expiringNewsArr);
-            orderedNews.push(newNewsArr);
-            orderedNews.push(normalNewsArr);
-            orderedNews = orderedNews.flat().slice(0, 7);
+            orderedNews = reverseNewsArr.sort((a, b) => Number(b.new) - Number(a.new));
+            orderedNews = reverseNewsArr.sort((a, b) => Number(b.expiring) - Number(a.expiring));
             setNewsList(orderedNews);
           });
       } catch (error) {
