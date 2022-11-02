@@ -33,6 +33,7 @@ export const IndexPage = () => {
             //
             // Also, show only at most 7 of the most recent ones.
             const newsArr = data.windows;
+            let orderedNews = [];
             newsArr.forEach((news) => {
               const startDate = new Date(news.dataInizioBando);
               const endDate = new Date(news.dataFineBando);
@@ -47,7 +48,19 @@ export const IndexPage = () => {
                 news.expiring = true;
               }
             });
-            setNewsList(data.windows.reverse().slice(0, 7));
+            const reverseNewsArr = data.windows.reverse();
+            const expiringNewsArr = reverseNewsArr.filter((news) => news.expiring);
+            const newNewsArr = reverseNewsArr.filter((news) => news.new);
+            const normalNewsArr = reverseNewsArr.filter((news) => {
+              if (news.expiring !== true && news.new !== true) {
+                return news;
+              }
+            });
+            orderedNews.push(expiringNewsArr);
+            orderedNews.push(newNewsArr);
+            orderedNews.push(normalNewsArr);
+            orderedNews = orderedNews.flat().slice(0, 7);
+            setNewsList(orderedNews);
           });
       } catch (error) {
         console.log(error);
