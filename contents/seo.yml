@@ -76,5 +76,6 @@ raggiungereObiettiviPage:
 teamTerritorialiPage:
   title: Team territoriali - PA digitale 2026
   description: Team territoriali
-
-
+opendataPage:
+  title: Open data - PA digitale 2026
+  description: Open data

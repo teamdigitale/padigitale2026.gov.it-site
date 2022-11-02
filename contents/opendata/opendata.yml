@@ -1,0 +1,48 @@
+name: Open data - PA digitale 2026
+breadCrumbName: Open data
+hero:
+  title: Open data
+  subtitle: |
+    La trasparenza dei dati pubblici è un presupposto fondamentale 
+    per migliorare in maniera continua le politiche nazionali e 
+    permettere a tutti di esercitare una cittadinanza piena e 
+    consapevole.
+    <br /><br />
+    La pagina di open data di PA digitale 2026 ha l’obiettivo 
+    di aumentare la quantità e la qualità di informazioni 
+    disponibili sui fondi del PNRR dedicati alla digitalizzazione 
+    della Pubblica Amministrazione, gestiti dal Dipartimento per 
+    la trasformazione digitale della Presidenza del Consiglio 
+    dei Ministri.
+body:
+  howToAccess:
+    id: come-accedere
+    title: Come accedere agli open data di PA digitale 2026
+    content: |
+      Per accedere ai dati aperti di PA digitale 2026 puoi consultare 
+      l’archivio che raccoglie i dataset relativi a candidature 
+      finanziate (a cui è stato assegnato un finanziamento dal 
+      relativo decreto) e avvisi pubblicati. I dataset sono 
+      disponibili in formato .csv o .json.
+  PNRRMeasure:
+    id: misure-pnrr
+    title: Le misure PNRR per digitalizzazione, innovazione e sicurezza
+  inDepth:
+    id: approfondimenti
+    title: Approfondimenti
+sidebar:
+  - sectionTitle: L'accesso
+    sectionId: access
+    sectionActive: true
+  - sectionTitle: Il ruolo dell’asseveratore e le verifiche di conformità tecnica
+    sectionId: role-verifier
+    sectionActive: false
+  - sectionTitle: 1.2 - Abilitazione e facilitazione migrazione al Cloud
+    sectionId: cloud-enablement
+    sectionActive: false
+  - sectionTitle: 1.4.1 - Esperienza del Cittadino nei servizi pubblici
+    sectionId: citizen-experience
+    sectionActive: false
+  - sectionTitle: Piattaforme abilitanti - Misure 1.4.3 (app IO e pagoPA) e 1.4.4 (identità digitale SPID/CIE)
+    sectionId: platforms
+    sectionActive: false

@@ -19,6 +19,10 @@ internalLinks:
     linkTo: '/come-partecipare'
     label: Come partecipare
     linkTop: '#mainTop'
+  opendata:
+    linkTo: '/opendata'
+    label: Open data
+    linkTop: '#mainTop'
   support:
     linkTo: '/supporto'
     label: Supporto
