@@ -40,14 +40,15 @@ export const IndexPage = () => {
               const daysFromStart = Math.abs(currentDate - startDate) / 1000 / 60 / 60 / 24;
               const daysToEnd = Math.abs(currentDate - endDate) / 1000 / 60 / 60 / 24;
 
-              if (daysFromStart < 14) {
-                news.new = true;
-              }
-              if (daysToEnd < 14) {
-                news.expiring = true;
-              }
+              news.new = daysFromStart < 14;
+              news.expiring = daysToEnd < 14;
             });
-            setNewsList(data.windows.reverse().slice(0, 7));
+            const orderedNews = data.windows
+              .reverse()
+              .sort((a, b) => Number(b.new) - Number(a.new))
+              .sort((a, b) => Number(b.expiring) - Number(a.expiring))
+              .slice(0, 7);
+            setNewsList(orderedNews);
           });
       } catch (error) {
         console.log(error);
