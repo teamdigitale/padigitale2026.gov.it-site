@@ -34,6 +34,9 @@ sidebar:
       - sectionTitle: 1.2
         sectionId: measure-1-2
         sectionActive: false
+      - sectionTitle: 1.3.1
+        sectionId: measure-1-3-1
+        sectionActive: false
       - sectionTitle: 1.4.1
         sectionId: measure-1-4-1
         sectionActive: false
@@ -401,6 +404,59 @@ questions:
         content: 'L’importo del finanziamento concedibile alle Scuole è individuato in un importo forfettario determinato secondo il seguente criterio: per ogni servizio che verrà migrato verrà corrisposto un costo unitario di € 553 iva inclusa, con un importo minimo quindi pari a € 1.659 per 3 servizi fino ad un massimo di € 12.719 equivalente a 23 servizi. L’importo definitivo, tuttavia, sarà calcolato sulla base della sommatoria dei servizi che saranno migrati.'
         tag:
           - scuole
+  - title: 1.3.1 
+    description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
+    sectionId: measure-1-3-1
+    smallTitle: true
+    chips:
+      - chipsId: measure-1-3-1
+      - title: Comuni
+        id: comuni
+    accordions:
+      - title: Come viene calcolato l'importo forfettario previsto dall'Avviso “PIATTAFORMA DIGITALE NAZIONALE DATI”della Misura 1.3.1?
+        content: L’importo del finanziamento concedibile ai Soggetti Attuatori di cui all’art. 5 è individuato, ai sensi dell’art. 53 par. 1. Lett. c) del Reg. UE 1060/2021, in un importo forfettario (Lump sum) determinato in funzione della classe di popolazione residente di riferimento del medesimo Soggetto Attuatore. La classe di popolazione residente di appartenenza del singolo Soggetto Attuatore è determinata sulla base di quanto al dato ISTAT 2021 calcolato sulla popolazione residente al 1 gennaio 2022, come definito alla pagina <a href="http://dati.istat.it/Index.aspx?DataSetCode=DCIS_POPRES1" target="_blank">http://dati.istat.it/Index.aspx?DataSetCode=DCIS_POPRES1</a> (maggio 2022).
+        tag:
+          - comuni
+      - title: È possibile richiedere il finanziamento previsto dall'Avviso 1.3.1 se si è già beneficiato di altri finanziamenti pubblici, comunitari, nazionali o regionali?
+        content: Il finanziamento concesso con il presente Avviso non è cumulabile con altri finanziamenti pubblici, nazionali, regionali o europei, per le stesse spese ammissibili.
+        tag:
+          - comuni
+      - title: Entro quando è possibile inoltrare la domanda di accesso al finanziamento?
+        content: La domanda di partecipazione può essere presentata a partire dalla data di pubblicazione dell'Avviso fino ad esaurimento delle risorse disponibili, e comunque non oltre le ore 23:59 del 17 febbraio 2023.
+        tag:
+          - comuni
+      - title: Quante API è necessario erogare?
+        content: "Il numero di API che un Comune deve erogare, sulla base della dimensione del comune, è <br> - per i Comuni fino a 5.000 abitanti: 1 <br> - per i Comuni 5.001 - 20.000 abitanti: 2; <br> - per i Comuni 20.001 - 50.000 abitanti: 3 <br> - per i Comuni 50.001 - 100.000 abitanti: 4; <br> - per i Comuni 100.001 - 250.000 abitanti: 5; <br> - per i Comuni > 250.000 abitanti: 6."
+        tag:
+          - comuni
+      - title: Quanti endpoint (REST API)/operations (SOAP API) occorre realizzare?
+        content: "Il numero di API che è consigliabile realizzare, sulla base della dimensione del comune, è:<br> - per i Comuni fino a 5.000 abitanti: 5;<br> - per i Comuni 5.001 - 20.000 abitanti: 5; <br> - per i Comuni 20.001 - 50.000 abitanti: 5;<br> - per i Comuni 50.001 - 100.000 abitanti: 10; <br> - per i Comuni 100.001 - 250.000 abitanti: 10; <br> - per i Comuni > 250.000 abitanti: 12."
+        tag:
+          - comuni
+      - title: È obbligatorio realizzare un numero specifico di endpoint/operations?
+        content: No, la realizzazione del numero di endpoint/operations è esclusivamente un suggerimento utile alla realizzazione delle attività oggetto di finanziamento.
+        tag:
+          - comuni
+      - title: Qual è l'importo riconosciuto per le attività previste dall'Avviso riferito alla Misura 1.3.1?
+        content: "Gli importi del contributo, riconosciuti sulla base della dimensione del comune, sono così definiti:<br> - per i Comuni fino a 5.000 abitanti: 1;<br> - per i Comuni 5.001 - 20.000 abitanti: 2; <br> - per i Comuni 20.001 - 50.000 abitanti: 3;<br> - per i Comuni 50.001 - 100.000 abitanti: 4; <br> - per i Comuni 100.001 - 250.000 abitanti: 5; <br> - per i Comuni > 250.000 abitanti: 6."
+        tag:
+          - comuni
+      - title: Entro quanto tempo dovrà essere contrattualizzato il fornitore per i Comuni sotto i 50.000 abitanti?
+        content: Il fornitore dovà essere contrattualizzato al massimo entro 3 mesi (90 gg) dalla data di notifica del Decreto di Finanziamento.
+        tag:
+          - comuni
+      - title: Entro quanto tempo devono essere completate le attività oggetto di finanziamento per i Comuni sotto I 50.000 abitanti?
+        content: Le attività dovranno essere eseguite entro e non oltre 6 mesi (180 giorni) a partire dalla data di pubblicazione del decreto di finanziamento di cui art. 10, comma 5, dell’avviso.
+        tag:
+          - comuni
+      - title: Entro quanto tempo dovrà essere contrattualizzato il fornitore per i Comuni sopra i 50.000 abitanti?
+        content: Le attività dovranno essere eseguite entro e non oltre 6 mesi (180 giorni) a partire dalla data di pubblicazione del decreto di finanziamento di cui art. 10, comma 5, dell’avviso.
+        tag:
+          - comuni
+      - title: Entro quanto tempo devono essere completate le attività oggetto di finanziamento per i Comuni sopra i 50.000 abitanti?
+        content: Le attività dovranno essere eseguite entro e non oltre 6 mesi (180 giorni) a partire dalla data di pubblicazione del decreto di finanziamento di cui art. 10, comma 5, dell’avviso.
+        tag:
+          - comuni
   - title: 1.4.1 Esperienza del Cittadino nei servizi pubblici
     description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
     sectionId: measure-1-4-1

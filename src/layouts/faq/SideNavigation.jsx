@@ -272,9 +272,9 @@ export const SideNavigation = (props) => {
 
   function handleClik(evt) {
     evt.preventDefault();
-    removeActive();
     const linkTag = evt.target.closest('a');
     setTimeout(() => {
+      removeActive();
       linkTag.classList.add('active');
     }, 1000);
 
