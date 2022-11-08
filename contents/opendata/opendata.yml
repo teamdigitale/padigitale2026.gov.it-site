@@ -23,7 +23,7 @@ body:
       l’archivio che raccoglie i dataset relativi a candidature 
       finanziate (a cui è stato assegnato un finanziamento dal 
       relativo decreto) e avvisi pubblicati. I dataset sono 
-      disponibili in formato .csv o .json.
+      disponibili in formato .csv o .json. La licenza di riuso è CC-BY-4.0 (Creative Commons Attribution 4.0 International).
   PNRRMeasure:
     id: misure-pnrr
     title: Le misure PNRR per digitalizzazione, innovazione e sicurezza
