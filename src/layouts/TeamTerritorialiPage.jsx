@@ -542,7 +542,7 @@ export const TeamTerritoriali = () => {
         </Row>
         <Row className={classes.mandatory}>
           <Col xs={12}>
-            <h3>{mandatorySubAdvise}</h3>
+            <h2>{mandatorySubAdvise}</h2>
           </Col>
         </Row>
         <Row className="mt-4">
@@ -565,7 +565,6 @@ export const TeamTerritoriali = () => {
                           invalid={errors.contact ? true : undefined}
                           aria-invalid={errors.contact && 'true'}
                           label={contactNameLabel}
-                          aria-describedby="mandatory-label"
                           aria-labelledby={errors.contact && 'error-contact'}
                           type="text"
                           id="contact"
@@ -592,7 +591,6 @@ export const TeamTerritoriali = () => {
                           invalid={errors.name ? true : undefined}
                           aria-invalid={errors.name && 'true'}
                           label={paNameLabel}
-                          aria-describedby="mandatory-label"
                           aria-labelledby={errors.name && 'error-name'}
                           type="text"
                           id="name"
@@ -625,7 +623,6 @@ export const TeamTerritoriali = () => {
                           invalid={errors.address ? true : undefined}
                           aria-invalid={errors.address && 'true'}
                           label={emailLabel}
-                          aria-describedby="mandatory-label"
                           aria-labelledby={errors.address && 'error-address'}
                           type="text"
                           id="address"
@@ -656,7 +653,6 @@ export const TeamTerritoriali = () => {
                           invalid={errors.phone ? true : undefined}
                           aria-invalid={errors.phone && 'true'}
                           label={phoneLabel}
-                          aria-describedby="mandatory-label"
                           aria-labelledby={errors.phone && 'error-phone'}
                           type="tel"
                           id="phone"
@@ -688,7 +684,6 @@ export const TeamTerritoriali = () => {
                         options={selectTerritory}
                         placeholder={selectTerritoryPlaceholder}
                         aria-label={selectTerritoryPlaceholder}
-                        aria-describedby="mandatory-label"
                         aria-invalid={errors.area && 'true'}
                         aria-labelledby={errors.area && 'error-area'}
                         className={`select ${errors.area && ' is-invalid'}`}
@@ -733,6 +728,7 @@ export const TeamTerritoriali = () => {
                   {privacyLabel}{' '}
                   <a target="_blank" href={privacy.linkTo} rel="noreferrer">
                     {privacyLink}
+                    <span class="sr-only">apre in una nuova scheda</span>
                   </a>
                 </p>
                 <div className={`${classes.submitContainer} d-flex mt-5`}>

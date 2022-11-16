@@ -214,7 +214,7 @@ export const OpendataPage = () => {
           <div className={classes.navigationContainer}>
             <Container className={classes.container}>
               <section id={body.howToAccess.id}>
-                <h3 className={`${classes.contentTitle} mt-5`}>{body.howToAccess.title}</h3>
+                <h2 className={`${classes.contentTitle} mt-5`}>{body.howToAccess.title}</h2>
                 <p dangerouslySetInnerHTML={{ __html: body.howToAccess.content }} />
                 <Table className={classes.table}>
                   <thead>
@@ -460,7 +460,7 @@ export const OpendataPage = () => {
                 </Table>
               </section>
               <section id={body.PNRRMeasure.id}>
-                <h3 className={`${classes.contentTitle} mt-5`}>{body.PNRRMeasure.title}</h3>
+                <h2 className={`${classes.contentTitle} mt-5`}>{body.PNRRMeasure.title}</h2>
                 <p>
                   La Missione 1 Componente 1 (M1C1) del Piano nazionale di ripresa e resilienza è dedicata alla
                   digitalizzazione, innovazione e sicurezza nella PA. Degli oltre 6 miliardi messi a disposizione, circa
@@ -482,14 +482,13 @@ export const OpendataPage = () => {
                 </p>
               </section>
               <section id={body.inDepth.id}>
-                <h3 className={`${classes.contentTitle} mt-5`}>{body.inDepth.title}</h3>
+                <h2 className={`${classes.contentTitle} mt-5`}>{body.inDepth.title}</h2>
                 <p>
                   <div className={`${classes.linkWrapper}`}>
                     <a
                       target="_blank"
                       href="https://github.com/teamdigitale/padigitale2026-opendata"
                       title="Link al repository Github ( Link esterno - Apre su nuova scheda )"
-                      aria-label="Link al repository Github ( Link esterno - Apre su nuova scheda )"
                       rel="noreferrer"
                     >
                       Vai al repository Github
@@ -508,7 +507,6 @@ export const OpendataPage = () => {
                       target="_blank"
                       href="https://github.com/teamdigitale/padigitale2026-opendata/blob/main/README.md"
                       title="Link alla struttura del repository ( Link esterno - Apre su nuova scheda )"
-                      aria-label="Link alla struttura del repository ( Link esterno - Apre su nuova scheda )"
                       rel="noreferrer"
                     >
                       Vai alla struttura del repository

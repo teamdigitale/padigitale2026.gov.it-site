@@ -188,7 +188,6 @@ export const NoticesCarousel = ({ content, title }) => {
         return (
           <span
             className={classes.badgeExp}
-            aria-label="avviso in scadenza"
             dangerouslySetInnerHTML={{ __html: 'IN SCADENZA' }}
           ></span>
         );

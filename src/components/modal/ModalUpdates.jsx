@@ -637,10 +637,10 @@ export const ModalUpdates = () => {
         <div className="row">
           <div className="col-12 col-md-6">
             <div className={classes.notification} role="alert" aria-labelledby="not2dms-title" id="not2dms">
-              <h5 id="not2dms-title">
+              <h3 id="not2dms-title">
                 notifiche
                 <svg className="icon" role="img" aria-hidden="true"></svg>
-              </h5>
+              </h3>
               <p></p>
               <button
                 type="button"
