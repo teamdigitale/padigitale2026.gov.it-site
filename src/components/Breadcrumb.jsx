@@ -32,7 +32,7 @@ export const Breadcrumb = ({ currentPage, noContainer }) => {
     <div className={`container ${noContainer ? 'px-0' : 'px-3'}`}>
       <div className="row">
         <div className="col-12">
-          <nav aria-label={labels.ariaLabel.breadcrumb} className={`${classes.breadcrumb} breadcrumb-container`}>
+          <nav aria-label={labels.ariaLabel.breadcrumb} className={`${classes.breadcrumb} breadcrumb-container`} role="navigation">
             <ol className="breadcrumb justify-content-sm-start">
               <li className="breadcrumb-item d-sm-block">
                 <Link to="/">Home</Link>
