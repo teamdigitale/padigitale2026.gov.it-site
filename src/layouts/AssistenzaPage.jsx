@@ -689,13 +689,13 @@ export const AssistenzaPage = () => {
               <Row className="mt-5">
                 <Col xs={12} md={6} lg={4}>
                   <div className="select-wrapper">
-                    <label htmlFor="00N7Q000007qqtk2" className={classes.selectLabel}>
+                    <label htmlFor="00N7Q00000I5NG0" className={classes.selectLabel}>
                       {categoryLabel}
                     </label>
                     <Select
                       id="category-select"
                       inputId="category-select-input"
-                      dataRefer="00N7Q000007qqtk2"
+                      dataRefer="00N7Q00000I5NG0"
                       options={selectCategory}
                       placeholder={selectPlaceholder}
                       aria-label={selectPlaceholder}
@@ -706,8 +706,8 @@ export const AssistenzaPage = () => {
                     />
                     <select
                       className="d-none"
-                      id="00N7Q000007qqtk2"
-                      name="00N7Q000007qqtk2"
+                      id="00N7Q00000I5NG0"
+                      name="00N7Q00000I5NG0"
                       title="Categoria richiedente"
                       required={true}
                       onInvalid={customInvalid}
@@ -800,7 +800,6 @@ export const AssistenzaPage = () => {
               <input type="hidden" id="origin" name="origin" value="Area pubblica" />
               <input type="hidden" id="recordType" name="recordType" value="0127Q0000001c35" />
               <input type="hidden" id="priority" name="priority" value="Medium" />
-              <input type="hidden" name="debugEmail" value="mattia.puggioni@yopmail.com" />
               <Row>
                 <Col xs={12}>
                   <ReCAPTCHA
