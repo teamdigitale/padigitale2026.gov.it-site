@@ -415,7 +415,9 @@ export const AssistenzaPage = () => {
     };
 
     const selectHandler = () => {
-      noSelectValue = Array.prototype.slice.call(selectArr).find((select) => select.value === '');
+      noSelectValue = Array.prototype.slice
+        .call(selectArr)
+        .find((select) => select.value === '' || select.value === 'null');
       noSelectValue ? (noSelectValue = true) : (noSelectValue = false);
       setFormFilled(!noInputValue && !noSelectValue);
     };
@@ -461,6 +463,14 @@ export const AssistenzaPage = () => {
   const handleArgument = (element) => {
     const argumentInput = document.querySelector('#argument-select-input');
     const selectWrapper = argumentInput.closest('.select-wrapper');
+    const hiddenSelect = selectWrapper.querySelector('select');
+    hiddenSelect.value = element.value;
+    hiddenSelect.dispatchEvent(optionSelected);
+  };
+
+  const handleCategory = (element) => {
+    const categoryInput = document.querySelector('#category-select-input');
+    const selectWrapper = categoryInput.closest('.select-wrapper');
     const hiddenSelect = selectWrapper.querySelector('select');
     hiddenSelect.value = element.value;
     hiddenSelect.dispatchEvent(optionSelected);
@@ -531,9 +541,11 @@ export const AssistenzaPage = () => {
   };
 
   const {
+    selectCategory,
     selectArgument,
     emailValidationLabel,
     emailLabel,
+    categoryLabel,
     argumentLabel,
     selectPlaceholder,
     telLabel,
@@ -677,6 +689,40 @@ export const AssistenzaPage = () => {
               <Row className="mt-5">
                 <Col xs={12} md={6} lg={4}>
                   <div className="select-wrapper">
+                    <label htmlFor="00N7Q000007qqtk2" className={classes.selectLabel}>
+                      {categoryLabel}
+                    </label>
+                    <Select
+                      id="category-select"
+                      inputId="category-select-input"
+                      dataRefer="00N7Q000007qqtk2"
+                      options={selectCategory}
+                      placeholder={selectPlaceholder}
+                      aria-label={selectPlaceholder}
+                      onChange={handleCategory}
+                      aria-describedby="mandatory-label"
+                      className={`select`}
+                      tabIndex="0"
+                    />
+                    <select
+                      className="d-none"
+                      id="00N7Q000007qqtk2"
+                      name="00N7Q000007qqtk2"
+                      title="Categoria richiedente"
+                      required={true}
+                      onInvalid={customInvalid}
+                      size="1"
+                    >
+                      <option selected value="null">
+                        null
+                      </option>
+                      <option value="public-administration">Pubblica amministrazione</option>
+                      <option value="fornitore">Fornitore</option>
+                    </select>
+                  </div>
+                </Col>
+                <Col xs={12} md={6} lg={4} className="offset-lg-1 mt-5 mt-md-0">
+                  <div className="select-wrapper">
                     <label htmlFor="00N7Q000007qqtk" className={classes.selectLabel}>
                       {argumentLabel}
                     </label>
@@ -701,6 +747,9 @@ export const AssistenzaPage = () => {
                       onInvalid={customInvalid}
                       size="1"
                     >
+                      <option selected value="null">
+                        null
+                      </option>
                       <option value="Accesso al portale">Accesso al portale</option>
                       <option value="Iscrizione newsletter">Iscrizione alla newsletter</option>
                       <option value="Generale">Generale</option>
