@@ -1,5 +1,6 @@
 import React from 'react';
 import { OpendataPage } from '../layouts/OpendataPage';
+import { GlobalStateContext } from '../context/globalContext';
 
 const Page = () => {
 
