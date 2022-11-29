@@ -547,7 +547,8 @@ export const AssistenzaPage = () => {
     emailLabel,
     categoryLabel,
     argumentLabel,
-    selectPlaceholder,
+    selectArgumentPlaceholder,
+    selectCategoryPlaceholder,
     telLabel,
     descriptionLabel,
     objectLabel,
@@ -607,11 +608,7 @@ export const AssistenzaPage = () => {
                 </p>
               </div>
               <div className={classes.bannerRight}>
-                <Link
-                  className={classes.bannerLink}
-                  aria-label="vai alla pagina Accedi"
-                  to="https://areariservata.padigitale2026.gov.it/sis_SpidPage"
-                >
+                <Link className={classes.bannerLink} to="https://areariservata.padigitale2026.gov.it/sis_SpidPage">
                   Accedi con identità digitale
                   <svg
                     className="ml-3"
@@ -620,6 +617,7 @@ export const AssistenzaPage = () => {
                     viewBox="0 0 23 16"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
                   >
                     <path
                       d="M1 7C0.447715 7 0 7.44772 0 8C0 8.55228 0.447715 9 1 9V7ZM21.7321 8.70711C22.1226 8.31658 22.1226 7.68342 21.7321 7.29289L15.3681 0.928932C14.9776 0.538408 14.3444 0.538408 13.9539 0.928932C13.5634 1.31946 13.5634 1.95262 13.9539 2.34315L19.6108 8L13.9539 13.6569C13.5634 14.0474 13.5634 14.6805 13.9539 15.0711C14.3444 15.4616 14.9776 15.4616 15.3681 15.0711L21.7321 8.70711ZM1 9H21.025V7H1V9Z"
@@ -697,8 +695,8 @@ export const AssistenzaPage = () => {
                       inputId="category-select-input"
                       dataRefer="00N7Q00000I5NG0"
                       options={selectCategory}
-                      placeholder={selectPlaceholder}
-                      aria-label={selectPlaceholder}
+                      placeholder={selectCategoryPlaceholder}
+                      aria-label={selectCategoryPlaceholder}
                       onChange={handleCategory}
                       aria-describedby="mandatory-label"
                       className={`select`}
@@ -732,8 +730,8 @@ export const AssistenzaPage = () => {
                       dataRefer="00N7Q000007qqtk"
                       options={selectArgument}
                       onChange={handleArgument}
-                      placeholder={selectPlaceholder}
-                      aria-label={selectPlaceholder}
+                      placeholder={selectArgumentPlaceholder}
+                      aria-label={selectArgumentPlaceholder}
                       aria-describedby="mandatory-label"
                       className={`select`}
                       tabIndex="0"

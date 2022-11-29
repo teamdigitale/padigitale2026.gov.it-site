@@ -53,7 +53,8 @@ modal:
   categoryLabel: Categoria richiedente*
   argumentLabel: Argomento*
   measureLabel: Misura*
-  selectPlaceholder: Scegli una voce dall’elenco
+  selectArgumentPlaceholder: Seleziona un argomento
+  selectCategoryPlaceholder: Seleziona
   enteValidationLabel: Per favore inserisci una denominazione ente valida.
   enteTypeLabel: TIPO DI ENTE/STRUTTURA*
   enteNameLabel: NOME STRUTTURA*
