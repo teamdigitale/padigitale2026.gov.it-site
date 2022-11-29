@@ -9,9 +9,9 @@ modal:
     - value: other
       label: Altro
   selectCategory:
-    - value: public-administration
+    - value: Pubblica Amministrazione
       label: Pubblica amministrazione
-    - value: fornitore
+    - value: Fornitore
       label: Fornitore
   selectArgument:
     - value: Accesso al portale

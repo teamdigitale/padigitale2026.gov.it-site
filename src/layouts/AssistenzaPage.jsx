@@ -716,8 +716,8 @@ export const AssistenzaPage = () => {
                       <option selected value="null">
                         null
                       </option>
-                      <option value="public-administration">Pubblica amministrazione</option>
-                      <option value="fornitore">Fornitore</option>
+                      <option value="Pubblica Amministrazione">Pubblica amministrazione</option>
+                      <option value="Fornitore">Fornitore</option>
                     </select>
                   </div>
                 </Col>
