@@ -571,6 +571,10 @@ questions:
         content: Sì, è possibile, ma la riscossione dovrà avvenire per conto dell'Ente creditore senza alterare il flusso dati tra l'Ente e il Nodo di Pagamenti. Il soggetto riscossore dovrà quindi agire come intermediario tecnologico e quindi dovrà incassare direttamente sull'IBAN dell'ente creditore (Comune).
         tag:
           - comuni
+      - title: Ho integrato dei servizi tramite una piattaforma regionale a titolo gratuito (es. My Pay). Posso richiedere il finanziamento sia per i servizi già integrati che per quelli da integrare nella stessa piattaforma?
+        content: Sì, è possibile accedere al finanziamento previsto dall'Avviso per l'integrazione dei servizi purché finanziati con fondi propri a partire dal  1° aprile 2021.
+        tag:
+          - comuni
       - title: Quali enti della PA possono presentare domanda?
         content: 'Sono invitate a presentare proposte a valere sul presente Avviso:<br>a. Le Regioni e le Province Autonome;<br>b. Le  Aziende sanitarie locali e le Aziende ospedaliere pubbliche e le Agenzie sanitarie regionali;<br>c. Le Università e gli Istituti di Istruzione Universitaria pubblici, gli Enti e le Istituzioni di ricerca pubblici, gli Enti e Consorzi per il diritto allo studio, i Consorzi interuniversitari di ricerca e le Istituzioni per l’Alta Formazione Artistica, Musicale e Coreutica - (AFAM) pubbliche.'
         tag:
@@ -796,8 +800,8 @@ questions:
         content: Il fornitore dovà essere contrattualizzato al massimo entro 3 mesi (90 gg) dalla data di notifica del Decreto di Finanziamento.
         tag:
           - comuni
-      - title: Il mio Comune può accedere al finanziamento previsto dall'Avviso riferito alla Misura 1.4.5 anche se l'invio delle notifiche è stato delegato ad altro Ente (Forme associative, Comuni Capofila)?
-        content: Per accedere al finanziamento è necessario che il mittente dell'atto coincida con il Soggetto Attuatore, ovvero, il singolo Comune.
+      - title: Il mio Comune può accedere al finanziamento previsto dall’Avviso riferito alla Misura 1.4.5 anche se l’invio delle notifiche è stato delegato ad altro Ente (Forme associative, Comuni Capofila)?
+        content: Per accedere al finanziamento è necessario che il mittente dell’atto coincida con il Soggetto Attuatore, ovvero, il singolo Comune, <b>anche se questo non è il soggetto che incassa</b>.
         tag:
           - comuni
   - title: Fondo Innovazione
