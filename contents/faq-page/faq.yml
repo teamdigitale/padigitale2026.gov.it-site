@@ -563,10 +563,6 @@ questions:
         content: Per transazione con esito positivo si intende sia una transazione reale eseguita da un cittadino, nel caso in cui la stagionalità del singolo servizio di incasso lo consenta, oppure - in caso contrario - una transazione reale con importo di valore simbolico (es. 0,01€) ma con codice tassonomico e IUV reale, al fine di poter verificare l’effettiva e corretta integrazione del servizio di incasso in modalità end-to-end (cd. transazione di test)
         tag:
           - comuni
-      - title: Ho integrato dei servizi tramite una piattaforma regionale a titolo gratuito. Posso richiedere il finanziamento per l'integrazione nella stessa piattaforma dei servizi aggiuntivi?
-        content: Sì, è possibile accedere al finanziamento previsto dall'Avviso per l'implementazione dei servizi aggiuntivi purché siano finanziati con fondi propri dopo il 1 aprile 2021.
-        tag:
-          - comuni
       - title: Un Ente creditore titolare del credito può avvalersi di un soggetto terzo per la riscossione?
         content: Sì, è possibile, ma la riscossione dovrà avvenire per conto dell'Ente creditore senza alterare il flusso dati tra l'Ente e il Nodo di Pagamenti. Il soggetto riscossore dovrà quindi agire come intermediario tecnologico e quindi dovrà incassare direttamente sull'IBAN dell'ente creditore (Comune).
         tag:
@@ -628,10 +624,6 @@ questions:
           - comuni
       - title: Quando il processo di migrazione e attivazione dei servizi si intende concluso con esito positivo per i servizi attivati sull’app IO?
         content: Il processo si riterrà concluso con esito positivo quando le richieste di pubblicazione saranno approvate dalla pagoPA S.p.A  e tutti i servizi saranno visibili in App.
-        tag:
-          - comuni
-      - title: Ho integrato dei servizi tramite una piattaforma regionale a titolo gratuito. Posso richiedere il finanziamento per l'integrazione nella stessa piattaforma dei servizi aggiuntivi?
-        content: Sì, è possibile accedere al finanziamento previsto dall'Avviso per l'implementazione dei servizi aggiuntivi purché siano finanziati con fondi propri dopo il 1 aprile 2021.
         tag:
           - comuni
       - title: Quali enti della PA possono presentare domanda?
@@ -801,7 +793,7 @@ questions:
         tag:
           - comuni
       - title: Il mio Comune può accedere al finanziamento previsto dall’Avviso riferito alla Misura 1.4.5 anche se l’invio delle notifiche è stato delegato ad altro Ente (Forme associative, Comuni Capofila)?
-        content: Per accedere al finanziamento è necessario che il mittente dell’atto coincida con il Soggetto Attuatore, ovvero, il singolo Comune, <b>anche se questo non è il soggetto che incassa</b>.
+        content: Per accedere al finanziamento è necessario che il mittente dell’atto coincida con il Soggetto Attuatore, ovvero, il singolo Comune, anche se questo non è il soggetto che incassa.
         tag:
           - comuni
   - title: Fondo Innovazione
