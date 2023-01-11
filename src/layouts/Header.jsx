@@ -374,14 +374,28 @@ const SlimHeader = () => {
   return (
     <HeaderReactKit type="slim" theme="light">
       <HeaderContent className="px-2">
-        <HeaderBrand href="https://innovazione.gov.it/" target="_blank" className={classes.headerLink} rel="noreferrer">
-          <span className="sr-only">collegamento esterno apre su nuova scheda</span>
+        <HeaderBrand
+          href="https://innovazione.gov.it/"
+          target="_blank"
+          className={classes.headerLink}
+          rel="noreferrer"
+        >
+          <span className="sr-only">
+            collegamento esterno apre su nuova scheda
+          </span>
           {externalLinks.dipartimento.label}
         </HeaderBrand>
         <HeaderLinkZone aria-label="Siti esterni correlati">
           <div className={classes.headerToggler}>
-            <a href="https://innovazione.gov.it/" target="_blank" className={classes.headerLink} rel="noreferrer">
-              <span className="sr-only">Collegamento esterno - Apre su nuova scheda</span>
+            <a
+              href="https://innovazione.gov.it/"
+              target="_blank"
+              className={classes.headerLink}
+              rel="noreferrer"
+            >
+              <span className="sr-only">
+                Collegamento esterno - Apre su nuova scheda
+              </span>
               {externalLinks.dipartimento.label}
             </a>
             <Button
@@ -396,12 +410,24 @@ const SlimHeader = () => {
           <Collapse isOpen={collapse}>
             <div className={classes.linkListWrapperCustom}>
               <LinkList className={classes.topListLink}>
-                <LinkListItem href={externalLinks.italiaDigitale.linkTo} target="_blank" rel="noreferrer">
-                  <span className="sr-only">Collegamento esterno - Apre su nuova scheda</span>
+                <LinkListItem
+                  href={externalLinks.italiaDigitale.linkTo}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span className="sr-only">
+                    Collegamento esterno - Apre su nuova scheda
+                  </span>
                   {externalLinks.italiaDigitale.label}
                 </LinkListItem>
-                <LinkListItem href={externalLinks.pnrr.linkTo} target="_blank" rel="noreferrer">
-                  <span className="sr-only">Collegamento esterno - Apre su nuova scheda</span>
+                <LinkListItem
+                  href={externalLinks.pnrr.linkTo}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span className="sr-only">
+                    Collegamento esterno - Apre su nuova scheda
+                  </span>
                   {externalLinks.pnrr.label}
                 </LinkListItem>
               </LinkList>
@@ -414,11 +440,19 @@ const SlimHeader = () => {
           href={externalLinks.italiaDigitale.linkTo}
           target="_blank"
         >
-          <img className="d-none d-lg-block" src="/assets/eu-flag.svg" alt={externalLinks.eu.label}></img>
+          <img
+            className="d-none d-lg-block"
+            src="/assets/eu-flag.svg"
+            alt={externalLinks.eu.label}
+          ></img>
         </ExternalLink>
         <Link className={classes.login} to={externalLinks.accedi.linkTo}>
           <img src="/assets/user-icon.svg" alt="icona area profilo"></img>
-          <img className="mobile" src="/assets/user-icon-dark.svg" alt="icona area profilo"></img>
+          <img
+            className="mobile"
+            src="/assets/user-icon-dark.svg"
+            alt="icona area profilo"
+          ></img>
           <span>{externalLinks.accedi.label}</span>
           <span className="sr-only">Accedi all'area privata</span>
         </Link>
@@ -430,7 +464,11 @@ const SlimHeader = () => {
 const CenterHeader = () => {
   const classes = useStyle();
   return (
-    <HeaderReactKit type="center" theme="light" className={classes.headerCenterWrapper}>
+    <HeaderReactKit
+      type="center"
+      theme="light"
+      className={classes.headerCenterWrapper}
+    >
       <HeaderContent className={`${classes.headerCenter} px-2`}>
         <div className="it-brand-wrapper pl-5 pl-sm-0">
           <Link to="/">
@@ -441,7 +479,11 @@ const CenterHeader = () => {
                   src="/assets/repubblica-logo-blue.svg"
                   alt="logo repubblica italiana"
                 />
-                <img className="icon site-logo" src="/assets/site-logo.svg" alt="logo PA digitale" />
+                <img
+                  className="icon site-logo"
+                  src="/assets/site-logo.svg"
+                  alt="logo PA digitale"
+                />
                 <div className="d-none d-lg-inline-block">
                   <div className="h3 mb-0">{headerTitle}</div>
                   <div className={classes.subtitle}>{headerSubtitle}</div>
@@ -453,7 +495,9 @@ const CenterHeader = () => {
         </div>
         <div className={classes.headerLabel} aria-label="PA digitale 2026">
           <span className="title-link">PA digitale 2026</span>
-          <span className="subtitle-link">Le risorse per una PA protagonista della transizione digitale</span>
+          <span className="subtitle-link">
+            Le risorse per una PA protagonista della transizione digitale
+          </span>
         </div>
       </HeaderContent>
     </HeaderReactKit>
@@ -500,13 +544,22 @@ const NavHeader = () => {
 
         <HeaderNav isOpen={isOpen} onCloseMenu={toogleMenu}>
           <div className={classes.menuWrapper}>
-            <button type="button" className={classes.closeMenuBtn} aria-label="Chiudi il menu" onClick={toogleMenu}>
+            <button
+              type="button"
+              className={classes.closeMenuBtn}
+              aria-label="Chiudi il menu"
+              onClick={toogleMenu}
+            >
               <Icon color="primary" icon="it-close" padding size="xl" />
             </button>
             <Nav navbar className={classes.navbarNav}>
               <li className={classes.offCanvasWrapper}>
                 <a href="/" className={classes.offCanvasTitle}>
-                  <img className="icon" src="/assets/site-logo.svg" alt="logo PA digitale" />
+                  <img
+                    className="icon"
+                    src="/assets/site-logo.svg"
+                    alt="logo PA digitale"
+                  />
                   {headerTitle}
                   <span className="sr-only">vai alla home page</span>
                 </a>
@@ -514,51 +567,78 @@ const NavHeader = () => {
               <NavItem active>
                 <Link
                   to={internalLinks.initiative.linkTo}
-                  className={activeItem === 'iniziativa' ? 'nav-link active' : 'nav-link'}
+                  className={
+                    activeItem === 'iniziativa' ? 'nav-link active' : 'nav-link'
+                  }
                   onClick={closeMenu}
                 >
-                  <span className="font-weight-semibold">{internalLinks.initiative.label}</span>
+                  <span className="font-weight-semibold">
+                    {internalLinks.initiative.label}
+                  </span>
                 </Link>
               </NavItem>
               <NavItem active>
                 <Link
                   to={internalLinks.opportunity.linkTo}
-                  className={activeItem === 'misure' ? 'nav-link active' : 'nav-link'}
+                  className={
+                    activeItem === 'misure' ? 'nav-link active' : 'nav-link'
+                  }
                   onClick={closeMenu}
                 >
-                  <span className="font-weight-semibold">{internalLinks.opportunity.label}</span>
+                  <span className="font-weight-semibold">
+                    {internalLinks.opportunity.label}
+                  </span>
                 </Link>
               </NavItem>
               <NavItem active>
-                <Link to="https://areariservata.padigitale2026.gov.it/Pa_digitale2026_avvisi" className="nav-link">
+                <Link
+                  to="https://areariservata.padigitale2026.gov.it/Pa_digitale2026_avvisi"
+                  className="nav-link"
+                >
                   <span className="font-weight-semibold">Avvisi</span>
                 </Link>
               </NavItem>
               <NavItem>
                 <Link
                   to={internalLinks.howToPartecipate.linkTo}
-                  className={activeItem === 'come-partecipare' ? 'nav-link active' : 'nav-link'}
+                  className={
+                    activeItem === 'come-partecipare'
+                      ? 'nav-link active'
+                      : 'nav-link'
+                  }
                   onClick={closeMenu}
                 >
-                  <span className="font-weight-semibold">{internalLinks.howToPartecipate.label}</span>
+                  <span className="font-weight-semibold">
+                    {internalLinks.howToPartecipate.label}
+                  </span>
                 </Link>
               </NavItem>
-              <NavItem active>
+              <NavItem
+                className={`${classes.updatesBtn} activeactiveItem === 'opendata' ? 'nav-link active' : 'nav-link`}
+              >
                 <Link
                   to={internalLinks.opendata.linkTo}
-                  className={activeItem === 'opendata' ? 'nav-link active' : 'nav-link'}
+                  className={
+                    activeItem === 'opendata' ? 'nav-link active' : 'nav-link'
+                  }
                   onClick={closeMenu}
                 >
-                  <span className="font-weight-semibold">{internalLinks.opendata.label}</span>
+                  <span className="font-weight-semibold">
+                    {internalLinks.opendata.label}
+                  </span>
                 </Link>
               </NavItem>
               <NavItem>
                 <Link
                   to={internalLinks.support.linkTo}
-                  className={activeItem === 'supporto' ? 'nav-link active' : 'nav-link'}
+                  className={
+                    activeItem === 'supporto' ? 'nav-link active' : 'nav-link'
+                  }
                   onClick={closeMenu}
                 >
-                  <span className="font-weight-semibold">{internalLinks.support.label}</span>
+                  <span className="font-weight-semibold">
+                    {internalLinks.support.label}
+                  </span>
                 </Link>
               </NavItem>
             </Nav>
