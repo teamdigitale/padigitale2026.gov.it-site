@@ -20,6 +20,9 @@ sidebar:
       - sectionTitle: Candidatura
         sectionId: candidatura
         sectionActive: false
+      - sectionTitle: Progetti
+        sectionId: progetti
+        sectionActive: false
       - sectionTitle: Supporto tecnico
         sectionId: supporto-tecnico
         sectionActive: false
@@ -74,7 +77,7 @@ questions:
         link: 'https://italiadomani.gov.it/'
         ariaLabel: Vai al sito Italia domani (Collegamento esterno - Apre su nuova scheda)
       - title: Cos'è Italia digitale 2026?
-        content: Italia digitale 2026 è il piano strategico per la transizione digitale e la connettività promosso dal Ministro per l’innovazione tecnologica e la transizione digitale all’interno di Italia domani. Il Piano, che raccoglie il 27% delle risorse di Italia domani, si sviluppa su due assi. Il primo asse (6,71 miliardi) riguarda le infrastrutture digitali e la connettività a banda ultra larga. Il secondo (6,74 miliardi) riguarda tutti quegli interventi volti a trasformare la Pubblica Amministrazione (PA) in chiave digitale. I due assi sono necessari per garantire che tutti i cittadini abbiano accesso a connessioni veloci per vivere appieno le opportunità che una vita digitale può e deve offrire e per migliorare il rapporto tra cittadino e pubblica amministrazione rendendo quest’ultima un alleato nella vita digitale dei cittadini.
+        content: Italia digitale 2026 è il piano strategico per la transizione digitale e la connettività promosso dal Dipartimento per la trasformazione digitale. Il Piano, che raccoglie il 27% delle risorse di Italia domani, si sviluppa su due assi. Il primo asse (6,71 miliardi) riguarda le infrastrutture digitali e la connettività a banda ultra larga. Il secondo (6,74 miliardi) riguarda tutti quegli interventi volti a trasformare la Pubblica Amministrazione (PA) in chiave digitale. I due assi sono necessari per garantire che tutti i cittadini abbiano accesso a connessioni veloci per vivere appieno le opportunità che una vita digitale può e deve offrire e per migliorare il rapporto tra cittadino e pubblica amministrazione rendendo quest’ultima un alleato nella vita digitale dei cittadini.
         linkLabel: Scopri la strategia Italia digitale 2026
         link: 'https://innovazione.gov.it/dipartimento/focus/italia-digitale-2026/'
         ariaLabel: Scopri la strategia Italia digitale 2026 (Collegamento esterno - Apre su nuova scheda)
@@ -84,7 +87,7 @@ questions:
         link: 'https://innovazione.gov.it/dipartimento/focus/italia-digitale-2026/#gli-obiettivi-italia-digitale-2026'
         ariaLabel: Vai agli obiettivi di italia digitale 2026 (Collegamento esterno - Apre su nuova scheda)
       - title: Cos’è “PA digitale 2026”?
-        content: “PA digitale 2026” è il sito del Dipartimento per la trasformazione digitale, guidato dal Ministro per l’innovazione tecnologica e la transizione digitale, che permette alla PA di accedere ai fondi di Italia digitale 2026. Il sito sarà il punto unico di accesso per avere informazioni sugli avvisi dedicati alla digitalizzazione della PA, fare richiesta di accesso ai fondi e rendicontare l’avanzamento dei progetti. Inoltre è possibile richiedere assistenza diretta e avere tutte le info sulle azioni di accompagno previste dal Dipartimento per la trasformazione digitale della Presidenza del Consiglio dei ministri.
+        content: “PA digitale 2026” è il sito del Dipartimento per la trasformazione digitale che permette alla PA di accedere ai fondi di Italia digitale 2026. Il sito sarà il punto unico di accesso per avere informazioni sugli avvisi dedicati alla digitalizzazione della PA, fare richiesta di accesso ai fondi e rendicontare l’avanzamento dei progetti. Inoltre è possibile richiedere assistenza diretta e avere tutte le info sulle azioni di accompagno previste dal Dipartimento per la trasformazione digitale della Presidenza del Consiglio dei ministri.
   - title: Accesso
     description: La strategia di ripresa economica e gli interventi previsti per il rilancio digitale del Paese
     sectionId: accesso
@@ -177,6 +180,89 @@ questions:
         content: No, il dispositivo di firma digitale deve essere valido e correttamente funzionante.
       - title: "Quali sono i formati di firma riconosciuti all'interno del sistema?"
         content: Il sistema ritiene valide solo firme di tipologia Cades.
+  - title: Progetti
+    smallTitle: true
+    description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
+    sectionId: progetti
+    chips:
+      - chipsId: progetti
+      - title: Fornitori
+        id: fornitori
+      - title: DNSH
+        id: dnsh
+    accordions:
+      - title: 'È previsto un periodo di mantenimento dei servizi attivi?'
+        content: "Sì, è necessario mantenere i servizi attivi per almeno 5 anni. Tale requisito, verrà verificato attraverso dei controlli a campione da parte degli organi di controllo preposti nei successivi 5 anni. Sono consentiti eventuali sviluppi migliorativi del progetto iniziale a patto che si riesca a ricostruire quanto è stato fatto attraverso apposita documentazione tecnica e amministrativa."
+      - title: Sono previsti controlli sull'avanzamento del progetto?
+        content: Oltre ai controlli relativi all'asseverazione, il Dipartimento si riserva il diritto di esercitare, in ogni tempo, con le modalità che riterrà opportune, verifiche e controlli a campione sull'avanzamento finanziario, procedurale e fisico del progetto, sul rispetto degli obblighi previsti dalla normativa vigente, e dal presente Avviso nonché sulla veridicità delle dichiarazioni e informazioni prodotte dal Soggetto Attuatore. In caso di verifica, in sede di controllo, del mancato pieno rispetto della disciplina nazionale ed europea, anche se non penalmente rilevanti, il Dipartimento procederà alla revoca totale del contributo e al recupero delle eventuali somme già erogate, fatte salve le disposizioni di cui all’art. 20 del presente Avviso.
+      - title: Nell'ambito delle misure 1.3 e 1.4, è previsto il rispetto del principio DNSH per i fornitori?
+        content: 'Come previsto dalla Circolare del 13 ottobre 2022, n. 33 "Aggiornamento Guida operativa per il rispetto del principio di non arrecare danno significativo all’ambiente (cd. DNSH)" il MEF-RGS, a fronte di approfondimenti condotti con il DTD, ha stabilito che il principio del DNSH non si applica agli investimenti 1.3 e 1.4 della Missione 1 Componente 1 del PNRR - <a target="_blank" href="https://www.rgs.mef.gov.it/VERSIONE-I/circolari/2022/circolare_n_33_2022">https://www.rgs.mef.gov.it/VERSIONE-I/circolari/2022/circolare_n_33_2022</a>'
+        tag:
+          - fornitori
+      - title: È possibile accedere alla piattaforma PA digitale 2026 come fornitori?
+        content: No, possono accedere alla piattaforma solo i Soggetti Attuatori delle misure (le PA) secondo quanto stabilito dai relativi avvisi.
+        tag:
+          - fornitori
+      - title: Chi è il Soggetto Realizzatore da inserire nella sezione dell'implementazione dei progetti?
+        content: Il Soggetto Realizzatore può essere lo stesso Ente o il fornitore o partner/intermediario tecnologico che ha fornito supporto nell'implementazione delle attività e relativo rilascio in esercizio.
+        tag:
+          - fornitori
+      - title: Un Soggetto Attuatore può avvalersi di un'altra Pubblica Amministrazione in qualità di Soggetto Realizzatore?
+        content: Sì, in base a quanto disposto dell’art. 15 della Legge 241/1990, è nella responsabilità dell'Ente valutare se la forma di cooperazione prevista sia coerente con un rapporto di affidamento di servizi.
+        tag:
+          - fornitori
+      - title: Chi è il titolare effettivo da inserire nella fase di inserimento dati relativi al fornitore contrattualizzato?
+        content: Secondo quanto disposto dall'art.1 c. 2 lettera u) del D.Lgs. 231/2007, il titolare effettivo è individuabile nella persona fisica per conto della quale è realizzata un'operazione o un'attività, ovvero, nel caso di entità giuridica, la persona o le persone fisiche che, in ultima istanza, possiedono o controllano tale entità, ovvero ne risultano beneficiari secondo i criteri di cui all'allegato tecnico al D.Lgs 231/2007.
+        tag:
+          - fornitori
+      - title: È necessario individuare un fornitore esterno per i bandi PNRR?
+        content: Il Soggetto Attuatore può affidare lo svolgimento delle attività a uno o più fornitori autonomamente individuati, nel rispetto del codice degli appalti. In alternativa, la stessa amministrazione aderente deve segnalare la scelta di non ricorrere ad un fornitore esterno.
+        tag:
+          - fornitori
+      - title: Nel caso in cui una PA si avvalga di un soggetto in house che funge da concentratore è necessario per la PA inserire anche i contratti che quest'ultimo ha stipulato con i diversi fornitori coinvolti?
+        content: Nel caso della presenza di un fornitore in house è sufficiente inserire solo il contratto con quest'ultimo. Resta inteso che, qualora siano presenti ulteriori fornitori, basterà compilare l'anagrafica di ognuno attraverso la funzione "Aggiungi subappaltatore".
+        tag:
+          - fornitori
+      - title: Qualora sia in già in corso un contratto di hosting e manutenzione del sito internet e fosse necessario effettuare un nuovo affidamento per partecipare ai bandi del PNRR, è possibile interrompere anticipatamente il contratto in essere? È possibile affidare l'incarico all'operatore uscente, derogando al principio di rotazione di cui alle linee Guida ANAC n°4?
+        content: È possibile far cessare anticipatamente il contratto nei casi di cui agli artt. 108 e 109 del d.lgs. 50/2016 e in altri casi di risoluzione o recesso eventualmente previsti nel contratto. L’eventuale nuovo affidamento al medesimo operatore economico dovrà essere adeguatamente motivato dalla stazione appaltante, tenendo conto che l’opportunità di partecipare ai bandi del PNRR non può costituire motivo di deroga alla normativa di riferimento e, nello specifico, al Codice dei contratti pubblici.
+        tag:
+          - fornitori
+      - title: Come compilare i campi Soggetto Erogatore e CSP qualora l'ente abbia stipulato con il fornitore un unico contratto che preveda anche la fornitura di soluzioni SaaS certificate?
+        content: Nella sezione progetti è necessario associare il contratto con il fornitore utilizzato. Nel caso fosse unico il contratto (pur utilizzando una struttura di un Cloud provider certificato diverso dal fornitore titolare del contratto) lo stesso fornitore figurerà sia come “Erogatore del servizio” sia come “Cloud Provider”. Sarà quindi necessario caricare il contratto in Piattaforma due volte. Questo è il caso in cui il contratto con il CSP sia stato stipulato con l'erogatore del servizio e non direttamente con l'ente. In caso, invece, di due contratti distinti è necessario inserirli entrambi. All'ente è richiesto di inserire in piattaforma solo i contratti con i fornitori con cui ha un rapporto diretto.
+        tag:
+          - fornitori
+      - title: Da quale data decorrono i tempi di contrattualizzazione del fornitore? E per il completamento delle attività?
+        content: I termini per la contrattualizzazione del fornitore decorrono dalla data della notifica del decreto di finanziamento.<br>Per il completamento delle attività, invece, gli scenari sono i seguenti:<br>- Nel caso in cui il contratto con il fornitore sia successivo alla notifica del decreto di finanziamento i termini per il completamento attività dovranno essere conteggiati dalla data del contratto dell'ultimo fornitore contrattualizzato;<br>- Nel caso in cui il contratto con il fornitore sia antecedente alla notifica del decreto di finanziamento i termini per il completamente delle attività dovranno essere conteggiati dalla notifica del decreto di finanziamento. Per il dettaglio delle scadenze del cronoprogramma, ti invitiamo a prendere visione dell'Allegato 2 dell'Avviso.
+        tag:
+          - fornitori
+      - title: È possibile avvalersi del supporto di più fornitori al fine di implementare un solo servizio?
+        content: Sì, una sola attività può essere assegnata a più fornitori, per ognuno dei quali dovrà essere caricato il contratto in Piattaforma.
+        tag:
+          - fornitori
+      - title: Ai fini del rispetto dei requisiti di ammissibilità della candidatura, a partire da quale data deve essere contrattualizzato il fornitore?
+        content: "La data di contrattualizzazione del fornitore deve essere successiva al 31 gennaio 2020 come indicato dall'Art. 17 \"Ammissibilità\" comma 2, del Regolamento UE 2021/241 del PARLAMENTO EUROPEO E DEL CONSIGLIO del 12 febbraio 2021: \"Le misure avviate a decorrere dal 1° febbraio 2020 sono ammissibili a condizione che soddisfino i requisiti di cui al presente regolamento.\""
+        tag:
+          - fornitori
+      - title: Quali documenti sono ritenuti ammissibili nello step dedicato al "Caricamento Contratti"?
+        content: Nel caso in cui il Soggetto Attuatore si avvalga del supporto di uno o più fornitori, sarà necessario caricare in piattaforma i relativi contratti o le determine di affidamento/aggiudicazione. Qualora il Soggetto Attuatore implementi autonomamente le attività oggetto di finanziamento, dovrà caricare in piattaforma un ordine di servizio.
+        tag:
+          - fornitori
+      - title: Nell'ambito delle misure 1.3 e 1.4, è previsto il rispetto del principio DNSH per i fornitori?
+        content: Come previsto dalla Circolare del 13 ottobre 2022, n. 33 "Aggiornamento Guida operativa per il rispetto del principio di non arrecare danno significativo all’ambiente (cd. DNSH)" il MEF-RGS, a fronte di approfondimenti condotti con il DTD, ha stabilito che il principio del DNSH non si applica agli investimenti 1.3 e 1.4 della Missione 1 Componente 1 del PNRR - <a href="https://www.rgs.mef.gov.it/VERSIONE-I/circolari/2022/circolare_n_33_2022" target="_blank">https://www.rgs.mef.gov.it/VERSIONE-I/circolari/2022/circolare_n_33_2022</a>
+        tag:
+          - dnsh
+      - title: In caso di implementazione in economia delle attività è previsto il rispetto del principio DNSH?
+        content: Sì, è previsto il rispetto del principio di non arrecare danno significativo all’ambiente (cd. DNSH) per i Soggetti Attuatori che implementano autonomamente le attività oggetto di finanziamento, senza ricorrere all'ausilio/supporto di un partner/intermediario tecnologico.
+        tag:
+          - dnsh
+      - title: Nell'ambito della misura 1.2, è previsto il rispetto del DNSH per il Soggetto Realizzatore?
+        content: Nell'ambito della misura 1.2, per il Soggetto Realizzatore delle attività oggetto di finanziamento è previsto il rispetto del principio di non arrecare danno significativo all’ambiente (cd. DNSH) nel caso le attività ricadano nell'ambito delle schede 3, 6, 8.
+        tag:
+          - dnsh
+      - title: Nell'ambito della misura 1.2 è previsto il rispetto del principio DNSH per il CSP?
+        content: Il Cloud Service Provider deve necessariamente rispettare il principio del DNSH, come disposto dall'Allegato 4 dell'Avviso riferito alla misura 1.2.
+        tag:
+          - dnsh
   - title: Supporto tecnico
     smallTitle: true
     description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
@@ -312,6 +398,16 @@ questions:
               </tr>
             </tbody>
           </table>
+        tag:
+          - comuni
+          - scuole
+      - title: È possibile erogare un servizio SaaS Qualificato AGID presso un CSP diverso da quello indicato nella scheda servizio pubblicata su marketplace?
+        content: In caso di cambio CSP sottostante ad un servizio SaaS, bisogna effettuare una nuova qualifica. Prerequisito è che il CSP di destinazione sia qualificato. La nuova qualifica deve essere tempestivamente inviata ad AGID che provvederà alla sua valutazione. La stessa include anche la conformità legislativa secondo cui il fornitore cloud deve rendere nota la localizzazione delle proprie infrastrutture e dove transiteranno i dati gestiti (e.g. IT, UE, Extra UE).
+        tag:
+          - comuni
+          - scuole
+      - title: Quali sono gli scenari ammissibili di migrazione al Cloud con riferimento al passaggio da IaaS qualificato a SaaS?
+        content: Il passaggio da IaaS Qualificato a Saas risulta ammissibile solo se il passaggio da on premise strutturato a Iaas Qualificato è avvenuto dopo il 1° Febbraio 2020 ed è il primo step di una migrazione più impattante che prevede, come step finale, il SaaS. Ulteriori approfondimenti sono disponibili sui chiarimenti pubblicati nella sezione dedicata all'Avviso 1.2 nella finestra n. 3 del 27/11/2022.
         tag:
           - comuni
           - scuole
@@ -563,8 +659,12 @@ questions:
         content: Per transazione con esito positivo si intende sia una transazione reale eseguita da un cittadino, nel caso in cui la stagionalità del singolo servizio di incasso lo consenta, oppure - in caso contrario - una transazione reale con importo di valore simbolico (es. 0,01€) ma con codice tassonomico e IUV reale, al fine di poter verificare l’effettiva e corretta integrazione del servizio di incasso in modalità end-to-end (cd. transazione di test)
         tag:
           - comuni
-      - title: Ho integrato dei servizi tramite una piattaforma regionale a titolo gratuito. Posso richiedere il finanziamento per l'integrazione nella stessa piattaforma dei servizi aggiuntivi?
-        content: Sì, è possibile accedere al finanziamento previsto dall'Avviso per l'implementazione dei servizi aggiuntivi purché siano finanziati con fondi propri dopo il 1 aprile 2021.
+      - title: Un Ente creditore titolare del credito può avvalersi di un soggetto terzo per la riscossione?
+        content: Sì, è possibile, ma la riscossione dovrà avvenire per conto dell'Ente creditore senza alterare il flusso dati tra l'Ente e il Nodo di Pagamenti. Il soggetto riscossore dovrà quindi agire come intermediario tecnologico e quindi dovrà incassare direttamente sull'IBAN dell'ente creditore (Comune).
+        tag:
+          - comuni
+      - title: Ho integrato dei servizi tramite una piattaforma regionale a titolo gratuito (es. My Pay). Posso richiedere il finanziamento sia per i servizi già integrati che per quelli da integrare nella stessa piattaforma?
+        content: Sì, è possibile accedere al finanziamento previsto dall'Avviso per l'integrazione dei servizi purché finanziati con fondi propri a partire dal  1° aprile 2021.
         tag:
           - comuni
       - title: Quali enti della PA possono presentare domanda?
@@ -585,6 +685,10 @@ questions:
           - altri-enti
       - title: Cosa si intende per transazione con esito positivo per pagoPA?
         content: Per transazione con esito positivo si intende sia una transazione reale eseguita da un cittadino, nel caso in cui la stagionalità del singolo servizio di incasso lo consenta, oppure - in caso contrario - una transazione reale con importo di valore simbolico (es. 0,01€) ma con codice tassonomico e IUV reale, al fine di poter verificare l’effettiva e corretta integrazione del servizio di incasso in modalità end-to-end (cd. transazione di test)
+        tag:
+          - altri-enti
+      - title: Cosa significa Integrare un servizio PagoPA?
+        content: L'integrazione di un servizio PagoPa non si esaurisce con la mera integrazione tecnica tra gli applicativi dell'Ente e il gateway dei pagamenti di PagoPA. All'Ente è richiesto anche che:<br>- l'incasso dei servizi venga correttamente riconciliato nel bilancio (tramite opportune integrazioni con i software gestionali) secondo quanto richiesto dalle norme tributarie specificatamente al codice tassonomico del servizio incassato; <br>- i cittadini siano correttamente informati della nuova opportunità di pagamento in tutti i punti di contatto.<br>L'obiettivo finale è quello di aiutare il Paese nella transizione digitale contribuendo alla realizzazione di un’amministrazione che offra servizi sempre più digitali e facilmente utilizzabili dai cittadini.
         tag:
           - altri-enti
   - title: 1.4.3 Adozione AppIO
@@ -620,10 +724,6 @@ questions:
           - comuni
       - title: Quando il processo di migrazione e attivazione dei servizi si intende concluso con esito positivo per i servizi attivati sull’app IO?
         content: Il processo si riterrà concluso con esito positivo quando le richieste di pubblicazione saranno approvate dalla pagoPA S.p.A  e tutti i servizi saranno visibili in App.
-        tag:
-          - comuni
-      - title: Ho integrato dei servizi tramite una piattaforma regionale a titolo gratuito. Posso richiedere il finanziamento per l'integrazione nella stessa piattaforma dei servizi aggiuntivi?
-        content: Sì, è possibile accedere al finanziamento previsto dall'Avviso per l'implementazione dei servizi aggiuntivi purché siano finanziati con fondi propri dopo il 1 aprile 2021.
         tag:
           - comuni
       - title: Quali enti della PA possono presentare domanda?
@@ -790,6 +890,10 @@ questions:
           - comuni
       - title: Entro quanto tempo dovrà essere contrattualizzato il fornitore rispetto al Decreto di Finanziamento?
         content: Il fornitore dovà essere contrattualizzato al massimo entro 3 mesi (90 gg) dalla data di notifica del Decreto di Finanziamento.
+        tag:
+          - comuni
+      - title: Il mio Comune può accedere al finanziamento previsto dall’Avviso riferito alla Misura 1.4.5 anche se l’invio delle notifiche è stato delegato ad altro Ente (Forme associative, Comuni Capofila)?
+        content: Per accedere al finanziamento è necessario che il mittente dell’atto coincida con il Soggetto Attuatore, ovvero, il singolo Comune, anche se questo non è il soggetto che incassa.
         tag:
           - comuni
   - title: Fondo Innovazione

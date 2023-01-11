@@ -130,43 +130,42 @@ opportunity:
       id: centri-facili
 heroCarouselNews:
   - id: 1
+    type: internal
+    category: Novità 
+    title: Fornitori Avvisi Cloud per Comuni e Scuole
+    description: "Il termine per l’attivazione dei contratti con i fornitori, sia per gli Avvisi Comuni che Scuole, è differito di tre mesi rispetto all’originario termine previsto negli Avvisi."
+    source: 'Decreto (Scarica PDF)'
+    linkTo: 'https://areariservata.padigitale2026.gov.it/sfc/servlet.shepherd/document/download/0697Q0000065NQsQAM?operationContext=S1'
+  - id: 2
+    category: Nuovo Avviso
+    title: "Migrazione al Cloud, al via l'Avviso per le Aziende sanitarie locali e Aziende Ospedaliere"
+    description: "Trentacinque milioni di euro messi a disposizione dal Dipartimento per la trasformazione digitale grazie alle risorse del PNRR"
+    source: 'innovazione.gov.it'
+    linkTo: 'https://innovazione.gov.it/notizie/articoli/migrazione-al-cloud-al-via-l-avviso-per-le-aziende-sanitarie-locali-e-aziende-osp/'
+  - id: 3
+    category: Novità
+    title: "Al via il Polo Strategico Nazionale"
+    description: "Rispettati i tempi della milestone prevista dal PNRR"
+    source: 'innovazione.gov.it'
+    linkTo: 'https://innovazione.gov.it/notizie/articoli/al-via-il-polo-strategico-nazionale/'
+  - id: 4
+    category: Nuovi Avvisi
+    title: "Cloud e siti web: continua la spinta per sostenere la digitalizzazione delle Scuole"
+    description: "Su PA digitale 2026 due nuovi Avvisi PNRR: 47 milioni di euro dedicati agli istituti scolastici"
+    source: 'innovazione.gov.it'
+    linkTo: 'https://innovazione.gov.it/notizie/articoli/cloud-e-siti-web-continua-la-spinta-per-sostenere-la-digitalizzazione-delle-scuol/'
+  - id: 5
+    category: Novità
+    title: "Esperienza dei cittadini nei servizi: l'app di valutazione per aiutare a completare i progetti"
+    description: "Uno strumento per aiutare Enti e fornitori a valutare il rispetto dei criteri di conformità e favorire così l’ottenimento delle risorse"
+    source: 'innovazione.gov.it'
+    linkTo: 'https://innovazione.gov.it/notizie/articoli/pnrr-siti-servizi-digitale-app-di-valutazione-per-aiutare-a-completare-progetti/'
+  - id: 6
     category: Nuovo Avviso
     title: "Al via la Piattaforma Digitale Nazionale Dati"
     description: "La Piattaforma permette alle PA di scambiare informazioni in maniera semplice e sicura: i primi 110 milioni per favorire l’adesione dei Comuni"
     source: 'innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/articoli/pnrr-al-via-la-piattaforma-digitale-nazionale-dati/'
-  - id: 2
-    category: Novità
-    title: "DNSH - Pubblicata una nuova Circolare del MEF, novità per gli Avvisi di PA digitale 2026"
-    description: "Tra gli Avvisi già pubblicati coinvolta solo la misura 1.2 per la Migrazione al cloud"
-    source: 'innovazione.gov.it'
-    linkTo: 'https://innovazione.gov.it/notizie/articoli/dnsh-pubblicata-una-nuova-circolare-del-mef-novita-per-gli-avvisi-di-pa-digitale/'
-  - id: 3
-    type: internal
-    category: Novità
-    title: Pubblicate le Linee guida per Soggetti attuatori
-    description: "Il documento contiene le indicazioni operative per aiutare le PA locali nel raggiungimento degli obiettivi previsti dagli Avvisi"
-    source: 'Raggiungere gli obiettivi'
-    linkTo: 'https://padigitale2026.gov.it/come-partecipare/raggiungere-obiettivi/'
-  - id: 4
-    category: Nuovo Avviso
-    title: "ACN: online l’Avviso n. 5 per l’attivazione di Laboratori di Prova per l’area di accreditamento Software e Network"
-    description: "L'avviso vuole contribuire al percorso di realizzazione della rete nazionale di scrutinio e valutazione tecnologica a supporto del Centro di Valutazione e Certificazione Nazionale (CVCN)"
-    source: 'acn.gov.it'
-    linkTo: 'https://www.acn.gov.it/notizie/contenuti/pubblicato-avviso-5-2022-per-erogazione-di-contributi-attivazione-laboratori-di-prova'   
-  - id: 5
-    type: internal
-    category: PROROGA AVVISO
-    title: Migrazione al Cloud dei Comuni
-    description: "La scadenza dell'Avviso è stata posticipata al 13 gennaio 2023"
-    source: 'Avviso 1.2 - Comuni'
-    linkTo: 'https://areariservata.padigitale2026.gov.it/Pa_digitale2026_dettagli_avviso?id=a017Q00000uzQmzQAE'
-  - id: 6
-    category: Aggiornamento
-    title: "Aumenta la dotazione finanziaria degli Avvisi 1.4.1 e 1.4.5"
-    description: "Ulteriori 75 milioni per l’Esperienza del Cittadino nei servizi pubblici e 50 milioni per la Piattaforma Notifiche Digitali"
-    source: 'innovazione.gov.it'
-    linkTo: 'https://innovazione.gov.it/notizie/articoli/aumenta-la-dotazione-finanziaria-degli-avvisi-1-4-1-e-1-4-5'
 support:
   tag: Supporto
   title: Consulta le domande frequenti o scrivici per ricevere assistenza

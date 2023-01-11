@@ -8,6 +8,11 @@ modal:
       label: Fornitore IT
     - value: other
       label: Altro
+  selectCategory:
+    - value: Pubblica Amministrazione
+      label: Pubblica amministrazione
+    - value: Fornitore
+      label: Fornitore
   selectArgument:
     - value: Accesso al portale
       label: Accesso al portale
@@ -45,9 +50,11 @@ modal:
   requiredLabel: Questo campo è richiesto
   emailLabel: EMAIL*
   emailValidationLabel: Per favore inserisci un indirizzo email valido.
+  categoryLabel: Categoria richiedente*
   argumentLabel: Argomento*
   measureLabel: Misura*
-  selectPlaceholder: Scegli una voce dall’elenco
+  selectArgumentPlaceholder: Seleziona un argomento
+  selectCategoryPlaceholder: Seleziona
   enteValidationLabel: Per favore inserisci una denominazione ente valida.
   enteTypeLabel: TIPO DI ENTE/STRUTTURA*
   enteNameLabel: NOME STRUTTURA*
