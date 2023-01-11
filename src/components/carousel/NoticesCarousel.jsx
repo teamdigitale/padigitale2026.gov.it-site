@@ -88,10 +88,9 @@ const useStyles = createUseStyles({
     '& .swiper-slider': {
       padding: '1.111rem',
     },
-    '& .swiper-pagination.swiper-pagination-bullets .swiper-pagination-bullet':
-      {
-        margin: '0 0.889rem',
-      },
+    '& .swiper-pagination.swiper-pagination-bullets .swiper-pagination-bullet': {
+      margin: '0 0.889rem',
+    },
     '& .btn': {
       '@media (max-width: 767px)': {
         width: '100%',
@@ -183,39 +182,19 @@ export const NoticesCarousel = ({ content, title }) => {
 
   const setLabel = (element) => {
     if (element.new) {
-      return (
-        <span
-          className={classes.badgeNew}
-          dangerouslySetInnerHTML={{ __html: 'NUOVO' }}
-        ></span>
-      );
+      return <span className={classes.badgeNew} dangerouslySetInnerHTML={{ __html: 'NUOVO' }}></span>;
     } else {
       if (element.expiring) {
-        return (
-          <span
-            className={classes.badgeExp}
-            dangerouslySetInnerHTML={{ __html: 'IN SCADENZA' }}
-          ></span>
-        );
+        return <span className={classes.badgeExp} dangerouslySetInnerHTML={{ __html: 'IN SCADENZA' }}></span>;
       } else {
-        return (
-          <span
-            className={classes.empty}
-            dangerouslySetInnerHTML={{ __html: '' }}
-          ></span>
-        );
+        return <span className={classes.empty} dangerouslySetInnerHTML={{ __html: '' }}></span>;
       }
     }
   };
 
   const slides = records.map((element) => (
     <>
-      <Card
-        key={element.codiceBando}
-        className={classes.heroCards}
-        spacing
-        noWrapper
-      >
+      <Card key={element.codiceBando} className={classes.heroCards} spacing noWrapper>
         <Link
           to={`https://areariservata.padigitale2026.gov.it/Pa_digitale2026_dettagli_avviso?id=${element.codiceBando}`}
           className={classes.cardWrapper}
@@ -223,10 +202,7 @@ export const NoticesCarousel = ({ content, title }) => {
           <CardBody>
             {setLabel(element)}
             <span className={classes.dueDate}>
-              SCADENZA AVVISO{' '}
-              <span className={classes.dueDateDigit}>
-                {formatDate(element.dataFineBando)}
-              </span>
+              SCADENZA AVVISO <span className={classes.dueDateDigit}>{formatDate(element.dataFineBando)}</span>
             </span>
             <CardTitle tag="h4" className={classes.noticeLabel}>
               {element.nomeDellaMisura}
@@ -241,17 +217,11 @@ export const NoticesCarousel = ({ content, title }) => {
   return (
     <>
       <div className={classes.noticesSection}>
-        <section
-          className="container px-3"
-          aria-labelledby="news-bandi-carousel"
-        >
+        <section className="container px-3" aria-labelledby="news-bandi-carousel">
           {title ? (
             <Row>
               <Col xs="12" lg="4">
-                <h3
-                  id="news-bandi-carousel"
-                  className={classes.noticesCarouselTitle}
-                >
+                <h3 id="news-bandi-carousel" className={classes.noticesCarouselTitle}>
                   {title}
                 </h3>
               </Col>

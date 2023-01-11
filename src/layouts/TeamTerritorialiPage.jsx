@@ -6,14 +6,7 @@ import React, { useState } from 'react';
 import { createUseStyles } from 'react-jss';
 import { announce } from '@react-aria/live-announcer';
 import { graphql, useStaticQuery } from 'gatsby';
-import {
-  Row,
-  Col,
-  Input,
-  Breadcrumb,
-  BreadcrumbItem,
-  Button,
-} from 'design-react-kit';
+import { Row, Col, Input, Breadcrumb, BreadcrumbItem, Button } from 'design-react-kit';
 import Select from 'react-select';
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 import { Controller, useForm } from 'react-hook-form';
@@ -24,10 +17,8 @@ const { privacy } = links.internalLinks;
 import seo from '../../contents/seo.yml';
 import { SEO } from '../components/SEO';
 
-const { title: seoTitle, description: seoDescription } =
-  seo.teamTerritorialiPage;
-const { successMessage: successLabels, error: errorLabels } =
-  notificationsLabel.teamTerritoriali;
+const { title: seoTitle, description: seoDescription } = seo.teamTerritorialiPage;
+const { successMessage: successLabels, error: errorLabels } = notificationsLabel.teamTerritoriali;
 
 const useStyles = createUseStyles({
   modalUpdatesContainer: {
@@ -385,8 +376,7 @@ const query = graphql`
 export const TeamTerritoriali = () => {
   const { executeRecaptcha } = useGoogleReCaptcha();
   const textareaMaxLength = 300;
-  const [textareaDescriptionState, setTextareaDescriptionState] =
-    useState('not-active');
+  const [textareaDescriptionState, setTextareaDescriptionState] = useState('not-active');
   const formGroupValue = '.form-group';
   const {
     site: {
@@ -416,8 +406,7 @@ export const TeamTerritoriali = () => {
     const currentTextarea = event.target;
     const currentContainer = currentTextarea.closest(formGroupValue);
     const number = currentContainer.querySelector('.max-length-number');
-    number.innerHTML =
-      textareaMaxLength - parseInt(event.target.value.length, 10);
+    number.innerHTML = textareaMaxLength - parseInt(event.target.value.length, 10);
     announce('Numero di caratteri rimanenti: ' + number.innerHTML);
   };
 
@@ -536,19 +525,11 @@ export const TeamTerritoriali = () => {
         </Row>
       </div>
       <div className="container px-3">
-        <iframe
-          name="formFrame"
-          id="formFrame"
-          className="d-none"
-          title="no-redirect"
-        ></iframe>
+        <iframe name="formFrame" id="formFrame" className="d-none" title="no-redirect"></iframe>
         <Row className="mt-5">
           <Col xs={12} md={9} lg={9}>
             <h1 className={classes.titleUpdate}>{name}</h1>
-            <div
-              className={classes.subtitleUpdate}
-              dangerouslySetInnerHTML={{ __html: bodyText }}
-            />
+            <div className={classes.subtitleUpdate} dangerouslySetInnerHTML={{ __html: bodyText }} />
           </Col>
           <Col
             xs={12}
@@ -556,11 +537,7 @@ export const TeamTerritoriali = () => {
             lg={3}
             className="d-flex justify-content-center justify-content-sm-end align-items-start justify-content-lg-start m-0 mt-md-0"
           >
-            <img
-              src={`/assets/assistenza.svg`}
-              alt=""
-              className={classes.heroImg}
-            />
+            <img src={`/assets/assistenza.svg`} alt="" className={classes.heroImg} />
           </Col>
         </Row>
         <Row className={classes.mandatory}>
@@ -573,11 +550,7 @@ export const TeamTerritoriali = () => {
         </Row>
         <Row>
           <Col xs="12">
-            <form
-              className={classes.formMessage}
-              id="territory-form"
-              onSubmit={handleSubmit(onSubmit, onError)}
-            >
+            <form className={classes.formMessage} id="territory-form" onSubmit={handleSubmit(onSubmit, onError)}>
               <Row className="mt-5">
                 <Col xs={12} md={6} lg={4}>
                   <Controller
@@ -599,8 +572,7 @@ export const TeamTerritoriali = () => {
                           {...field}
                         />
                         <span className={classes.errorLabel} id="error-contact">
-                          {errors.contact &&
-                            (errors.contact.message || contactValidationLabel)}
+                          {errors.contact && (errors.contact.message || contactValidationLabel)}
                         </span>
                       </>
                     )}
@@ -626,8 +598,7 @@ export const TeamTerritoriali = () => {
                           {...field}
                         />
                         <span className={classes.errorLabel} id="error-name">
-                          {errors.name &&
-                            (errors.name.message || nameValidationLabel)}
+                          {errors.name && (errors.name.message || nameValidationLabel)}
                         </span>
                       </>
                     )}
@@ -658,12 +629,8 @@ export const TeamTerritoriali = () => {
                           aria-required="true"
                           {...field}
                         />
-                        <span
-                          className={classes.errorLabel}
-                          id="error-address2"
-                        >
-                          {errors.address &&
-                            (errors.address.message || emailValidationLabel)}
+                        <span className={classes.errorLabel} id="error-address2">
+                          {errors.address && (errors.address.message || emailValidationLabel)}
                         </span>
                       </>
                     )}
@@ -675,8 +642,7 @@ export const TeamTerritoriali = () => {
                     control={control}
                     rules={{
                       pattern: {
-                        value:
-                          /\(?([0-9]{2,3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/,
+                        value: /\(?([0-9]{2,3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/,
                         message: phoneValidationLabel,
                       },
                       required: true,
@@ -694,8 +660,7 @@ export const TeamTerritoriali = () => {
                           {...field}
                         />
                         <span className={classes.errorLabel} id="error-phone">
-                          {errors.phone &&
-                            (errors.phone.message || phoneValidationLabel)}
+                          {errors.phone && (errors.phone.message || phoneValidationLabel)}
                         </span>
                       </>
                     )}
@@ -704,10 +669,7 @@ export const TeamTerritoriali = () => {
               </Row>
               <Row className="mt-5">
                 <Col xs={12} md={6} lg={4}>
-                  <label
-                    htmlFor="territory-select"
-                    className={classes.selectLabel}
-                  >
+                  <label htmlFor="territory-select" className={classes.selectLabel}>
                     {territoryLabel}
                   </label>
                   <Controller
@@ -729,8 +691,7 @@ export const TeamTerritoriali = () => {
                     )}
                   />
                   <span className={classes.area} id="error-area">
-                    {errors.area &&
-                      (errors.area.message || territoryValidationLabel)}
+                    {errors.area && (errors.area.message || territoryValidationLabel)}
                   </span>
                 </Col>
               </Row>
@@ -750,27 +711,17 @@ export const TeamTerritoriali = () => {
                         maxLength: textareaMaxLength,
                       })}
                     ></textarea>
-                    <label
-                      className={
-                        textareaDescriptionState === 'active' ? 'active' : ''
-                      }
-                      htmlFor="description"
-                    >
+                    <label className={textareaDescriptionState === 'active' ? 'active' : ''} htmlFor="description">
                       {descriptionLabel}
                     </label>
                     <span className={classes.errorLabel} id="error-description">
-                      {errors.description &&
-                        (errors.description.message ||
-                          descriptionValidationLabel)}
+                      {errors.description && (errors.description.message || descriptionValidationLabel)}
                       {errors?.description?.type === 'maxLength' && (
                         <p>Limite caratteri superato: {textareaMaxLength}</p>
                       )}
                     </span>
                     <span className={classes.maxLengthLabel}>
-                      <span className="max-length-number">
-                        {textareaMaxLength}
-                      </span>{' '}
-                      caratteri a disposizione
+                      <span className="max-length-number">{textareaMaxLength}</span> caratteri a disposizione
                     </span>
                   </div>
                 </Col>
@@ -787,11 +738,7 @@ export const TeamTerritoriali = () => {
                   <Button color="primary" type="submit" form="territory-form">
                     {sendButtonLabel}
                   </Button>
-                  <img
-                    className={classes.spinner}
-                    src="/assets/spinner.gif"
-                    alt="spinner"
-                  ></img>
+                  <img className={classes.spinner} src="/assets/spinner.gif" alt="spinner"></img>
                 </div>
               </div>
             </form>
