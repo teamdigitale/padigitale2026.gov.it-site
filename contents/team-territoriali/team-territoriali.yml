@@ -51,6 +51,8 @@ modal:
   territoryLabel: Territorio*
   phoneLabel: Contatto telefonico*
   selectTerritoryPlaceholder: Seleziona un'area locale
+  ariaOptionMessage: Al momento il focus è sull'opzione
+  ariaOptionMessageDisabled: Disabilitata
   descriptionLabel: Note per essere contattati*
   paNameLabel: "Nome ente*"
   contactNameLabel: "Nome referente*"
