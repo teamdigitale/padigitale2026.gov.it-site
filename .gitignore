@@ -4,6 +4,7 @@
 .idea
 .cache
 .bundle
+.vscode
 node_modules
 vendor
 public
