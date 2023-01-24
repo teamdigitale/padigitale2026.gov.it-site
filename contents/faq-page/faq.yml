@@ -533,10 +533,6 @@ questions:
         content: No, la realizzazione del numero di endpoint/operations è esclusivamente un suggerimento utile alla realizzazione delle attività oggetto di finanziamento.
         tag:
           - comuni
-      - title: Qual è l'importo riconosciuto per le attività previste dall'Avviso riferito alla Misura 1.3.1?
-        content: "Gli importi del contributo, riconosciuti sulla base della dimensione del comune, sono così definiti:<br> - per i Comuni fino a 5.000 abitanti: 1;<br> - per i Comuni 5.001 - 20.000 abitanti: 2; <br> - per i Comuni 20.001 - 50.000 abitanti: 3;<br> - per i Comuni 50.001 - 100.000 abitanti: 4; <br> - per i Comuni 100.001 - 250.000 abitanti: 5; <br> - per i Comuni > 250.000 abitanti: 6."
-        tag:
-          - comuni
       - title: Entro quanto tempo dovrà essere contrattualizzato il fornitore per i Comuni sotto i 50.000 abitanti?
         content: Il fornitore dovà essere contrattualizzato al massimo entro 3 mesi (90 gg) dalla data di notifica del Decreto di Finanziamento.
         tag:
