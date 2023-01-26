@@ -192,6 +192,8 @@ questions:
         id: fornitori
       - title: DNSH
         id: dnsh
+      - title: CUP
+        id: cup
     accordions:
       - title: 'È previsto un periodo di mantenimento dei servizi attivi?'
         content: "Sì, è necessario mantenere i servizi attivi per almeno 5 anni. Tale requisito, verrà verificato attraverso dei controlli a campione da parte degli organi di controllo preposti nei successivi 5 anni. Sono consentiti eventuali sviluppi migliorativi del progetto iniziale a patto che si riesca a ricostruire quanto è stato fatto attraverso apposita documentazione tecnica e amministrativa."
@@ -252,7 +254,20 @@ questions:
       - title: Nell'ambito delle misure 1.3 e 1.4, è previsto il rispetto del principio DNSH per i fornitori?
         content: Come previsto dalla Circolare del 13 ottobre 2022, n. 33 "Aggiornamento Guida operativa per il rispetto del principio di non arrecare danno significativo all’ambiente (cd. DNSH)" il MEF-RGS, a fronte di approfondimenti condotti con il DTD, ha stabilito che il principio del DNSH non si applica agli investimenti 1.3 e 1.4 della Missione 1 Componente 1 del PNRR - <a href="https://www.rgs.mef.gov.it/VERSIONE-I/circolari/2022/circolare_n_33_2022" target="_blank">https://www.rgs.mef.gov.it/VERSIONE-I/circolari/2022/circolare_n_33_2022</a>
         tag:
-          - dnsh
+          - fornitori
+      - title: Ho rinunciato ad una candidatura al fine di sottometterne una nuova. L'importo riconosciuto a finanziamento della nuova candidatura è differente. Posso utilizzare lo stesso CUP senza apportare modifiche?
+        content: Sì, ti confermiamo che è possibile utilizzare lo stesso CUP anche se l'importo del finanziamento è differente rispetto alla candidatura precedente, a condizione che il CUP sia generato con il corretto template e a meno di rilevanti variazioni del corredo informativo che richiedono la revoca e la generazione di un nuovo CUP.
+        tag:
+          - cup
+      - title: È possibile apportare modifiche ad un CUP già generato?
+        content: |
+          Sì, è possibile apportare modifiche ad un CUP già generato attraverso la funzione applicativa
+          "Invio richiesta modifica CUP" disponibile nell'area riservata del Sistema CUP
+          (<a href="https://cupweb.rgs.mef.gov.it/CUPWeb/home_cup.jsp">https://cupweb.rgs.mef.gov.it/CUPWeb/home_cup.jsp</a>). <br />
+          Per ulteriori approfondimenti, ti invitiamo a visitare il seguente link: 
+          <a href="https://www.programmazioneeconomica.gov.it/sistema-mipcup/modalita-richiesta-cup-e-modifiche-consentite/">https://www.programmazioneeconomica.gov.it/sistema-mipcup/modalita-richiesta-cup-e-modifiche-consentite/</a>
+        tag:
+          - cup
       - title: In caso di implementazione in economia delle attività è previsto il rispetto del principio DNSH?
         content: Sì, è previsto il rispetto del principio di non arrecare danno significativo all’ambiente (cd. DNSH) per i Soggetti Attuatori che implementano autonomamente le attività oggetto di finanziamento, senza ricorrere all'ausilio/supporto di un partner/intermediario tecnologico.
         tag:
