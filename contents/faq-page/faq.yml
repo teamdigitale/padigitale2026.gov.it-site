@@ -121,9 +121,7 @@ questions:
       - title: Cosa fare se in qualità di utente invitato non si riesce ad accedere a PA digitale 2026?
         content: Dopo aver ricevuto l'email di invito e aver verificato la correttezza dei dati, bisogna accertarsi di aver completato la procedura di accesso facendo click sul link di verifica all'interno dell'email.
       - title: É possibile accedere a PA digitale 2026 come rappresentante legale di più Scuole?
-        content: Sì. Per gestire più Scuole contemporaneamente in qualità di rappresentante legale, è necessario:<br><br>1. completare la procedura di primo accesso e attivare il profilo di una delle Scuole;<br>2. contattare l'assistenza mediante il modulo presente nella sezione "Supporto" dell'area riservata di PA digitale 2026, indicando nel messaggio i nomi, gli indirizzi PEC e il codice IPA delle ulteriori Scuole per le quali si richiede l'attivazione del profilo.
-      - title: Ho stipulato un contratto con data successiva al 1 Febbraio 2020 ma mi sono accorto che mancano alcune informazioni che vorrei integrare, come posso procedere?
-        content: È possibile caricare in piattaforma un addendum al contratto iniziale, firmato dalle due parti (ente e fornitore) che integri le informazioni mancanti, fermo restando il rispetto delle scadenze del cronoprogramma. Qualora si volesse inserire l'addendum nelle fasi successive alla contrattualizzazione sarà necessario contattare l'Account Manager del vostro territorio, utilizzando il form all'indirizzo che segue <a href="https://padigitale2026.gov.it/team-territoriali" target="_blank">https://padigitale2026.gov.it/team-territoriali</a>
+        content: Sì. Per gestire più Scuole contemporaneamente in qualità di rappresentante legale, è necessario:<br><br>1. completare la procedura di primo accesso e attivare il profilo di una delle Scuole;<br>2. contattare l'assistenza mediante il modulo presente nella sezione "Supporto" dell'area riservata di PA digitale 2026, indicando nel messaggio i nomi, gli indirizzi PEC e il codice IPA delle ulteriori Scuole per le quali si richiede l'attivazione del profilo.     
   - title: Gestione utenti
     smallTitle: true
     description: La strategia di ripresa economica e gli interventi previsti per il rilancio digitale del Paese
@@ -255,6 +253,10 @@ questions:
         content: Come previsto dalla Circolare del 13 ottobre 2022, n. 33 "Aggiornamento Guida operativa per il rispetto del principio di non arrecare danno significativo all’ambiente (cd. DNSH)" il MEF-RGS, a fronte di approfondimenti condotti con il DTD, ha stabilito che il principio del DNSH non si applica agli investimenti 1.3 e 1.4 della Missione 1 Componente 1 del PNRR - <a href="https://www.rgs.mef.gov.it/VERSIONE-I/circolari/2022/circolare_n_33_2022" target="_blank">https://www.rgs.mef.gov.it/VERSIONE-I/circolari/2022/circolare_n_33_2022</a>
         tag:
           - fornitori
+      - title: Ho stipulato un contratto con data successiva al 1 Febbraio 2020 ma mi sono accorto che mancano alcune informazioni che vorrei integrare, come posso procedere?
+        content: È possibile caricare autonomamente in piattaforma un addendum al contratto iniziale, firmato dalle due parti (ente e fornitore) che integri le informazioni mancanti, fermo restando il rispetto delle scadenze del cronoprogramma.Qualora si volesse inserire l’addendum durante le fasi di “Completamento attività” e di “Asseverazione” sarà necessario contattare il team territoriale tramite form all’indirizzo che segue <a href="https://padigitale2026.gov.it/team-territoriali" target="_blank">https://padigitale2026.gov.it/team-territoriali</a>
+        tag:
+          - fornitori    
       - title: Ho rinunciato ad una candidatura al fine di sottometterne una nuova. L'importo riconosciuto a finanziamento della nuova candidatura è differente. Posso utilizzare lo stesso CUP senza apportare modifiche?
         content: Sì, ti confermiamo che è possibile utilizzare lo stesso CUP anche se l'importo del finanziamento è differente rispetto alla candidatura precedente, a condizione che il CUP sia generato con il corretto template e a meno di rilevanti variazioni del corredo informativo che richiedono la revoca e la generazione di un nuovo CUP.
         tag:
