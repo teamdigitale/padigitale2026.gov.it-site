@@ -545,7 +545,7 @@ questions:
         tag:
           - comuni
       - title: Quanti endpoint (REST API)/operations (SOAP API) occorre realizzare?
-        content: "Il numero di API che è consigliabile realizzare, sulla base della dimensione del comune, è:<br> - per i Comuni fino a 5.000 abitanti: 5;<br> - per i Comuni 5.001 - 20.000 abitanti: 5; <br> - per i Comuni 20.001 - 50.000 abitanti: 5;<br> - per i Comuni 50.001 - 100.000 abitanti: 10; <br> - per i Comuni 100.001 - 250.000 abitanti: 10; <br> - per i Comuni > 250.000 abitanti: 12."
+        content: "Per ciascuna API, in funzione della dimensione del Comune, si suggerisce di realizzare un numero medio di endpoint (per REST API)/ operations (per SOAP API) pari ad almeno:<br> - per i Comuni fino a 5.000 abitanti: 5;<br> - per i Comuni 5.001 - 20.000 abitanti: 5; <br> - per i Comuni 20.001 - 50.000 abitanti: 5;<br> - per i Comuni 50.001 - 100.000 abitanti: 10; <br> - per i Comuni 100.001 - 250.000 abitanti: 10; <br> - per i Comuni > 250.000 abitanti: 12."
         tag:
           - comuni
       - title: È obbligatorio realizzare un numero specifico di endpoint/operations?
@@ -682,6 +682,10 @@ questions:
         content: Sì, è possibile accedere al finanziamento previsto dall'Avviso per l'integrazione dei servizi purché finanziati con fondi propri a partire dal  1° aprile 2021.
         tag:
           - comuni
+      - title: È possibile selezionare il servizio Canone Unico Patrimoniale Corporate in fase di candidatura all'Avviso 1.4.3 PagoPA?
+        content: Il servizio Canone Unico Patrimoniale Corporate è ammissibile purché non integrato a titolo gratuito ma con fondi propri a decorrere dal 1° aprile 2021. Inoltre, sarà necessario caricare in piattaforma un contratto o un ordine di servizio.
+        tag:
+          - comuni    
       - title: Quali enti della PA possono presentare domanda?
         content: 'Sono invitate a presentare proposte a valere sul presente Avviso:<br>a. Le Regioni e le Province Autonome;<br>b. Le  Aziende sanitarie locali e le Aziende ospedaliere pubbliche e le Agenzie sanitarie regionali;<br>c. Le Università e gli Istituti di Istruzione Universitaria pubblici, gli Enti e le Istituzioni di ricerca pubblici, gli Enti e Consorzi per il diritto allo studio, i Consorzi interuniversitari di ricerca e le Istituzioni per l’Alta Formazione Artistica, Musicale e Coreutica - (AFAM) pubbliche.'
         tag:
