@@ -180,7 +180,9 @@ questions:
         content: No, il dispositivo di firma digitale deve essere valido e correttamente funzionante.
       - title: "Quali sono i formati di firma riconosciuti all'interno del sistema?"
         content: Il sistema ritiene valide solo firme di tipologia Cades.
-     - title: Progetti
+      - title: "Devo eliminare un servizio selezionato in fase di candidatura. Come posso procedere?"
+        content: Non è possibile modificare una candidatura già inviata. Ti ricordiamo che è comunque possibile rinunciare a una candidatura e inviarne una nuova a seguito della ricezione della PEC del decreto di rinuncia.Ti consigliamo di valutare tale opportunità anche contattando l’account manager del tuo territorio utilizzando il modulo dedicato: <a href="https://padigitale2026.gov.it/team-territoriali" target="_blank">https://padigitale2026.gov.it/team-territoriali</a>
+  - title: Progetti
     smallTitle: true
     description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
     sectionId: progetti
