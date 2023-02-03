@@ -132,10 +132,10 @@ opportunity:
 heroCarouselNews:
   - id: 1
     category: Linee guida di asseverazione
-    title: "Migrazione al cloud: finanziati anche i servizi migrati in modalità migliorativa rispetto a quanto dichiarato in fase di candidatura"
+    title: "Migrazione al cloud: aggiornate linee guida di asseverazione"
     description: "Chiarimento: in fase di verifica valutate positivamente le migrazioni realizzate in modalità B - Aggiornamento anziché A - Trasferimento"
     source: 'innovazione.gov.it'
-    linkTo: 'https://innovazione.gov.it/notizie/articoli/cloud-finanziate-migrazioni-in-modalita-migliorativa-rispetto-a-quanto-dichiarato/'
+    linkTo: 'https://innovazione.gov.it/notizie/articoli/pa-digitale-2026-migrazione-al-cloud-aggiornate-linee-guida-di-asseverazione/'
   - id: 2
     type: internal
     category: Novità 
