@@ -700,11 +700,40 @@ export const TeamTerritoriali = () => {
                   />
                 </Col>
                 <Col xs={12} md={6} lg={4} className="offset-lg-1 mt-5 mt-md-0">
-                  <Input
+                  <Controller
+                    name="phone"
+                    control={control}
+                    rules={{
+                      required: true,
+                      pattern: {
+                        value: '^[+]?[(]?[0-9]{3}[)]?[-s.]?[0-9]{3}[-s.]?[0-9]{4,6}$',
+                        message: emailValidationLabel,
+                      },
+                    }}
+                    render={({ field }) => (
+                      <>
+                        <Input
+                          invalid={errors.phone ? true : undefined}
+                          aria-invalid={errors.phone && 'true'}
+                          label={phoneLabel}
+                          aria-labelledby={errors.phone && 'error-address'}
+                          type="text"
+                          id="phone"
+                          aria-required="true"
+                          {...field}
+                        />
+                        <span className={classes.errorLabel} id="error-address2">
+                          {errors.phone && (errors.phone.message || emailValidationLabel)}
+                        </span>
+                      </>
+                    )}
+                  />
+                  {/* <Input
                     label={phoneLabel}
                     size="20"
                     maxLength="40"
                     aria-describedby="mandatory-label"
+                    aria-required="true"
                     type="text"
                     id="00N7Q000007qqts"
                     name="00N7Q000007qqts"
@@ -712,7 +741,7 @@ export const TeamTerritoriali = () => {
                     onInvalid={customInvalid}
                     onChange={handleChangeTel}
                     className="tel-input"
-                  />
+                  /> */}
                 </Col>
               </Row>
               <Row className="mt-5">
@@ -731,6 +760,7 @@ export const TeamTerritoriali = () => {
                         onChange={onChange}
                         options={selectTerritory}
                         placeholder={selectTerritoryPlaceholder}
+                        aria-label={selectTerritoryPlaceholder}
                         ariaLiveMessages={{ onFocus }}
                         aria-invalid={errors.area && 'true'}
                         aria-labelledby={errors.area && 'error-area'}
