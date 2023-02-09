@@ -121,7 +121,7 @@ questions:
       - title: Cosa fare se in qualità di utente invitato non si riesce ad accedere a PA digitale 2026?
         content: Dopo aver ricevuto l'email di invito e aver verificato la correttezza dei dati, bisogna accertarsi di aver completato la procedura di accesso facendo click sul link di verifica all'interno dell'email.
       - title: É possibile accedere a PA digitale 2026 come rappresentante legale di più Scuole?
-        content: Sì. Per gestire più Scuole contemporaneamente in qualità di rappresentante legale, è necessario:<br><br>1. completare la procedura di primo accesso e attivare il profilo di una delle Scuole;<br>2. contattare l'assistenza mediante il modulo presente nella sezione "Supporto" dell'area riservata di PA digitale 2026, indicando nel messaggio i nomi, gli indirizzi PEC e il codice IPA delle ulteriori Scuole per le quali si richiede l'attivazione del profilo.
+        content: Sì. Per gestire più Scuole contemporaneamente in qualità di rappresentante legale, è necessario:<br><br>1. completare la procedura di primo accesso e attivare il profilo di una delle Scuole;<br>2. contattare l'assistenza mediante il modulo presente nella sezione "Supporto" dell'area riservata di PA digitale 2026, indicando nel messaggio i nomi, gli indirizzi PEC e il codice IPA delle ulteriori Scuole per le quali si richiede l'attivazione del profilo.     
   - title: Gestione utenti
     smallTitle: true
     description: La strategia di ripresa economica e gli interventi previsti per il rilancio digitale del Paese
@@ -180,6 +180,8 @@ questions:
         content: No, il dispositivo di firma digitale deve essere valido e correttamente funzionante.
       - title: "Quali sono i formati di firma riconosciuti all'interno del sistema?"
         content: Il sistema ritiene valide solo firme di tipologia Cades.
+      - title: "Devo eliminare un servizio selezionato in fase di candidatura. Come posso procedere?"
+        content: Non è possibile modificare una candidatura già inviata. Ti ricordiamo che è comunque possibile rinunciare a una candidatura e inviarne una nuova a seguito della ricezione della PEC del decreto di rinuncia.Ti consigliamo di valutare tale opportunità anche contattando l’account manager del tuo territorio utilizzando il modulo dedicato <a href="https://padigitale2026.gov.it/team-territoriali" target="_blank">https://padigitale2026.gov.it/team-territoriali</a>
   - title: Progetti
     smallTitle: true
     description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
@@ -190,6 +192,8 @@ questions:
         id: fornitori
       - title: DNSH
         id: dnsh
+      - title: CUP
+        id: cup
     accordions:
       - title: 'È previsto un periodo di mantenimento dei servizi attivi?'
         content: "Sì, è necessario mantenere i servizi attivi per almeno 5 anni. Tale requisito, verrà verificato attraverso dei controlli a campione da parte degli organi di controllo preposti nei successivi 5 anni. Sono consentiti eventuali sviluppi migliorativi del progetto iniziale a patto che si riesca a ricostruire quanto è stato fatto attraverso apposita documentazione tecnica e amministrativa."
@@ -250,7 +254,28 @@ questions:
       - title: Nell'ambito delle misure 1.3 e 1.4, è previsto il rispetto del principio DNSH per i fornitori?
         content: Come previsto dalla Circolare del 13 ottobre 2022, n. 33 "Aggiornamento Guida operativa per il rispetto del principio di non arrecare danno significativo all’ambiente (cd. DNSH)" il MEF-RGS, a fronte di approfondimenti condotti con il DTD, ha stabilito che il principio del DNSH non si applica agli investimenti 1.3 e 1.4 della Missione 1 Componente 1 del PNRR - <a href="https://www.rgs.mef.gov.it/VERSIONE-I/circolari/2022/circolare_n_33_2022" target="_blank">https://www.rgs.mef.gov.it/VERSIONE-I/circolari/2022/circolare_n_33_2022</a>
         tag:
-          - dnsh
+          - fornitori
+      - title: Ho stipulato un contratto con data successiva al 1 Febbraio 2020 ma mi sono accorto che mancano alcune informazioni che vorrei integrare, come posso procedere?
+        content: È possibile caricare autonomamente in piattaforma un addendum al contratto iniziale, firmato dalle due parti (ente e fornitore) che integri le informazioni mancanti, fermo restando il rispetto delle scadenze del cronoprogramma.Qualora si volesse inserire l’addendum durante le fasi di “Completamento attività” e di “Asseverazione” sarà necessario contattare il team territoriale tramite form all’indirizzo che segue <a href="https://padigitale2026.gov.it/team-territoriali" target="_blank">https://padigitale2026.gov.it/team-territoriali</a>
+        tag:
+          - fornitori  
+      - title: In fase di selezione del fornitore è possibile utilizzare contratti stipulati prima dell'entrata in vigore del D.L 77/2021?
+        content: Il Soggetto attuatore, in fase di selezione del fornitore, è tenuto al rispetto di tutta la normativa vigente in materia di pari opportunità e disabilità. Per i contratti stipulati prima dell’entrata in vigore del D.L 77/2021, si applica la normativa allora vigente.
+        tag:
+          - fornitori  
+      - title: Ho rinunciato ad una candidatura al fine di sottometterne una nuova. L'importo riconosciuto a finanziamento della nuova candidatura è differente. Posso utilizzare lo stesso CUP senza apportare modifiche?
+        content: Sì, ti confermiamo che è possibile utilizzare lo stesso CUP anche se l'importo del finanziamento è differente rispetto alla candidatura precedente, a condizione che il CUP sia generato con il corretto template e a meno di rilevanti variazioni del corredo informativo che richiedono la revoca e la generazione di un nuovo CUP.
+        tag:
+          - cup
+      - title: È possibile apportare modifiche ad un CUP già generato?
+        content: |
+          Sì, è possibile apportare modifiche ad un CUP già generato attraverso la funzione applicativa
+          "Invio richiesta modifica CUP" disponibile nell'area riservata del Sistema CUP
+          (<a href="https://cupweb.rgs.mef.gov.it/CUPWeb/home_cup.jsp">https://cupweb.rgs.mef.gov.it/CUPWeb/home_cup.jsp</a>). <br />
+          Per ulteriori approfondimenti, ti invitiamo a visitare il seguente link: 
+          <a href="https://www.programmazioneeconomica.gov.it/sistema-mipcup/modalita-richiesta-cup-e-modifiche-consentite/">https://www.programmazioneeconomica.gov.it/sistema-mipcup/modalita-richiesta-cup-e-modifiche-consentite/</a>
+        tag:
+          - cup
       - title: In caso di implementazione in economia delle attività è previsto il rispetto del principio DNSH?
         content: Sì, è previsto il rispetto del principio di non arrecare danno significativo all’ambiente (cd. DNSH) per i Soggetti Attuatori che implementano autonomamente le attività oggetto di finanziamento, senza ricorrere all'ausilio/supporto di un partner/intermediario tecnologico.
         tag:
@@ -326,7 +351,7 @@ questions:
       - title: Posso indicare dei numeri approssimativi di dati personali nella compilazione della sezione 4 – Riservatezza delle informazioni?
         content: Sì, l’obiettivo è di avere un ordine di grandezza il più realistico possibile della numerosità di dati trattati, pertanto anche eventuali arrotondamenti sono accettati (ad esempio, 1.224.000 dati anagrafici possono essere indicati come 1.200.000). Non è invece possibile indicare numeri decimali o minori di zero.
       - title: È possibile richiedere l’aggiornamento della classificazione dati e servizi?
-        content: Sì. Una PA può inviare una PEC all’Agenzia Nazionale per la Cybersicurezza per aggiornare la classificazione dati e servizi precedentemente inviata. Accolta la richiesta dall’Agenzia, la classificazione verrà riportata in stato "In bozza". La PA riceverà una PEC e una notifica in piattaforma e sarà informata che la classificazione è disponibile per gli opportuni aggiornamenti. Nel caso in cui la PA abbia una candidatura 1.2 <strong>in stato "In bozza"</strong> verrà annullata in automatico. Invece, nel caso in cui la PA abbia una candidatura 1.2 <strong>inviata</strong>, non potrà eliminare i servizi selezionati nella candidatura 1.2 e visualizzerà un messaggio di errore. Qualora la PA fosse intenzionata a eliminare alcuni servizi dalla classificazione, dovrà ritirare la candidatura all’avviso 1.2 per avviare una nuova classificazione. In questo modo, si potrà ricandidare all’avviso 1.2 con la lista di servizi aggiornata.
+        content: Sì. Una PA può inviare una PEC all’Agenzia Nazionale per la Cybersicurezza all'indirizzo acn@pec.acn.gov.it per aggiornare la classificazione dati e servizi precedentemente inviata. Accolta la richiesta dall’Agenzia, la classificazione verrà riportata in stato "In bozza". La PA riceverà una PEC e una notifica in piattaforma e sarà informata che la classificazione è disponibile per gli opportuni aggiornamenti. Nel caso in cui la PA abbia una candidatura 1.2 <strong>in stato "In bozza"</strong> verrà annullata in automatico. Invece, nel caso in cui la PA abbia una candidatura 1.2 <strong>inviata</strong>, non potrà eliminare i servizi selezionati nella candidatura 1.2 e visualizzerà un messaggio di errore. Qualora la PA fosse intenzionata a eliminare alcuni servizi dalla classificazione, dovrà ritirare la candidatura all’avviso 1.2 per avviare una nuova classificazione. In questo modo, si potrà ricandidare all’avviso 1.2 con la lista di servizi aggiornata.
   - title: 1.2 Abilitazione e facilitazione migrazione al Cloud
     sectionTitle: Misure
     description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
@@ -526,15 +551,11 @@ questions:
         tag:
           - comuni
       - title: Quanti endpoint (REST API)/operations (SOAP API) occorre realizzare?
-        content: "Il numero di API che è consigliabile realizzare, sulla base della dimensione del comune, è:<br> - per i Comuni fino a 5.000 abitanti: 5;<br> - per i Comuni 5.001 - 20.000 abitanti: 5; <br> - per i Comuni 20.001 - 50.000 abitanti: 5;<br> - per i Comuni 50.001 - 100.000 abitanti: 10; <br> - per i Comuni 100.001 - 250.000 abitanti: 10; <br> - per i Comuni > 250.000 abitanti: 12."
+        content: "Per ciascuna API, in funzione della dimensione del Comune, si suggerisce di realizzare un numero medio di endpoint (per REST API)/ operations (per SOAP API) pari ad almeno:<br> - per i Comuni fino a 5.000 abitanti: 5;<br> - per i Comuni 5.001 - 20.000 abitanti: 5; <br> - per i Comuni 20.001 - 50.000 abitanti: 5;<br> - per i Comuni 50.001 - 100.000 abitanti: 10; <br> - per i Comuni 100.001 - 250.000 abitanti: 10; <br> - per i Comuni > 250.000 abitanti: 12."
         tag:
           - comuni
       - title: È obbligatorio realizzare un numero specifico di endpoint/operations?
         content: No, la realizzazione del numero di endpoint/operations è esclusivamente un suggerimento utile alla realizzazione delle attività oggetto di finanziamento.
-        tag:
-          - comuni
-      - title: Qual è l'importo riconosciuto per le attività previste dall'Avviso riferito alla Misura 1.3.1?
-        content: "Gli importi del contributo, riconosciuti sulla base della dimensione del comune, sono così definiti:<br> - per i Comuni fino a 5.000 abitanti: 1;<br> - per i Comuni 5.001 - 20.000 abitanti: 2; <br> - per i Comuni 20.001 - 50.000 abitanti: 3;<br> - per i Comuni 50.001 - 100.000 abitanti: 4; <br> - per i Comuni 100.001 - 250.000 abitanti: 5; <br> - per i Comuni > 250.000 abitanti: 6."
         tag:
           - comuni
       - title: Entro quanto tempo dovrà essere contrattualizzato il fornitore per i Comuni sotto i 50.000 abitanti?
@@ -667,6 +688,10 @@ questions:
         content: Sì, è possibile accedere al finanziamento previsto dall'Avviso per l'integrazione dei servizi purché finanziati con fondi propri a partire dal  1° aprile 2021.
         tag:
           - comuni
+      - title: È possibile selezionare il servizio Canone Unico Patrimoniale Corporate in fase di candidatura all'Avviso 1.4.3 PagoPA?
+        content: Il servizio Canone Unico Patrimoniale Corporate è ammissibile purché non integrato a titolo gratuito ma con fondi propri a decorrere dal 1° aprile 2021. Inoltre, sarà necessario caricare in piattaforma un contratto o un ordine di servizio.
+        tag:
+          - comuni    
       - title: Quali enti della PA possono presentare domanda?
         content: 'Sono invitate a presentare proposte a valere sul presente Avviso:<br>a. Le Regioni e le Province Autonome;<br>b. Le  Aziende sanitarie locali e le Aziende ospedaliere pubbliche e le Agenzie sanitarie regionali;<br>c. Le Università e gli Istituti di Istruzione Universitaria pubblici, gli Enti e le Istituzioni di ricerca pubblici, gli Enti e Consorzi per il diritto allo studio, i Consorzi interuniversitari di ricerca e le Istituzioni per l’Alta Formazione Artistica, Musicale e Coreutica - (AFAM) pubbliche.'
         tag:
