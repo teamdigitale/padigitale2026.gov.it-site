@@ -524,52 +524,6 @@ export const TeamTerritoriali = () => {
   const onMenuOpen = () => setIsSelectOpen(true);
   const onMenuClose = () => setIsSelectOpen(false);
 
-  const isInvalidValue = 'is-invalid';
-  const errorLabelValue = 'error-label';
-  const errorMatch = 'Il valore inserito non è valido';
-
-  const customInvalid = (event) => {
-    event.preventDefault();
-    const currentTarget = event.target;
-    const currentValue = currentTarget.value;
-    if (currentValue !== '') {
-      const currentPattern = currentTarget.getAttribute('pattern');
-
-      if (currentPattern) {
-        const patternRegExp = new RegExp(currentPattern);
-        if (patternRegExp.test(currentValue)) {
-          return;
-        } else {
-          const inputContainer = currentTarget.closest(formGroupValue);
-          const errorLabel = inputContainer.querySelector('small');
-          errorLabel.classList.add(errorLabelValue);
-          errorLabel.innerHTML = errorMatch;
-          currentTarget.classList.add(isInvalidValue);
-        }
-      }
-    }
-  };
-
-  const handleChangeTel = (event) => {
-    const currentTarget = event.target;
-    let value = event.target.value;
-    const inputContainer = currentTarget.closest(formGroupValue);
-    const errorLabel = inputContainer.querySelector('small');
-    const regex = /^[0-9]+$/;
-
-    if (!value.match(regex) && value.length > 0) {
-      value = value.slice(0, -1);
-      errorLabel.classList.add(errorLabelValue);
-      errorLabel.innerHTML = errorMatch;
-      currentTarget.classList.add(isInvalidValue);
-    } else {
-      errorLabel.classList.remove(errorLabelValue);
-      errorLabel.innerHTML = '';
-      currentTarget.classList.remove(isInvalidValue);
-    }
-    event.target.value = value;
-  };
-
   return (
     <>
       <SEO title={seoTitle} description={seoDescription} />
