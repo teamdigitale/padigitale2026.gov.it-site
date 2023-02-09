@@ -29,6 +29,9 @@ sidebar:
   - sectionTitle: Classificazione dati e servizi
     sectionId: classification-data-services
     sectionActive: false
+  - sectionTitle: Piani di migrazione
+    sectionId: piani-di-migrazione
+    sectionActive: false
   - sectionTitle: Misure
     sectionId: misure
     sectionActive: false
@@ -352,6 +355,28 @@ questions:
         content: Sì, l’obiettivo è di avere un ordine di grandezza il più realistico possibile della numerosità di dati trattati, pertanto anche eventuali arrotondamenti sono accettati (ad esempio, 1.224.000 dati anagrafici possono essere indicati come 1.200.000). Non è invece possibile indicare numeri decimali o minori di zero.
       - title: È possibile richiedere l’aggiornamento della classificazione dati e servizi?
         content: Sì. Una PA può inviare una PEC all’Agenzia Nazionale per la Cybersicurezza all'indirizzo acn@pec.acn.gov.it per aggiornare la classificazione dati e servizi precedentemente inviata. Accolta la richiesta dall’Agenzia, la classificazione verrà riportata in stato "In bozza". La PA riceverà una PEC e una notifica in piattaforma e sarà informata che la classificazione è disponibile per gli opportuni aggiornamenti. Nel caso in cui la PA abbia una candidatura 1.2 <strong>in stato "In bozza"</strong> verrà annullata in automatico. Invece, nel caso in cui la PA abbia una candidatura 1.2 <strong>inviata</strong>, non potrà eliminare i servizi selezionati nella candidatura 1.2 e visualizzerà un messaggio di errore. Qualora la PA fosse intenzionata a eliminare alcuni servizi dalla classificazione, dovrà ritirare la candidatura all’avviso 1.2 per avviare una nuova classificazione. In questo modo, si potrà ricandidare all’avviso 1.2 con la lista di servizi aggiornata.
+  - title: Piani di migrazione
+    description: Le indicazioni pratiche per risolvere le problematiche relative ai piani di migrazione
+    sectionId: piani-di-migrazione
+    accordions:
+      - title: Cosa sono i piani di migrazione?
+        content: I piani di migrazione dei dati e dei servizi digitali delle amministrazioni sono previsti dall’articolo 10, comma 1, del regolamento adottato con determinazione AGID n. 628/2021 del 15 dicembre 2021.
+      - title: Dove è possibile compilare il piano di migrazione all'interno di PA digitale 2026?
+        content: È possibile compilare il piano di migrazione nella sezione "Cloud", accedendo all'area riservata della piattaforma.
+      - title: Ci sono eccezioni all'obbligo di inviare il piano di migrazione?
+        content: Tutte le amministrazioni centrali e locali così come individuate dall'elenco ISTAT, sono obbligate ad inviare il piano di migrazione, salvo i casi di deroga previsti dall'articolo 33-septies del DL 179/2012. Tutte le amministrazioni che abbiano presentato una candidatura per la misura 1.2 e che non necessitino di integrare il piano già presentato attraverso la suddetta candidatura, non devono effettuare ulteriori azioni.
+      - title: Ho già inviato una candidatura a valere sull'Avviso riferito alla misura 1.2, ci sono ulteriori adempimenti?
+        content: Se hai già inviato una candidatura 1.2 ed il tuo Ente ha ulteriori servizi da migrare, puoi compilare un'integrazione al piano di migrazione. Tutte le amministrazioni che hanno presentato una candidatura per la misura 1.2 e che non necessitano di integrare il piano già presentato non devono effettuare ulteriori azioni.
+      - title: Quali servizi è necessario inserire all'interno del piano di migrazione?	
+        content: È necessario inserire tutti i servizi che l'ente intende migrare al cloud ai fini del rispetto dell'obbligo indicato all'articolo 33-septies del DL 179/2012.
+      - title: Sono previsti dei requisiti per l'invio del piano di migrazione?
+        content: Sì, per compilare il piano di migrazione è necessario aver già inviato la classificazione dei dati e dei servizi, come previsto dall’articolo 3 del regolamento adottato con determinazione AGID n. 628/2021 del 15 dicembre 2021.
+      - title: Entro quando è necessario inviare il piano di migrazione?
+        content: Le amministrazioni devono trasmettere i piani di migrazione entro il 28 febbraio 2023.
+      - title: Entro quando occorre completare le attività previste dal piano di migrazione?
+        content: Le amministrazioni sono tenute a completare le attività previste dal piano di migrazione entro il 30 giugno 2026. Per ottenere i finanziamenti PNRR è comunque necessario attenersi alle scadenze specificate nei relativi avvisi.
+      - title: È già possibile inviare il piano di migrazione anche per gli enti che si candidano all'Avviso 1.1?	
+        content: In attesa dell'attivazione della sezione "Cloud" nell'area riservata di PA digitale 2026, le amministrazioni che richiederanno l'adesione all’investimento 1.1 potranno inviare i piani di migrazione entro il 28/02/2023 via PEC - ove previsto dal relativo avviso pubblico e all'indirizzo ivi indicato. 
   - title: 1.2 Abilitazione e facilitazione migrazione al Cloud
     sectionTitle: Misure
     description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
