@@ -543,7 +543,9 @@ const NavHeader = () => {
                   <span className="font-weight-semibold">{internalLinks.howToPartecipate.label}</span>
                 </Link>
               </NavItem>
-              <NavItem className={classes.updatesBtn}>
+              <NavItem
+                className={`${classes.updatesBtn} activeactiveItem === 'opendata' ? 'nav-link active' : 'nav-link`}
+              >
                 <Link
                   to={internalLinks.opendata.linkTo}
                   className={activeItem === 'opendata' ? 'nav-link active' : 'nav-link'}

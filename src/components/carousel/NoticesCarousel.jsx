@@ -185,13 +185,7 @@ export const NoticesCarousel = ({ content, title }) => {
       return <span className={classes.badgeNew} dangerouslySetInnerHTML={{ __html: 'NUOVO' }}></span>;
     } else {
       if (element.expiring) {
-        return (
-          <span
-            className={classes.badgeExp}
-            aria-label="avviso in scadenza"
-            dangerouslySetInnerHTML={{ __html: 'IN SCADENZA' }}
-          ></span>
-        );
+        return <span className={classes.badgeExp} dangerouslySetInnerHTML={{ __html: 'IN SCADENZA' }}></span>;
       } else {
         return <span className={classes.empty} dangerouslySetInnerHTML={{ __html: '' }}></span>;
       }

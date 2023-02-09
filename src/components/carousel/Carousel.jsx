@@ -161,7 +161,11 @@ export const HeroCarousel = ({ content, title }) => {
             ) : (
               <>
                 Scopri di più:
-                <Link to={element.linkTo} className={classes.heroLink} ariaLabel={`${element.source} ${element.title}`}>
+                <Link
+                  to={element.linkTo}
+                  className={classes.heroLink}
+                  aria-label={`${element.source} ${element.title}`}
+                >
                   {element.source}
                 </Link>
               </>

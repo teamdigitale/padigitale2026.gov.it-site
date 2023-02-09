@@ -150,6 +150,11 @@ const useStyles = createUseStyles({
         boxShadow: '0 0 0 2px #f90',
         outline: '0',
       },
+      '&.select([aria-expanded=true])': {
+        borderColor: '#f90',
+        boxShadow: '0 0 0 2px #f90',
+        outline: '0',
+      },
     },
     '& .css-1n7v3ny-option': {
       textDecoration: 'underline',
@@ -377,6 +382,7 @@ export const TeamTerritoriali = () => {
   const { executeRecaptcha } = useGoogleReCaptcha();
   const textareaMaxLength = 300;
   const [textareaDescriptionState, setTextareaDescriptionState] = useState('not-active');
+  const [, setAriaFocusMessage] = useState('');
   const formGroupValue = '.form-group';
   const {
     site: {
@@ -485,16 +491,18 @@ export const TeamTerritoriali = () => {
     modal: {
       selectTerritory,
       emailValidationLabel,
+      phoneValidationLabel,
       nameValidationLabel,
       territoryValidationLabel,
       descriptionValidationLabel,
       contactNameLabel,
       contactValidationLabel,
       phoneLabel,
-      phoneValidationLabel,
       emailLabel,
       territoryLabel,
       selectTerritoryPlaceholder,
+      ariaOptionMessage,
+      ariaOptionMessageDisabled,
       paNameLabel,
       descriptionLabel,
       sendButtonLabel,
@@ -505,6 +513,16 @@ export const TeamTerritoriali = () => {
       privacyLink,
     },
   } = content;
+
+  const onFocus = ({ focused, isDisabled }) => {
+    const msg = `${ariaOptionMessage} ${focused.label}${isDisabled ? `${ariaOptionMessageDisabled}` : ''}`;
+    setAriaFocusMessage(msg);
+    return msg;
+  };
+
+  const [isSelectOpen, setIsSelectOpen] = useState(false);
+  const onMenuOpen = () => setIsSelectOpen(true);
+  const onMenuClose = () => setIsSelectOpen(false);
 
   return (
     <>
@@ -542,7 +560,7 @@ export const TeamTerritoriali = () => {
         </Row>
         <Row className={classes.mandatory}>
           <Col xs={12}>
-            <h3>{mandatorySubAdvise}</h3>
+            <h2>{mandatorySubAdvise}</h2>
           </Col>
         </Row>
         <Row className="mt-4">
@@ -565,7 +583,6 @@ export const TeamTerritoriali = () => {
                           invalid={errors.contact ? true : undefined}
                           aria-invalid={errors.contact && 'true'}
                           label={contactNameLabel}
-                          aria-describedby="mandatory-label"
                           aria-labelledby={errors.contact && 'error-contact'}
                           type="text"
                           id="contact"
@@ -592,7 +609,6 @@ export const TeamTerritoriali = () => {
                           invalid={errors.name ? true : undefined}
                           aria-invalid={errors.name && 'true'}
                           label={paNameLabel}
-                          aria-describedby="mandatory-label"
                           aria-labelledby={errors.name && 'error-name'}
                           type="text"
                           id="name"
@@ -625,7 +641,6 @@ export const TeamTerritoriali = () => {
                           invalid={errors.address ? true : undefined}
                           aria-invalid={errors.address && 'true'}
                           label={emailLabel}
-                          aria-describedby="mandatory-label"
                           aria-labelledby={errors.address && 'error-address'}
                           type="text"
                           id="address"
@@ -644,11 +659,11 @@ export const TeamTerritoriali = () => {
                     name="phone"
                     control={control}
                     rules={{
+                      required: true,
                       pattern: {
-                        value: /\(?([0-9]{2,3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/,
+                        value: '^[+]?[(]?[0-9]{3}[)]?[-s.]?[0-9]{3}[-s.]?[0-9]{4,6}$',
                         message: phoneValidationLabel,
                       },
-                      required: true,
                     }}
                     render={({ field }) => (
                       <>
@@ -656,9 +671,8 @@ export const TeamTerritoriali = () => {
                           invalid={errors.phone ? true : undefined}
                           aria-invalid={errors.phone && 'true'}
                           label={phoneLabel}
-                          aria-describedby="mandatory-label"
-                          aria-labelledby={errors.phone && 'error-phone'}
-                          type="tel"
+                          aria-labelledby={errors.phone && 'error-address'}
+                          type="text"
                           id="phone"
                           aria-required="true"
                           {...field}
@@ -688,10 +702,12 @@ export const TeamTerritoriali = () => {
                         options={selectTerritory}
                         placeholder={selectTerritoryPlaceholder}
                         aria-label={selectTerritoryPlaceholder}
-                        aria-describedby="mandatory-label"
+                        ariaLiveMessages={{ onFocus }}
                         aria-invalid={errors.area && 'true'}
                         aria-labelledby={errors.area && 'error-area'}
-                        className={`select ${errors.area && ' is-invalid'}`}
+                        className={`select ${errors.area && ' is-invalid'} ${isSelectOpen && 'focused'}`}
+                        onFocus={onMenuOpen}
+                        onMenuClose={onMenuClose}
                       />
                     )}
                   />
@@ -711,7 +727,10 @@ export const TeamTerritoriali = () => {
                       wrap="soft"
                       id="description"
                       aria-label="messaggio"
-                      {...register('description', { required: true, maxLength: textareaMaxLength })}
+                      {...register('description', {
+                        required: true,
+                        maxLength: textareaMaxLength,
+                      })}
                     ></textarea>
                     <label className={textareaDescriptionState === 'active' ? 'active' : ''} htmlFor="description">
                       {descriptionLabel}
@@ -733,6 +752,7 @@ export const TeamTerritoriali = () => {
                   {privacyLabel}{' '}
                   <a target="_blank" href={privacy.linkTo} rel="noreferrer">
                     {privacyLink}
+                    <span className="sr-only">apre in una nuova scheda</span>
                   </a>
                 </p>
                 <div className={`${classes.submitContainer} d-flex mt-5`}>
