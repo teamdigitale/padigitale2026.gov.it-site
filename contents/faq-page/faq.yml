@@ -29,6 +29,9 @@ sidebar:
   - sectionTitle: Classificazione dati e servizi
     sectionId: classification-data-services
     sectionActive: false
+  - sectionTitle: Piani di migrazione
+    sectionId: piani di migrazione
+    sectionActive: false
   - sectionTitle: Misure
     sectionId: misure
     sectionActive: false
@@ -352,6 +355,12 @@ questions:
         content: Sì, l’obiettivo è di avere un ordine di grandezza il più realistico possibile della numerosità di dati trattati, pertanto anche eventuali arrotondamenti sono accettati (ad esempio, 1.224.000 dati anagrafici possono essere indicati come 1.200.000). Non è invece possibile indicare numeri decimali o minori di zero.
       - title: È possibile richiedere l’aggiornamento della classificazione dati e servizi?
         content: Sì. Una PA può inviare una PEC all’Agenzia Nazionale per la Cybersicurezza all'indirizzo acn@pec.acn.gov.it per aggiornare la classificazione dati e servizi precedentemente inviata. Accolta la richiesta dall’Agenzia, la classificazione verrà riportata in stato "In bozza". La PA riceverà una PEC e una notifica in piattaforma e sarà informata che la classificazione è disponibile per gli opportuni aggiornamenti. Nel caso in cui la PA abbia una candidatura 1.2 <strong>in stato "In bozza"</strong> verrà annullata in automatico. Invece, nel caso in cui la PA abbia una candidatura 1.2 <strong>inviata</strong>, non potrà eliminare i servizi selezionati nella candidatura 1.2 e visualizzerà un messaggio di errore. Qualora la PA fosse intenzionata a eliminare alcuni servizi dalla classificazione, dovrà ritirare la candidatura all’avviso 1.2 per avviare una nuova classificazione. In questo modo, si potrà ricandidare all’avviso 1.2 con la lista di servizi aggiornata.
+  - title: Piani di migrazione
+    description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
+    sectionId: piani di migrazione
+    accordions:
+      - title: Cosa sono i piani di migrazione?
+        content: I piani di migrazione dei dati e dei servizi digitali delle amministrazioni sono previsti dall’articolo 10, comma 1, del regolamento adottato con determinazione AGID n. 628/2021 del 15 dicembre 2021.
   - title: 1.2 Abilitazione e facilitazione migrazione al Cloud
     sectionTitle: Misure
     description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
