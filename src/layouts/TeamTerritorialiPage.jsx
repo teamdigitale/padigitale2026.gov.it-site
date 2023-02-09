@@ -491,6 +491,7 @@ export const TeamTerritoriali = () => {
     modal: {
       selectTerritory,
       emailValidationLabel,
+      phoneValidationLabel,
       nameValidationLabel,
       territoryValidationLabel,
       descriptionValidationLabel,
@@ -707,7 +708,7 @@ export const TeamTerritoriali = () => {
                       required: true,
                       pattern: {
                         value: '^[+]?[(]?[0-9]{3}[)]?[-s.]?[0-9]{3}[-s.]?[0-9]{4,6}$',
-                        message: emailValidationLabel,
+                        message: phoneValidationLabel,
                       },
                     }}
                     render={({ field }) => (
@@ -723,7 +724,7 @@ export const TeamTerritoriali = () => {
                           {...field}
                         />
                         <span className={classes.errorLabel} id="error-phone">
-                          {errors.phone && (errors.phone.message || emailValidationLabel)}
+                          {errors.phone && (errors.phone.message || phoneValidationLabel)}
                         </span>
                       </>
                     )}
