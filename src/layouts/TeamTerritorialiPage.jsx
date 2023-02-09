@@ -722,26 +722,12 @@ export const TeamTerritoriali = () => {
                           aria-required="true"
                           {...field}
                         />
-                        <span className={classes.errorLabel} id="error-address2">
+                        <span className={classes.errorLabel} id="error-phone">
                           {errors.phone && (errors.phone.message || emailValidationLabel)}
                         </span>
                       </>
                     )}
                   />
-                  {/* <Input
-                    label={phoneLabel}
-                    size="20"
-                    maxLength="40"
-                    aria-describedby="mandatory-label"
-                    aria-required="true"
-                    type="text"
-                    id="00N7Q000007qqts"
-                    name="00N7Q000007qqts"
-                    pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$"
-                    onInvalid={customInvalid}
-                    onChange={handleChangeTel}
-                    className="tel-input"
-                  /> */}
                 </Col>
               </Row>
               <Row className="mt-5">
