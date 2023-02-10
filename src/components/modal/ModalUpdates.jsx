@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable max-lines-per-function */
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import PropTypes from 'prop-types';
 import { useForm, Controller } from 'react-hook-form';
 import { createUseStyles } from 'react-jss';
@@ -235,7 +235,6 @@ const query = graphql`
 // eslint-disable-next-line sonarjs/cognitive-complexity
 export const ModalUpdates = () => {
   const [{ modalState }, dispatch] = useContext(GlobalStateContext);
-  const [selectValue] = useState(null);
   const [enteState, setEnteState] = useState('');
   const {
     site: {
@@ -288,8 +287,6 @@ export const ModalUpdates = () => {
   } = useForm();
 
   const classes = useStyles();
-
-  useEffect(() => { }, [selectValue]);
 
   const onSubmit = async (data, event) => {
     console.log(data);
