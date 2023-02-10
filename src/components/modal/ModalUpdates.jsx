@@ -289,7 +289,7 @@ export const ModalUpdates = () => {
 
   const classes = useStyles();
 
-  useEffect(() => {}, [selectValue]);
+  useEffect(() => { }, [selectValue]);
 
   const onSubmit = async (data, event) => {
     console.log(data);
@@ -637,10 +637,10 @@ export const ModalUpdates = () => {
         <div className="row">
           <div className="col-12 col-md-6">
             <div className={classes.notification} role="alert" aria-labelledby="not2dms-title" id="not2dms">
-              <h3 id="not2dms-title">
+              <h5 id="not2dms-title">
                 notifiche
                 <svg className="icon" role="img" aria-hidden="true"></svg>
-              </h3>
+              </h5>
               <p></p>
               <button
                 type="button"
