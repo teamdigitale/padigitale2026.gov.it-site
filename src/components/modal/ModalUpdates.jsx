@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable max-lines-per-function */
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import PropTypes from 'prop-types';
 import { useForm, Controller } from 'react-hook-form';
 import { createUseStyles } from 'react-jss';
@@ -235,7 +235,6 @@ const query = graphql`
 // eslint-disable-next-line sonarjs/cognitive-complexity
 export const ModalUpdates = () => {
   const [{ modalState }, dispatch] = useContext(GlobalStateContext);
-  const [selectValue] = useState(null);
   const [enteState, setEnteState] = useState('');
   const {
     site: {
@@ -288,8 +287,6 @@ export const ModalUpdates = () => {
   } = useForm();
 
   const classes = useStyles();
-
-  useEffect(() => {}, [selectValue]);
 
   const onSubmit = async (data, event) => {
     console.log(data);
@@ -637,10 +634,10 @@ export const ModalUpdates = () => {
         <div className="row">
           <div className="col-12 col-md-6">
             <div className={classes.notification} role="alert" aria-labelledby="not2dms-title" id="not2dms">
-              <h3 id="not2dms-title">
+              <h5 id="not2dms-title">
                 notifiche
                 <svg className="icon" role="img" aria-hidden="true"></svg>
-              </h3>
+              </h5>
               <p></p>
               <button
                 type="button"

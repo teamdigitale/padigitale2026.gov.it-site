@@ -236,7 +236,7 @@ export const OpendataPage = () => {
                             target="_blank"
                             href="https://raw.githubusercontent.com/teamdigitale/padigitale2026-opendata/main/data/avvisi.csv"
                             title="Link al dato ( Link esterno - Apre su nuova scheda )"
-                            aria-label="Link al dato ( Link esterno - Apre su nuova scheda )"
+                            aria-label="Avvisi PA digitale 2026, file csv( Link esterno - Apre su nuova scheda )"
                             rel="noreferrer"
                           >
                             CSV
@@ -263,7 +263,7 @@ export const OpendataPage = () => {
                             target="_blank"
                             href="https://raw.githubusercontent.com/teamdigitale/padigitale2026-opendata/main/data/avvisi.json"
                             title="Link al dato ( Link esterno - Apre su nuova scheda )"
-                            aria-label="Link al dato ( Link esterno - Apre su nuova scheda )"
+                            aria-label="Avvisi PA digitale 2026, file json( Link esterno - Apre su nuova scheda )"
                             rel="noreferrer"
                           >
                             JSON
@@ -293,7 +293,7 @@ export const OpendataPage = () => {
                             target="_blank"
                             href="https://raw.githubusercontent.com/teamdigitale/padigitale2026-opendata/main/data/candidature_comuni_finanziate.csv"
                             title="Link al dato ( Link esterno - Apre su nuova scheda )"
-                            aria-label="Link al dato ( Link esterno - Apre su nuova scheda )"
+                            aria-label="Candidature finanziate Comuni, file csv( Link esterno - Apre su nuova scheda )"
                             rel="noreferrer"
                           >
                             CSV
@@ -320,7 +320,7 @@ export const OpendataPage = () => {
                             target="_blank"
                             href="https://raw.githubusercontent.com/teamdigitale/padigitale2026-opendata/main/data/candidature_comuni_finanziate.json"
                             title="Link al dato ( Link esterno - Apre su nuova scheda )"
-                            aria-label="Link al dato ( Link esterno - Apre su nuova scheda )"
+                            aria-label="Candidature finanziate Comuni, file json( Link esterno - Apre su nuova scheda )"
                             rel="noreferrer"
                           >
                             JSON
@@ -350,7 +350,7 @@ export const OpendataPage = () => {
                             target="_blank"
                             href="https://raw.githubusercontent.com/teamdigitale/padigitale2026-opendata/main/data/candidature_scuole_finanziate.csv"
                             title="Link al dato ( Link esterno - Apre su nuova scheda )"
-                            aria-label="Link al dato ( Link esterno - Apre su nuova scheda )"
+                            aria-label="Candidature finanziate Scuole, file csv( Link esterno - Apre su nuova scheda )"
                             rel="noreferrer"
                           >
                             CSV
@@ -377,7 +377,7 @@ export const OpendataPage = () => {
                             target="_blank"
                             href="https://raw.githubusercontent.com/teamdigitale/padigitale2026-opendata/main/data/candidature_scuole_finanziate.json"
                             title="Link al dato ( Link esterno - Apre su nuova scheda )"
-                            aria-label="Link al dato ( Link esterno - Apre su nuova scheda )"
+                            aria-label="Candidature finanziate Scuole, file json( Link esterno - Apre su nuova scheda )"
                             rel="noreferrer"
                           >
                             JSON
@@ -407,7 +407,7 @@ export const OpendataPage = () => {
                             target="_blank"
                             href="https://raw.githubusercontent.com/teamdigitale/padigitale2026-opendata/main/data/candidature_altrienti_finanziate.csv"
                             title="Link al dato ( Link esterno - Apre su nuova scheda )"
-                            aria-label="Link al dato ( Link esterno - Apre su nuova scheda )"
+                            aria-label="Candidature finanziate Altri Enti, file csv( Link esterno - Apre su nuova scheda )"
                             rel="noreferrer"
                           >
                             CSV
@@ -434,7 +434,7 @@ export const OpendataPage = () => {
                             target="_blank"
                             href="https://raw.githubusercontent.com/teamdigitale/padigitale2026-opendata/main/data/candidature_altrienti_finanziate.json"
                             title="Link al dato ( Link esterno - Apre su nuova scheda )"
-                            aria-label="Link al dato ( Link esterno - Apre su nuova scheda )"
+                            aria-label="Candidature finanziate Altri Enti, file json( Link esterno - Apre su nuova scheda )"
                             rel="noreferrer"
                           >
                             JSON
