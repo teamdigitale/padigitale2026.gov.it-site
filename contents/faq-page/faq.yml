@@ -452,7 +452,7 @@ questions:
           - comuni
           - scuole
       - title: È possibile erogare un servizio SaaS Qualificato AGID presso un CSP diverso da quello indicato nella scheda servizio pubblicata su marketplace?
-        content: In caso di cambio CSP sottostante ad un servizio SaaS, bisogna effettuare una nuova qualifica. Prerequisito è che il CSP di destinazione sia qualificato. La nuova qualifica deve essere tempestivamente inviata ad AGID che provvederà alla sua valutazione. La stessa include anche la conformità legislativa secondo cui il fornitore cloud deve rendere nota la localizzazione delle proprie infrastrutture e dove transiteranno i dati gestiti (e.g. IT, UE, Extra UE).
+        content: In caso di cambio CSP sottostante ad un servizio SaaS,bisogna effettuare una nuova qualifica. Prerequisito è che il CSP di destinazione sia qualificato. La nuova qualifica deve essere tempestivamente inviata ad AGID che provvederà alla sua valutazione. La stessa include anche la conformità legislativa secondo cui il fornitore cloud deve rendere nota la localizzazione delle proprie infrastrutture e dove transiteranno i dati gestiti (e.g. IT, UE, Extra UE).
         tag:
           - comuni
           - scuole
@@ -466,42 +466,54 @@ questions:
         tag:
           - comuni
       - title: È possibile accedere al finanziamento in caso di realizzazione della migrazione al cloud prima della pubblicazione dall'Avviso riferito alla Misura 1.2?
-        content: Si, è possibile accedere al finanziamento previsto dall'Avviso, riferito alla Misura 1.2, nel caso in cui il processo di migrazione al cloud sia stato realizzato a decorrere dal 01 Febbraio 2020 con risorse finanziarie proprie.
+        content: Sì, sono ammissibili a contributo tutte le attività di assessment, pianificazione della migrazione, esecuzione della migrazione e formazione dei servizi indicati in allegato 2 al presente Avviso avviate a decorrere dal 1° febbraio 2020 con risorse finanziarie proprie.
         tag:
           - comuni
       - title: È possibile accedere al finanziamento in caso di realizzazione della migrazione al cloud, con l'ausilio di Fondi pubblici,nazionali, regionali o europei prima della pubblicazione dell'Avviso riferito alla Misura 1.2?
-        content: No, non è possibile accedere al finanziamento previsto dall'Avviso, riferito alla Misura 1.2, nel caso in cui il processo di migrazione al cloud sia stato realizzato con Fondi pubblici, nazionali, regionali o europei, secondo quanto previsto dall'art. 8 comma 5 dell'Avviso.
+        content: No, il finanziamento concesso con il presente Avviso non è cumulabile con altri finanziamenti pubblici, nazionali, regionali o europei, per le stesse spese ammissibili, secondo quanto previsto dall'art. 8 comma 5 dell'Avviso.
         tag:
           - comuni
       - title: Di quante modalità di migrazione può avvalersi un Comune al fine di rispondere correttamente ai requisiti previsti dall'Avviso riferito alla Misura 1.2?
-        content: Il Comune potrà effettuare la migrazione avvalendosi dei due modelli di migrazione ""Trasferimento in sicurezza dell’infrastruttura IT"" e ""Aggiornamento in sicurezza di applicazioni in Cloud"" come delineato nella Strategia Nazionale per il Cloud.Per ulteriori approfondimenti si rimanda all'Allegato 2 corrispondente alla fascia di popolazione del tuo Comune.
+        content: Il Comune potrà effettuare la migrazione avvalendosi dei due modelli di migrazione come delineato nella strategia nazionale per il cloud:<br>- Trasferimento in sicurezza dell’infrastruttura IT</br><br>- Aggiornamento in sicurezza di applicazioni in Cloud.</br>
         tag:
           - comuni
       - title: Un Comune è obbligato ad adottare la stessa modalità di migrazione per tutti i servizi?
-        content: No, il Comune può decidere singolarmente per ognuno dei servizi oggetto della migrazione. L’Ente potrà selezionare il modello di migrazione più adatto da presentare all’interno del piano di migrazione.
+        content: No,l’Ente potrà selezionare - singolarmente per ognuno dei servizi oggetto della migrazione - il modello di migrazione più adatto da presentare all’interno del piano di migrazione.
         tag:
           - comuni
       - title: Se ho già migrato un servizio in cloud in modalità "Trasferimento in sicurezza dell’infrastruttura IT" posso aderire al finanziamento per implementare la modalità "Aggiornamento in sicurezza di applicazioni in Cloud"?
-        content: Si, se il Comune ha già migrato un servizio in cloud in modalità "Trasferimento in sicurezza dell’infrastruttura IT" può accedere al finanziamento previsto dall'Avviso, riferito alla Misura 1.2, per l'implementazione della modalità "Aggiornamento in sicurezza di applicazioni in Cloud".In ogni caso, il processo di migrazione al cloud deve essere stato realizzato a decorrere dal 01 Febbraio 2020 con risorse finanziarie proprie.
+        content: Si,la Scuola può partecipare per l'implementazione della modalità "Aggiornamento in sicurezza di applicazioni in Cloud".
         tag:
           - comuni
       - title: Il Canone del primo anno è incluso nel finanziamento?
-        content: Si, il canone del primo anno è incluso nell'importo forfettario come definito dagli allegati 2.
+        content: Insieme al totale disponibile per i servizi, all’Ente sarà aggiunto al calcolo 1 anno di canone di servizio cloud dell'importo indicato nell'allegato 2 corrispondente alla fascia di popolazione del Comune.
         tag:
           - comuni
       - title: Come deve essere rendicontato il contributo?
-        content: Il contributo consiste in una somma forfettaria che viene erogata al raggiungimento del risultato come indicato dall'Avviso. Non è prevista la rendicontazione a costi reali.
+        content: Il finanziamento, nella misura dell’importo forfettario, sarà erogato in un’unica soluzione a seguito del perfezionamento delle attività di migrazione al cloud oggetto del finanziamento per come disposto all’art. 13 del presente Avviso. Non è prevista la rendicontazione a costi reali.
         tag:
           - comuni
       - title: In cosa consiste la classificazione di dati e servizi? A cosa serve?
-        content: La classificazione dei dati e dei servizi gestiti dalle PA consente di uniformare e guidare il processo di migrazione al Cloud della PA. Le classi dei dati e servizi sono identificate sulla base del danno che una loro compromissione, in termini di confidenzialità, integrità e disponibilità, provocherebbe al sistema Paese.
+        content:La classificazione dei dati consiste nell'uniformare e guidare il processo di migrazione al cloud della PA. Le classi dei dati e servizi sono identificate sulla base del danno che una loro compromissione, in termini di confidenzialità, integrità e disponibilità, provocherebbe al sistema Paese. Tali classi sono: Strategico -Critico - Ordinario. L’applicazione del processo di classificazione permetterà un’analisi guidata degli impatti, nonché di eventuali requisiti di sicurezza e normativi, per l’identificazione dell’opportuna classe.
+        tag:
+          - comuni
+      - title: Quali tipologie di servizi potranno essere oggetto di migrazione?
+        content: Oggetto di migrazione potranno essere tutti i servizi erogati in tutte le loro forme dal singolo Ente, indicati nell'Allegato 2 corrispondente alla fascia di popolazione del Comune e il cui livello complessivo di efficienza possa essere ottimizzato attraverso una migrazione verso piattaforme Cloud qualificate. Potranno essere oggetto di migrazione tutti e solo i servizi che sono stati precedentemente classificati.
+        tag:
+          - comuni
+      - title: Quali tipologie di servizi potranno essere oggetto di migrazione?
+        content: Oggetto di migrazione potranno essere tutti i servizi erogati in tutte le loro forme dal singolo Ente, indicati nell'Allegato 2 corrispondente alla fascia di popolazione del Comune e il cui livello complessivo di efficienza possa essere ottimizzato attraverso una migrazione verso piattaforme Cloud qualificate. Potranno essere oggetto di migrazione tutti e solo i servizi che sono stati precedentemente classificati.
+        tag:
+          - comuni
+      - title: Quali sono gli obiettivi relativi a Cloud e Infrastrutture digitali nell'ambito del Piano Nazionale di Ripresa e Resilienza?
+        content:La strategia per l'Italia digitale si sviluppa su due assi:digitalizzazione della PA e reti ultraveloci. La Strategia Cloud Italia è stata elaborata con l’obiettivo di fornire l’indirizzo strategico per l’implementazione e il controllo di soluzioni Cloud nella Pubblica Amministrazione. La migrazione al Cloud permette alle pubbliche amministrazioni di fornire servizi digitali e di disporre di infrastrutture tecnologiche sicure, efficienti ed affidabili, in linea con i principi di tutela della privacy, con le raccomandazioni delle istituzioni europee e nazionali, mantenendo le necessarie garanzie di autonomia strategica del Paese, di sicurezza e controllo nazionale sui dati. In tale prospettiva, la strategia si muove lungo tre direttrici fondamentali: i) la creazione del Polo Strategico Nazionale (PSN), un’infrastruttura nazionale per l’erogazione di servizi Cloud, la cui gestione e controllo di indirizzo siano autonomi da fornitori extra UE, ii) un percorso di qualificazione dei fornitori di Cloud pubblico e dei loro servizi per garantire che le caratteristiche e i livelli di servizio dichiarati siano in linea con i requisiti necessari di sicurezza, affidabilità e rispetto delle normative rilevanti e iii) lo sviluppo di una metodologia di classificazione dei dati e dei servizi gestiti dalle pubbliche amministrazioni, per permettere una migrazione di questi verso la soluzione Cloud più opportuna (PSN o Cloud pubblico qualificato).
         tag:
           - comuni
         linkLabel: Ulteriori informazioni sono disponibili al seguente link
         link: 'https://docs.italia.it/italia/cloud-italia/strategia-cloud-italia-docs/it/stabile/4_la_strategia_cloud_per_la_pubblica_amministrazione.html#la-classificazione-dei-dati-e-dei-servizi'
         ariaLabel: Vedi ulteriori informazioni sulla classificazione dei dati e dei servizi gestiti dalle PA (Collegamento esterno - Apre su nuova scheda)
       - title: Come avviene l'acquisizione di servizi cloud qualificati?
-        content: I fornitori cloud che intendono erogare servizi Infrastructure as a Service (IaaS), Platform as a Service (PaaS) e Software as a Service (SaaS) destinati alle pubbliche amministrazioni devono ottenere, per questi servizi, la qualificazione rilasciata dall’Agenzia per l’Italia digitale (AgID), utilizzando la piattaforma dedicata alla qualificazione dei cloud service provider e dei servizi cloud.
+        content:I fornitori cloud che intendono erogare servizi Infrastructure as a Service (IaaS), Platform as a Service (PaaS) e Software as a Service (SaaS) destinati alle pubbliche amministrazioni devono ottenere, per questi servizi, la qualificazione rilasciata dall’Agenzia per l’Italia digitale (AGID), utilizzando la piattaforma dedicata alla qualificazione dei cloud service provider e dei servizi cloud. Ulteriori informazioni sono disponibili al seguente link: https://docs.italia.it/italia/cloud-italia/strategia-cloud-italia-docs/it/stabile/5_la_migrazione_della_pubblica_amministrazione_sul_cloud.html
         tag:
           - comuni
         linkLabel: Ulteriori informazioni sono disponibili al seguente link
@@ -515,39 +527,51 @@ questions:
         link: 'https://docs.italia.it/italia/cloud-italia/strategia-cloud-italia-docs/it/stabile/5_la_migrazione_della_pubblica_amministrazione_sul_cloud.html'
         ariaLabel: Vedi ulteriori informazioni sulla migrazione della pubblica amministrazione (Collegamento esterno - Apre su nuova scheda)
       - title: Il Canone del primo anno è incluso nel finanziamento?
-        content: Si, il canone del primo anno è incluso nell’importo forfettario come definito dall'Allegato 2.
+        content: Sì, il canone del servizio cloud è incluso all’interno dell’importo forfettario, come definito dall'allegato 2.
         tag:
           - scuole
       - title: Come deve essere rendicontato il contributo?
-        content: Il contributo consiste in una somma forfettaria che viene erogata al raggiungimento del risultato come indicato dall'Avviso. Non è prevista la rendicontazione a costi reali.
+        content: "Il finanziamento, nella misura dell’importo forfettario, sarà erogato in un’unica soluzione a seguito del perfezionamento delle attività di migrazione al cloud oggetto del finanziamento. Non è prevista la rendicontazione a costi reali."
         tag:
           - scuole
       - title: Quali enti della PA possono presentare domanda per accedere al finanziamento dall'Avviso "Abilitazione al Cloud per le PA locali" Scuole, riferito alla Misura 1.2?
-        content: "I Soggetti Attuatori, ovvero coloro che possono accedere allo strumento predisposto dall'Avviso, sono le Scuole sedi di Direttivo dislocate su tutto il territorio nazionale. Non sono ritenute ammissibili le proposte presentate da scuole non statali paritarie, non paritarie e straniere."
+        content: Sono invitate a presentare proposte a valere sul presente Avviso esclusivamente le Scuole sedi di direttivo dislocate su tutto il territorio nazionale. Non sono ritenute ammissibili le proposte presentate da Scuole non statali paritarie, non paritarie e straniere.
         tag:
           - scuole
       - title: È possibile accedere al finanziamento in caso di realizzazione della migrazione al cloud prima della pubblicazione dall'Avviso "Abilitazione al Cloud per le PA locali" Scuole, riferito alla Misura 1.2?
-        content: Si, è possibile accedere al finanziamento previsto dall'Avviso, riferito alla Misura 1.2, nel caso in cui il processo di migrazione al cloud sia stato realizzato a decorrere dal 01 Febbraio 2020 con risorse finanziarie proprie.
+        content: Sono ammissibili a contributo tutte le attività di assessment, pianificazione della migrazione, esecuzione della migrazione e formazione dei servizi indicati in allegato 2 al presente Avviso avviate a decorrere dal 1° febbraio 2020 con risorse finanziarie proprie.
         tag:
           - scuole
       - title: È possibile accedere al finanziamento in caso di realizzazione della migrazione al cloud, con l'ausilio di Fondi pubblici,nazionali, regionali o europei prima della pubblicazione dell'Avviso riferito alla Misura 1.2?
-        content: No, non è possibile accedere al finanziamento previsto dall'Avviso, riferito alla Misura 1.2, nel caso in cui il processo di migrazione al cloud sia stato realizzato con Fondi pubblici, nazionali, regionali o europei, secondo quanto previsto dall'art. 8 comma 5 dell'Avviso.
+        content: No, il finanziamento concesso con il presente Avviso non è cumulabile con altri finanziamenti pubblici, nazionali, regionali o europei, per le stesse spese ammissibili, secondo quanto previsto dall'art. 8 comma 5 dell'Avviso.
         tag:
           - scuole
       - title: Di quante modalità di migrazione può avvalersi una scuola al fine di rispondere correttamente ai requisiti previsti dall'Avviso riferito alla Misura 1.2?
-        content: 'La Scuola potrà effettuare la migrazione sfruttando le diverse tipologie di migrazione delineate  nella Strategia Nazionale per il Cloud, selezionando tra le modalità:</br>- Trasferimento in sicurezza dell’infrastruttura IT</br>- Aggiornamento di applicazioni sicure in Cloud'
+        content:La Scuola potrà effettuare la migrazione sfruttando le diverse tipologie di migrazioni delineate nella strategia nazionale per il cloud, selezionando tra le modalità: <br>- Trasferimento in sicurezza dell’infrastruttura IT <br>- Aggiornamento di applicazioni sicure in Cloud
         tag:
           - scuole
       - title: Una scuola è obbligata ad adottare la stessa modalità di migrazione per tutti i servizi?
-        content: No, La Scuola può decidere singolarmente per ognuno dei servizi oggetto della migrazione. L’Ente potrà selezionare il modello di migrazione più adatto da presentare all’interno del piano di migrazione.
+        content: No. Singolarmente per ognuno dei servizi oggetto della migrazione l’Ente potrà selezionare il modello di migrazione più adatto da presentare all’interno del piano di migrazione.
         tag:
           - scuole
       - title: In cosa consiste la classificazione di dati e servizi? A cosa serve?
-        content: 'La classificazione dei dati e dei servizi gestiti dalle PA consente di uniformare e guidare il processo di migrazione al Cloud della PA. Le classi dei dati e servizi sono identificate sulla base del danno che una loro compromissione, in termini di confidenzialità, integrità e disponibilità, provocherebbe al sistema Paese.<br><br>Ulteriori informazioni sono disponibili al seguente link: <a href="https://docs.italia.it/italia/cloud-italia/strategia-cloud-italia-docs/it/stabile/4_la_strategia_cloud_per_la_pubblica_amministrazione.html#la-classificazione-dei-dati-e-dei-servizi" aria-label="link esterno">https://docs.italia.it/italia/cloud-italia/strategia-cloud-italia-docs/it/stabile/4_la_strategia_cloud_per_la_pubblica_amministrazione.html#la-classificazione-dei-dati-e-dei-servizi</a>'
+        content:'La classificazione dei dati e dei servizi gestiti dalle PA consente di uniformare e guidare il processo di migrazione al Cloud della PA. Le classi dei dati e servizi sono identificate sulla base del danno che una loro compromissione, in termini di confidenzialità, integrità e disponibilità, provocherebbe al sistema Paese.<br><br>Ulteriori informazioni sono disponibili al seguente link: <a href="https://docs.italia.it/italia/cloud-italia/strategia-cloud-italia-docs/it/stabile/4_la_strategia_cloud_per_la_pubblica_amministrazione.html#la-classificazione-dei-dati-e-dei-servizi" aria-label="link esterno">https://docs.italia.it/italia/cloud-italia/strategia-cloud-italia-docs/it/stabile/4_la_strategia_cloud_per_la_pubblica_amministrazione.html#la-classificazione-dei-dati-e-dei-servizi</a>'
         tag:
           - scuole
       - title: A quanto ammonta l'importo del finanziamento previsto dall'Avviso riferito alla Misura 1.2?
-        content: 'L’importo del finanziamento concedibile alle Scuole è individuato in un importo forfettario determinato secondo il seguente criterio: per ogni servizio che verrà migrato verrà corrisposto un costo unitario di € 553 iva inclusa, con un importo minimo quindi pari a € 1.659 per 3 servizi fino ad un massimo di € 12.719 equivalente a 23 servizi. L’importo definitivo, tuttavia, sarà calcolato sulla base della sommatoria dei servizi che saranno migrati.'
+        content: L’importo del finanziamento concedibile alle scuole sarà calcolato sulla base della sommatoria dei servizi che saranno migrati.Per ogni servizio che verrà migrato verrà corrisposto un costo unitario di € 553 iva inclusa, con un importo minimo quindi pari a € 553 per 1 se vizio fino ad un massimo di € 12.719, equivalente a 23 servizi. Il canone del servizio Cloud è incluso all’interno dell’importo.
+        tag:
+          - scuole
+      - title: Quali tipologie di servizi potranno essere oggetto di migrazione?
+        content: Oggetto di migrazione potranno essere tutti i servizi erogati in tutte le loro forme dal singolo Ente e il cui livello complessivo di efficienza possa essere ottimizzato attraverso una migrazione verso piattaforme cloud qualificate o presso infrastrutture della PA idonee. L'obiettivo del presente Avviso è la migrazione completa (Full Migration) degli asset ICT on premises dell’ente. Nel caso quindi delle Scuole la full migration è identificata come la migrazione di un numero minimo di 1 fino ad un massimo di 23 servizi, a seconda delle necessità del singolo istituto.
+        tag:
+         - scuole
+      - title: Quali sono le caratteristiche del modello di migrazione "Trasferimento in sicurezza dell’infrastruttura IT"?
+        content: L’opzione di "Trasferimento in sicurezza dell’infrastruttura IT" consente di sfruttare la strategia di migrazione Lift&Shift (anche detta Rehost), cioè la migrazione al cloud dell’infrastruttura già esistente, senza la necessità di reingegnerizzare le applicazioni. Tale modalità consiste nel migrare l’intero servizio, comprensivo di applicazioni e dati su un hosting cloud senza apportare modifiche agli applicativi, ovvero replicando il servizio esistente in un ambiente cloud.
+        tag:
+          - scuole
+      - title: Quali sono le caratteristiche del modello di migrazione "Aggiornamento in sicurezza di applicazioni in Cloud"?
+        content: L’opzione di "Aggiornamento di applicazioni sicure in Cloud" offre la possibilità di migrare le applicazioni utilizzando una tra le strategie repurchase/replace e replatform. Per repurchase/replace si intende l’acquisto di una soluzione nativa in cloud, in genere erogata in modalità Software as a Service, mentre per replatforming si intende la riorganizzazione dell’architettura applicativa sostituendo intere componenti del servizio in favore di soluzioni cloud native in modo da usufruire dei benefici dell’infrastruttura cloud.
         tag:
           - scuole
   - title: 1.3.1 
