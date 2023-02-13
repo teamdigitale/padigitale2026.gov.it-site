@@ -494,7 +494,7 @@ questions:
         tag:
           - comuni
       - title: In cosa consiste la classificazione di dati e servizi? A cosa serve?
-        content:La classificazione dei dati consiste nell'uniformare e guidare il processo di migrazione al cloud della PA. Le classi dei dati e servizi sono identificate sulla base del danno che una loro compromissione, in termini di confidenzialità, integrità e disponibilità, provocherebbe al sistema Paese. Tali classi sono: Strategico -Critico - Ordinario. L’applicazione del processo di classificazione permetterà un’analisi guidata degli impatti, nonché di eventuali requisiti di sicurezza e normativi, per l’identificazione dell’opportuna classe.
+        content: La classificazione dei dati consiste nell'uniformare e guidare il processo di migrazione al cloud della PA. Le classi dei dati e servizi sono identificate sulla base del danno che una loro compromissione, in termini di confidenzialità, integrità e disponibilità, provocherebbe al sistema Paese. Tali classi sono: Strategico -Critico - Ordinario. L’applicazione del processo di classificazione permetterà un’analisi guidata degli impatti, nonché di eventuali requisiti di sicurezza e normativi, per l’identificazione dell’opportuna classe.
         tag:
           - comuni
       - title: Quali tipologie di servizi potranno essere oggetto di migrazione?
