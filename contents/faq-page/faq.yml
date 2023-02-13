@@ -550,7 +550,8 @@ questions:
         tag:
           - scuole
       - title: Di quante modalità di migrazione può avvalersi una scuola al fine di rispondere correttamente ai requisiti previsti dall'Avviso riferito alla Misura 1.2?
-        content: La Scuola potrà effettuare la migrazione sfruttando le diverse tipologie di migrazioni delineate nella strategia nazionale per il cloud, selezionando tra le modalità: <br>- Trasferimento in sicurezza dell’infrastruttura IT <br>- Aggiornamento di applicazioni sicure in Cloud
+        content: >
+        La Scuola potrà effettuare la migrazione sfruttando le diverse tipologie di migrazioni delineate nella strategia nazionale per il cloud, selezionando tra le modalità: <br>- Trasferimento in sicurezza dell’infrastruttura IT <br>- Aggiornamento di applicazioni sicure in Cloud
         tag:
           - scuole
       - title: Una scuola è obbligata ad adottare la stessa modalità di migrazione per tutti i servizi?
