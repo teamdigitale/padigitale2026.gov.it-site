@@ -452,7 +452,7 @@ questions:
           - comuni
           - scuole
       - title: È possibile erogare un servizio SaaS Qualificato AGID presso un CSP diverso da quello indicato nella scheda servizio pubblicata su marketplace?
-        content: In caso di cambio CSP sottostante ad un servizio SaaS,bisogna effettuare una nuova qualifica. Prerequisito è che il CSP di destinazione sia qualificato. La nuova qualifica deve essere tempestivamente inviata ad AGID che provvederà alla sua valutazione. La stessa include anche la conformità legislativa secondo cui il fornitore cloud deve rendere nota la localizzazione delle proprie infrastrutture e dove transiteranno i dati gestiti (e.g. IT, UE, Extra UE).
+        content: In caso di cambio CSP sottostante ad un servizio SaaS, bisogna effettuare una nuova qualifica. Prerequisito è che il CSP di destinazione sia qualificato. La nuova qualifica deve essere tempestivamente inviata ad AGID che provvederà alla sua valutazione. La stessa include anche la conformità legislativa secondo cui il fornitore cloud deve rendere nota la localizzazione delle proprie infrastrutture e dove transiteranno i dati gestiti (e.g. IT, UE, Extra UE).
         tag:
           - comuni
           - scuole
@@ -478,11 +478,11 @@ questions:
         tag:
           - comuni
       - title: Un Comune è obbligato ad adottare la stessa modalità di migrazione per tutti i servizi?
-        content: No,l’Ente potrà selezionare - singolarmente per ognuno dei servizi oggetto della migrazione - il modello di migrazione più adatto da presentare all’interno del piano di migrazione.
+        content: No, l’Ente potrà selezionare - singolarmente per ognuno dei servizi oggetto della migrazione - il modello di migrazione più adatto da presentare all’interno del piano di migrazione.
         tag:
           - comuni
       - title: Se ho già migrato un servizio in cloud in modalità "Trasferimento in sicurezza dell’infrastruttura IT" posso aderire al finanziamento per implementare la modalità "Aggiornamento in sicurezza di applicazioni in Cloud"?
-        content: Si,la Scuola può partecipare per l'implementazione della modalità "Aggiornamento in sicurezza di applicazioni in Cloud".
+        content: Si, la Scuola può partecipare per l'implementazione della modalità "Aggiornamento in sicurezza di applicazioni in Cloud".
         tag:
           - comuni
       - title: Il Canone del primo anno è incluso nel finanziamento?
