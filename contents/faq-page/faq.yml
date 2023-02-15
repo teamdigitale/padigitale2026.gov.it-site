@@ -599,7 +599,10 @@ questions:
         tag:
           - Asl/AO
       - title: Qual è la destinazione prevista per i servizi inseriti nel piano di migrazione?
-        content:La destinazione dei servizi inseriti nel piano di migrazione previsto dall’avviso è:<br>- Per i servizi ordinari:Public Cloud Qualificato, Infrastruttura della PA idonea o PSN; </br> <br>- Per i servizi critici": Polo Strategico Nazionale (PSN).</br>
+        content: |
+          La destinazione dei servizi inseriti nel piano di migrazione previsto dall’avviso è:<br>
+          - Per i servizi ordinari: Public Cloud Qualificato, Infrastruttura della PA idonea o PSN; </br>
+          - Per i servizi critici: Polo Strategico Nazionale (PSN).
         tag:
           - Asl/AO
       - title: Sono previsti adempimenti per I servizi precedentemente classificati e non inclusi nel piano di migrazione?
