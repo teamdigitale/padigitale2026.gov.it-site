@@ -10,12 +10,13 @@ import faq from '../../contents/faq-page/faq.yml';
 import { SEO } from '../components/SEO';
 import seo from '../../contents/seo.yml';
 import content from '../../contents/gestire-progetto/gestire-progetto.yml';
+import { HeroVideo } from '../components/HeroVideo';
 /* import { Totop } from '../components/Totop'; */
 import { SideNavigationAccordion } from './sideNavigationAccordion';
 
 const { title: seoTitle, description: seoDescription } = seo.gestireProgettoPage;
 
-const { sidebar } = content;
+const { sidebar, video } = content;
 
 const useStyles = createUseStyles({
   breadcrumb: {
@@ -566,6 +567,9 @@ export const GestireProgettoPage = () => {
                   </Alert>
                 </section>
               </Container>
+              <section id="watch-video">
+                <HeroVideo src={video.src} description={video.description} videoText={video.videoText} />
+              </section>
             </div>
           </div>
         </Container>

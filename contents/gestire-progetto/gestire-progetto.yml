@@ -12,3 +12,10 @@ sidebar:
   - sectionTitle: Raggiungi gli obiettivi previsti
     sectionId: verify-data
     sectionActive: false
+  - sectionTitle: Guarda il video dedicato
+    sectionId: watch-video
+    sectionActive: false
+video:
+  src: https://www.youtube-nocookie.com/embed/Edg01Fl39a8
+  description: Scopri come avviare un progetto e coinvolgere il fornitore.
+  videoText: "Awaiting text for this section..."
