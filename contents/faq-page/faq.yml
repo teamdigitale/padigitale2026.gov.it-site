@@ -387,6 +387,8 @@ questions:
         id: scuole
       - title: Comuni
         id: comuni
+      - title: Asl/AO
+        id: Asl/AO
     accordions:
       - title: Quali sono gli scenari di migrazione ammissibili?
         content: |
@@ -451,6 +453,7 @@ questions:
         tag:
           - comuni
           - scuole
+           -Asl/AO
       - title: È possibile erogare un servizio SaaS Qualificato AGID presso un CSP diverso da quello indicato nella scheda servizio pubblicata su marketplace?
         content: In caso di cambio CSP sottostante ad un servizio SaaS, bisogna effettuare una nuova qualifica. Prerequisito è che il CSP di destinazione sia qualificato. La nuova qualifica deve essere tempestivamente inviata ad AGID che provvederà alla sua valutazione. La stessa include anche la conformità legislativa secondo cui il fornitore cloud deve rendere nota la localizzazione delle proprie infrastrutture e dove transiteranno i dati gestiti (e.g. IT, UE, Extra UE).
         tag:
@@ -563,6 +566,62 @@ questions:
         content: L’opzione di "Aggiornamento di applicazioni sicure in Cloud" offre la possibilità di migrare le applicazioni utilizzando una tra le strategie repurchase/replace e replatform. Per repurchase/replace si intende l’acquisto di una soluzione nativa in cloud, in genere erogata in modalità Software as a Service, mentre per replatforming si intende la riorganizzazione dell’architettura applicativa sostituendo intere componenti del servizio in favore di soluzioni cloud native in modo da usufruire dei benefici dell’infrastruttura cloud.
         tag:
           - scuole
+      - title: Quali enti della PA possono presentare domanda per accedere al finanziamento dall'Avviso riferito alla Misura 1.2?
+        content: I Soggetti Attuatori, ovvero coloro che possono accedere allo strumento predisposto dall'Avviso, sono e ASL e le Aziende Ospedaliere come definite dalle categorie IPA "Aziende Sanitarie Locali" e "Aziende Ospedaliere, Aziende Ospedaliere Universitarie, Policlinici e Istituti di Ricovero e Cura a Carattere Scientifico Pubblici".
+        tag:
+          - Asl/AO
+      - title: È possibile accedere al finanziamento in caso di realizzazione della migrazione al cloud prima della pubblicazione dall'Avviso riferito alla Misura 1.2?
+        content: Sono ammissibili a contributo tutte le attività di assessment, pianificazione della migrazione, esecuzione della migrazione e formazione dei servizi indicati in allegato 2 al presente Avviso avviate a decorrere dal 1° febbraio 2020 con risorse finanziarie proprie.
+          - Asl/AO
+      - title: È possibile accedere al finanziamento in caso di realizzazione della migrazione al cloud, con l'ausilio di fondi pubblici,nazionali, regionali o europei prima della pubblicazione dell'Avviso riferito alla Misura 1.2?
+        content: No, il finanziamento concesso con il presente Avviso non è cumulabile con altri finanziamenti pubblici, nazionali, regionali o europei, per le stesse spese ammissibili, secondo quanto previsto dall'art. 8 comma 5 dell'Avviso.
+        tag:
+          - Asl/AO
+      - title: Quali tipologie di servizi potranno essere oggetto di migrazione?
+        content: Oggetto di migrazione potranno essere tutti i servizi erogati in tutte le loro forme dal singolo Ente e il cui livello complessivo di efficienza possa essere ottimizzato attraverso una migrazione verso piattaforme cloud qualificate o presso Infrastrutture della PA idonee.
+        tag:
+          - Asl/AO
+      - title: Di quante modalità di migrazione può avvalersi un Comune al fine di rispondere correttamente ai requisiti previsti dall'Avviso riferito alla Misura 1.2?
+        content: Il Comune potrà effettuare la migrazione avvalendosi dei due modelli di migrazione come delineato nella strategia nazionale per il cloud:<br>- Trasferimento in sicurezza dell’infrastruttura IT</br><br>- Aggiornamento in sicurezza di applicazioni in Cloud.</br>
+        tag:
+          - Asl/AO
+      - title: Quali sono le caratteristiche del modello di migrazione "Trasferimento in sicurezza dell’infrastruttura IT"?
+        content: L’opzione "Trasferimento in sicurezza dell'infrastruttura IT" consente di sfruttare la strategia di migrazione Lift&Shift (anche detta Rehost), cioè la migrazione al cloud dell’infrastruttura già esistente, senza la necessità di reingegnerizzare le applicazioni. Tale modalità consiste nel migrare l’intero servizio, comprensivo di applicazioni e dati su un hosting cloud senza apportare modifiche agli applicativi, ovvero replicando il servizio esistente in un ambiente
+          cloud.
+        tag:
+          - Asl/AO
+      - title: Un Comune è obbligato ad adottare la stessa modalità di migrazione per tutti i servizi?
+        content: No, l’Ente potrà selezionare - singolarmente per ognuno dei servizi oggetto della migrazione - il modello di migrazione più adatto da presentare all’interno del piano di migrazione.
+        tag:
+          - Asl/AO
+      - title: Cosa contiene il piano di migrazione?
+        content: Il piano di migrazione dei Soggetti Attuatori conterrà al suo interno tutta la lista di servizi che verranno migrati verso il cloud qualificato.
+        tag:
+          - Asl/AO
+      - title: Qual è la destinazione prevista per i servizi inseriti nel piano di migrazione?
+        content:La destinazione dei servizi inseriti nel piano di migrazione previsto dall’avviso è:<br>- Per i servizi ordinari:Public Cloud Qualificato, Infrastruttura della PA idonea o PSN; </br> <br>- Per i servizi critici": Polo Strategico Nazionale (PSN).</br>
+        tag:
+          - Asl/AO
+      - title: Sono previsti adempimenti per I servizi precedentemente classificati e non inclusi nel piano di migrazione?
+        content: Per tutti i servizi classificati e non inclusi nel piano di migrazione dell’avviso deve essere fornita la dichiarazione della destinazione coerente con gli obblighi di legge, tramite comunicazione ufficiale via PEC all’indirizzo dtd.pnrr@pec.governo.it .
+        tag:
+          - Asl/AO
+      - title: Quali informazioni devono essere indicate nella comunicazione a mezzo PEC dei servizi classificati e non inclusi nel piano di migrazione?
+        content: Nella PEC per ogni servizio classificato ma non facente parte del pianodi migrazione dell’avviso è necessario indicare:<br>1) se il servizio è già stato migrato verso soluzioni cloud nel rispetto di quanto previsto dal Regolamento AGID;</br><br>2) se il servizio verrà migrato entro il 2026 verso soluzioni cloud nel rispetto di quanto previsto dal Regolamento AGID;</br><br> 3) se il servizio non viene migrato secondo le deroghe previste all’interno dell'articolo 7 della Circolare AGID 1/2019, indicando la motivazione e l’infrastruttura che attualmente ospita il servizio dell’amministrazione.</br>
+        tag:
+          - Asl/AO
+      - title: Il canone del primo anno è incluso nel finanziamento?
+        content: Sì, il canone del primo anno è incluso nell’importo forfettario come definito dall'allegato 2.
+        tag:
+          - Asl/AO
+      - title: Quanti servizi è necessario migrare?
+        content: L’adesione all’avviso prevede la migrazione di:<br>- Un minimo di 3 fino ad un massimo di 15 servizi classificati come Ordinari;</br><br>- Un minimo di 3 fino ad un massimo di 26 servizi classificati come Critici.</br>
+        tag:
+          - Asl/AO
+      - title: Entro quanto tempo dovrà essere contrattualizzato il fornitore?
+        content: Il fornitore deve essere contrattualizzato entro 9 mesi dalla data di notifica del Decreto di finanziamento.
+        tag:
+          - Asl/AO
   - title: 1.3.1 
     description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
     sectionId: measure-1-3-1
