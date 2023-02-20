@@ -261,7 +261,8 @@ questions:
         tag:
           - fornitori
       - title: Ho stipulato un contratto con data successiva al 1 Febbraio 2020 ma mi sono accorto che mancano alcune informazioni che vorrei integrare, come posso procedere?
-        content: È possibile caricare autonomamente in piattaforma un addendum al contratto iniziale, firmato dalle due parti (ente e fornitore) che integri le informazioni mancanti, fermo restando il rispetto delle scadenze del cronoprogramma.Qualora si volesse inserire l’addendum durante la di “Asseverazione” sarà necessario contattare il team territoriale tramite form all’indirizzo che segue <a href="https://padigitale2026.gov.it/team-territoriali" target="_blank">https://padigitale2026.gov.it/team-territoriali</a>
+        content: |
+        È possibile caricare autonomamente in piattaforma un addendum al contratto iniziale, firmato dalle due parti (ente e fornitore) che integri le informazioni mancanti, fermo restando il rispetto delle scadenze del cronoprogramma. Qualora si volesse inserire l’addendum durante la fase di “Asseverazione” sarà necessario contattare il team territoriale tramite form all’indirizzo che segue <a href="https://padigitale2026.gov.it/team-territoriali" target="_blank">https://padigitale2026.gov.it/team-territoriali</a>
         tag:
           - fornitori  
       - title: In fase di selezione del fornitore è possibile utilizzare contratti stipulati prima dell'entrata in vigore del D.L 77/2021?
