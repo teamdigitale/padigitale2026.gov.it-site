@@ -585,6 +585,10 @@ questions:
         content: No, il finanziamento concesso con il presente Avviso non è cumulabile con altri finanziamenti pubblici, nazionali, regionali o europei, per le stesse spese ammissibili, secondo quanto previsto dall'art. 8 comma 5 dell'Avviso.
         tag:
           - Asl/AO
+      - title: È possibile accedere al finanziamento in caso di realizzazione della migrazione al cloud prima della pubblicazione dall'Avviso riferito alla Misura 1.2?
+        content: Sono ammissibili a contributo tutte le attività di assessment, pianificazione della migrazione, esecuzione della migrazione e formazione dei servizi indicati in allegato 2 al presente Avviso avviate a decorrere dal 1 febbraio 2020 con risorse finanziarie proprie.
+        tag:
+          - Asl/AO
       - title: Quali tipologie di servizi potranno essere oggetto di migrazione?
         content: Oggetto di migrazione potranno essere tutti i servizi erogati in tutte le loro forme dal singolo Ente e il cui livello complessivo di efficienza possa essere ottimizzato attraverso una migrazione verso piattaforme cloud qualificate o presso Infrastrutture della PA idonee.
         tag:
