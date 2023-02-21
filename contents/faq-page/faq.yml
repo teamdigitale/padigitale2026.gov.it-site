@@ -589,17 +589,13 @@ questions:
         content: Oggetto di migrazione potranno essere tutti i servizi erogati in tutte le loro forme dal singolo Ente e il cui livello complessivo di efficienza possa essere ottimizzato attraverso una migrazione verso piattaforme cloud qualificate o presso Infrastrutture della PA idonee.
         tag:
           - Asl/AO
-      - title: Di quante modalità di migrazione può avvalersi un Comune al fine di rispondere correttamente ai requisiti previsti dall'Avviso riferito alla Misura 1.2?
-        content: Il Comune potrà effettuare la migrazione avvalendosi dei due modelli di migrazione come delineato nella strategia nazionale per il cloud:<br>- Trasferimento in sicurezza dell’infrastruttura IT</br><br>- Aggiornamento in sicurezza di applicazioni in Cloud.</br>
+      - title: In quanto tempo devono essere concluse le attività oggetto di finanziamento?
+        content: Le attività oggetto di finanziamento devono essere concluse entro 18 mesi dalla data di contrattualizzazione del fornitore.
         tag:
-          - Asl/AO
+          - Asl/AO    
       - title: Quali sono le caratteristiche del modello di migrazione "Trasferimento in sicurezza dell’infrastruttura IT"?
         content: L’opzione "Trasferimento in sicurezza dell'infrastruttura IT" consente di sfruttare la strategia di migrazione Lift&Shift (anche detta Rehost), cioè la migrazione al cloud dell’infrastruttura già esistente, senza la necessità di reingegnerizzare le applicazioni. Tale modalità consiste nel migrare l’intero servizio, comprensivo di applicazioni e dati su un hosting cloud senza apportare modifiche agli applicativi, ovvero replicando il servizio esistente in un ambiente
           cloud.
-        tag:
-          - Asl/AO
-      - title: Un Comune è obbligato ad adottare la stessa modalità di migrazione per tutti i servizi?
-        content: No, l’Ente potrà selezionare - singolarmente per ognuno dei servizi oggetto della migrazione - il modello di migrazione più adatto da presentare all’interno del piano di migrazione.
         tag:
           - Asl/AO
       - title: Cosa contiene il piano di migrazione?
