@@ -183,6 +183,8 @@ questions:
         content: No, il dispositivo di firma digitale deve essere valido e correttamente funzionante.
       - title: "Quali sono i formati di firma riconosciuti all'interno del sistema?"
         content: Il sistema ritiene valide solo firme di tipologia Cades.
+      - title: "È possibile apportare delle modifiche al cronoprogramma su PA digitale 2026?"
+        content: Sì, attraverso il pulsante "Posticipa la scadenza" si può richiedere la proroga della scadenza dell'attività del cronoprogramma da completare, inserendo una nuova data di scadenza. Ogni PA può richiedere di posticipare la scadenza soltanto due volte nel corso del ciclo di vita del progetto. A partire dalla terza richiesta, non sarà più possibile richiedere una proroga tramite la piattaforma, ma sarà necessario inviare una PEC al seguente indirizzo dtd.pnrr@pec.governo.it.
       - title: "Devo eliminare un servizio selezionato in fase di candidatura. Come posso procedere?"
         content: Non è possibile modificare una candidatura già inviata. Ti ricordiamo che è comunque possibile rinunciare a una candidatura e inviarne una nuova a seguito della ricezione della PEC del decreto di rinuncia.Ti consigliamo di valutare tale opportunità anche contattando l’account manager del tuo territorio utilizzando il modulo dedicato <a href="https://padigitale2026.gov.it/team-territoriali" target="_blank">https://padigitale2026.gov.it/team-territoriali</a>
   - title: Progetti
@@ -259,7 +261,8 @@ questions:
         tag:
           - fornitori
       - title: Ho stipulato un contratto con data successiva al 1 Febbraio 2020 ma mi sono accorto che mancano alcune informazioni che vorrei integrare, come posso procedere?
-        content: È possibile caricare autonomamente in piattaforma un addendum al contratto iniziale, firmato dalle due parti (ente e fornitore) che integri le informazioni mancanti, fermo restando il rispetto delle scadenze del cronoprogramma.Qualora si volesse inserire l’addendum durante le fasi di “Completamento attività” e di “Asseverazione” sarà necessario contattare il team territoriale tramite form all’indirizzo che segue <a href="https://padigitale2026.gov.it/team-territoriali" target="_blank">https://padigitale2026.gov.it/team-territoriali</a>
+        content: |
+          È possibile caricare autonomamente in piattaforma un addendum al contratto iniziale, firmato dalle due parti (ente e fornitore) che integri le informazioni mancanti, fermo restando il rispetto delle scadenze del cronoprogramma. Qualora si volesse inserire l’addendum durante le fasi di "Completamento attività" e di “Asseverazione” sarà necessario contattare il team territoriale tramite form all’indirizzo che segue <a href="https://padigitale2026.gov.it/team-territoriali" target="_blank">https://padigitale2026.gov.it/team-territoriali</a>
         tag:
           - fornitori  
       - title: In fase di selezione del fornitore è possibile utilizzare contratti stipulati prima dell'entrata in vigore del D.L 77/2021?
@@ -377,6 +380,10 @@ questions:
         content: Le amministrazioni sono tenute a completare le attività previste dal piano di migrazione entro il 30 giugno 2026. Per ottenere i finanziamenti PNRR è comunque necessario attenersi alle scadenze specificate nei relativi avvisi.
       - title: È già possibile inviare il piano di migrazione anche per gli enti che si candidano all'Avviso 1.1?	
         content: In attesa dell'attivazione della sezione "Cloud" nell'area riservata di PA digitale 2026, le amministrazioni che richiederanno l'adesione all’investimento 1.1 potranno inviare i piani di migrazione entro il 28/02/2023 via PEC - ove previsto dal relativo avviso pubblico e all'indirizzo ivi indicato. 
+      - title: |
+            Nel Piano di migrazione devo inserire solo i servizi che non ho ancora migrato o anche quelli già migrati in passato?
+        content: |
+              L'Ente deve indicare tutti i servizi da migrare alla data di presentazione del piano di migrazione, nel rispetto dell'obbligo indicato all'articolo 33-septies. Se alla data di presentazione del piano di migrazione e in base alla classificazione dei dati e servizi effettuata, l'amministrazione dovesse riscontrare di non dover migrare alcuni dati e servizi - in quanto già migrati precedentemente verso il PSN o data center adeguati / soluzioni cloud qualificate in base ai requisiti del Regolamento Cloud AGID del 15 dicembre 2021, della Determina 307 ACN del 18 gennaio 2022 e a quanto previsto dal Decreto ACN del 2 gennaio 2023 - tali dati e servizi non dovranno essere inseriti nel piano di migrazione.
   - title: 1.2 Abilitazione e facilitazione migrazione al Cloud
     sectionTitle: Misure
     description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
@@ -461,6 +468,11 @@ questions:
           - scuole
       - title: Quali sono gli scenari ammissibili di migrazione al Cloud con riferimento al passaggio da IaaS qualificato a SaaS?
         content: Il passaggio da IaaS Qualificato a Saas risulta ammissibile solo se il passaggio da on premise strutturato a Iaas Qualificato è avvenuto dopo il 1° Febbraio 2020 ed è il primo step di una migrazione più impattante che prevede, come step finale, il SaaS. Ulteriori approfondimenti sono disponibili sui chiarimenti pubblicati nella sezione dedicata all'Avviso 1.2 nella finestra n. 3 del 27/11/2022.
+        tag:
+          - comuni
+          - scuole
+      - title: Ho migrato un servizio in modalità B - Aggiornamento anziché in modalità A - Trasferimento, come inizialmente dichiarato in candidatura. Cosa dovrò fare in vista dell'asseverazione?
+        content: Alla luce dell’aggiornamento delle Linee guida per i Soggetti attuatori, l’asseverazione verrà considerata come superata positivamente anche se il servizio per cui era prevista la migrazione in modalità “A -Trasferimento”, è stato invece migrato in modalità “B - Aggiornamento”. Non sarà necessario effettuare nessuna modifica sulla candidatura presentata. La valutazione positiva dell’effettiva migrazione in modalità “B - Aggiornamento” non comporterà una variazione del contributo riconosciuto all’ente in fase di candidatura. Ulteriori chiarimenti sono disponibili nelle Linee Guida Avvisi LUMP SUM e, in particolare, nell'Allegato 1, paragrafo 7 disponibile al seguente link <a href="https://innovazione.gov.it/notizie/articoli/pa-digitale-2026-migrazione-al-cloud-aggiornate-linee-guida-di-asseverazione/" aria-label="link esterno">https://innovazione.gov.it/notizie/articoli/pa-digitale-2026-migrazione-al-cloud-aggiornate-linee-guida-di-asseverazione/</a> 
         tag:
           - comuni
           - scuole
@@ -577,21 +589,21 @@ questions:
         content: No, il finanziamento concesso con il presente Avviso non è cumulabile con altri finanziamenti pubblici, nazionali, regionali o europei, per le stesse spese ammissibili, secondo quanto previsto dall'art. 8 comma 5 dell'Avviso.
         tag:
           - Asl/AO
+      - title: È possibile accedere al finanziamento in caso di realizzazione della migrazione al cloud prima della pubblicazione dall'Avviso riferito alla Misura 1.2?
+        content: Sono ammissibili a contributo tutte le attività di assessment, pianificazione della migrazione, esecuzione della migrazione e formazione dei servizi indicati in allegato 2 al presente Avviso avviate a decorrere dal 1 febbraio 2020 con risorse finanziarie proprie.
+        tag:
+          - Asl/AO
       - title: Quali tipologie di servizi potranno essere oggetto di migrazione?
         content: Oggetto di migrazione potranno essere tutti i servizi erogati in tutte le loro forme dal singolo Ente e il cui livello complessivo di efficienza possa essere ottimizzato attraverso una migrazione verso piattaforme cloud qualificate o presso Infrastrutture della PA idonee.
         tag:
           - Asl/AO
-      - title: Di quante modalità di migrazione può avvalersi un Comune al fine di rispondere correttamente ai requisiti previsti dall'Avviso riferito alla Misura 1.2?
-        content: Il Comune potrà effettuare la migrazione avvalendosi dei due modelli di migrazione come delineato nella strategia nazionale per il cloud:<br>- Trasferimento in sicurezza dell’infrastruttura IT</br><br>- Aggiornamento in sicurezza di applicazioni in Cloud.</br>
+      - title: In quanto tempo devono essere concluse le attività oggetto di finanziamento?
+        content: Le attività oggetto di finanziamento devono essere concluse entro 18 mesi dalla data di contrattualizzazione del fornitore.
         tag:
           - Asl/AO
       - title: Quali sono le caratteristiche del modello di migrazione "Trasferimento in sicurezza dell’infrastruttura IT"?
         content: L’opzione "Trasferimento in sicurezza dell'infrastruttura IT" consente di sfruttare la strategia di migrazione Lift&Shift (anche detta Rehost), cioè la migrazione al cloud dell’infrastruttura già esistente, senza la necessità di reingegnerizzare le applicazioni. Tale modalità consiste nel migrare l’intero servizio, comprensivo di applicazioni e dati su un hosting cloud senza apportare modifiche agli applicativi, ovvero replicando il servizio esistente in un ambiente
           cloud.
-        tag:
-          - Asl/AO
-      - title: Un Comune è obbligato ad adottare la stessa modalità di migrazione per tutti i servizi?
-        content: No, l’Ente potrà selezionare - singolarmente per ognuno dei servizi oggetto della migrazione - il modello di migrazione più adatto da presentare all’interno del piano di migrazione.
         tag:
           - Asl/AO
       - title: Cosa contiene il piano di migrazione?
