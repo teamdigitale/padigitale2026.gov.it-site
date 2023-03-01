@@ -291,7 +291,33 @@ questions:
         tag:
           - dnsh
       - title: Nell'ambito della misura 1.2 è previsto il rispetto del principio DNSH per il CSP?
-        content: Il Cloud Service Provider deve necessariamente rispettare il principio del DNSH, come disposto dall'Allegato 4 dell'Avviso riferito alla misura 1.2.
+        content: |
+          Il Cloud Service Provider deve necessariamente rispettare il principio del DNSH, come disposto dall'Allegato 4 dell'Avviso riferito alla misura 1.2.
+        tag:
+          - dnsh
+      - title: Quando deve essere compilata la scheda 3 dell'allegato 4?
+        content: |
+          La scheda 3 riguardante i casi di acquisto, leasing, noleggio di computer e apparecchiature elettriche ed elettroniche, rispetto all'oggetto di finanziamento della misura 1.2, non è applicabile in contesti di migrazione verso infrastrutture già esistenti. Deve essere compilata in tutti gli altri casi.
+        tag:
+          - dnsh
+      - title: Come viene rispettata la conformità alla scheda 6 (servizi informatici di hosting cloud)?
+        content: |
+          Ai fini della conformità alla scheda 6 è necessario rientrare in uno dei quattro scenari presenti nella slide 8 presente dall'Allegato 4 dell'Avviso riferito alla misura 1.2.
+        tag:
+          - dnsh
+      - title: Come viene rispettata la conformità alla scheda 8 (data center)?
+        content: |
+          Ai fini della conformità alla scheda 8 è necessario rientrare in uno dei quattro scenari presenti nella slide 8 presente dall'Allegato 4 dell'Avviso riferito alla misura 1.2.
+        tag:
+          - dnsh
+      - title: Per quanto concerne lo scenario 1 quali sono i requisiti fondamentali?
+        content: |
+          In merito allo scenario 1, è sufficiente uno fra le seguenti i requisiti: Registrazione Emas o UNI EN ISO 14001. Rispetto alla versione precedente dell'allegato non è più quindi richiesto e sufficiente il CLC/TR 50600-99-1 e il Code of Conduct for energy efficiency of data centers.
+        tag:
+          - dnsh
+      - title: Cosa si intende per verifiche ex-post delle schede 6 e 8?
+        content: |
+          I quesiti ex-post delle schede 6 ed 8 rappresentano l'impegno del fornitore di servizi cloud a continuare ad aderire, negli anni a venire, agli standard europei in materia di impatto ambientale. Sono previsti a riguardo degli audit triennali condotti da organismi indipendenti.
         tag:
           - dnsh
   - title: Supporto tecnico
