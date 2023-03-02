@@ -2,7 +2,7 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
 import PropTypes from 'prop-types';
-import { Breadcrumb, BreadcrumbItem } from 'design-react-kit';
+import { Breadcrumb, BreadcrumbItem, Row, Col } from 'design-react-kit';
 
 const useStyle = createUseStyles({
   breadcrumb: {
@@ -72,50 +72,66 @@ const useStyle = createUseStyles({
   },
 });
 
-export const HeroSupport = ({ title, subtitle, isFaq }) => {
+export const HeroSupport = ({ title, subtitle, isFaq, breadCrumbLabel, isMatResource }) => {
   const classes = useStyle();
-
+  const breadCrumbItemLabel = breadCrumbLabel || "Domande frequenti";
   return (
     <>
       <div className={classes.supportHero}>
         <div className="container px-3">
-        
-        {isFaq ? 
-        <Breadcrumb className={classes.breadcrumb}>
-         <BreadcrumbItem className={classes.breadcrumbItem}>
-           <a href="/">Home</a>
-           <span className="separator"></span>
-         </BreadcrumbItem>
-         <BreadcrumbItem className={classes.breadcrumbItem}>
-           <a href="/supporto">Supporto</a>
-         </BreadcrumbItem>
-         <BreadcrumbItem active className={classes.breadcrumbItemActive}>
-           <a>Domande frequenti</a>
-         </BreadcrumbItem>
-       </Breadcrumb>
-         :
 
-        <Breadcrumb className={classes.breadcrumb}>
-        <BreadcrumbItem className={classes.breadcrumbItem}>
-          <a href="/">Home</a>
-          <span className="separator"></span>
-        </BreadcrumbItem>
-        <BreadcrumbItem active className={classes.breadcrumbItemActive}>
-          <a>Supporto</a>
-        </BreadcrumbItem>
-      </Breadcrumb>
-        }
-          <div className="row">
-            <div className="col-12 col-lg-8 col-xl-6 offset-lg-1">
-              <div className="it-hero-text-wrapper">
-                <h1 className="no_toc">{title}</h1>
-                <p
-                  className="support-hero-description"
-                  dangerouslySetInnerHTML={{ __html: subtitle }}
+          {isFaq ?
+            <Breadcrumb className={classes.breadcrumb}>
+              <BreadcrumbItem className={classes.breadcrumbItem}>
+                <a href="/">Home</a>
+                <span className="separator"></span>
+              </BreadcrumbItem>
+              <BreadcrumbItem className={classes.breadcrumbItem}>
+                <a href="/supporto">Supporto</a>
+              </BreadcrumbItem>
+              <BreadcrumbItem active className={classes.breadcrumbItemActive}>
+                <a>{breadCrumbItemLabel}</a>
+              </BreadcrumbItem>
+            </Breadcrumb>
+            :
+
+            <Breadcrumb className={classes.breadcrumb}>
+              <BreadcrumbItem className={classes.breadcrumbItem}>
+                <a href="/">Home</a>
+                <span className="separator"></span>
+              </BreadcrumbItem>
+              <BreadcrumbItem active className={classes.breadcrumbItemActive}>
+                <a>Supporto</a>
+              </BreadcrumbItem>
+            </Breadcrumb>
+          }
+          {isMatResource ?
+            <Row className="mb-5 mt-5">
+              <Col xs={12} lg={7}>
+                <h1 className={classes.titleUpdate}>{title}</h1>
+                <div className={classes.subtitleUpdate}>{subtitle}</div>
+              </Col>
+              <Col xs={12} lg={4} className="offset-lg-1 mt-5 mt-lg-0 d-flex justify-content-center align-items-center">
+                <img
+                  src={`/assets/come-fare/MaterialieRisorse.svg`}
+                  alt=""
+                  className={classes.heroImg}
                 />
+              </Col>
+            </Row>
+            :
+            <div className="row">
+              <div className="col-12 col-lg-8 col-xl-6 offset-lg-1">
+                <div className="it-hero-text-wrapper">
+                  <h1 className="no_toc">{title}</h1>
+                  <p
+                    className="support-hero-description"
+                    dangerouslySetInnerHTML={{ __html: subtitle }}
+                  />
+                </div>
               </div>
             </div>
-          </div>
+          }
         </div>
       </div>
     </>
@@ -126,4 +142,6 @@ HeroSupport.propTypes = {
   title: PropTypes.string,
   subtitle: PropTypes.string,
   isFaq: PropTypes.bool,
+  breadCrumbLabel: PropTypes.string,
+  isMatResource: PropTypes.bool
 };
