@@ -412,6 +412,14 @@ questions:
             Ho inviato una candidatura a valere sull'Avviso 1.2 che si trova attualmente in stato "Accettata". Risulta tuttavia inibita la compilazione del piano di migrazione: come posso procedere?
         content: |
             Per potere inviare un piano di migrazione a seguito dell'invio di una candidatura a valere sull'Avviso 1.2, è necessario attendere la PEC di emissione del Decreto di finanziamento.
+      - title: |
+            Come posso compilare il piano di migrazione?
+        content: |
+             Gli enti dovranno inviare i piani di migrazione esclusivamente attraverso PA digitale 2026, non sono previste ulteriori modalità di invio.
+      - title: |
+            I dati relativi alla PA sul piano di migrazione non sono corretti: come posso modificarli?
+        content: |
+            Se si riscontrano inesattezze nella visualizzazione dei dati della PA, è necessario modificarli su IPA (<a href="https://indicepa.gov.it/ipa-portale/">https://indicepa.gov.it/ipa-portale/</a>). A seguito dell'aggiornamento dei dati dell'ente (per esempio quelli del rappresentate legale), sarà possibile procedere correttamente all'invio del piano di migrazione attraverso la sezione "Cloud", presente nell'area riservata della piattaforma.            
   - title: 1.2 Abilitazione e facilitazione migrazione al Cloud
     sectionTitle: Misure
     description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
