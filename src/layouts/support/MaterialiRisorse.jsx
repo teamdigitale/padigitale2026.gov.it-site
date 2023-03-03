@@ -15,6 +15,7 @@ import { Totop } from '../../components/Totop';
 import { SideNavigation } from '../../layouts/faq/SideNavigation';
 import { SupportSection } from '../../layouts/faq/SupportSection';
 import { HeroSupport } from '../../layouts/support/Hero';
+import { SideNavigationAccordion } from '../../layouts/sideNavigationAccordion';
 import { QuestionSection } from './QuestionSection';
 
 const { title: seoTitle, description: seoDescription } = seo.materialiRisorsePage;
@@ -57,6 +58,19 @@ const useStyles = createUseStyles({
       background: '#fff',
       padding: '0',
       marginBottom: '20px',
+    },
+  },
+  navigationContainer: {
+    borderTop: '1px solid #A9B9C3',
+    display: 'flex',
+    '@media (max-width: 991px)': {
+      flexDirection: 'column',
+      border: 'none',
+    },
+    '& .content-container': {
+      '@media (min-width: 992px)': {
+        borderLeft: '1px solid #d9dadb',
+      },
     },
   },
 });
@@ -406,41 +420,45 @@ export const MaterialiRisorsePage = () => {
             </Col>
           </Row>
           <Row>
-            <Col lg={3} className={classes.sidenav}>
-              <SideNavigation
-                getFilter={setFilterId}
-                activeList={questions}
-                searchValue={inputValue}
-                list={content.sidebar}
-              />
-            </Col>
-            <Col
-              lg={9}
-              className="px-lg-3"
-              id="id-list-faq"
-              role="region"
-              aria-label="Lista materiali e risorse"
-              aria-describedby="numberfaq"
-            >
-              <span className="sr-only" id="numberfaq" aria-live="assertive">
-                Numero faq filtrate {questNum}
-              </span>
-              <Totop />
-              {questions.map((question, i) => (
-                <QuestionSection
-                  key={`${question.title}_${i}`}
-                  item={question}
-                  inputText={inputValue}
-                  setQuestions={setQuestions}
-                  totalQuestions={content.questions}
-                />
-              ))}
-              {!questions.length && (
-                <p className={classes.noResults} role="alert">
-                  {content.noResults}
-                </p>
-              )}
-            </Col>
+            <div className={classes.navigationContainer}>
+              <Col lg={3} className={classes.sidenav}>
+                <SideNavigationAccordion activeList={questions} searchValue={inputValue} list={content.sidebar} />
+              </Col>
+              <div
+                className="pl-lg-3 content-container"
+                id="id-list-points"
+                role="region"
+                aria-label="Lista punti da seguire"
+              >
+                <Col
+                  lg={9}
+                  className="px-lg-3"
+                  id="id-list-faq"
+                  role="region"
+                  aria-label="Lista materiali e risorse"
+                  aria-describedby="numberfaq"
+                >
+                  <span className="sr-only" id="numberfaq" aria-live="assertive">
+                    Numero faq filtrate {questNum}
+                  </span>
+                  <Totop />
+                  {questions.map((question, i) => (
+                    <QuestionSection
+                      key={`${question.title}_${i}`}
+                      item={question}
+                      inputText={inputValue}
+                      setQuestions={setQuestions}
+                      totalQuestions={content.questions}
+                    />
+                  ))}
+                  {!questions.length && (
+                    <p className={classes.noResults} role="alert">
+                      {content.noResults}
+                    </p>
+                  )}
+                </Col>
+              </div>
+            </div>
           </Row>
         </Container>
       </div>
