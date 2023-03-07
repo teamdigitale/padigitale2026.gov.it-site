@@ -116,7 +116,7 @@ questions:
       - title: È possibile accedere come nuovo rappresentante legale per una PA in cui è già presente un utente dello stesso ruolo? Cosa bisogna fare per cambiare l'utenza del rappresentante legale associata a una PA?
         content: Nel momento in cui un nuovo rappresentante legale accede alla piattaforma per conto di una PA che ha già un utente attivo in quel ruolo, il sistema invia una PEC all’amministrazione per confermare la nuova utenza e, contestualmente, disabilitare la precedente.
       - title: Senza il servizio SPID/CIE, è comunque possibile accedere a PA digitale 2026?
-        content: No. Il possesso del servizio di identità digitale (SPID o CIE) è indispensabile per accedere a PA digitale 2026.
+        content: No. Il possesso del serviziQual è l'importo riconosciuto per le attività previste dall'Avviso riferito alla Misura 1.3.1 - Regioni e Province Autonome?o di identità digitale (SPID o CIE) è indispensabile per accedere a PA digitale 2026.
       - title: È possibile accedere alla piattaforma con diverse identità SPID/CIE?
         content: No. Lo SPID/CIE utilizzato in fase di accesso deve essere lo stesso anche per tutti i futuri accessi a PA digitale 2026.
       - title: Cosa fare in caso di mancata autenticazione con SPID/CIE a seguito di un invito?
@@ -750,7 +750,72 @@ questions:
         content: |
           Gli importi del contributo, riconosciuti sulla base della dimensione del pacchetto scelto, sono così definiti:<br> - Pacchetto "S": n. 10 API è riconosciuto un importo di € 791.292,00;<br> - Pacchetto "M": n. 20 API è riconosciuto un importo di € 1.582.584,00;<br> - Pacchetto "L": n. 30 API è riconosciuto un importo di € 2.373.876,00.
         tag:
-          - regioni       
+          - regioni
+      - title: È possibile rimodulare le tempistiche del progetto o il cambio di obiettivo (pacchetto) sulla base di motivazioni?
+        content: |
+          In merito al cambio di obiettivo (pacchetto) una volta scelto il pacchetto non è modificabile.  Per le variazioni al progetto fa fede l’art 14. dell’avviso, in particolare il comma 3:  "Le variazioni proposte dal Soggetto Attuatore potranno riguardare solo il cronoprogramma dell’intervento, fatte salve le scadenze previste per il conseguimento dei milestone e target associati all’investimento."
+        tag:
+          - regioni 
+      - title: In caso di due enti co-titolari (es la Regione ed una Azienda sanitaria), se entrambi espongono API, quale ente è il beneficiario del finanziamento?
+        content: |
+          Il finanziamento è riconosciuto per l’esposizione del servizio e non per la proprietà dello stesso. Nel caso di enti co-titolari si auspica un coordinamento degli stessi, anche al fine di evitare il rischio di doppio finanziamento.
+        tag:
+          - regioni 
+      - title: E’ possibile, in ambiente di Test, disporre di una API funzionante (PDND compliant) per poter effettuare prove tecniche di interoperabilità?
+        content: |
+          La PDND mette a disposizione 2 ambienti: test e produzione. La firma dell’accordo di adesione con PagoPA permetterà agli Enti di accedere ad entrambi gli ambienti. In ambiente di test ogni Ente sarà libero di pubblicare un e-service a puro scopo di test. Inoltre, per permettere un flusso completo di test e verifica, ogni erogatore può essere fruitore di se stesso. Quindi, una volta pubblicato un e-service, l’Ente può effettuare a se stesso una richiesta di fruizione e iniziare a scambiare dati in loop utilizzando il token PDND. Pur essendo un ambiente controllato, si consiglia di usare nell’ambiente di test solamente dati fittizi o sintetici.
+        tag:
+          - regioni 
+      - title: È prevista la redazione di particolare documentazione tecnica a corredo per ogni API?
+        content: |
+          Come da Modello Interoperabilità, è necessario produrre la seguente documentazione: <br> - documentazione yaml/json OpenAPI3 per REST oppure WSDL per SOAP. <br> - riferimenti alla semantica utilizzata (come da LLG Interoperabilità Tecnica §4.3).Per API di tipo REST OpenAPI3 il Dipartimento mette a disposizione un tool di verifica sintattica a questo link: https://italia.github.io/api-oas-checker/  E’ consigliabile inserire un documento allegato con indicazioni o configurazioni aggiuntive o ulteriori layer di sicurezza necessari allo scambio extra-PDND.
+        tag:
+          - regioni
+      - title: Sono erogabili Open Data? E se sì, ci sono standard o formalismi da rispettare? Potrebbero sorgere problematiche di gestione dell’audience di fruizione e dei rate-limits?
+        content: |
+          Possono essere pubblicate API su PDND con open data di dati dinamici e dati ad alto valore ma non dataset statici (In corso di pubblicazione linee guida AGID sul tema). Al momento possono essere esposte solo API per cui è previsto lo stacco di un token, dunque API con caratteristiche particolari (es SLA garantiti). Da fine 2023 l’uso del token sarà reso opzionale. Dal momento che, come noto, PDND non interviene nel flusso dati, è possibile che un'API pubblicata su PDND possa essere anche contattata in modo esterno senza l'utilizzo del token.
+        tag:
+          - regioni 
+      - title: Entro quanto tempo dovrà essere contrattualizzato il fornitore?
+        content: |
+          Il fornitore dovà essere contrattualizzato al massimo entro 6 mesi (180 giorni) dalla data di notifica del decreto di finanziamento.
+        tag:
+          - regioni 
+      - title: Entro quanto tempo devono essere completate le attività oggetto di finanziamento?
+        content: |
+          Le attività dovranno essere eseguite entro e non oltre 12 mesi (365 giorni) a partire dalla data di pubblicazione del decreto di finanziamento
+        tag:
+          - regioni 
+      - title: Quanti endpoint/operations è consigliabile realizzare?
+        content: |
+          Come raccomandazione si suggerisce di realizzare un numero medio di endpoint (per REST API) /operations (per SOAP API) pari almeno a 10.
+        tag:
+          - regioni 
+      - title: È possibile accedere al finanziamento in caso di realizzazione del progetto prima della pubblicazione dell'Avviso?
+        content: |
+          Ai fini dell’ammissibilità della domanda di partecipazione, ai sensi dell’art. 7 lett. b dell’avviso: “le attività di cui al finanziamento richiesto con il progetto devono essere avviate a decorrere dalla pubblicazione del presente Avviso pubblico”.
+        tag:
+          - regioni 
+      - title: Secondo quali modalità possono essere erogate le API?
+        content: |
+          In conformità alle Linee Guida sull’interoperabilità tecnica delle Pubbliche Amministrazioni le API potranno essere erogate in due modalità:<br> - HTTP REST (preferibile per nuovi servizi) <br> - SOAP
+        tag:
+          - regioni 
+      - title: Come deve essere erogata un'API REST?
+        content: |
+          Una REST API dovrà essere pubblicata attraverso un descrittore OpenAPI 3 che dovrà contenere il dettaglio di tutti gli endpoint che lo compongono. Per ogni endpoint andranno indicati tutti gli HTTP methods implementati. Il formato del descrittore dovrà essere JSON o YAML.
+        tag:
+          - regioni 
+      - title: Come deve essere erogata un'API SOAP?
+        content: |
+         Una SOAP API dovrà essere pubblicata attraverso un descrittore WSDL che dovrà contenere il dettaglio di tutte le operation implementate. Nel caso di sviluppo di nuovi servizi è fortemente consigliato l’utilizzo della tecnologia API REST.
+        tag:
+          - regioni
+      - title: Come si realizza il processo di onboarding?
+        content: |
+         Le attività da porre in essere per l’erogazione di API da parte della Regione su PDND sono le seguenti:<br> - Completamento della procedura di adesione sul portale Self Care messo a disposizione da PagoPA S.p.A. o altra modalità individuata dalla PagoPA S.p.A.:<br> i. Selezione dell’ente per cui si intende aderire;<br> ii. Indicazione del Rappresentante Legale e dei Referenti amministrativo e tecnico;<br> - Firma digitale dell’accordo di adesione da parte del rappresentante legale: l’accordo viene inviato sulla PEC dell’Ente presente in IPA a valle della procedura svolta per l’adesione;<br> - Caricamento dell’accordo di adesione firmato al link di conferma ricevuto nella stessa.
+         tag:
+          - regioni 
   - title: 1.4.1 Esperienza del Cittadino nei servizi pubblici
     description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
     sectionId: measure-1-4-1
