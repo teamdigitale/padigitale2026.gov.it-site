@@ -116,7 +116,7 @@ questions:
       - title: È possibile accedere come nuovo rappresentante legale per una PA in cui è già presente un utente dello stesso ruolo? Cosa bisogna fare per cambiare l'utenza del rappresentante legale associata a una PA?
         content: Nel momento in cui un nuovo rappresentante legale accede alla piattaforma per conto di una PA che ha già un utente attivo in quel ruolo, il sistema invia una PEC all’amministrazione per confermare la nuova utenza e, contestualmente, disabilitare la precedente.
       - title: Senza il servizio SPID/CIE, è comunque possibile accedere a PA digitale 2026?
-        content: No. Il possesso del serviziQual è l'importo riconosciuto per le attività previste dall'Avviso riferito alla Misura 1.3.1 - Regioni e Province Autonome?o di identità digitale (SPID o CIE) è indispensabile per accedere a PA digitale 2026.
+        content: No. Il possesso del servizio di identità digitale (SPID o CIE) è indispensabile per accedere a PA digitale 2026.
       - title: È possibile accedere alla piattaforma con diverse identità SPID/CIE?
         content: No. Lo SPID/CIE utilizzato in fase di accesso deve essere lo stesso anche per tutti i futuri accessi a PA digitale 2026.
       - title: Cosa fare in caso di mancata autenticazione con SPID/CIE a seguito di un invito?
