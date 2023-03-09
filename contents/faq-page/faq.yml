@@ -199,9 +199,64 @@ questions:
         id: dnsh
       - title: CUP
         id: cup
+      - title: Unioni dei Comuni
+        id: unioni_dei_comuni
     accordions:
       - title: 'È previsto un periodo di mantenimento dei servizi attivi?'
         content: "Sì, è necessario mantenere i servizi attivi per almeno 5 anni. Tale requisito, verrà verificato attraverso dei controlli a campione da parte degli organi di controllo preposti nei successivi 5 anni. Sono consentiti eventuali sviluppi migliorativi del progetto iniziale a patto che si riesca a ricostruire quanto è stato fatto attraverso apposita documentazione tecnica e amministrativa."
+      - title: |
+          Il mio Comune fa parte di un'Unione che gestisce gli sviluppi tecnologici per conto del Comune, come posso partecipare agli avvisi pubblicati su PA digitale 2026? 
+              <br /><br />
+          <table class="table table-responsive" style="border: 1px solid #5A768A">
+            <thead>
+            </thead>
+            <tbody>
+              <tr style="background-color: #F0F6FC">
+                <td></td>
+                <td>SCENARIO 1</td>
+                <td>SCENARIO 2</td>
+              </tr>
+              <tr>
+                <td>Soggetto Attuatore</td>
+                <td>Comune</td>
+                <td>Comune</td>
+              </tr>
+              <tr>
+                <td>CUP</td>
+                <td>Comune</td>
+                <td>Comune</td>
+              </tr>
+              <tr>
+                <td>Soggetto Attuatore</td>
+                <td>Fornitori</td>
+                <td>Fornitori</td>
+              </tr>
+              <tr>
+                <td>RUP</td>
+                <td>Unione</td>
+                <td>Unione</td>
+              </tr>
+              <tr>
+                <td>RP</td>
+                <td>Comune</td>
+                <td>Comune</td>
+              </tr>
+              <tr>
+                <td>Documentazione contrattuale</td>
+                <td>Comune - Fornitore</td>
+                <td>Accordo/convenzione (Comune - Unione) +</td>
+              </tr>
+              <tr>
+                <td>Documentazione contrattuale</td>
+                <td></td>
+                <td>Contratto/i (Unione - Fornitori)</td>
+              </tr>
+            </tbody>
+          </table>
+        content: |
+          Il Soggetto Attuatore degli avvisi di PA digitale 2026 è il Comune. Sarà quindi il rappresentante legale del Comune a definire tutti i parametri del finanziamento richiesto e a firmare la candidatura.<br>Due scenari ammissibili:</br> <br>1-il Comune iscrive i fondi nel proprio bilancio e firma i contratti con gli operatori economici, L’Unione si occupa della gestione della procedura di selezione dei fornitori. </br> <br>Il Comune dovrà indicare in piattaforma, nel fascicolo di progetto:</br> <br>-quale “Soggetto Realizzatore” ciascun fornitore con cui Il Comune intrattiene un rapporto di fornitura</br> <br>-i contratti tra il Comune e  gli operatori economici</br> <br>2. Il Comune e l’Unione stabiliscono nella convenzione le modalità di trasferimento dei fondi dal Comune alla propria Unione e sulla base di ciò questa iscrive sul proprio bilancio le relative somme e provvede a selezionare e stipulare i contratti con gli operatori economici. </br> <br>Il Comune dovrà indicare in piattaforma, nel fascicolo di progetto:</br> <br>-quale “Soggetto Realizzatore”: ciascun fornitore con cui l’Unione intrattiene un rapporto di fornitura</br> <br>-la Convenzione o l’accordo tra Enti comunque denominato, con cui il Comune ha dato mandato all’Unione di provvedere all’esecuzione delle attività oggetto del finanziamento</br> <br>-insieme a questa, i contratti tra l’Unione e gli operatori economici</br> <br>In ogni caso il Comune resta Soggetto Attuatore (con tutti gli obblighi connessi) ed è tenuto a richiedere il CUP.Il Certificato di Regolare esecuzione redatto dal RUP dell’Unione dovrà essere controfirmato dal Responsabile del Procedimento del Comune.Nei rapporti tra Comune e Unione va garantita la tracciabilità dei flussi finanziari e dell’operazione  menzionando chiaramente il CUP relativo al progetto PNRR sia nell’accordo Comune-Unioni sia negli atti di affidamento.</br> 
+        tag:
+          - unioni_dei_comuni
       - title: Sono previsti controlli sull'avanzamento del progetto?
         content: Oltre ai controlli relativi all'asseverazione, il Dipartimento si riserva il diritto di esercitare, in ogni tempo, con le modalità che riterrà opportune, verifiche e controlli a campione sull'avanzamento finanziario, procedurale e fisico del progetto, sul rispetto degli obblighi previsti dalla normativa vigente, e dal presente Avviso nonché sulla veridicità delle dichiarazioni e informazioni prodotte dal Soggetto Attuatore. In caso di verifica, in sede di controllo, del mancato pieno rispetto della disciplina nazionale ed europea, anche se non penalmente rilevanti, il Dipartimento procederà alla revoca totale del contributo e al recupero delle eventuali somme già erogate, fatte salve le disposizioni di cui all’art. 20 del presente Avviso.
       - title: Nell'ambito delle misure 1.3 e 1.4, è previsto il rispetto del principio DNSH per i fornitori?
