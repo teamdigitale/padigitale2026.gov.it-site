@@ -6,7 +6,6 @@ import React, { useState, useEffect, useContext } from 'react';
 import { Accordion, AccordionHeader, AccordionBody } from 'design-react-kit';
 import { createUseStyles } from 'react-jss';
 import PropTypes from 'prop-types';
-import { Link } from 'gatsby';
 import { GlobalStateContext } from '../../context/globalContext';
 import { ExternalLink } from '../../components/ExternalLink';
 

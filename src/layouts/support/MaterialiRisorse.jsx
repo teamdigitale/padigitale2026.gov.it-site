@@ -12,8 +12,6 @@ import { SEO } from '../../components/SEO';
 import seo from '../../../contents/seo.yml';
 import content from '../../../contents/materiali-e-risorse/materiali-risorse.yml';
 import { Totop } from '../../components/Totop';
-import { SideNavigation } from '../../layouts/faq/SideNavigation';
-import { SupportSection } from '../../layouts/faq/SupportSection';
 import { HeroSupport } from '../../layouts/support/Hero';
 import { SideNavigationAccordion } from '../../layouts/sideNavigationAccordion';
 import { QuestionSection } from './QuestionSection';
@@ -197,11 +195,11 @@ export const MaterialiRisorsePage = () => {
   function getAccordionsFiltered(question, input) {
     return question.accordions.filter((accordion) => {
       if (
-        accordion.title?.toLowerCase().includes(input.toLowerCase()) ||
-        accordion.content?.toLowerCase().includes(input.toLowerCase()) ||
-        accordion.linkLabel?.toLowerCase().includes(input.toLowerCase())
+        question.title?.toLowerCase().includes(input.toLowerCase()) ||
+        question.description?.toLowerCase().includes(input.toLowerCase()) ||
+        accordion.title?.toLowerCase().includes(input.toLowerCase())
       ) {
-        return accordion;
+        return question;
       }
     });
   }
@@ -420,49 +418,39 @@ export const MaterialiRisorsePage = () => {
             </Col>
           </Row>
           <Row>
-            <div className={classes.navigationContainer}>
-              <Col lg={3} className={classes.sidenav}>
-                <SideNavigationAccordion activeList={questions} searchValue={inputValue} list={content.sidebar} />
-              </Col>
-              <div
-                className="pl-lg-3 content-container"
-                id="id-list-points"
-                role="region"
-                aria-label="Lista punti da seguire"
-              >
-                <Col
-                  lg={9}
-                  className="px-lg-3"
-                  id="id-list-faq"
-                  role="region"
-                  aria-label="Lista materiali e risorse"
-                  aria-describedby="numberfaq"
-                >
-                  <span className="sr-only" id="numberfaq" aria-live="assertive">
-                    Numero faq filtrate {questNum}
-                  </span>
-                  <Totop />
-                  {questions.map((question, i) => (
-                    <QuestionSection
-                      key={`${question.title}_${i}`}
-                      item={question}
-                      inputText={inputValue}
-                      setQuestions={setQuestions}
-                      totalQuestions={content.questions}
-                    />
-                  ))}
-                  {!questions.length && (
-                    <p className={classes.noResults} role="alert">
-                      {content.noResults}
-                    </p>
-                  )}
-                </Col>
-              </div>
-            </div>
+            <Col lg={3} className={classes.sidenav}>
+              <SideNavigationAccordion activeList={questions} searchValue={inputValue} list={content.sidebar} />
+            </Col>
+            <Col
+              lg={9}
+              className="px-lg-3"
+              id="id-list-faq"
+              role="region"
+              aria-label="Lista materiali e risorse"
+              aria-describedby="numberfaq"
+            >
+              <span className="sr-only" id="numberfaq" aria-live="assertive">
+                Numero faq filtrate {questNum}
+              </span>
+              <Totop />
+              {questions.map((question, i) => (
+                <QuestionSection
+                  key={`${question.title}_${i}`}
+                  item={question}
+                  inputText={inputValue}
+                  setQuestions={setQuestions}
+                  totalQuestions={content.questions}
+                />
+              ))}
+              {!questions.length && (
+                <p className={classes.noResults} role="alert">
+                  {content.noResults}
+                </p>
+              )}
+            </Col>
           </Row>
         </Container>
       </div>
-      <SupportSection supportList={content.support.cards} title={content.support.title} />
     </>
   );
 };
