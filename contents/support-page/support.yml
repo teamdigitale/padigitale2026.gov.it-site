@@ -1,7 +1,17 @@
 name: Supporto - PA digitale 2026
 mainHero:
   title: Hai bisogno di chiarimenti o supporto?
-  description: Consulta le <strong>le domande frequenti</strong> o <strong>scrivici</strong> per ricevere una risposta via email
+  description: Consulta <strong>le domande frequenti</strong> e le <strong>risorse,</strong> o <strong>scrivici</strong> per ricevere una risposta via email
+  list:
+    - listItems:
+      title: APPROFONDISCI
+      items:
+        - item: Domande frequenti
+          anchor: domande-frequenti
+        - item: Assistenza
+          anchor: assistenza
+        - item: Materiali e risorse
+          anchor: materiali-e-risorse
 faqSection:
   buttonLink: '/supporto/domande-frequenti'
   buttonLabel: Vai alle domande frequenti

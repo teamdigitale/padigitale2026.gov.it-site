@@ -11,7 +11,7 @@ import { KeypointSection } from './come-fare/KeypointSection';
 const { title: seoTitle, description: seoDescription } = seo.supportPage;
 
 const {
-  mainHero: { title, description },
+  mainHero: { title, description, list },
 } = content;
 const matAndResource = {
   number: '01',
@@ -33,7 +33,7 @@ export const SupportPage = () => {
   return (
     <>
       <SEO title={seoTitle} description={seoDescription} />
-      <HeroSupport title={title} subtitle={description} isFaq={false} />
+      <HeroSupport title={title} subtitle={description} isFaq={false} list={list} />
       <h2 className="sr-only">Domande frequenti</h2>
       <FAQPreview />
       <Assistance />

@@ -3,6 +3,7 @@ import React from 'react';
 import { createUseStyles } from 'react-jss';
 import PropTypes from 'prop-types';
 import { Breadcrumb, BreadcrumbItem, Row, Col } from 'design-react-kit';
+import { Link } from 'gatsby';
 
 const useStyle = createUseStyles({
   breadcrumb: {
@@ -70,9 +71,78 @@ const useStyle = createUseStyles({
       },
     },
   },
+  listWrapper: {
+    composes: 'mt-5',
+    display: 'flex',
+    '@media (max-width: 991px)': {
+      flexDirection: 'column',
+      textAlign: 'center',
+    },
+  },
+  list: {
+    composes: 'list',
+    display: 'flex',
+    flexDirection: 'column',
+    '& + .list': {
+      marginTop: '2.222rem',
+      '@media (min-width: 992px)': {
+        marginTop: '0',
+      },
+    },
+    '@media (min-width: 992px)': {
+      paddingRight: '1.333rem',
+      '& + .list': {
+        padding: '0 1.333rem',
+      },
+      '&:not(:last-child)': {
+        '& .list-items-wrapper': {
+          position: 'relative',
+        },
+        '& .list-items-wrapper::after': {
+          content: '""',
+          height: '100%',
+          width: '1px',
+          position: 'absolute',
+          top: '0',
+          right: '-1.333rem',
+          background: '#B6C5D6',
+        },
+      },
+    },
+  },
+  listTitle: {
+    composes: 'mb-3',
+    fontSize: '0.889rem',
+    color: '#33485C !important',
+    fontWeight: '600',
+    marginBottom: '0.889rem',
+  },
+  listItemsWrapper: {
+    composes: 'list-items-wrapper',
+    display: 'flex',
+    flexDirection: 'column',
+  },
+  listItem: {
+    composes: 'list-item',
+    textAlign: 'left',
+    color: '#0066CC',
+    fontWeight: '400',
+    marginBottom: '1rem',
+    textDecoration: 'none',
+    '@media (max-width: 991px)': {
+      textAlign: 'center',
+    },
+    '&:focus': {
+      outline: '2px solid #ff9900',
+      boxShadow: 'none',
+    },
+    '&:hover': {
+      textDecoration: 'underline',
+    },
+  },
 });
 
-export const HeroSupport = ({ title, subtitle, isFaq, breadCrumbLabel, isMatResource }) => {
+export const HeroSupport = ({ title, subtitle, isFaq, breadCrumbLabel, isMatResource, list }) => {
   const classes = useStyle();
   const breadCrumbItemLabel = breadCrumbLabel || "Domande frequenti";
   return (
@@ -128,6 +198,27 @@ export const HeroSupport = ({ title, subtitle, isFaq, breadCrumbLabel, isMatReso
                     className="support-hero-description"
                     dangerouslySetInnerHTML={{ __html: subtitle }}
                   />
+                  <div className={classes.listWrapper}>
+                    {list
+                      ? list.map((listItem) => (
+                        <div key={listItem.title} className={classes.list}>
+                          <span className={classes.listTitle}>{listItem.title}</span>
+                          <div className={classes.listItemsWrapper}>
+                            {listItem.items.map((item) => (
+                              <React.Fragment key={item.item}>
+                                <Link
+                                  to={item.anchor}
+                                  className={classes.listItem}
+                                >
+                                  {item.item}
+                                </Link>
+                              </React.Fragment>
+                            ))}
+                          </div>
+                        </div>
+                      ))
+                      : ''}
+                  </div>
                 </div>
               </div>
             </div>
@@ -143,5 +234,6 @@ HeroSupport.propTypes = {
   subtitle: PropTypes.string,
   isFaq: PropTypes.bool,
   breadCrumbLabel: PropTypes.string,
-  isMatResource: PropTypes.bool
+  isMatResource: PropTypes.bool,
+  list: PropTypes.array,
 };
