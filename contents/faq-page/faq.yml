@@ -227,7 +227,7 @@ questions:
                 <td>Comune</td>
               </tr>
               <tr>
-                <td>Soggetto Attuatore</td>
+                <td>Soggetto Realizzatore</td>
                 <td>Fornitori</td>
                 <td>Fornitori</td>
               </tr>
@@ -748,7 +748,7 @@ questions:
         tag:
           - comuni
       - title: Entro quando è possibile inoltrare la domanda di accesso al finanziamento?
-        content: La domanda di partecipazione può essere presentata a partire dalla data di pubblicazione dell'Avviso fino ad esaurimento delle risorse disponibili, e comunque non oltre le ore 23:59 del 17 febbraio 2023.
+        content: La domanda di partecipazione può essere presentata a partire dalla data di pubblicazione dell'Avviso fino ad esaurimento delle risorse disponibili, e comunque non oltre le ore 23:59 del 19 maggio 2023.
         tag:
           - comuni
       - title: Quante API è necessario erogare?
@@ -1016,6 +1016,12 @@ questions:
       - title: Cosa significa Integrare un servizio PagoPA?
         content: L'integrazione di un servizio PagoPa non si esaurisce con la mera integrazione tecnica tra gli applicativi dell'Ente e il gateway dei pagamenti di PagoPA. All'Ente è richiesto anche che:<br>- l'incasso dei servizi venga correttamente riconciliato nel bilancio (tramite opportune integrazioni con i software gestionali) secondo quanto richiesto dalle norme tributarie specificatamente al codice tassonomico del servizio incassato; <br>- i cittadini siano correttamente informati della nuova opportunità di pagamento in tutti i punti di contatto.<br>L'obiettivo finale è quello di aiutare il Paese nella transizione digitale contribuendo alla realizzazione di un’amministrazione che offra servizi sempre più digitali e facilmente utilizzabili dai cittadini.
         tag:
+          - altri-enti
+      - title: |
+          Ho rinunciato ad una candidatura 1.4.3 al fine di sottometterne una nuova con i medesimi servizi: quando potrò inviare la nuova domanda?
+        content: A seguito di rinuncia ad una candidatura già inviata a valere sull'Avviso 1.4.3 PagoPA/AppIO, è necessario attendere il Decreto di rinuncia per poter inviare una nuova candidatura con i medesimi servizi. Inoltre, se hai provveduto a rinunciare alla candidatura già inviata a valere dell'Avviso 1.4.3 PagoPA/AppIO Aprile 2022, sarà comunque possibile inviare una nuova candidatura a valere sull'Avviso 1.4.3 PagoPA/AppIO Settembre 2022, per servizi differenti rispetto a quelli selezionati nella precedente domanda.|
+        tag:
+          - comuni
           - altri-enti
   - title: 1.4.3 Adozione AppIO
     smallTitle: true
