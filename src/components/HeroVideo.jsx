@@ -37,6 +37,9 @@ const useStyle = createUseStyles({
       paddingBottom: '0',
     },
   },
+  videoTraslation: {
+    maxWidth: '45em',
+  },
   info: {
     display: 'flex',
     flexDirection: 'column',
@@ -81,7 +84,9 @@ export const HeroVideo = ({ src, description, videoText }) => {
               Trascrizione del video
             </AccordionHeader>
             <AccordionBody active={collapseOpen}>
-              <p dangerouslySetInnerHTML={{ __html: videoText }} />
+              <p className={classes.videoTraslation}>
+                <span dangerouslySetInnerHTML={{ __html: videoText }} />
+              </p>
             </AccordionBody>
           </Accordion>
         ) : (
