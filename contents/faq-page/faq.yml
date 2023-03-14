@@ -199,9 +199,64 @@ questions:
         id: dnsh
       - title: CUP
         id: cup
+      - title: Unioni dei Comuni
+        id: unioni_dei_comuni
     accordions:
       - title: 'È previsto un periodo di mantenimento dei servizi attivi?'
         content: "Sì, è necessario mantenere i servizi attivi per almeno 5 anni. Tale requisito, verrà verificato attraverso dei controlli a campione da parte degli organi di controllo preposti nei successivi 5 anni. Sono consentiti eventuali sviluppi migliorativi del progetto iniziale a patto che si riesca a ricostruire quanto è stato fatto attraverso apposita documentazione tecnica e amministrativa."
+      - title: |
+          Il mio Comune fa parte di un'Unione che gestisce gli sviluppi tecnologici per conto del Comune, come posso partecipare agli avvisi pubblicati su PA digitale 2026? 
+              <br /><br />
+          <table class="table table-responsive" style="border: 1px solid #5A768A">
+            <thead>
+            </thead>
+            <tbody>
+              <tr style="background-color: #F0F6FC">
+                <td></td>
+                <td>SCENARIO 1</td>
+                <td>SCENARIO 2</td>
+              </tr>
+              <tr>
+                <td>Soggetto Attuatore</td>
+                <td>Comune</td>
+                <td>Comune</td>
+              </tr>
+              <tr>
+                <td>CUP</td>
+                <td>Comune</td>
+                <td>Comune</td>
+              </tr>
+              <tr>
+                <td>Soggetto Realizzatore</td>
+                <td>Fornitori</td>
+                <td>Fornitori</td>
+              </tr>
+              <tr>
+                <td>RUP</td>
+                <td>Unione</td>
+                <td>Unione</td>
+              </tr>
+              <tr>
+                <td>RP</td>
+                <td>Comune</td>
+                <td>Comune</td>
+              </tr>
+              <tr>
+                <td>Documentazione contrattuale</td>
+                <td>Comune - Fornitore</td>
+                <td>Accordo/convenzione (Comune - Unione) +</td>
+              </tr>
+              <tr>
+                <td>Documentazione contrattuale</td>
+                <td></td>
+                <td>Contratto/i (Unione - Fornitori)</td>
+              </tr>
+            </tbody>
+          </table>
+        content: |
+          Il Soggetto Attuatore degli avvisi di PA digitale 2026 è il Comune. Sarà quindi il rappresentante legale del Comune a definire tutti i parametri del finanziamento richiesto e a firmare la candidatura.<br>Due scenari ammissibili:</br> <br>1-il Comune iscrive i fondi nel proprio bilancio e firma i contratti con gli operatori economici, L’Unione si occupa della gestione della procedura di selezione dei fornitori. </br> <br>Il Comune dovrà indicare in piattaforma, nel fascicolo di progetto:</br> <br>-quale “Soggetto Realizzatore” ciascun fornitore con cui Il Comune intrattiene un rapporto di fornitura</br> <br>-i contratti tra il Comune e  gli operatori economici</br> <br>2. Il Comune e l’Unione stabiliscono nella convenzione le modalità di trasferimento dei fondi dal Comune alla propria Unione e sulla base di ciò questa iscrive sul proprio bilancio le relative somme e provvede a selezionare e stipulare i contratti con gli operatori economici. </br> <br>Il Comune dovrà indicare in piattaforma, nel fascicolo di progetto:</br> <br>-quale “Soggetto Realizzatore”: ciascun fornitore con cui l’Unione intrattiene un rapporto di fornitura</br> <br>-la Convenzione o l’accordo tra Enti comunque denominato, con cui il Comune ha dato mandato all’Unione di provvedere all’esecuzione delle attività oggetto del finanziamento</br> <br>-insieme a questa, i contratti tra l’Unione e gli operatori economici</br> <br>In ogni caso il Comune resta Soggetto Attuatore (con tutti gli obblighi connessi) ed è tenuto a richiedere il CUP.Il Certificato di Regolare esecuzione redatto dal RUP dell’Unione dovrà essere controfirmato dal Responsabile del Procedimento del Comune.Nei rapporti tra Comune e Unione va garantita la tracciabilità dei flussi finanziari e dell’operazione  menzionando chiaramente il CUP relativo al progetto PNRR sia nell’accordo Comune-Unioni sia negli atti di affidamento.</br> 
+        tag:
+          - unioni_dei_comuni
       - title: Sono previsti controlli sull'avanzamento del progetto?
         content: Oltre ai controlli relativi all'asseverazione, il Dipartimento si riserva il diritto di esercitare, in ogni tempo, con le modalità che riterrà opportune, verifiche e controlli a campione sull'avanzamento finanziario, procedurale e fisico del progetto, sul rispetto degli obblighi previsti dalla normativa vigente, e dal presente Avviso nonché sulla veridicità delle dichiarazioni e informazioni prodotte dal Soggetto Attuatore. In caso di verifica, in sede di controllo, del mancato pieno rispetto della disciplina nazionale ed europea, anche se non penalmente rilevanti, il Dipartimento procederà alla revoca totale del contributo e al recupero delle eventuali somme già erogate, fatte salve le disposizioni di cui all’art. 20 del presente Avviso.
       - title: Nell'ambito delle misure 1.3 e 1.4, è previsto il rispetto del principio DNSH per i fornitori?
@@ -291,7 +346,33 @@ questions:
         tag:
           - dnsh
       - title: Nell'ambito della misura 1.2 è previsto il rispetto del principio DNSH per il CSP?
-        content: Il Cloud Service Provider deve necessariamente rispettare il principio del DNSH, come disposto dall'Allegato 4 dell'Avviso riferito alla misura 1.2.
+        content: |
+          Il Cloud Service Provider deve necessariamente rispettare il principio del DNSH, come disposto dall'Allegato 4 dell'Avviso riferito alla misura 1.2.
+        tag:
+          - dnsh
+      - title: Quando deve essere compilata la scheda 3 dell'allegato 4?
+        content: |
+          La scheda 3 riguardante i casi di acquisto, leasing, noleggio di computer e apparecchiature elettriche ed elettroniche, rispetto all'oggetto di finanziamento della misura 1.2, non è applicabile in contesti di migrazione verso infrastrutture già esistenti. Deve essere compilata in tutti gli altri casi.
+        tag:
+          - dnsh
+      - title: Come viene rispettata la conformità alla scheda 6 (servizi informatici di hosting cloud)?
+        content: |
+          Ai fini della conformità alla scheda 6 è necessario rientrare in uno dei quattro scenari presenti nella slide 8 presente dall'Allegato 4 dell'Avviso riferito alla misura 1.2.
+        tag:
+          - dnsh
+      - title: Come viene rispettata la conformità alla scheda 8 (data center)?
+        content: |
+          Ai fini della conformità alla scheda 8 è necessario rientrare in uno dei quattro scenari presenti nella slide 8 presente dall'Allegato 4 dell'Avviso riferito alla misura 1.2.
+        tag:
+          - dnsh
+      - title: Per quanto concerne lo scenario 1 quali sono i requisiti fondamentali?
+        content: |
+          In merito allo scenario 1, è sufficiente uno fra le seguenti i requisiti: Registrazione Emas o UNI EN ISO 14001. Rispetto alla versione precedente dell'allegato non è più quindi richiesto e sufficiente il CLC/TR 50600-99-1 e il Code of Conduct for energy efficiency of data centers.
+        tag:
+          - dnsh
+      - title: Cosa si intende per verifiche ex-post delle schede 6 e 8?
+        content: |
+          I quesiti ex-post delle schede 6 ed 8 rappresentano l'impegno del fornitore di servizi cloud a continuare ad aderire, negli anni a venire, agli standard europei in materia di impatto ambientale. Sono previsti a riguardo degli audit triennali condotti da organismi indipendenti.
         tag:
           - dnsh
   - title: Supporto tecnico
@@ -378,12 +459,22 @@ questions:
         content: Le amministrazioni devono trasmettere i piani di migrazione entro il 28 febbraio 2023.
       - title: Entro quando occorre completare le attività previste dal piano di migrazione?
         content: Le amministrazioni sono tenute a completare le attività previste dal piano di migrazione entro il 30 giugno 2026. Per ottenere i finanziamenti PNRR è comunque necessario attenersi alle scadenze specificate nei relativi avvisi.
-      - title: È già possibile inviare il piano di migrazione anche per gli enti che si candidano all'Avviso 1.1?	
-        content: In attesa dell'attivazione della sezione "Cloud" nell'area riservata di PA digitale 2026, le amministrazioni che richiederanno l'adesione all’investimento 1.1 potranno inviare i piani di migrazione entro il 28/02/2023 via PEC - ove previsto dal relativo avviso pubblico e all'indirizzo ivi indicato. 
       - title: |
             Nel Piano di migrazione devo inserire solo i servizi che non ho ancora migrato o anche quelli già migrati in passato?
         content: |
-              L'Ente deve indicare tutti i servizi da migrare alla data di presentazione del piano di migrazione, nel rispetto dell'obbligo indicato all'articolo 33-septies. Se alla data di presentazione del piano di migrazione e in base alla classificazione dei dati e servizi effettuata, l'amministrazione dovesse riscontrare di non dover migrare alcuni dati e servizi - in quanto già migrati precedentemente verso il PSN o data center adeguati / soluzioni cloud qualificate in base ai requisiti del Regolamento Cloud AGID del 15 dicembre 2021, della Determina 307 ACN del 18 gennaio 2022 e a quanto previsto dal Decreto ACN del 2 gennaio 2023 - tali dati e servizi non dovranno essere inseriti nel piano di migrazione.
+              L'Ente deve indicare tutti i servizi da migrare alla data di presentazione del piano di migrazione, nel rispetto dell'obbligo indicato all'articolo 33-septies DL 179/2012.. Se alla data di presentazione del piano di migrazione e in base alla classificazione dei dati e servizi effettuata, l'amministrazione dovesse riscontrare di non dover migrare alcuni dati e servizi - in quanto già migrati precedentemente verso il PSN o data center adeguati / soluzioni cloud qualificate in base ai requisiti del Regolamento Cloud AGID del 15 dicembre 2021, della Determina 307 ACN del 18 gennaio 2022 e a quanto previsto dal Decreto ACN del 2 gennaio 2023 - tali dati e servizi non dovranno essere inseriti nel piano di migrazione.
+      - title: |
+            Ho inviato una candidatura a valere sull'Avviso 1.2 che si trova attualmente in stato "Accettata". Risulta tuttavia inibita la compilazione del piano di migrazione: come posso procedere?
+        content: |
+            Per potere inviare un piano di migrazione a seguito dell'invio di una candidatura a valere sull'Avviso 1.2, è necessario attendere la PEC di emissione del Decreto di finanziamento.
+      - title: |
+            Come posso compilare il piano di migrazione?
+        content: |
+             Gli enti dovranno inviare i piani di migrazione esclusivamente attraverso PA digitale 2026, non sono previste ulteriori modalità di invio.
+      - title: |
+            I dati relativi alla PA sul piano di migrazione non sono corretti: come posso modificarli?
+        content: |
+            Se si riscontrano inesattezze nella visualizzazione dei dati della PA, è necessario modificarli su IPA (<a href="https://indicepa.gov.it/ipa-portale/">https://indicepa.gov.it/ipa-portale/</a>). A seguito dell'aggiornamento dei dati dell'ente (per esempio quelli del rappresentate legale), sarà possibile procedere correttamente all'invio del piano di migrazione attraverso la sezione "Cloud", presente nell'area riservata della piattaforma.            
   - title: 1.2 Abilitazione e facilitazione migrazione al Cloud
     sectionTitle: Misure
     description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
@@ -645,6 +736,8 @@ questions:
       - chipsId: measure-1-3-1
       - title: Comuni
         id: comuni
+      - title: Regioni
+        id: regioni
     accordions:
       - title: Come viene calcolato l'importo forfettario previsto dall'Avviso “PIATTAFORMA DIGITALE NAZIONALE DATI”della Misura 1.3.1?
         content: L’importo del finanziamento concedibile ai Soggetti Attuatori di cui all’art. 5 è individuato, ai sensi dell’art. 53 par. 1. Lett. c) del Reg. UE 1060/2021, in un importo forfettario (Lump sum) determinato in funzione della classe di popolazione residente di riferimento del medesimo Soggetto Attuatore. La classe di popolazione residente di appartenenza del singolo Soggetto Attuatore è determinata sulla base di quanto al dato ISTAT 2021 calcolato sulla popolazione residente al 1 gennaio 2022, come definito alla pagina <a href="http://dati.istat.it/Index.aspx?DataSetCode=DCIS_POPRES1" target="_blank">http://dati.istat.it/Index.aspx?DataSetCode=DCIS_POPRES1</a> (maggio 2022).
@@ -655,7 +748,7 @@ questions:
         tag:
           - comuni
       - title: Entro quando è possibile inoltrare la domanda di accesso al finanziamento?
-        content: La domanda di partecipazione può essere presentata a partire dalla data di pubblicazione dell'Avviso fino ad esaurimento delle risorse disponibili, e comunque non oltre le ore 23:59 del 17 febbraio 2023.
+        content: La domanda di partecipazione può essere presentata a partire dalla data di pubblicazione dell'Avviso fino ad esaurimento delle risorse disponibili, e comunque non oltre le ore 23:59 del 19 maggio 2023.
         tag:
           - comuni
       - title: Quante API è necessario erogare?
@@ -686,6 +779,98 @@ questions:
         content: Le attività dovranno essere eseguite entro e non oltre 6 mesi (180 giorni) a partire dalla data di pubblicazione del decreto di finanziamento di cui art. 10, comma 5, dell’avviso.
         tag:
           - comuni
+      - title: Chi sono i Soggetti Attuatori dell'Avviso?
+        content: Sono invitati a presentare proposte a valere sull' Avviso le Regioni e le Province autonome di Trento e Bolzano.
+        tag:
+          - regioni
+      - title: In fase di candidatura, è necessario indicare i dettagli delle API che si intende realizzare?
+        content: Nella candidatura non occorre presentare un elenco dettagliato delle API, ma solo la numerosità delle API da erogare.
+        tag:
+          - regioni
+      - title: Entro quando è possibile presentare candidatura?
+        content: È possibile presentare candidatura fino ad esaurimento delle risorse disponibili, e comunque non oltre le ore 23:59 del 30 giugno 2023.
+        tag:
+          - regioni
+      - title: Qual è lo schema di rendicontazione del progetto, per attività, per API?
+        content: |
+          La rendicontazione è calcolata sulla numerosità delle API come indicato nel bando. Come disposto dal punto E dell’Allegato 2 dell’Avviso: "L’importo del contributo, in forma forfettaria, sarà riconosciuto al Soggetto Attuatore solo a seguito del conseguimento del risultato atteso, così come dettagliato nei paragrafi C e D."
+        tag:
+          - regioni
+      - title: Quante API è necessario erogare?
+        content: |
+          Per l’erogazione del contributo la Regione dovrà scegliere un “pacchetto” di API da implementare, ognuno dei quali prevede un numero di API che la Regione dovrà attivare in erogazione. Ogni Regione potrà scegliere uno dei 3 pacchetti proposti, ovvero: <br> - Pacchetto "S": n. 10 API; <br> - Pacchetto "M": n. 20 API; <br> - Pacchetto "L": n. 30 API.        
+        tag:
+          - regioni
+      - title: Qual è l'importo riconosciuto per le attività previste dall'Avviso riferito alla Misura 1.3.1 - Regioni e Province Autonome?
+        content: |
+          Gli importi del contributo, riconosciuti sulla base della dimensione del pacchetto scelto, sono così definiti:<br> - Pacchetto "S": n. 10 API è riconosciuto un importo di € 791.292,00;<br> - Pacchetto "M": n. 20 API è riconosciuto un importo di € 1.582.584,00;<br> - Pacchetto "L": n. 30 API è riconosciuto un importo di € 2.373.876,00.
+        tag:
+          - regioni
+      - title: È possibile rimodulare le tempistiche del progetto o il cambio di obiettivo (pacchetto) sulla base di motivazioni?
+        content: |
+          In merito al cambio di obiettivo (pacchetto) una volta scelto il pacchetto non è modificabile.  Per le variazioni al progetto fa fede l’art 14. dell’avviso, in particolare il comma 3:  "Le variazioni proposte dal Soggetto Attuatore potranno riguardare solo il cronoprogramma dell’intervento, fatte salve le scadenze previste per il conseguimento dei milestone e target associati all’investimento."
+        tag:
+          - regioni 
+      - title: In caso di due enti co-titolari (es la Regione ed una Azienda sanitaria), se entrambi espongono API, quale ente è il beneficiario del finanziamento?
+        content: |
+          Il finanziamento è riconosciuto per l’esposizione del servizio e non per la proprietà dello stesso. Nel caso di enti co-titolari si auspica un coordinamento degli stessi, anche al fine di evitare il rischio di doppio finanziamento.
+        tag:
+          - regioni 
+      - title: È possibile, in ambiente di Test, disporre di una API funzionante (PDND compliant) per poter effettuare prove tecniche di interoperabilità?
+        content: |
+          La PDND mette a disposizione 2 ambienti: test e produzione. La firma dell’accordo di adesione con PagoPA permetterà agli Enti di accedere ad entrambi gli ambienti. In ambiente di test ogni Ente sarà libero di pubblicare un e-service a puro scopo di test. Inoltre, per permettere un flusso completo di test e verifica, ogni erogatore può essere fruitore di se stesso. Quindi, una volta pubblicato un e-service, l’Ente può effettuare a se stesso una richiesta di fruizione e iniziare a scambiare dati in loop utilizzando il token PDND. Pur essendo un ambiente controllato, si consiglia di usare nell’ambiente di test solamente dati fittizi o sintetici.
+        tag:
+          - regioni 
+      - title: È prevista la redazione di particolare documentazione tecnica a corredo per ogni API?
+        content: |
+          Come da Modello Interoperabilità, è necessario produrre la seguente documentazione: <br> - documentazione yaml/json OpenAPI3 per REST oppure WSDL per SOAP. <br> - riferimenti alla semantica utilizzata (come da LLG Interoperabilità Tecnica §4.3).Per API di tipo REST OpenAPI3 il Dipartimento mette a disposizione un tool di verifica sintattica a questo link: <a target="_blank" href="https://italia.github.io/api-oas-checker/">https://italia.github.io/api-oas-checker/</a>'  E’ consigliabile inserire un documento allegato con indicazioni o configurazioni aggiuntive o ulteriori layer di sicurezza necessari allo scambio extra-PDND.
+        tag:
+          - regioni
+      - title: Sono erogabili Open Data? E se sì, ci sono standard o formalismi da rispettare? Potrebbero sorgere problematiche di gestione dell’audience di fruizione e dei rate-limits?
+        content: |
+          Possono essere pubblicate API su PDND con open data di dati dinamici e dati ad alto valore ma non dataset statici (In corso di pubblicazione linee guida AGID sul tema). Al momento possono essere esposte solo API per cui è previsto lo stacco di un token, dunque API con caratteristiche particolari (es SLA garantiti). Da fine 2023 l’uso del token sarà reso opzionale. Dal momento che, come noto, PDND non interviene nel flusso dati, è possibile che un'API pubblicata su PDND possa essere anche contattata in modo esterno senza l'utilizzo del token.
+        tag:
+          - regioni 
+      - title: Entro quanto tempo dovrà essere contrattualizzato il fornitore?
+        content: |
+          Il fornitore dovà essere contrattualizzato al massimo entro 6 mesi (180 giorni) dalla data di notifica del decreto di finanziamento.
+        tag:
+          - regioni 
+      - title: Entro quanto tempo devono essere completate le attività oggetto di finanziamento?
+        content: |
+          Le attività dovranno essere eseguite entro e non oltre 12 mesi (365 giorni) a partire dalla data di pubblicazione del decreto di finanziamento
+        tag:
+          - regioni 
+      - title: Quanti endpoint/operations è consigliabile realizzare?
+        content: |
+          Come raccomandazione si suggerisce di realizzare un numero medio di endpoint (per REST API) /operations (per SOAP API) pari almeno a 10.
+        tag:
+          - regioni 
+      - title: È possibile accedere al finanziamento in caso di realizzazione del progetto prima della pubblicazione dell'Avviso?
+        content: |
+          Ai fini dell’ammissibilità della domanda di partecipazione, ai sensi dell’art. 7 lett. b dell’avviso: “le attività di cui al finanziamento richiesto con il progetto devono essere avviate a decorrere dalla pubblicazione del presente Avviso pubblico”.
+        tag:
+          - regioni 
+      - title: Secondo quali modalità possono essere erogate le API?
+        content: |
+          In conformità alle Linee Guida sull’interoperabilità tecnica delle Pubbliche Amministrazioni le API potranno essere erogate in due modalità:<br> - HTTP REST (preferibile per nuovi servizi) <br> - SOAP
+        tag:
+          - regioni 
+      - title: Come deve essere erogata un'API REST?
+        content: |
+          Una REST API dovrà essere pubblicata attraverso un descrittore OpenAPI 3 che dovrà contenere il dettaglio di tutti gli endpoint che lo compongono. Per ogni endpoint andranno indicati tutti gli HTTP methods implementati. Il formato del descrittore dovrà essere JSON o YAML.
+        tag:
+          - regioni 
+      - title: Come deve essere erogata un'API SOAP?
+        content: |
+         Una SOAP API dovrà essere pubblicata attraverso un descrittore WSDL che dovrà contenere il dettaglio di tutte le operation implementate. Nel caso di sviluppo di nuovi servizi è fortemente consigliato l’utilizzo della tecnologia API REST.
+        tag:
+          - regioni
+      - title: Come si realizza il processo di onboarding?
+        content: |
+         Le attività da porre in essere per l’erogazione di API da parte della Regione su PDND sono le seguenti:<br> - Completamento della procedura di adesione sul portale Self Care messo a disposizione da PagoPA S.p.A. o altra modalità individuata dalla PagoPA S.p.A.:<br> i. Selezione dell’ente per cui si intende aderire;<br> ii. Indicazione del Rappresentante Legale e dei Referenti amministrativo e tecnico;<br> - Firma digitale dell’accordo di adesione da parte del rappresentante legale: l’accordo viene inviato sulla PEC dell’Ente presente in IPA a valle della procedura svolta per l’adesione;<br> - Caricamento dell’accordo di adesione firmato al link di conferma ricevuto nella stessa.
+         tag:
+          - regioni 
   - title: 1.4.1 Esperienza del Cittadino nei servizi pubblici
     description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
     sectionId: measure-1-4-1
@@ -753,6 +938,10 @@ questions:
         content: L’importo del finanziamento, riconosciuto per il rifacimento del sito web istituzionale è pari a 7.301 euro Iva inclusa. L’importo del finanziamento sarà riconosciuto al Soggetto Attuatore solo a seguito del conseguimento del risultato atteso.
         tag:
           - scuole
+      - title: In relazione al criterio C.SE.1.1 - Accedere al servizio / identità digitale relativa alla Conformità ai servizi digitali è obbligatorio implementare il SSO per garantire la navigazione "autenticata" tra i vari servizi digitali implementati?
+        content: Il criterio C.SE.1.1 riporta che l’utente può accedere tramite identità digitale a tutti i servizi erogati digitalmente; è possibile effettuare l’accesso ai servizi digitali direttamente dalle schede servizio corrispondenti e se l’utente effettua l’accesso a partire da una specifica scheda servizio, dopo l’autenticazione deve trovarsi direttamente all’interno del flusso di quel servizio digitale. Il Single Sign-On (SSO) - ovvero la possibilità per un utente autenticato in un servizio di accedere a un altro servizio offerto dallo stesso ente o alla propria area personale senza dover effettuare una nuova autenticazione - è fortemente raccomandato per garantire una continuità di usabilità e accessibilità per il cittadino. Per l’implementazione della parte tecnica, l’Avviso SPID numero 3 di AGID definisce la “sessione individuale” il cui scopo è quello di rendere autonomi i fornitori di servizio nella gestione delle proprie sessioni, create a seguito di un’autenticazione SPID. La sessione individuale gestita all’interno di un sistema IAM Proxy o Aggregatore Full, consente di realizzare un sistema SSO autonomo. Tale implementazione non è finanziabile ai sensi del presente avviso, ma può essere attuata con i finanziamenti dalla misura 1.4.4 "Estensione dell'utilizzo delle piattaforme nazionali di Identità Nazionale SPID CIE”. Infatti, la soluzione perimetrale raccomandata all’interno dell’Avviso, sia questa IAM Proxy o Soggetto Aggregatore di tipo Full, consente ad una PA, o a più PA aggregate al di sotto dello stesso soggetto aggregatore, di un realizzare un sistema di SSO.
+        tag:
+          - comuni
   - title: 1.4.3 Adozione PagoPA
     smallTitle: true
     description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
@@ -828,6 +1017,19 @@ questions:
         content: L'integrazione di un servizio PagoPa non si esaurisce con la mera integrazione tecnica tra gli applicativi dell'Ente e il gateway dei pagamenti di PagoPA. All'Ente è richiesto anche che:<br>- l'incasso dei servizi venga correttamente riconciliato nel bilancio (tramite opportune integrazioni con i software gestionali) secondo quanto richiesto dalle norme tributarie specificatamente al codice tassonomico del servizio incassato; <br>- i cittadini siano correttamente informati della nuova opportunità di pagamento in tutti i punti di contatto.<br>L'obiettivo finale è quello di aiutare il Paese nella transizione digitale contribuendo alla realizzazione di un’amministrazione che offra servizi sempre più digitali e facilmente utilizzabili dai cittadini.
         tag:
           - altri-enti
+      - title: |
+          Ho rinunciato ad una candidatura 1.4.3 al fine di sottometterne una nuova con i medesimi servizi: quando potrò inviare la nuova domanda?
+        content: A seguito di rinuncia ad una candidatura già inviata a valere sull'Avviso 1.4.3 PagoPA/AppIO, è necessario attendere il Decreto di rinuncia per poter inviare una nuova candidatura con i medesimi servizi. Inoltre, se hai provveduto a rinunciare alla candidatura già inviata a valere dell'Avviso 1.4.3 PagoPA/AppIO Aprile 2022, sarà comunque possibile inviare una nuova candidatura a valere sull'Avviso 1.4.3 PagoPA/AppIO Settembre 2022, per servizi differenti rispetto a quelli selezionati nella precedente domanda.|
+        tag:
+          - comuni
+          - altri-enti
+      - title: |
+          Ho rilevato date non corrette relative all'attivazione di servizi 1.4.3, come posso verificare?
+        content: |
+          In caso di difformità rilevate rispetto a quanto indicato in piattaforma, e in merito allo stato di attivazione dei servizi PagoPA /AppIO, ovvero data di attivazione, codice tassonomico (PagoPA), ID servizio (AppIO), ti invitiamo a contattare preliminarmente il tuo fornitore. Si precisa che la piattaforma PA digitale 2026 pre-carica i dati dell’amministrazione presenti nella banca dati PagoPA /AppIO, pertanto l’Ente - in autonomia o per il tramite del proprio fornitore - sarà in grado di conoscere le date di attivazione e di selezionare i servizi corretti in fase di candidatura. Per data di attivazione dei servizi pagoPA si intende la data della prima transazione positiva avvenuta con il corretto codice tassonomico. Per i servizi di nuova attivazione, per visualizzare la data di attivazione occorrerà attendere circa 15 giorni dalla prima transazione positiva, come sopra specificata, ai fini dell’aggiornamento sul PA digitale 2026.
+        tag:
+          - comuni
+          - altri-enti
   - title: 1.4.3 Adozione AppIO
     smallTitle: true
     description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
@@ -872,7 +1074,8 @@ questions:
         tag:
           - altri-enti
       - title: È possibile accedere al finanziamento in caso di realizzazione del progetto, con l'ausilio di Fondi pubblici, prima della pubblicazione dell'Avviso "Adozione appIO" della Misura 1.4.3?
-        content: No, non è possibile accedere al finanziamento previsto dall'Avviso riferito alla Misura 1.4.3 nel caso in cui l'attivazione degli stessi servizi digitali (appIO) sia stata realizzata con altri finanziamenti pubblici, nazionali, regionali o europei, secondo quanto previsto dall'art. 7 dell'Avviso. Può essere invece finanziata l'attivazione di nuovi servizi, non inclusi nel precedente finanziamento.
+        content: |
+          No, non è possibile accedere al finanziamento previsto dall'Avviso riferito alla Misura 1.4.3 nel caso in cui l'attivazione degli stessi servizi digitali (appIO) sia stata realizzata con altri finanziamenti pubblici, nazionali, regionali o europei, secondo quanto previsto dall'art. 7 dell'Avviso. Può essere invece finanziata l'attivazione di nuovi servizi, non inclusi nel precedente finanziamento.
         tag:
           - altri-enti
       - title: Entro quando dovranno essere portate a termine le attività di migrazione e di attivazione dei servizi?
@@ -881,6 +1084,10 @@ questions:
           - altri-enti
       - title: Quando il processo di migrazione e attivazione dei servizi si intende concluso con esito positivo per i servizi attivati sull’appIO?
         content: Il processo si riterrà concluso con esito positivo quando le richieste di pubblicazione saranno approvate dalla pagoPA S.p.A  e tutti i servizi saranno visibili in App.
+        tag:
+          - altri-enti
+      - title: Ho rinunciato ad una candidatura 1.4.3 al fine di sottometterne una nuova con i medesimi servizi; quando potrò inviare la nuova domanda?
+        content: A seguito di rinuncia ad una candidatura già inviata a valere sull'Avviso 1.4.3 PagoPA/AppIO, è necessario attendere il Decreto di rinuncia per poter inviare una nuova candidatura con i medesimi servizi. Inoltre, se hai provveduto a rinunciare alla candidatura già inviata a valere dell'Avviso 1.4.3 PagoPA/AppIO Aprile 2022, sarà comunque possibile inviare una nuova candidatura a valere sull'Avviso 1.4.3 PagoPA/AppIO Settembre 2022, per servizi differenti rispetto a quelli selezionati nella precedente domanda.
         tag:
           - altri-enti
   - title: 1.4.4 Adozione identità digitale
