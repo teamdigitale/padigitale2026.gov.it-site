@@ -131,41 +131,41 @@ opportunity:
 heroCarouselNews:
   - id: 1
     category: Novità
+    title: "Dal Pnrr 200 milioni per migrare in cloud dati e servizi di Asl e Aziende Ospedaliere"
+    description: "È possibile richiedere i fondi sulla piattaforma “PA digitale 2026"
+    source: 'innovazione.gov.it'
+    linkTo: 'https://innovazione.gov.it/notizie/articoli/dal-pnrr-200-milioni-per-migrare-in-cloud-dati-e-servizi-di-asl-e-ao/'
+  - id: 2
+    category: Novità
     title: "Aggiornate le Linee guida per le PA locali - Marzo 2023"
     description: "Pubblicate le specifiche per PDND, e aggiornate le indicazioni per cloud, siti/servizi, pagoPA/app IO e identità digitale"
     source: 'innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/articoli/pa-digitale-2026-aggiornate-le-linee-guida-per-le-pa-locali/'
-  - id: 2
+  - id: 3
     category: Novità
     title: "Come vengono normate le variazioni di progetto"
     description: "Da inizio aprile si potrà modificare il contenuto della propria candidatura in caso di impossibilità dovuta ad aggiornamenti tecnici o sopravvenienza normativa"
     source: 'innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/articoli/pa-digitale-2026-come-vengono-normate-le-variazioni-di-progetto/'
-  - id: 3
+  - id: 4
     category: Nuovo Avviso
     title: "Dal PNRR oltre 373 milioni per migrare dati e servizi al Polo Strategico Nazionale"
     description: "Pubblicato l’Avviso cloud che permette ad una platea di amministrazioni pilota di migrare i propri sistemi informativi"
     source: 'innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/articoli/digitale-dal-pnrr-oltre-373-milioni-per-migrare-dati-e-servizi-al-psn/'
-  - id: 4
+  - id: 5
     category: Linee guida di asseverazione
     title: "Migrazione al cloud: aggiornate linee guida di asseverazione"
     description: "Chiarimento: in fase di verifica valutate positivamente le migrazioni realizzate in modalità B - Aggiornamento anziché A - Trasferimento"
     source: 'innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/articoli/pa-digitale-2026-migrazione-al-cloud-aggiornate-linee-guida-di-asseverazione/'
-  - id: 5
+  - id: 6
     type: internal
     category: Novità 
     title: Fornitori Avvisi Cloud per Comuni e Scuole
     description: "Il termine per l’attivazione dei contratti con i fornitori, sia per gli Avvisi Comuni che Scuole, è differito di tre mesi rispetto all’originario termine previsto negli Avvisi."
     source: 'Decreto (Scarica PDF)'
     linkTo: 'https://areariservata.padigitale2026.gov.it/sfc/servlet.shepherd/document/download/0697Q0000065NQsQAM?operationContext=S1'
-  - id: 6
-    category: Nuovo Avviso
-    title: "Migrazione al Cloud, al via l'Avviso per le Aziende sanitarie locali e Aziende Ospedaliere"
-    description: "Trentacinque milioni di euro messi a disposizione dal Dipartimento per la trasformazione digitale grazie alle risorse del PNRR"
-    source: 'innovazione.gov.it'
-    linkTo: 'https://innovazione.gov.it/notizie/articoli/migrazione-al-cloud-al-via-l-avviso-per-le-aziende-sanitarie-locali-e-aziende-osp/'
 support:
   tag: Supporto
   title: Consulta le domande frequenti o scrivici per ricevere assistenza
