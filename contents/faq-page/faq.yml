@@ -736,6 +736,13 @@ questions:
         content: Il fornitore deve essere contrattualizzato entro 9 mesi dalla data di notifica del Decreto di finanziamento.
         tag:
           - Asl/AO
+      - title: Dove posso reperire i servizi cloud qualificati?
+        content: |
+          Dal 19 gennaio 2023 la qualificazione dei servizi cloud per la Pubblica Amministrazione diventa di competenza di ACN (Agenzia per la cybersicurezza nazionale), che subentra ad AGID. Puoi consultare l'elenco dei servizi e relativi fornitori al seguente link: https://catalogocloud.acn.gov.it/
+        tag:
+          - Asl/AO
+          - scuole
+          - comuni
   - title: 1.3.1 
     description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
     sectionId: measure-1-3-1
