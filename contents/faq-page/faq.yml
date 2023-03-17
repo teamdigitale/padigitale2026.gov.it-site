@@ -289,10 +289,10 @@ questions:
         content: Nel caso della presenza di un fornitore in house è sufficiente inserire solo il contratto con quest'ultimo. Resta inteso che, qualora siano presenti ulteriori fornitori, basterà compilare l'anagrafica di ognuno attraverso la funzione "Aggiungi subappaltatore".
         tag:
           - fornitori
-      - title: Qualora sia in già in corso un contratto di hosting e manutenzione del sito internet e fosse necessario effettuare un nuovo affidamento per partecipare ai bandi del PNRR, è possibile interrompere anticipatamente il contratto in essere? È possibile affidare l'incarico all'operatore uscente, derogando al principio di rotazione di cui alle linee Guida ANAC n°4?
+      - title: Qualora sia già in corso un contratto di hosting e manutenzione del sito internet e fosse necessario effettuare un nuovo affidamento per partecipare ai bandi del PNRR, è possibile interrompere anticipatamente il contratto in essere? È possibile affidare l'incarico all'operatore uscente, derogando al principio di rotazione di cui alle linee Guida ANAC n°4?
         content: È possibile far cessare anticipatamente il contratto nei casi di cui agli artt. 108 e 109 del d.lgs. 50/2016 e in altri casi di risoluzione o recesso eventualmente previsti nel contratto. L’eventuale nuovo affidamento al medesimo operatore economico dovrà essere adeguatamente motivato dalla stazione appaltante, tenendo conto che l’opportunità di partecipare ai bandi del PNRR non può costituire motivo di deroga alla normativa di riferimento e, nello specifico, al Codice dei contratti pubblici.
         tag:
-          - fornitori
+          - contratti_ordini
       - title: Come compilare i campi Soggetto Erogatore e CSP qualora l'ente abbia stipulato con il fornitore un unico contratto che preveda anche la fornitura di soluzioni SaaS certificate?
         content: Nella sezione progetti è necessario associare il contratto con il fornitore utilizzato. Nel caso fosse unico il contratto (pur utilizzando una struttura di un Cloud provider certificato diverso dal fornitore titolare del contratto) lo stesso fornitore figurerà sia come “Erogatore del servizio” sia come “Cloud Provider”. Sarà quindi necessario caricare il contratto in Piattaforma due volte. Questo è il caso in cui il contratto con il CSP sia stato stipulato con l'erogatore del servizio e non direttamente con l'ente. In caso, invece, di due contratti distinti è necessario inserirli entrambi. All'ente è richiesto di inserire in piattaforma solo i contratti con i fornitori con cui ha un rapporto diretto.
         tag:
@@ -321,11 +321,11 @@ questions:
         content: |
           È possibile caricare autonomamente in piattaforma un addendum al contratto iniziale, firmato dalle due parti (ente e fornitore) che integri le informazioni mancanti, fermo restando il rispetto delle scadenze del cronoprogramma. Qualora si volesse inserire l’addendum durante le fasi di "Completamento attività" e di “Asseverazione” sarà necessario contattare il team territoriale tramite form all’indirizzo che segue <a href="https://padigitale2026.gov.it/team-territoriali" target="_blank">https://padigitale2026.gov.it/team-territoriali</a>
         tag:
-          - fornitori  
+          - contratti_ordini  
       - title: In fase di selezione del fornitore è possibile utilizzare contratti stipulati prima dell'entrata in vigore del D.L 77/2021?
         content: Il Soggetto attuatore, in fase di selezione del fornitore, è tenuto al rispetto di tutta la normativa vigente in materia di pari opportunità e disabilità. Per i contratti stipulati prima dell’entrata in vigore del D.L 77/2021, si applica la normativa allora vigente.
         tag:
-          - fornitori  
+          - contratti_ordini  
       - title: Ho rinunciato ad una candidatura al fine di sottometterne una nuova. L'importo riconosciuto a finanziamento della nuova candidatura è differente. Posso utilizzare lo stesso CUP senza apportare modifiche?
         content: Sì, ti confermiamo che è possibile utilizzare lo stesso CUP anche se l'importo del finanziamento è differente rispetto alla candidatura precedente, a condizione che il CUP sia generato con il corretto template e a meno di rilevanti variazioni del corredo informativo che richiedono la revoca e la generazione di un nuovo CUP.
         tag:
@@ -620,7 +620,8 @@ questions:
         link: 'https://docs.italia.it/italia/cloud-italia/strategia-cloud-italia-docs/it/stabile/4_la_strategia_cloud_per_la_pubblica_amministrazione.html#la-classificazione-dei-dati-e-dei-servizi'
         ariaLabel: Vedi ulteriori informazioni sulla classificazione dei dati e dei servizi gestiti dalle PA (Collegamento esterno - Apre su nuova scheda)
       - title: Come avviene l'acquisizione di servizi cloud qualificati?
-        content: I fornitori cloud che intendono erogare servizi Infrastructure as a Service (IaaS), Platform as a Service (PaaS) e Software as a Service (SaaS) destinati alle pubbliche amministrazioni devono ottenere, per questi servizi, la qualificazione rilasciata dall’Agenzia per l’Italia digitale (AGID), utilizzando la piattaforma dedicata alla qualificazione dei cloud service provider e dei servizi cloud.
+        content: |
+          I fornitori cloud che intendono erogare servizi Infrastructure as a Service (IaaS), Platform as a Service (PaaS) e Software as a Service (SaaS) destinati alle pubbliche amministrazioni devono ottenere, per questi servizi, la qualificazione rilasciata dall’Agenzia per l’Italia digitale (AGID), utilizzando la piattaforma dedicata alla qualificazione dei cloud service provider e dei servizi cloud. Ti informiamo inoltre che dal 19 gennaio 2023 la qualificazione dei servizi cloud per la Pubblica Amministrazione diventa di competenza di ACN (Agenzia per la cybersicurezza nazionale), che subentra ad AGID. Ti invitiamo a prendere nota delle variazioni e aggiornamenti in materia al link: https://www.acn.gov.it/agenzia/cloud-pa
         tag:
           - comuni
         linkLabel: Ulteriori informazioni sono disponibili al seguente link
