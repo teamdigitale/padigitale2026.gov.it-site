@@ -37,6 +37,8 @@ sidebar:
     sectionActive: false
     accordion: true
     sublist:
+      - sectionTitle: 1.1
+        sectionId: measure-1-1
       - sectionTitle: 1.2
         sectionId: measure-1-2
         sectionActive: false
@@ -489,10 +491,11 @@ questions:
         content: |
             Se si riscontrano inesattezze nella visualizzazione dei dati della PA, è necessario modificarli su IPA (<a href="https://indicepa.gov.it/ipa-portale/">https://indicepa.gov.it/ipa-portale/</a>). A seguito dell'aggiornamento dei dati dell'ente (per esempio quelli del rappresentate legale), sarà possibile procedere correttamente all'invio del piano di migrazione attraverso la sezione "Cloud", presente nell'area riservata della piattaforma.            
   - title: 1.1 Infrastrutture digitali
-    smallTitle: true
+    sectionTitle: Misure
     description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
     sectionId: measure-1-1
     chips:
+      - chipsId: measure-1-1
       - title: Generale
         id: generale
     accordions:
