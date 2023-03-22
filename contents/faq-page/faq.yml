@@ -488,6 +488,159 @@ questions:
             I dati relativi alla PA sul piano di migrazione non sono corretti: come posso modificarli?
         content: |
             Se si riscontrano inesattezze nella visualizzazione dei dati della PA, è necessario modificarli su IPA (<a href="https://indicepa.gov.it/ipa-portale/">https://indicepa.gov.it/ipa-portale/</a>). A seguito dell'aggiornamento dei dati dell'ente (per esempio quelli del rappresentate legale), sarà possibile procedere correttamente all'invio del piano di migrazione attraverso la sezione "Cloud", presente nell'area riservata della piattaforma.            
+  - title: 1.1 Infrastrutture digitali
+    smallTitle: true
+    description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
+    sectionId: measure-1-1
+    chips:
+      - title: Generale
+        id: generale
+    accordions:
+      - title: Esiste una lista cogente di PA che possano richiedere l’esenzione di cui al comma 4-quater dell’articolo 33-septies DL 179/2012? Tale esenzione deve considerarsi "totale" a tutte le funzioni svolte dall'amministrazione o può altresì considerarsi relativa limitatamente alle singole funzioni richiamate all'articolo 2, comma 6, del decreto legislativo 7 marzo 2005, n. 82? 
+        content: |
+          Ai sensi dell’articolo 33-septies, comma 4-quater del D.L. n. 179/2012 gli obblighi di migrazione previsti ai commi precedenti non si applicano alle amministrazioni che svolgono le funzioni di cui all'articolo 2, comma 6, del decreto legislativo 7 marzo 2005, n. 82. L'articolo 2, comma 6, del decreto legislativo 7 marzo 2005, n. 82 prevede che le disposizioni del Codice non si applicano limitatamente all'esercizio delle attività e funzioni di ordine e sicurezza pubblica, difesa e sicurezza nazionale, polizia giudiziaria e polizia economico-finanziaria e consultazioni elettorali, nonché alle comunicazioni di emergenza e di allerta in ambito di protezione civile. (…). <br> 1. Con riferimento al primo quesito, non è rinvenibile nell’ordinamento giuridico un elenco di amministrazioni pubbliche che esercitano le funzioni di cui all’articolo 2, comma 6, del decreto legislativo 7 marzo 2005, n. 82. Pertanto, le amministrazioni esonerate dall’obbligo di migrazione in quanto destinatarie della disposizione di carattere derogatorio di cui all’art. 33-septies, comma 4-quater del D.L. 18/10/2012, n. 179, dovranno essere individuate, in concreto, tra quelle oggetto di ricognizione ad opera dell’ISTAT ai sensi dell'articolo 1, comma 3 della legge 31 dicembre 2009, n. 196 e successive modificazioni. (Legge di contabilità e di finanza pubblica) che esercitano le attività e funzioni di cui al predetto articolo 2, comma 6, del decreto legislativo 7 marzo 2005, n. 82. Per completezza si rappresenta che le disposizioni sugli obblighi di migrazione si applicano, altresì, all’amministrazione della difesa nel rispetto della disciplina e dei limiti posti dal comma 4-bis dell’art. 33-septies del DL 179/2012. <br> 2. In merito al secondo quesito, stante il carattere eccezionale della previsione derogatoria di cui all’articolo, comma 4-quater 33-septies DL 179/2012, allorché le amministrazioni pubbliche, come innanzi individuate, esercitino una pluralità di funzioni eterogenee, l’esenzione dagli obblighi di migrazione è limitata alle sole attività e funzioni riconducibili nel novero di quelle espressamente indicate nell’articolo 2, comma 6, del decreto legislativo 7 marzo 2005, n. 82.
+        tag:
+          - generale
+      - title: Quali enti della PA possono presentare domanda per accedere al finanziamento dall'Avviso 1.1?
+        content: |
+          I Soggetti attuatori, ovvero coloro che possono accedere allo strumento predisposto dall'Avviso, le Amministrazioni Centrali, che assumeranno il ruolo di Soggetti attuatori di cui all’art. 9 del DL 77/2021 convertito con L.108/2021, riportate all'interno dell'Art. 4 dell'Avviso 1.1, di cui alla tabella all'art. 4 comma 1 dell'Avviso. Ciascuna articolazione organizzativa di primo livello (Direzioni generali/Dipartimento/Comandi) di un’Amministrazione Centrale di cui al precedente comma 1 può presentare una sola domanda di partecipazione, a valere sul presente Avviso, fermo restando l’importo massimo per ciascuna Amministrazione Centrale. 
+        tag:
+          - generale
+      - title: Quali sono gli interventi finanziabili dall'Avviso 1.1?
+        content: |
+          Gli interventi finanziabili sono rappresentati dal perfezionamento della migrazione dei servizi del Soggetto attuatore al PSN e il canone per la gestione e l’erogazione di ciascun servizio per i dodici mesi successivi all’attivazione di ciascun servizio “core” necessario alla migrazione, tra quelli previsti dalla convenzione sottoscritta tra il Soggetto attuatore e la società Polo Strategico Nazionale S.p.A. (i.e. Housing, Hosting, IaaS Private, IaaS Shared, altri servizi di IaaS e Cloud quali Platform as a Service (PaaS), Containers-as-a-Service (CaaS), Disaster Recovery per IaaS e Cloud, servizi CSP, ovvero Public cloud PSN managed, Hybrid Cloud on PSN site, Secure public cloud), come specificato anche nell’Allegato 1.
+        tag:
+          - generale
+      - title: A quanto ammonta l'importo del finanziamento previsto dall'Avviso riferito alla Misura 1.1?
+        content: |
+          L’importo massimo finanziabile per ciascuna delle PAC individuate ed in relazione a ciascuno dei cluster di appartenenza, è il seguente:<br> a. Cluster n. 1- Importo 40,5 Mln €: Ministero dell’Interno - Ministero della Difesa - Ministero dell’Economia e delle Finanze - Ministero della Giustizia - Agenzia delle Entrate;<br> b. Cluster n. 2- Importo 17,5 Mln €: Presidenza del Consiglio dei ministri - Ministero delle infrastrutture e dei trasporti (ex Ministero delle Infrastrutture e mobilità sostenibili) - Ministero dell’Università e della Ricerca - Ministero dell'istruzione e del merito (ex Ministero dell’Istruzione) - Ministero degli Affari Esteri e della Cooperazione Internazionale - Ministero del Lavoro e delle Politiche Sociali - Ministero della Salute - Agenzia delle Dogane e dei Monopoli - Agenzia delle Entrate - Riscossione;<br> c. Cluster n. 3- Importo 2,3 Mln €: Ministero della Cultura - Ministero del Turismo - Ministero delle imprese e del made in Italy (ex Ministero dello Sviluppo Economico ) - Ministero dell'ambiente e della sicurezza energetica (ex Ministero della Transizione Ecologica) - Ministero dell'agricoltura, della sovranità alimentare e delle foreste (ex Ministero delle Politiche Agricole Alimentari e Forestali) - Agenzia del Demanio.
+        tag:
+          - generale
+      - title: Può variare l'importo riconosciuto a finanziamento?
+        content: |
+          Sì, qualora il contributo complessivo richiesto da una Amministrazione Centrale, determinato in base a quanto indicato nei singoli piani di migrazione riferiti a più articolazioni (Direzioni generali/ Dipartimenti/Comandi) della medesima Amministrazione, superi i massimali previsti, il contributo per ciascun piano di migrazione sarà rimodulato in misura proporzionale entro i limiti dell’importo finanziabile per ciascun cluster di appartenenza.
+        tag:
+          - generale
+      - title: In quanto tempo devono essere concluse le attività oggetto di finanziamento?
+        content: |
+          In considerazione della necessità di raggiungere i target dell’Investimento riportati all’art.1 comma 2 dell'Avviso, tutte le attività relative alla migrazione sul PSN dovranno essere portate a termine: <br> - per progetti di importo fino a 2.500.000,00 euro entro e non oltre il 31/7/2024;<br>- per progetti di importo da 2.500.000,01 euro a 10.000.000,00 entro e non oltre il 31/1/2025;<br>- per progetti di importo da 10.000.000,01 euro entro e non oltre il 30/6/2025.
+        tag:
+          - generale
+      - title: È possibile accedere al finanziamento in caso di realizzazione delle attività, con l'ausilio di fondi pubblici,nazionali, regionali o europei prima della pubblicazione dell'Avviso riferito alla Misura 1.1?
+        content: |
+          No, il finanziamento concesso non è cumulabile con altri finanziamenti pubblici, nazionali o europei, per le stesse spese ammissibili, nel rispetto del divieto del doppio finanziamento.
+        tag:
+          - generale
+      - title: Chi deve firmare la domanda di partecipazione all'Avviso al fine di inviare correttamente la candidatura?
+        content: |
+          La domanda di partecipazione, in formato pdf, deve essere sottoscritta digitalmente dal legale rappresentante dell’Amministrazione Centrale proponente (o dal vertice dell’articolazione organizzativa che presenta domanda) o, in alternativa, da un delegato. In quest’ultimo caso, è richiesta, a pena di irricevibilità della domanda, la produzione contestuale dell’atto di delega firmato digitalmente.
+        tag:
+          - generale
+      - title: Quali documenti è necessario allegare alla domanda di partecipazione?
+        content: |
+          La documentazione necessaria da allegare alla domanda di partecipazione è la seguente: <br> a. La domanda di partecipazione deve essere compilata secondo il facsimile in Allegato 2 all'Avviso <br> b. la complessiva strategia cloud del Soggetto attuatore proponente che consente di verificare al Dipartimento per la trasformazione digitale la conformità rispetto agli obblighi di migrazione al cloud di cui all’articolo 33-septies del decreto-legge 179/2012;<br> c. il Piano di Migrazione ai sensi del Regolamento cloud e il Piano di Migrazione di massima al PSN corredato dell’importo stimato dei costi di migrazione, del canone per il primo anno e del finanziamento complessivo richiesto a valere sull'Avviso. La documentazione è redatta secondo le modalità esposte nelle Linee Guida riportate all’Allegato 1 al presente Avviso.
+        tag:
+          - generale
+      - title: Con quale modalità deve essere trasmessa la documentazione allegata alla domanda di partecipazione?
+        content: |
+          La documentazione deve essere trasmessa all’indirizzo di Posta Elettronica Certificata (PEC) dtd.pnrr@pec.governo.it, con un unico messaggio avendo cura di riportare nell’oggetto l’identificativo: “Avviso pubblico per la presentazione di proposte di intervento a valere sul PNRR - M1 - C1 - INVESTIMENTO 1.1 per la migrazione al PSN - PAC PILOTA FINANZIATO DALL’UNIONE EUROPEA - NextGenerationEU”.
+        tag:
+          - generale
+      - title: Come è possibile attestare l'invio della domanda di partecipazione?
+        content: |
+          Il rispetto del termine perentorio di presentazione è attestato dalla data e dall’ora indicata nella ricevuta di accettazione inviata dal Sistema di Posta Elettronica Certificata. Il Dipartimento per la trasformazione digitale non si assume responsabilità in ordine a ritardi, disguidi o malfunzionamenti legati all’inoltro/ricezione della PEC essendo la responsabilità del recapito della domanda di partecipazione a carico esclusivo del proponente.
+        tag:
+          - generale
+      - title: Il DTD può richiedere integrazione alla documentazione inviata dall'Ente? 
+        content: |
+          Il Dipartimento per la trasformazione digitale si riserva di richiedere in forma scritta, tramite PEC, integrazioni o chiarimenti rispetto alla documentazione presentata. Le eventuali richieste indicheranno un termine perentorio non inferiore a 5 giorni dalla data di trasmissione, entro il quale il Soggetto attuatore proponente è tenuto a produrre le integrazioni o i chiarimenti richiesti.
+        tag:
+          - generale
+      - title: A seguito della notifica di assimibilità della domanda di partecipazione, entro quanto tempo deve essere comunicato il CUP, al fine di accettare il finanziamento?
+        content: |
+          Entro e non oltre 10 (dieci) giorni naturali e consecutivi dalla notifica dell’ammissibilità al finanziamento, il Soggetto attuatore è tenuto ad acquisire il CUP (utilizzando il template n. 2302002) e a comunicarlo tramite PEC al Dipartimento, per l’accettazione del finanziamento stesso e, in particolare, delle condizioni dell’Avviso (dall’art. 11 all’art. 19).
+        tag:
+          - generale
+      - title: Dove viene pubblicato il Decreto di finanziamento? 
+        content: |
+          Il Dipartimento per la trasformazione digitale provvede alla pubblicazione del decreto di finanziamento sul sito istituzionale secondo gli obblighi di trasparenza di cui al decreto legislativo n. 33/2013 e s.m.i. La pubblicazione del decreto di finanziamento sul sito https://innovazione.gov.it/ ha valore di notifica a tutti i Soggetti attuatori.
+        tag:
+          - generale
+      - title: È necessario alimentare il sistema ReGiS?
+        content: |
+          Il Soggetto attuatore deve registrare tutti i dati di avanzamento nel sistema ReGiS e implementare tale sistema con la documentazione necessaria per consentire l’espletamento dei controlli amministrativo-contabili a norma dell’art. 22 del Regolamento (UE) 2021/241, compresa la raccolta dei dati sul “titolare effettivo”.
+        tag:
+          - generale
+      - title: Quando può essere richiesta l'erogazione del finanziamento?  E in quali modalità verrà corrisposto?
+        content: |
+          Successivamente alla registrazione del decreto di finanziamento da parte degli organi di controllo, ad avvenuto inserimento della documentazione di spesa nel sistema informativo ReGIS, il Soggetto Attuatore invia la domanda di erogazione delle risorse al Dipartimento e, nel caso della prima richiesta di trasferimento, carica a sistema anche la copia del contratto stipulato con la società Polo Strategico Nazionale S.p.A. gestore in regime di concessione dell’infrastruttura PSN e del piano di migrazione di dettaglio di cui alla stessa Concessione. L’ammontare complessivo dei trasferimenti al Soggetto Attuatore non supera il 90% dell’importo riconosciuto. La quota a saldo, pari al 10%, sarà trasferita sulla base della presentazione da parte del Soggetto Attuatore della richiesta attestante la conclusione dell’intervento, nonché il raggiungimento dei relativi milestone e target, in coerenza con le risultanze del citato sistema informativo.
+        tag:
+          - generale
+      - title: Entro quanto tempo, il Soggetto Attuatore, deve corrispondere gli importi dovuti per gli interventi realizzati?
+        content: |
+          ll Soggetto attuatore è tenuto ad eseguire i pagamenti entro il termine di 30 giorni dall’accredito del contributo e, nei successivi 10 giorni, deve caricare su ReGis tutta la documentazione a comprova dei pagamenti effettuati (mandati quietanzati) elaborando su ReGis il Rendiconto di progetto. Salvo casi debitamente motivati, ogni successiva richiesta di erogazione del contributo può essere inoltrata al Dipartimento soltanto qualora siano stati eseguiti i pagamenti ai fornitori relativi alle precedenti erogazioni ricevute e siano stati caricati a sistema ReGIS i relativi documenti comprovanti che le spese sono state effettivamente sostenute.
+        tag:
+          - generale
+      - title: È possibile richiedere supporto per procedure amministrative al DTD?
+        content: |
+          È possibile ottenere chiarimenti sulla procedura amministrativa dell'Avviso mediante la proposizione di quesiti scritti da inoltrare, almeno sette giorni prima della chiusura dell’Avviso, in forma scritta a mezzo PEC all’indirizzo dtd.pnrr@pec.governo.it, riportando nell’oggetto l’identificativo: Richiesta di chiarimenti Avviso Investimento 1.1. PNRR M1-C1. Non sono ammessi chiarimenti tramite diversi canali di comunicazione.
+        tag:
+          - generale
+      - title: Entro quanto tempo saranno fornite le risposte ai chiarimenti richiesti al DTD? 
+        content: |
+          Le risposte alle richieste di chiarimenti amministrativi, presentate in tempo utile, verranno fornite in formato elettronico almeno tre giorni prima della chiusura dell’Avviso mediante pubblicazione in forma anonima sul sito internet https:/ innovazione.gov.it. I chiarimenti e le risposte fornite costituiranno parte integrante del presente Avviso.
+        tag:
+          - generale
+      - title: Eventuali modifiche dell'Avviso 1.1, dove saranno consultabili?
+        content: |
+          Nel caso si rendano necessarie modifiche all'Avviso e/o ai suoi Allegati, sarà fornita tempestiva informazione agli interessati mediante specifica comunicazione sul sito https://innovazione.gov.it/ .
+        tag:
+          - generale
+      - title: Quali sono le destinazioni utili per la migrazione?
+        content: |
+          L’articolo 33-septies del DL 18 ottobre 2012, n. 179 stabilisce le infrastrutture verso le quali le Amministrazioni Centrali migrano i loro Centri per l'elaborazione delle informazioni (CED) e i relativi sistemi informatici, privi dei requisiti fissati dal Regolamento AgID. In particolare, sono identificate 3 opzioni:<br> 1. verso l’infrastruttura Polo Strategico Nazionale;<br> 2. verso altra infrastruttura propria già esistente e in possesso dei requisiti fissati dallo stesso Regolamento AGID;<br> 3. verso soluzioni cloud nel rispetto di quanto previsto dal Regolamento AGID.
+        tag:
+          - generale
+      - title: Un Ente che non intende migrare verso le n.3 infrastrutture previste dall'art. 33-septies del DL 18 ottobre 2012, n. 179, come comunica tale scelta?
+        content: |
+          Nel caso in cui l'Ente non intenda migrare I dati verso le 3 destinazioni previste, sarà necessario fornire l’indicazione di non migrare tale servizio descrivendo la relativa motivazione e l’attuale infrastruttura che lo ospita.
+        tag:
+          - generale
+      - title: Quali informazioni è necessario riportare tra i dettagli della migrazione al PSN?
+        content: |
+          Per ciascun servizio dell’Amministrazione è necessario indicare:<br> - Identificativo del/i rack che ospita/no attualmente il servizio dell’amministrazione;<br> - Identificativo del Data Center in cui è situato il rack e il relativo Comune in cui è situato;<br> - Esito della classificazione del servizio dell’amministrazione validata dall’Agenzia per la Cybersicurezza Nazionale ai sensi del Regolamento AGID (Strategico, Critico, Ordinario), salvo i casi di deroga previsti dalla norma;<br> - indicazione della modalità attuale di erogazione del servizio: se da server fisici, da macchine virtuali (VM) o container.
+        tag:
+          - generale
+      - title: Tutti i servizi dell'Ente classificati come strategici, possono essere migrati verso il PSN?
+        content: |
+          I servizi dell’Amministrazione classificati strategici possono migrare verso tutte le tipologie di servizi offerti dal PSN ad eccezione del servizio “Secure public cloud”, in quanto tale servizio è progettato per soddisfare i requisiti necessari per ospitare i servizi dell’amministrazione classificati come critici.
+        tag:
+          - generale
+      - title: Quando si intende concluso il processo di migrazione?
+        content: |
+          Il processo di migrazione si intende concluso con esito positivo al momento in cui il Soggetto attuatore effettuerà comunicazione del rilascio in esercizio comprensivo del verbale di collaudo di tutti i servizi oggetto di migrazione verso il PSN.
+        tag:
+          - generale
+      - title: Qualora il data center non fosse di proprietà dell'amministrazione, è necessario indicare delle informazioni aggiuntive?
+        content: |
+          Nel caso in cui il data center dove sono situati i rack non fosse di proprietà dell’amministrazione, indicare anche la ragione sociale del proprietario del data center nella colonna “Identificativo Data Center e Comune”. In ogni caso i servizi dell’amministrazione al momento della presentazione della candidatura (situazione attuale) devono essere ospitati su software on-premise installati su rack posizionati all’interno di infrastrutture e/o soluzioni cloud prive dei requisiti di cui al Regolamento AGID e alla Determina n.307 del 18 gennaio 2022 dell’Agenzia per la cybersicurezza nazionale in relazione al livello di classificazione risultante dalla procedura di cui alla Determina n. 306 del 18 gennaio 2022 dell’Agenzia per la cybersicurezza nazionale.
+        tag:
+          - generale
+      - title: Come può essere determinato il costo del progetto?
+        content: |
+          Ai fini della determinazione del costo del progetto si fa riferimento al listino di riferimento di cui all’allegato C della Convenzione stipulata tra Dipartimento per la trasformazione digitale e la società Polo Strategico Nazionale S.p.A. con le eventuali modifiche previste dalla Concessione. La Convenzione è disponibile sul sito istituzionale del Dipartimento al seguente link: https://innovazione.gov.it/dipartimento/focus/polo-strategico-nazionale/
+        tag:
+          - generale
+      - title: Quali sono le tipologie di spese ammissibili che possono essere indicate nella "Tabella C - Dettaglio Costi"?
+        content: |
+          Le spese ammissibili sono: <br> -servizi professionali previsti dalla Convenzione sottoscritta tra il Dipartimento per la trasformazione digitale e la società Polo Strategico Nazionale S.p.A. (i.e. servizio “core” migrazione, servizi “no core” Business & Culture enablement, Servizi professionali, Re-platform e Re-architect, IT infrastructure Service Operations) per la realizzazione della migrazione entro la scadenza per il completamento della migrazione indicata nel presente avviso;<br> - primo anno di canone per i servizi “core” previsti dalla Convenzione sottoscritta tra il Dipartimento per la trasformazione digitale e la società Polo Strategico Nazionale S.p.A. (i.e. Housing, Hosting, IaaS Private, IaaS Shared, altri servizi di IaaS e Cloud quali Platform as a Service (PaaS), Containers-as-a-Service (CaaS), Disaster Recovery per IaaS e Cloud, servizi CSP, ovvero Public cloud PSN managed, Hybrid Cloud on PSN site, Secure public cloud).
+        tag:
+          - generale
+      - title: Quali informazioni è necessario riportare all'interno della "Tabella D - Cronoprogramma"?
+        content: |
+          Nella sezione del "Cronoprogramma" è necessario riportare alcune informazioni di dettaglio relativamente alle tempistiche previste per la migrazione verso l’infrastruttura PSN. È necessario fornire il cronoprogramma delle fasi di migrazione con l’evidenza del numero di giorni/uomo per servizi professionali e le date di avvio e conclusione presunte.
+        tag:
+          - generale
   - title: 1.2 Abilitazione e facilitazione migrazione al Cloud
     sectionTitle: Misure
     description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
