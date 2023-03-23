@@ -336,7 +336,7 @@ questions:
       - title: Il RUP deve essere individuato esplicitamente con un formale atto di nomina oppure può essere direttamente il Responsabile per la Transizione al Digitale?
         content: Per ogni singola procedura di affidamento di un appalto o di una concessione, le stazioni appaltanti, con atto formale del responsabile dell'unità organizzativa, nominano un RUP per le fasi della programmazione, progettazione, affidamento ed esecuzione. Viceversa, in assenza di un appalto, è possibile individuare un Responsabile del procedimento amministrativo (RTD o altri).
         tag:
-          - cup
+          - contratti_ordini
       - title: È possibile apportare modifiche ad un CUP già generato?
         content: |
           Sì, è possibile apportare modifiche ad un CUP già generato attraverso la funzione applicativa
@@ -344,6 +344,10 @@ questions:
           (<a href="https://cupweb.rgs.mef.gov.it/CUPWeb/home_cup.jsp">https://cupweb.rgs.mef.gov.it/CUPWeb/home_cup.jsp</a>). <br />
           Per ulteriori approfondimenti, ti invitiamo a visitare il seguente link: 
           <a href="https://www.programmazioneeconomica.gov.it/sistema-mipcup/modalita-richiesta-cup-e-modifiche-consentite/">https://www.programmazioneeconomica.gov.it/sistema-mipcup/modalita-richiesta-cup-e-modifiche-consentite/</a>
+        tag:
+          - cup
+      - title: Ho rinunciato ad una candidatura al fine di sottometterne una nuova. L'importo riconosciuto a finanziamento della nuova candidatura è differente. Posso utilizzare lo stesso CUP senza apportare modifiche?
+        content: Sì, ti confermiamo che è possibile utilizzare lo stesso CUP anche se l'importo del finanziamento è differente rispetto alla candidatura precedente, a condizione che il CUP sia generato con il corretto template e a meno di rilevanti variazioni del corredo informativo che richiedono la revoca e la generazione di un nuovo CUP.
         tag:
           - cup
       - title: In caso di implementazione in economia delle attività è previsto il rispetto del principio DNSH?
