@@ -132,7 +132,7 @@ heroCarouselNews:
   - id: 1
     type: internal
     category: DNSH 
-    title: Avviso Multimisura 1.1 - 1.2 ASL/AO
+    title: "Avviso Multimisura 1.1 - 1.2 ASL/AO"
     description: "È disponibile l'allegato 4 contenente le istruzioni per la compilazione delle schede DNSH per l'Avviso Multimisura 1.1-1.2 per la migrazione in cloud di ASL/AO"
     source: 'Vai all'Avviso'
     linkTo: 'https://areariservata.padigitale2026.gov.it/Pa_digitale2026_dettagli_avviso?id=a017Q00001DrNiyQAF'
