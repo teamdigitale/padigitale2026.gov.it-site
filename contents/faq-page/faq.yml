@@ -126,7 +126,8 @@ questions:
       - title: Cosa fare se in qualità di utente invitato non si riesce ad accedere a PA digitale 2026?
         content: Dopo aver ricevuto l'email di invito e aver verificato la correttezza dei dati, bisogna accertarsi di aver completato la procedura di accesso facendo click sul link di verifica all'interno dell'email.
       - title: É possibile accedere a PA digitale 2026 come rappresentante legale di più Scuole?
-        content: Sì. Per gestire più Scuole contemporaneamente in qualità di rappresentante legale, è necessario:<br><br>1. completare la procedura di primo accesso e attivare il profilo di una delle Scuole;<br>2. contattare l'assistenza mediante il modulo presente nella sezione "Supporto" dell'area riservata di PA digitale 2026, indicando nel messaggio i nomi, gli indirizzi PEC e il codice IPA delle ulteriori Scuole per le quali si richiede l'attivazione del profilo.     
+        content: |
+        Non è possibile aggiungere e/o eliminare servizi ad una candidatura già inviata. Ti ricordiamo che è comunque possibile rinunciare a una candidatura e inviarne una nuova a seguito della ricezione della PEC del decreto di rinuncia. Ti consigliamo di valutare tale opportunità anche contattando l’account manager del tuo territorio utilizzando il modulo dedicato: https://padigitale2026.gov.it/team-territoriali.
   - title: Gestione utenti
     smallTitle: true
     description: La strategia di ripresa economica e gli interventi previsti per il rilancio digitale del Paese
@@ -179,7 +180,7 @@ questions:
       - title: "È possibile apportare delle modifiche al cronoprogramma su PA digitale 2026?"
         content: Sì, attraverso il pulsante "Posticipa la scadenza" si può richiedere la proroga della scadenza dell'attività del cronoprogramma da completare, inserendo una nuova data di scadenza. Ogni PA può richiedere di posticipare la scadenza soltanto due volte nel corso del ciclo di vita del progetto. A partire dalla terza richiesta, non sarà più possibile richiedere una proroga tramite la piattaforma, ma sarà necessario inviare una PEC al seguente indirizzo dtd.pnrr@pec.governo.it.
       - title: "Devo eliminare un servizio selezionato in fase di candidatura. Come posso procedere?"
-        content: Non è possibile modificare una candidatura già inviata. Ti ricordiamo che è comunque possibile rinunciare a una candidatura e inviarne una nuova a seguito della ricezione della PEC del decreto di rinuncia.Ti consigliamo di valutare tale opportunità anche contattando l’account manager del tuo territorio utilizzando il modulo dedicato <a href="https://padigitale2026.gov.it/team-territoriali" target="_blank">https://padigitale2026.gov.it/team-territoriali</a>
+        content: Non è possibile aggiungere e/o eliminare servizi ad una candidatura già inviata. Ti ricordiamo che è comunque possibile rinunciare a una candidatura e inviarne una nuova a seguito della ricezione della PEC del decreto di rinuncia.Ti consigliamo di valutare tale opportunità anche contattando l’account manager del tuo territorio utilizzando il modulo dedicato <a href="https://padigitale2026.gov.it/team-territoriali" target="_blank">https://padigitale2026.gov.it/team-territoriali</a>
   - title: Progetti
     smallTitle: true
     description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
