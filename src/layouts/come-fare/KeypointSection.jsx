@@ -100,6 +100,7 @@ export const KeypointSection = (props) => {
     number,
     text,
     button,
+    buttonLabel,
     image,
     linkLabel,
     reverse,
@@ -176,7 +177,7 @@ export const KeypointSection = (props) => {
                   <p className={classes.paragraph} dangerouslySetInnerHTML={{ __html: text }}></p>
                   {button ? (
                     <Link to={linkTo} className={`${classes.btnSection} btn btn-primary`} aria-label={ariaLabel}>
-                      SCOPRI DI PIÙ
+                      {buttonLabel ? buttonLabel : 'SCOPRI DI PIÙ'}
                     </Link>
                   ) : (
                     ''

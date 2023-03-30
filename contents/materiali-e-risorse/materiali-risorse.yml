@@ -1,0 +1,139 @@
+name: Materiali e risorse - PA digitale 2026
+hero:
+  title: Materiali e risorse
+  subtitle: Strumenti per favorire l'implementazione delle misure PNRR per la digitalizzazione della PA
+sidebar:
+  - sectionTitle: Misura 1.2 - Migrazione al cloud
+    sectionId: misura12
+    sectionActive: true
+  - sectionTitle: Misura 1.3.1 - Piattaforma Digitale Nazionale Dati (PDND)
+    sectionId: misura131
+    sectionActive: false
+  - sectionTitle: Misura 1.4.1 - Esperienza del cittadino nei servizi pubblici
+    sectionId: misura141
+    sectionActive: false
+  - sectionTitle: Misura 1.4.4 - Adozione identità digitale (SPID/CIE)
+    sectionId: misura144
+    sectionActive: false
+  - sectionTitle: Linee guida per le PA locali
+    sectionId: lineeguidaPA
+    sectionActive: false
+questions:
+  - title: Misura 1.2 - Migrazione al cloud
+    description: Un programma di supporto e incentivo per migrare sistemi, dati e applicazioni delle pubbliche amministrazioni locali verso servizi cloud qualificati.
+    sectionId: misura12
+    accordions:
+      - title: BROCHURE INFORMATIVE E PRESENTAZIONI
+        content:
+        accordionContent: 
+          - linkLabel: Comuni, indicazioni per la migrazioni e linee guide di asseverazione (PDF)
+            link: 'https://assets.innovazione.gov.it/1674141827-executivesummary_misura-1-2-comuni-indicazioni-sul-processo-di-assessment-e-asseverazione-1.pdf'
+            ariaLabel: Comuni, indicazioni per la migrazioni e linee guide di asseverazione (scarica il PDF)
+          - linkLabel: Scuole, indicazioni per la migrazione e linee guide di asseverazione (PDF)
+            link: 'https://assets.innovazione.gov.it/1674141288-executivesummary_misura-1-2-scuole-indicazioni-sul-processo-di-assessment-e-asseverazione-1.pdf'
+            ariaLabel: Scuole, indicazioni per la migrazione e linee guide di asseverazione (scarica il PDF)
+      - title: Video
+        content: 
+        accordionContent: 
+          - linkLabel: Come candidarsi alla misura 1.2
+            link: 'https://www.youtube.com/watch?v=0sj5BxptQZg'
+            ariaLabel: Come candidarsi alla misura 1.2 (Si apre in un nuovo tab)
+          - linkLabel: Come effettuare la classificazione dati e servizi funzionale alla candidatura
+            link: 'https://www.youtube.com/watch?v=IR6nWFk6Ll4&t=8s'
+            ariaLabel: Come effettuare la classificazione dati e servizi funzionale alla candidatura (Si apre in un nuovo tab)
+      - title: Link utili
+        content: 
+        accordionContent: 
+          - linkLabel: Sito Cloud Italia
+            link: 'https://cloud.italia.it'
+            ariaLabel: Sito Cloud Italia (Si apre in un nuovo tab)
+          - linkLabel: Guida alla continuità di servizio durante la migrazione in cloud
+            link: 'https://noblogo.org/developers-italia/per-una-guida-alla-continuita-di-servizio-durante-la-migrazione-in-cloud"'
+            ariaLabel: Guida alla continuità di servizio durante la migrazione in cloud (Si apre in un nuovo tab)
+  - title: Misura 1.3.1 - Piattaforma Digitale Nazionale Dati (PDND)
+    description: L’obiettivo della PDND è rendere concreto il principio europeo del “once-only”, cioè l’inserimento di informazioni una sola volta, permettendo così a cittadini e imprese di non dover più fornire i dati che la PA già possiede per accedere a un servizio. Le amministrazioni, infatti, dopo essere state autenticate e autorizzate dalla Piattaforma, saranno in grado di scambiare dati tra loro, ed erogare così servizi in maniera più rapida ed efficace.
+    sectionId: misura131
+    accordions:
+      - title: BROCHURE INFORMATIVE E PRESENTAZIONI
+        content:
+        accordionContent: 
+          - linkLabel: Funzionamento della piattaforma e casi d'uso per i Comuni (PDF)
+            link: 'https://assets.innovazione.gov.it/1675333598-misura-131_pdnd_avvisi-comuni_regioni_casi-d-uso.pdf'
+            ariaLabel: Funzionamento della piattaforma e casi d'uso per i Comuni (scarica il PDF)
+      - title: Video
+        content: 
+        accordionContent: 
+          - linkLabel: Webinar ANCI e Dipartimento per la trasformazione digitale "Piattaforma Digitale Nazionale Dati e interoperabilità, le opportunità del PNRR"
+            link: 'https://www.youtube.com/watch?v=3UL64YcMWJM'
+            ariaLabel: Webinar ANCI e Dipartimento per la trasformazione digitale "Piattaforma Digitale Nazionale Dati e interoperabilità, le opportunità del PNRR" (Si apre in un nuovo tab)
+      - title: Link utili
+        content: 
+        accordionContent: 
+          - linkLabel: Linee Guida sull’infrastruttura tecnologica della Piattaforma Digitale Nazionale Dati per l’interoperabilità dei sistemi informativi e delle basi di dati (PDF)
+            link: 'https://www.agid.gov.it/sites/default/files/repository_files/lg_infrastruttura_interoperabilita_pdnd.pdf'
+            ariaLabel: Linee Guida sull’infrastruttura tecnologica della Piattaforma Digitale Nazionale Dati per l’interoperabilità dei sistemi informativi e delle basi di dati (scarica il PDF)
+          - linkLabel: Linee Guida interoperabilità tecnica (PDF)
+            link: 'https://www.agid.gov.it/sites/default/files/repository_files/linee_guida_interoperabilit_tecnica_pa.pdf'
+            ariaLabel: Linee Guida interoperabilità tecnica (scarica il PDF)
+          - linkLabel: Linee Guida sicurezza dell'interoperabilità (PDF)
+            link: 'https://www.agid.gov.it/sites/default/files/repository_files/linee_guida_tecnologie_e_standard_sicurezza_interoperabilit_api_sistemi_informatici.pdf'
+            ariaLabel: Linee Guida sicurezza dell'interoperabilità (scarica il PDF)
+          - linkLabel: Domande frequenti sull'interoperabilità - sito AgID
+            link: 'https://www.agid.gov.it/it/domande-frequenti/interoperabilit%C3%A0'
+            ariaLabel: Domande frequenti sull'interoperabilità - sito AgID (Si apre in un nuovo tab)
+  - title: Misura 1.4.1 - Esperienza del cittadino nei servizi pubblici
+    description: Tutte le risorse per realizzare con facilità esperienze digitali semplici e accessibili per i cittadini.
+    sectionId: misura141
+    accordions:
+      - title: BROCHURE INFORMATIVE E PRESENTAZIONI
+        content:
+        accordionContent: 
+          - linkLabel: Modello Comuni (PDF)
+            link: 'https://assets.innovazione.gov.it/1670239161-1-4-1_comuni_brochureinformativa.pdf'
+            ariaLabel: Modello Comuni (scarica il PDF)
+          - linkLabel: Modello Scuole (PDF)
+            link: 'https://assets.innovazione.gov.it/1670239154-1-4-1_scuole_brochureinformativa.pdf'
+            ariaLabel: Modello Scuole (scarica il PDF)
+      - title: Link utili
+        content: 
+        accordionContent: 
+          - linkLabel: Linee Guida sull’infrastruttura tecnologica della Piattaforma Digitale Nazionale Dati per l’interoperabilità dei sistemi informativi e delle basi di dati (PDF)
+            link: 'https://www.agid.gov.it/sites/default/files/repository_files/lg_infrastruttura_interoperabilita_pdnd.pdf'
+            ariaLabel: Linee Guida sull’infrastruttura tecnologica della Piattaforma Digitale Nazionale Dati per l’interoperabilità dei sistemi informativi e delle basi di dati (scarica il PDF)
+          - linkLabel: Linee Guida interoperabilità tecnica (PDF)
+            link: 'https://www.agid.gov.it/sites/default/files/repository_files/linee_guida_interoperabilit_tecnica_pa.pdf'
+            ariaLabel: Linee Guida interoperabilità tecnica (scarica il PDF)
+  - title: Misura 1.4.4 - Adozione identità digitale (SPID/CIE)
+    description: Le soluzioni di identità digitale SPID e CIE consentono alle amministrazioni di abbandonare i diversi sistemi di autenticazione gestiti localmente, permettendo di risparmiare risorse (in termini di lavoro e costo necessari per il rilascio e la manutenzione delle credenziali) ed offrire un accesso sicuro e veloce ed omogeneo ai servizi online su tutto il territorio nazionale.
+    sectionId: misura144
+    accordions:
+      - title: Link utili
+        content: 
+        accordionContent: 
+          - linkLabel: Regole tecniche per l’implementazione del protocollo OpenID Connect
+            link: 'https://docs.italia.it/italia/spid/spid-cie-oidc-docs/it/versione-corrente/index.html'
+            ariaLabel: Regole tecniche per l’implementazione del protocollo OpenID Connect (Si apre in un nuovo tab)
+  - title: Linee guida per le PA locali
+    description: "L’Unità di Missione del PNRR del Dipartimento per la trasformazione digitale della Presidenza del Consiglio dei ministri ha pubblicato le Linee guida per i soggetti attuatori individuati tramite gli Avvisi pubblici di PA digitale 2026 e dedicati agli enti locali.<br /><br />Il documento rappresenta uno strumento fondamentale per aiutare tutte le PA locali nelle fasi di implementazione dei progetti, da un lato nell’utilizzo della piattaforma PA digitale 2026, dall’altro nel raggiungimento degli obiettivi previsti dagli Avvisi."
+    sectionId: lineeguidaPA
+    accordions:
+      - title: BROCHURE INFORMATIVE E PRESENTAZIONI
+        content:
+        accordionContent: 
+          - linkLabel: Indicazioni pratiche e come prepararsi (PDF)
+            link: 'https://assets.innovazione.gov.it/1670239169-linee-guida-avvisi-lump-sum-come-prepararsi-all-asseverazione.pdf'
+            ariaLabel: Indicazioni pratiche e come prepararsi (scarica il PDF)
+      - title: Link utili
+        content: 
+        accordionContent: 
+          - linkLabel: Linee guida per i soggetti attuatori individuati tramite Avvisi pubblici a <em>lump sum</em> (documento integrale)
+            link: 'https://innovazione.gov.it/italia-digitale-2026/attuazione-misure-pnrr/#sistema-di-gestione-e-controllo'
+            ariaLabel: Linee guida per i soggetti attuatori individuati tramite Avvisi pubblici a lump sum (Si apre in un nuovo tab)
+noResults: Nessun risultato trovato
+support:
+  tag: Supporto
+  title: Non hai trovato le risposte che cerchi? Vuoi inviare suggerimenti o ricevere supporto?
+  cards:
+    - title: Assistenza
+      description: Compila il modulo per richiedere chiarimenti e approfondire temi di interesse.
+      link: /supporto/assistenza

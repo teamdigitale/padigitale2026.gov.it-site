@@ -178,6 +178,9 @@ support:
     - title: Assistenza
       description: Compila il modulo per richiedere chiarimenti e approfondire temi di interesse.
       link: /supporto/assistenza
+    - title: Materiali e risorse
+      description: Scopri gli strumenti per favorire l'implementazione delle misure
+      link: /supporto/materiali-e-risorse
 heroMain:
   category: 'le misure del pnrr'
   title: Il punto di accesso alle risorse per la transizione digitale della PA
