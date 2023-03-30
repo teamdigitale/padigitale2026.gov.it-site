@@ -100,6 +100,16 @@ questions:
           - linkLabel: Linee Guida interoperabilità tecnica (PDF)
             link: 'https://www.agid.gov.it/sites/default/files/repository_files/linee_guida_interoperabilit_tecnica_pa.pdf'
             ariaLabel: Linee Guida interoperabilità tecnica (scarica il PDF)
+  - title: Misura 1.4.4 - Adozione identità digitale (SPID/CIE)
+    description: Le soluzioni di identità digitale SPID e CIE consentono alle amministrazioni di abbandonare i diversi sistemi di autenticazione gestiti localmente, permettendo di risparmiare risorse (in termini di lavoro e costo necessari per il rilascio e la manutenzione delle credenziali) ed offrire un accesso sicuro e veloce ed omogeneo ai servizi online su tutto il territorio nazionale.
+    sectionId: misura144
+    accordions:
+      - title: Link utili
+        content: 
+        accordionContent: 
+          - linkLabel: Regole tecniche per l’implementazione del protocollo OpenID Connect
+            link: 'https://docs.italia.it/italia/spid/spid-cie-oidc-docs/it/versione-corrente/index.html'
+            ariaLabel: Regole tecniche per l’implementazione del protocollo OpenID Connect (Si apre in un nuovo tab)
   - title: Linee guida per le PA locali
     description: "L’Unità di Missione del PNRR del Dipartimento per la trasformazione digitale della Presidenza del Consiglio dei ministri ha pubblicato le Linee guida per i soggetti attuatori individuati tramite gli Avvisi pubblici di PA digitale 2026 e dedicati agli enti locali.<br /><br />Il documento rappresenta uno strumento fondamentale per aiutare tutte le PA locali nelle fasi di implementazione dei progetti, da un lato nell’utilizzo della piattaforma PA digitale 2026, dall’altro nel raggiungimento degli obiettivi previsti dagli Avvisi."
     sectionId: lineeguidaPA
