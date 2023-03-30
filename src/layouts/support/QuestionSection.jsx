@@ -224,7 +224,7 @@ export const QuestionSection = (props) => {
         {
           <Accordion>
             {accordions.map((accordion, i) => (
-              <div key={accordion.sectionId} className={classes.accordionWrapper}>
+              <div key={i} className={classes.accordionWrapper}>
                 <AccordionHeader
                   onToggle={() => setIndexIsOpen((state) => (state === i ? -1 : i))}
                   active={i === indexIsOpen}
@@ -261,5 +261,5 @@ QuestionSection.propTypes = {
   item: PropTypes.object.isRequired,
   inputText: PropTypes.string,
   setQuestions: PropTypes.func,
-  totalQuestions: PropTypes.object,
+  totalQuestions: PropTypes.array,
 };

@@ -77,7 +77,7 @@ const useStyles = createUseStyles({
 export const MaterialiRisorsePage = () => {
   const classes = useStyles();
   const [inputValue, setInputValue] = useState('');
-  const [filterId, setFilterId] = useState('all');
+  const filterId = useState('all');
   const [questions, setQuestions] = useState(content.questions);
   const [isMobile, setIsMobile] = useState();
   const [questNum, setquestNum] = useState(countInitQuestions());
