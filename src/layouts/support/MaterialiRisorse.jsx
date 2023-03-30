@@ -13,7 +13,7 @@ import seo from '../../../contents/seo.yml';
 import content from '../../../contents/materiali-e-risorse/materiali-risorse.yml';
 import { Totop } from '../../components/Totop';
 import { HeroSupport } from '../../layouts/support/Hero';
-import { SideNavigationAccordion } from '../../layouts/sideNavigationAccordion';
+import { SideNavigation } from '../faq/SideNavigation';
 import { QuestionSection } from './QuestionSection';
 
 const { title: seoTitle, description: seoDescription } = seo.materialiRisorsePage;
@@ -77,7 +77,7 @@ const useStyles = createUseStyles({
 export const MaterialiRisorsePage = () => {
   const classes = useStyles();
   const [inputValue, setInputValue] = useState('');
-  const filterId = useState('all');
+  const [filterId, setFilterId] = useState('all');
   const [questions, setQuestions] = useState(content.questions);
   const [isMobile, setIsMobile] = useState();
   const [questNum, setquestNum] = useState(countInitQuestions());
@@ -419,7 +419,12 @@ export const MaterialiRisorsePage = () => {
           </Row>
           <Row>
             <Col lg={3} className={classes.sidenav}>
-              <SideNavigationAccordion activeList={questions} searchValue={inputValue} list={content.sidebar} />
+              <SideNavigation
+                getFilter={setFilterId}
+                activeList={questions}
+                searchValue={inputValue}
+                list={content.sidebar}
+              />
             </Col>
             <Col
               lg={9}
