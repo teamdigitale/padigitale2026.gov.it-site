@@ -11,6 +11,7 @@ import { ExternalLink } from '../../components/ExternalLink';
 
 const useStyles = createUseStyles({
   section: {
+    marginBottom: '4em',
     composes: 'question-section',
     '& + .question-section': {
       marginTop: '2.666rem',
