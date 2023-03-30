@@ -1425,6 +1425,131 @@ questions:
       - title: Generale
         id: generale
     accordions:
+      - title: Quali enti della PA possono presentare domanda per accedere al finanziamento dall'Avviso Multimisura 1.1 + 1.2?
+        content: |
+          I Soggetti Attuatori, ovvero coloro che possono accedere allo strumento predisposto dall'Avviso, sono le Aziende sanitarie locali e le Aziende Ospedaliere (d’ora in avanti anche ASL/AO) come definite dalle categorie IPA "Aziende Sanitarie Locali" e "Aziende Ospedaliere, Aziende Ospedaliere Universitarie, Policlinici e Istituti di Ricovero e Cura a Carattere Scientifico Pubblici".
+        tag:
+          - generale
+      - title: Quali sono gli interventi finanziabili dall'Avviso Multimisura 1.1 + 1.2?
+        content: |
+          Gli interventi finanziabili sono rappresentati dall’implementazione di un Piano di migrazione dei sistemi, applicativi e dati relativi ai servizi dell’amministrazione verso il PSN e/o infrastruttura della PA adeguata e/o cloud qualificato (comprensivo per ciascun servizio di tutte le attività necessarie ad eseguire e completare la migrazione assessment, pianificazione della migrazione, esecuzione e completamento della migrazione, formazione, attivazione canoni cloud) secondo le indicazioni dell’Allegato 2
+        tag:
+          - generale
+      - title: Come potranno essere realizzate le attività oggetto di finanziamento?
+        content: |
+          I Soggetti attuatori potranno scegliere: <br>  a. di migrare tutti i dati e servizi verso l’infrastruttura PSN, utilizzando le risorse dell’Investimento 1.1; <br>  b. di migrare tutti i dati e servizi verso infrastrutture della Pubblica Amministrazione adeguate e/o verso soluzioni cloud qualificate a valere sulle risorse dell’investimento 1.2;  <br> c. di scegliere una soluzione mista, ad esempio migrare i dati critici verso l’infrastruttura PSN e gli ordinari verso infrastrutture della Pubblica Amministrazione adeguate e/o verso soluzioni cloud qualificate, utilizzando nel primo caso le risorse dell’Investimento 1.1 e nel secondo le risorse dell’Investimento 1.2.
+        tag:
+          - generale
+      - title: È possibile accedere al finanziamento per interventi già avviati in data antecedente alla pubblicazione dell'Avviso?
+        content: |
+          Sì, è possibile accedere al finanziamento per attività avviate a decorrere dal 1° febbraio 2020, per la migrazione di dati e servizi verso soluzioni cloud qualificate e/o infrastrutture della Pubblica Amministrazione adeguate. Inoltre, è possibile accedere al finanziamento previsto dall'Avviso anche per le attività di migrazione di dati e servizi e al PSN, avviate a decorrere dal 1° gennaio 2023.
+        tag:
+          - generale
+      - title: È possibile accedere al finanziamento in caso di realizzazione delle attività, con l'ausilio di fondi pubblici,nazionali, regionali o europei prima della pubblicazione dell'Avviso riferito alla Misura 1.1?
+        content: |
+          No, il finanziamento concesso non è cumulabile con altri finanziamenti pubblici, nazionali o europei, per le stesse spese ammissibili, nel rispetto del divieto del doppio finanziamento.
+        tag:
+          - generale
+      - title: È possibile presentare candidatura a valere dell'Avviso Multimisura 1.1 + 1.2 se ho già partecipato all'Avviso 1.2 “ABILITAZIONE AL CLOUD PER LE PA LOCALI” ASL/AO (dicembre 2022)?
+        content: |
+          Possono inviare candidatura a valere dell'Avviso Multimisura 1.1 + 1.2, i Soggetti Attuatori che non sono stati già ammessi a finanziamento a valere sull’Avviso “INVESTIMENTO 1.2 “ABILITAZIONE AL CLOUD PER LE PA LOCALI” ASL/AO (dicembre 2022) pubblicato il 28 dicembre 2022 o che abbiano rinunciato al finanziamento ai sensi dell’art. 14 co. 7 del predetto Avviso.
+        tag:
+          - generale
+      - title: Sono previste deroghe in caso di mancato invio della candidatura o di altra documentazione entro i termini di scadenza?
+        content: |
+          La presentazione da parte dell’Ente della documentazione necessaria ai fini della partecipazione all’Avviso è a totale ed esclusivo rischio del partecipante stesso, il quale si assume la propria responsabilità in caso di mancata o tardiva ricezione della documentazione, dovuta, a mero titolo esemplificativo e non esaustivo, a malfunzionamenti degli strumenti telematici utilizzati, a difficoltà di connessione e trasmissione, a lentezza dei collegamenti, o a qualsiasi altro motivo, restando esclusa qualsivoglia responsabilità del Dipartimento per la trasformazione digitale ove, per ritardo o disguidi tecnici o di altra natura, ovvero per qualsiasi motivo, la domanda non pervenga entro i termini perentori previsti.
+        tag:
+          - generale
+      - title: Entro quando è possibile inoltrare la domanda di accesso al finanziamento?
+        content: |
+          La domanda può essere presentata a partire dalla data di pubblicazione fino ad esaurimento delle risorse e comunque entro e non oltre le ore 23.59 del 19 maggio 2023.
+        tag:
+          - generale
+      - title: Quali sono i tempi di elaborazione della richiesta? L’esito della verifica sarà trasmesso dopo la scadenza naturale del bando oppure seguirà altri tempi?
+        content: |
+          All’interno dei tempi di apertura e chiusura dell’Avviso, sono previste delle finestre temporali, al termine delle quali il Dipartimento per la trasformazione digitale provvederà<br> a finanziare le istanze pervenute nella finestra temporale di riferimento. <br> Nello specifico, nel presente Avviso sono previste le seguenti finestre temporali:<br> a. finestra n. 1 dalla data di pubblicazione alle ore 23:59 del 14 aprile 2023;<br> b. finestra n. 2 dal 15 aprile 2023 alle ore 23:59 del 19 maggio 2023.
+        tag:
+          - generale
+      - title: Quali sono i template utili al fine di generare correttamente il CUP?
+        content: |
+          I template utili alla generazione del CUP sono: <br> - il template n. 2303001(per progetto finanziato solo su Investimento 1.1); <br> - il template n. 2212002 (per progetto finanziato solo su Investimento 1.2); <br> - nel caso di progetto finanziato su entrambi gli investimenti è necessario utilizzare il template n. 2303001.
+        tag:
+          - generale
+      - title: Il canone del primo anno è incluso nel finanziamento?
+        content: |
+          Sì, il canone del primo anno è incluso nell’importo forfettario come definito dall'allegato 2.
+        tag:
+          - generale
+      - title: Quanti servizi è necessario migrare?
+        content: |
+          L’adesione all’Avviso prevede la migrazione di: <br> - Un minimo di 3 fino ad un massimo di 15 servizi classificati come Ordinari; <br> - Un minimo di 3 fino ad un massimo di 26 servizi classificati come Critici.
+        tag:
+          - generale
+      - title: A quanto ammonta l'importo del finanziamento previsto dall'Avviso per le Aziende Ospedaliere (AO)?
+        content: |
+          L’importo del finanziamento concedibile è individuato in un importo forfettario determinato secondo il seguente criterio: <br> a. per le AO fino a 500 posti letto (min. 6 max 41 servizi): servizio ordinario € 19.628, servizio critico € 25.517;<br>  b. per le AO posti letto tra 501 e 1.000 (min. 6 max 41 servizi): servizio ordinario € 58.885, servizio critico € 76.550; <br>  c. per le AO con oltre 1.000 posti letto (min. 6 max 41 servizi): servizio ordinario € 94.215, servizio critico € 122.480.
+        tag:
+          - generale
+      - title: A quanto ammonta l'importo del finanziamento previsto dall'Avviso per le Aziende Sanitarie Locali (ASL - AUSL)?
+        content: |
+          L’importo del finanziamento concedibile è individuato in un importo forfettario determinato secondo il seguente criterio:<br> a. Per le ASL/AUSL tra 0 e 500.000 assistibili (min. 6 max 41 servizi): servizio ordinario € 34.050, servizio critico € 44.265;<br> b. Per le ASL/AUSL tra 500.001 e 1 Milione assistibili (min. 6 max 41 servizi): servizio ordinario € 102.150, servizio critico € 132.795; <br> c. Per le ASL/AUSL oltre il milione di assistibili (min. 6 max 41 servizi): servizio ordinario € 163.440, servizio critico € 212.472.
+        tag:
+          - generale
+      - title: Entro quanto tempo dovrà essere contrattualizzato il fornitore per le Aziende Ospedaliere che hanno da 1 a 500 o da 501 a 1000 posti letto ?
+        content: |
+          Il fornitore deve essere contrattualizzato entro 4 mesi dalla data di notifica del Decreto di finanziamento.
+        tag:
+          - generale
+      - title: In quanto tempo devono essere concluse le attività oggetto di finanziamento per le Aziende Ospedaliere che hanno da 1 a 500 o da 501 a 1000 posti letto ?
+        content: |
+          Le attività oggetto di finanziamento devono essere concluse entro 14 mesi dalla data di notifica del Decreto di finanziamento.
+        tag:
+          - generale
+      - title: Entro quanto tempo dovrà essere contrattualizzato il fornitore per le Aziende Ospedaliere che hanno oltre 1001 posti letto?
+        content: |
+          Il contratto con il fornitore deve essere attivato entro 9 mesi dalla notifica del decreto di finanziamento.
+        tag:
+          - generale
+      - title: In quanto tempo devono essere concluse le attività oggetto di finanziamento per le Aziende Ospedaliere che hanno oltre 1001 posti letto?
+        content: |
+          Per le Aziende Ospedaliere che hanno oltre 1001 posti letto il tempo massimo entro cui concludere tutte le migrazioni indicate nel piano di migrazione, qualsiasi sia la modalità, è di 18 mesi dalla data di attivazione del contratto con il fornitore.
+        tag:
+          - generale
+      - title: Entro quanto tempo dovrà essere contrattualizzato il fornitore per le ASL/AUSL che hanno da 1 a 500.000 o da 500.001 a 1.000.000 di assistibili?
+        content: | 
+          Il fornitore deve essere contrattualizzato entro 4 mesi dalla data di notifica del Decreto di finanziamento.
+        tag:
+          - generale
+      - title: In quanto tempo devono essere concluse le attività oggetto di finanziamento per le ASL/AUSL che hanno da 1 a 500.000 o da 500.001 a 1.000.000 di assistibili?
+        content: |
+          Le attività oggetto di finanziamento devono essere concluse entro 14 mesi dalla data di notifica del Decreto di finanziamento.
+        tag:
+          - generale
+      - title: Entro quanto tempo dovrà essere contrattualizzato il fornitore per le ASL/AUSL che hanno oltre 1.000.001 assistibili?
+        content: |
+          Il contratto con il fornitore deve essere attivato entro 9 mesi dalla notifica del decreto di finanziamento.
+        tag:
+          - generale
+      - title: In quanto tempo devono essere concluse le attività oggetto di finanziamento per le ASL/AUSL che hanno oltre 1.000.001 assistibili?
+        content: |
+          Per le le ASL/AUSL che hanno oltre 1.000.001 assistibili, il tempo massimo entro cui concludere tutte le migrazioni indicate nel piano di migrazione, qualsiasi sia la modalità, è di 18 mesi dalla data di attivazione del contratto con il fornitore.
+        tag:
+          - generale
+      - title: Quali sono le destinazione dei servizi?
+        content: |
+          La destinazione per ciascun servizio inserito nel piano di migrazione previsto è a scelta tra una delle seguenti opzioni: <br> - Cloud Qualificato;<br> - Infrastruttura della PA adeguata; <br>  - PSN.
+        tag:
+          - generale
+      - title: Quando si intende concluso il processo di migrazione?
+        content: |
+          Il processo di migrazione dei servizi finanziati si intende concluso con esito positivo al momento in cui l’Ente effettuerà comunicazione, attraverso la piattaforma, del rilascio in esercizio di ciascuno dei servizi inseriti nel piano di migrazione, inviando il questionario di assessment con lo stato “Completato” per ciascun servizio in oggetto.
+        tag:
+          - generale
+      - title: Quali sono le spese ammissibili?
+        content: |
+          Sono spese ammissibili esclusivamente i servizi presenti all’interno del Catalogo dei Servizi di cui alla convenzione sottoscritta tra il Dipartimento per la trasformazione digitale e la società Polo Strategico Nazionale S.p.A.. Inoltre, non è ammissibile la spesa del primo anno di canoni del servizio Secure public cloud per la migrazione dei servizi dell’amministrazione classificati come strategici. Il listino PSN attualmente non prevede servizi SaaS e, pertanto, non è un’opzione applicabile per la destinazione PSN (in riferimento alla tabella 1 nell'Allegato 2- Scenari di ammissibilità su origine e destinazione), salvo eventuale aggiunta di nuovi servizi come previsto dalla convenzione stipulata tra il Dipartimento per la trasformazione digitale e la società Polo Strategico Nazionale S.p.A. La convenzione è disponibile sul sito istituzionale del Dipartimento al seguente link: https:/ innovazione.gov.it/dipartimento/focus/polo-strategico-nazionale/
+        tag:
+          - generale		  
       - title: Con riferimento alla "Tabella 1 - Scenari di ammissibilità su origine e destinazione" di cui agli allegati 2.1, 2.2, 2.3, 2.4, 2.5 e 2.6, nei casi in cui è riportato "Sì" si intendono ammissibili tutte le tipologie di destinazione così come definite e previste dall'Avviso, ovvero PSN, infrastruttura della PA adeguata e cloud qualificato?
         content: Sì, si intendono ammissibili tutte le tipologie di destinazione così come definite e previste dall'Avviso.
         tag:
