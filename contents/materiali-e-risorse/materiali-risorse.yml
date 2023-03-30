@@ -12,6 +12,9 @@ sidebar:
   - sectionTitle: Misura 1.4.1 - Esperienza del cittadino nei servizi pubblici
     sectionId: misura141
     sectionActive: false
+  - sectionTitle: Misura 1.4.4 - Adozione identità digitale (SPID/CIE)
+    sectionId: misura144
+    sectionActive: false
   - sectionTitle: Linee guida per le PA locali
     sectionId: lineeguidaPA
     sectionActive: false
