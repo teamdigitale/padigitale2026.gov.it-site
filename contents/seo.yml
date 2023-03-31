@@ -82,3 +82,6 @@ opendataPage:
 materialiRisorsePage:
   title: Materiali e risorse - PA digitale 2026
   description: Materiali e risorse
+InviarePianoMigrazionePage:
+  title: Inviare un piano di migrazione
+  description: Le amministrazioni centrali e locali devono inviare un piano di migrazione. Per compilare un piano di migrazione è necessario aver inviato la classificazione dati e servizi. Se la tua PA ha già inviato una candidatura 1.2, il piano di migrazione si intende compilato e assolto.

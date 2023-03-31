@@ -1,0 +1,35 @@
+name: Inviare un piano di migrazione
+sidebar:
+  - sectionTitle: 1. Verifica la classificazione
+    sectionId: verify-classification
+    sectionActive: true
+  - sectionTitle: 2. Compila o integra il piano
+    sectionId: questionario
+    sectionActive: false
+  - sectionTitle: 3. Invia il piano
+    sectionId: send-classification
+    sectionActive: false
+  - sectionTitle: 4. Ricevi aggiornamenti 
+    sectionId: receive-updates
+    sectionActive: false
+verticalTimeline:
+  - index: 0
+    title: 'Verifica la classificazione dati e servizi'
+    icon: '/assets/invia-piano-migrazione-lens.svg'
+    headerParagraph: "Verifica che la lista e la classificazione dei dati e dei servizi create automaticamente da ACN <strong>siano complete e corrette</strong>. La classificazione è propedeutica alla compilazione del piano di migrazione."
+    sectionId: 'verify-classification'
+  - index: 1
+    title: 'Compila o integra il piano di migrazione'
+    icon: '/assets/invia-piano-migrazione-config.svg'
+    headerParagraph: "Compila il piano di migrazione per la tua PA. <strong>Il piano si intende compilato e assolto se hai già inviato una candidatura 1.2</strong>. Se hai già inviato una candidatura 1.2 e la tua PA ha ulteriori servizi da migrare, puoi compilare un’integrazione al piano."
+    sectionId: 'questionario'
+  - index: 2
+    title: 'Invia il piano di migrazione'
+    icon: '/assets/invia-piano-migrazione-send.svg'
+    headerParagraph: "Seleziona <strong>i servizi che vuoi migrare in cloud</strong> indicando la modalità di migrazione . Eventuali servizi già presenti in una candidatura 1.2 non saranno selezionabili. "
+    sectionId: 'send-classification'
+  - index: 3
+    title: 'Ricevi gli aggiornamenti'
+    icon: '/assets/notifiche.svg'
+    headerParagraph: "Ricevi informazioni <strong>sullo stato di convalida del piano di migrazione</strong> da parte del Dipartimento per la trasformazione digitale. "
+    sectionId: 'receive-updates'
