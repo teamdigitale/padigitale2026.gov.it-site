@@ -32,7 +32,7 @@ keypoints:
       title: 'Classificare dati e servizi'
       desc: 'Per abilitare il processo di migrazione delle PA al cloud.'
     - number: "07"
-      image: 'candida-pa-lens.svg'
+      image: 'invia-piano-migrazione-lens.svg'
       title: 'Inviare un piano di migrazione'
       desc: 'Per inviare un piano di migrazione.'
 listMenu:
@@ -113,6 +113,7 @@ sectionSixth:
   linkTo: "/come-partecipare/classifica-pa"
   lBlue: true
   ariaLabel: "Scopri di più su come classificare dati e servizi"
+  reverse: true
 sectionSeven:
   number: '07'
   title: 'Inviare un piano di migrazione'
