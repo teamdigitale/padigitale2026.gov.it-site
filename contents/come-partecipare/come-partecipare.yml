@@ -119,5 +119,5 @@ sectionSeven:
   text: I piani di migrazione dei dati e dei servizi digitali delle amministrazioni sono previsti dall’articolo 10, comma 1, del regolamento adottato con determinazione AGID n. 628/2021 del 15 dicembre 2021. Le amministrazioni sono tenute a inviare un piano di migrazione e a completare le attività previste dal piano.
   image: 'kp-section-7.svg'
   button: true
-  linkTo: "/come-partecipare/classifica-pa"
-  ariaLabel: "Scopri di più su come classificare dati e servizi"
+  linkTo: "/come-partecipare/inviare-piano-migrazione"
+  ariaLabel: "Scopri di più su come inviare un piano di migrazione"
