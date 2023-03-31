@@ -10,12 +10,11 @@ import { SEO } from '../components/SEO';
 import seo from '../../contents/seo.yml';
 import content from '../../contents/inviare-piano-migrazione/inviare-piano-migrazione.yml';
 import { TimelineVerticalCards } from '../components/TimelineVerticalCards';
-import { HeroVideo } from '../components/HeroVideo';
 import { SideNavigationAccordion } from './sideNavigationAccordion';
 
 const { title: seoTitle, description: seoDescription } = seo.InviarePianoMigrazionePage;
 
-const { sidebar, verticalTimeline, video } = content;
+const { sidebar, verticalTimeline } = content;
 
 const useStyles = createUseStyles({
   breadcrumb: {
@@ -220,10 +219,7 @@ export const InviarePianoMigrazionePage = () => {
                 </section>
               </Container>
               <TimelineVerticalCards item={verticalTimeline} />
-              {/* <section id="watch-video">
-                <HeroVideo src={video.src} description={video.description} videoText={video.videoText} />
-              </section> */}
-              <section id="in-deep">
+              {/* <section id="in-deep">
                 <h3 className={`${classes.contentTitle} mt-5`}>Per approfondire</h3>
                 <div className={`${classes.linkWrapper}`}>
                   <a
@@ -244,7 +240,7 @@ export const InviarePianoMigrazionePage = () => {
                     </svg>
                   </a>
                 </div>
-              </section>
+              </section> */}
             </div>
           </div>
         </Container>

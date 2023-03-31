@@ -12,9 +12,6 @@ sidebar:
   - sectionTitle: 4. Ricevi aggiornamenti 
     sectionId: receive-updates
     sectionActive: false
-  - sectionTitle: Per approfondire 
-    sectionId: in-deep
-    sectionActive: false
 verticalTimeline:
   - index: 0
     title: 'Verifica la classificazione dati e servizi'
