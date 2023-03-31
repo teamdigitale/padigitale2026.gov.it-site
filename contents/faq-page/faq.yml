@@ -731,7 +731,7 @@ questions:
         tag:
           - comuni
           - scuole
-      - title: Quali enti della PA possono presentare domanda per accedere al finanziamento dall'Avviso riferito alla Misura 1.2?
+      - title: Quali enti della PA possono presentare domanda per accedere al finanziamento dall'Avviso riferito alla Misura 1.2 "ASL/AO"?
         content: I Soggetti Attuatori, ovvero coloro che possono accedere allo strumento predisposto dall'Avviso, sono i Comuni.
         tag:
           - comuni
@@ -754,7 +754,7 @@ questions:
       - title: Se ho già migrato un servizio in cloud in modalità "Trasferimento in sicurezza dell’infrastruttura IT" posso aderire al finanziamento per implementare la modalità "Aggiornamento in sicurezza di applicazioni in Cloud"?
         content: Si, la Scuola può partecipare per l'implementazione della modalità "Aggiornamento in sicurezza di applicazioni in Cloud".
         tag:
-          - comuni
+          - scuole
       - title: Il Canone del primo anno è incluso nel finanziamento?
         content: Insieme al totale disponibile per i servizi, all’Ente sarà aggiunto al calcolo 1 anno di canone di servizio cloud dell'importo indicato nell'allegato 2 corrispondente alla fascia di popolazione del Comune.
         tag:
@@ -814,14 +814,6 @@ questions:
         content: No. Singolarmente per ognuno dei servizi oggetto della migrazione l’Ente potrà selezionare il modello di migrazione più adatto da presentare all’interno del piano di migrazione.
         tag:
           - scuole
-      - title: In cosa consiste la classificazione di dati e servizi? A cosa serve?
-        content: 'La classificazione dei dati e dei servizi gestiti dalle PA consente di uniformare e guidare il processo di migrazione al Cloud della PA. Le classi dei dati e servizi sono identificate sulla base del danno che una loro compromissione, in termini di confidenzialità, integrità e disponibilità, provocherebbe al sistema Paese.<br><br>Ulteriori informazioni sono disponibili al seguente link: <a href="https://docs.italia.it/italia/cloud-italia/strategia-cloud-italia-docs/it/stabile/4_la_strategia_cloud_per_la_pubblica_amministrazione.html#la-classificazione-dei-dati-e-dei-servizi" aria-label="link esterno">https://docs.italia.it/italia/cloud-italia/strategia-cloud-italia-docs/it/stabile/4_la_strategia_cloud_per_la_pubblica_amministrazione.html#la-classificazione-dei-dati-e-dei-servizi</a>'
-        tag:
-          - scuole
-      - title: A quanto ammonta l'importo del finanziamento previsto dall'Avviso riferito alla Misura 1.2?
-        content: L’importo del finanziamento concedibile alle scuole sarà calcolato sulla base della sommatoria dei servizi che saranno migrati.Per ogni servizio che verrà migrato verrà corrisposto un costo unitario di € 553 iva inclusa, con un importo minimo quindi pari a € 553 per 1 se vizio fino ad un massimo di € 12.719, equivalente a 23 servizi. Il canone del servizio Cloud è incluso all’interno dell’importo.
-        tag:
-          - scuole
       - title: Quali tipologie di servizi potranno essere oggetto di migrazione?
         content: Oggetto di migrazione potranno essere tutti i servizi erogati in tutte le loro forme dal singolo Ente e il cui livello complessivo di efficienza possa essere ottimizzato attraverso una migrazione verso piattaforme cloud qualificate o presso infrastrutture della PA idonee. L'obiettivo del presente Avviso è la migrazione completa (Full Migration) degli asset ICT on premises dell’ente. Nel caso quindi delle Scuole la full migration è identificata come la migrazione di un numero minimo di 1 fino ad un massimo di 23 servizi, a seconda delle necessità del singolo istituto.
         tag:
@@ -862,11 +854,7 @@ questions:
           cloud.
         tag:
           - Asl/AO
-      - title: Cosa contiene il piano di migrazione?
-        content: Il piano di migrazione dei Soggetti Attuatori conterrà al suo interno tutta la lista di servizi che verranno migrati verso il cloud qualificato.
-        tag:
-          - Asl/AO
-      - title: Qual è la destinazione prevista per i servizi inseriti nel piano di migrazione?
+      - title: Qual è la destinazione prevista per i servizi inseriti in candidatura per l'Avviso 1.2 ASL/AO?
         content: |
           La destinazione dei servizi inseriti nel piano di migrazione previsto dall’avviso è:<br>
           - Per i servizi ordinari: Public Cloud Qualificato, Infrastruttura della PA idonea o PSN; </br>
@@ -878,14 +866,14 @@ questions:
         tag:
           - Asl/AO
       - title: Quali informazioni devono essere indicate nella comunicazione a mezzo PEC dei servizi classificati e non inclusi nel piano di migrazione?
-        content: Nella PEC per ogni servizio classificato ma non facente parte del pianodi migrazione dell’avviso è necessario indicare:<br>1) se il servizio è già stato migrato verso soluzioni cloud nel rispetto di quanto previsto dal Regolamento AGID;</br><br>2) se il servizio verrà migrato entro il 2026 verso soluzioni cloud nel rispetto di quanto previsto dal Regolamento AGID;</br><br> 3) se il servizio non viene migrato secondo le deroghe previste all’interno dell'articolo 7 della Circolare AGID 1/2019, indicando la motivazione e l’infrastruttura che attualmente ospita il servizio dell’amministrazione.</br>
+        content: Nella PEC da inviare all’indirizzo dtd.pnrr@pec.governo.it,  per ogni servizio classificato ma non facente parte del pianodi migrazione dell’avviso è necessario indicare:<br>1) se il servizio è già stato migrato verso soluzioni cloud nel rispetto di quanto previsto dal Regolamento AGID;</br><br>2) se il servizio verrà migrato entro il 2026 verso soluzioni cloud nel rispetto di quanto previsto dal Regolamento AGID;</br><br> 3) se il servizio non viene migrato secondo le deroghe previste all’interno dell'articolo 7 della Circolare AGID 1/2019, indicando la motivazione e l’infrastruttura che attualmente ospita il servizio dell’amministrazione.</br>
         tag:
           - Asl/AO
-      - title: Il canone del primo anno è incluso nel finanziamento?
+      - title: In riferimento all'Avviso 1.2 Scuole, il canone del primo anno è incluso nel finanziamento?
         content: Sì, il canone del primo anno è incluso nell’importo forfettario come definito dall'allegato 2.
         tag:
           - Asl/AO
-      - title: Quanti servizi è necessario migrare?
+      - title: In riferimento all'Avviso 1.2 "ASL/AO", quanti servizi è necessario migrare?
         content: L’adesione all’avviso prevede la migrazione di:<br>- Un minimo di 3 fino ad un massimo di 15 servizi classificati come Ordinari;</br><br>- Un minimo di 3 fino ad un massimo di 26 servizi classificati come Critici.</br>
         tag:
           - Asl/AO
@@ -1471,12 +1459,12 @@ questions:
           I template utili alla generazione del CUP sono: <br> - il template n. 2303001(per progetto finanziato solo su Investimento 1.1); <br> - il template n. 2212002 (per progetto finanziato solo su Investimento 1.2); <br> - nel caso di progetto finanziato su entrambi gli investimenti è necessario utilizzare il template n. 2303001.
         tag:
           - generale
-      - title: Il canone del primo anno è incluso nel finanziamento?
+      - title: Per l'Avviso 1.2 "Comuni", il canone del primo anno è incluso nel finanziamento?
         content: |
           Sì, il canone del primo anno è incluso nell’importo forfettario come definito dall'allegato 2.
         tag:
           - generale
-      - title: Quanti servizi è necessario migrare?
+      - title: In riferimento all'Avviso 1.2 "ASL/AO", quanti servizi è necessario migrare?
         content: |
           L’adesione all’Avviso prevede la migrazione di: <br> - Un minimo di 3 fino ad un massimo di 15 servizi classificati come Ordinari; <br> - Un minimo di 3 fino ad un massimo di 26 servizi classificati come Critici.
         tag:
