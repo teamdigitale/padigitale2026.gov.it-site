@@ -202,7 +202,7 @@ questions:
         id: contratti_ordini
     accordions:
       - title: 'È previsto un periodo di mantenimento dei servizi attivi?'
-        content: "Sì, è necessario mantenere i servizi attivi per almeno 5 anni. Tale requisito, verrà verificato attraverso dei controlli a campione da parte degli organi di controllo preposti nei successivi 5 anni. Sono consentiti eventuali sviluppi migliorativi del progetto iniziale a patto che si riesca a ricostruire quanto è stato fatto attraverso apposita documentazione tecnica e amministrativa."
+        content: Sì, è necessario mantenere i servizi attivi per almeno 5 anni. Tale requisito, verrà verificato attraverso dei controlli a campione da parte degli organi di controllo preposti nei successivi 5 anni. Sono consentiti eventuali sviluppi migliorativi del progetto iniziale a patto che si riesca a ricostruire quanto è stato fatto attraverso apposita documentazione tecnica e amministrativa. I cinque anni decorrono dal 31 dicembre dell’anno in cui è effettuata l’erogazione da parte del Dipartimento.
       - title: |
           Il mio Comune fa parte di un'Unione che gestisce gli sviluppi tecnologici per conto del Comune, come posso partecipare agli avvisi pubblicati su PA digitale 2026? 
         content: |
@@ -274,10 +274,6 @@ questions:
         content: Sì, in base a quanto disposto dell’art. 15 della Legge 241/1990, è nella responsabilità dell'Ente valutare se la forma di cooperazione prevista sia coerente con un rapporto di affidamento di servizi.
         tag:
           - fornitori
-      - title: Chi è il titolare effettivo da inserire nella fase di inserimento dati relativi al fornitore contrattualizzato?
-        content: Secondo quanto disposto dall'art.1 c. 2 lettera u) del D.Lgs. 231/2007, il titolare effettivo è individuabile nella persona fisica per conto della quale è realizzata un'operazione o un'attività, ovvero, nel caso di entità giuridica, la persona o le persone fisiche che, in ultima istanza, possiedono o controllano tale entità, ovvero ne risultano beneficiari secondo i criteri di cui all'allegato tecnico al D.Lgs 231/2007.
-        tag:
-          - fornitori
       - title: È necessario individuare un fornitore esterno per i bandi PNRR?
         content: |
           Il Soggetto Attuatore può affidare lo svolgimento delle attività a uno o più fornitori autonomamente individuati, nel rispetto del codice degli appalti, della normativa applicabile per il suo ente e delle specifiche linee guida presenti negli avvisi. In alternativa, la stessa amministrazione aderente deve segnalare la scelta di non ricorrere ad un fornitore esterno. Nel primo caso (fornitore esterno) potrà assegnare al fornitore individuato il ruolo di Soggetto Realizzatore tramite il tasto “Aggiungi soggetto realizzatore”, inserendo poi nella sezione “Contrattualizzazione” il contratto o la determina di affidamento. Nel secondo caso (servizio svolto in economia dal personale dell’ente), potrà assegnare il ruolo di Soggetto Realizzatore alla stessa PA cliccando sul tasto "Diventa Soggetto Realizzatore" e inserire successivamente un Ordine di Servizio.
@@ -296,7 +292,7 @@ questions:
         tag:
           - fornitori
       - title: Da quale data decorrono i tempi di contrattualizzazione del fornitore? E per il completamento delle attività?
-        content: I termini per la contrattualizzazione del fornitore decorrono dalla data della notifica del decreto di finanziamento.<br>Per il completamento delle attività, invece, gli scenari sono i seguenti:<br>- Nel caso in cui il contratto con il fornitore sia successivo alla notifica del decreto di finanziamento i termini per il completamento attività dovranno essere conteggiati dalla data del contratto dell'ultimo fornitore contrattualizzato;<br>- Nel caso in cui il contratto con il fornitore sia antecedente alla notifica del decreto di finanziamento i termini per il completamente delle attività dovranno essere conteggiati dalla notifica del decreto di finanziamento. Per il dettaglio delle scadenze del cronoprogramma, ti invitiamo a prendere visione dell'Allegato 2 dell'Avviso.
+        content: I termini per la contrattualizzazione del fornitore decorrono dalla data della notifica del decreto di finanziamento.<br>Per il completamento delle attività, invece, gli scenari sono i seguenti:<br>- Nel caso in cui il contratto con il fornitore sia successivo alla notifica del decreto di finanziamento i termini per il completamento attività dovranno essere conteggiati dalla data del contratto dell'ultimo fornitore contrattualizzato;<br>- Nel caso in cui il contratto con il fornitore sia antecedente alla notifica del decreto di finanziamento i termini per il completamento delle attività dovranno essere conteggiati dalla notifica del decreto di finanziamento. Per il dettaglio delle scadenze del cronoprogramma, ti invitiamo a prendere visione dell'Allegato 2 dell'Avviso.
         tag:
           - fornitori
       - title: È possibile avvalersi del supporto di più fornitori al fine di implementare un solo servizio?
@@ -476,7 +472,7 @@ questions:
       - title: |
             Nel Piano di migrazione devo inserire solo i servizi che non ho ancora migrato o anche quelli già migrati in passato?
         content: |
-              L'Ente deve indicare tutti i servizi da migrare alla data di presentazione del piano di migrazione, nel rispetto dell'obbligo indicato all'articolo 33-septies DL 179/2012.. Se alla data di presentazione del piano di migrazione e in base alla classificazione dei dati e servizi effettuata, l'amministrazione dovesse riscontrare di non dover migrare alcuni dati e servizi - in quanto già migrati precedentemente verso il PSN o data center adeguati / soluzioni cloud qualificate in base ai requisiti del Regolamento Cloud AGID del 15 dicembre 2021, della Determina 307 ACN del 18 gennaio 2022 e a quanto previsto dal Decreto ACN del 2 gennaio 2023 - tali dati e servizi non dovranno essere inseriti nel piano di migrazione.
+              L'Ente deve indicare tutti i servizi da migrare alla data di presentazione del piano di migrazione, nel rispetto dell'obbligo indicato all'articolo 33-septies DL 179/2012. Se alla data di presentazione del piano di migrazione e in base alla classificazione dei dati e servizi effettuata, l'amministrazione dovesse riscontrare di non dover migrare alcuni dati e servizi - in quanto già migrati precedentemente verso il PSN o data center adeguati / soluzioni cloud qualificate in base ai requisiti del Regolamento Cloud AGID del 15 dicembre 2021, della Determina 307 ACN del 18 gennaio 2022 e a quanto previsto dal Decreto ACN del 2 gennaio 2023 - tali dati e servizi non dovranno essere inseriti nel piano di migrazione.
       - title: |
             Ho inviato una candidatura a valere sull'Avviso 1.2 che si trova attualmente in stato "Accettata". Risulta tuttavia inibita la compilazione del piano di migrazione: come posso procedere?
         content: |
@@ -623,9 +619,9 @@ questions:
           Nel caso in cui il data center dove sono situati i rack non fosse di proprietà dell’amministrazione, indicare anche la ragione sociale del proprietario del data center nella colonna “Identificativo Data Center e Comune”. In ogni caso i servizi dell’amministrazione al momento della presentazione della candidatura (situazione attuale) devono essere ospitati su software on-premise installati su rack posizionati all’interno di infrastrutture e/o soluzioni cloud prive dei requisiti di cui al Regolamento AGID e alla Determina n.307 del 18 gennaio 2022 dell’Agenzia per la cybersicurezza nazionale in relazione al livello di classificazione risultante dalla procedura di cui alla Determina n. 306 del 18 gennaio 2022 dell’Agenzia per la cybersicurezza nazionale.
         tag:
           - generale
-      - title: Come può essere determinato il costo del progetto?
+      - title: In riferimento all'avviso 1.1 Infrastrutture digitali - migrazione PSN - PAC Pilota, come può essere determinato il costo del progetto?
         content: |
-          Ai fini della determinazione del costo del progetto si fa riferimento al listino di riferimento di cui all’allegato C della Convenzione stipulata tra Dipartimento per la trasformazione digitale e la società Polo Strategico Nazionale S.p.A. con le eventuali modifiche previste dalla Concessione. La Convenzione è disponibile sul sito istituzionale del Dipartimento al seguente link: https://innovazione.gov.it/dipartimento/focus/polo-strategico-nazionale/
+          Ai fini della determinazione del costo del progetto si considera il listino di riferimento di cui all’allegato C della Convenzione stipulata tra Dipartimento per la trasformazione digitale e la società Polo Strategico Nazionale S.p.A. con le eventuali modifiche previste dalla Concessione. La Convenzione è disponibile sul sito istituzionale del Dipartimento al seguente link:<a href="https://innovazione.gov.it/dipartimento/focus/polo-strategico-nazionale/" aria-label="link esterno">https://innovazione.gov.it/dipartimento/focus/polo-strategico-nazionale/</a> 
         tag:
           - generale
       - title: Quali sono le tipologie di spese ammissibili che possono essere indicate nella "Tabella C - Dettaglio Costi"?
