@@ -31,6 +31,10 @@ keypoints:
       image: 'candida-pa-lens.svg'
       title: 'Classificare dati e servizi'
       desc: 'Per abilitare il processo di migrazione delle PA al cloud.'
+    - number: "07"
+      image: 'candida-pa-lens.svg'
+      title: 'Inviare un piano di migrazione'
+      desc: 'Per inviare un piano di migrazione.'
 listMenu:
   - sectionTitle: Attivare la tua PA
     sectionId: "keypoint-01"
@@ -44,6 +48,8 @@ listMenu:
     sectionId: "keypoint-05"
   - sectionTitle: Classificare dati e servizi
     sectionId: "keypoint-06"
+  - sectionTitle: Inviare un piano di migrazione
+    sectionId: "keypoint-07"
 sectionFirst:
   number: '01'
   title: 'Attivare la tua  PA'
@@ -106,4 +112,12 @@ sectionSixth:
   button: true
   linkTo: "/come-partecipare/classifica-pa"
   lBlue: true
+  ariaLabel: "Scopri di più su come classificare dati e servizi"
+sectionSeven:
+  number: '07'
+  title: 'Inviare un piano di migrazione'
+  text: I piani di migrazione dei dati e dei servizi digitali delle amministrazioni sono previsti dall’articolo 10, comma 1, del regolamento adottato con determinazione AGID n. 628/2021 del 15 dicembre 2021. Le amministrazioni sono tenute a inviare un piano di migrazione e a completare le attività previste dal piano.
+  image: 'kp-section-7.svg'
+  button: true
+  linkTo: "/come-partecipare/classifica-pa"
   ariaLabel: "Scopri di più su come classificare dati e servizi"
