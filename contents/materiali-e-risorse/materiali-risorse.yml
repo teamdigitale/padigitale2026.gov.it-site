@@ -48,7 +48,7 @@ questions:
             link: 'https://cloud.italia.it'
             ariaLabel: Sito Cloud Italia (Si apre in un nuovo tab)
           - linkLabel: Guida alla continuità di servizio durante la migrazione in cloud
-            link: 'https://noblogo.org/developers-italia/per-una-guida-alla-continuita-di-servizio-durante-la-migrazione-in-cloud"'
+            link: 'https://noblogo.org/developers-italia/per-una-guida-alla-continuita-di-servizio-durante-la-migrazione-in-cloud'
             ariaLabel: Guida alla continuità di servizio durante la migrazione in cloud (Si apre in un nuovo tab)
   - title: Misura 1.3.1 - Piattaforma Digitale Nazionale Dati (PDND)
     description: L’obiettivo della PDND è rendere concreto il principio europeo del “once-only”, cioè l’inserimento di informazioni una sola volta, permettendo così a cittadini e imprese di non dover più fornire i dati che la PA già possiede per accedere a un servizio. Le amministrazioni, infatti, dopo essere state autenticate e autorizzate dalla Piattaforma, saranno in grado di scambiare dati tra loro, ed erogare così servizi in maniera più rapida ed efficace.
@@ -97,12 +97,12 @@ questions:
       - title: Link utili
         content: 
         accordionContent: 
-          - linkLabel: Linee Guida sull’infrastruttura tecnologica della Piattaforma Digitale Nazionale Dati per l’interoperabilità dei sistemi informativi e delle basi di dati (PDF)
-            link: 'https://www.agid.gov.it/sites/default/files/repository_files/lg_infrastruttura_interoperabilita_pdnd.pdf'
-            ariaLabel: Linee Guida sull’infrastruttura tecnologica della Piattaforma Digitale Nazionale Dati per l’interoperabilità dei sistemi informativi e delle basi di dati (scarica il PDF)
-          - linkLabel: Linee Guida interoperabilità tecnica (PDF)
-            link: 'https://www.agid.gov.it/sites/default/files/repository_files/linee_guida_interoperabilit_tecnica_pa.pdf'
-            ariaLabel: Linee Guida interoperabilità tecnica (scarica il PDF)
+          - linkLabel: Modello siti dei Comuni
+            link: 'https://prossima.designers.italia.it/modelli/comuni/'
+            ariaLabel: Modello siti dei Comuni
+          - linkLabel: Modello siti delle Scuole
+            link: 'https://prossima.designers.italia.it/modelli/scuole/'
+            ariaLabel: Modello siti delle Scuole
   - title: Misura 1.4.4 - Adozione identità digitale (SPID/CIE)
     description: Le soluzioni di identità digitale SPID e CIE consentono alle amministrazioni di abbandonare i diversi sistemi di autenticazione gestiti localmente, permettendo di risparmiare risorse (in termini di lavoro e costo necessari per il rilascio e la manutenzione delle credenziali) ed offrire un accesso sicuro e veloce ed omogeneo ai servizi online su tutto il territorio nazionale.
     sectionId: misura144
