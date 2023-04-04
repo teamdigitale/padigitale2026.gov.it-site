@@ -23,7 +23,7 @@ questions:
     description: Un programma di supporto e incentivo per migrare sistemi, dati e applicazioni delle pubbliche amministrazioni locali verso servizi cloud qualificati.
     sectionId: misura12
     accordions:
-      - title: BROCHURE INFORMATIVE E PRESENTAZIONI
+      - title: Brochure informative e presentazioni
         content:
         accordionContent: 
           - linkLabel: Comuni, indicazioni per la migrazioni e linee guide di asseverazione (PDF)
@@ -54,7 +54,7 @@ questions:
     description: L’obiettivo della PDND è rendere concreto il principio europeo del “once-only”, cioè l’inserimento di informazioni una sola volta, permettendo così a cittadini e imprese di non dover più fornire i dati che la PA già possiede per accedere a un servizio. Le amministrazioni, infatti, dopo essere state autenticate e autorizzate dalla Piattaforma, saranno in grado di scambiare dati tra loro, ed erogare così servizi in maniera più rapida ed efficace.
     sectionId: misura131
     accordions:
-      - title: BROCHURE INFORMATIVE E PRESENTAZIONI
+      - title: Brochure informative e presentazioni
         content:
         accordionContent: 
           - linkLabel: Funzionamento della piattaforma e casi d'uso per i Comuni (PDF)
@@ -85,7 +85,7 @@ questions:
     description: Tutte le risorse per realizzare con facilità esperienze digitali semplici e accessibili per i cittadini.
     sectionId: misura141
     accordions:
-      - title: BROCHURE INFORMATIVE E PRESENTAZIONI
+      - title: Brochure informative e presentazioni 
         content:
         accordionContent: 
           - linkLabel: Modello Comuni (PDF)
@@ -97,12 +97,15 @@ questions:
       - title: Link utili
         content: 
         accordionContent: 
+          - linkLabel: App di valutazione per i siti
+            link: 'https://github.com/italia/pa-website-validator/releases'
+            ariaLabel: App di valutazione per i siti          
           - linkLabel: Modello siti dei Comuni
             link: 'https://prossima.designers.italia.it/modelli/comuni/'
             ariaLabel: Modello siti dei Comuni
           - linkLabel: Modello siti delle Scuole
             link: 'https://prossima.designers.italia.it/modelli/scuole/'
-            ariaLabel: Modello siti delle Scuole
+            ariaLabel: Modello siti delle Scuole       
   - title: Misura 1.4.4 - Adozione identità digitale (SPID/CIE)
     description: Le soluzioni di identità digitale SPID e CIE consentono alle amministrazioni di abbandonare i diversi sistemi di autenticazione gestiti localmente, permettendo di risparmiare risorse (in termini di lavoro e costo necessari per il rilascio e la manutenzione delle credenziali) ed offrire un accesso sicuro e veloce ed omogeneo ai servizi online su tutto il territorio nazionale.
     sectionId: misura144
@@ -117,7 +120,7 @@ questions:
     description: "L’Unità di Missione del PNRR del Dipartimento per la trasformazione digitale della Presidenza del Consiglio dei ministri ha pubblicato le Linee guida per i soggetti attuatori individuati tramite gli Avvisi pubblici di PA digitale 2026 e dedicati agli enti locali.<br /><br />Il documento rappresenta uno strumento fondamentale per aiutare tutte le PA locali nelle fasi di implementazione dei progetti, da un lato nell’utilizzo della piattaforma PA digitale 2026, dall’altro nel raggiungimento degli obiettivi previsti dagli Avvisi."
     sectionId: lineeguidaPA
     accordions:
-      - title: BROCHURE INFORMATIVE E PRESENTAZIONI
+      - title: Brochure informative e presentazioni
         content:
         accordionContent: 
           - linkLabel: Indicazioni pratiche e come prepararsi (PDF)
