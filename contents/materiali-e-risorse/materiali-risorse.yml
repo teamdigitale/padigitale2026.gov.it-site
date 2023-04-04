@@ -17,7 +17,7 @@ sidebar:
     sectionActive: false
   - sectionTitle: Misura 1.4.5 - Piattaforma notifiche
     sectionId: misura145
-    sectionActive: false    
+    sectionActive: false
   - sectionTitle: Linee guida per le PA locali
     sectionId: lineeguidaPA
     sectionActive: false
