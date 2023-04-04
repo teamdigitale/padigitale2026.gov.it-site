@@ -120,7 +120,7 @@ questions:
             link: 'https://docs.italia.it/italia/spid/spid-cie-oidc-docs/it/versione-corrente/index.html'
             ariaLabel: Regole tecniche per l’implementazione del protocollo OpenID Connect (Si apre in un nuovo tab)
   - title: Misura 1.4.5 - Piattaforma notifiche
-    description: Piattaforma Notifiche digitalizza la gestione delle comunicazioni a valore legale, semplificando il processo per tutti: chi le invia, e chi le riceve.
+    description: "Piattaforma Notifiche digitalizza la gestione delle comunicazioni a valore legale, semplificando il processo per tutti: chi le invia, e chi le riceve."
     sectionId: misura145
     accordions:
       - title: Link utili
