@@ -253,7 +253,7 @@ export const GestireProgettoPage = () => {
                     <a
                       target="_blank"
                       className={`${classes.externalLink}`}
-                      href="https://opencup.gov.it/portale/template-cup"
+                      href="https://www.opencup.gov.it/portale/web/opencup/template-cup"
                       title="Link al template cup ( Link esterno - Apre su nuova scheda )"
                       aria-label="Link al template cup ( Link esterno - Apre su nuova scheda )"
                       rel="noreferrer"
@@ -273,7 +273,7 @@ export const GestireProgettoPage = () => {
                     <a
                       target="_blank"
                       className={`${classes.externalLink}`}
-                      href="https://opencup.gov.it/portale/dettaglio-contenuto/-/asset_publisher/9XL5Acd8782j/content/dipartimento-per-la-transizione-digitale-online-le-faq-codice-unico-di-progetto-sulle-iniziative-pnrr-per-la-pa-digitale-2026?p_p_id=com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_9XL5Acd8782j&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&_com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_9XL5Acd8782j_action=ricerca&_com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_9XL5Acd8782j_assetEntryId=163796&_com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_9XL5Acd8782j_redirect=https%3A%2F%2Fopencup.gov.it%3A443%2Fportale%2Felenco-progetti%3Fp_p_id%3Delencoprogettiportlet_WAR_OpenCupPortlets%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26_elencoprogettiportlet_WAR_OpenCupPortlets_action%3DricercaLibera%26_elencoprogettiportlet_WAR_OpenCupPortlets_cercaPerKeyword%3Dpa%2Bdigitale%2B2026"
+                      href="https://www.opencup.gov.it/portale/web/opencup/-/dipartimento-per-la-transizione-digitale-online-le-faq-codice-unico-di-progetto-sulle-iniziative-pnrr-per-la-pa-digitale-2026"
                       title="Link alle domande frequenti ( Link esterno - Apre su nuova scheda )"
                       aria-label="Link alle domande frequenti ( Link esterno - Apre su nuova scheda )"
                       rel="noreferrer"
@@ -297,7 +297,7 @@ export const GestireProgettoPage = () => {
                   <div className={`${classes.linkWrapper}`}>
                     <a
                       target="_blank"
-                      href="https://opencup.gov.it/portale/template-cup"
+                      href="https://www.opencup.gov.it/portale/web/opencup/template-cup"
                       title="Link al template cup ( Link esterno - Apre su nuova scheda )"
                       aria-label="Link al template cup ( Link esterno - Apre su nuova scheda )"
                       rel="noreferrer"
@@ -314,7 +314,7 @@ export const GestireProgettoPage = () => {
                     </a>
                     <a
                       target="_blank"
-                      href="https://opencup.gov.it/portale/dettaglio-contenuto/-/asset_publisher/9XL5Acd8782j/content/dipartimento-per-la-transizione-digitale-online-le-faq-codice-unico-di-progetto-sulle-iniziative-pnrr-per-la-pa-digitale-2026?p_p_id=com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_9XL5Acd8782j&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&_com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_9XL5Acd8782j_action=ricerca&_com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_9XL5Acd8782j_assetEntryId=163796&_com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_9XL5Acd8782j_redirect=https%3A%2F%2Fopencup.gov.it%3A443%2Fportale%2Felenco-progetti%3Fp_p_id%3Delencoprogettiportlet_WAR_OpenCupPortlets%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26_elencoprogettiportlet_WAR_OpenCupPortlets_action%3DricercaLibera%26_elencoprogettiportlet_WAR_OpenCupPortlets_cercaPerKeyword%3Dpa%2Bdigitale%2B2026"
+                      href="https://www.opencup.gov.it/portale/web/opencup/-/dipartimento-per-la-transizione-digitale-online-le-faq-codice-unico-di-progetto-sulle-iniziative-pnrr-per-la-pa-digitale-2026"
                       title="Link alle FAQ per i CUP di PA digitale 2026 ( Link esterno - Apre su nuova scheda )"
                       aria-label="Link alle FAQ per i CUP di PA digitale 2026 ( Link esterno - Apre su nuova scheda )"
                       rel="noreferrer"
