@@ -328,6 +328,14 @@ questions:
         content: Si invita a consultare le "Linee guida per i contratti pubblici finanziati con le risorse del PNRR e del PNC, volte a favorire le pari opportunità di genere e generazionali e l’inclusione lavorativa delle persone con disabilità" che disciplinano dettagliatamente le tematiche indicate (consultabili al seguente link https://www.italiadomani.gov.it/it/strumenti/documenti/archivio-documenti/linee-guida-volte-a-favorire-le-pari-opportunita-di-genere-e-gen.html). 
         tag:
           - contratti_ordini
+      - title: Ai fini del rispetto dei requisiti di ammissibilità della candidatura, qual è la decorrenza dell'avvio delle attività?
+        content: Per la decorrenza dell'avvio delle attività si rimanda ai singoli avvisi pubblici secondo quanto riportato  nei requisiti di ammissibilità dei soggetti attuatori  (Art. 7 dell'Avviso)
+        tag:
+          - contratti_ordini
+      - title: Ai fini del rispetto dei requisiti di ammissibilità della candidatura, a partire da quale data deve essere contrattualizzato il fornitore? 
+        content: Saranno ammissibili a finanziamento le attività contrattualizzate a decorrere dal 1° febbraio 2020, come disciplinato all’art. 17 comma 2 del Regolamento (UE) 2021/241.
+        tag:
+          - contratti_ordini
       - title: È possibile apportare modifiche ad un CUP già generato?
         content: |
           Sì, è possibile apportare modifiche ad un CUP già generato attraverso la funzione applicativa
@@ -1181,7 +1189,7 @@ questions:
           - altri-enti
       - title: |
           Ho rinunciato ad una candidatura 1.4.3 al fine di sottometterne una nuova con i medesimi servizi: quando potrò inviare la nuova domanda?
-        content: A seguito di rinuncia ad una candidatura già inviata a valere sull'Avviso 1.4.3 PagoPA/AppIO, è necessario attendere il Decreto di rinuncia per poter inviare una nuova candidatura con i medesimi servizi. Inoltre, se hai provveduto a rinunciare alla candidatura già inviata a valere dell'Avviso 1.4.3 PagoPA/AppIO Aprile 2022, sarà comunque possibile inviare una nuova candidatura a valere sull'Avviso 1.4.3 PagoPA/AppIO Settembre 2022, per servizi differenti rispetto a quelli selezionati nella precedente domanda.|
+        content: A seguito di rinuncia ad una candidatura già inviata a valere sull'Avviso 1.4.3 PagoPA/AppIO, è necessario attendere il Decreto di rinuncia per poter inviare una nuova candidatura con i medesimi servizi. Inoltre, se hai provveduto a rinunciare alla candidatura già inviata a valere dell'Avviso 1.4.3 PagoPA/AppIO , sarà comunque possibile inviare una nuova candidatura a valere su un successivo Avviso sull'Avviso, per servizi differenti rispetto a quelli selezionati nella precedente domanda.
         tag:
           - comuni
           - altri-enti
