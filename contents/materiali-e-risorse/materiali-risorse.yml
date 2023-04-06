@@ -35,7 +35,7 @@ questions:
           - linkLabel: "Polo Strategico Nazionale - Approfondimento sul sito del Dipartimento per la trasformazione digitale"
             link: 'https://innovazione.gov.it/dipartimento/focus/polo-strategico-nazionale/'
             ariaLabel: Polo Strategico Nazionale - Approfondimento sul sito del Dipartimento per la trasformazione digitale (Si apre in un nuovo tab)    
-           - linkLabel: "Polo Strategico Nazionale - Approfondimento sul sito Cloud Italia"
+          - linkLabel: "Polo Strategico Nazionale - Approfondimento sul sito Cloud Italia"
             link: 'https://cloud.italia.it/strategia-cloud-pa/polo-strategico-nazionale'
             ariaLabel: Polo Strategico Nazionale - Approfondimento sul sito Cloud Italia (Si apre in un nuovo tab)               
   - title: Misura 1.2 - Migrazione al cloud
