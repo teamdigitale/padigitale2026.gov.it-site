@@ -200,6 +200,8 @@ questions:
         id: unioni_dei_comuni
       - title: Contratti/Ordini
         id: contratti_ordini
+      - title: Modifiche ai Progetti
+        id: modifiche_progetti
     accordions:
       - title: 'È previsto un periodo di mantenimento dei servizi attivi?'
         content: Sì, è necessario mantenere i servizi attivi per almeno 5 anni. Tale requisito, verrà verificato attraverso dei controlli a campione da parte degli organi di controllo preposti nei successivi 5 anni. Sono consentiti eventuali sviluppi migliorativi del progetto iniziale a patto che si riesca a ricostruire quanto è stato fatto attraverso apposita documentazione tecnica e amministrativa. I cinque anni decorrono dal 31 dicembre dell’anno in cui è effettuata l’erogazione da parte del Dipartimento.
@@ -328,14 +330,18 @@ questions:
         content: Si invita a consultare le "Linee guida per i contratti pubblici finanziati con le risorse del PNRR e del PNC, volte a favorire le pari opportunità di genere e generazionali e l’inclusione lavorativa delle persone con disabilità" che disciplinano dettagliatamente le tematiche indicate (consultabili al seguente link https://www.italiadomani.gov.it/it/strumenti/documenti/archivio-documenti/linee-guida-volte-a-favorire-le-pari-opportunita-di-genere-e-gen.html). 
         tag:
           - contratti_ordini
-      - title: Ai fini del rispetto dei requisiti di ammissibilità della candidatura, qual è la decorrenza dell'avvio delle attività?
-        content: Per la decorrenza dell'avvio delle attività si rimanda ai singoli avvisi pubblici secondo quanto riportato  nei requisiti di ammissibilità dei soggetti attuatori  (Art. 7 dell'Avviso)
+      - title: |
+            Ai fini del rispetto dei requisiti di ammissibilità della candidatura, qual è la decorrenza dell'avvio delle attività?
+        content: |
+            Per la decorrenza dell'avvio delle attività si rimanda ai singoli avvisi pubblici secondo quanto riportato  nei requisiti di ammissibilità dei soggetti attuatori  (Art. 7 dell'Avviso)
         tag:
-          - contratti_ordini
-      - title: Ai fini del rispetto dei requisiti di ammissibilità della candidatura, a partire da quale data deve essere contrattualizzato il fornitore? 
-        content: Saranno ammissibili a finanziamento le attività contrattualizzate a decorrere dal 1° febbraio 2020, come disciplinato all’art. 17 comma 2 del Regolamento (UE) 2021/241.
+          - contratti_ordini 
+      - title: |
+            Ai fini del rispetto dei requisiti di ammissibilità della candidatura, a partire da quale data deve essere contrattualizzato il fornitore? 
+        content: |
+            Saranno ammissibili a finanziamento le attività contrattualizzate a decorrere dal 1° febbraio 2020, come disciplinato all’art. 17 comma 2 del Regolamento (UE) 2021/241.
         tag:
-          - contratti_ordini
+          - contratti_ordini 
       - title: È possibile apportare modifiche ad un CUP già generato?
         content: |
           Sì, è possibile apportare modifiche ad un CUP già generato attraverso la funzione applicativa
@@ -393,6 +399,12 @@ questions:
           In caso di carenza di questo tipo, occorre produrre un atto di ricognizione (determina dirigenziale) in cui l’Ente attesta espressamente i seguenti elementi del progetto: <br> - Codice Unico di Progetto (CUP) del progetto finanziato con l’Avviso di riferimento;<br> - Decreto di finanziamento del progetto;<br> - Investimento/Misura e Avviso PNRR di riferimento e coerenza del progetto;<br> - Data di avvio delle attività di progetto;<br> - Lista delle attività/servizi imputate al progetto PNRR e tempistica di esecuzione in coerenza con la data di avvio delle attività; <br> - Motivazione delle ragioni che giustificano la mancanza di uno specifico atto amministrativo coevo o antecedente all’avvio delle attività (es. attività avviate prima della pubblicazione dell’Avviso di riferimento, altro…) (se ricorre); <br> - Indicazione che il progetto rispetta il Regolamento (UE) n. 2021/241, in  particolare dell’art. 17, ai sensi del quale sono ammissibili le misure avviate a decorrere dal 1° febbraio 2020, a condizione che soddisfino i requisiti di cui al regolamento stesso;<br> - Indicazione che il progetto non è stato finanziato da altri fondi pubblici, nazionali, regionali o europei e rispetta il principio di addizionalità del sostegno dell’Unione europea previsto dall’art. 9 del Regolamento (UE) 2021/241; <br> - Indicazione che il progetto ha rispettato il principio di non arrecare un danno significativo agli obiettivi ambientali ai sensi dell'articolo 17 del Regolamento (UE) 2020/852 (DNSH), ove applicabile (per l’investimento 1.2);<br> - Indicazione che la realizzazione delle attività progettuali è coerente con i principi e gli obblighi specifici del PNRR e, ove applicabili, ai principi del Tagging clima e digitale, della parità di genere (Gender Equality), della protezione e valorizzazione dei giovani; <br> - Indicazione che l’attuazione del progetto prevede il rispetto delle norme comunitarie e nazionali applicabili, ivi incluse quelle in materia di trasparenza, tutela dei diversamente abili, parità di trattamento, non discriminazione, proporzionalità e pubblicità;<br> - Indicazione di aver rispettato gli obblighi di cui all’art. 11 dell’Avviso su cui il progetto è stato finanziato a valere sul PNRR;<br> - Indicazione dei Regolamenti interni di organizzazione che prevedono il ricorso a lavori in economia, adozione di ordini di servizio.
         tag:
           - contratti_ordini
+      - title: |
+         Quali modifiche si potranno apportare alla candidatura?
+        content: |
+          Le richieste di modifica ammissibili riguardano un'impossibilità sopravvenuta, per causa non imputabile, di realizzare le attività oggetto del finanziamento.  <br>- Nello specifico, sono due gli scenari ammissibili: <br> 1. Aggiornamenti tecnici, nel caso del servizio deprecato e non più disponibile "Spese di pubblicazione bandi pubblici" (codice tassonomico 9/0115119AP/) per le candidature agli Avvisi 1.4.3 Adozione piattaforma pagoPA;  <br> 2. Sopravvenienza normativa, con riferimento alle candidature per gli Avvisi 1.4.1 "Esperienza del Cittadino nei servizi pubblici" Comuni, in cui era possibile scegliere tra i flussi di servizio finanziati la voce "Presentare domanda di partecipazione a un concorso pubblico" ad oggi non più attivabile alla luce del Decreto Legge 30 aprile 2022, n. 36 e del successivo Decreto del Ministro per la Pubblica Amministrazione del 15 settembre 2022 che disciplinano il Portale unico del reclutamento "InPA". 
+        tag:
+          - modifiche_progetti
   - title: Supporto tecnico
     smallTitle: true
     description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
@@ -1189,7 +1201,7 @@ questions:
           - altri-enti
       - title: |
           Ho rinunciato ad una candidatura 1.4.3 al fine di sottometterne una nuova con i medesimi servizi: quando potrò inviare la nuova domanda?
-        content: A seguito di rinuncia ad una candidatura già inviata a valere sull'Avviso 1.4.3 PagoPA/AppIO, è necessario attendere il Decreto di rinuncia per poter inviare una nuova candidatura con i medesimi servizi. Inoltre, se hai provveduto a rinunciare alla candidatura già inviata a valere dell'Avviso 1.4.3 PagoPA/AppIO Aprile 2022, sarà comunque possibile inviare una nuova candidatura a valere sull'Avviso 1.4.3 PagoPA/AppIO Settembre 2022, per servizi differenti rispetto a quelli selezionati nella precedente domanda.
+        content: A seguito di rinuncia ad una candidatura già inviata a valere sull'Avviso 1.4.3 PagoPA/AppIO, è necessario attendere il Decreto di rinuncia per poter inviare una nuova candidatura con i medesimi servizi. Inoltre, se hai provveduto a rinunciare alla candidatura già inviata a valere dell'Avviso 1.4.3 PagoPA/AppIO Aprile 2022, sarà comunque possibile inviare una nuova candidatura a valere sull'Avviso 1.4.3 PagoPA/AppIO Settembre 2022, per servizi differenti rispetto a quelli selezionati nella precedente domanda.|
         tag:
           - comuni
           - altri-enti
@@ -1419,18 +1431,6 @@ questions:
       - title: Generale
         id: generale
     accordions:
-      - title: |
-            Ai fini del rispetto dei requisiti di ammissibilità della candidatura, qual è la decorrenza dell'avvio delle attività?
-        content: |
-            Per la decorrenza dell'avvio delle attività si rimanda ai singoli avvisi pubblici secondo quanto riportato  nei requisiti di ammissibilità dei soggetti attuatori  (Art. 7 dell'Avviso)
-        tag:
-          - generale 
-      - title: |
-            Ai fini del rispetto dei requisiti di ammissibilità della candidatura, a partire da quale data deve essere contrattualizzato il fornitore? 
-        content: |
-            Saranno ammissibili a finanziamento le attività contrattualizzate a decorrere dal 1° febbraio 2020, come disciplinato all’art. 17 comma 2 del Regolamento (UE) 2021/241.
-        tag:
-          - generale 
       - title: |
             Con riferimento al capoverso "I servizi dell’amministrazione al 28 febbraio 2023 (scenario di origine) devono essere ospitati su software on-premise installati su rack posizionati all’interno di infrastrutture e/o soluzioni cloud prive dei requisiti di cui al Regolamento AGID e alla Determina n.307 del 18 gennaio 2022 dell’Agenzia per la cybersicurezza nazionale in relazione al livello di classificazione risultante dalla procedura di cui alla Determina n. 306 del 18 gennaio 2022 dell’Agenzia per la cybersicurezza nazionale" presente al paragrafo "Scenari di ammissibilità" dell'allegato 2 dell'avviso Multimisura, è ritenuta ammissibile la migrazione avvenuta a partire dal 1.2.2020 e conclusa entro il 28.2.2023 da un'infrastruttura classificata "Gruppo B" da AGID ai sensi della Circolare AgID 1/2019 verso un'altra infrastruttura della PA classificata "A" ai sensi della medesima Circolare e verso soluzioni cloud qualificate ai sensi delle Circolari AgID n.2 e 3 del 2018?
         content: |
