@@ -1411,6 +1411,24 @@ questions:
       - title: Generale
         id: generale
     accordions:
+      - title: |
+            Ai fini del rispetto dei requisiti di ammissibilità della candidatura, qual è la decorrenza dell'avvio delle attività?
+        content: |
+            Per la decorrenza dell'avvio delle attività si rimanda ai singoli avvisi pubblici secondo quanto riportato  nei requisiti di ammissibilità dei soggetti attuatori  (Art. 7 dell'Avviso)
+        tag:
+          - generale 
+      - title: |
+            Ai fini del rispetto dei requisiti di ammissibilità della candidatura, a partire da quale data deve essere contrattualizzato il fornitore? 
+        content: |
+            Saranno ammissibili a finanziamento le attività contrattualizzate a decorrere dal 1° febbraio 2020, come disciplinato all’art. 17 comma 2 del Regolamento (UE) 2021/241.
+        tag:
+          - generale 
+      - title: |
+            Con riferimento al capoverso "I servizi dell’amministrazione al 28 febbraio 2023 (scenario di origine) devono essere ospitati su software on-premise installati su rack posizionati all’interno di infrastrutture e/o soluzioni cloud prive dei requisiti di cui al Regolamento AGID e alla Determina n.307 del 18 gennaio 2022 dell’Agenzia per la cybersicurezza nazionale in relazione al livello di classificazione risultante dalla procedura di cui alla Determina n. 306 del 18 gennaio 2022 dell’Agenzia per la cybersicurezza nazionale" presente al paragrafo "Scenari di ammissibilità" dell'allegato 2 dell'avviso Multimisura, è ritenuta ammissibile la migrazione avvenuta a partire dal 1.2.2020 e conclusa entro il 28.2.2023 da un'infrastruttura classificata "Gruppo B" da AGID ai sensi della Circolare AgID 1/2019 verso un'altra infrastruttura della PA classificata "A" ai sensi della medesima Circolare e verso soluzioni cloud qualificate ai sensi delle Circolari AgID n.2 e 3 del 2018?
+        content: |
+            Tale migrazione è ritenuta ammissibile solo se l'infrastruttura della PA di destinazione classificata "A" da AGID ai sensi della Circolare AGID 1/2019 e del Piano triennale per l'informatica nella PA, comunichi ad ACN l'avvenuto adeguamento di tale infrastruttura e dei relativi servizi cloud (IaaS, PaaS, SaaS) ai requisiti di cui al Regolamento AGID Cloud della PA del 15 dicembre 2021 e della Determina ACN n.307, in relazione alla tipologia di dato/servizio ospitato (ordinario, critico, strategico), nelle modalità ed entro i termini indicati dal Decreto ACN dell'8 febbraio 2023. Si ricorda, inoltre, che tale infrastruttura della PA adeguata e i relativi servizi cloud di destinazione dovranno mantenere il possesso dei requisiti al momento della dichiarazione effettuata dal soggetto attuatore ai fini della liquidazione del finanziamento e per i successivi 5 anni.
+        tag:
+          - generale    
       - title: Quali enti della PA possono presentare domanda per accedere al finanziamento dall'Avviso Multimisura 1.1 + 1.2?
         content: |
           I Soggetti Attuatori, ovvero coloro che possono accedere allo strumento predisposto dall'Avviso, sono le Aziende sanitarie locali e le Aziende Ospedaliere (d’ora in avanti anche ASL/AO) come definite dalle categorie IPA "Aziende Sanitarie Locali" e "Aziende Ospedaliere, Aziende Ospedaliere Universitarie, Policlinici e Istituti di Ricovero e Cura a Carattere Scientifico Pubblici".
