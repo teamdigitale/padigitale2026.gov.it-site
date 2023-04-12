@@ -929,14 +929,6 @@ questions:
         content: Il finanziamento concesso con il presente Avviso non è cumulabile con altri finanziamenti pubblici, nazionali, regionali o europei, per le stesse spese ammissibili.
         tag:
           - comuni
-      - title: Entro quando è possibile inoltrare la domanda di accesso al finanziamento?
-        content: La domanda di partecipazione può essere presentata a partire dalla data di pubblicazione dell'Avviso fino ad esaurimento delle risorse disponibili, e comunque non oltre le ore 23:59 del 19 maggio 2023.
-        tag:
-          - comuni
-      - title: Quante API è necessario erogare?
-        content: "Il numero di API che un Comune deve erogare, sulla base della dimensione del comune, è <br> - per i Comuni fino a 5.000 abitanti: 1 <br> - per i Comuni 5.001 - 20.000 abitanti: 2; <br> - per i Comuni 20.001 - 50.000 abitanti: 3 <br> - per i Comuni 50.001 - 100.000 abitanti: 4; <br> - per i Comuni 100.001 - 250.000 abitanti: 5; <br> - per i Comuni > 250.000 abitanti: 6."
-        tag:
-          - comuni
       - title: Quanti endpoint (REST API)/operations (SOAP API) occorre realizzare?
         content: "Per ciascuna API, in funzione della dimensione del Comune, si suggerisce di realizzare un numero medio di endpoint (per REST API)/ operations (per SOAP API) pari ad almeno:<br> - per i Comuni fino a 5.000 abitanti: 5;<br> - per i Comuni 5.001 - 20.000 abitanti: 5; <br> - per i Comuni 20.001 - 50.000 abitanti: 5;<br> - per i Comuni 50.001 - 100.000 abitanti: 10; <br> - per i Comuni 100.001 - 250.000 abitanti: 10; <br> - per i Comuni > 250.000 abitanti: 12."
         tag:
@@ -969,21 +961,12 @@ questions:
         content: Nella candidatura non occorre presentare un elenco dettagliato delle API, ma solo la numerosità delle API da erogare.
         tag:
           - regioni
-      - title: Entro quando è possibile presentare candidatura?
-        content: È possibile presentare candidatura fino ad esaurimento delle risorse disponibili, e comunque non oltre le ore 23:59 del 30 giugno 2023.
-        tag:
-          - regioni
       - title: Qual è lo schema di rendicontazione del progetto, per attività, per API?
         content: |
           La rendicontazione è calcolata sulla numerosità delle API come indicato nel bando. Come disposto dal punto E dell’Allegato 2 dell’Avviso: "L’importo del contributo, in forma forfettaria, sarà riconosciuto al Soggetto Attuatore solo a seguito del conseguimento del risultato atteso, così come dettagliato nei paragrafi C e D."
         tag:
           - regioni
-      - title: Quante API è necessario erogare?
-        content: |
-          Per l’erogazione del contributo la Regione dovrà scegliere un “pacchetto” di API da implementare, ognuno dei quali prevede un numero di API che la Regione dovrà attivare in erogazione. Ogni Regione potrà scegliere uno dei 3 pacchetti proposti, ovvero: <br> - Pacchetto "S": n. 10 API; <br> - Pacchetto "M": n. 20 API; <br> - Pacchetto "L": n. 30 API.        
-        tag:
-          - regioni
-      - title: Qual è l'importo riconosciuto per le attività previste dall'Avviso riferito alla Misura 1.3.1 - Regioni e Province Autonome?
+      - title: Quante API è necessario erogare? Qual è l'importo riconosciuto per le attività previste dall'Avviso riferito alla Misura 1.3.1 - Regioni e Province Autonome?
         content: |
           Gli importi del contributo, riconosciuti sulla base della dimensione del pacchetto scelto, sono così definiti:<br> - Pacchetto "S": n. 10 API è riconosciuto un importo di € 791.292,00;<br> - Pacchetto "M": n. 20 API è riconosciuto un importo di € 1.582.584,00;<br> - Pacchetto "L": n. 30 API è riconosciuto un importo di € 2.373.876,00.
         tag:
@@ -1013,7 +996,7 @@ questions:
           Possono essere pubblicate API su PDND con open data di dati dinamici e dati ad alto valore ma non dataset statici (In corso di pubblicazione linee guida AGID sul tema). Al momento possono essere esposte solo API per cui è previsto lo stacco di un token, dunque API con caratteristiche particolari (es SLA garantiti). Da fine 2023 l’uso del token sarà reso opzionale. Dal momento che, come noto, PDND non interviene nel flusso dati, è possibile che un'API pubblicata su PDND possa essere anche contattata in modo esterno senza l'utilizzo del token.
         tag:
           - regioni 
-      - title: Entro quanto tempo dovrà essere contrattualizzato il fornitore?
+      - title: In riferimento all'avviso 1.3.1 PDND Regioni e Province Autonome, entro quanto tempo dovrà essere contrattualizzato il fornitore?
         content: |
           Il fornitore dovà essere contrattualizzato al massimo entro 6 mesi (180 giorni) dalla data di notifica del decreto di finanziamento.
         tag:
@@ -1023,7 +1006,7 @@ questions:
           Le attività dovranno essere eseguite entro e non oltre 12 mesi (365 giorni) a partire dalla data di pubblicazione del decreto di finanziamento
         tag:
           - regioni 
-      - title: Quanti endpoint/operations è consigliabile realizzare?
+      - title: In riferimento all'avviso 1.3.1 PDND Regioni e Province Autonome, quanti endpoint/operations è consigliabile realizzare?
         content: |
           Come raccomandazione si suggerisce di realizzare un numero medio di endpoint (per REST API) /operations (per SOAP API) pari almeno a 10.
         tag:
@@ -1053,6 +1036,11 @@ questions:
          Le attività da porre in essere per l’erogazione di API da parte della Regione su PDND sono le seguenti:<br> - Completamento della procedura di adesione sul portale Self Care messo a disposizione da PagoPA S.p.A. o altra modalità individuata dalla PagoPA S.p.A.:<br> i. Selezione dell’ente per cui si intende aderire;<br> ii. Indicazione del Rappresentante Legale e dei Referenti amministrativo e tecnico;<br> - Firma digitale dell’accordo di adesione da parte del rappresentante legale: l’accordo viene inviato sulla PEC dell’Ente presente in IPA a valle della procedura svolta per l’adesione;<br> - Caricamento dell’accordo di adesione firmato al link di conferma ricevuto nella stessa.
          tag:
           - regioni 
+      - title: Come si realizza il processo di onboarding?
+        content: |
+          Le attività da porre in essere per l’erogazione di API da parte della Regione su PDND sono le seguenti: <br> - Completamento della procedura di adesione sul portale Self Care messo a disposizione da PagoPA S.p.A. o altra modalità individuata dalla PagoPA S.p.A.: <br> i. Selezione dell’ente per cui si intende aderire; <br> ii. Indicazione del Rappresentante Legale e dei Referenti amministrativo e tecnico; <br>- Firma digitale dell’accordo di adesione da parte del rappresentante legale: l’accordo viene inviato sulla PEC dell’Ente presente in IPA a valle della procedura svolta per l’adesione; <br> - Caricamento dell’accordo di adesione firmato al link di conferma ricevuto nella stessa.
+        tag:
+          - regioni
   - title: 1.4.1 Esperienza del Cittadino nei servizi pubblici
     description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
     sectionId: measure-1-4-1
@@ -1068,7 +1056,7 @@ questions:
         content: I Soggetti Attuatori, ovvero coloro che possono accedere allo strumento predisposto dall'Avviso, sono esclusivamente i Comuni.
         tag:
           - comuni
-      - title: È possibile accedere al finanziamento in caso di realizzazione del progetto prima della pubblicazione dell'Avviso “Esperienza del cittadino nei servizi pubblici” COMUNI (Aprile 2022) per i Comuni riferito alla Misura 1.4.1?
+      - title: È possibile accedere al finanziamento in caso di realizzazione del progetto prima della pubblicazione dell'Avviso “Esperienza del cittadino nei servizi pubblici” COMUNI per i Comuni riferito alla Misura 1.4.1?
         content: Si, è possibile accedere al finanziamento previsto dall'Avviso nel caso in cui l'implementazione delle attività di miglioramento oggetto del finanziamento siano state realizzate a decorrere dal 1° Febbraio 2020, con risorse finanziarie proprie.
         tag:
           - comuni
@@ -1088,7 +1076,7 @@ questions:
         content: 'Il modello di sito comunale, messo a disposizione all’indirizzo <a href="https://designers.italia.it/modello/comuni/">https://designers.italia.it/modello/comuni/</a> comprende due strumenti fondamentali: l’architettura dell’informazione del sito comunale e i template html del sito comunale.'
         tag:
           - comuni
-      - title: Come viene calcolato l'importo forfettario previsto dall'Avviso “Esperienza del cittadino nei servizi pubblici” COMUNI (Aprile 2022) per i Comuni riferito alla Misura 1.4.1?
+      - title: Come viene calcolato l'importo forfettario previsto dall'Avviso “Esperienza del cittadino nei servizi pubblici” COMUNI per i Comuni riferito alla Misura 1.4.1?
         content: L’importo del finanziamento concedibile ai Comuni è individuato in un importo forfettario (lump sum) determinato in funzione della tipologia degli interventi previsti ed in funzione della classe di popolazione residente di riferimento del medesimo Comune (Art. 1, comma 3 dell'Avviso).
         tag:
           - comuni
@@ -1096,7 +1084,7 @@ questions:
         content: "I Soggetti Attuatori, ovvero coloro che possono accedere allo strumento predisposto dall'Avviso,  sono le Scuole sedi di Direttivo comprensive di scuole secondarie di 1° e 2° grado dislocate su tutto il territorio nazionale."
         tag:
           - scuole
-      - title: È possibile accedere al finanziamento in caso di realizzazione del progetto prima della pubblicazione dell'Avviso "Esperienza del cittadino nei servizi pubblici” SCUOLE (Aprile 2022) per le scuole riferito alla Misura 1.4.1?
+      - title: È possibile accedere al finanziamento in caso di realizzazione del progetto prima della pubblicazione dell'Avviso "Esperienza del cittadino nei servizi pubblici” SCUOLE in riferito alla Misura 1.4.1? ?
         content: Si, è possibile accedere al finanziamento previsto dall'Avviso nel caso in cui tutte le attività necessarie per l’implementazione di un modello standard di siti web destinati alle comunità scolastiche siano state realizzate a decorrere dal 1 Febbraio 2020, con risorse finanziarie proprie.
         tag:
           - scuole
@@ -1108,16 +1096,12 @@ questions:
         content: 'Il modello di sito istituzionale per le scuole, messo a disposizione all’indirizzo <a href="https://designers.italia.it/modello/scuole" aria-label="link esterno">https://designers.italia.it/modello/scuole</a> comprende tre strumenti fondamentali: l’architettura dell’informazione del sito, il codice HTML del sito e il tema Wordpress del sito stesso.'
         tag:
           - scuole
-      - title: È possibile accedere al finanziamento in caso di realizzazione del progetto, con l'ausilio di Fondi pubblici, prima della pubblicazione dell'Avviso “Esperienza del cittadino nei servizi pubblici” SCUOLE (Aprile 2022)” riferito alla Misura 1.4.1?
+      - title: È possibile accedere al finanziamento in caso di realizzazione del progetto, con l'ausilio di Fondi pubblici, prima della pubblicazione dell'Avviso “Esperienza del cittadino nei servizi pubblici” SCUOLE riferito alla Misura 1.4.1?
         content: No, non è possibile accedere al finanziamento previsto dall'Avviso riferito alla Misura 1.4.1 nel caso in cui le attività necessarie per l'implementazione del sito web della PA siano state realizzate con altri finanziamenti pubblici, nazionali, regionali o europei, secondo quanto previsto dall'art. 7 dell'Avviso.
         tag:
           - scuole
-      - title: Quando il processo si intende concluso?
+      - title: Quando il processo di rilascio del sito istituzionale si intende concluso?
         content: "Al termine del processo di rilascio del sito istituzionale per le scuole, l’ente dovrà attestare mediante dichiarazione da caricare sulla piattaforma di adesione https://padigitale2026.gov.it/ il raggiungimento di alcune caratteristiche, che rappresentano ai fini dell'Avviso riferito alla Misura 1.4.1, la dichiarazione di conformità del sito per le scuole realizzato rispetto al modello fornito.<br>In particolare, le attività si intendono concluse con esito positivo al momento in cui:<br>- Il sito è disponibile online<br>- È stata compilata la checklist di conformità indicata nel paragrafo Verifica della conformità dell'Allegato 2 all'avviso"
-        tag:
-          - scuole
-      - title: A quanto ammonta l'importo del finanziamento previsto dall'Avviso riferito alla Misura 1.4.1 “Esperienza del cittadino nei servizi pubblici” SCUOLE (Aprile 2022)”?
-        content: L’importo del finanziamento, riconosciuto per il rifacimento del sito web istituzionale è pari a 7.301 euro Iva inclusa. L’importo del finanziamento sarà riconosciuto al Soggetto Attuatore solo a seguito del conseguimento del risultato atteso.
         tag:
           - scuole
       - title: In relazione al criterio C.SE.1.1 - Accedere al servizio / identità digitale relativa alla Conformità ai servizi digitali è obbligatorio implementare il SSO per garantire la navigazione "autenticata" tra i vari servizi digitali implementati?
@@ -1139,16 +1123,12 @@ questions:
         content: 'L’importo del finanziamento concedibile ai Comuni è individuato in un importo forfettario determinato secondo il seguente criterio:<br>a. per i Comuni fino a 5.000 ab. pagoPA: €607 per servizio (min.3 max 117);<br>b. per i Comuni 5.001 - 20.000 ab. pagoPA: €857 per servizio (min.3 max 117);<br>c. per i Comuni 20.001 - 100.000 ab. pagoPA: €1821 per servizio (min.5 max 117);<br>d. per i Comuni 100.001 - 250.000 ab. pagoPA: €2747 per servizio (min.5 max 117);<br>e. per i Comuni > 250.000 ab. pagoPA: €7967 per servizio (min.5 max 117).'
         tag:
           - comuni
-      - title: Quali enti della PA possono presentare domanda?
+      - title: In riferimento all'avviso 1.4.3, quali enti della PA possono presentare domanda?
         content: I soggetti attuatori, ovvero coloro che possono accedere allo strumento predisposto dall'Avviso, sono i Comuni.
         tag:
           - comuni
       - title: È possibile accedere al finanziamento in caso di realizzazione del progetto prima della pubblicazione dell'Avviso "Adozione pagoPA" della Misura 1.4.3?
         content: Si, è possibile accedere al finanziamento previsto dall'Avviso nel caso in cui l'attivazione dei servizi di incasso (pagoPA) sia stata realizzata dopo il 01 Aprile 2021 con risorse finanziarie proprie.
-        tag:
-          - comuni
-      - title: È possibile accedere al finanziamento in caso di realizzazione del progetto in data antecedente al 01 Aprile 2021?
-        content: No, non è possibile accedere al finanziamento previsto dall'Avviso nel caso in cui il processo di l'attuazione dei servizi di incasso (pagoPA) sia stata realizzatao prima del 01 Aprile 2021, indipendemente dai fondi/risorse utilizzati. Può essere invece finanziata l'attivazione di nuovi servizi, non inclusi nel precedente finanziamento.
         tag:
           - comuni
       - title: Quali interventi possono essere finanziati dall'Avviso 1.4.3 per pagoPA?
@@ -1175,7 +1155,7 @@ questions:
         content: Il servizio Canone Unico Patrimoniale Corporate è ammissibile purché non integrato a titolo gratuito ma con fondi propri a decorrere dal 1° aprile 2021. Inoltre, sarà necessario caricare in piattaforma un contratto o un ordine di servizio.
         tag:
           - comuni    
-      - title: Quali enti della PA possono presentare domanda?
+      - title: In riferimento all'Avviso  "Adozione pagoPA" della Misura 1.4.3, quali enti della PA possono presentare domanda?
         content: 'Sono invitate a presentare proposte a valere sul presente Avviso:<br>a. Le Regioni e le Province Autonome;<br>b. Le  Aziende sanitarie locali e le Aziende ospedaliere pubbliche e le Agenzie sanitarie regionali;<br>c. Le Università e gli Istituti di Istruzione Universitaria pubblici, gli Enti e le Istituzioni di ricerca pubblici, gli Enti e Consorzi per il diritto allo studio, i Consorzi interuniversitari di ricerca e le Istituzioni per l’Alta Formazione Artistica, Musicale e Coreutica - (AFAM) pubbliche.'
         tag:
           - altri-enti
@@ -1199,9 +1179,16 @@ questions:
         content: L'integrazione di un servizio PagoPa non si esaurisce con la mera integrazione tecnica tra gli applicativi dell'Ente e il gateway dei pagamenti di PagoPA. All'Ente è richiesto anche che:<br>- l'incasso dei servizi venga correttamente riconciliato nel bilancio (tramite opportune integrazioni con i software gestionali) secondo quanto richiesto dalle norme tributarie specificatamente al codice tassonomico del servizio incassato; <br>- i cittadini siano correttamente informati della nuova opportunità di pagamento in tutti i punti di contatto.<br>L'obiettivo finale è quello di aiutare il Paese nella transizione digitale contribuendo alla realizzazione di un’amministrazione che offra servizi sempre più digitali e facilmente utilizzabili dai cittadini.
         tag:
           - altri-enti
+          - comuni
+      - title: |
+          A seguito di rinuncia ad una candidatura già inviata a valere sull'Avviso 1.4.3 PagoPA/AppIO, è necessario attendere il Decreto di rinuncia per poter inviare una nuova candidatura con i medesimi servizi. Inoltre, se hai provveduto a rinunciare alla candidatura già inviata a valere dell'Avviso 1.4.3 PagoPA/AppIO, sarà comunque possibile inviare una nuova candidatura a valere su un successivo Avviso per servizi differenti rispetto a quelli selezionati nella precedente domanda.
+        content: L'integrazione di un servizio PagoPa non si esaurisce con la mera integrazione tecnica tra gli applicativi dell'Ente e il gateway dei pagamenti di PagoPA. All'Ente è richiesto anche che:<br>- l'incasso dei servizi venga correttamente riconciliato nel bilancio (tramite opportune integrazioni con i software gestionali) secondo quanto richiesto dalle norme tributarie specificatamente al codice tassonomico del servizio incassato; <br>- i cittadini siano correttamente informati della nuova opportunità di pagamento in tutti i punti di contatto.<br>L'obiettivo finale è quello di aiutare il Paese nella transizione digitale contribuendo alla realizzazione di un’amministrazione che offra servizi sempre più digitali e facilmente utilizzabili dai cittadini.
+        tag:
+          - altri-enti
       - title: |
           Ho rinunciato ad una candidatura 1.4.3 al fine di sottometterne una nuova con i medesimi servizi: quando potrò inviare la nuova domanda?
-        content: A seguito di rinuncia ad una candidatura già inviata a valere sull'Avviso 1.4.3 PagoPA/AppIO, è necessario attendere il Decreto di rinuncia per poter inviare una nuova candidatura con i medesimi servizi. Inoltre, se hai provveduto a rinunciare alla candidatura già inviata a valere dell'Avviso 1.4.3 PagoPA/AppIO Aprile 2022, sarà comunque possibile inviare una nuova candidatura a valere sull'Avviso 1.4.3 PagoPA/AppIO Settembre 2022, per servizi differenti rispetto a quelli selezionati nella precedente domanda.|
+        content: |
+          A seguito di rinuncia ad una candidatura già inviata a valere sull'Avviso 1.4.3 PagoPA/AppIO, è necessario attendere il Decreto di rinuncia per poter inviare una nuova candidatura con i medesimi servizi. Inoltre, se hai provveduto a rinunciare alla candidatura già inviata a valere dell'Avviso 1.4.3 PagoPA/AppIO , sarà comunque possibile inviare una nuova candidatura a valere su un successivo Avviso , per servizi differenti rispetto a quelli selezionati nella precedente domanda.
         tag:
           - comuni
           - altri-enti
@@ -1223,7 +1210,7 @@ questions:
       - title: Altri Enti
         id: altri-enti
     accordions:
-      - title: Quali enti della PA possono presentare domanda?
+      - title: In riferimento all'Avviso 1.4.3 "Adozione  appIO Altri Enti, quali enti della PA possono presentare domanda?
         content: I Soggetti Attuatori, ovvero coloro che possono accedere allo strumento predisposto dall'Avviso, sono i Comuni.
         tag:
           - comuni
@@ -1247,7 +1234,7 @@ questions:
         content: Il processo si riterrà concluso con esito positivo quando le richieste di pubblicazione saranno approvate dalla pagoPA S.p.A  e tutti i servizi saranno visibili in App.
         tag:
           - comuni
-      - title: Quali enti della PA possono presentare domanda?
+      - title: In riferimento all'Avviso "Adozione appIO Comuni"della Misura 1.4.3, quali enti della PA possono presentare domanda?
         content: "Sono invitate a presentare proposta a valere sull'Avviso:<br>a. Le Regioni e le Province Autonome;<br>b. Le  Aziende sanitarie locali, Aziende ospedaliere pubbliche e le Agenzie sanitarie regionali;<br>c. Le Università e gli Istituti di Istruzione Universitaria pubblici, gli Enti e le Istituzioni di ricerca pubblici, gli Enti e Consorzi per il diritto allo studio, i Consorzi interuniversitari di ricerca e le Istituzioni per l’Alta Formazione Artistica, Musicale e Coreutica - AFAM pubbliche."
         tag:
           - altri-enti
@@ -1270,6 +1257,11 @@ questions:
           - altri-enti
       - title: Ho rinunciato ad una candidatura 1.4.3 al fine di sottometterne una nuova con i medesimi servizi; quando potrò inviare la nuova domanda?
         content: A seguito di rinuncia ad una candidatura già inviata a valere sull'Avviso 1.4.3 PagoPA/AppIO, è necessario attendere il Decreto di rinuncia per poter inviare una nuova candidatura con i medesimi servizi. Inoltre, se hai provveduto a rinunciare alla candidatura già inviata a valere dell'Avviso 1.4.3 PagoPA/AppIO Aprile 2022, sarà comunque possibile inviare una nuova candidatura a valere sull'Avviso 1.4.3 PagoPA/AppIO Settembre 2022, per servizi differenti rispetto a quelli selezionati nella precedente domanda.
+        tag:
+          - altri-enti
+      - title: A seguito di rinuncia ad una candidatura già inviata a valere sull'Avviso 1.4.3 PagoPA/AppIO, è necessario attendere il Decreto di rinuncia per poter inviare una nuova candidatura con i medesimi servizi. Inoltre, se hai provveduto a rinunciare alla candidatura già inviata a valere dell'Avviso 1.4.3 PagoPA/AppIO, sarà comunque possibile inviare una nuova candidatura a valere su un successivo Avviso, per servizi differenti rispetto a quelli selezionati nella precedente domanda.
+        content: |
+             In caso di difformità rilevate rispetto a quanto indicato in piattaforma, e in merito allo stato di attivazione dei servizi PagoPA /AppIO, ovvero data di attivazione, codice tassonomico (PagoPA), ID servizio (AppIO), ti invitiamo a contattare preliminarmente il tuo fornitore. Si precisa che la piattaforma PA digitale 2026 pre-carica i dati dell’amministrazione presenti nella banca dati PagoPA /AppIO, pertanto l’Ente - in autonomia o per il tramite del proprio fornitore - sarà in grado di conoscere le date di attivazione e di selezionare i servizi corretti in fase di candidatura. Per data di attivazione dei servizi pagoPA si intende la data della prima transazione positiva avvenuta con il corretto codice tassonomico. Per i servizi di nuova attivazione, per visualizzare la data di attivazione occorrerà attendere circa 15 giorni dalla prima transazione positiva, come sopra specificata, ai fini dell’aggiornamento sul PA digitale 2026.
         tag:
           - altri-enti
   - title: 1.4.4 Adozione identità digitale
@@ -1402,7 +1394,7 @@ questions:
         content: È obbligatorio attivare e integrare n.2 servizi, secondo quanto disposto dal Paragrafo C dell'Allegato 2.
         tag:
           - comuni
-      - title: Entro quanto tempo devono essere completate le attività oggetto di finanziamento?
+      - title: In riferimento all'avviso 1.3.1 PDND Regioni e Province Autonome, Entro quanto tempo devono essere completate le attività oggetto di finanziamento?
         content: Le attività dovranno essere eseguite entro e non oltre 6 mesi (180 gg) a partire dalla data di pubblicazione del decreto di finanziamento di cui art. 10, comma 5, dell’avviso.
         tag:
           - comuni
