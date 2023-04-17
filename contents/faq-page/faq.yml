@@ -516,15 +516,15 @@ questions:
       - title: Generale
         id: generale
     accordions:
-      - title: Esiste una lista cogente di PA che possano richiedere l’esenzione di cui al comma 4-quater dell’articolo 33-septies DL 179/2012? Tale esenzione deve considerarsi "totale" a tutte le funzioni svolte dall'amministrazione o può altresì considerarsi relativa limitatamente alle singole funzioni richiamate all'articolo 2, comma 6, del decreto legislativo 7 marzo 2005, n. 82? 
+      - title: In riferimento all'avviso 1.1 Infrastrutture digitali - migrazione PSN - PAC Pilota, esiste una lista cogente di PA che possano richiedere l’esenzione di cui al comma 4-quater dell’articolo 33-septies DL 179/2012? Tale esenzione deve considerarsi "totale" a tutte le funzioni svolte dall'amministrazione o può altresì considerarsi relativa limitatamente alle singole funzioni richiamate all'articolo 2, comma 6, del decreto legislativo 7 marzo 2005, n. 82? 
         content: |
           Ai sensi dell’articolo 33-septies, comma 4-quater del D.L. n. 179/2012 gli obblighi di migrazione previsti ai commi precedenti non si applicano alle amministrazioni che svolgono le funzioni di cui all'articolo 2, comma 6, del decreto legislativo 7 marzo 2005, n. 82. L'articolo 2, comma 6, del decreto legislativo 7 marzo 2005, n. 82 prevede che le disposizioni del Codice non si applicano limitatamente all'esercizio delle attività e funzioni di ordine e sicurezza pubblica, difesa e sicurezza nazionale, polizia giudiziaria e polizia economico-finanziaria e consultazioni elettorali, nonché alle comunicazioni di emergenza e di allerta in ambito di protezione civile. (…). <br> 1. Con riferimento al primo quesito, non è rinvenibile nell’ordinamento giuridico un elenco di amministrazioni pubbliche che esercitano le funzioni di cui all’articolo 2, comma 6, del decreto legislativo 7 marzo 2005, n. 82. Pertanto, le amministrazioni esonerate dall’obbligo di migrazione in quanto destinatarie della disposizione di carattere derogatorio di cui all’art. 33-septies, comma 4-quater del D.L. 18/10/2012, n. 179, dovranno essere individuate, in concreto, tra quelle oggetto di ricognizione ad opera dell’ISTAT ai sensi dell'articolo 1, comma 3 della legge 31 dicembre 2009, n. 196 e successive modificazioni. (Legge di contabilità e di finanza pubblica) che esercitano le attività e funzioni di cui al predetto articolo 2, comma 6, del decreto legislativo 7 marzo 2005, n. 82. Per completezza si rappresenta che le disposizioni sugli obblighi di migrazione si applicano, altresì, all’amministrazione della difesa nel rispetto della disciplina e dei limiti posti dal comma 4-bis dell’art. 33-septies del DL 179/2012. <br> 2. In merito al secondo quesito, stante il carattere eccezionale della previsione derogatoria di cui all’articolo, comma 4-quater 33-septies DL 179/2012, allorché le amministrazioni pubbliche, come innanzi individuate, esercitino una pluralità di funzioni eterogenee, l’esenzione dagli obblighi di migrazione è limitata alle sole attività e funzioni riconducibili nel novero di quelle espressamente indicate nell’articolo 2, comma 6, del decreto legislativo 7 marzo 2005, n. 82.
         tag:
           - generale
-      - title: Quali enti della PA possono presentare domanda per accedere al finanziamento dall'Avviso 1.1?
+      - title: In riferimento all'avviso 1.1 Infrastrutture digitali - migrazione PSN - PAC Pilota,quali enti della PA possono presentare domanda per accedere al finanziamento dall'Avviso 1.1?
         content: |
-          I Soggetti attuatori, ovvero coloro che possono accedere allo strumento predisposto dall'Avviso, le Amministrazioni Centrali, che assumeranno il ruolo di Soggetti attuatori di cui all’art. 9 del DL 77/2021 convertito con L.108/2021, riportate all'interno dell'Art. 4 dell'Avviso 1.1, di cui alla tabella all'art. 4 comma 1 dell'Avviso. Ciascuna articolazione organizzativa di primo livello (Direzioni generali/Dipartimento/Comandi) di un’Amministrazione Centrale di cui al precedente comma 1 può presentare una sola domanda di partecipazione, a valere sul presente Avviso, fermo restando l’importo massimo per ciascuna Amministrazione Centrale. 
-        tag:
+          Sono invitate a presentare proposte a valere sul presente Avviso le Amministrazioni Centrali, che assumeranno il ruolo di Soggetti Attuatori di cui all’art. 9 del DL 77/2021 convertito con L.108/2021, riportate all'interno tabella all'art. 4 comma 1 dell'Avviso 1.1. Ciascuna articolazione organizzativa di primo livello (Direzioni generali/Dipartimento/Comandi) di un’Amministrazione Centrale di cui al precedente comma 1 può presentare una sola domanda di partecipazione, a valere sul presente Avviso, fermo restando l’importo massimo per ciascuna Amministrazione Centrale. 
+          tag:
           - generale
       - title: Quali sono gli interventi finanziabili dall'Avviso 1.1?
         content: |
@@ -601,12 +601,12 @@ questions:
           È possibile ottenere chiarimenti sulla procedura amministrativa dell'Avviso mediante la proposizione di quesiti scritti da inoltrare, almeno sette giorni prima della chiusura dell’Avviso, in forma scritta a mezzo PEC all’indirizzo dtd.pnrr@pec.governo.it, riportando nell’oggetto l’identificativo: Richiesta di chiarimenti Avviso Investimento 1.1. PNRR M1-C1. Non sono ammessi chiarimenti tramite diversi canali di comunicazione.
         tag:
           - generale
-      - title: Entro quanto tempo saranno fornite le risposte ai chiarimenti richiesti al DTD? 
+      - title: In riferimento all'avviso 1.1 Infrastrutture digitali - migrazione PSN - PAC Pilota, entro quanto tempo saranno fornite le risposte ai chiarimenti richiesti al DTD? 
         content: |
           Le risposte alle richieste di chiarimenti amministrativi, presentate in tempo utile, verranno fornite in formato elettronico almeno tre giorni prima della chiusura dell’Avviso mediante pubblicazione in forma anonima sul sito internet https:/ innovazione.gov.it. I chiarimenti e le risposte fornite costituiranno parte integrante del presente Avviso.
         tag:
           - generale
-      - title: Eventuali modifiche dell'Avviso 1.1, dove saranno consultabili?
+      - title: In riferimento all'avviso 1.1 Infrastrutture digitali - migrazione PSN - PAC Pilota, eventuali modifiche dell'Avviso , dove saranno consultabili?
         content: |
           Nel caso si rendano necessarie modifiche all'Avviso e/o ai suoi Allegati, sarà fornita tempestiva informazione agli interessati mediante specifica comunicazione sul sito https://innovazione.gov.it/ .
         tag:
@@ -616,7 +616,7 @@ questions:
           L’articolo 33-septies del DL 18 ottobre 2012, n. 179 stabilisce le infrastrutture verso le quali le Amministrazioni Centrali migrano i loro Centri per l'elaborazione delle informazioni (CED) e i relativi sistemi informatici, privi dei requisiti fissati dal Regolamento AgID. In particolare, sono identificate 3 opzioni:<br> 1. verso l’infrastruttura Polo Strategico Nazionale;<br> 2. verso altra infrastruttura propria già esistente e in possesso dei requisiti fissati dallo stesso Regolamento AGID;<br> 3. verso soluzioni cloud nel rispetto di quanto previsto dal Regolamento AGID.
         tag:
           - generale
-      - title: Un Ente che non intende migrare verso le n.3 infrastrutture previste dall'art. 33-septies del DL 18 ottobre 2012, n. 179, come comunica tale scelta?
+      - title: In riferimento all'avviso 1.1 Infrastrutture digitali - migrazione PSN - PAC Pilota, un Ente che non intende migrare verso le n.3 infrastrutture previste dall'art. 33-septies del DL 18 ottobre 2012, n. 179, come comunica tale scelta?
         content: |
           Nel caso in cui l'Ente non intenda migrare I dati verso le 3 destinazioni previste, sarà necessario fornire l’indicazione di non migrare tale servizio descrivendo la relativa motivazione e l’attuale infrastruttura che lo ospita.
         tag:
@@ -626,7 +626,7 @@ questions:
           Per ciascun servizio dell’Amministrazione è necessario indicare:<br> - Identificativo del/i rack che ospita/no attualmente il servizio dell’amministrazione;<br> - Identificativo del Data Center in cui è situato il rack e il relativo Comune in cui è situato;<br> - Esito della classificazione del servizio dell’amministrazione validata dall’Agenzia per la Cybersicurezza Nazionale ai sensi del Regolamento AGID (Strategico, Critico, Ordinario), salvo i casi di deroga previsti dalla norma;<br> - indicazione della modalità attuale di erogazione del servizio: se da server fisici, da macchine virtuali (VM) o container.
         tag:
           - generale
-      - title: Tutti i servizi dell'Ente classificati come strategici, possono essere migrati verso il PSN?
+      - title: In riferimento all'avviso 1.1 Infrastrutture digitali - migrazione PSN - PAC Pilota, tutti i servizi dell'Ente classificati come strategici, possono essere migrati verso il PSN?
         content: |
           I servizi dell’Amministrazione classificati strategici possono migrare verso tutte le tipologie di servizi offerti dal PSN ad eccezione del servizio “Secure public cloud”, in quanto tale servizio è progettato per soddisfare i requisiti necessari per ospitare i servizi dell’amministrazione classificati come critici.
         tag:
@@ -636,9 +636,9 @@ questions:
           Il processo di migrazione si intende concluso con esito positivo al momento in cui il Soggetto attuatore effettuerà comunicazione del rilascio in esercizio comprensivo del verbale di collaudo di tutti i servizi oggetto di migrazione verso il PSN.
         tag:
           - generale
-      - title: Qualora il data center non fosse di proprietà dell'amministrazione, è necessario indicare delle informazioni aggiuntive?
+      - title: In riferimento all'avviso 1.1 Infrastrutture digitali - migrazione PSN - PAC Pilota, qualora il data center non fosse di proprietà dell'amministrazione, è necessario indicare delle informazioni aggiuntive?
         content: |
-          Nel caso in cui il data center dove sono situati i rack non fosse di proprietà dell’amministrazione, indicare anche la ragione sociale del proprietario del data center nella colonna “Identificativo Data Center e Comune”. In ogni caso i servizi dell’amministrazione al momento della presentazione della candidatura (situazione attuale) devono essere ospitati su software on-premise installati su rack posizionati all’interno di infrastrutture e/o soluzioni cloud prive dei requisiti di cui al Regolamento AGID e alla Determina n.307 del 18 gennaio 2022 dell’Agenzia per la cybersicurezza nazionale in relazione al livello di classificazione risultante dalla procedura di cui alla Determina n. 306 del 18 gennaio 2022 dell’Agenzia per la cybersicurezza nazionale.
+          Nel caso in cui il data center dove sono situati i rack non fosse di proprietà dell’amministrazione, sarà necessario indicare anche la ragione sociale del proprietario del data center nella colonna “Identificativo Data Center e Comune”. In ogni caso i servizi dell’amministrazione al momento della presentazione della candidatura (situazione attuale) devono essere ospitati su software on-premise installati su rack posizionati all’interno di infrastrutture e/o soluzioni cloud prive dei requisiti di cui al Regolamento AGID e alla Determina n.307 del 18 gennaio 2022 dell’Agenzia per la cybersicurezza nazionale in relazione al livello di classificazione risultante dalla procedura di cui alla Determina n. 306 del 18 gennaio 2022 dell’Agenzia per la cybersicurezza nazionale.
         tag:
           - generale
       - title: In riferimento all'avviso 1.1 Infrastrutture digitali - migrazione PSN - PAC Pilota, come può essere determinato il costo del progetto?
@@ -646,12 +646,12 @@ questions:
           Ai fini della determinazione del costo del progetto si considera il listino di riferimento di cui all’allegato C della Convenzione stipulata tra Dipartimento per la trasformazione digitale e la società Polo Strategico Nazionale S.p.A. con le eventuali modifiche previste dalla Concessione. La Convenzione è disponibile sul sito istituzionale del Dipartimento al seguente link:<a href="https://innovazione.gov.it/dipartimento/focus/polo-strategico-nazionale/" aria-label="link esterno">https://innovazione.gov.it/dipartimento/focus/polo-strategico-nazionale/</a> 
         tag:
           - generale
-      - title: Quali sono le tipologie di spese ammissibili che possono essere indicate nella "Tabella C - Dettaglio Costi"?
+      - title: In riferimento all'avviso 1.1 Infrastrutture digitali - migrazione PSN - PAC Pilota, quali sono le tipologie di spese ammissibili che possono essere indicate nella "Tabella C - Dettaglio Costi"?
         content: |
           Le spese ammissibili sono: <br> -servizi professionali previsti dalla Convenzione sottoscritta tra il Dipartimento per la trasformazione digitale e la società Polo Strategico Nazionale S.p.A. (i.e. servizio “core” migrazione, servizi “no core” Business & Culture enablement, Servizi professionali, Re-platform e Re-architect, IT infrastructure Service Operations) per la realizzazione della migrazione entro la scadenza per il completamento della migrazione indicata nel presente avviso;<br> - primo anno di canone per i servizi “core” previsti dalla Convenzione sottoscritta tra il Dipartimento per la trasformazione digitale e la società Polo Strategico Nazionale S.p.A. (i.e. Housing, Hosting, IaaS Private, IaaS Shared, altri servizi di IaaS e Cloud quali Platform as a Service (PaaS), Containers-as-a-Service (CaaS), Disaster Recovery per IaaS e Cloud, servizi CSP, ovvero Public cloud PSN managed, Hybrid Cloud on PSN site, Secure public cloud).
         tag:
           - generale
-      - title: Quali informazioni è necessario riportare all'interno della "Tabella D - Cronoprogramma"?
+      - title: In riferimento all'avviso 1.1 Infrastrutture digitali - migrazione PSN - PAC Pilota, quali informazioni è necessario riportare all'interno della "Tabella D - Cronoprogramma"?
         content: |
           Nella sezione del "Cronoprogramma" è necessario riportare alcune informazioni di dettaglio relativamente alle tempistiche previste per la migrazione verso l’infrastruttura PSN. È necessario fornire il cronoprogramma delle fasi di migrazione con l’evidenza del numero di giorni/uomo per servizi professionali e le date di avvio e conclusione presunte.
         tag:
@@ -1544,7 +1544,7 @@ questions:
           La destinazione per ciascun servizio inserito nel piano di migrazione previsto è a scelta tra una delle seguenti opzioni: <br> - Cloud Qualificato;<br> - Infrastruttura della PA adeguata; <br>  - PSN.
         tag:
           - generale
-      - title: Quando si intende concluso il processo di migrazione?
+      - title: In riferimento all'avviso 1.1 Infrastrutture digitali - migrazione PSN - PAC Pilota, quando si intende concluso il processo di migrazione?
         content: |
           Il processo di migrazione dei servizi finanziati si intende concluso con esito positivo al momento in cui l’Ente effettuerà comunicazione, attraverso la piattaforma, del rilascio in esercizio di ciascuno dei servizi inseriti nel piano di migrazione, inviando il questionario di assessment con lo stato “Completato” per ciascun servizio in oggetto.
         tag:
