@@ -531,12 +531,12 @@ questions:
           Gli interventi finanziabili sono rappresentati dal perfezionamento della migrazione dei servizi del Soggetto attuatore al PSN e il canone per la gestione e l’erogazione di ciascun servizio per i dodici mesi successivi all’attivazione di ciascun servizio “core” necessario alla migrazione, tra quelli previsti dalla convenzione sottoscritta tra il Soggetto attuatore e la società Polo Strategico Nazionale S.p.A. (i.e. Housing, Hosting, IaaS Private, IaaS Shared, altri servizi di IaaS e Cloud quali Platform as a Service (PaaS), Containers-as-a-Service (CaaS), Disaster Recovery per IaaS e Cloud, servizi CSP, ovvero Public cloud PSN managed, Hybrid Cloud on PSN site, Secure public cloud), come specificato anche nell’Allegato 1.
         tag:
           - generale
-      - title: A quanto ammonta l'importo del finanziamento previsto dall'Avviso riferito alla Misura 1.1?
+      - title: In riferimento all'avviso 1.1 Infrastrutture digitali - migrazione PSN - PAC Pilota, è possibile accedere al finanziamento in caso di realizzazione delle attività, con l'ausilio di fondi pubblici,nazionali, regionali o europei prima della pubblicazione dell'Avviso riferito alla Misura 1.1?
         content: |
           L’importo massimo finanziabile per ciascuna delle PAC individuate ed in relazione a ciascuno dei cluster di appartenenza, è il seguente:<br> a. Cluster n. 1- Importo 40,5 Mln €: Ministero dell’Interno - Ministero della Difesa - Ministero dell’Economia e delle Finanze - Ministero della Giustizia - Agenzia delle Entrate;<br> b. Cluster n. 2- Importo 17,5 Mln €: Presidenza del Consiglio dei ministri - Ministero delle infrastrutture e dei trasporti (ex Ministero delle Infrastrutture e mobilità sostenibili) - Ministero dell’Università e della Ricerca - Ministero dell'istruzione e del merito (ex Ministero dell’Istruzione) - Ministero degli Affari Esteri e della Cooperazione Internazionale - Ministero del Lavoro e delle Politiche Sociali - Ministero della Salute - Agenzia delle Dogane e dei Monopoli - Agenzia delle Entrate - Riscossione;<br> c. Cluster n. 3- Importo 2,3 Mln €: Ministero della Cultura - Ministero del Turismo - Ministero delle imprese e del made in Italy (ex Ministero dello Sviluppo Economico ) - Ministero dell'ambiente e della sicurezza energetica (ex Ministero della Transizione Ecologica) - Ministero dell'agricoltura, della sovranità alimentare e delle foreste (ex Ministero delle Politiche Agricole Alimentari e Forestali) - Agenzia del Demanio.
         tag:
           - generale
-      - title: Può variare l'importo riconosciuto a finanziamento?
+      - title: In riferimento all'avviso 1.1 Infrastrutture digitali - migrazione PSN - PAC Pilota, è possibile accedere al finanziamento in caso di realizzazione delle attività, con l'ausilio di fondi pubblici,nazionali, regionali o europei prima della pubblicazione dell'Avviso ?
         content: |
           Sì, qualora il contributo complessivo richiesto da una Amministrazione Centrale, determinato in base a quanto indicato nei singoli piani di migrazione riferiti a più articolazioni (Direzioni generali/ Dipartimenti/Comandi) della medesima Amministrazione, superi i massimali previsti, il contributo per ciascun piano di migrazione sarà rimodulato in misura proporzionale entro i limiti dell’importo finanziabile per ciascun cluster di appartenenza.
         tag:
@@ -561,22 +561,22 @@ questions:
           La documentazione necessaria da allegare alla domanda di partecipazione è la seguente: <br> a. La domanda di partecipazione deve essere compilata secondo il facsimile in Allegato 2 all'Avviso <br> b. la complessiva strategia cloud del Soggetto attuatore proponente che consente di verificare al Dipartimento per la trasformazione digitale la conformità rispetto agli obblighi di migrazione al cloud di cui all’articolo 33-septies del decreto-legge 179/2012;<br> c. il Piano di Migrazione ai sensi del Regolamento cloud e il Piano di Migrazione di massima al PSN corredato dell’importo stimato dei costi di migrazione, del canone per il primo anno e del finanziamento complessivo richiesto a valere sull'Avviso. La documentazione è redatta secondo le modalità esposte nelle Linee Guida riportate all’Allegato 1 al presente Avviso.
         tag:
           - generale
-      - title: Con quale modalità deve essere trasmessa la documentazione allegata alla domanda di partecipazione?
+      - title: In riferimento all'avviso 1.1 Infrastrutture digitali - migrazione PSN - PAC Pilota, con quale modalità deve essere trasmessa la documentazione allegata alla domanda di partecipazione?
         content: |
           La documentazione deve essere trasmessa all’indirizzo di Posta Elettronica Certificata (PEC) dtd.pnrr@pec.governo.it, con un unico messaggio avendo cura di riportare nell’oggetto l’identificativo: “Avviso pubblico per la presentazione di proposte di intervento a valere sul PNRR - M1 - C1 - INVESTIMENTO 1.1 per la migrazione al PSN - PAC PILOTA FINANZIATO DALL’UNIONE EUROPEA - NextGenerationEU”.
         tag:
           - generale
-      - title: Come è possibile attestare l'invio della domanda di partecipazione?
+      - title: In riferimento all'avviso 1.1 Infrastrutture digitali - migrazione PSN - PAC Pilota, come è possibile attestare l'invio della domanda di partecipazione?
         content: |
           Il rispetto del termine perentorio di presentazione è attestato dalla data e dall’ora indicata nella ricevuta di accettazione inviata dal Sistema di Posta Elettronica Certificata. Il Dipartimento per la trasformazione digitale non si assume responsabilità in ordine a ritardi, disguidi o malfunzionamenti legati all’inoltro/ricezione della PEC essendo la responsabilità del recapito della domanda di partecipazione a carico esclusivo del proponente.
         tag:
           - generale
-      - title: Il DTD può richiedere integrazione alla documentazione inviata dall'Ente? 
+      - title: In riferimento all'avviso 1.1 Infrastrutture digitali - migrazione PSN - PAC Pilota, il DTD può richiedere integrazione alla documentazione inviata dall'Ente?
         content: |
           Il Dipartimento per la trasformazione digitale si riserva di richiedere in forma scritta, tramite PEC, integrazioni o chiarimenti rispetto alla documentazione presentata. Le eventuali richieste indicheranno un termine perentorio non inferiore a 5 giorni dalla data di trasmissione, entro il quale il Soggetto attuatore proponente è tenuto a produrre le integrazioni o i chiarimenti richiesti.
         tag:
           - generale
-      - title: A seguito della notifica di assimibilità della domanda di partecipazione, entro quanto tempo deve essere comunicato il CUP, al fine di accettare il finanziamento?
+      - title: In riferimento all'avviso 1.1 Infrastrutture digitali - migrazione PSN - PAC Pilota, a seguito della notifica di ammissibilità della domanda di partecipazione, entro quanto tempo deve essere comunicato il CUP, al fine di accettare il finanziamento?
         content: |
           Entro e non oltre 10 (dieci) giorni naturali e consecutivi dalla notifica dell’ammissibilità al finanziamento, il Soggetto attuatore è tenuto ad acquisire il CUP (utilizzando il template n. 2302002) e a comunicarlo tramite PEC al Dipartimento, per l’accettazione del finanziamento stesso e, in particolare, delle condizioni dell’Avviso (dall’art. 11 all’art. 19).
         tag:
@@ -953,7 +953,7 @@ questions:
         content: Le attività dovranno essere eseguite entro e non oltre 6 mesi (180 giorni) a partire dalla data di pubblicazione del decreto di finanziamento di cui art. 10, comma 5, dell’avviso.
         tag:
           - comuni
-      - title: Chi sono i Soggetti Attuatori dell'Avviso?
+      - title: In riferimento all'avviso 1.3.1 PDND Regioni e Province Autonome, chi sono i Soggetti Attuatori dell'Avviso?
         content: Sono invitati a presentare proposte a valere sull' Avviso le Regioni e le Province autonome di Trento e Bolzano.
         tag:
           - regioni
@@ -1084,8 +1084,8 @@ questions:
         content: L’importo del finanziamento concedibile ai Comuni è individuato in un importo forfettario (lump sum) determinato in funzione della tipologia degli interventi previsti ed in funzione della classe di popolazione residente di riferimento del medesimo Comune (Art. 1, comma 3 dell'Avviso).
         tag:
           - comuni
-      - title: Quali enti della PA possono presentare domanda?
-        content: "I Soggetti Attuatori, ovvero coloro che possono accedere allo strumento predisposto dall'Avviso,  sono le Scuole sedi di Direttivo comprensive di scuole secondarie di 1° e 2° grado dislocate su tutto il territorio nazionale."
+      - title: In riferimento all'avviso 1.4.1 Scuole, quali enti della PA possono presentare domanda?
+        content: I Soggetti Attuatori, ovvero coloro che possono accedere allo strumento predisposto dall'Avviso,  sono le Scuole sedi di Direttivo comprensive di scuole secondarie di 1° e 2° grado dislocate su tutto il territorio nazionale.Non sono ritenute ammissibili le proposte presentate da Scuole non statali paritarie, non paritarie e straniere.
         tag:
           - scuole
       - title: È possibile accedere al finanziamento in caso di realizzazione del progetto prima della pubblicazione dell'Avviso "Esperienza del cittadino nei servizi pubblici” SCUOLE in riferito alla Misura 1.4.1? ?
@@ -1449,7 +1449,7 @@ questions:
           Sì, è possibile accedere al finanziamento per attività avviate a decorrere dal 1° febbraio 2020, per la migrazione di dati e servizi verso soluzioni cloud qualificate e/o infrastrutture della Pubblica Amministrazione adeguate. Inoltre, è possibile accedere al finanziamento previsto dall'Avviso anche per le attività di migrazione di dati e servizi e al PSN, avviate a decorrere dal 1° gennaio 2023.
         tag:
           - generale
-      - title: È possibile accedere al finanziamento in caso di realizzazione delle attività, con l'ausilio di fondi pubblici,nazionali, regionali o europei prima della pubblicazione dell'Avviso riferito alla Misura 1.1?
+      - title: In riferimento all'avviso 1.1 Infrastrutture digitali - migrazione PSN - PAC Pilota, è possibile accedere al finanziamento in caso di realizzazione delle attività, con l'ausilio di fondi pubblici,nazionali, regionali o europei prima della pubblicazione dell'Avviso ?
         content: |
           No, il finanziamento concesso non è cumulabile con altri finanziamenti pubblici, nazionali o europei, per le stesse spese ammissibili, nel rispetto del divieto del doppio finanziamento.
         tag:
