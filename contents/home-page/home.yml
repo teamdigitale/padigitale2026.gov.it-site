@@ -130,43 +130,44 @@ opportunity:
       id: centri-facili
 heroCarouselNews:
   - id: 1
+    type: internal
+    category: Avviso 1.3.1 - Piattaforma Digitale Nazionale Dati 
+    title: "Estesione del cronoprogramma"
+    description: "Il termine per la contrattualizzazione dei fornitori è differito di trenta giorni"
+    source: "Vai all'Avviso"
+    linkTo: 'https://areariservata.padigitale2026.gov.it/Pa_digitale2026_dettagli_avviso?id=a017Q00001B04NoQAJ'
+  - id: 2
     category: Obiettivi PNRR
     title: "Raggiunto il traguardo europeo sul cloud"
     description: "Grazie alla grande partecipazione di Comuni, Scuole e Asl, sono oltre 14mila le amministrazioni che hanno aderito"
     source: 'innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/articoli/pnrr-raggiunto-il-traguardo-europeo-sul-cloud/'
-  - id: 2
+  - id: 3
     type: internal
     category: Avviso 1.4.5 - Piattaforma notifiche 
     title: "Estesione del cronoprogramma"
     description: "Il termine per la contrattualizzazione dei fornitori è differito al 31 maggio 2023"
     source: "Vai all'Avviso"
     linkTo: 'https://areariservata.padigitale2026.gov.it/Pa_digitale2026_dettagli_avviso?id=a017Q000015cZ1KQAU'
-  - id: 3
+  - id: 4
     type: internal
     category: DNSH 
     title: "Avviso Multimisura 1.1 - 1.2 ASL/AO"
     description: "È disponibile l'allegato 4 contenente le istruzioni per la compilazione delle schede DNSH per l'Avviso Multimisura 1.1-1.2 per la migrazione in cloud di ASL/AO"
     source: "Vai all'Avviso"
     linkTo: 'https://areariservata.padigitale2026.gov.it/Pa_digitale2026_dettagli_avviso?id=a017Q00001DrNiyQAF'
-  - id: 4
+  - id: 5
     category: Novità
     title: "Dal Pnrr 200 milioni per migrare in cloud dati e servizi di Asl e Aziende Ospedaliere"
     description: "È possibile richiedere i fondi sulla piattaforma “PA digitale 2026"
     source: 'innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/articoli/dal-pnrr-200-milioni-per-migrare-in-cloud-dati-e-servizi-di-asl-e-ao/'
-  - id: 5
+  - id: 6
     category: Novità
     title: "Aggiornate le Linee guida per le PA locali - Marzo 2023"
     description: "Pubblicate le specifiche per PDND, e aggiornate le indicazioni per cloud, siti/servizi, pagoPA/app IO e identità digitale"
     source: 'innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/articoli/pa-digitale-2026-aggiornate-le-linee-guida-per-le-pa-locali/'
-  - id: 6
-    category: Novità
-    title: "Come vengono normate le variazioni di progetto"
-    description: "Da inizio aprile si potrà modificare il contenuto della propria candidatura in caso di impossibilità dovuta ad aggiornamenti tecnici o sopravvenienza normativa"
-    source: 'innovazione.gov.it'
-    linkTo: 'https://innovazione.gov.it/notizie/articoli/pa-digitale-2026-come-vengono-normate-le-variazioni-di-progetto/'
 support:
   tag: Supporto
   title: Consulta le domande frequenti o scrivici per ricevere assistenza
