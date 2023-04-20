@@ -1,3 +1,5 @@
+/* eslint-disable sonarjs/no-duplicate-string */
+/* eslint-disable max-lines-per-function */
 /* eslint-disable sonarjs/cognitive-complexity */
 /* eslint-disable react-hooks/exhaustive-deps */
 import React from 'react';
@@ -150,10 +152,29 @@ export const SideNavigationAccordion = (props) => {
         const scrolled = (winScroll / height) * 100;
         const activeBar = document.querySelector('.scroll-indicator .scroll-indicator-active');
         if (activeBar) {
+          list.map((item) => {
+            const sectionId = `#${item.sectionId} .point-header`;
+            if (document.querySelector(sectionId)) {
+              const itemToTop = document.querySelector(sectionId).getBoundingClientRect().top;
+              item.sectionId === 'receive-updates' && console.log(sectionId, itemToTop);
+              if (itemToTop > 0 && itemToTop < 300) {
+                removeActive();
+                const indexItem = document.querySelector('[data-id="' + item.sectionId + '"]');
+                indexItem.classList.add('active');
+              }
+            }
+            if (item.sectionId === 'watch-video' && document.querySelector('.videoContainer')) {
+              const itemToTop = document.querySelector('.videoContainer').getBoundingClientRect().top;
+              if (itemToTop > 0 && itemToTop < 150) {
+                removeActive();
+                const indexItem = document.querySelector('[data-id="' + item.sectionId + '"]');
+                indexItem.classList.add('active');
+              }
+            }
+          });
           activeBar.style.width = scrolled + '%';
         }
       };
-
       window.addEventListener('scroll', scrollHandler);
     }
   }, []);
@@ -196,12 +217,11 @@ export const SideNavigationAccordion = (props) => {
     removeActive();
     const linkTag = evt.target.closest('a');
     linkTag.classList.add('active');
-
     if (isMobile) {
       setCollapseOpen(false);
     }
-
     const section = document.querySelector(linkTag.getAttribute('href'));
+
     const sectionY = section.getBoundingClientRect().top + window.pageYOffset;
     if (isMobile) {
       window.scrollTo({

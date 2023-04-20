@@ -324,6 +324,6 @@ HeroHowToDo.propTypes = {
   image: PropTypes.string,
   imageMob: PropTypes.string,
   list: PropTypes.array,
-  keypoints: PropTypes.array,
+  keypoints: PropTypes.object,
   listMenu: PropTypes.array,
 };
