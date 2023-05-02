@@ -29,6 +29,12 @@ questions:
     description: Garantire che i sistemi, i dataset e le applicazioni della PA siano ospitati in data center altamente affidabili e con elevati standard di qualità per sicurezza, prestazioni, scalabilità, interoperabilità europea ed efficienza energetica.
     sectionId: misura11
     accordions:
+      - title: Brochure informative e presentazioni
+        content:
+        accordionContent: 
+          - linkLabel: Avviso Multimisura 1.1-1.2 per Asl/AO (PDF)
+            link: 'https://assets.innovazione.gov.it/1682512751-avviso_multimisura.pdf'
+            ariaLabel: Avviso Multimisura 1.1-1.2 per Asl/AO (scarica il PDF)
       - title: Link utili
         content: 
         accordionContent: 
@@ -51,6 +57,9 @@ questions:
           - linkLabel: Scuole, indicazioni per la migrazione e linee guide di asseverazione (PDF)
             link: 'https://assets.innovazione.gov.it/1674141288-executivesummary_misura-1-2-scuole-indicazioni-sul-processo-di-assessment-e-asseverazione-1.pdf'
             ariaLabel: Scuole, indicazioni per la migrazione e linee guide di asseverazione (scarica il PDF)
+          - linkLabel: Avviso Multimisura 1.1-1.2 per Asl/AO (PDF)
+            link: 'https://assets.innovazione.gov.it/1682512751-avviso_multimisura.pdf'
+            ariaLabel: Avviso Multimisura 1.1-1.2 per Asl/AO (scarica il PDF)            
       - title: Video
         content: 
         accordionContent: 
