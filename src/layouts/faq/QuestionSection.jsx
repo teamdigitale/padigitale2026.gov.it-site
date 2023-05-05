@@ -225,6 +225,7 @@ export const QuestionSection = (props) => {
       }
     }, 1000);
   }, []);
+  const isBrowser = () => typeof window !== 'undefined';
   return (
     <>
       <section id={sectionId} className={classes.section} aria-labelledby={sectionId + '-headings'}>
@@ -282,8 +283,11 @@ export const QuestionSection = (props) => {
                     </div>
                     <div className="col-lg-2">
                       <ClipboardCopy
-                        copyText={`${window.location.origin}${window.location.pathname}#${questionsLink[cleanTitle(title)]
-                          }`}
+                        copyText={
+                          isBrowser
+                            ? `${window.location.origin}${window.location.pathname}#${questionsLink[cleanTitle(title)]}`
+                            : '#'
+                        }
                       />
                     </div>
                   </div>
