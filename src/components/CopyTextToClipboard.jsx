@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+
 import { Button, Icon } from 'design-react-kit';
 
 function ClipboardCopy({ copyText }) {
@@ -35,3 +37,7 @@ function ClipboardCopy({ copyText }) {
 }
 
 export default ClipboardCopy;
+ClipboardCopy.propTypes = {
+  copyText: PropTypes.string,
+  setQuestions: PropTypes.func,
+};

@@ -11,6 +11,8 @@ import { GlobalStateContext } from '../../context/globalContext';
 import { ExternalLink } from '../../components/ExternalLink';
 import ClipboardCopy from '../../components/CopyTextToClipboard';
 
+import faq from '../../../contents/faq-page/faq.yml';
+
 const useStyles = createUseStyles({
   section: {
     composes: 'question-section',
@@ -166,23 +168,39 @@ export const QuestionSection = (props) => {
   accordions = accordions.filter((accordion) => accordion !== '');
   const [indexIsOpen, setIndexIsOpen] = useState(-1);
   const [{ faqId }] = useContext(GlobalStateContext);
+  const allQuestions = faq.questions;
 
-  let myId = 0;
-  // console.log('questionsLink', questionsLink, setQuestionsLink);
-
+  const cleanTitleForSearch = (title) => {
+    let titleCleaned = title.replaceAll(' ', '');
+    titleCleaned = titleCleaned.replaceAll('"', '');
+    titleCleaned = titleCleaned.replaceAll('’', '');
+    titleCleaned = titleCleaned.replaceAll('<mark>', '');
+    titleCleaned = titleCleaned.replaceAll('</mark>', '');
+    titleCleaned = titleCleaned.replace(/[^a-zA-Z0-9 -]/g, '');
+    titleCleaned = titleCleaned.replaceAll('.', '');
+    titleCleaned = titleCleaned.toLowerCase();
+    return titleCleaned;
+  };
   const cleanTitle = (title) => {
     let titleCleaned = title.replaceAll(' ', '-');
     titleCleaned = titleCleaned.replaceAll('"', '');
     titleCleaned = titleCleaned.replaceAll('’', '');
     titleCleaned = titleCleaned.replace(/[^a-zA-Z0-9 -]/g, '');
     titleCleaned = titleCleaned.replaceAll('.', '');
-    titleCleaned = titleCleaned.substr(0, 20).toLowerCase();
+    titleCleaned = titleCleaned.substr(0, 50).toLowerCase();
     return titleCleaned;
   };
   const updateIdQuestion = (mainTitle, title) => {
-    const titleCleaned = cleanTitle(title);
-    const mainTitleCleaned = cleanTitle(mainTitle);
-    const newVal = `${mainTitleCleaned}-${titleCleaned}_${myId++}`;
+    const newSectionArray = allQuestions.filter(function (el) {
+      return el.title === mainTitle;
+    });
+    const newQuestionArr = newSectionArray[0].accordions.filter(function (ele) {
+      return cleanTitleForSearch(ele.title) === cleanTitleForSearch(title);
+    });
+    const faq = newQuestionArr[0] || {};
+    const titleCleaned = newQuestionArr.length > 0 && cleanTitle(faq.title);
+    const mainTitleCleaned = newQuestionArr.length > 0 && cleanTitle(mainTitle);
+    const newVal = `${mainTitleCleaned}-${titleCleaned}`;
     const x = (questionsLink[mainTitleCleaned] = newVal);
     setQuestionsLink(x);
     return newVal;
@@ -222,9 +240,9 @@ export const QuestionSection = (props) => {
         if (anchor !== '') {
           anchor = anchor.replace('#', '');
           const element = document.getElementById(anchor);
-          element.scrollIntoView();
+          element !== null && element.scrollIntoView();
         }
-      }, 1000);
+      }, 2000);
   }, []);
 
   return (
