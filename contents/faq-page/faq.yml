@@ -181,7 +181,7 @@ questions:
       - title: "Quali sono i formati di firma riconosciuti all'interno del sistema?"
         content: Il sistema ritiene valide solo firme di tipologia Cades.
       - title: "È possibile apportare delle modifiche al cronoprogramma su PA digitale 2026?"
-        content: Sì, attraverso il pulsante "Posticipa la scadenza" si può richiedere la proroga della scadenza dell'attività del cronoprogramma da completare, inserendo una nuova data di scadenza. Ogni PA può richiedere di posticipare la scadenza soltanto due volte nel corso del ciclo di vita del progetto. A partire dalla terza richiesta, non sarà più possibile richiedere una proroga tramite la piattaforma, ma sarà necessario inviare una PEC al seguente indirizzo dtd.pnrr@pec.governo.it.
+        content: Sì, è possibile posticipare la scadenza del cronoprogramma di un progetto da completare attraverso il pulsante "Posticipa la scadenza". Ogni PA può quindi richiedere di posticipare la scadenza più volte nel corso del ciclo di vita del progetto, proponendo una nuova data di scadenza. Se lo slittamento richiesto è superiore ai 30 giorni, è necessario inserire una motivazione e attendere l'esito della valutazione. Se, invece, lo slittamento è inferiore ai 30 giorni, la richiesta viene accettata automaticamente dal sistema. Dalla terza richiesta di proroga in poi, invece, è sempre necessario indicare la motivazione (anche per slittamenti inferiori ai 30 giorni) e attendere l'esito della valutazione. Ti confermiamo, inoltre, che la data di completamento del progetto, sarà aggiornata automaticamente una volta inserita la data di contrattualizzazione.
       - title: "Devo eliminare un servizio selezionato in fase di candidatura. Come posso procedere?"
         content: Non è possibile aggiungere e/o eliminare servizi ad una candidatura già inviata. Ti ricordiamo che è comunque possibile rinunciare a una candidatura e inviarne una nuova a seguito della ricezione della PEC del decreto di rinuncia.Ti consigliamo di valutare tale opportunità anche contattando l’account manager del tuo territorio utilizzando il modulo dedicato <a href="https://padigitale2026.gov.it/team-territoriali" target="_blank">https://padigitale2026.gov.it/team-territoriali</a>
   - title: Progetti
@@ -289,6 +289,11 @@ questions:
         content: È possibile far cessare anticipatamente il contratto nei casi di cui agli artt. 108 e 109 del d.lgs. 50/2016 e in altri casi di risoluzione o recesso eventualmente previsti nel contratto. L’eventuale nuovo affidamento al medesimo operatore economico dovrà essere adeguatamente motivato dalla stazione appaltante, tenendo conto che l’opportunità di partecipare ai bandi del PNRR non può costituire motivo di deroga alla normativa di riferimento e, nello specifico, al Codice dei contratti pubblici.
         tag:
           - contratti_ordini
+      - title: Devo apportare delle modifiche e/o integrazioni alla documentazione relativa alla contrattualizzazione ma ho il cronoprogramma scaduto, come posso procedere?
+        content: |
+          Per integrare o rettificare la documentazione relativa al progetto, accedi alla sezione "Progetti" e seleziona quello di tuo interesse. Nella sezione “Ulteriori documenti allegati” puoi caricare e gestire eventuali documenti aggiuntivi, firmati dal Legale Rappresentante in formato PDF e P7m. La categoria “Rettifica/Integrazione” comprende documenti quali: addendum contrattuali, atti di ricognizione, modifica di caratteristiche attuative (da “avviata” a “da avviare” o viceversa), modifiche da “smart CIG” a “CIG ordinario”. Puoi utilizzare questa funzionalità quando la fase di contrattualizzazione fornitore è scaduta. Ti ricordiamo che la validità della documentazione potrà essere accertata esclusivamente in fase di asseverazione formale e controlli a campione.
+        tag:
+          - contratti_ordini
       - title: Come compilare i campi "Soggetto Erogatore" e "CSP" qualora l'ente abbia stipulato con il fornitore un contratto che preveda anche la fornitura di soluzioni SaaS certificate?
         content: Nella sezione progetto è necessario associare un unico contratto con il fornitore formale utilizzato. Il contratto sarà quello del fornitore della soluzione SaaS, che deve essere un CSP Qualificato nel marketplace di ACN con una soluzione SaaS e che sarà il soggetto unico di riferimento dell'ente per questa soluzione. Lo stesso fornitore figurerà sia come “Erogatore del servizio” sia come “Cloud Provider”.
         tag:
@@ -312,12 +317,7 @@ questions:
       - title: Nell'ambito delle misure 1.3 e 1.4, è previsto il rispetto del principio DNSH per i fornitori?
         content: Come previsto dalla Circolare del 13 ottobre 2022, n. 33 "Aggiornamento Guida operativa per il rispetto del principio di non arrecare danno significativo all’ambiente (cd. DNSH)" il MEF-RGS, a fronte di approfondimenti condotti con il DTD, ha stabilito che il principio del DNSH non si applica agli investimenti 1.3 e 1.4 della Missione 1 Componente 1 del PNRR - <a href="https://www.rgs.mef.gov.it/VERSIONE-I/circolari/2022/circolare_n_33_2022" target="_blank">https://www.rgs.mef.gov.it/VERSIONE-I/circolari/2022/circolare_n_33_2022</a>
         tag:
-          - fornitori
-      - title: Ho stipulato un contratto con data successiva al 1 Febbraio 2020 ma mi sono accorto che mancano alcune informazioni che vorrei integrare, come posso procedere?
-        content: |
-          È possibile caricare autonomamente in piattaforma un addendum al contratto iniziale, firmato dalle due parti (ente e fornitore) che integri le informazioni mancanti, fermo restando il rispetto delle scadenze del cronoprogramma. Qualora si volesse inserire l’addendum durante le fasi di "Completamento attività" e di “Asseverazione” sarà necessario contattare il team territoriale tramite form all’indirizzo che segue <a href="https://padigitale2026.gov.it/team-territoriali" target="_blank">https://padigitale2026.gov.it/team-territoriali</a>
-        tag:
-          - contratti_ordini  
+          - fornitori  
       - title: In fase di selezione del fornitore è possibile utilizzare contratti stipulati prima dell'entrata in vigore del D.L 77/2021?
         content: Il Soggetto attuatore, in fase di selezione del fornitore, è tenuto al rispetto di tutta la normativa vigente in materia di pari opportunità e disabilità. Per i contratti stipulati prima dell’entrata in vigore del D.L 77/2021, si applica la normativa allora vigente.
         tag:
