@@ -156,6 +156,7 @@ const useStyles = createUseStyles({
 });
 
 export const QuestionSection = (props) => {
+  const isBrowser = () => typeof window !== 'undefined';
   const classes = useStyles();
   const { title, sectionId, sectionTitle, smallTitle } = props.item;
   const { totalQuestions, questionsLink, setQuestionsLink } = props;
@@ -215,17 +216,17 @@ export const QuestionSection = (props) => {
     return accordion.accordions.length;
   };
   useEffect(() => {
-    setTimeout(() => {
-      let anchor = window.location.hash;
-      console.log('--->', anchor);
-      if (anchor !== '') {
-        anchor = anchor.replace('#', '');
-        const element = document.getElementById(anchor);
-        element.scrollIntoView();
-      }
-    }, 1000);
+    isBrowser &&
+      setTimeout(() => {
+        let anchor = window.location.hash;
+        if (anchor !== '') {
+          anchor = anchor.replace('#', '');
+          const element = document.getElementById(anchor);
+          element.scrollIntoView();
+        }
+      }, 1000);
   }, []);
-  const isBrowser = () => typeof window !== 'undefined';
+
   return (
     <>
       <section id={sectionId} className={classes.section} aria-labelledby={sectionId + '-headings'}>
