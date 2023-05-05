@@ -216,7 +216,7 @@ export const QuestionSection = (props) => {
     return accordion.accordions.length;
   };
   useEffect(() => {
-    isBrowser &&
+    isBrowser() &&
       setTimeout(() => {
         let anchor = window.location.hash;
         if (anchor !== '') {
@@ -285,7 +285,7 @@ export const QuestionSection = (props) => {
                     <div className="col-lg-2">
                       <ClipboardCopy
                         copyText={
-                          isBrowser
+                          isBrowser()
                             ? `${window.location.origin}${window.location.pathname}#${questionsLink[cleanTitle(title)]}`
                             : '#'
                         }
