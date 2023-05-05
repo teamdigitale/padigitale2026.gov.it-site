@@ -9,6 +9,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import { GlobalStateContext } from '../../context/globalContext';
 import { ExternalLink } from '../../components/ExternalLink';
+import ClipboardCopy from '../../components/CopyTextToClipboard';
 
 const useStyles = createUseStyles({
   section: {
@@ -157,14 +158,34 @@ const useStyles = createUseStyles({
 export const QuestionSection = (props) => {
   const classes = useStyles();
   const { title, sectionId, sectionTitle, smallTitle } = props.item;
-  const { totalQuestions } = props;
+  const { totalQuestions, questionsLink, setQuestionsLink } = props;
   let { accordions } = props.item;
   const chips = props.item.chips;
 
   accordions = accordions.filter((accordion) => accordion !== '');
-
   const [indexIsOpen, setIndexIsOpen] = useState(-1);
   const [{ faqId }] = useContext(GlobalStateContext);
+
+  let myId = 0;
+  // console.log('questionsLink', questionsLink, setQuestionsLink);
+
+  const cleanTitle = (title) => {
+    let titleCleaned = title.replaceAll(' ', '-');
+    titleCleaned = titleCleaned.replaceAll('"', '');
+    titleCleaned = titleCleaned.replaceAll('’', '');
+    titleCleaned = titleCleaned.replace(/[^a-zA-Z0-9 -]/g, '');
+    titleCleaned = titleCleaned.replaceAll('.', '');
+    titleCleaned = titleCleaned.substr(0, 20).toLowerCase();
+    return titleCleaned;
+  };
+  const updateIdQuestion = (mainTitle, title) => {
+    const titleCleaned = cleanTitle(title);
+    const mainTitleCleaned = cleanTitle(mainTitle);
+    const newVal = `${mainTitleCleaned}-${titleCleaned}_${myId++}`;
+    const x = (questionsLink[mainTitleCleaned] = newVal);
+    setQuestionsLink(x);
+    return newVal;
+  };
 
   useEffect(() => {
     if (faqId) {
@@ -193,7 +214,17 @@ export const QuestionSection = (props) => {
     });
     return accordion.accordions.length;
   };
-
+  useEffect(() => {
+    setTimeout(() => {
+      let anchor = window.location.hash;
+      console.log('--->', anchor);
+      if (anchor !== '') {
+        anchor = anchor.replace('#', '');
+        const element = document.getElementById(anchor);
+        element.scrollIntoView();
+      }
+    }, 1000);
+  }, []);
   return (
     <>
       <section id={sectionId} className={classes.section} aria-labelledby={sectionId + '-headings'}>
@@ -233,14 +264,29 @@ export const QuestionSection = (props) => {
         {
           <Accordion>
             {accordions.map((accordion, i) => (
-              <div key={accordion.i} className={classes.accordionWrapper}>
+              <div
+                key={i}
+                className={classes.accordionWrapper}
+                data-link={updateIdQuestion(title, accordion.title)}
+                id={questionsLink[cleanTitle(title)]}
+              >
                 <AccordionHeader
                   onToggle={() => setIndexIsOpen((state) => (state === i ? -1 : i))}
                   active={i === indexIsOpen}
                   className={classes.accordionTitle}
                   id={accordion.accordionId}
                 >
-                  <span dangerouslySetInnerHTML={{ __html: accordion.title }}></span>
+                  <div className="row">
+                    <div className="col-lg-10">
+                      <span dangerouslySetInnerHTML={{ __html: accordion.title }}></span>
+                    </div>
+                    <div className="col-lg-2">
+                      <ClipboardCopy
+                        copyText={`${window.location.origin}${window.location.pathname}#${questionsLink[cleanTitle(title)]
+                          }`}
+                      />
+                    </div>
+                  </div>
                 </AccordionHeader>
                 <AccordionBody active={i === indexIsOpen} className={classes.accordionBody}>
                   <div dangerouslySetInnerHTML={{ __html: accordion.content }}></div>
@@ -280,5 +326,7 @@ QuestionSection.propTypes = {
   item: PropTypes.object.isRequired,
   inputText: PropTypes.string,
   setQuestions: PropTypes.func,
-  totalQuestions: PropTypes.object,
+  totalQuestions: PropTypes.array,
+  questionsLink: PropTypes.object,
+  setQuestionsLink: PropTypes.func,
 };
