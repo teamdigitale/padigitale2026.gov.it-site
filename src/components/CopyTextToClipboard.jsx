@@ -1,9 +1,20 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import { createUseStyles } from 'react-jss';
 
-import { Button, Icon } from 'design-react-kit';
+import { Button } from 'design-react-kit';
 
+const useStyles = createUseStyles({
+  btnPrimary: {
+    '&:hover': {
+      backgroundColor: 'transparent !important',
+      color: '#084d91',
+      boxShadow: 'inset 0 0 0 1px #084d91',
+    },
+  },
+});
 function ClipboardCopy({ copyText }) {
+  const classes = useStyles();
   const [isCopied, setIsCopied] = useState(false);
 
   async function copyTextToClipboard(text) {
@@ -19,7 +30,7 @@ function ClipboardCopy({ copyText }) {
         setIsCopied(true);
         setTimeout(() => {
           setIsCopied(false);
-        }, 1500);
+        }, 2000);
       })
       .catch((err) => {
         console.log(err);
@@ -27,12 +38,11 @@ function ClipboardCopy({ copyText }) {
   };
 
   return (
-    <Button color="success" size="xs" icon onClick={handleCopyClick}>
-      <span className="rounded-icon">
-        <Icon color="success" icon="it-copy" />
-      </span>
-      <span>{isCopied ? 'Copiato!' : 'Copia Link'}</span>
-    </Button>
+    <div style={{ display: 'flex', justifyContent: 'end' }}>
+      <Button className={`btn-outline-primary ${classes.btnPrimary}`} size="xs" icon onClick={handleCopyClick}>
+        <span>{isCopied ? 'Copiato!' : 'Copia Link'}</span>
+      </Button>
+    </div>
   );
 }
 

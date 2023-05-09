@@ -55,7 +55,7 @@ const useStyles = createUseStyles({
     '& .collapse-body': {
       padding: '0.888rem 1.333rem 1.333rem',
       '@media (min-width: 992px)': {
-        padding: '1.666rem 2.666rem 2.666rem',
+        padding: '1.666rem .9rem 2.666rem',
       },
       '& mark': {
         backgroundColor: '#e3e8f4',
@@ -240,9 +240,14 @@ export const QuestionSection = (props) => {
         if (anchor !== '') {
           anchor = anchor.replace('#', '');
           const element = document.getElementById(anchor);
+          const bodyElement = document.getElementById(`${anchor}-body`);
+          element.querySelector('button').classList.add('collapsed');
+          element.querySelector('button').setAttribute('aria-expanded', 'true');
+          bodyElement.classList.add('show');
           element !== null && element.scrollIntoView();
+          setIndexIsOpen(true);
         }
-      }, 2000);
+      }, 1000);
   }, []);
 
   return (
@@ -296,9 +301,38 @@ export const QuestionSection = (props) => {
                   className={classes.accordionTitle}
                   id={accordion.accordionId}
                 >
+                  <span dangerouslySetInnerHTML={{ __html: accordion.title }}></span>
+                </AccordionHeader>
+                <AccordionBody
+                  active={i === indexIsOpen}
+                  className={classes.accordionBody}
+                  id={`${questionsLink[cleanTitle(title)]}-body`}
+                >
                   <div className="row">
                     <div className="col-lg-10">
-                      <span dangerouslySetInnerHTML={{ __html: accordion.title }}></span>
+                      <div dangerouslySetInnerHTML={{ __html: accordion.content }}></div>
+                      {accordion.link && (
+                        <div className={classes.linkAccordion}>
+                          <ExternalLink linkTo={accordion.link} ariaLabel={accordion.ariaLabel}>
+                            <span dangerouslySetInnerHTML={{ __html: accordion.linkLabel }}></span>
+                            <img src="/assets/external-icon.svg" alt="" />
+                          </ExternalLink>
+                        </div>
+                      )}
+                      {accordion.updates ? (
+                        <Link className={classes.modalLink} aria-label={accordion.ariaLabel} to="/ricevi-aggiornamenti">
+                          {accordion.updates}
+                        </Link>
+                      ) : (
+                        ''
+                      )}
+                      {accordion.assistance ? (
+                        <Link className={classes.modalLink} aria-label={accordion.ariaLabel} to="/supporto/assistenza">
+                          {accordion.assistance}
+                        </Link>
+                      ) : (
+                        ''
+                      )}
                     </div>
                     <div className="col-lg-2">
                       <ClipboardCopy
@@ -310,31 +344,6 @@ export const QuestionSection = (props) => {
                       />
                     </div>
                   </div>
-                </AccordionHeader>
-                <AccordionBody active={i === indexIsOpen} className={classes.accordionBody}>
-                  <div dangerouslySetInnerHTML={{ __html: accordion.content }}></div>
-                  {accordion.link && (
-                    <div className={classes.linkAccordion}>
-                      <ExternalLink linkTo={accordion.link} ariaLabel={accordion.ariaLabel}>
-                        <span dangerouslySetInnerHTML={{ __html: accordion.linkLabel }}></span>
-                        <img src="/assets/external-icon.svg" alt="" />
-                      </ExternalLink>
-                    </div>
-                  )}
-                  {accordion.updates ? (
-                    <Link className={classes.modalLink} aria-label={accordion.ariaLabel} to="/ricevi-aggiornamenti">
-                      {accordion.updates}
-                    </Link>
-                  ) : (
-                    ''
-                  )}
-                  {accordion.assistance ? (
-                    <Link className={classes.modalLink} aria-label={accordion.ariaLabel} to="/supporto/assistenza">
-                      {accordion.assistance}
-                    </Link>
-                  ) : (
-                    ''
-                  )}
                 </AccordionBody>
               </div>
             ))}
