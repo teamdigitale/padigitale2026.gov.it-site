@@ -207,13 +207,13 @@ export const QuestionSection = (props) => {
   };
 
   useEffect(() => {
-    if (faqId) {
-      document.querySelector('#' + faqId).scrollIntoView({
-        behavior: 'smooth',
-      });
-      const isAccordion = (element) => faqId === element.accordionId;
-      setIndexIsOpen(accordions.findIndex(isAccordion));
-    }
+    // if (faqId) {
+    //   document.querySelector('#' + faqId).scrollIntoView({
+    //     behavior: 'smooth',
+    //   });
+    //   const isAccordion = (element) => faqId === element.accordionId;
+    //   setIndexIsOpen(accordions.findIndex(isAccordion));
+    // }
   }, [faqId, accordions]);
 
   const setChips = (chips) =>
@@ -245,10 +245,16 @@ export const QuestionSection = (props) => {
           element.querySelector('button').setAttribute('aria-expanded', 'true');
           bodyElement.classList.add('show');
           element !== null && element.scrollIntoView();
-          setIndexIsOpen(true);
+          const sectionName = anchor.split('--');
+          const sectionObj = allQuestions.filter((section) => cleanTitle(section.title) === sectionName[0])[0] || {};
+          if (sectionObj.accordions) {
+            sectionObj.accordions.map((sec, i) => {
+              cleanTitle(sec.title) === `-${sectionName[1]}` && setIndexIsOpen(i);
+            });
+          }
         }
       }, 1000);
-  }, []);
+  }, [allQuestions]);
 
   return (
     <>
