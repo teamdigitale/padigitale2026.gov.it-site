@@ -156,7 +156,6 @@ export const SideNavigationAccordion = (props) => {
             const sectionId = `#${item.sectionId} .point-header`;
             if (document.querySelector(sectionId)) {
               const itemToTop = document.querySelector(sectionId).getBoundingClientRect().top;
-              item.sectionId === 'receive-updates' && console.log(sectionId, itemToTop);
               if (itemToTop > 0 && itemToTop < 300) {
                 removeActive();
                 const indexItem = document.querySelector('[data-id="' + item.sectionId + '"]');
@@ -164,8 +163,8 @@ export const SideNavigationAccordion = (props) => {
               }
             }
             if (item.sectionId === 'watch-video' && document.querySelector('.videoContainer')) {
-              const itemToTop = document.querySelector('.videoContainer').getBoundingClientRect().top;
-              if (itemToTop > 0 && itemToTop < 150) {
+              const itemToTop = document.querySelector('#watch-video').getBoundingClientRect().top;
+              if (itemToTop > 0 && itemToTop < 110) {
                 removeActive();
                 const indexItem = document.querySelector('[data-id="' + item.sectionId + '"]');
                 indexItem.classList.add('active');
