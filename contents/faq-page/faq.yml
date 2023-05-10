@@ -129,8 +129,7 @@ questions:
       - title: Cosa fare se in qualità di utente invitato non si riesce ad accedere a PA digitale 2026?
         content: Dopo aver ricevuto l'email di invito e aver verificato la correttezza dei dati, bisogna accertarsi di aver completato la procedura di accesso facendo click sul link di verifica all'interno dell'email.
       - title: É possibile accedere a PA digitale 2026 come rappresentante legale di più Scuole?
-        content: |
-        Non è possibile aggiungere e/o eliminare servizi ad una candidatura già inviata. Ti ricordiamo che è comunque possibile rinunciare a una candidatura e inviarne una nuova a seguito della ricezione della PEC del decreto di rinuncia. Ti consigliamo di valutare tale opportunità anche contattando l’account manager del tuo territorio utilizzando il modulo dedicato: https://padigitale2026.gov.it/team-territoriali.
+        content: Ti informiamo che potrai registrarti come Rappresentante Legale per un nuovo istituto accendendo in piattaforma nella sezione "La Mia PA", individuabile cliccando sul tasto relativo al tuo nome, presente in alto a destra nella schermata principale dell'area riservata in piattaforma. Quindi cliccare sul tasto "Associa nuova amministrazione" per avviare la procedura guidata di registrazione per l'ulteriore Istituto da gestire.
   - title: Gestione utenti
     smallTitle: true
     description: La strategia di ripresa economica e gli interventi previsti per il rilancio digitale del Paese
@@ -181,9 +180,11 @@ questions:
       - title: "Quali sono i formati di firma riconosciuti all'interno del sistema?"
         content: Il sistema ritiene valide solo firme di tipologia Cades.
       - title: "È possibile apportare delle modifiche al cronoprogramma su PA digitale 2026?"
-        content: Sì, attraverso il pulsante "Posticipa la scadenza" si può richiedere la proroga della scadenza dell'attività del cronoprogramma da completare, inserendo una nuova data di scadenza. Ogni PA può richiedere di posticipare la scadenza soltanto due volte nel corso del ciclo di vita del progetto. A partire dalla terza richiesta, non sarà più possibile richiedere una proroga tramite la piattaforma, ma sarà necessario inviare una PEC al seguente indirizzo dtd.pnrr@pec.governo.it.
+        content: Sì, è possibile posticipare la scadenza del cronoprogramma di un progetto da completare attraverso il pulsante "Posticipa la scadenza". Ogni PA può quindi richiedere di posticipare la scadenza più volte nel corso del ciclo di vita del progetto, proponendo una nuova data di scadenza. Se lo slittamento richiesto è superiore ai 30 giorni, è necessario inserire una motivazione e attendere l'esito della valutazione. Se, invece, lo slittamento è inferiore o uguale a 30 giorni, la richiesta viene accettata automaticamente dal sistema. Dalla terza richiesta di proroga in poi, invece, è sempre necessario indicare la motivazione (anche per slittamenti fino a 30 giorni) e attendere l'esito della valutazione. Ti confermiamo, inoltre, che la data di completamento del progetto, sarà aggiornata automaticamente una volta inserita la data di contrattualizzazione.
       - title: "Devo eliminare un servizio selezionato in fase di candidatura. Come posso procedere?"
         content: Non è possibile aggiungere e/o eliminare servizi ad una candidatura già inviata. Ti ricordiamo che è comunque possibile rinunciare a una candidatura e inviarne una nuova a seguito della ricezione della PEC del decreto di rinuncia.Ti consigliamo di valutare tale opportunità anche contattando l’account manager del tuo territorio utilizzando il modulo dedicato <a href="https://padigitale2026.gov.it/team-territoriali" target="_blank">https://padigitale2026.gov.it/team-territoriali</a>
+      - title: Ho sbagliato ad indicare lo stato di un'attività ("da avviare" anziché "già avviato" o viceversa). Come posso correggerlo?
+        content: Ti invitiamo ad accedere alla sezione "I tuoi progetti", cliccare sul progetto di tuo interesse e nella sezione “Ulteriori documenti allegati” caricare un documento che indichi la caratteristica attuativa corretta, sottoscritto dal Rappresentante Legale dell'Ente. Ti ricordiamo che discriminante per la caratteristica attuativa ("da avviare" oppure "già avviato") è la data di sottomissione della candidatura e che la validità della documentazione potrà essere accertata esclusivamente in fase di asseverazione formale e controlli a campione. 
   - title: Progetti
     smallTitle: true
     description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
@@ -289,8 +290,13 @@ questions:
         content: È possibile far cessare anticipatamente il contratto nei casi di cui agli artt. 108 e 109 del d.lgs. 50/2016 e in altri casi di risoluzione o recesso eventualmente previsti nel contratto. L’eventuale nuovo affidamento al medesimo operatore economico dovrà essere adeguatamente motivato dalla stazione appaltante, tenendo conto che l’opportunità di partecipare ai bandi del PNRR non può costituire motivo di deroga alla normativa di riferimento e, nello specifico, al Codice dei contratti pubblici.
         tag:
           - contratti_ordini
-      - title: Come compilare i campi Soggetto Erogatore e CSP qualora l'ente abbia stipulato con il fornitore un unico contratto che preveda anche la fornitura di soluzioni SaaS certificate?
-        content: Nella sezione progetti è necessario associare il contratto con il fornitore utilizzato. Nel caso fosse unico il contratto (pur utilizzando una struttura di un Cloud provider certificato diverso dal fornitore titolare del contratto) lo stesso fornitore figurerà sia come “Erogatore del servizio” sia come “Cloud Provider”. Sarà quindi necessario caricare il contratto in Piattaforma due volte. Questo è il caso in cui il contratto con il CSP sia stato stipulato con l'erogatore del servizio e non direttamente con l'ente. In caso, invece, di due contratti distinti è necessario inserirli entrambi. All'ente è richiesto di inserire in piattaforma solo i contratti con i fornitori con cui ha un rapporto diretto.
+      - title: Devo apportare delle modifiche e/o integrazioni alla documentazione relativa alla contrattualizzazione ma ho il cronoprogramma scaduto, come posso procedere?
+        content: |
+          Per integrare o rettificare la documentazione relativa al progetto, accedi alla sezione "Progetti" e seleziona quello di tuo interesse. Nella sezione “Ulteriori documenti allegati” puoi caricare e gestire eventuali documenti aggiuntivi, firmati dal Legale Rappresentante in formato PDF e P7m. La categoria “Rettifica/Integrazione” comprende documenti quali: addendum contrattuali, atti di ricognizione, modifica di caratteristiche attuative (da “avviata” a “da avviare” o viceversa), modifiche da “smart CIG” a “CIG ordinario”. Puoi utilizzare questa funzionalità quando la fase di contrattualizzazione fornitore è scaduta. Ti ricordiamo che la validità della documentazione potrà essere accertata esclusivamente in fase di asseverazione formale e controlli a campione.
+        tag:
+          - contratti_ordini
+      - title: Come compilare i campi "Soggetto Erogatore" e "CSP" qualora l'ente abbia stipulato con il fornitore un contratto che preveda anche la fornitura di soluzioni SaaS certificate?
+        content: Nella sezione progetto è necessario associare un unico contratto con il fornitore formale utilizzato. Il contratto sarà quello del fornitore della soluzione SaaS, che deve essere un CSP Qualificato nel marketplace di ACN con una soluzione SaaS e che sarà il soggetto unico di riferimento dell'ente per questa soluzione. Lo stesso fornitore figurerà sia come “Erogatore del servizio” sia come “Cloud Provider”. Se invece il contratto intercorre tra l'Ente e un rivenditore della soluzione SaaS, quest'ultimo figurerà sia come Soggetto Erogatore sia come CSP. 
         tag:
           - fornitori
       - title: Da quale data decorrono i tempi di contrattualizzazione del fornitore? E per il completamento delle attività?
@@ -298,7 +304,7 @@ questions:
         tag:
           - fornitori
       - title: È possibile avvalersi del supporto di più fornitori al fine di implementare un solo servizio?
-        content: Sì, una sola attività può essere assegnata a più fornitori, per ognuno dei quali dovrà essere caricato il contratto in Piattaforma.
+        content: Sì, una sola attività può essere assegnata a più fornitori, per ognuno dei quali dovrà essere caricato il contratto in Piattaforma. (Per le forniture SAAS nell'avviso 1.2 consulta la relativa FAQ).
         tag:
           - fornitori
       - title: Ai fini del rispetto dei requisiti di ammissibilità della candidatura, a partire da quale data deve essere contrattualizzato il fornitore?
@@ -312,12 +318,7 @@ questions:
       - title: Nell'ambito delle misure 1.3 e 1.4, è previsto il rispetto del principio DNSH per i fornitori?
         content: Come previsto dalla Circolare del 13 ottobre 2022, n. 33 "Aggiornamento Guida operativa per il rispetto del principio di non arrecare danno significativo all’ambiente (cd. DNSH)" il MEF-RGS, a fronte di approfondimenti condotti con il DTD, ha stabilito che il principio del DNSH non si applica agli investimenti 1.3 e 1.4 della Missione 1 Componente 1 del PNRR - <a href="https://www.rgs.mef.gov.it/VERSIONE-I/circolari/2022/circolare_n_33_2022" target="_blank">https://www.rgs.mef.gov.it/VERSIONE-I/circolari/2022/circolare_n_33_2022</a>
         tag:
-          - fornitori
-      - title: Ho stipulato un contratto con data successiva al 1 Febbraio 2020 ma mi sono accorto che mancano alcune informazioni che vorrei integrare, come posso procedere?
-        content: |
-          È possibile caricare autonomamente in piattaforma un addendum al contratto iniziale, firmato dalle due parti (ente e fornitore) che integri le informazioni mancanti, fermo restando il rispetto delle scadenze del cronoprogramma. Qualora si volesse inserire l’addendum durante le fasi di "Completamento attività" e di “Asseverazione” sarà necessario contattare il team territoriale tramite form all’indirizzo che segue <a href="https://padigitale2026.gov.it/team-territoriali" target="_blank">https://padigitale2026.gov.it/team-territoriali</a>
-        tag:
-          - contratti_ordini  
+          - fornitori  
       - title: In fase di selezione del fornitore è possibile utilizzare contratti stipulati prima dell'entrata in vigore del D.L 77/2021?
         content: Il Soggetto attuatore, in fase di selezione del fornitore, è tenuto al rispetto di tutta la normativa vigente in materia di pari opportunità e disabilità. Per i contratti stipulati prima dell’entrata in vigore del D.L 77/2021, si applica la normativa allora vigente.
         tag:
@@ -1185,11 +1186,6 @@ questions:
           - altri-enti
           - comuni
       - title: |
-          A seguito di rinuncia ad una candidatura già inviata a valere sull'Avviso 1.4.3 PagoPA/AppIO, è necessario attendere il Decreto di rinuncia per poter inviare una nuova candidatura con i medesimi servizi. Inoltre, se hai provveduto a rinunciare alla candidatura già inviata a valere dell'Avviso 1.4.3 PagoPA/AppIO, sarà comunque possibile inviare una nuova candidatura a valere su un successivo Avviso per servizi differenti rispetto a quelli selezionati nella precedente domanda.
-        content: L'integrazione di un servizio PagoPa non si esaurisce con la mera integrazione tecnica tra gli applicativi dell'Ente e il gateway dei pagamenti di PagoPA. All'Ente è richiesto anche che:<br>- l'incasso dei servizi venga correttamente riconciliato nel bilancio (tramite opportune integrazioni con i software gestionali) secondo quanto richiesto dalle norme tributarie specificatamente al codice tassonomico del servizio incassato; <br>- i cittadini siano correttamente informati della nuova opportunità di pagamento in tutti i punti di contatto.<br>L'obiettivo finale è quello di aiutare il Paese nella transizione digitale contribuendo alla realizzazione di un’amministrazione che offra servizi sempre più digitali e facilmente utilizzabili dai cittadini.
-        tag:
-          - altri-enti
-      - title: |
           Ho rinunciato ad una candidatura 1.4.3 al fine di sottometterne una nuova con i medesimi servizi: quando potrò inviare la nuova domanda?
         content: |
           A seguito di rinuncia ad una candidatura già inviata a valere sull'Avviso 1.4.3 PagoPA/AppIO, è necessario attendere il Decreto di rinuncia per poter inviare una nuova candidatura con i medesimi servizi. Inoltre, se hai provveduto a rinunciare alla candidatura già inviata a valere dell'Avviso 1.4.3 PagoPA/AppIO , sarà comunque possibile inviare una nuova candidatura a valere su un successivo Avviso , per servizi differenti rispetto a quelli selezionati nella precedente domanda.
@@ -1200,6 +1196,13 @@ questions:
           Ho rilevato date non corrette relative all'attivazione di servizi 1.4.3, come posso verificare?
         content: |
           In caso di difformità rilevate rispetto a quanto indicato in piattaforma, e in merito allo stato di attivazione dei servizi PagoPA /AppIO, ovvero data di attivazione, codice tassonomico (PagoPA), ID servizio (AppIO), ti invitiamo a contattare preliminarmente il tuo fornitore. Si precisa che la piattaforma PA digitale 2026 pre-carica i dati dell’amministrazione presenti nella banca dati PagoPA /AppIO, pertanto l’Ente - in autonomia o per il tramite del proprio fornitore - sarà in grado di conoscere le date di attivazione e di selezionare i servizi corretti in fase di candidatura. Per data di attivazione dei servizi pagoPA si intende la data della prima transazione positiva avvenuta con il corretto codice tassonomico. Per i servizi di nuova attivazione, per visualizzare la data di attivazione occorrerà attendere circa 15 giorni dalla prima transazione positiva, come sopra specificata, ai fini dell’aggiornamento sul PA digitale 2026.
+        tag:
+          - comuni
+          - altri-enti
+      - title: |
+          Quando può ritenersi completato il progetto oggetto dell’iniziativa proposta ai fini del finanziamento?
+        content: |
+          In relazione agli Avvisi Misura 1.4.3. “Adozione piattaforma PagoPA” Comuni e altri Enti pubblicati sulla piattaforma PA digitale 2026 si precisa che i servizi di incasso per i quali l’Ente ha richiesto il contributo devono essere realizzati e funzionanti al più tardi alla data prevista per il completamento delle attività. A tal proposito si precisa che sono finanziabili anche i servizi di incasso attinenti ai servizi pubblici che saranno gestiti e quindi fruiti dagli utenti entro la data prevista per il completamento del progetto ammesso a finanziamento (cfr. art. 8, comma 3, dell’Avviso “Le attività previste per i progetti proposti dovranno concludersi entro i termini indicati all’Allegato 2 a decorrere dalla data di notifica del Decreto di finanziamento” e paragrafo D dell’Allegato 2 “I tempi e la conclusione del processo di migrazione e attivazione dei servizi”). L'Avviso pubblico prevede infatti l'attribuzione di un contributo economico per finanziare la migrazione e l'attivazione dei servizi di incasso, tramite la piattaforma PagoPA, attinenti allo svolgimento di servizi pubblici effettivamente gestiti dall'Ente in favore degli utenti. Si richiama inoltre l’attenzione sugli obblighi a carico del soggetto attuatore previsti dall’art.11, sulla disciplina dei controlli che potranno essere attivati, contenuta nell’art.12 degli Avvisi, nonché sulle previsioni in ordine ai meccanismi sanzionatori di cui all’art.15 dei medesimi Avvisi.
         tag:
           - comuni
           - altri-enti
@@ -1263,7 +1266,7 @@ questions:
         content: A seguito di rinuncia ad una candidatura già inviata a valere sull'Avviso 1.4.3 PagoPA/AppIO, è necessario attendere il Decreto di rinuncia per poter inviare una nuova candidatura con i medesimi servizi. Inoltre, se hai provveduto a rinunciare alla candidatura già inviata a valere dell'Avviso 1.4.3 PagoPA/AppIO Aprile 2022, sarà comunque possibile inviare una nuova candidatura a valere sull'Avviso 1.4.3 PagoPA/AppIO Settembre 2022, per servizi differenti rispetto a quelli selezionati nella precedente domanda.
         tag:
           - altri-enti
-      - title: A seguito di rinuncia ad una candidatura già inviata a valere sull'Avviso 1.4.3 PagoPA/AppIO, è necessario attendere il Decreto di rinuncia per poter inviare una nuova candidatura con i medesimi servizi. Inoltre, se hai provveduto a rinunciare alla candidatura già inviata a valere dell'Avviso 1.4.3 PagoPA/AppIO, sarà comunque possibile inviare una nuova candidatura a valere su un successivo Avviso, per servizi differenti rispetto a quelli selezionati nella precedente domanda.
+      - title: Ho rilevato date non corrette relative all'attivazione di servizi 1.4.3, come posso verificare?
         content: |
              In caso di difformità rilevate rispetto a quanto indicato in piattaforma, e in merito allo stato di attivazione dei servizi PagoPA /AppIO, ovvero data di attivazione, codice tassonomico (PagoPA), ID servizio (AppIO), ti invitiamo a contattare preliminarmente il tuo fornitore. Si precisa che la piattaforma PA digitale 2026 pre-carica i dati dell’amministrazione presenti nella banca dati PagoPA /AppIO, pertanto l’Ente - in autonomia o per il tramite del proprio fornitore - sarà in grado di conoscere le date di attivazione e di selezionare i servizi corretti in fase di candidatura. Per data di attivazione dei servizi pagoPA si intende la data della prima transazione positiva avvenuta con il corretto codice tassonomico. Per i servizi di nuova attivazione, per visualizzare la data di attivazione occorrerà attendere circa 15 giorni dalla prima transazione positiva, come sopra specificata, ai fini dell’aggiornamento sul PA digitale 2026.
         tag:
