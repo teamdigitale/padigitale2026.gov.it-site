@@ -129,8 +129,7 @@ questions:
       - title: Cosa fare se in qualità di utente invitato non si riesce ad accedere a PA digitale 2026?
         content: Dopo aver ricevuto l'email di invito e aver verificato la correttezza dei dati, bisogna accertarsi di aver completato la procedura di accesso facendo click sul link di verifica all'interno dell'email.
       - title: É possibile accedere a PA digitale 2026 come rappresentante legale di più Scuole?
-        content: |
-        Non è possibile aggiungere e/o eliminare servizi ad una candidatura già inviata. Ti ricordiamo che è comunque possibile rinunciare a una candidatura e inviarne una nuova a seguito della ricezione della PEC del decreto di rinuncia. Ti consigliamo di valutare tale opportunità anche contattando l’account manager del tuo territorio utilizzando il modulo dedicato: https://padigitale2026.gov.it/team-territoriali.
+        content: Ti informiamo che potrai registrarti come Rappresentante Legale per un nuovo istituto accendendo in piattaforma nella sezione "La Mia PA", individuabile cliccando sul tasto relativo al tuo nome, presente in alto a destra nella schermata principale dell'area riservata in piattaforma. Quindi cliccare sul tasto "Associa nuova amministrazione" per avviare la procedura guidata di registrazione per l'ulteriore Istituto da gestire.
   - title: Gestione utenti
     smallTitle: true
     description: La strategia di ripresa economica e gli interventi previsti per il rilancio digitale del Paese
@@ -184,6 +183,8 @@ questions:
         content: Sì, è possibile posticipare la scadenza del cronoprogramma di un progetto da completare attraverso il pulsante "Posticipa la scadenza". Ogni PA può quindi richiedere di posticipare la scadenza più volte nel corso del ciclo di vita del progetto, proponendo una nuova data di scadenza. Se lo slittamento richiesto è superiore ai 30 giorni, è necessario inserire una motivazione e attendere l'esito della valutazione. Se, invece, lo slittamento è inferiore ai 30 giorni, la richiesta viene accettata automaticamente dal sistema. Dalla terza richiesta di proroga in poi, invece, è sempre necessario indicare la motivazione (anche per slittamenti inferiori ai 30 giorni) e attendere l'esito della valutazione. Ti confermiamo, inoltre, che la data di completamento del progetto, sarà aggiornata automaticamente una volta inserita la data di contrattualizzazione.
       - title: "Devo eliminare un servizio selezionato in fase di candidatura. Come posso procedere?"
         content: Non è possibile aggiungere e/o eliminare servizi ad una candidatura già inviata. Ti ricordiamo che è comunque possibile rinunciare a una candidatura e inviarne una nuova a seguito della ricezione della PEC del decreto di rinuncia.Ti consigliamo di valutare tale opportunità anche contattando l’account manager del tuo territorio utilizzando il modulo dedicato <a href="https://padigitale2026.gov.it/team-territoriali" target="_blank">https://padigitale2026.gov.it/team-territoriali</a>
+      - title: Ho sbagliato ad indicare lo stato di un'attività ("da avviare" anziché "già avviato" o viceversa). Come posso correggerlo?
+        content: Ti invitiamo ad accedere alla sezione "I tuoi progetti", cliccare sul progetto di tuo interesse e nella sezione “Ulteriori documenti allegati” caricare un documento che indichi la caratteristica attuativa corretta, sottoscritto dal Rappresentante Legale dell'Ente. Ti ricordiamo che discriminante per la caratteristica attuativa ("da avviare" oppure "già avviato") è la data di sottomissione della candidatura e che la validità della documentazione potrà essere accertata esclusivamente in fase di asseverazione formale e controlli a campione. 
   - title: Progetti
     smallTitle: true
     description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
@@ -295,7 +296,7 @@ questions:
         tag:
           - contratti_ordini
       - title: Come compilare i campi "Soggetto Erogatore" e "CSP" qualora l'ente abbia stipulato con il fornitore un contratto che preveda anche la fornitura di soluzioni SaaS certificate?
-        content: Nella sezione progetto è necessario associare un unico contratto con il fornitore formale utilizzato. Il contratto sarà quello del fornitore della soluzione SaaS, che deve essere un CSP Qualificato nel marketplace di ACN con una soluzione SaaS e che sarà il soggetto unico di riferimento dell'ente per questa soluzione. Lo stesso fornitore figurerà sia come “Erogatore del servizio” sia come “Cloud Provider”.
+        content: Nella sezione progetto è necessario associare un unico contratto con il fornitore formale utilizzato. Il contratto sarà quello del fornitore della soluzione SaaS, che deve essere un CSP Qualificato nel marketplace di ACN con una soluzione SaaS e che sarà il soggetto unico di riferimento dell'ente per questa soluzione. Lo stesso fornitore figurerà sia come “Erogatore del servizio” sia come “Cloud Provider”. Se invece il contratto intercorre tra l'Ente e un rivenditore della soluzione SaaS, quest'ultimo figurerà sia come Soggetto Erogatore sia come CSP. 
         tag:
           - fornitori
       - title: Da quale data decorrono i tempi di contrattualizzazione del fornitore? E per il completamento delle attività?
