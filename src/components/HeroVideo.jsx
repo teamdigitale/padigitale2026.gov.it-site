@@ -67,7 +67,7 @@ export const HeroVideo = ({ src, description, videoText }) => {
           <h3>Guarda il video dedicato</h3>
           <p>{description}</p>
         </div>
-        <div className={classes.videoContainer}>
+        <div className={`${classes.videoContainer} videoContainer`}>
           <iframe
             width="100%"
             height="100%"
