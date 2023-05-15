@@ -131,9 +131,9 @@ opportunity:
 heroCarouselNews:
   - id: 1
     type: internal
-    category: Avviso 1.1-1.2 per ASL/AO
+    category: Avviso 1.1-1.2 - Migrazione in cloud
     title: "Proroga e integrazione dotazione finanziaria"
-    description: "La scadenza è stata prorogata al 30 giugno 2023, con ulteriori 100 milioni di dotazione"
+    description: "La scadenza dell'Avviso per ASL/AO è stata prorogata al 30 giugno 2023, con ulteriori 100 milioni di dotazione"
     source: "Vai all'Avviso"
     linkTo: 'https://areariservata.padigitale2026.gov.it/Pa_digitale2026_dettagli_avviso?id=a017Q00001DrNiyQAF'
   - id: 2
