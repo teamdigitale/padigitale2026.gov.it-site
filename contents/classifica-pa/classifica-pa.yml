@@ -1,9 +1,9 @@
 name: Candida la tua PA agli avvisi per la transizione digitale - PA digitale 2026
 sidebar:
-  - sectionTitle: 1. Verifica la classificazione automatica
+  - sectionTitle: 1. Verifica la classificazione
     sectionId: verify-classification
     sectionActive: true
-  - sectionTitle: 2. Compila il questionario per modificare o classificare nuovi servizi
+  - sectionTitle: 2. Compila il questionario
     sectionId: questionario
     sectionActive: false
   - sectionTitle: 3. Invia la classificazione

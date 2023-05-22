@@ -129,8 +129,7 @@ questions:
       - title: Cosa fare se in qualità di utente invitato non si riesce ad accedere a PA digitale 2026?
         content: Dopo aver ricevuto l'email di invito e aver verificato la correttezza dei dati, bisogna accertarsi di aver completato la procedura di accesso facendo click sul link di verifica all'interno dell'email.
       - title: É possibile accedere a PA digitale 2026 come rappresentante legale di più Scuole?
-        content: |
-        Non è possibile aggiungere e/o eliminare servizi ad una candidatura già inviata. Ti ricordiamo che è comunque possibile rinunciare a una candidatura e inviarne una nuova a seguito della ricezione della PEC del decreto di rinuncia. Ti consigliamo di valutare tale opportunità anche contattando l’account manager del tuo territorio utilizzando il modulo dedicato: https://padigitale2026.gov.it/team-territoriali.
+        content: Ti informiamo che potrai registrarti come Rappresentante Legale per un nuovo istituto accendendo in piattaforma nella sezione "La Mia PA", individuabile cliccando sul tasto relativo al tuo nome, presente in alto a destra nella schermata principale dell'area riservata in piattaforma. Quindi cliccare sul tasto "Associa nuova amministrazione" per avviare la procedura guidata di registrazione per l'ulteriore Istituto da gestire.
   - title: Gestione utenti
     smallTitle: true
     description: La strategia di ripresa economica e gli interventi previsti per il rilancio digitale del Paese
@@ -181,9 +180,11 @@ questions:
       - title: "Quali sono i formati di firma riconosciuti all'interno del sistema?"
         content: Il sistema ritiene valide solo firme di tipologia Cades.
       - title: "È possibile apportare delle modifiche al cronoprogramma su PA digitale 2026?"
-        content: Sì, è possibile posticipare la scadenza del cronoprogramma di un progetto da completare attraverso il pulsante "Posticipa la scadenza". Ogni PA può quindi richiedere di posticipare la scadenza più volte nel corso del ciclo di vita del progetto, proponendo una nuova data di scadenza. Se lo slittamento richiesto è superiore ai 30 giorni, è necessario inserire una motivazione e attendere l'esito della valutazione. Se, invece, lo slittamento è inferiore ai 30 giorni, la richiesta viene accettata automaticamente dal sistema. Dalla terza richiesta di proroga in poi, invece, è sempre necessario indicare la motivazione (anche per slittamenti inferiori ai 30 giorni) e attendere l'esito della valutazione. Ti confermiamo, inoltre, che la data di completamento del progetto, sarà aggiornata automaticamente una volta inserita la data di contrattualizzazione.
+        content: Sì, è possibile posticipare la scadenza del cronoprogramma di un progetto da completare attraverso il pulsante "Posticipa la scadenza". Ogni PA può quindi richiedere di posticipare la scadenza più volte nel corso del ciclo di vita del progetto, proponendo una nuova data di scadenza. Se lo slittamento richiesto è superiore ai 30 giorni, è necessario inserire una motivazione e attendere l'esito della valutazione. Se, invece, lo slittamento è inferiore o uguale a 30 giorni, la richiesta viene accettata automaticamente dal sistema. Dalla terza richiesta di proroga in poi, invece, è sempre necessario indicare la motivazione (anche per slittamenti fino a 30 giorni) e attendere l'esito della valutazione. Ti confermiamo, inoltre, che la data di completamento del progetto, sarà aggiornata automaticamente una volta inserita la data di contrattualizzazione.
       - title: "Devo eliminare un servizio selezionato in fase di candidatura. Come posso procedere?"
         content: Non è possibile aggiungere e/o eliminare servizi ad una candidatura già inviata. Ti ricordiamo che è comunque possibile rinunciare a una candidatura e inviarne una nuova a seguito della ricezione della PEC del decreto di rinuncia.Ti consigliamo di valutare tale opportunità anche contattando l’account manager del tuo territorio utilizzando il modulo dedicato <a href="https://padigitale2026.gov.it/team-territoriali" target="_blank">https://padigitale2026.gov.it/team-territoriali</a>
+      - title: Ho sbagliato ad indicare lo stato di un'attività ("da avviare" anziché "già avviato" o viceversa). Come posso correggerlo?
+        content: Ti invitiamo ad accedere alla sezione "I tuoi progetti", cliccare sul progetto di tuo interesse e nella sezione “Ulteriori documenti allegati” caricare un documento che indichi la caratteristica attuativa corretta, sottoscritto dal Rappresentante Legale dell'Ente. Ti ricordiamo che discriminante per la caratteristica attuativa ("da avviare" oppure "già avviato") è la data di sottomissione della candidatura e che la validità della documentazione potrà essere accertata esclusivamente in fase di asseverazione formale e controlli a campione. 
   - title: Progetti
     smallTitle: true
     description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
@@ -291,11 +292,11 @@ questions:
           - contratti_ordini
       - title: Devo apportare delle modifiche e/o integrazioni alla documentazione relativa alla contrattualizzazione ma ho il cronoprogramma scaduto, come posso procedere?
         content: |
-          Per integrare o rettificare la documentazione relativa al progetto, accedi alla sezione "Progetti" e seleziona quello di tuo interesse. Nella sezione “Ulteriori documenti allegati” puoi caricare e gestire eventuali documenti aggiuntivi, firmati dal Legale Rappresentante in formato PDF e P7m. La categoria “Rettifica/Integrazione” comprende documenti quali: addendum contrattuali, atti di ricognizione, modifica di caratteristiche attuative (da “avviata” a “da avviare” o viceversa), modifiche da “smart CIG” a “CIG ordinario”. Puoi utilizzare questa funzionalità quando la fase di contrattualizzazione fornitore è scaduta. Ti ricordiamo che la validità della documentazione potrà essere accertata esclusivamente in fase di asseverazione formale e controlli a campione.
+          Per integrare o rettificare la documentazione relativa al progetto, accedi alla sezione "Progetti" e seleziona quello di tuo interesse. Nella sezione “Ulteriori documenti allegati” puoi caricare e gestire eventuali documenti aggiuntivi, firmati dal Legale Rappresentante o dal Soggetto competente in formato PDF e P7m. La categoria “Rettifica/Integrazione” comprende documenti quali: addendum contrattuali, atti di ricognizione, modifica di caratteristiche attuative (da “avviata” a “da avviare” o viceversa), modifiche da “smart CIG” a “CIG ordinario”. Puoi utilizzare questa funzionalità quando la fase di contrattualizzazione fornitore è scaduta. Ti ricordiamo che la validità della documentazione potrà essere accertata esclusivamente in fase di asseverazione formale e controlli a campione.
         tag:
           - contratti_ordini
       - title: Come compilare i campi "Soggetto Erogatore" e "CSP" qualora l'ente abbia stipulato con il fornitore un contratto che preveda anche la fornitura di soluzioni SaaS certificate?
-        content: Nella sezione progetto è necessario associare un unico contratto con il fornitore formale utilizzato. Il contratto sarà quello del fornitore della soluzione SaaS, che deve essere un CSP Qualificato nel marketplace di ACN con una soluzione SaaS e che sarà il soggetto unico di riferimento dell'ente per questa soluzione. Lo stesso fornitore figurerà sia come “Erogatore del servizio” sia come “Cloud Provider”.
+        content: Nella sezione progetto è necessario associare un unico contratto con il fornitore formale utilizzato. Il contratto sarà quello del fornitore della soluzione SaaS, che deve essere un CSP Qualificato nel marketplace di ACN con una soluzione SaaS e che sarà il soggetto unico di riferimento dell'ente per questa soluzione. Lo stesso fornitore figurerà sia come “Erogatore del servizio” sia come “Cloud Provider”. Se invece il contratto intercorre tra l'Ente e un rivenditore della soluzione SaaS, quest'ultimo figurerà sia come Soggetto Erogatore sia come CSP. 
         tag:
           - fornitori
       - title: Da quale data decorrono i tempi di contrattualizzazione del fornitore? E per il completamento delle attività?
@@ -910,6 +911,11 @@ questions:
           - Asl/AO
           - scuole
           - comuni
+      - title: Il Canone Unico Patrimoniale, derivando dalla fusione di diverse imposte e canoni precedenti, indicati come componenti sia del servizio “TRIBUTI MINORI” che del servizio “CANONI” all’interno degli Avvisi 1.2 dedicati ai Comuni, in quale delle due categorie deve essere indicato?
+        content: |
+          Il Canone Unico Patrimoniale nasce dalla fusione di tasse, imposte e canoni vari (definita nella Legge di Bilancio 2020, ai commi 816-836) inseriti sotto i servizi “TRIBUTI MINORI” e “CANONI”. Pertanto il Canone Unico Patrimoniale può essere inserito indifferentemente come componente di uno o dell’altro servizio, o di entrambi.
+        tag:
+          - comuni
   - title: 1.3.1 
     description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
     sectionId: measure-1-3-1
@@ -1123,6 +1129,11 @@ questions:
       - title: Altri Enti
         id: altri-enti
     accordions:
+      - title: Quale procedura deve seguire un Ente per integrare il servizio di Pagamenti pagoPA per i concorsi svolti tramite la piattaforma inPA?
+        content: |
+            L'Ente deve seguire le procedure specifiche indicate da inPA e reperibili sul relativo sito web; in particolare, per l'integrazione del servizio Pagamenti pagoPA (per l'incasso della tassa di concorso) deve far riferimento alle specifiche presenti a questo link: <a href="https://www.inpa.gov.it/wp-content/uploads/2022/11/inPA-integrazione-PagoPA-v1.0-1.pdf" aria-label="link esterno">https://www.inpa.gov.it/wp-content/uploads/2022/11/inPA-integrazione-PagoPA-v1.0-1.pdf </a>
+        tag:
+          - comuni
       - title: A quanto ammonta l'importo del finanziamento previsto dall'Avviso "Adozione pagoPA" della Misura 1.4.3?
         content: 'L’importo del finanziamento concedibile ai Comuni è individuato in un importo forfettario determinato secondo il seguente criterio:<br>a. per i Comuni fino a 5.000 ab. pagoPA: €607 per servizio (min.3 max 117);<br>b. per i Comuni 5.001 - 20.000 ab. pagoPA: €857 per servizio (min.3 max 117);<br>c. per i Comuni 20.001 - 100.000 ab. pagoPA: €1821 per servizio (min.5 max 117);<br>d. per i Comuni 100.001 - 250.000 ab. pagoPA: €2747 per servizio (min.5 max 117);<br>e. per i Comuni > 250.000 ab. pagoPA: €7967 per servizio (min.5 max 117).'
         tag:
@@ -1284,12 +1295,17 @@ questions:
         content: L'importo del finanziamento riconoscibile è pari a €14.000 al termine della realizzazione del progetto.
         tag:
           - comuni
+      - title: Ho sbagliato ad indicare lo stato di un'attività ("da avviare" anziché "già avviato" o viceversa). Come posso correggerlo?
+        content: Ti invitiamo ad accedere alla sezione "I tuoi progetti", cliccare sul progetto di tuo interesse e nella sezione “Ulteriori documenti allegati” caricare un documento che indichi la caratteristica attuativa corretta, sottoscritto dal Rappresentante Legale dell'Ente.Ti ricordiamo che discriminante per la caratteristica attuativa ("da avviare" oppure "già avviato") è la data di sottomissione della candidatura e che la validità della documentazione potrà essere accertata esclusivamente in fase di asseverazione formale e controlli a campione. 
+        tag:
+          - comuni
       - title: Quali enti della PA possono presentare domanda?
         content: I soggetti attuatori, ovvero coloro che possono accedere allo strumento predisposto dall'Avviso, sono i Comuni. In seguito saranno pubblicati avvisi ad hoc per altre tipologie di pubbliche amministrazioni.
         tag:
           - comuni
       - title: Quali interventi possono essere finanziati dall'Avviso della Misura 1.4.4?
-        content: "Gli interventi che possono essere finanziati sono: adesione alla piattaforma di identità digitale SPID, adesione alla piattaforma di identità digitale CIE ed erogazione di un piano formativo su disposizioni normative, linee guida e best practices in caso di integrazione a SPID e CIE con protocollo SAML2. Per ulteriori dettagli si rimanda all'Allegato 2 del presente Avviso."
+        content: |
+          Gli interventi che possono essere finanziati da questo Avviso sono: <br>- adesione alla piattaforma di identità digitale SPID;<br>- adesione alla piattaforma di identità digitale CIE;<br>- erogazione di un piano formativo su disposizioni normative, linee guida e best practices in caso di integrazione a SPID e CIE con protocollo SAML2. <br>Per ulteriori dettagli si rimanda all'Allegato 2 del presente Avviso. Non si rende necessaria l'erogazione del corso di formazione qualora un ente abbia implementato il protocollo OIDC in almeno una delle due identità.
         tag:
           - comuni
       - title: È possibile accedere al finanziamento per l'adozione di una sola delle due piattaforme di identità digitale SPID/CIE?
@@ -1305,7 +1321,8 @@ questions:
         tag:
           - comuni
       - title: Quale standard di autenticazione deve applicare il Comune nell'adozione delle piattaforme di identità digitale?
-        content: OpenID Connect (OIDC) è lo standard di autenticazione attualmente utilizzato dalla quasi totalità delle moderne applicazioni web e mobile nel mondo privato ed è fortemente raccomandato, come specificato nell'Allegato 2. In alternativa è necessaria l'erogazione di un piano formativo, idoneo a costruire le basi per un successivo passaggio tecnologico.
+        content: |
+          Nell'adozione delle piattaforme di identità digitale, è richiesto l'utilizzo dello standard OpenID Connect (OIDC). Nel caso dell'adozione di SAML2 per entrambe le identità sarà necessaria, l'erogazione di un piano formativo idoneo a costruire le basi per un successivo passaggio tecnologico a OIDC. Non si rende necessaria l'erogazione del corso di formazione qualora un ente abbia implementato il protocollo OIDC in almeno una delle due identità così come previsto dal decreto 42/2023 - PNRR disponibile al seguente link: https://innovazione.gov.it/notizie/articoli/pa-digitale-2026-aggiornate-le-linee-guida-per-le-pa-locali/
         tag:
           - comuni
       - title: È possibile accedere al finanziamento in caso di progetti già avviati per integrazione SPID/CIE?
@@ -1313,11 +1330,11 @@ questions:
         tag:
           - comuni
       - title: Quando si considera raggiunto l’obiettivo di integrazione a CIE?
-        content: Per CIE sarà necessario che il soggetto attuatore abbia pubblicato l'adesione a CIE e messo in esercizio i servizi online. Farà fede la data di richiesta di adesione, purché la pubblicazione e messa in esercizio dei servizi avvenga entro e non oltre i 60 giorni decorrenti dalla data della richiesta di adesione a CIE.
+        content: Al fine di considerare raggiunto l’obiettivo di integrazione, è necessario che il processo di integrazione a CIE sia stato completato e certificato da IPZS (Istituto Poligrafico e Zecca dello Stato). È quindi necessario che il soggetto attuatore abbia pubblicato l'adesione a CIE e messo in esercizio i servizi online. Ai fini del presente Avviso, farà fede la data di approvazione della federazione in esercizio, i cui tempi di approvazione dalla messa in esercizio sono di massimo 60 giorni. In relazione ai tempi di completamento dell’intervento, si specifica che i dieci mesi comprendono i 60 giorni per le attività di verifica e approvazione della federazione da parte di Interno/IPZS.
         tag:
           - comuni
       - title: Quando si considera raggiunto l’obiettivo di integrazione a SPID?
-        content: Per SPID sarà necessario che il soggetto attuatore abbia eseguito i test tecnici di integrazione e abilitato i servizi online all’accesso tramite SPID. Farà fede la data di richiesta per il primo collaudo tecnico ad AgID il cui esito è positivo.
+        content: Al fine di considerare raggiunto l’obiettivo di integrazione, è necessario che il processo di integrazione a SPID sia stato completato e certificato da AGID.  A seconda del tipo di adesione (fornitore di servizi oppure adesione a SPID tramite uno dei soggetti della convezione AgID), è quindi necessario che il soggetto attuatore abbia, nel primo caso:<br> - effettuato l'abilitazione di servizi online all'accesso tramite SPID; <br> - effettuato i test tecnici;<br> - inviato richiesta di collaudo ad AGID;<br> nel secondo caso:<br> - attivato i servizi in rete. <br> Ai fini del presente Avviso, farà fede la data di richiesta di collaudo il cui esito è positivo (nel primo caso) oppure la data di attivazione dei servizi in rete (nel secondo caso).
         tag:
           - comuni
       - title: Link utili per tematiche tecniche su SPID
@@ -1332,16 +1349,9 @@ questions:
         content: No, si considera ammissibile solo la prima integrazione fatta dagli enti purché finanziata con fondi propri dopo il 1 febbraio 2020.
         tag:
           - comuni
-      - title: Qual è l'importo del finanziamento concedibile?
-        content: L'importo riconoscibile per l'implementazione del pacchetto  per l'Identità digitale è pari a 14.000,00 euro e sarà erogato all'ente successivamente alla verifica da parte del Dipartimento della corretta alimentazione della Piattaforma e del raggiungimento degli obiettivi prefissati attraverso AgID e IPZS, secondo quanto previsto dall'Art. 13 dell'Avviso.
-        tag:
-          - altri-enti
-      - title: Quali enti della PA possono presentare domanda?
-        content: I soggetti attuatori, ovvero coloro che possono accedere allo strumento predisposto dall'Avviso, sono tutte le amministrazioni pubbliche, esclusi i Comuni e le Istituzioni Scolastiche.
-        tag:
-          - altri-enti
       - title: Quali interventi possono essere finanziati dall'Avviso della Misura 1.4.4?
-        content: "Gli interventi che possono essere finanziati sono: adesione alla piattaforma di identità digitale SPID, adesione alla piattaforma di identità digitale CIE ed erogazione di un piano formativo su disposizioni normative, linee guida e best practices in caso di integrazione a SPID e CIE con protocollo SAML2. Per ulteriori dettagli si rimanda all'Allegato 2 del presente Avviso."
+        content: |
+          Gli interventi che possono essere finanziati da questo Avviso sono: <br>- adesione alla piattaforma di identità digitale SPID;<br>- adesione alla piattaforma di identità digitale CIE;<br>- erogazione di un piano formativo su disposizioni normative, linee guida e best practices in caso di integrazione a SPID e CIE con protocollo SAML2. <br>Per ulteriori dettagli si rimanda all'Allegato 2 del presente Avviso. Non si rende necessaria l'erogazione del corso di formazione qualora un ente abbia implementato il protocollo OIDC in almeno una delle due identità.
         tag:
           - altri-enti
       - title: È possibile accedere al finanziamento per l'adozione di una sola delle due piattaforme di identità digitale SPID/CIE?
@@ -1357,7 +1367,8 @@ questions:
         tag:
           - altri-enti
       - title: Quale standard di autenticazione deve applicare l'ente nell'adozione delle piattaforme di identità digitale?
-        content: OpenID Connect (OIDC) è lo standard di autenticazione attualmente utilizzato dalla quasi totalità delle moderne applicazioni web e mobile nel mondo privato ed è fortemente raccomandato, come specificato nell'Allegato 2. In alternativa è necessaria l'erogazione di un piano formativo, idoneo a costruire le basi per un successivo passaggio tecnologico.
+        content: |
+          Nell'adozione delle piattaforme di identità digitale, è richiesto l'utilizzo dello standard OpenID Connect (OIDC). Nel caso dell'adozione di SAML2 per entrambe le identità sarà necessaria, l'erogazione di un piano formativo idoneo a costruire le basi per un successivo passaggio tecnologico a OIDC. Non si rende necessaria l'erogazione del corso di formazione qualora un ente abbia implementato il protocollo OIDC in almeno una delle due identità così come previsto dal decreto 42/2023 - PNRR disponibile al seguente link: https://innovazione.gov.it/notizie/articoli/pa-digitale-2026-aggiornate-le-linee-guida-per-le-pa-locali/
         tag:
           - altri-enti
       - title: È possibile accedere al finanziamento in caso di progetti già avviati per integrazione SPID/CIE?
@@ -1372,6 +1383,10 @@ questions:
         content: Qualora un ente avesse già implementato infrastruttura per autenticazione digitale SPID/CIE per l’utilizzo del SUAP, in ottemperanza al DPR 160/2010 anche prima del 1 febbraio 2020, è comunque possibile accedere al finanziamento previsto dall’Avviso riferito alla Misura 1.4.4 per altri servizi, specificando in fase di candidatura lo stato delle attività come “da avviare”.
         tag:
           - altri-enti
+      - title: Quali sono le indicazioni da seguire per integrare la modalità di autenticazione con CIE di livello 1 e 2, in riferimento alla misura 1.4.4?
+        content: Secondo le disposizioni del Decreto 8 settembre 2022 “Modalità di impiego della carta di identità elettronica” art. 4, è previsto che i cittadini possano accedere ai servizi in rete autenticandosi oltre che con il livello massimo di sicurezza “livello 3", anche con il “livello 1” e “livello 2" CIE. Al fine di predisporre sin d’ora l’accesso ai servizi in rete dell'Amministrazione e allineare il livello di autenticazione a quanto previsto per lo SPID, è necessario modificare il livello richiesto nell’Authentication Request inviata per l’accesso tramite la CIE. Al seguente link troverete tutte le informazioni relative a quanto necessario per essere implementato <a target="_blank" href="https://www.agid.gov.it/sites/default/files/repository_files/linee_guida_openid_connect_in_spid.pdf">https://www.agid.gov.it/sites/default/files/repository_files/linee_guida_openid_connect_in_spid.pdf</a> 
+        tag:
+          - altri-enti
   - title: '1.4.5'
     smallTitle: true
     description: Le indicazioni pratiche per risolvere le problematiche tecniche ricorrenti
@@ -1380,10 +1395,6 @@ questions:
       - title: Comuni
         id: comuni
     accordions:
-      - title: Quali enti della PA possono presentare domanda?
-        content: I Soggetti Attuatori, ovvero coloro che possono accedere allo strumento predisposto dall'Avviso, sono i Comuni, inclusi quelli coinvolti nella fase di sperimentazione della Piattaforma Notifiche Digitale.
-        tag:
-          - comuni
       - title: Entro quando è possibile inoltrare la domanda di accesso al finanziamento?
         content: La domanda di partecipazione può essere presentata a partire dalla data di pubblicazione dell'Avviso fino ad esaurimento delle risorse disponibili, e comunque non oltre alle ore 23.59 del 11 novembre 2022.
         tag:
