@@ -131,38 +131,38 @@ opportunity:
 heroCarouselNews:
   - id: 1
     type: internal
+    category: Avviso 1.4.5 - Piattaforma notifiche 
+    title: "Estesione del cronoprogramma"
+    description: "Il termine per la contrattualizzazione dei fornitori è differito al 30 giugno 2023"
+    source: "Vai all'Avviso"
+    linkTo: 'https://areariservata.padigitale2026.gov.it/Pa_digitale2026_dettagli_avviso?id=a017Q000015cZ1KQAU'
+  - id: 2
+    type: internal
     category: Avviso 1.1-1.2 - Migrazione in cloud
     title: "Proroga e integrazione dotazione finanziaria"
     description: "La scadenza dell'Avviso per ASL/AO è stata prorogata al 30 giugno 2023, con ulteriori 100 milioni di dotazione"
     source: "Vai all'Avviso"
     linkTo: 'https://areariservata.padigitale2026.gov.it/Pa_digitale2026_dettagli_avviso?id=a017Q00001DrNiyQAF'
-  - id: 2
+  - id: 3
     type: internal
     category: Nuovo Avviso 1.4.3 - pagoPA
     title: "Pubblicato un nuovo Avviso per i Comuni"
     description: "Ulteriori 20 milioni messi a disposizione per l'integrazione di pagoPA"
     source: "Vai all'Avviso"
     linkTo: 'https://areariservata.padigitale2026.gov.it/Pa_digitale2026_dettagli_avviso?id=a017Q00001HAufCQAT'
-  - id: 3
+  - id: 4
     type: internal
     category: Avviso 1.3.1 - Piattaforma Digitale Nazionale Dati 
     title: "Estesione del cronoprogramma"
     description: "Il termine per la contrattualizzazione dei fornitori è differito di trenta giorni"
     source: "Vai all'Avviso"
     linkTo: 'https://areariservata.padigitale2026.gov.it/Pa_digitale2026_dettagli_avviso?id=a017Q00001B04NoQAJ'
-  - id: 4
+  - id: 5
     category: Obiettivi PNRR
     title: "Raggiunto il traguardo europeo sul cloud"
     description: "Grazie alla grande partecipazione di Comuni, Scuole e Asl, sono oltre 14mila le amministrazioni che hanno aderito"
     source: 'innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/notizie/articoli/pnrr-raggiunto-il-traguardo-europeo-sul-cloud/'
-  - id: 5
-    type: internal
-    category: Avviso 1.4.5 - Piattaforma notifiche 
-    title: "Estesione del cronoprogramma"
-    description: "Il termine per la contrattualizzazione dei fornitori è differito al 31 maggio 2023"
-    source: "Vai all'Avviso"
-    linkTo: 'https://areariservata.padigitale2026.gov.it/Pa_digitale2026_dettagli_avviso?id=a017Q000015cZ1KQAU'
   - id: 6
     type: internal
     category: DNSH 
