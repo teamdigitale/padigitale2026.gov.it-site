@@ -32,6 +32,7 @@
     "gatsby-plugin-google-tagmanager": "3.14.0",
     "gatsby-plugin-image": "^1.14.1",
     "gatsby-plugin-matomo": "0.10.0",
+    "gatsby-transformer-yaml": "3.14.0",
     "jwt-decode": "^3.1.2",
     "luxon": "^2.5.2",
     "prop-types": "^15.7.2",

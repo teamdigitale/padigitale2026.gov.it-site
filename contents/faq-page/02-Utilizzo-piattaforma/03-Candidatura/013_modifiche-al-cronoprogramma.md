@@ -1,0 +1,4 @@
+---
+  - title: "È possibile apportare delle modifiche al cronoprogramma su PA digitale 2026?"
+    content: Sì, è possibile posticipare la scadenza del cronoprogramma di un progetto da completare attraverso il pulsante "Posticipa la scadenza". Ogni PA può quindi richiedere di posticipare la scadenza più volte nel corso del ciclo di vita del progetto, proponendo una nuova data di scadenza. Se lo slittamento richiesto è superiore ai 30 giorni, è necessario inserire una motivazione e attendere l'esito della valutazione. Se, invece, lo slittamento è inferiore o uguale a 30 giorni, la richiesta viene accettata automaticamente dal sistema. Dalla terza richiesta di proroga in poi, invece, è sempre necessario indicare la motivazione (anche per slittamenti fino a 30 giorni) e attendere l'esito della valutazione. Ti confermiamo, inoltre, che la data di completamento del progetto, sarà aggiornata automaticamente una volta inserita la data di contrattualizzazione.
+---

@@ -6578,6 +6578,16 @@ gatsby-transformer-sharp@^3.14.0:
     semver "^7.3.5"
     sharp "^0.29.0"
 
+gatsby-transformer-yaml@3.14.0:
+  version "3.14.0"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-yaml/-/gatsby-transformer-yaml-3.14.0.tgz#f5ae5796c62f1fd96fbd3d99db57653af11ee504"
+  integrity sha512-rdXV4JEOPvnXgAdKzPaprpyZZMje5GqdLPCi6TXOK+uTGMWWBckjEjx63yMIWmqR9u0RfJik/DtcfKZ2U4YbCg==
+  dependencies:
+    "@babel/runtime" "^7.15.4"
+    js-yaml "^3.14.1"
+    lodash "^4.17.21"
+    unist-util-select "^1.5.0"
+
 gatsby-worker@^0.5.0:
   version "0.5.0"
   resolved "https://registry.npmjs.org/gatsby-worker/-/gatsby-worker-0.5.0.tgz"
@@ -8161,7 +8171,7 @@ jquery@>=1.8.3, jquery@^3.5.1:
   resolved "https://registry.npmjs.org/js-tokens/-/js-tokens-4.0.0.tgz"
   integrity sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==
 
-js-yaml@^3.11.0, js-yaml@^3.13.1:
+js-yaml@^3.11.0, js-yaml@^3.13.1, js-yaml@^3.14.1:
   version "3.14.1"
   resolved "https://registry.npmjs.org/js-yaml/-/js-yaml-3.14.1.tgz"
   integrity sha512-okMH7OXXJ7YrN9Ok3/SXrnu4iX9yOk+25nqX4imS2npuvTYDmo/QEZoqwZkYaIDk3jVvBOTOIEgEhaLOynBS9g==

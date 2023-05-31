@@ -280,5 +280,5 @@ QuestionSection.propTypes = {
   item: PropTypes.object.isRequired,
   inputText: PropTypes.string,
   setQuestions: PropTypes.func,
-  totalQuestions: PropTypes.object,
+  totalQuestions: PropTypes.array,
 };

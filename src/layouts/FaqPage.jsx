@@ -365,7 +365,7 @@ export const FaqPage = () => {
       chip.addEventListener('click', chipHandler, true);
     });
   }, [search]);
-
+  console.log('FAQ SCHEMA', faq);
   return (
     <>
       <SEO title={seoTitle} description={seoDescription} />
