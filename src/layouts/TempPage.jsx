@@ -56,7 +56,8 @@ const buildArrayQuestions = (data) => {
     buildSidebar.map((obj) => {
       allFaqQuestions.sidebar.push(obj);
     });
-  } else if (
+  }
+  if (
     (section[sectionPos].includes('000') && sameSection === '') ||
     (section[sectionPos].includes('000') && sameSection === sectionData.sectionId)
   ) {
