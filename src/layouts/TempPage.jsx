@@ -157,21 +157,26 @@ export const TempPage = () => {
     }
   `);
   const [count, SetCount] = useState(0);
+  const [newCount, SetNewCount] = useState(0);
   const [questionsMDArray, SetQuestionsMDArray] = useState([]);
-  const [faq, SetFaq] = useState({
+  const [newFaq, SetNewFaq] = useState({
     questions: [],
     sidebar: [],
   });
   useEffect(() => {
-    // let countT = 1;
-    // announce('Pagina caricata Temp');
-    // faq.questions.map((question) => {
-    //   SetCount(countT++);
-    //   question.accordions.map((q2, idx) => {
-    //     SetCount(countT++);
-    //   });
-    // });
-    // console.log('TOTAL QUESTION', countT);
+    // TO REMOVE
+    let countT = 1;
+    let newQuestionsTotal = 0;
+    announce('Pagina caricata Temp');
+    faq.questions.map((question) => {
+      SetCount(countT++);
+      question.accordions.map((q2, idx) => {
+        SetCount(countT++);
+      });
+    });
+    console.log('TOTAL QUESTION', countT);
+    // STOP REMOVE
+
     // Ordino per nomeFile
     edges.sort((a, b) => {
       const nameA = a.node.fields.slug.toUpperCase();
@@ -185,29 +190,30 @@ export const TempPage = () => {
       return 0;
     });
     SetQuestionsMDArray(edges);
-
     questionsMDArray.map(async (questionData) => {
-      SetFaq(await buildArrayQuestions(questionData));
+      newQuestionsTotal++;
+      SetNewFaq(await buildArrayQuestions(questionData));
     });
+    console.log('NUOVE FAQ', newQuestionsTotal);
+    SetNewCount(newQuestionsTotal);
   }, [edges, questionsMDArray]);
-  console.log('FAQ RENDERED', faq);
   return (
     <>
       <h1>OLD ({count})</h1>
-      {faq.questions.map((question, i) => (
+      {newFaq.questions.map((question, i) => (
         <div key={i}>
           {i} - {question.title}
         </div>
       ))}
-      <h1>NEW</h1>
-      <SideNavigation getFilter={() => { }} activeList={faq.questions} searchValue={''} list={faq.sidebar} />
-      {faq.questions.map((question) => (
+      <h1>NEW({newCount})</h1>
+      <SideNavigation getFilter={() => { }} activeList={newFaq.questions} searchValue={''} list={newFaq.sidebar} />
+      {newFaq.questions.map((question) => (
         <QuestionSection
           key={question.title}
           item={question}
           inputText="aaa"
           setQuestions={() => { }}
-          totalQuestions={faq.questions}
+          totalQuestions={newFaq.questions}
         />
       ))}
     </>
