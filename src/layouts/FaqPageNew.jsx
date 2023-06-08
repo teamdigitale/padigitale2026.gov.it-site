@@ -4,14 +4,14 @@
 /* eslint-disable sonarjs/no-identical-functions */
 /* eslint-disable max-lines-per-function */
 import React, { useState, useEffect } from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
 import { Container, Input, Row, Col } from 'design-react-kit';
 import { createUseStyles } from 'react-jss';
 import { announce } from '@react-aria/live-announcer';
-import faq from '../../contents/faq-page/faq.yml';
 import { SEO } from '../components/SEO';
 import seo from '../../contents/seo.yml';
-// import content from '../../contents/faq-page/faq.yml';
 import { Totop } from '../components/Totop';
+import { buildArrayQuestions } from '../hooks/collectFaq';
 import { SideNavigation } from './faq/SideNavigation';
 import { QuestionSection } from './faq/QuestionSection';
 import { SupportSection } from './faq/SupportSection';
@@ -63,30 +63,191 @@ const useStyles = createUseStyles({
 
 // eslint-disable-next-line sonarjs/cognitive-complexity
 export const FaqPageNew = () => {
-  console.log('faq', faq);
-  console.log('CONTENT', content);
+  const {
+    allMarkdownRemark: { edges },
+  } = useStaticQuery(graphql`
+    query {
+      allMarkdownRemark(filter: { fields: { slug: { regex: "/faq-page/" } } }) {
+        edges {
+          node {
+            fields {
+              slug
+            }
+            frontmatter {
+              _0 {
+                title
+                ariaLabel
+                link
+                linkLabel
+                description
+                smallTitle
+                sidebar {
+                  sectionActive
+                  sectionId
+                  sectionTitle
+                  accordion
+                  sublist {
+                    sectionActive
+                    sectionId
+                    sectionTitle
+                  }
+                  description
+                }
+                sectionId
+                last
+                anchorLink
+                tag
+                sectionTitle
+                chips {
+                  chipsId
+                  id
+                  title
+                }
+              }
+              title
+            }
+            internal {
+              content
+            }
+          }
+        }
+      }
+    }
+  `);
+  const [faq, SetFaq] = useState({
+    name: 'FAQ - PA digitale 2026 NEW',
+    hero: {
+      title: 'Domande frequenti NEW',
+      subtitle: 'Esplora le risposte alle domande più frequenti o fai una ricerca per parola chiave',
+    },
+    noResults: 'Nessun risultato trovato',
+    support: {
+      tag: 'Supporto',
+      title: 'Non hai trovato le risposte che cerchi? Vuoi inviare suggerimenti o ricevere supporto?',
+      cards: [
+        {
+          title: 'Assistenza',
+          description: 'Compila il modulo per richiedere chiarimenti e approfondire temi di interesse.',
+          link: '/supporto/assistenza',
+        },
+      ],
+    },
+    questions: [],
+    sidebar: [],
+  });
+  const [newFaq, SetNewFaq] = useState({
+    name: 'FAQ - PA digitale 2026',
+    hero: {
+      title: 'Domande frequenti NEW',
+      subtitle: 'Esplora le risposte alle domande più frequenti o fai una ricerca per parola chiave',
+    },
+    noResults: 'Nessun risultato trovato',
+    support: {
+      tag: 'Supporto',
+      title: 'Non hai trovato le risposte che cerchi? Vuoi inviare suggerimenti o ricevere supporto?',
+      cards: [
+        {
+          title: 'Assistenza',
+          description: 'Compila il modulo per richiedere chiarimenti e approfondire temi di interesse.',
+          link: '/supporto/assistenza',
+        },
+      ],
+    },
+  });
+
   const classes = useStyles();
   const [inputValue, setInputValue] = useState('');
   const [filterId, setFilterId] = useState('all');
-  const [questions, setQuestions] = useState(faq.questions);
+  const [questions, setQuestions] = useState([]);
   const [isMobile, setIsMobile] = useState();
   const [questNum, setquestNum] = useState(countInitQuestions());
   const [search, setSearch] = useState(0);
 
   useEffect(() => {
+    const sectionArr = document.querySelectorAll('.question-section');
+
+    const observerHandler = (entries) => {
+      const changeActive = (id) => {
+        const sideMenuActive = document.querySelector(`.sidebar-wrapper .list-item.active`);
+        const sideMenuRefer = document.querySelector(`.sidebar-wrapper .list-item[data-id=${id}]`);
+
+        sideMenuActive && sideMenuActive.classList.remove('active');
+        sideMenuRefer && sideMenuRefer.classList.add('active');
+      };
+
+      entries.forEach((entry) => {
+        if (entry.boundingClientRect.top < 200 && entry.boundingClientRect.top > 150) {
+          setTimeout(() => {
+            changeActive(entry.target.id);
+          }, 200);
+        }
+      });
+    };
+
+    const scrollHandler = () => {
+      const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 1.0,
+        trackVisibility: true,
+        delay: 200,
+      };
+
+      const observer = new IntersectionObserver(observerHandler, options);
+      sectionArr.forEach((section) => {
+        observer.observe(section);
+      });
+    };
+    window.addEventListener('scroll', scrollHandler);
     setIsMobile(window.innerWidth < 992);
     window.addEventListener('resize', () => {
       setIsMobile(window.innerWidth < 992);
     });
     announce('Pagina caricata ' + faq.name);
+
+    // FAQ
+    // Ordino per nomeFile
+    edges.sort((a, b) => {
+      const nameA = a.node.fields.slug.toUpperCase();
+      const nameB = b.node.fields.slug.toUpperCase();
+      if (nameA < nameB) {
+        return -1;
+      }
+      if (nameA > nameB) {
+        return 1;
+      }
+      return 0;
+    });
+    const totEges = edges.length - 1;
+
+    const allFaqQuestions = {
+      sidebar: [],
+      questions: [],
+    };
+    edges.map(async (questionData, idx) => {
+      const sectionData = await buildArrayQuestions(allFaqQuestions, questionData);
+      if (idx === totEges) {
+        const Obj = Object.assign({}, allFaqQuestions);
+        Obj.questions = sectionData ? sectionData.questions : [];
+        Obj.sidebar = sectionData ? sectionData.sidebar : [];
+        faq.questions = Obj.questions;
+        faq.sidebar = sectionData ? sectionData.sidebar : [];
+        SetNewFaq(Obj);
+        setQuestions(Obj.questions);
+      }
+    });
+    // END FAQ
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   function countInitQuestions() {
     let count = 0;
-    faq.questions.forEach((element) => {
-      count += element.accordions.length;
-    });
-    return count;
+    if (faq && faq.questions) {
+      faq.questions.forEach((element) => {
+        count += element.accordions.length;
+      });
+      return count;
+    }
   }
 
   function countQuestions() {
@@ -217,47 +378,9 @@ export const FaqPageNew = () => {
   useEffect(() => {
     if (!isMobile) {
       setInputValue('');
-      setQuestions(faq.questions);
+      // setQuestions(faq.questions);
     }
   }, [isMobile]);
-
-  useEffect(() => {
-    const sectionArr = document.querySelectorAll('.question-section');
-
-    const observerHandler = (entries) => {
-      const changeActive = (id) => {
-        const sideMenuActive = document.querySelector(`.sidebar-wrapper .list-item.active`);
-        const sideMenuRefer = document.querySelector(`.sidebar-wrapper .list-item[data-id=${id}]`);
-
-        sideMenuActive && sideMenuActive.classList.remove('active');
-        sideMenuRefer && sideMenuRefer.classList.add('active');
-      };
-
-      entries.forEach((entry) => {
-        if (entry.boundingClientRect.top < 200 && entry.boundingClientRect.top > 150) {
-          setTimeout(() => {
-            changeActive(entry.target.id);
-          }, 200);
-        }
-      });
-    };
-
-    const scrollHandler = () => {
-      const options = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 1.0,
-        trackVisibility: true,
-        delay: 200,
-      };
-
-      const observer = new IntersectionObserver(observerHandler, options);
-      sectionArr.forEach((section) => {
-        observer.observe(section);
-      });
-    };
-    window.addEventListener('scroll', scrollHandler);
-  }, []);
 
   const resetInput = () => {
     const tagListArr = document.querySelectorAll('.tags-container');
@@ -366,12 +489,13 @@ export const FaqPageNew = () => {
     chipsArr.forEach((chip) => {
       chip.addEventListener('click', chipHandler, true);
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [search]);
-  console.log('FAQ SCHEMA', faq);
+  console.log('XXX', faq);
   return (
     <>
       <SEO title={seoTitle} description={seoDescription} />
-      <HeroSupport title={faq.hero.title} subtitle={faq.hero.subtitle} isFaq={true} />
+      {faq && faq.hero ? <HeroSupport title={faq.hero.title} subtitle={faq.hero.subtitle} isFaq={true} /> : null}
       <div className="docs py-4 py-md-5">
         <Container className="px-3">
           <h2 id="question-section" className="sr-only">
@@ -403,12 +527,14 @@ export const FaqPageNew = () => {
           </Row>
           <Row>
             <Col lg={3} className={classes.sidenav}>
-              <SideNavigation
-                getFilter={setFilterId}
-                activeList={questions}
-                searchValue={inputValue}
-                list={faq.sidebar}
-              />
+              {faq && faq.sidebar && (
+                <SideNavigation
+                  getFilter={setFilterId}
+                  activeList={questions}
+                  searchValue={inputValue}
+                  list={faq.sidebar}
+                />
+              )}
             </Col>
             <Col
               lg={9}
@@ -422,16 +548,18 @@ export const FaqPageNew = () => {
                 Numero faq filtrate {questNum}
               </span>
               <Totop />
-              {questions.map((question) => (
-                <QuestionSection
-                  key={question.title}
-                  item={question}
-                  inputText={inputValue}
-                  setQuestions={setQuestions}
-                  totalQuestions={faq.questions}
-                />
-              ))}
-              {!questions.length && (
+              {faq && faq.questions.length > 0
+                ? questions.map((question) => (
+                  <QuestionSection
+                    key={question.title}
+                    item={question}
+                    inputText={inputValue}
+                    setQuestions={setQuestions}
+                    totalQuestions={faq.questions}
+                  />
+                ))
+                : null}
+              {!questions && (
                 <p className={classes.noResults} role="alert">
                   {faq.noResults}
                 </p>
@@ -440,7 +568,7 @@ export const FaqPageNew = () => {
           </Row>
         </Container>
       </div>
-      <SupportSection supportList={faq.support.cards} title={faq.support.title} />
+      {faq && faq.support && <SupportSection supportList={faq.support.cards} title={faq.support.title} />}
     </>
   );
 };
