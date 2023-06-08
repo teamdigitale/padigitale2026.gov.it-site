@@ -4,26 +4,6 @@ import { buildArrayQuestions } from '../hooks/collectFaq';
 import { SideNavigation } from './faq/SideNavigation';
 import { QuestionSection } from './faq/QuestionSection';
 
-const allFaqQuestions = {
-  name: 'FAQ - PA digitale 2026 RELOAD',
-  hero: {
-    title: 'Domande frequenti',
-    subtitle: 'Esplora le risposte alle domande più frequenti o fai una ricerca per parola chiave',
-  },
-  noResults: 'Nessun risultato trovato',
-  support: {
-    tag: 'Supporto',
-    title: 'Non hai trovato le risposte che cerchi? Vuoi inviare suggerimenti o ricevere supporto?',
-    cards: [
-      {
-        title: 'Assistenza',
-        description: 'Compila il modulo per richiedere chiarimenti e approfondire temi di interesse.',
-        link: '/supporto/assistenza',
-      },
-    ],
-  },
-};
-
 export const TempPage = () => {
   const {
     allMarkdownRemark: { edges },
@@ -77,7 +57,6 @@ export const TempPage = () => {
     }
   `);
   const [newCount, SetNewCount] = useState(0);
-  const [faqLoaded, SetFaqLoaded] = useState(false);
   const [newFaq, SetNewFaq] = useState({
     name: 'FAQ - PA digitale 2026',
     hero: {
