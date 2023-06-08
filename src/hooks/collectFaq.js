@@ -3,11 +3,6 @@
 /* eslint-disable sonarjs/no-identical-conditions */
 /* eslint-disable sonarjs/cognitive-complexity */
 
-const allFaqQuestions = {
-  sidebar: [],
-  questions: [],
-};
-
 let sameSection = '';
 let sectionTitle = '';
 
@@ -20,7 +15,8 @@ const cleanObj = (chip) => {
   return chip;
 };
 
-export const buildArrayQuestions = (data) => {
+export const buildArrayQuestions = (allFaqQuestions, data) => {
+  // const resetAll = data.node.frontmatter['_0'].resetAll;
   const question = {
     title: '',
     description: '',
@@ -34,7 +30,10 @@ export const buildArrayQuestions = (data) => {
   const sectionContent = data.node.internal.content;
   const stringsectPos = section.length === 4 ? 2 : 1;
   const sectionIndexPos = section.length === 3 ? 2 : 3;
-  sectionTitle = section.length === 3 ? section[1] : section[2];
+
+  sectionTitle =
+    section.length === 3 ? section[1].split('_')[1].replaceAll('-', ' ') : section[2].slice(4).replace('-', ' ');
+  sectionTitle = sectionTitle.charAt(0).toUpperCase() + sectionTitle.slice(1);
 
   if (sectionData.sidebar) {
     const buildSidebar = sectionData.sidebar;
