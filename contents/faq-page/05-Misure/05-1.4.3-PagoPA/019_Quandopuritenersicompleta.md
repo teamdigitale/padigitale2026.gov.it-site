@@ -1,9 +1,0 @@
----
-  - title: Quando può ritenersi completato il progetto oggetto dell’iniziativa proposta ai fini del finanziamento?
-
-    content: In relazione agli Avvisi Misura 1.4.3. “Adozione piattaforma PagoPA” Comuni e altri Enti pubblicati sulla piattaforma PA digitale 2026 si precisa che i servizi di incasso per i quali l’Ente ha richiesto il contributo devono essere realizzati e funzionanti al più tardi alla data prevista per il completamento delle attività. A tal proposito si precisa che sono finanziabili anche i servizi di incasso attinenti ai servizi pubblici che saranno gestiti e quindi fruiti dagli utenti entro la data prevista per il completamento del progetto ammesso a finanziamento (cfr. art. 8, comma 3, dell’Avviso “Le attività previste per i progetti proposti dovranno concludersi entro i termini indicati all’Allegato 2 a decorrere dalla data di notifica del Decreto di finanziamento” e paragrafo D dell’Allegato 2 “I tempi e la conclusione del processo di migrazione e attivazione dei servizi”). L'Avviso pubblico prevede infatti l'attribuzione di un contributo economico per finanziare la migrazione e l'attivazione dei servizi di incasso, tramite la piattaforma PagoPA, attinenti allo svolgimento di servizi pubblici effettivamente gestiti dall'Ente in favore degli utenti. Si richiama inoltre l’attenzione sugli obblighi a carico del soggetto attuatore previsti dall’art.11, sulla disciplina dei controlli che potranno essere attivati, contenuta nell’art.12 degli Avvisi, nonché sulle previsioni in ordine ai meccanismi sanzionatori di cui all’art.15 dei medesimi Avvisi.
-    tag:
-      - comuni,altri-enti
-    anchorLink: 019_Quandopuritenersicompleta
-    last: true
----

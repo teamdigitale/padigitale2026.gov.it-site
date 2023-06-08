@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { announce } from '@react-aria/live-announcer';
-import faq from '../../contents/faq-page/faq.yml';
-
+// import faq from '../../contents/faq-page/faq.yml';
+import { buildArrayQuestions } from '../hooks/collectFaq';
 import { SideNavigation } from './faq/SideNavigation';
 import { QuestionSection } from './faq/QuestionSection';
 
@@ -34,79 +34,6 @@ const allFaqQuestions = {
   },
   questions: [],
 };
-let sameSection = '';
-
-const cleanObj = (chip) => {
-  Object.keys(chip).forEach((key) => {
-    if (chip[key] === null) {
-      delete chip[key];
-    }
-  });
-  return chip;
-};
-const buildArrayQuestions = (data) => {
-  const section = data.node.fields.slug.split('/');
-  // Check if data are the MainDataSectionInfo
-  const sectionData = data.node.frontmatter['_0'];
-  const stringsectPos = section.length === 4 ? 2 : 1;
-  const sectionPos = section.length === 4 ? 3 : 2;
-
-  if (sectionData.sidebar) {
-    const buildSidebar = sectionData.sidebar;
-    buildSidebar.map((obj) => {
-      allFaqQuestions.sidebar.push(obj);
-    });
-  }
-  if (
-    (section[sectionPos].includes('000') && sameSection === '') ||
-    (section[sectionPos].includes('000') && sameSection === sectionData.sectionId)
-  ) {
-    const question = {
-      title: '',
-      description: '',
-      sectionId: '',
-      sectionTitle: '',
-      accordions: [],
-    };
-
-    question.title = sectionData.title;
-    question.description = sectionData.description;
-    question.sectionId = sectionData.sectionId;
-
-    if (sectionData.sectionTitle) {
-      question.sectionTitle = sectionData.sectionTitle;
-    }
-    if (sectionData.smallTitle) {
-      question.smallTitle = sectionData.smallTitle;
-    }
-    if (sectionData.chips && sectionData.chips.length > 0) {
-      question.chips = [];
-      sectionData.chips.map((chip) => {
-        question.chips.push(cleanObj(chip));
-      });
-    }
-    if (sectionData.tag && sectionData.tag.length > 0) {
-      question.tag = [];
-      sectionData.tag.map((tag) => {
-        question.tag.push(cleanObj(tag));
-      });
-    }
-    sameSection = sectionData.sectionId;
-    allFaqQuestions.questions.push(question);
-  } else {
-    const sectionId = section[stringsectPos].slice(3).toLowerCase();
-    const searchObject = allFaqQuestions.questions.find((faq) => faq.sectionId === sectionId);
-    if (searchObject) {
-      searchObject.accordions.push(sectionData);
-      const i = allFaqQuestions.questions.findIndex((faq) => faq.sectionId === sectionId);
-      allFaqQuestions.questions[i] = searchObject;
-    }
-    if (sectionData.last) {
-      sameSection = '';
-    }
-  }
-  return allFaqQuestions;
-};
 
 export const TempPage = () => {
   const {
@@ -123,61 +50,68 @@ export const TempPage = () => {
               _0 {
                 title
                 ariaLabel
-                content
                 link
                 linkLabel
                 description
-                sectionId
-                last
-                sectionTitle
                 smallTitle
-                chips {
-                  chipsId
-                  id
-                  title
-                }
-                tag
                 sidebar {
-                  accordion
                   sectionActive
                   sectionId
                   sectionTitle
+                  accordion
                   sublist {
                     sectionActive
                     sectionId
                     sectionTitle
                   }
+                  description
+                }
+                sectionId
+                last
+                anchorLink
+                tag
+                sectionTitle
+                chips {
+                  chipsId
+                  id
+                  title
                 }
               }
               title
+            }
+            internal {
+              content
             }
           }
         }
       }
     }
   `);
-  const [count, SetCount] = useState(0);
   const [newCount, SetNewCount] = useState(0);
   const [questionsMDArray, SetQuestionsMDArray] = useState([]);
   const [newFaq, SetNewFaq] = useState({
-    questions: [],
+    name: 'FAQ - PA digitale 2026',
+    hero: {
+      title: 'Domande frequenti',
+      subtitle: 'Esplora le risposte alle domande più frequenti o fai una ricerca per parola chiave',
+    },
     sidebar: [],
+    noResults: 'Nessun risultato trovato',
+    support: {
+      tag: 'Supporto',
+      title: 'Non hai trovato le risposte che cerchi? Vuoi inviare suggerimenti o ricevere supporto?',
+      cards: [
+        {
+          title: 'Assistenza',
+          description: 'Compila il modulo per richiedere chiarimenti e approfondire temi di interesse.',
+          link: '/supporto/assistenza',
+        },
+      ],
+    },
+    questions: [],
   });
   useEffect(() => {
-    // TO REMOVE
-    let countT = 1;
-    let newQuestionsTotal = 0;
     announce('Pagina caricata Temp');
-    faq.questions.map((question) => {
-      SetCount(countT++);
-      question.accordions.map((q2, idx) => {
-        SetCount(countT++);
-      });
-    });
-    console.log('TOTAL QUESTION', countT);
-    // STOP REMOVE
-
-    // Ordino per nomeFile
     edges.sort((a, b) => {
       const nameA = a.node.fields.slug.toUpperCase();
       const nameB = b.node.fields.slug.toUpperCase();
@@ -189,22 +123,32 @@ export const TempPage = () => {
       }
       return 0;
     });
+    const totEges = edges.length - 1;
     SetQuestionsMDArray(edges);
-    questionsMDArray.map(async (questionData) => {
+    let newQuestionsTotal = 0;
+    edges.map(async (questionData, idx) => {
       newQuestionsTotal++;
-      SetNewFaq(await buildArrayQuestions(questionData));
+      // SetNewFaq(await buildArrayQuestions(questionData));
+      // newFaq.questions.push(await buildArrayQuestions(questionData));
+      const sectionData = await buildArrayQuestions(questionData);
+      if (idx === totEges) {
+        console.log(idx, totEges);
+        console.log(sectionData);
+        allFaqQuestions.questions = sectionData.questions;
+        allFaqQuestions.sidebar = sectionData.sidebar;
+        newFaq.questions = sectionData.questions;
+        newFaq.sidebar = sectionData.sidebar;
+        console.log('xxx', newFaq);
+        SetNewFaq(newFaq);
+      }
     });
-    console.log('NUOVE FAQ', newQuestionsTotal);
     SetNewCount(newQuestionsTotal);
-  }, [edges, questionsMDArray]);
+  }, []);
+  // Ordino per nomeFile
+
+  console.log('NEW FAQ SCHEMA', newFaq);
   return (
     <>
-      <h1>OLD ({count})</h1>
-      {newFaq.questions.map((question, i) => (
-        <div key={i}>
-          {i} - {question.title}
-        </div>
-      ))}
       <h1>NEW({newCount})</h1>
       <SideNavigation getFilter={() => { }} activeList={newFaq.questions} searchValue={''} list={newFaq.sidebar} />
       {newFaq.questions.map((question) => (

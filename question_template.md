@@ -1,6 +1,5 @@
 ---
   - title: {{{title}}}
-    content: {{{content}}}
     {{#tag}} 
     tag:
       - {{{tag}}}
@@ -16,3 +15,5 @@
     {{/ariaLabel}}
     anchorLink: {{{anchorLink}}}
 ---
+
+{{{content}}}
