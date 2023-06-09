@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 /* eslint-disable sonarjs/prefer-object-literal */
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable sonarjs/no-unused-collection */
@@ -113,6 +114,8 @@ export const FaqPageNew = () => {
       }
     }
   `);
+
+  // eslint-disable-next-line no-unused-vars
   const [faq, SetFaq] = useState({
     name: 'FAQ - PA digitale 2026 NEW',
     hero: {
@@ -361,6 +364,7 @@ export const FaqPageNew = () => {
       setInputValue('');
       setQuestions(faq.questions);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isMobile]);
 
   const resetInput = () => {
