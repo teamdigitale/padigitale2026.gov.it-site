@@ -145,6 +145,7 @@ export const FaqPageNew = () => {
   const [isMobile, setIsMobile] = useState();
   const [questNum, setquestNum] = useState(countInitQuestions());
   const [search, setSearch] = useState(0);
+  const [questionsLink, setQuestionsLink] = useState({});
 
   useEffect(() => {
     const sectionArr = document.querySelectorAll('.question-section');
@@ -541,6 +542,10 @@ export const FaqPageNew = () => {
                     inputText={inputValue}
                     setQuestions={setQuestions}
                     totalQuestions={faq.questions}
+                    questionsLink={questionsLink}
+                    setQuestionsLink={() => {
+                      setQuestionsLink;
+                    }}
                   />
                 ))
                 : null}

@@ -70,6 +70,7 @@ export const FaqPage = () => {
   const [isMobile, setIsMobile] = useState();
   const [questNum, setquestNum] = useState(countInitQuestions());
   const [search, setSearch] = useState(0);
+  const [questionsLink, setQuestionsLink] = useState({});
 
   useEffect(() => {
     setIsMobile(window.innerWidth < 992);
@@ -427,6 +428,10 @@ export const FaqPage = () => {
                   inputText={inputValue}
                   setQuestions={setQuestions}
                   totalQuestions={faq.questions}
+                  questionsLink={questionsLink}
+                  setQuestionsLink={() => {
+                    setQuestionsLink;
+                  }}
                 />
               ))}
               {!questions.length && (
