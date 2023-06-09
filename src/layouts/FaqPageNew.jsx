@@ -91,7 +91,6 @@ export const FaqPageNew = () => {
                     sectionId
                     sectionTitle
                   }
-                  description
                 }
                 sectionId
                 last
@@ -134,25 +133,6 @@ export const FaqPageNew = () => {
     },
     questions: [],
     sidebar: [],
-  });
-  const [newFaq, SetNewFaq] = useState({
-    name: 'FAQ - PA digitale 2026',
-    hero: {
-      title: 'Domande frequenti NEW',
-      subtitle: 'Esplora le risposte alle domande più frequenti o fai una ricerca per parola chiave',
-    },
-    noResults: 'Nessun risultato trovato',
-    support: {
-      tag: 'Supporto',
-      title: 'Non hai trovato le risposte che cerchi? Vuoi inviare suggerimenti o ricevere supporto?',
-      cards: [
-        {
-          title: 'Assistenza',
-          description: 'Compila il modulo per richiedere chiarimenti e approfondire temi di interesse.',
-          link: '/supporto/assistenza',
-        },
-      ],
-    },
   });
 
   const classes = useStyles();
@@ -232,8 +212,8 @@ export const FaqPageNew = () => {
         Obj.sidebar = sectionData ? sectionData.sidebar : [];
         faq.questions = Obj.questions;
         faq.sidebar = sectionData ? sectionData.sidebar : [];
-        SetNewFaq(Obj);
         setQuestions(Obj.questions);
+        console.log('FAQ RENDERED', faq);
       }
     });
     // END FAQ
@@ -491,7 +471,7 @@ export const FaqPageNew = () => {
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [search]);
-  console.log('XXX', faq);
+
   return (
     <>
       <SEO title={seoTitle} description={seoDescription} />

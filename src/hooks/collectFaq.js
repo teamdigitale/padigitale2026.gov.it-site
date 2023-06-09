@@ -16,7 +16,6 @@ const cleanObj = (chip) => {
 };
 
 export const buildArrayQuestions = (allFaqQuestions, data) => {
-  // const resetAll = data.node.frontmatter['_0'].resetAll;
   const question = {
     title: '',
     description: '',
@@ -24,6 +23,7 @@ export const buildArrayQuestions = (allFaqQuestions, data) => {
     sectionTitle: '',
     accordions: [],
   };
+
   const section = data.node.fields.slug.split('/');
 
   const sectionData = data.node.frontmatter['_0'];
@@ -43,10 +43,11 @@ export const buildArrayQuestions = (allFaqQuestions, data) => {
   }
 
   if (
+    (section[sectionIndexPos].includes('000') && sameSection === null) ||
     (section[sectionIndexPos].includes('000') && sameSection === '') ||
     (section[sectionIndexPos].includes('000') && sameSection === sectionData.sectionId)
   ) {
-    question.title = sectionTitle;
+    question.title = sectionTitle === 'Classification data services' ? 'Classificazione dati e servizi' : sectionTitle;
     question.description = sectionData.description;
     question.sectionId = sectionData.sectionId;
 
