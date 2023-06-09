@@ -178,7 +178,7 @@ export const FaqPageNew = () => {
         observer.observe(section);
       });
     };
-    window.addEventListener('scroll', scrollHandler);
+
     setIsMobile(window.innerWidth < 992);
     window.addEventListener('resize', () => {
       setIsMobile(window.innerWidth < 992);
@@ -213,7 +213,8 @@ export const FaqPageNew = () => {
         faq.questions = Obj.questions;
         faq.sidebar = sectionData ? sectionData.sidebar : [];
         setQuestions(Obj.questions);
-        console.log('FAQ RENDERED', faq);
+        window.addEventListener('scroll', scrollHandler);
+        setSearch(search + 1);
       }
     });
     // END FAQ
@@ -358,7 +359,7 @@ export const FaqPageNew = () => {
   useEffect(() => {
     if (!isMobile) {
       setInputValue('');
-      // setQuestions(faq.questions);
+      setQuestions(faq.questions);
     }
   }, [isMobile]);
 
