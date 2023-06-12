@@ -1,11 +1,10 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-undef */
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Breadcrumb, BreadcrumbItem, Container, Row, Col } from 'design-react-kit';
 import { createUseStyles } from 'react-jss';
 import { announce } from '@react-aria/live-announcer';
-import faq from '../../contents/faq-page/faq.yml';
 import { SEO } from '../components/SEO';
 import seo from '../../contents/seo.yml';
 import content from '../../contents/candida-pa/candida-pa.yml';
@@ -150,25 +149,10 @@ const useStyles = createUseStyles({
 // eslint-disable-next-line sonarjs/cognitive-complexity
 export const CandidaPaPage = () => {
   const classes = useStyles();
-  const [inputValue, setInputValue] = useState('');
-  const [questions, setQuestions] = useState(faq.questions);
-  const [isMobile, setIsMobile] = useState();
-  // const [, dispatch] = useContext(GlobalStateContext);
 
   useEffect(() => {
-    setIsMobile(window.innerWidth < 992);
-    window.addEventListener('resize', () => {
-      setIsMobile(window.innerWidth < 992);
-    });
-    announce('Pagina caricata ' + faq.name);
+    announce('Pagina caricata');
   }, []);
-
-  useEffect(() => {
-    if (!isMobile) {
-      setInputValue('');
-      setQuestions(faq.questions);
-    }
-  }, [isMobile]);
 
   return (
     <>
@@ -206,7 +190,7 @@ export const CandidaPaPage = () => {
             </Col>
           </Row>
           <div className={classes.navigationContainer}>
-            <SideNavigationAccordion activeList={questions} searchValue={inputValue} list={sidebar} />
+            <SideNavigationAccordion activeList={[]} searchValue="" list={sidebar} />
             <div
               className="pl-lg-3 content-container"
               id="id-list-points"

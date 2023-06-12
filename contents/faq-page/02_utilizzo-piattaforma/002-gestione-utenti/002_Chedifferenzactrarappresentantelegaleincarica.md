@@ -1,0 +1,6 @@
+---
+  - title: Che differenza c'è tra rappresentante legale, incaricato ed editore?
+    anchorLink: 002_Chedifferenzactrarappresentantelegaleincarica
+---
+
+L'utenza del rappresentante legale è la prima creata per la PA all'interno della piattaforma e ha la facoltà di creare e gestire tutti gli altri ruoli utente. Un utente con ruolo di "incaricato" può visualizzare le informazioni relative alla PA e alle candidature, compilare moduli, caricare documenti e invitare utenti “editori”. È possibile essere utente “incaricato” per più amministrazioni (es. forme aggregative quali unioni di comuni). Il rappresentante legale può invitare un solo utente con il ruolo di “incaricato”. Un utente con ruolo di "editore" può visualizzare le informazioni relative alla PA e alle candidature, compilare moduli e caricare documenti. Non può invitare altri utenti. È possibile essere utente “editore” per una sola amministrazione. Il rappresentante legale o l'incaricato possono invitare uno o più utenti con questo ruolo nei limiti del numero di utenti permesso dalla piattaforma.

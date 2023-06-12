@@ -1,0 +1,13 @@
+
+CREAZIONE files
+- NON usare nessun carattere speciale(spazi compresi) nel nome file
+- Il nome file deve avere la sintassi: 00X_nomefileascelta.md
+
+- Ogni cartella deve contenere il file 000_sectionData.md(In caso di nuove categorie posso aiutare all'inizio)
+- Questo file deve avere il campo smallTitle: true quando siamo nella 2° sotto cartella della principale. Es. Vedi 02-Utilizzo-piattaforma/02-Gestione-utenti
+
+- sectionId deve essere uguale a Title ma tutto minuscolo, se ci sono spazi unirli con -
+- l'ultimo file di domanda per ogni cartella, deve avere il campo last:true
+- Se nel titolo della domanda si devono inserie i : allora racchiuere tutto il titolo tra "" es:
+    - title: "Secondo voi: sarò stato bravo?"
+

@@ -2,13 +2,13 @@
 /* eslint-disable sonarjs/cognitive-complexity */
 /* eslint-disable sonarjs/no-use-of-empty-return-value */
 /* eslint-disable sonarjs/no-identical-functions */
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Accordion, AccordionHeader, AccordionBody } from 'design-react-kit';
 import { createUseStyles } from 'react-jss';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
-import { GlobalStateContext } from '../../context/globalContext';
 import { ExternalLink } from '../../components/ExternalLink';
+import ClipboardCopy from '../../components/CopyTextToClipboard';
 
 const useStyles = createUseStyles({
   section: {
@@ -52,7 +52,7 @@ const useStyles = createUseStyles({
     '& .collapse-body': {
       padding: '0.888rem 1.333rem 1.333rem',
       '@media (min-width: 992px)': {
-        padding: '1.666rem 2.666rem 2.666rem',
+        padding: '1.666rem .9rem 2.666rem',
       },
       '& mark': {
         backgroundColor: '#e3e8f4',
@@ -155,26 +155,31 @@ const useStyles = createUseStyles({
 });
 
 export const QuestionSection = (props) => {
+  const isBrowser = () => typeof window !== 'undefined';
   const classes = useStyles();
   const { title, sectionId, sectionTitle, smallTitle } = props.item;
-  const { totalQuestions } = props;
+  const { totalQuestions, setQuestionsLink } = props;
   let { accordions } = props.item;
   const chips = props.item.chips;
 
   accordions = accordions.filter((accordion) => accordion !== '');
-
   const [indexIsOpen, setIndexIsOpen] = useState(-1);
-  const [{ faqId }] = useContext(GlobalStateContext);
+  const allQuestions = totalQuestions;
 
-  useEffect(() => {
-    if (faqId) {
-      document.querySelector('#' + faqId).scrollIntoView({
-        behavior: 'smooth',
-      });
-      const isAccordion = (element) => faqId === element.accordionId;
-      setIndexIsOpen(accordions.findIndex(isAccordion));
-    }
-  }, [faqId, accordions]);
+  const cleanTitle = (title) => {
+    let titleCleaned = title.replaceAll(' ', '-');
+    titleCleaned = titleCleaned.replaceAll('"', '');
+    titleCleaned = titleCleaned.replaceAll('’', '');
+    titleCleaned = titleCleaned.replace(/[^a-zA-Z0-9 -]/g, '');
+    titleCleaned = titleCleaned.replaceAll('.', '');
+    titleCleaned = titleCleaned.substr(0, 50).toLowerCase();
+    return titleCleaned;
+  };
+  const updateIdQuestion = (anchorLink) => {
+    setQuestionsLink(anchorLink);
+    return anchorLink;
+    // }
+  };
 
   const setChips = (chips) =>
     chips
@@ -193,6 +198,28 @@ export const QuestionSection = (props) => {
     });
     return accordion.accordions.length;
   };
+  useEffect(() => {
+    isBrowser() &&
+      setTimeout(() => {
+        let anchor = window.location.hash;
+        if (anchor !== '') {
+          anchor = anchor.replace('#', '');
+          const element = document.getElementById(anchor);
+          const bodyElement = document.getElementById(`${anchor}-body`);
+          element.querySelector('button').classList.add('collapsed');
+          element.querySelector('button').setAttribute('aria-expanded', 'true');
+          bodyElement.classList.add('show');
+          element !== null && element.scrollIntoView();
+          const sectionName = anchor.split('--');
+          const sectionObj = allQuestions.filter((section) => cleanTitle(section.title) === sectionName[0])[0] || {};
+          if (sectionObj.accordions) {
+            sectionObj.accordions.map((sec, i) => {
+              cleanTitle(sec.title) === `-${sectionName[1]}` && setIndexIsOpen(i);
+            });
+          }
+        }
+      }, 1000);
+  }, [allQuestions]);
 
   return (
     <>
@@ -233,7 +260,12 @@ export const QuestionSection = (props) => {
         {
           <Accordion>
             {accordions.map((accordion, i) => (
-              <div key={accordion.i} className={classes.accordionWrapper}>
+              <div
+                key={i}
+                className={classes.accordionWrapper}
+                data-link={updateIdQuestion(accordion.anchorLink)}
+                id={accordion.anchorLink}
+              >
                 <AccordionHeader
                   onToggle={() => setIndexIsOpen((state) => (state === i ? -1 : i))}
                   active={i === indexIsOpen}
@@ -242,30 +274,47 @@ export const QuestionSection = (props) => {
                 >
                   <span dangerouslySetInnerHTML={{ __html: accordion.title }}></span>
                 </AccordionHeader>
-                <AccordionBody active={i === indexIsOpen} className={classes.accordionBody}>
-                  <div dangerouslySetInnerHTML={{ __html: accordion.content }}></div>
-                  {accordion.link && (
-                    <div className={classes.linkAccordion}>
-                      <ExternalLink linkTo={accordion.link} ariaLabel={accordion.ariaLabel}>
-                        <span dangerouslySetInnerHTML={{ __html: accordion.linkLabel }}></span>
-                        <img src="/assets/external-icon.svg" alt="" />
-                      </ExternalLink>
+                <AccordionBody
+                  active={i === indexIsOpen}
+                  className={classes.accordionBody}
+                  id={`${accordion.anchorLink}-body`}
+                >
+                  <div className="row">
+                    <div className="col-lg-10">
+                      <div dangerouslySetInnerHTML={{ __html: accordion.content }}></div>
+                      {accordion.link && (
+                        <div className={classes.linkAccordion}>
+                          <ExternalLink linkTo={accordion.link} ariaLabel={accordion.ariaLabel}>
+                            <span dangerouslySetInnerHTML={{ __html: accordion.linkLabel }}></span>
+                            <img src="/assets/external-icon.svg" alt="" />
+                          </ExternalLink>
+                        </div>
+                      )}
+                      {accordion.updates ? (
+                        <Link className={classes.modalLink} aria-label={accordion.ariaLabel} to="/ricevi-aggiornamenti">
+                          {accordion.updates}
+                        </Link>
+                      ) : (
+                        ''
+                      )}
+                      {accordion.assistance ? (
+                        <Link className={classes.modalLink} aria-label={accordion.ariaLabel} to="/supporto/assistenza">
+                          {accordion.assistance}
+                        </Link>
+                      ) : (
+                        ''
+                      )}
                     </div>
-                  )}
-                  {accordion.updates ? (
-                    <Link className={classes.modalLink} aria-label={accordion.ariaLabel} to="/ricevi-aggiornamenti">
-                      {accordion.updates}
-                    </Link>
-                  ) : (
-                    ''
-                  )}
-                  {accordion.assistance ? (
-                    <Link className={classes.modalLink} aria-label={accordion.ariaLabel} to="/supporto/assistenza">
-                      {accordion.assistance}
-                    </Link>
-                  ) : (
-                    ''
-                  )}
+                    <div className="col-lg-2">
+                      <ClipboardCopy
+                        copyText={
+                          isBrowser()
+                            ? `${window.location.origin}${window.location.pathname}#${accordion.anchorLink}`
+                            : '#'
+                        }
+                      />
+                    </div>
+                  </div>
                 </AccordionBody>
               </div>
             ))}
@@ -280,5 +329,7 @@ QuestionSection.propTypes = {
   item: PropTypes.object.isRequired,
   inputText: PropTypes.string,
   setQuestions: PropTypes.func,
-  totalQuestions: PropTypes.object,
+  totalQuestions: PropTypes.array,
+  questionsLink: PropTypes.object,
+  setQuestionsLink: PropTypes.func,
 };
