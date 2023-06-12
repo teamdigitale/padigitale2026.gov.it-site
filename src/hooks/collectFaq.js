@@ -25,11 +25,11 @@ export const buildArrayQuestions = (allFaqQuestions, data) => {
   };
 
   const section = data.node.fields.slug.split('/');
-
   const sectionData = data.node.frontmatter['_0'];
   const sectionContent = data.node.internal.content;
   const stringsectPos = section.length === 4 ? 2 : 1;
   const sectionIndexPos = section.length === 3 ? 2 : 3;
+  const anchorLink = data.node.fields.slug.slice(9);
 
   sectionTitle =
     section.length === 3 ? section[1].split('_')[1].replaceAll('-', ' ') : section[2].slice(4).replace('-', ' ');
@@ -82,6 +82,7 @@ export const buildArrayQuestions = (allFaqQuestions, data) => {
     if (searchObject) {
       sectionData.sectionId = sectionId;
       sectionData.content = sectionContent;
+      sectionData.anchorLink = anchorLink;
       searchObject.accordions.push(sectionData);
       const i = allFaqQuestions.questions.findIndex((faq) => faq.sectionId === sectionId);
       allFaqQuestions.questions[i] = searchObject;

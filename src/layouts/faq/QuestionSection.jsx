@@ -161,7 +161,7 @@ export const QuestionSection = (props) => {
   const isBrowser = () => typeof window !== 'undefined';
   const classes = useStyles();
   const { title, sectionId, sectionTitle, smallTitle } = props.item;
-  const { totalQuestions, questionsLink, setQuestionsLink } = props;
+  const { totalQuestions, setQuestionsLink } = props;
   let { accordions } = props.item;
   const chips = props.item.chips;
 
@@ -170,17 +170,17 @@ export const QuestionSection = (props) => {
   const [{ faqId }] = useContext(GlobalStateContext);
   const allQuestions = totalQuestions;
 
-  const cleanTitleForSearch = (title) => {
-    let titleCleaned = title.replaceAll(' ', '');
-    titleCleaned = titleCleaned.replaceAll('"', '');
-    titleCleaned = titleCleaned.replaceAll('’', '');
-    titleCleaned = titleCleaned.replaceAll('<mark>', '');
-    titleCleaned = titleCleaned.replaceAll('</mark>', '');
-    titleCleaned = titleCleaned.replace(/[^a-zA-Z0-9 -]/g, '');
-    titleCleaned = titleCleaned.replaceAll('.', '');
-    titleCleaned = titleCleaned.toLowerCase();
-    return titleCleaned;
-  };
+  // const cleanTitleForSearch = (title) => {
+  //   let titleCleaned = title.replaceAll(' ', '');
+  //   titleCleaned = titleCleaned.replaceAll('"', '');
+  //   titleCleaned = titleCleaned.replaceAll('’', '');
+  //   titleCleaned = titleCleaned.replaceAll('<mark>', '');
+  //   titleCleaned = titleCleaned.replaceAll('</mark>', '');
+  //   titleCleaned = titleCleaned.replace(/[^a-zA-Z0-9 -]/g, '');
+  //   titleCleaned = titleCleaned.replaceAll('.', '');
+  //   titleCleaned = titleCleaned.toLowerCase();
+  //   return titleCleaned;
+  // };
   const cleanTitle = (title) => {
     let titleCleaned = title.replaceAll(' ', '-');
     titleCleaned = titleCleaned.replaceAll('"', '');
@@ -190,22 +190,23 @@ export const QuestionSection = (props) => {
     titleCleaned = titleCleaned.substr(0, 50).toLowerCase();
     return titleCleaned;
   };
-  const updateIdQuestion = (mainTitle, title) => {
-    const newSectionArray = allQuestions.filter(function (el) {
-      return el.title === mainTitle;
-    });
-    if (newSectionArray.length > 0) {
-      const newQuestionArr = newSectionArray[0].accordions.filter(function (ele) {
-        return cleanTitleForSearch(ele.title) === cleanTitleForSearch(title);
-      });
-      const faq = newQuestionArr[0] || {};
-      const titleCleaned = newQuestionArr.length > 0 && cleanTitle(faq.title);
-      const mainTitleCleaned = newQuestionArr.length > 0 && cleanTitle(mainTitle);
-      const newVal = `${mainTitleCleaned}-${titleCleaned}`;
-      const x = (questionsLink[mainTitleCleaned] = newVal);
-      setQuestionsLink(x);
-      return newVal;
-    }
+  const updateIdQuestion = (anchorLink) => {
+    // QUI SI GENERA IL LINK PER LA FAQ SINGOLA
+    // const newSectionArray = allQuestions.filter(function (el) {
+    //   return el.title === mainTitle;
+    // });
+    // if (newSectionArray.length > 0) {
+    //   const newQuestionArr = newSectionArray[0].accordions.filter(function (ele) {
+    //     return cleanTitleForSearch(ele.title) === cleanTitleForSearch(title);
+    //   });
+    //   const faq = newQuestionArr[0] || {};
+    //   const titleCleaned = newQuestionArr.length > 0 && cleanTitle(faq.title);
+    //   const mainTitleCleaned = newQuestionArr.length > 0 && cleanTitle(mainTitle);
+    //   const newVal = `${mainTitleCleaned}-${titleCleaned}`;
+    //   const x = (questionsLink[mainTitleCleaned] = newVal);
+    setQuestionsLink(anchorLink);
+    return anchorLink;
+    // }
   };
 
   useEffect(() => {
@@ -300,8 +301,8 @@ export const QuestionSection = (props) => {
               <div
                 key={i}
                 className={classes.accordionWrapper}
-                data-link={updateIdQuestion(title, accordion.title)}
-                id={questionsLink[cleanTitle(title)]}
+                data-link={updateIdQuestion(accordion.anchorLink)}
+                id={accordion.anchorLink}
               >
                 <AccordionHeader
                   onToggle={() => setIndexIsOpen((state) => (state === i ? -1 : i))}
@@ -314,7 +315,7 @@ export const QuestionSection = (props) => {
                 <AccordionBody
                   active={i === indexIsOpen}
                   className={classes.accordionBody}
-                  id={`${questionsLink[cleanTitle(title)]}-body`}
+                  id={`${accordion.anchorLink}-body`}
                 >
                   <div className="row">
                     <div className="col-lg-10">
@@ -346,7 +347,7 @@ export const QuestionSection = (props) => {
                       <ClipboardCopy
                         copyText={
                           isBrowser()
-                            ? `${window.location.origin}${window.location.pathname}#${questionsLink[cleanTitle(title)]}`
+                            ? `${window.location.origin}${window.location.pathname}#${accordion.anchorLink}`
                             : '#'
                         }
                       />
