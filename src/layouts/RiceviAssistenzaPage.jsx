@@ -5,7 +5,6 @@ import React, { useState, useEffect } from 'react';
 import { Breadcrumb, BreadcrumbItem, Container, Row, Col } from 'design-react-kit';
 import { createUseStyles } from 'react-jss';
 import { announce } from '@react-aria/live-announcer';
-import faq from '../../contents/faq-page/faq.yml';
 import { SEO } from '../components/SEO';
 import seo from '../../contents/seo.yml';
 import content from '../../contents/ricevi-assistenza/ricevi-assistenza.yml';
@@ -152,7 +151,7 @@ const useStyles = createUseStyles({
 export const RiceviAssistenzaPage = () => {
   const classes = useStyles();
   const [inputValue, setInputValue] = useState('');
-  const [questions, setQuestions] = useState(faq.questions);
+  const [questions, setQuestions] = useState([]);
   const [isMobile, setIsMobile] = useState();
   // const [, dispatch] = useContext(GlobalStateContext);
 
@@ -161,15 +160,8 @@ export const RiceviAssistenzaPage = () => {
     window.addEventListener('resize', () => {
       setIsMobile(window.innerWidth < 992);
     });
-    announce('Pagina caricata ' + faq.name);
+    announce('Pagina caricata');
   }, []);
-
-  useEffect(() => {
-    if (!isMobile) {
-      setInputValue('');
-      setQuestions(faq.questions);
-    }
-  }, [isMobile]);
 
   return (
     <>

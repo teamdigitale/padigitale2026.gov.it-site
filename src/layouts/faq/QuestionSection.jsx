@@ -2,12 +2,11 @@
 /* eslint-disable sonarjs/cognitive-complexity */
 /* eslint-disable sonarjs/no-use-of-empty-return-value */
 /* eslint-disable sonarjs/no-identical-functions */
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Accordion, AccordionHeader, AccordionBody } from 'design-react-kit';
 import { createUseStyles } from 'react-jss';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
-import { GlobalStateContext } from '../../context/globalContext';
 import { ExternalLink } from '../../components/ExternalLink';
 import ClipboardCopy from '../../components/CopyTextToClipboard';
 
@@ -165,7 +164,6 @@ export const QuestionSection = (props) => {
 
   accordions = accordions.filter((accordion) => accordion !== '');
   const [indexIsOpen, setIndexIsOpen] = useState(-1);
-  const [{ faqId }] = useContext(GlobalStateContext);
   const allQuestions = totalQuestions;
 
   const cleanTitle = (title) => {

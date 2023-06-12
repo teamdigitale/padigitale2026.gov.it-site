@@ -1,5 +1,5 @@
 import React, { useEffect, useContext } from 'react';
-import { FaqPage } from '../../layouts/FaqPage';
+import { FaqPageNew } from '../../layouts/FaqPage';
 import { GlobalStateContext } from '../../context/globalContext';
 
 const Page = () => {
@@ -11,6 +11,6 @@ const Page = () => {
       dispatch({ type: 'SET:ACTIVE_HEADER' });
     };
   }, [dispatch]);
-  return <FaqPage />;
+  return <FaqPageNew />;
 };
 export default Page;
