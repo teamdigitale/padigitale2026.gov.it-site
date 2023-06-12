@@ -11,8 +11,6 @@ import { GlobalStateContext } from '../../context/globalContext';
 import { ExternalLink } from '../../components/ExternalLink';
 import ClipboardCopy from '../../components/CopyTextToClipboard';
 
-// import faq from '../../../contents/faq-page/faq.yml';
-
 const useStyles = createUseStyles({
   section: {
     composes: 'question-section',
@@ -170,17 +168,6 @@ export const QuestionSection = (props) => {
   const [{ faqId }] = useContext(GlobalStateContext);
   const allQuestions = totalQuestions;
 
-  // const cleanTitleForSearch = (title) => {
-  //   let titleCleaned = title.replaceAll(' ', '');
-  //   titleCleaned = titleCleaned.replaceAll('"', '');
-  //   titleCleaned = titleCleaned.replaceAll('’', '');
-  //   titleCleaned = titleCleaned.replaceAll('<mark>', '');
-  //   titleCleaned = titleCleaned.replaceAll('</mark>', '');
-  //   titleCleaned = titleCleaned.replace(/[^a-zA-Z0-9 -]/g, '');
-  //   titleCleaned = titleCleaned.replaceAll('.', '');
-  //   titleCleaned = titleCleaned.toLowerCase();
-  //   return titleCleaned;
-  // };
   const cleanTitle = (title) => {
     let titleCleaned = title.replaceAll(' ', '-');
     titleCleaned = titleCleaned.replaceAll('"', '');
@@ -191,33 +178,10 @@ export const QuestionSection = (props) => {
     return titleCleaned;
   };
   const updateIdQuestion = (anchorLink) => {
-    // QUI SI GENERA IL LINK PER LA FAQ SINGOLA
-    // const newSectionArray = allQuestions.filter(function (el) {
-    //   return el.title === mainTitle;
-    // });
-    // if (newSectionArray.length > 0) {
-    //   const newQuestionArr = newSectionArray[0].accordions.filter(function (ele) {
-    //     return cleanTitleForSearch(ele.title) === cleanTitleForSearch(title);
-    //   });
-    //   const faq = newQuestionArr[0] || {};
-    //   const titleCleaned = newQuestionArr.length > 0 && cleanTitle(faq.title);
-    //   const mainTitleCleaned = newQuestionArr.length > 0 && cleanTitle(mainTitle);
-    //   const newVal = `${mainTitleCleaned}-${titleCleaned}`;
-    //   const x = (questionsLink[mainTitleCleaned] = newVal);
     setQuestionsLink(anchorLink);
     return anchorLink;
     // }
   };
-
-  useEffect(() => {
-    // if (faqId) {
-    //   document.querySelector('#' + faqId).scrollIntoView({
-    //     behavior: 'smooth',
-    //   });
-    //   const isAccordion = (element) => faqId === element.accordionId;
-    //   setIndexIsOpen(accordions.findIndex(isAccordion));
-    // }
-  }, [faqId, accordions]);
 
   const setChips = (chips) =>
     chips
