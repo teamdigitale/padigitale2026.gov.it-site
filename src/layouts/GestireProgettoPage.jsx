@@ -2,7 +2,7 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-undef */
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Breadcrumb, BreadcrumbItem, Container, Row, Col, Alert } from 'design-react-kit';
 import { createUseStyles } from 'react-jss';
 import { announce } from '@react-aria/live-announcer';
@@ -170,16 +170,8 @@ const useStyles = createUseStyles({
 // eslint-disable-next-line sonarjs/cognitive-complexity
 export const GestireProgettoPage = () => {
   const classes = useStyles();
-  const [inputValue, setInputValue] = useState('');
-  const [questions, setQuestions] = useState([]);
-  const [isMobile, setIsMobile] = useState();
-  // const [, dispatch] = useContext(GlobalStateContext);
 
   useEffect(() => {
-    setIsMobile(window.innerWidth < 992);
-    window.addEventListener('resize', () => {
-      setIsMobile(window.innerWidth < 992);
-    });
     announce('Pagina caricata');
   }, []);
 
@@ -219,7 +211,7 @@ export const GestireProgettoPage = () => {
             </Col>
           </Row>
           <div className={classes.navigationContainer}>
-            <SideNavigationAccordion activeList={questions} searchValue={inputValue} list={sidebar} />
+            <SideNavigationAccordion activeList={[]} searchValue={''} list={sidebar} />
             <div
               className="pl-lg-3 content-container"
               id="id-list-points"
