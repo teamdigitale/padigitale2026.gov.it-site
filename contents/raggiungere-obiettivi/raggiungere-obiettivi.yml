@@ -13,6 +13,9 @@ sidebar:
   - sectionTitle: 1.2 - Abilitazione e facilitazione migrazione al Cloud
     sectionId: cloud-enablement
     sectionActive: false
+  - sectionTitle: 1.3.1 - Piattaforme Digitale Nazionale Dati (PDND)
+    sectionId: mis-131-pdnd
+    sectionActive: false
   - sectionTitle: 1.4.1 - Esperienza del Cittadino nei servizi pubblici
     sectionId: citizen-experience
     sectionActive: false
