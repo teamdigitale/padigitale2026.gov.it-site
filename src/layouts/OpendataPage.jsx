@@ -244,8 +244,11 @@ export const OpendataPage = () => {
                       <th scope="col" style={{ verticalAlign: 'top' }}>
                         Descrizione dataset
                       </th>
-                      <th colSpan="2" scope="col" className="text-center">
-                        Link
+                      <th colSpan="1" scope="col" className="text-center">
+                        CSV
+                      </th>
+                      <th colSpan="1" scope="col" className="text-center">
+                        JSON
                       </th>
                     </tr>
                   </thead>
