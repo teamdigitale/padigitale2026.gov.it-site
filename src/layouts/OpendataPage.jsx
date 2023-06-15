@@ -192,7 +192,6 @@ const downloadFile = (file = 'Example-name-file.csv') => {
 
       link.parentNode.removeChild(link);
     });
-  return;
 };
 // eslint-disable-next-line sonarjs/cognitive-complexity
 export const OpendataPage = () => {
