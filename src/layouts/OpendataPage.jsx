@@ -176,6 +176,24 @@ const useStyles = createUseStyles({
   },
 });
 
+const downloadFile = (file = 'Example-name-file.csv') => {
+  fetch('https://raw.githubusercontent.com/teamdigitale/padigitale2026-opendata/main/data/' + file)
+    .then((response) => response.blob())
+    .then((blob) => {
+      const url = window.URL.createObjectURL(new Blob([blob]));
+
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = file;
+
+      document.body.appendChild(link);
+
+      link.click();
+
+      link.parentNode.removeChild(link);
+    });
+  return;
+};
 // eslint-disable-next-line sonarjs/cognitive-complexity
 export const OpendataPage = () => {
   const classes = useStyles();
@@ -233,11 +251,13 @@ export const OpendataPage = () => {
                       <td className="text-center">
                         <span className={`${classes.linkWrapper}`}>
                           <a
-                            target="_blank"
-                            href="https://raw.githubusercontent.com/teamdigitale/padigitale2026-opendata/main/data/avvisi.csv"
-                            title="Link al dato ( Link esterno - Apre su nuova scheda )"
-                            aria-label="Avvisi PA digitale 2026, file csv( Link esterno - Apre su nuova scheda )"
+                            href="#0"
+                            title="Link al dato ( Link esterno - Esegue il download )"
+                            aria-label="Avvisi PA digitale 2026, file csv( Link esterno - Esegue il download )"
                             rel="noreferrer"
+                            onClick={() => {
+                              downloadFile('avvisi.csv');
+                            }}
                           >
                             CSV
                             <svg
@@ -260,11 +280,13 @@ export const OpendataPage = () => {
                       <td className="text-center">
                         <span className={`${classes.linkWrapper}`}>
                           <a
-                            target="_blank"
-                            href="https://raw.githubusercontent.com/teamdigitale/padigitale2026-opendata/main/data/avvisi.json"
-                            title="Link al dato ( Link esterno - Apre su nuova scheda )"
-                            aria-label="Avvisi PA digitale 2026, file json( Link esterno - Apre su nuova scheda )"
+                            href="#0"
+                            title="Link al dato ( Link esterno - Esegue il download )"
+                            aria-label="Avvisi PA digitale 2026, file json( Link esterno - Esegue il download )"
                             rel="noreferrer"
+                            onClick={() => {
+                              downloadFile('avvisi.json');
+                            }}
                           >
                             JSON
                             <svg
@@ -290,11 +312,13 @@ export const OpendataPage = () => {
                       <td className="text-center">
                         <span className={`${classes.linkWrapper}`}>
                           <a
-                            target="_blank"
-                            href="https://raw.githubusercontent.com/teamdigitale/padigitale2026-opendata/main/data/candidature_comuni_finanziate.csv"
-                            title="Link al dato ( Link esterno - Apre su nuova scheda )"
-                            aria-label="Candidature finanziate Comuni, file csv( Link esterno - Apre su nuova scheda )"
+                            href="#0"
+                            title="Link al dato ( Link esterno - Esegue il download )"
+                            aria-label="Candidature finanziate Comuni, file csv( Link esterno - Esegue il download )"
                             rel="noreferrer"
+                            onClick={() => {
+                              downloadFile('candidature_comuni_finanziate.csv');
+                            }}
                           >
                             CSV
                             <svg
@@ -317,11 +341,13 @@ export const OpendataPage = () => {
                       <td className="text-center">
                         <span className={`${classes.linkWrapper}`}>
                           <a
-                            target="_blank"
-                            href="https://raw.githubusercontent.com/teamdigitale/padigitale2026-opendata/main/data/candidature_comuni_finanziate.json"
-                            title="Link al dato ( Link esterno - Apre su nuova scheda )"
-                            aria-label="Candidature finanziate Comuni, file json( Link esterno - Apre su nuova scheda )"
+                            href="#0"
+                            title="Link al dato ( Link esterno - Esegue il download )"
+                            aria-label="Candidature finanziate Comuni, file json( Link esterno - Esegue il download )"
                             rel="noreferrer"
+                            onClick={() => {
+                              downloadFile('candidature_comuni_finanziate.json');
+                            }}
                           >
                             JSON
                             <svg
@@ -347,11 +373,13 @@ export const OpendataPage = () => {
                       <td className="text-center">
                         <span className={`${classes.linkWrapper}`}>
                           <a
-                            target="_blank"
-                            href="https://raw.githubusercontent.com/teamdigitale/padigitale2026-opendata/main/data/candidature_scuole_finanziate.csv"
-                            title="Link al dato ( Link esterno - Apre su nuova scheda )"
-                            aria-label="Candidature finanziate Scuole, file csv( Link esterno - Apre su nuova scheda )"
+                            href="#0"
+                            title="Link al dato ( Link esterno - Esegue il download )"
+                            aria-label="Candidature finanziate Scuole, file csv( Link esterno - Esegue il download )"
                             rel="noreferrer"
+                            onClick={() => {
+                              downloadFile('candidature_scuole_finanziate.csv');
+                            }}
                           >
                             CSV
                             <svg
@@ -374,11 +402,13 @@ export const OpendataPage = () => {
                       <td className="text-center">
                         <span className={`${classes.linkWrapper}`}>
                           <a
-                            target="_blank"
-                            href="https://raw.githubusercontent.com/teamdigitale/padigitale2026-opendata/main/data/candidature_scuole_finanziate.json"
-                            title="Link al dato ( Link esterno - Apre su nuova scheda )"
-                            aria-label="Candidature finanziate Scuole, file json( Link esterno - Apre su nuova scheda )"
+                            href="#0"
+                            title="Link al dato ( Link esterno - Esegue il download )"
+                            aria-label="Candidature finanziate Scuole, file json( Link esterno - Esegue il download )"
                             rel="noreferrer"
+                            onClick={() => {
+                              downloadFile('candidature_scuole_finanziate.json');
+                            }}
                           >
                             JSON
                             <svg
@@ -404,11 +434,13 @@ export const OpendataPage = () => {
                       <td className="text-center">
                         <span className={`${classes.linkWrapper}`}>
                           <a
-                            target="_blank"
-                            href="https://raw.githubusercontent.com/teamdigitale/padigitale2026-opendata/main/data/candidature_altrienti_finanziate.csv"
-                            title="Link al dato ( Link esterno - Apre su nuova scheda )"
-                            aria-label="Candidature finanziate Altri Enti, file csv( Link esterno - Apre su nuova scheda )"
+                            href="#0"
+                            title="Link al dato ( Link esterno - Esegue il download )"
+                            aria-label="Candidature finanziate Altri Enti, file csv( Link esterno - Esegue il download )"
                             rel="noreferrer"
+                            onClick={() => {
+                              downloadFile('candidature_altrienti_finanziate.csv');
+                            }}
                           >
                             CSV
                             <svg
@@ -431,11 +463,13 @@ export const OpendataPage = () => {
                       <td className="text-center">
                         <span className={`${classes.linkWrapper}`}>
                           <a
-                            target="_blank"
-                            href="https://raw.githubusercontent.com/teamdigitale/padigitale2026-opendata/main/data/candidature_altrienti_finanziate.json"
-                            title="Link al dato ( Link esterno - Apre su nuova scheda )"
-                            aria-label="Candidature finanziate Altri Enti, file json( Link esterno - Apre su nuova scheda )"
+                            href="#0"
+                            title="Link al dato ( Link esterno - Esegue il download )"
+                            aria-label="Candidature finanziate Altri Enti, file json( Link esterno - Esegue il download )"
                             rel="noreferrer"
+                            onClick={() => {
+                              downloadFile('candidature_altrienti_finanziate.json');
+                            }}
                           >
                             JSON
                             <svg
@@ -488,7 +522,7 @@ export const OpendataPage = () => {
                     <a
                       target="_blank"
                       href="https://github.com/teamdigitale/padigitale2026-opendata"
-                      title="Link al repository Github ( Link esterno - Apre su nuova scheda )"
+                      title="Link al repository Github ( Link esterno - Esegue il download )"
                       rel="noreferrer"
                     >
                       Vai al repository Github
@@ -506,7 +540,7 @@ export const OpendataPage = () => {
                     <a
                       target="_blank"
                       href="https://github.com/teamdigitale/padigitale2026-opendata/blob/main/README.md"
-                      title="Link alla struttura del repository ( Link esterno - Apre su nuova scheda )"
+                      title="Link alla struttura del repository ( Link esterno - Esegue il download )"
                       rel="noreferrer"
                     >
                       Vai alla struttura del repository
