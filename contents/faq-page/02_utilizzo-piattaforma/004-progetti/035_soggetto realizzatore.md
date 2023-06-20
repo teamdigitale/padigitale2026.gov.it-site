@@ -1,7 +1,7 @@
 ---
   - title: Il mio Ente ha contrattualizzato un soggetto realizzatore che ha più di un titolare effettivo. Come posso inserirli in piattaforma? 
     tag:
-      - modifiche_progetti
+      - fornitori
     anchorLink: 035_soggettorealizzatore
     last: true
 ---
