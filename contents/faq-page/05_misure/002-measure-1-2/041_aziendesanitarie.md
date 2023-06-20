@@ -3,7 +3,6 @@
     tag:
       - Asl/AO
     anchorLink: 041_aziendesanitarie
-    last: true
 ---
 
 Nel caso di specie, la documentazione della contrattualizzazione dovrà essere composta come segue:
