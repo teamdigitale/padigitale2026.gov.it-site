@@ -133,7 +133,7 @@ heroCarouselNews:
     type: internal
     category: Nuova funzionalità su PA digitale 2026
     title: "Abilitata la funzionalità per l’aggiunta di più titolari effettivi dei fornitori"
-    description: "Possibile aggiungere più nominativi dei titolari effettivi dei fornitori, ove presenti. È sufficiente, tramite la pagina di aggiunta del titolare effettivo, utilizzare l’apposita funzionalità per aggiungere altri nominativi"
+    description: "È ora possibile aggiungere più nominativi dei titolari effettivi dei fornitori. È sufficiente, tramite la pagina di aggiunta del titolare effettivo, utilizzare l’apposita funzionalità per aggiungere altri nominativi"
     source: "Vai in area riservata"
     linkTo: 'https://areariservata.padigitale2026.gov.it/sis_SpidPage'
   - id: 2
