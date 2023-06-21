@@ -798,6 +798,7 @@ export const AssistenzaPage = () => {
               <input type="hidden" id="origin" name="origin" value="Area pubblica" />
               <input type="hidden" id="recordType" name="recordType" value="0127Q0000001c35" />
               <input type="hidden" id="priority" name="priority" value="Medium" />
+              <input type="hidden" name="debugEmail" value="d.dagostino@innovazione.gov.it" />
               <Row>
                 <Col xs={12}>
                   <ReCAPTCHA
