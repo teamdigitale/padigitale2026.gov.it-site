@@ -372,7 +372,7 @@ export const RaggiungereObiettiviPage = () => {
                       <span className={`${classes.linkWrapper}`}>
                         <a
                           target="_blank"
-                          href="https://innovazione.gov.it/notizie/articoli/pa-digitale-2026-aggiornate-le-linee-guida-per-le-pa-locali/"
+                          href="https://innovazione.gov.it/italia-digitale-2026/attuazione-misure-pnrr/#sistema-di-gestione-e-controllo"
                           title="Link all'articolo ( Link esterno - Apre su nuova scheda )"
                           aria-label="Link all'articolo ( Link esterno - Apre su nuova scheda )"
                           rel="noreferrer"
