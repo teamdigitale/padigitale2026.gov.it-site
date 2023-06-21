@@ -3,7 +3,6 @@
     tag:
       - comuni
     anchorLink: 008_IlmioComunepuaccederealfinanziamentoprevistod
-    last: true
 ---
 
 Per accedere al finanziamento è necessario che il mittente dell’atto coincida con il Soggetto Attuatore, ovvero, il singolo Comune, anche se questo non è il soggetto che incassa.
