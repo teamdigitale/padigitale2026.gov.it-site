@@ -531,7 +531,7 @@ export const AssistenzaPage = () => {
       event.target.reset();
       window.grecaptcha.reset();
       setFormFilled(false);
-    }, 500);
+    }, 4500);
   };
 
   const orgId = {

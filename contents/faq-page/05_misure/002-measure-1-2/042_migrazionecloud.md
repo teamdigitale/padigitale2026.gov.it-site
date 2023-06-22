@@ -3,7 +3,6 @@
     tag:
       - Asl/AO
     anchorLink: 042_migrazionecloud
-    last: true
 ---
 
 Per la migrazione di tali servizi può essere sviluppata una soluzione che permetta di scrivere localmente i dati degli applicativi e trasferirli quanto prima, anche attraverso operazioni programmate per gestire lotti massivi (ad es. scheduled job), presso uno o più repository Cloud. 
