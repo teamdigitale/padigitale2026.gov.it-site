@@ -134,8 +134,8 @@ heroCarouselNews:
     category: Avviso 1.4.3 - app IO
     title: "Estesione del cronoprogramma"
     description: "Il termine per la contrattualizzazione e il completamento delle attività è diferito di 120 giorni"
-    source: "Vai all'Avviso"
-    linkTo: 'https://areariservata.padigitale2026.gov.it/Pa_digitale2026_avvisi'
+    source: "Scarica il Decreto"
+    linkTo: 'https://areariservata.padigitale2026.gov.it/sfc/servlet.shepherd/document/download/0697Q00000BcNu7QAF?operationContext=S1'
   - id: 2
     type: internal
     category: Nuova funzionalità su PA digitale 2026
