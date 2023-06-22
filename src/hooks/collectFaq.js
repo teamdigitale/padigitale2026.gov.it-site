@@ -47,8 +47,9 @@ export const buildArrayQuestions = (allFaqQuestions, data) => {
         (section[sectionIndexPos].includes('000') && sameSection === '') ||
         (section[sectionIndexPos].includes('000') && sameSection === sectionData.sectionId)
       ) {
-        question.title =
-          sectionTitle === 'Classification data services' ? 'Classificazione dati e servizi' : sectionTitle;
+        question.title = data.node.frontmatter['_0'].title; // CHECK IF OK
+        // sectionTitle === 'Classification data services' ? 'Classificazione dati e servizi' : sectionTitle;
+
         question.description = sectionData.description;
         question.sectionId = sectionData.sectionId;
 
@@ -94,7 +95,6 @@ export const buildArrayQuestions = (allFaqQuestions, data) => {
         }
       }
     } else {
-      console.log('RESET');
       sameSection = '';
       sectionTitle = '';
     }
