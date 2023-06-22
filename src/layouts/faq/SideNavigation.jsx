@@ -127,7 +127,7 @@ const useStyles = createUseStyles({
       },
 
       '& .collapse-body': {
-        padding: '1.111rem 1.111rem 2.222rem',
+        padding: '1rem 1rem 1rem',
       },
     },
   },
