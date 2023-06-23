@@ -146,6 +146,10 @@ export const SideNavigation = (props) => {
     window.addEventListener('resize', () => {
       setIsMobile(window.innerWidth < 992);
     });
+    setTimeout(() => {
+      // "Trivial" Trick for diable all link after page load RT
+      disableLinks();
+    }, 600);
   }, []);
 
   useEffect(() => {
@@ -162,11 +166,6 @@ export const SideNavigation = (props) => {
   }, [isMobile]);
 
   useEffect(() => {
-    setTimeout(() => {
-      // "Trivial" Trick for diable all link after page load RT
-      disableLinks();
-    }, 600);
-
     if (isMobile) {
       setCollapseMenu(false);
       const items = document.querySelectorAll(itemSel);
