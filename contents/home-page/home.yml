@@ -135,7 +135,7 @@ heroCarouselNews:
     title: "Estensione scadenza"
     description: "La scadenza dell'Avviso per favorire la migrazione in cloud di ASL/AO, prevista per il 30 giugno, è stata posticipata al 21 luglio 2023"
     source: "Vai all'Avviso"
-    linkTo: 'https://areariservata.padigitale2026.gov.it/Pa_digitale2026_dettagli_avviso?id=a017Q00001DrNiyQAFe'
+    linkTo: 'https://areariservata.padigitale2026.gov.it/Pa_digitale2026_dettagli_avviso?id=a017Q00001DrNiyQAF'
   - id: 2
     type: internal
     category: Avviso 1.4.3 - app IO
