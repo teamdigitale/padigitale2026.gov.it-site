@@ -6,7 +6,6 @@ import React, { useEffect } from 'react';
 import { Breadcrumb, BreadcrumbItem, Container, Row, Col, Table } from 'design-react-kit';
 import { createUseStyles } from 'react-jss';
 import { announce } from '@react-aria/live-announcer';
-import { Link } from 'gatsby';
 import { SEO } from '../components/SEO';
 import seo from '../../contents/seo.yml';
 import content from '../../contents/raggiungere-obiettivi/raggiungere-obiettivi.yml';
@@ -213,11 +212,7 @@ export const RaggiungereObiettiviPage = () => {
               <div className={classes.subtitleUpdate}>{hero.subtitle}</div>
             </Col>
             <Col xs={12} lg={4} className="offset-lg-1 mt-5 mt-lg-0 d-flex justify-content-center align-items-center">
-              <img
-                src={`${hero.imgSource}`}
-                alt=""
-                className={classes.heroImg}
-              />
+              <img src={`${hero.imgSource}`} alt="" className={classes.heroImg} />
             </Col>
           </Row>
           <div className={classes.navigationContainer}>
@@ -231,9 +226,12 @@ export const RaggiungereObiettiviPage = () => {
               <Container className="pl-lg-4 mb-4">
                 <section id="access">
                   <div className="point-header">
-                  <h3 className={`${classes.contentTitle} mt-5`}>{section1.title}</h3>
-                  <p dangerouslySetInnerHTML={{ __html: section1.description }}></p>
-                    <span className={`${classes.linkWrapper}`} dangerouslySetInnerHTML={{ __html: section1.descriptionDownload }}></span>
+                    <h3 className={`${classes.contentTitle} mt-5`}>{section1.title}</h3>
+                    <p dangerouslySetInnerHTML={{ __html: section1.description }}></p>
+                    <span
+                      className={`${classes.linkWrapper}`}
+                      dangerouslySetInnerHTML={{ __html: section1.descriptionDownload }}
+                    />
                   </div>
                 </section>
 
@@ -266,7 +264,10 @@ export const RaggiungereObiettiviPage = () => {
                       ))}
                     </ul>
                     <br />
-                    <p className={`${classes.linkWrapper}`} dangerouslySetInnerHTML={{ __html: section4.listSubDescription }}></p>
+                    <p
+                      className={`${classes.linkWrapper}`}
+                      dangerouslySetInnerHTML={{ __html: section4.listSubDescription }}
+                    />
                   </div>
                 </section>
 
@@ -297,7 +298,10 @@ export const RaggiungereObiettiviPage = () => {
                     </ul>
                     <br />
 
-                    <p className={`${classes.linkWrapper}`} dangerouslySetInnerHTML={{ __html: section5.descriptionAppUsage }}></p>
+                    <p
+                      className={`${classes.linkWrapper}`}
+                      dangerouslySetInnerHTML={{ __html: section5.descriptionAppUsage }}
+                    />
                   </div>
                 </section>
 
@@ -310,7 +314,12 @@ export const RaggiungereObiettiviPage = () => {
                       <thead>
                         <tr>
                           {section6.table.theadRows.map((i, index) => (
-                            <th key={index} dangerouslySetInnerHTML={{ __html: i }} scope="col" style={{ verticalAlign: 'top' }}></th>
+                            <th
+                              key={index}
+                              dangerouslySetInnerHTML={{ __html: i }}
+                              scope="col"
+                              style={{ verticalAlign: 'top' }}
+                            />
                           ))}
                         </tr>
                       </thead>

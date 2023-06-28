@@ -15,7 +15,7 @@ import { SideNavigationAccordion } from './sideNavigationAccordion';
 
 const { title: seoTitle, description: seoDescription } = seo.gestireProgettoPage;
 
-const { sidebar, video, breadCrumbName, hero, section1, section2, section3, section4, section5} = content;
+const { sidebar, video, breadCrumbName, hero, section1, section2, section3, section4, section5 } = content;
 
 const useStyles = createUseStyles({
   breadcrumb: {
@@ -202,18 +202,18 @@ export const GestireProgettoPage = () => {
                   <span className="separator"></span>
                 </BreadcrumbItem>
                 <BreadcrumbItem active className={classes.breadcrumbItemActive}>
-                <a>{breadCrumbName}</a>
+                  <a>{breadCrumbName}</a>
                 </BreadcrumbItem>
               </Breadcrumb>
             </Col>
           </Row>
           <Row className="mb-5 mt-5">
             <Col xs={12} lg={7}>
-            <h1 className={classes.titleUpdate}>{hero.title}</h1>
+              <h1 className={classes.titleUpdate}>{hero.title}</h1>
               <div className={classes.subtitleUpdate}>{hero.subtitle}</div>
             </Col>
             <Col xs={12} lg={4} className="offset-lg-1 mt-5 mt-lg-0 d-flex justify-content-center align-items-center">
-            <img src={`${hero.imgSource}`} alt="" className={classes.heroImg} />
+              <img src={`${hero.imgSource}`} alt="" className={classes.heroImg} />
             </Col>
           </Row>
           <div className={classes.navigationContainer}>
@@ -228,10 +228,16 @@ export const GestireProgettoPage = () => {
               <Container className="pl-lg-4 mb-4">
                 <section id="digital-identity">
                   <div className="point-header">
-                  <h3 className={`${classes.contentTitle} mt-5`}>{section1.title}</h3>
-                    <p className={`${classes.externalLinkWrapper}`} dangerouslySetInnerHTML={{ __html: section1.description }}></p>
+                    <h3 className={`${classes.contentTitle} mt-5`}>{section1.title}</h3>
+                    <p
+                      className={`${classes.externalLinkWrapper}`}
+                      dangerouslySetInnerHTML={{ __html: section1.description }}
+                    />
                     <h3 className={`${classes.contentTitle} mt-5`}>{section2.title}</h3>
-                    <div className={`${classes.linkWrapper}`} dangerouslySetInnerHTML={{ __html: section2.description }}></div>
+                    <div
+                      className={`${classes.linkWrapper}`}
+                      dangerouslySetInnerHTML={{ __html: section2.description }}
+                    />
                     <div className={`${classes.contentTitleSmall} mt-3 mb-2`}>{section2.subtitle}</div>
                     <Alert color="info">{section2.alert}</Alert>
                   </div>
@@ -240,9 +246,15 @@ export const GestireProgettoPage = () => {
                 <section id="select-administration">
                   <div className="point-header">
                     <h3 className={`${classes.contentTitle} mt-5`}>{section3.title}</h3>
-                    <p className={`${classes.externalLinkWrapper}`}  dangerouslySetInnerHTML={{ __html: section3.description }}></p>
+                    <p
+                      className={`${classes.externalLinkWrapper}`}
+                      dangerouslySetInnerHTML={{ __html: section3.description }}
+                    />
                     <h3 className={`${classes.contentTitle} mt-5`}>{section4.title}</h3>
-                    <div className={`${classes.linkWrapper}`} dangerouslySetInnerHTML={{ __html: section4.description }}></div>
+                    <div
+                      className={`${classes.linkWrapper}`}
+                      dangerouslySetInnerHTML={{ __html: section4.description }}
+                    />
                     <div className={`${classes.contentTitleSmall} mt-3 mb-2`}>{section4.subtitle}</div>
                     <Alert color="info">{section4.alert}</Alert>
                   </div>
@@ -251,7 +263,10 @@ export const GestireProgettoPage = () => {
                 <section id="verify-data">
                   <div className="point-header">
                     <h3 className={`${classes.contentTitle} mt-5`}>{section5.title}</h3>
-                    <p className={`${classes.externalLinkWrapper}`}  dangerouslySetInnerHTML={{ __html: section5.description }}></p>
+                    <p
+                      className={`${classes.externalLinkWrapper}`}
+                      dangerouslySetInnerHTML={{ __html: section5.description }}
+                    />
                     <div className={`${classes.contentTitleSmall} mt-3 mb-2`}>{section5.subtitle}</div>
                     <Alert color="info"> {section5.alert}</Alert>
                   </div>
