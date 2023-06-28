@@ -242,7 +242,6 @@ export const GestireProgettoPage = () => {
                     <Alert color="info">{section2.alert}</Alert>
                   </div>
                 </section>
-
                 <section id="select-administration">
                   <div className="point-header">
                     <h3 className={`${classes.contentTitle} mt-5`}>{section3.title}</h3>
@@ -259,7 +258,6 @@ export const GestireProgettoPage = () => {
                     <Alert color="info">{section4.alert}</Alert>
                   </div>
                 </section>
-
                 <section id="verify-data">
                   <div className="point-header">
                     <h3 className={`${classes.contentTitle} mt-5`}>{section5.title}</h3>

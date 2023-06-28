@@ -234,7 +234,6 @@ export const RaggiungereObiettiviPage = () => {
                     />
                   </div>
                 </section>
-
                 <section id="role-verifier">
                   <div className="point-header">
                     <h3 className={`${classes.contentTitle} mt-5`}>{section2.title}</h3>
@@ -246,14 +245,12 @@ export const RaggiungereObiettiviPage = () => {
                     </ul>
                   </div>
                 </section>
-
                 <section id="cloud-enablement">
                   <div className="point-header">
                     <h3 className={`${classes.contentTitle} mt-5`}>{section3.title}</h3>
                     <p dangerouslySetInnerHTML={{ __html: section3.description }}></p>
                   </div>
                 </section>
-
                 <section id="mis-131-pdnd">
                   <div className="point-header">
                     <h3 className={`${classes.contentTitle} mt-5`}>{section4.title}</h3>
@@ -270,7 +267,6 @@ export const RaggiungereObiettiviPage = () => {
                     />
                   </div>
                 </section>
-
                 <section id="citizen-experience">
                   <div className="point-header">
                     <h3 className={`${classes.contentTitle} mt-5`}>{section5.title}</h3>
@@ -281,7 +277,6 @@ export const RaggiungereObiettiviPage = () => {
                         <li key={index} dangerouslySetInnerHTML={{ __html: i }}></li>
                       ))}
                     </ul>
-
                     <p className={`mb-0`} dangerouslySetInnerHTML={{ __html: section5.secondListTitle }}></p>
                     <ul>
                       {section5.secondList.map((i, index) => (
@@ -289,7 +284,6 @@ export const RaggiungereObiettiviPage = () => {
                       ))}
                     </ul>
                     <br />
-
                     <p className={`mb-0`} dangerouslySetInnerHTML={{ __html: section5.descriptionApp }}></p>
                     <ul>
                       {section5.thirdList.map((i, index) => (
@@ -297,19 +291,16 @@ export const RaggiungereObiettiviPage = () => {
                       ))}
                     </ul>
                     <br />
-
                     <p
                       className={`${classes.linkWrapper}`}
                       dangerouslySetInnerHTML={{ __html: section5.descriptionAppUsage }}
                     />
                   </div>
                 </section>
-
                 <section id="platforms">
                   <div className="point-header">
                     <h3 className={`${classes.contentTitle} mt-5`}>{section6.title}</h3>
                     <p dangerouslySetInnerHTML={{ __html: section6.description }}></p>
-
                     <Table className={classes.table}>
                       <thead>
                         <tr>
