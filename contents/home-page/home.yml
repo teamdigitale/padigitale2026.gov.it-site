@@ -131,8 +131,8 @@ opportunity:
 heroCarouselNews:
   - id: 1
     type: internal
-    category: Avviso 1.1 PA Centrali
-    title: "Nuovo Avviso"
+    category: Misura 1.1 - Nuovo Avviso
+    title: "Risorse per le PA centrali"
     description: "È online un nuovo Avviso pubblico da 280 milioni per favorire la migrazione al Polo Strategico Nazionale delle PA centrali"
     source: "Vai all'Avviso"
     linkTo: 'https://areariservata.padigitale2026.gov.it/Pa_digitale2026_dettagli_avviso?id=a017Q00001I9OHeQAN'
