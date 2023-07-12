@@ -535,9 +535,9 @@ export const FaqPageNew = () => {
               </span>
               <Totop />
               {faq && faq.questions.length > 0
-                ? questions.map((question) => (
+                ? questions.map((question, i) => (
                   <QuestionSection
-                    key={question.title}
+                    key={`questSect_${question.title}-${i}`}
                     item={question}
                     inputText={inputValue}
                     setQuestions={setQuestions}
