@@ -3,4 +3,4 @@
     anchorLink: 012_IdatirelativiallaPAsulpianodimigrazionenonson
 ---
 
-Se si riscontrano inesattezze nella visualizzazione dei dati della PA, è necessario modificarli su IPA (<a href="https://indicepa.gov.it/ipa-portale/">https://indicepa.gov.it/ipa-portale/</a>). A seguito dell'aggiornamento dei dati dell'ente (per esempio quelli del rappresentate legale), sarà possibile procedere correttamente all'invio del piano di migrazione attraverso la sezione "Cloud", presente nell'area riservata della piattaforma.            
+Se si riscontrano inesattezze nella visualizzazione dei dati della PA, è necessario modificarli su IPA (<a href="https://indicepa.gov.it/ipa-portale/">https://indicepa.gov.it/ipa-portale/</a>). A seguito dell'aggiornamento dei dati dell'ente (per esempio quelli del rappresentate legale), sarà possibile procedere correttamente all'invio del piano di migrazione attraverso la sezione "Classificazione e cloud", presente nell'area riservata della piattaforma.            

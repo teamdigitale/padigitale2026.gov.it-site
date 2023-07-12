@@ -131,43 +131,44 @@ opportunity:
 heroCarouselNews:
   - id: 1
     type: internal
+    category: Misura 1.1 - Nuovo Avviso
+    title: "Risorse per le PA centrali"
+    description: "È online un nuovo Avviso pubblico da 280 milioni per favorire la migrazione al Polo Strategico Nazionale delle PA centrali"
+    source: "Vai all'Avviso"
+    linkTo: 'https://areariservata.padigitale2026.gov.it/Pa_digitale2026_dettagli_avviso?id=a017Q00001I9OHeQAN'
+  - id: 2
+    type: internal
     category: Avviso 1.1 e 1.2 - ASL/AO
     title: "Estensione scadenza"
     description: "La scadenza dell'Avviso per favorire la migrazione in cloud di ASL/AO, prevista per il 30 giugno, è stata posticipata al 21 luglio 2023"
     source: "Vai all'Avviso"
     linkTo: 'https://areariservata.padigitale2026.gov.it/Pa_digitale2026_dettagli_avviso?id=a017Q00001DrNiyQAF'
-  - id: 2
+  - id: 3
     type: internal
     category: Avviso 1.4.3 - app IO
     title: "Estesione del cronoprogramma"
     description: "Il termine per la contrattualizzazione e il completamento delle attività è diferito di 120 giorni"
     source: "Scarica il Decreto"
     linkTo: 'https://areariservata.padigitale2026.gov.it/sfc/servlet.shepherd/document/download/0697Q00000BcNu7QAF?operationContext=S1'
-  - id: 3
+  - id: 4
     type: internal
     category: Nuova funzionalità su PA digitale 2026
     title: "Abilitata la funzionalità per l’aggiunta di più titolari effettivi dei fornitori"
     description: "È ora possibile aggiungere più nominativi dei titolari effettivi dei fornitori. È sufficiente, tramite la pagina di aggiunta del titolare effettivo, utilizzare l’apposita funzionalità per aggiungere altri nominativi"
     source: "Vai in area riservata"
     linkTo: 'https://areariservata.padigitale2026.gov.it/sis_SpidPage'
-  - id: 4
+  - id: 5
     category: Linee guida Soggetti attuatori
     title: "Aggiornate le Linee guida per la misura 1.4.1"
     description: "Con la pubblicazione di giugno alcuni chiarimenti su libreria Booststrap Italia, attributi delle pagine, breadcrumb e performance dei siti"
     source: 'innovazione.gov.it'
     linkTo: 'https://innovazione.gov.it/italia-digitale-2026/attuazione-misure-pnrr/#sistema-di-gestione-e-controllo'
-  - id: 5
+  - id: 6
     category: Territori alluvionati
     title: "Estensione del cronoprogramma"
     description: "Prorogato di 120 giorni il termine per contrattualizzazione fornitori e completamento attività"
     source: 'innovazione.gov.it'
-    linkTo: 'https://innovazione.gov.it/notizie/articoli/territori-alluvionati-estensione-del-cronoprogramma-per-gli-avvisi-di-pa-digitale/'
-  - id: 6
-    category: Misura 1.4.1
-    title: "Grazie al PNRR già online i nuovi siti internet delle Scuole italiane"
-    description: "Erogato il primo milione di euro alle 233 scuole che hanno già completato con successo il rifacimento del loro sito internet"
-    source: 'innovazione.gov.it'
-    linkTo: 'https://innovazione.gov.it/notizie/articoli/grazie-al-pnrr-gia-online-i-nuovi-siti-internet-delle-scuole-italiane/'   
+    linkTo: 'https://innovazione.gov.it/notizie/articoli/territori-alluvionati-estensione-del-cronoprogramma-per-gli-avvisi-di-pa-digitale/'  
 support:
   tag: Supporto
   title: Consulta le domande frequenti o scrivici per ricevere assistenza

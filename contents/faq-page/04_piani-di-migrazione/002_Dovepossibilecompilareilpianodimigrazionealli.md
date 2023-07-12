@@ -3,4 +3,4 @@
     anchorLink: 002_Dovepossibilecompilareilpianodimigrazionealli
 ---
 
-È possibile compilare il piano di migrazione nella sezione "Cloud", accedendo all'area riservata della piattaforma.
+È possibile compilare il piano di migrazione nella sezione "Classificazione e cloud", accedendo all'area riservata della piattaforma.
