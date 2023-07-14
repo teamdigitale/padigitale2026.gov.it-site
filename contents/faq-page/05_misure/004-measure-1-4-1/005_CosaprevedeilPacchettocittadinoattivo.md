@@ -1,5 +1,5 @@
 ---
-  - title: Cosa prevede il “Pacchetto cittadino attivo”?
+  - title: Cosa bisogna fare per aderire al “Pacchetto cittadino attivo”?
     tag:
       - comuni
     anchorLink: 005_CosaprevedeilPacchettocittadinoattivo
