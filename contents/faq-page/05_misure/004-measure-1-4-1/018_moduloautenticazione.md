@@ -1,7 +1,7 @@
 ---
   - title: È possibile utilizzare per il modulo dell'autenticazione il sistema gestito da un intermediario tecnologico che però rimanda per le proprie funzioni su un sito avente un dominio differente?
     tag:
-      - scuole
+      - comuni
     anchorLink: 018_moduloautenticazione
 ---
 
