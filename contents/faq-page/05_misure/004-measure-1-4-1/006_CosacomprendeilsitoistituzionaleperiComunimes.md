@@ -1,5 +1,5 @@
 ---
-  - title: Cosa comprende il sito istituzionale per i Comuni messo a disposizione all’indirizzo https://designers.italia.it/modello/comuni/ ?
+  - title: Cosa comprende il modello Comuni disponibile all’indirizzo designers.italia.it/modello/comuni ?
     tag:
       - comuni
     anchorLink: 006_CosacomprendeilsitoistituzionaleperiComunimes
