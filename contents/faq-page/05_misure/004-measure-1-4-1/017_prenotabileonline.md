@@ -1,7 +1,7 @@
-d---
+---
   - title: Se un servizio erogato dal Comune rientra fra quelli digitali, deve obbligatoriamente essere prenotabile online?
     tag:
-      - scuole
+      - comuni
     anchorLink: 017_prenotabileonline
 ---
 
