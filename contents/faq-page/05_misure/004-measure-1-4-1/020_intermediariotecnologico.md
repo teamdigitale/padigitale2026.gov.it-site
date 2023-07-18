@@ -1,6 +1,6 @@
 ---
   - title: Per un Ente che deve fornire il sito gestendo il bilinguismo ci sono delle linee guida?
-      tag:
+    tag:
       - comuni
     anchorLink: 020_intermediariotecnologico
 ---
