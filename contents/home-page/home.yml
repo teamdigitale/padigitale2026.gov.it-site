@@ -133,7 +133,7 @@ heroCarouselNews:
     type: internal
     category: Misura 1.3.1 - Avviso Comuni
     title: "Estensione cronoprogramma fornitori"
-    description: "Il termine per la contrattualizzazione dei fornitori è differito di 60 giorni per tutti i Comuni"
+    description: "Il termine per la contrattualizzazione dei fornitori è differito di 60 giorni per i Comuni"
     source: "Scarica il Decreto"
     linkTo: 'https://areariservata.padigitale2026.gov.it/sfc/servlet.shepherd/document/download/0697Q00000CobcFQAR?operationContext=S1'
   - id: 2
