@@ -1,5 +1,5 @@
 ---
-  - title: Ci sono dei modelli di siti web già predisposti per il Soggetto Attuatore che presenta candidatura per l'Avviso riferito alla Misura 1.4.1?
+  - title: Ci sono dei modelli di siti web già predisposti per il Soggetto Attuatore che presenta candidatura per l'Avviso 1.4.1 per le scuole?
     tag:
       - scuole
     anchorLink: 010_CisonodeimodellidisitiwebgipredispostiperilSo
