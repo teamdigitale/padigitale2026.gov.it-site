@@ -3,6 +3,7 @@
     tag:
       - comuni,altri-enti
     anchorLink: 020_transazionepositiva
+---
 
 Il processo di migrazione e attivazione dei servizi si intende concluso con esito positivo al momento in cui per i servizi attivati sulla piattaforma pagoPA siano state effettuate transazioni reali con esito positivo, esclusivamente tramite il sistema pagoPA.
 Per transazione con esito positivo si intende sia una transazione reale eseguita da un cittadino, con la corretta applicazione del codice tassonomico per ogni singolo servizio oppure, nel caso in cui la stagionalità del singolo servizio di incasso non lo consenta, una transazione reale con importo di valore simbolico (es. 0,01€) ma con codice tassonomico e IUV reale.
