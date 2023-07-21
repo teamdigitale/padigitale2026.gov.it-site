@@ -116,7 +116,7 @@ questions:
       - title: Brochure informative e presentazioni
         content:
         accordionContent: 
-          - linkLabel: Siti scolastici: le Buone Pratiche necessarie per superare l'asseverazione (PDF)
+          - linkLabel: "Siti scolastici: le Buone Pratiche necessarie per superare l'asseverazione (PDF)"
             link: 'https://assets.innovazione.gov.it/1689943534-focus-buone-pratiche-siti-scolastici.pdf'    
       - title: Link utili
         content: 
