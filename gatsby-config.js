@@ -57,12 +57,14 @@ module.exports = {
         enableJSErrorTracking: true,
       },
     },
-    'gatsby-transformer-yaml',
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/contents/faq-page/`,
+        name: `blog`,
+        path: `${__dirname}/contents/faq-page`,
       },
     },
+    `gatsby-transformer-remark`,
+    `gatsby-transformer-sharp`,
   ],
 };
