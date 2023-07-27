@@ -106,9 +106,7 @@ export const FaqPageNew = () => {
               }
               title
             }
-            internal {
-              content
-            }
+            html
           }
         }
       }
