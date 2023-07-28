@@ -1,7 +1,7 @@
 ---
   - title: In riferimento all'avviso 1.1 Infrastrutture digitali - migrazione PSN - PAC Pilota, come può essere determinato il costo del progetto?
     tag:
-      - generale
+      - psn_pac
     anchorLink: 026_Inriferimentoallavviso11Infrastrutturedigital
 ---
 
