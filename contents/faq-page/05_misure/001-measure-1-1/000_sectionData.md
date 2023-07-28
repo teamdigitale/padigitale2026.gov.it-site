@@ -5,6 +5,8 @@
     sectionId: measure-1-1
     chips:
       - chipsId: measure-1-1
-      - title: Generale
-        id: generale
+      - title: PSN PAC pilota
+        id: generalec
+      - title: Altre PAC
+        id: altre_pac
 ---
