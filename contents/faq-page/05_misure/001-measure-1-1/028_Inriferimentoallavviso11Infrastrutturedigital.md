@@ -1,7 +1,7 @@
 ---
   - title: In riferimento all'avviso 1.1 Infrastrutture digitali - migrazione PSN - PAC Pilota, quali informazioni è necessario riportare all'interno della "Tabella D - Cronoprogramma"?
     tag:
-      - generale
+      - psn_pac
     anchorLink: 028_Inriferimentoallavviso11Infrastrutturedigital
 ---
 
