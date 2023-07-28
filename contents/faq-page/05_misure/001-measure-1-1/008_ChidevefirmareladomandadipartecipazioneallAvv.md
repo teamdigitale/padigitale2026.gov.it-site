@@ -1,7 +1,7 @@
 ---
   - title: Chi deve firmare la domanda di partecipazione all'Avviso al fine di inviare correttamente la candidatura?
     tag:
-      - generale
+      - psn_pac
     anchorLink: 008_ChidevefirmareladomandadipartecipazioneallAvv
 ---
 
