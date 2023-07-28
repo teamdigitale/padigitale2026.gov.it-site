@@ -1,7 +1,7 @@
 ---
   - title: È possibile accedere al finanziamento in caso di realizzazione delle attività, con l'ausilio di fondi pubblici,nazionali, regionali o europei prima della pubblicazione dell'Avviso riferito alla Misura 1.1?
     tag:
-      - generale
+      - psn_pac
     anchorLink: 007_possibileaccederealfinanziamentoincasodireali
 ---
 
