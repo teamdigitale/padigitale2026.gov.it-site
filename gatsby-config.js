@@ -57,14 +57,5 @@ module.exports = {
         enableJSErrorTracking: true,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `blog`,
-        path: `${__dirname}/contents/faq-page`,
-      },
-    },
-    `gatsby-transformer-remark`,
-    `gatsby-transformer-sharp`,
   ],
 };
