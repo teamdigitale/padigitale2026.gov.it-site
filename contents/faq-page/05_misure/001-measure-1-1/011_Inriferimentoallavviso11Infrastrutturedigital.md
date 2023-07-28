@@ -1,7 +1,7 @@
 ---
   - title: In riferimento all'avviso 1.1 Infrastrutture digitali - migrazione PSN - PAC Pilota, come è possibile attestare l'invio della domanda di partecipazione?
     tag:
-      - generale
+      - psn_pac
     anchorLink: 011_Inriferimentoallavviso11Infrastrutturedigital
 ---
 
