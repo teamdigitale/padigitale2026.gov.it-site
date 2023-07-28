@@ -1,7 +1,7 @@
 ---
   - title: In riferimento all'avviso 1.1 Infrastrutture digitali - migrazione PSN - PAC Pilota, tutti i servizi dell'Ente classificati come strategici, possono essere migrati verso il PSN?
     tag:
-      - generale
+      - psn_pac
     anchorLink: 023_Inriferimentoallavviso11Infrastrutturedigital
 ---
 
