@@ -1,7 +1,7 @@
 ---
   - title: In riferimento all'avviso 1.1 Infrastrutture digitali - migrazione PSN - PAC Pilota, eventuali modifiche dell'Avviso , dove saranno consultabili?
     tag:
-      - generale
+      - psn_pac
     anchorLink: 019_Inriferimentoallavviso11Infrastrutturedigital
 ---
 
