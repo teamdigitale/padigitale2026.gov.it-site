@@ -1,7 +1,7 @@
 ---
   - title: È possibile richiedere supporto per procedure amministrative al DTD?
     tag:
-      - generale
+      - psn_pac
     anchorLink: 017_possibilerichiederesupportoperprocedureammini
 ---
 
