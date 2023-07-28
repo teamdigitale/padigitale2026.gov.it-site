@@ -1,7 +1,7 @@
 ---
   - title: Quali documenti è necessario allegare alla domanda di partecipazione?
     tag:
-      - generale
+      - psn_pac
     anchorLink: 009_Qualidocumentinecessarioallegarealladomandadi
 ---
 
