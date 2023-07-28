@@ -1,7 +1,7 @@
 ---
   - title: In riferimento all'avviso 1.1 Infrastrutture digitali - migrazione PSN - PAC Pilota, qualora il data center non fosse di proprietà dell'amministrazione, è necessario indicare delle informazioni aggiuntive?
     tag:
-      - generale
+      - psn_pac
     anchorLink: 025_Inriferimentoallavviso11Infrastrutturedigital
 ---
 
