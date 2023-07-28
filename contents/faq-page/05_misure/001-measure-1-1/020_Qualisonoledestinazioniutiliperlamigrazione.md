@@ -1,7 +1,7 @@
 ---
   - title: Quali sono le destinazioni utili per la migrazione?
     tag:
-      - generale
+      - psn_pac
     anchorLink: 020_Qualisonoledestinazioniutiliperlamigrazione
 ---
 
