@@ -1,7 +1,7 @@
 ---
   - title: In riferimento all'avviso 1.1 Infrastrutture digitali - migrazione PSN - PAC Pilota, entro quanto tempo, il Soggetto Attuatore, deve corrispondere gli importi dovuti per gli interventi realizzati?
     tag:
-      - generale
+      - psn_pac
     anchorLink: 016_Inriferimentoallavviso11Infrastrutturedigital
 ---
 
