@@ -1,7 +1,7 @@
 ---
   - title: Quali informazioni è necessario riportare tra i dettagli della migrazione al PSN?
     tag:
-      - generale
+      - psn_pac
     anchorLink: 022_Qualiinformazioninecessarioriportaretraidetta
 ---
 
