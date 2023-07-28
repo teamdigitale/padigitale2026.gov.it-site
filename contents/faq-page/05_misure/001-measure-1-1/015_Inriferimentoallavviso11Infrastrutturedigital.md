@@ -1,7 +1,7 @@
 ---
   - title: In riferimento all'avviso 1.1 Infrastrutture digitali - migrazione PSN - PAC Pilota, quando può essere richiesta l'erogazione del finanziamento?  E in quali modalità verrà corrisposto?
     tag:
-      - generale
+      - psn_pac
     anchorLink: 015_Inriferimentoallavviso11Infrastrutturedigital
 ---
 
