@@ -1,7 +1,7 @@
 ---
   - title: In quanto tempo devono essere concluse le attività oggetto di finanziamento?
     tag:
-      - generale
+      - psn_pac
     anchorLink: 006_Inquantotempodevonoessereconcluseleattivitogg
 ---
 
