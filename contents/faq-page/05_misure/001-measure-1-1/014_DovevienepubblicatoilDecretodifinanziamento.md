@@ -1,7 +1,7 @@
 ---
   - title: Dove viene pubblicato il Decreto di finanziamento?
     tag:
-      - generale
+      - psn_pac
     anchorLink: 014_DovevienepubblicatoilDecretodifinanziamento
 ---
 
