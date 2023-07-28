@@ -1,7 +1,7 @@
 ---
   - title: In riferimento all'avviso 1.1 Infrastrutture digitali - migrazione PSN - PAC Pilota, quali sono le tipologie di spese ammissibili che possono essere indicate nella "Tabella C - Dettaglio Costi"?
     tag:
-      - generale
+      - psn_pac
     anchorLink: 027_Inriferimentoallavviso11Infrastrutturedigital
 ---
 
