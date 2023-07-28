@@ -1,7 +1,7 @@
 ---
   - title: Quali sono gli interventi finanziabili dall'Avviso 1.1?
     tag:
-      - generale
+      - psn_pac
     anchorLink: 003_QualisonogliinterventifinanziabilidallAvviso1
 ---
 
