@@ -1,7 +1,7 @@
 ---
   - title: Quando si intende concluso il processo di migrazione?
     tag:
-      - generale
+      - psn_pac
     anchorLink: 024_Quandosiintendeconclusoilprocessodimigrazione
 ---
 
