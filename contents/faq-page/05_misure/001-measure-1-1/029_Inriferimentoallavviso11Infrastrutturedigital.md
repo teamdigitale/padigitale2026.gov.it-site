@@ -1,7 +1,7 @@
 ---
   - title: In riferimento all'avviso 1.1 Infrastrutture digitali - migrazione PSN - PAC Pilota, è necessario alimentare il sistema ReGiS?
     tag:
-      - generale
+      - psn_pac
     anchorLink: 029_Inriferimentoallavviso11Infrastrutturedigital
 ---
 
