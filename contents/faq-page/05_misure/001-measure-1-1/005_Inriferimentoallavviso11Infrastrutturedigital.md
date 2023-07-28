@@ -1,7 +1,7 @@
 ---
   - title: In riferimento all'avviso 1.1 Infrastrutture digitali - migrazione PSN - PAC Pilota, è possibile accedere al finanziamento in caso di realizzazione delle attività, con l'ausilio di fondi pubblici,nazionali, regionali o europei prima della pubblicazione dell'Avviso ?
     tag:
-      - generale
+      - psn_pac
     anchorLink: 005_Inriferimentoallavviso11Infrastrutturedigital
 ---
 
