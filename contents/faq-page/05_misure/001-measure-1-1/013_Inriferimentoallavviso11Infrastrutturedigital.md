@@ -1,7 +1,7 @@
 ---
   - title: In riferimento all'avviso 1.1 Infrastrutture digitali - migrazione PSN - PAC Pilota, a seguito della notifica di ammissibilità della domanda di partecipazione, entro quanto tempo deve essere comunicato il CUP, al fine di accettare il finanziamento?
     tag:
-      - generale
+      - psn_pac
     anchorLink: 013_Inriferimentoallavviso11Infrastrutturedigital
 ---
 
