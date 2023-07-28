@@ -1,7 +1,7 @@
 ---
   - title: In riferimento all'avviso 1.1 Infrastrutture digitali - migrazione PSN - PAC Pilota, entro quanto tempo saranno fornite le risposte ai chiarimenti richiesti al DTD?
     tag:
-      - generale
+      - psn_pac
     anchorLink: 018_Inriferimentoallavviso11Infrastrutturedigital
 ---
 
