@@ -1,7 +1,7 @@
 ---
   - title: In riferimento all'avviso 1.1 Infrastrutture digitali - migrazione PSN - PAC Pilota, il DTD può richiedere integrazione alla documentazione inviata dall'Ente?
     tag:
-      - generale
+      - psn_pac
     anchorLink: 012_Inriferimentoallavviso11Infrastrutturedigital
 ---
 
