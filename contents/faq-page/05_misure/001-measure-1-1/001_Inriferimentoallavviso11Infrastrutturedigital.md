@@ -1,7 +1,7 @@
 ---
   - title: In riferimento all'avviso 1.1 Infrastrutture digitali - migrazione PSN - PAC Pilota, esiste una lista cogente di PA che possano richiedere l’esenzione di cui al comma 4-quater dell’articolo 33-septies DL 179/2012? Tale esenzione deve considerarsi "totale" a tutte le funzioni svolte dall'amministrazione o può altresì considerarsi relativa limitatamente alle singole funzioni richiamate all'articolo 2, comma 6, del decreto legislativo 7 marzo 2005, n. 82?
     tag:
-      - generale
+      - psn_pac
     anchorLink: 001_Inriferimentoallavviso11Infrastrutturedigital
 ---
 
