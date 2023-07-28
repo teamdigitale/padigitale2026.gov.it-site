@@ -1,7 +1,7 @@
 ---
   - title: In riferimento all'avviso 1.1 Infrastrutture digitali - migrazione PSN - PAC Pilota, con quale modalità deve essere trasmessa la documentazione allegata alla domanda di partecipazione?
     tag:
-      - generale
+      - psn_pac
     anchorLink: 010_Inriferimentoallavviso11Infrastrutturedigital
 ---
 
