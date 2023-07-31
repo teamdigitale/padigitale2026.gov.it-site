@@ -1,5 +1,5 @@
 ---
-  - title: Come si realizza il processo di onboarding?
+  - title: Come si realizza il processo di onboarding **per le Regioni**?
     tag:
       - regioni
     anchorLink: 026_Comesirealizzailprocessodionboarding
