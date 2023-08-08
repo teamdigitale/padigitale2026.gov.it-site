@@ -2305,6 +2305,11 @@
     escape-string-regexp "^2.0.0"
     lodash.deburr "^4.1.0"
 
+"@splidejs/splide@^3.6.12":
+  version "3.6.12"
+  resolved "https://registry.yarnpkg.com/@splidejs/splide/-/splide-3.6.12.tgz#9b6bede5c99140fd06754990c91e474374566c30"
+  integrity sha512-ggOUAuSxjWuxxL0IQEZcux26KByfKWfYM2HYmvDBdxkXc5evVW+xuECO+3iuciyrJpgcbYTr4hn0cHfbNlYIeA==
+
 "@szmarczak/http-timer@^1.1.2":
   version "1.1.2"
   resolved "https://registry.npmjs.org/@szmarczak/http-timer/-/http-timer-1.1.2.tgz"
@@ -2881,6 +2886,13 @@ accepts@^1.3.7, accepts@~1.3.4, accepts@~1.3.5, accepts@~1.3.8:
   dependencies:
     mime-types "~2.1.34"
     negotiator "0.6.3"
+
+accessible-autocomplete@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/accessible-autocomplete/-/accessible-autocomplete-2.0.4.tgz#e295256c8d268b97c5ab456a1cb084b553ed3eb0"
+  integrity sha512-2p0txrSpvs5wXFUeQJHMheDPTZVSEmiUHWlEPb7vJnv2Dd1xPfoLnBQQMfNbTSit2pL/9sSQYESuD2Yyohd4Yw==
+  dependencies:
+    preact "^8.3.1"
 
 acorn-import-assertions@^1.7.6:
   version "1.7.6"
@@ -3482,27 +3494,31 @@ boolbase@^1.0.0, boolbase@~1.0.0:
   resolved "https://registry.npmjs.org/boolbase/-/boolbase-1.0.0.tgz"
   integrity sha1-aN/1++YMUes3cl6p4+0xDcwed24=
 
-bootstrap-italia@^1.4.3:
-  version "1.4.3"
-  resolved "https://registry.npmjs.org/bootstrap-italia/-/bootstrap-italia-1.4.3.tgz"
-  integrity sha512-4f6+QxAW5w+Ch6BKFniOryVaH9+ZaHO5VDJLVznfU4KOvsZQxO4wxS/EPExLdx64I1qjM5MHCCs9/AQh3tSnog==
+bootstrap-italia@^1.6.4:
+  version "1.6.4"
+  resolved "https://registry.yarnpkg.com/bootstrap-italia/-/bootstrap-italia-1.6.4.tgz#b8510c0bbb0e958e37cf04b0b0f5d124d2d36fa8"
+  integrity sha512-PyrFh66bgfbx8M0AGFJf4alPj/cu81qoXkow9KKzVvNf0SRK6p09aor+7pjuaNJoeISF6oSTH1hyWAyA7qK5bA==
   dependencies:
-    bootstrap "^4.5.0"
-    bootstrap-select "1.13.17"
-    jquery "^3.5.1"
+    "@splidejs/splide" "^3.6.12"
+    accessible-autocomplete "^2.0.4"
+    bootstrap "^4.6.1"
+    bootstrap-select "^1.13.18"
+    jquery "^3.6.0"
+    just-validate "^3.5.0"
+    just-validate-plugin-date "^1.1.1"
     owl.carousel "2.3.4"
     popper.js "1.16.1"
     svgxuse "1.2.6"
 
-bootstrap-select@1.13.17:
-  version "1.13.17"
-  resolved "https://registry.npmjs.org/bootstrap-select/-/bootstrap-select-1.13.17.tgz"
-  integrity sha512-LbzSQumoZNYGuoYMpShKIHbJ2qUWFLI0qVHVeKqw5+nfhtMxz+Gre1+IuI3X74bTzQfalBqDKc8fS8tZMdciWg==
+bootstrap-select@^1.13.18:
+  version "1.13.18"
+  resolved "https://registry.yarnpkg.com/bootstrap-select/-/bootstrap-select-1.13.18.tgz#4557119d58dc1159189977161c803962220e4dda"
+  integrity sha512-V1IzK4rxBq5FrJtkzSH6RmFLFBsjx50byFbfAf8jYyXROWs7ZpprGjdHeoyq2HSsHyjJhMMwjsQhRoYAfxCGow==
 
-bootstrap@^4.5.0:
-  version "4.6.0"
-  resolved "https://registry.npmjs.org/bootstrap/-/bootstrap-4.6.0.tgz"
-  integrity sha512-Io55IuQY3kydzHtbGvQya3H+KorS/M9rSNyfCGCg9WZ4pyT/lCxIlpJgG1GXW/PswzC84Tr2fBYi+7+jFVQQBw==
+bootstrap@^4.6.1:
+  version "4.6.2"
+  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.6.2.tgz#8e0cd61611728a5bf65a3a2b8d6ff6c77d5d7479"
+  integrity sha512-51Bbp/Uxr9aTuy6ca/8FbFloBUJZLHwnhTcnjIeRn2suQWsWzcuJhGjKDB5eppVte/8oCdOL3VuwxvZDUggwGQ==
 
 boxen@^4.2.0:
   version "4.2.0"
@@ -4562,6 +4578,11 @@ dataloader@2.0.0:
   version "2.0.0"
   resolved "https://registry.npmjs.org/dataloader/-/dataloader-2.0.0.tgz"
   integrity sha512-YzhyDAwA4TaQIhM5go+vCLmU0UikghC/t9DTQYZR2M/UvZ1MdOhPezSDZcjj9uqQJOMqjLcpWtyW2iNINdlatQ==
+
+date-fns@2.28.0:
+  version "2.28.0"
+  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.28.0.tgz#9570d656f5fc13143e50c975a3b6bbeb46cd08b2"
+  integrity sha512-8d35hViGYx/QH0icHYCeLmsLmMUheMmTyV9Fcm6gvNwdw31yXXH+O85sOBJ+OLnLQMKZowvpKb6FgMIQjcpvQw==
 
 date-fns@^2.14.0:
   version "2.23.0"
@@ -8053,10 +8074,15 @@ jpeg-js@^0.4.0:
   resolved "https://registry.yarnpkg.com/jpeg-js/-/jpeg-js-0.4.4.tgz#a9f1c6f1f9f0fa80cdb3484ed9635054d28936aa"
   integrity sha512-WZzeDOEtTOBK4Mdsar0IqEU5sMr3vSV2RqkAIzUEV2BHnUfKGyswWFPFwK5EeDo93K3FohSHbLAjj0s1Wzd+dg==
 
-jquery@>=1.8.3, jquery@^3.5.1:
+jquery@>=1.8.3:
   version "3.5.1"
   resolved "https://registry.npmjs.org/jquery/-/jquery-3.5.1.tgz"
   integrity sha512-XwIBPqcMn57FxfT+Go5pzySnm4KWkT1Tv7gjrpT1srtf8Weynl6R273VJ5GjkRb51IzMp5nbaPjJXMWeju2MKg==
+
+jquery@^3.6.0:
+  version "3.7.0"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.7.0.tgz#fe2c01a05da500709006d8790fe21c8a39d75612"
+  integrity sha512-umpJ0/k8X0MvD1ds0P9SfowREz2LenHsQaxSohMZ5OMNEU2r0tf8pdeEFTHMFxWVxKNyU9rTtK3CWzUCTKJUeQ==
 
 "js-tokens@^3.0.0 || ^4.0.0", js-tokens@^4.0.0:
   version "4.0.0"
@@ -8292,6 +8318,18 @@ jss@10.8.0:
   dependencies:
     array-includes "^3.1.2"
     object.assign "^4.1.2"
+
+just-validate-plugin-date@^1.1.1:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/just-validate-plugin-date/-/just-validate-plugin-date-1.2.0.tgz#16f46235191e1de3a00f9c6cc99b9eb882f16ee9"
+  integrity sha512-cjnCiXAoRGzvXzVOVOT+XsGAdvA6JIIGAwU4qA7h3oPs5dRZUsDKNfUuHeX4mcQHm7gkLEReZk2h6Aws4ZiwVA==
+  dependencies:
+    date-fns "2.28.0"
+
+just-validate@^3.5.0:
+  version "3.10.0"
+  resolved "https://registry.yarnpkg.com/just-validate/-/just-validate-3.10.0.tgz#6f4a219abcc5cbf39a1bcc2901f5cb4f9e897a1f"
+  integrity sha512-789+Y7yTwcyCReD+wWAnjGzbWTWth5yHMT9MvaM3RLDExQfmIDye/X8ziHOhI2UDa7ef7HMAb6cFifTaKJa5Yg==
 
 jwt-decode@^3.1.2:
   version "3.1.2"
@@ -10344,6 +10382,11 @@ potrace@^2.1.8:
   integrity sha512-V9hI7UMJyEhNZjM8CbZaP/804ZRLgzWkCS9OOYnEZkszzj3zKR/erRdj0uFMcN3pp6x4B+AIZebmkQgGRinG/g==
   dependencies:
     jimp "^0.14.0"
+
+preact@^8.3.1:
+  version "8.5.3"
+  resolved "https://registry.yarnpkg.com/preact/-/preact-8.5.3.tgz#78c2a5562fcecb1fed1d0055fa4ac1e27bde17c1"
+  integrity sha512-O3kKP+1YdgqHOFsZF2a9JVdtqD+RPzCQc3rP+Ualf7V6rmRDchZ9MJbiGTT7LuyqFKZqlHSOyO/oMFmI2lVTsw==
 
 prebuild-install@^6.1.4:
   version "6.1.4"
