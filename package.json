@@ -18,7 +18,7 @@
   },
   "engines": {
     "npm": ">=8.0.0",
-    "node": ">=14.15.4 <=16.20.1"
+    "node": ">=14.15.4 <=19.0.0"
   },
   "dependencies": {
     "@fontsource/lora": "^4.5.0",
@@ -27,7 +27,7 @@
     "@react-aria/tabs": "^3.0.2",
     "bootstrap-italia": "^1.4.3",
     "classnames": "^2.3.1",
-    "design-react-kit": "^3.3.3",
+    "design-react-kit": "^4.0.0",
     "gatsby": "^3.14.2",
     "gatsby-plugin-google-tagmanager": "3.14.0",
     "gatsby-plugin-image": "^1.14.1",
