@@ -35,7 +35,6 @@
     "gatsby-transformer-yaml": "3.14.0",
     "gray-matter": "4.0.3",
     "jwt-decode": "^3.1.2",
-    "lmdb": "2.8.0",
     "luxon": "^2.5.2",
     "mustache": "4.2.0",
     "prop-types": "^15.7.2",
