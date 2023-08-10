@@ -58,7 +58,7 @@ export const IndexPage = () => {
   return (
     <>
       <SEO title={seoTitle} description={seoDescription} />
-      <h1 className="sr-only">Home page PA digitale 2026</h1>
+      <h1 className="sr-only">Home page PA digitale 2026 TEST</h1>
       <HeroImage
         dark={true}
         mainHero={true}
