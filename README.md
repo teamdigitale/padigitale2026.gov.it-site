@@ -7,7 +7,7 @@ The website is built using the [Gatsby](https://www.gatsbyjs.com/) framework.
 - [Node.js](https://nodejs.org/it/) runtime
 - [Yarn](https://yarnpkg.com/) package manager
 
-After you have installed yarn, the following command is necessary to install dependencies:
+After you have installed yarn, the following command is necessary to install dependencies: 
 
 ```
 yarn
