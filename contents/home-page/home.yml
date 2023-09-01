@@ -130,46 +130,45 @@ opportunity:
       id: centri-facili
 heroCarouselNews:
   - id: 1
+    category: Linee guida di asseverazione
+    title: "Aggiornamento di agosto 2023"
+    description: "Gli aggiornamenti, in particolare, hanno riguardato l’allegato 2 (misura 1.4.1) e l’allegato 6 (misura 1.4.5)."
+    source: "Scarica le Linee guida"
+    linkTo: 'https://assets.innovazione.gov.it/1693494978-230831_linee-guida-ls-aggiornamento-allegati-tecnici-n-2-e-n-6.zip'
+  - id: 2
     type: internal
     category: Misura 1.4.3 pagoPA - Estensione scadenza
     title: "Nuova data di scadenza per l'Avviso dedicato ai Comuni"
-    description: "La scadenza dell'Avviso prevista per il 4 settembre è stata posticipata al prossimo 10 novembre 2023. In aggiunta la dotazione finanziaria è stata incrementata di 5 mln di euro."
+    description: "La scadenza dell'Avviso prevista per il 4 settembre è stata posticipata al prossimo 10 novembre. In aggiunta la dotazione finanziaria è stata incrementata di 5 mln di euro."
     source: "Vai all'Avviso"
     linkTo: 'https://areariservata.padigitale2026.gov.it/Pa_digitale2026_dettagli_avviso?id=a017Q00001HAufCQAT'
-  - id: 2
+  - id: 3
     category: Linee guida di asseverazione
     title: "Aggiornamento di luglio 2023"
     description: "Pubblicate le indicazioni per Piattaforma notifiche - SEND, integrate le informazioni per la Migrazione al cloud e siti/servizi"
     source: "innovazione.gov.it"
     linkTo: 'https://innovazione.gov.it/notizie/articoli/pa-digitale-2026-le-novita-nelle-linee-guida-nell-aggiornamento-di-luglio'
-  - id: 3
+  - id: 4
     type: internal
     category: Misura 1.4.4 - Estensione Cronoprogramma
     title: "Diffusione dell'identità digitale SPID/CIE: novità per gli Avvisi"
     description: "I termini del cronoprogramma per la contrattualizzazione e il completamento delle attività sono differiti di 120 giorni"
     source: "Scarica il Decreto"
     linkTo: 'https://areariservata.padigitale2026.gov.it/sfc/servlet.shepherd/document/download/0697Q00000CpvMiQAJ?operationContext=S1'
-  - id: 4
+  - id: 5
     type: internal
     category: Misura 1.3.1 - Nuovo Avviso
     title: "La PDND si apre a Università e AFAM pubblici"
     description: "Un nuovo Avviso da 31 milioni di euro. È possibile candidarsi fino al 27 ottobre 2023"
     source: "Vai all'Avviso"
     linkTo: 'https://areariservata.padigitale2026.gov.it/Pa_digitale2026_dettagli_avviso?id=a017Q00001K3HkSQAV'
-  - id: 5
+  - id: 6
     type: internal
     category: Misura 1.3.1 - Avviso Comuni
     title: "Estensione cronoprogramma fornitori"
     description: "Il termine per la contrattualizzazione dei fornitori è differito di 60 giorni per i Comuni"
     source: "Scarica il Decreto"
     linkTo: 'https://areariservata.padigitale2026.gov.it/sfc/servlet.shepherd/document/download/0697Q00000CobcFQAR?operationContext=S1'
-  - id: 6
-    type: internal
-    category: Misura 1.1 - Nuovo Avviso
-    title: "Risorse per le PA centrali"
-    description: "È online un nuovo Avviso pubblico da 280 milioni per favorire la migrazione al Polo Strategico Nazionale delle PA centrali"
-    source: "Vai all'Avviso"
-    linkTo: 'https://areariservata.padigitale2026.gov.it/Pa_digitale2026_dettagli_avviso?id=a017Q00001I9OHeQAN'
 support:
   tag: Supporto
   title: Consulta le domande frequenti o scrivici per ricevere assistenza
