@@ -18,7 +18,7 @@
   },
   "engines": {
     "npm": ">=8.0.0",
-    "node": ">=14.15.4 <=16.20.1"
+    "node": ">=14.15.4 <=16"
   },
   "dependencies": {
     "@fontsource/lora": "^4.5.0",
