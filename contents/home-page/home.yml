@@ -130,44 +130,44 @@ opportunity:
       id: centri-facili
 heroCarouselNews:
   - id: 1
+    category: Linee guida di asseverazione
+    title: "Aggiornamento di ottobre 2023"
+    description: "Aggiornati gli allegati con le informazioni pertinenti agli Avvisi 1.4.1, allegato 2, e gli Avvisi 1.4.4, allegato 4."
+    source: "Scarica le Linee guida"
+    linkTo: 'https://assets.innovazione.gov.it/1697442155-20231013_linee-guida-innovazione.zip'
+  - id: 2
     type: internal
     category: Misura 1.4.3 - pagoPA
     title: "Nuovi Avviso da 10 milioni di euro"
     description: "Destinato ad ASL, Enti Regionali, Università, Istituti di ricerca e AFAM, Aziende Ospedaliere, Agenzie Regionali Sanitarie"
     source: "Vai all'Avviso"
     linkTo: 'https://areariservata.padigitale2026.gov.it/Pa_digitale2026_dettagli_avviso?id=a017Q00001KHi2hQAD'
-  - id: 2
+  - id: 3
     type: internal
     category: Misura 1.4.5 - Estensione Cronoprogramma
     title: "Piattaforma notifiche digitale: novità per i Comuni"
     description: "Il termine del cronoprogramma per la contrattualizzazione del fornitore è esteso di 4 mesi"
     source: "Scarica il Decreto"
     linkTo: 'https://areariservata.padigitale2026.gov.it/sfc/servlet.shepherd/document/download/0697Q00000EnuPvQAJ?operationContext=S1'
-  - id: 3
+  - id: 4
     category: Misura 1.4.1
     title: "Modelli di siti e servizi di Designers Italia: nuovi file in formato aperto"
     description: "Ora tutti i file di riferimento dei Modelli di siti e servizi di Designers Italia sono disponibili esclusivamente in formato aperto"
     source: "designers.italia.it"
     linkTo: 'https://designers.italia.it/community/notizie/20230901-modelli-di-siti-e-servizi-di-designers-italia-nuovi-file-in-formato-aperto/'
-  - id: 4
+  - id: 5
     category: Linee guida di asseverazione
     title: "Aggiornamento di agosto 2023"
     description: "Gli aggiornamenti, in particolare, hanno riguardato l’allegato 2 (misura 1.4.1) e l’allegato 6 (misura 1.4.5)."
     source: "Scarica le Linee guida"
     linkTo: 'https://assets.innovazione.gov.it/1693494978-230831_linee-guida-ls-aggiornamento-allegati-tecnici-n-2-e-n-6.zip'
-  - id: 5
+  - id: 6
     type: internal
     category: Misura 1.4.3 pagoPA - Estensione scadenza
     title: "Nuova data di scadenza per l'Avviso dedicato ai Comuni"
     description: "La scadenza dell'Avviso prevista per il 4 settembre è stata posticipata al prossimo 10 novembre. In aggiunta la dotazione finanziaria è stata incrementata di 5 mln di euro."
     source: "Vai all'Avviso"
     linkTo: 'https://areariservata.padigitale2026.gov.it/Pa_digitale2026_dettagli_avviso?id=a017Q00001HAufCQAT'
-  - id: 6
-    category: Linee guida di asseverazione
-    title: "Aggiornamento di luglio 2023"
-    description: "Pubblicate le indicazioni per Piattaforma notifiche - SEND, integrate le informazioni per la Migrazione al cloud e siti/servizi"
-    source: "innovazione.gov.it"
-    linkTo: 'https://innovazione.gov.it/notizie/articoli/pa-digitale-2026-le-novita-nelle-linee-guida-nell-aggiornamento-di-luglio'
 support:
   tag: Supporto
   title: Consulta le domande frequenti o scrivici per ricevere assistenza
