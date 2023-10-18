@@ -6,7 +6,7 @@
     chips:
       - chipsId: measure-1-1
       - title: PSN PAC pilota
-        id: generale
+        id: generale_NonGestitoDaPAdigitale2026
       - title: Altre PAC
         id: altre_pac
 ---
