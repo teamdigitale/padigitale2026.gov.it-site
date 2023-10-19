@@ -1,8 +1,0 @@
----
-  - title: In riferimento all'avviso 1.1 Infrastrutture digitali - migrazione PSN - PAC Pilota, è possibile accedere al finanziamento in caso di realizzazione delle attività, con l'ausilio di fondi pubblici,nazionali, regionali o europei prima della pubblicazione dell'Avviso riferito alla Misura 1.1?
-    tag:
-      - generale
-    anchorLink: 004_Inriferimentoallavviso11Infrastrutturedigital
----
-
-L’importo massimo finanziabile per ciascuna delle PAC individuate ed in relazione a ciascuno dei cluster di appartenenza, è il seguente:<br> a. Cluster n. 1- Importo 40,5 Mln €: Ministero dell’Interno - Ministero della Difesa - Ministero dell’Economia e delle Finanze - Ministero della Giustizia - Agenzia delle Entrate;<br> b. Cluster n. 2- Importo 17,5 Mln €: Presidenza del Consiglio dei ministri - Ministero delle infrastrutture e dei trasporti (ex Ministero delle Infrastrutture e mobilità sostenibili) - Ministero dell’Università e della Ricerca - Ministero dell'istruzione e del merito (ex Ministero dell’Istruzione) - Ministero degli Affari Esteri e della Cooperazione Internazionale - Ministero del Lavoro e delle Politiche Sociali - Ministero della Salute - Agenzia delle Dogane e dei Monopoli - Agenzia delle Entrate - Riscossione;<br> c. Cluster n. 3- Importo 2,3 Mln €: Ministero della Cultura - Ministero del Turismo - Ministero delle imprese e del made in Italy (ex Ministero dello Sviluppo Economico ) - Ministero dell'ambiente e della sicurezza energetica (ex Ministero della Transizione Ecologica) - Ministero dell'agricoltura, della sovranità alimentare e delle foreste (ex Ministero delle Politiche Agricole Alimentari e Forestali) - Agenzia del Demanio.
