@@ -131,43 +131,44 @@ opportunity:
 heroCarouselNews:
   - id: 1
     type: internal
+    category: Misura 1.2 - Scuole
+    title: "Nuovo Avviso da 5 milioni di euro"
+    description: "Ulteriori risorse per favorire la migrazione in cloud delle Scuole. L'Avviso scade il 1° marzo 2024"
+    source: "Vai all'Avviso"
+    linkTo: 'https://areariservata.padigitale2026.gov.it/Pa_digitale2026_dettagli_avviso?id=a017Q00001MQRHgQAP'
+  - id: 2
+    type: internal
     category: Misura 1.3.1 PDND - Avviso Comuni
     title: "Estensione del cronoprogramma"
     description: "Il termine per la contrattualizzazione dei fornitori e per il completamento delle attività è differito di 90 giorni per tutti i Comuni finanziati."
     source: "Scarica il Decreto"
     linkTo: 'https://areariservata.padigitale2026.gov.it/sfc/servlet.shepherd/document/download/0697Q00000GNU7TQAX?operationContext=S1'
-  - id: 2
+  - id: 3
     category: Linee guida di asseverazione
     title: "Aggiornamento di ottobre 2023"
     description: "Aggiornati gli allegati con le informazioni pertinenti agli Avvisi 1.4.1, allegato 2, e gli Avvisi 1.4.4, allegato 4."
     source: "Scarica le Linee guida"
     linkTo: 'https://assets.innovazione.gov.it/1697442155-20231013_linee-guida-innovazione.zip'
-  - id: 3
+  - id: 4
     type: internal
     category: Misura 1.4.3 - pagoPA
-    title: "Nuovi Avviso da 10 milioni di euro"
+    title: "Nuovo Avviso da 10 milioni di euro"
     description: "Destinato ad ASL, Enti Regionali, Università, Istituti di ricerca e AFAM, Aziende Ospedaliere, Agenzie Regionali Sanitarie"
     source: "Vai all'Avviso"
     linkTo: 'https://areariservata.padigitale2026.gov.it/Pa_digitale2026_dettagli_avviso?id=a017Q00001KHi2hQAD'
-  - id: 4
+  - id: 5
     type: internal
     category: Misura 1.4.5 - Estensione Cronoprogramma
     title: "Piattaforma notifiche digitale: novità per i Comuni"
     description: "Il termine del cronoprogramma per la contrattualizzazione del fornitore è esteso di 4 mesi"
     source: "Scarica il Decreto"
     linkTo: 'https://areariservata.padigitale2026.gov.it/sfc/servlet.shepherd/document/download/0697Q00000EnuPvQAJ?operationContext=S1'
-  - id: 5
+  - id: 6
     category: Misura 1.4.1
     title: "Modelli di siti e servizi di Designers Italia: nuovi file in formato aperto"
     description: "Ora tutti i file di riferimento dei Modelli di siti e servizi di Designers Italia sono disponibili esclusivamente in formato aperto"
     source: "designers.italia.it"
     linkTo: 'https://designers.italia.it/community/notizie/20230901-modelli-di-siti-e-servizi-di-designers-italia-nuovi-file-in-formato-aperto/'
-  - id: 6
-    category: Linee guida di asseverazione
-    title: "Aggiornamento di agosto 2023"
-    description: "Gli aggiornamenti, in particolare, hanno riguardato l’allegato 2 (misura 1.4.1) e l’allegato 6 (misura 1.4.5)."
-    source: "Scarica le Linee guida"
-    linkTo: 'https://assets.innovazione.gov.it/1693494978-230831_linee-guida-ls-aggiornamento-allegati-tecnici-n-2-e-n-6.zip'
 support:
   tag: Supporto
   title: Consulta le domande frequenti o scrivici per ricevere assistenza
