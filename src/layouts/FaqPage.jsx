@@ -106,9 +106,7 @@ export const FaqPageNew = () => {
               }
               title
             }
-            internal {
-              content
-            }
+            html
           }
         }
       }
@@ -148,8 +146,6 @@ export const FaqPageNew = () => {
   const [questionsLink, setQuestionsLink] = useState({});
 
   useEffect(() => {
-    const sectionArr = document.querySelectorAll('.question-section');
-
     const observerHandler = (entries) => {
       const changeActive = (id) => {
         const sideMenuActive = document.querySelector(`.sidebar-wrapper .list-item.active`);
@@ -158,11 +154,10 @@ export const FaqPageNew = () => {
         sideMenuActive && sideMenuActive.classList.remove('active');
         sideMenuRefer && sideMenuRefer.classList.add('active');
       };
-
       entries.forEach((entry) => {
         if (entry.boundingClientRect.top < 200 && entry.boundingClientRect.top > 150) {
           setTimeout(() => {
-            changeActive(entry.target.id);
+            entry.target.id && changeActive(entry.target.id);
           }, 200);
         }
       });
@@ -178,6 +173,7 @@ export const FaqPageNew = () => {
       };
 
       const observer = new IntersectionObserver(observerHandler, options);
+      const sectionArr = document.querySelectorAll('.question-section');
       sectionArr.forEach((section) => {
         observer.observe(section);
       });
@@ -217,7 +213,9 @@ export const FaqPageNew = () => {
         faq.questions = Obj.questions;
         faq.sidebar = sectionData ? sectionData.sidebar : [];
         setQuestions(Obj.questions);
-        window.addEventListener('scroll', scrollHandler);
+        setTimeout(() => {
+          window.addEventListener('scroll', scrollHandler);
+        }, 2000);
         setSearch(search + 1);
       }
     });
@@ -535,9 +533,9 @@ export const FaqPageNew = () => {
               </span>
               <Totop />
               {faq && faq.questions.length > 0
-                ? questions.map((question) => (
+                ? questions.map((question, i) => (
                   <QuestionSection
-                    key={question.title}
+                    key={`questSect_${question.title}-${i}`}
                     item={question}
                     inputText={inputValue}
                     setQuestions={setQuestions}

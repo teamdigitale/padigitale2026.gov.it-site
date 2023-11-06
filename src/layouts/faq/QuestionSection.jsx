@@ -167,13 +167,15 @@ export const QuestionSection = (props) => {
   const allQuestions = totalQuestions;
 
   const cleanTitle = (title) => {
-    let titleCleaned = title.replaceAll(' ', '-');
-    titleCleaned = titleCleaned.replaceAll('"', '');
-    titleCleaned = titleCleaned.replaceAll('’', '');
-    titleCleaned = titleCleaned.replace(/[^a-zA-Z0-9 -]/g, '');
-    titleCleaned = titleCleaned.replaceAll('.', '');
-    titleCleaned = titleCleaned.substr(0, 50).toLowerCase();
-    return titleCleaned;
+    if (title) {
+      let titleCleaned = title.replaceAll(' ', '-');
+      titleCleaned = titleCleaned.replaceAll('"', '');
+      titleCleaned = titleCleaned.replaceAll('’', '');
+      titleCleaned = titleCleaned.replace(/[^a-zA-Z0-9 -]/g, '');
+      titleCleaned = titleCleaned.replaceAll('.', '');
+      titleCleaned = titleCleaned.substr(0, 50).toLowerCase();
+      return titleCleaned;
+    }
   };
   const updateIdQuestion = (anchorLink) => {
     setQuestionsLink(anchorLink);

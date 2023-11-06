@@ -27,7 +27,7 @@ export const buildArrayQuestions = (allFaqQuestions, data) => {
     if (!data.node.fields.slug.includes('999_EndCategory')) {
       const section = data.node.fields.slug.split('/');
       const sectionData = data.node.frontmatter['_0'];
-      const sectionContent = data.node.internal.content;
+      const sectionContent = data.node.html;
       const stringsectPos = section.length === 4 ? 2 : 1;
       const sectionIndexPos = section.length === 3 ? 2 : 3;
       const anchorLink = data.node.fields.slug.slice(9);

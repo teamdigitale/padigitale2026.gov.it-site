@@ -1,5 +1,5 @@
 ---
-  - title: Come viene calcolato l'importo forfettario previsto dall'Avviso “Esperienza del cittadino nei servizi pubblici” COMUNI per i Comuni riferito alla Misura 1.4.1?
+  - title: Come viene calcolato l'importo forfettario previsto dall'Avviso 1.4.1 “Esperienza del cittadino nei servizi pubblici” per i Comuni?
     tag:
       - comuni
     anchorLink: 007_Comevienecalcolatolimportoforfettarioprevisto

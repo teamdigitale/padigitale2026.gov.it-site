@@ -113,6 +113,11 @@ questions:
     description: Tutte le risorse per realizzare con facilità esperienze digitali semplici e accessibili per i cittadini.
     sectionId: misura141
     accordions:
+      - title: Brochure informative e presentazioni
+        content:
+        accordionContent: 
+          - linkLabel: "Siti scolastici: le Buone Pratiche necessarie per superare l'asseverazione (PDF)"
+            link: 'https://assets.innovazione.gov.it/1689943534-focus-buone-pratiche-siti-scolastici.pdf'    
       - title: Link utili
         content: 
         accordionContent: 
