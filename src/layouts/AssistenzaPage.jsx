@@ -608,7 +608,9 @@ export const AssistenzaPage = () => {
                 </p>
               </div>
               <div className={classes.bannerRight}>
-                <Link className={classes.bannerLink} to="https://areariservata.padigitale2026.gov.it/sis_SpidPage/PAdigitale2026_Assistenza">
+                <Link 
+                className={classes.bannerLink} 
+                to="https://areariservata.padigitale2026.gov.it/sis_SpidPage/PAdigitale2026_Assistenza">
                   Accedi con identità digitale
                   <svg
                     className="ml-3"
