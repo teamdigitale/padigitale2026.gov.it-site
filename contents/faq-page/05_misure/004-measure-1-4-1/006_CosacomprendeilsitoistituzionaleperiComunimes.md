@@ -1,8 +1,8 @@
 ---
-  - title: Cosa comprende il sito istituzionale per i Comuni messo a disposizione all’indirizzo https://designers.italia.it/modello/comuni/ ?
+  - title: Cosa comprende il modello Comuni disponibile all’indirizzo designers.italia.it/modello/comuni ?
     tag:
       - comuni
     anchorLink: 006_CosacomprendeilsitoistituzionaleperiComunimes
 ---
 
-Il modello di sito comunale, messo a disposizione all’indirizzo <a href="https://designers.italia.it/modello/comuni/">https://designers.italia.it/modello/comuni/</a> comprende due strumenti fondamentali: l’architettura dell’informazione del sito comunale e i template html del sito comunale.
+Il modello Comuni, disponibile all’indirizzo <a href="https://designers.italia.it/modello/comuni">https://designers.italia.it/modello/comuni</a> comprende diversi strumenti utili a progettare e sviluppare il sito comunale e i suoi servizi: architettura dell’informazione, interfacce delle pagine e i relativi componenti grafici da utilizzare, prototipi in alta fedelta, flussi di servizio, template html e temi CMS.

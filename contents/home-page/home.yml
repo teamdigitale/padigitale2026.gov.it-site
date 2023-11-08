@@ -130,44 +130,45 @@ opportunity:
       id: centri-facili
 heroCarouselNews:
   - id: 1
-    type: internal
-    category: Avviso 1.1 e 1.2 - ASL/AO
-    title: "Estensione scadenza"
-    description: "La scadenza dell'Avviso per favorire la migrazione in cloud di ASL/AO, prevista per il 30 giugno, è stata posticipata al 21 luglio 2023"
-    source: "Vai all'Avviso"
-    linkTo: 'https://areariservata.padigitale2026.gov.it/Pa_digitale2026_dettagli_avviso?id=a017Q00001DrNiyQAF'
+    category: Misura 1.4.4
+    title: "Open ID Connect, più semplice l’accesso ai servizi digitali con la Carta d’identità elettronica"
+    description: "Gli enti che adotteranno il nuovo protocollo non dovranno erogare alcun piano formativo, indicato come alternativa all’integrazione con OIDC"
+    source: "innovazione.gov.it"
+    linkTo: 'https://innovazione.gov.it/notizie/articoli/open-id-connect-piu-semplice-l-accesso-ai-servizi-digitali-con-la-carta-d-identit/'
   - id: 2
     type: internal
-    category: Avviso 1.4.3 - app IO
-    title: "Estesione del cronoprogramma"
-    description: "Il termine per la contrattualizzazione e il completamento delle attività è diferito di 120 giorni"
-    source: "Scarica il Decreto"
-    linkTo: 'https://areariservata.padigitale2026.gov.it/sfc/servlet.shepherd/document/download/0697Q00000BcNu7QAF?operationContext=S1'
+    category: Misura 1.2 - Scuole
+    title: "Nuovo Avviso da 5 milioni di euro"
+    description: "Ulteriori risorse per favorire la migrazione in cloud delle Scuole. L'Avviso scade il 1° marzo 2024"
+    source: "Vai all'Avviso"
+    linkTo: 'https://areariservata.padigitale2026.gov.it/Pa_digitale2026_dettagli_avviso?id=a017Q00001MQRHgQAP'
   - id: 3
     type: internal
-    category: Nuova funzionalità su PA digitale 2026
-    title: "Abilitata la funzionalità per l’aggiunta di più titolari effettivi dei fornitori"
-    description: "È ora possibile aggiungere più nominativi dei titolari effettivi dei fornitori. È sufficiente, tramite la pagina di aggiunta del titolare effettivo, utilizzare l’apposita funzionalità per aggiungere altri nominativi"
-    source: "Vai in area riservata"
-    linkTo: 'https://areariservata.padigitale2026.gov.it/sis_SpidPage'
-  - id: 4
-    category: Linee guida Soggetti attuatori
-    title: "Aggiornate le Linee guida per la misura 1.4.1"
-    description: "Con la pubblicazione di giugno alcuni chiarimenti su libreria Booststrap Italia, attributi delle pagine, breadcrumb e performance dei siti"
-    source: 'innovazione.gov.it'
-    linkTo: 'https://innovazione.gov.it/italia-digitale-2026/attuazione-misure-pnrr/#sistema-di-gestione-e-controllo'
-  - id: 5
-    category: Territori alluvionati
+    category: Misura 1.3.1 PDND - Avviso Comuni
     title: "Estensione del cronoprogramma"
-    description: "Prorogato di 120 giorni il termine per contrattualizzazione fornitori e completamento attività"
-    source: 'innovazione.gov.it'
-    linkTo: 'https://innovazione.gov.it/notizie/articoli/territori-alluvionati-estensione-del-cronoprogramma-per-gli-avvisi-di-pa-digitale/'
+    description: "Il termine per la contrattualizzazione dei fornitori e per il completamento delle attività è differito di 90 giorni per tutti i Comuni finanziati."
+    source: "Scarica il Decreto"
+    linkTo: 'https://areariservata.padigitale2026.gov.it/sfc/servlet.shepherd/document/download/0697Q00000GNU7TQAX?operationContext=S1'
+  - id: 4
+    category: Linee guida di asseverazione
+    title: "Aggiornamento di ottobre 2023"
+    description: "Aggiornati gli allegati con le informazioni pertinenti agli Avvisi 1.4.1, allegato 2, e gli Avvisi 1.4.4, allegato 4."
+    source: "Scarica le Linee guida"
+    linkTo: 'https://assets.innovazione.gov.it/1697442155-20231013_linee-guida-innovazione.zip'
+  - id: 5
+    type: internal
+    category: Misura 1.4.3 - pagoPA
+    title: "Nuovo Avviso da 10 milioni di euro"
+    description: "Destinato ad ASL, Enti Regionali, Università, Istituti di ricerca e AFAM, Aziende Ospedaliere, Agenzie Regionali Sanitarie"
+    source: "Vai all'Avviso"
+    linkTo: 'https://areariservata.padigitale2026.gov.it/Pa_digitale2026_dettagli_avviso?id=a017Q00001KHi2hQAD'
   - id: 6
-    category: Misura 1.4.1
-    title: "Grazie al PNRR già online i nuovi siti internet delle Scuole italiane"
-    description: "Erogato il primo milione di euro alle 233 scuole che hanno già completato con successo il rifacimento del loro sito internet"
-    source: 'innovazione.gov.it'
-    linkTo: 'https://innovazione.gov.it/notizie/articoli/grazie-al-pnrr-gia-online-i-nuovi-siti-internet-delle-scuole-italiane/'   
+    type: internal
+    category: Misura 1.4.5 - Estensione Cronoprogramma
+    title: "Piattaforma notifiche digitale: novità per i Comuni"
+    description: "Il termine del cronoprogramma per la contrattualizzazione del fornitore è esteso di 4 mesi"
+    source: "Scarica il Decreto"
+    linkTo: 'https://areariservata.padigitale2026.gov.it/sfc/servlet.shepherd/document/download/0697Q00000EnuPvQAJ?operationContext=S1'
 support:
   tag: Supporto
   title: Consulta le domande frequenti o scrivici per ricevere assistenza
