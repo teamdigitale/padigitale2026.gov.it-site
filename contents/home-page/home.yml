@@ -130,45 +130,45 @@ opportunity:
       id: centri-facili
 heroCarouselNews:
   - id: 1
+    type: internal
+    category: Misura 1.4.3 pagoPA - Comuni
+    title: "Aumento dotazione finanziaria ed estensione cronoprogramma"
+    description: "La scadenza dell'Avviso è stata posticipata al 2 febbraio 2024, con un aumento della dotazione finanziaria di 10 milioni di euro"
+    source: "Vai all'Avviso"
+    linkTo: 'https://areariservata.padigitale2026.gov.it/Pa_digitale2026_dettagli_avviso?id=a017Q00001HAufCQAT'
+  - id: 2
     category: Misura 1.4.4
     title: "Open ID Connect, più semplice l’accesso ai servizi digitali con la Carta d’identità elettronica"
     description: "Gli enti che adotteranno il nuovo protocollo non dovranno erogare alcun piano formativo, indicato come alternativa all’integrazione con OIDC"
     source: "innovazione.gov.it"
     linkTo: 'https://innovazione.gov.it/notizie/articoli/open-id-connect-piu-semplice-l-accesso-ai-servizi-digitali-con-la-carta-d-identit/'
-  - id: 2
+  - id: 3
     type: internal
     category: Misura 1.2 - Scuole
     title: "Nuovo Avviso da 5 milioni di euro"
     description: "Ulteriori risorse per favorire la migrazione in cloud delle Scuole. L'Avviso scade il 1° marzo 2024"
     source: "Vai all'Avviso"
     linkTo: 'https://areariservata.padigitale2026.gov.it/Pa_digitale2026_dettagli_avviso?id=a017Q00001MQRHgQAP'
-  - id: 3
+  - id: 4
     type: internal
     category: Misura 1.3.1 PDND - Avviso Comuni
     title: "Estensione del cronoprogramma"
     description: "Il termine per la contrattualizzazione dei fornitori e per il completamento delle attività è differito di 90 giorni per tutti i Comuni finanziati."
     source: "Scarica il Decreto"
     linkTo: 'https://areariservata.padigitale2026.gov.it/sfc/servlet.shepherd/document/download/0697Q00000GNU7TQAX?operationContext=S1'
-  - id: 4
+  - id: 5
     category: Linee guida di asseverazione
     title: "Aggiornamento di ottobre 2023"
     description: "Aggiornati gli allegati con le informazioni pertinenti agli Avvisi 1.4.1, allegato 2, e gli Avvisi 1.4.4, allegato 4."
     source: "Scarica le Linee guida"
     linkTo: 'https://assets.innovazione.gov.it/1697442155-20231013_linee-guida-innovazione.zip'
-  - id: 5
+  - id: 6
     type: internal
     category: Misura 1.4.3 - pagoPA
     title: "Nuovo Avviso da 10 milioni di euro"
     description: "Destinato ad ASL, Enti Regionali, Università, Istituti di ricerca e AFAM, Aziende Ospedaliere, Agenzie Regionali Sanitarie"
     source: "Vai all'Avviso"
     linkTo: 'https://areariservata.padigitale2026.gov.it/Pa_digitale2026_dettagli_avviso?id=a017Q00001KHi2hQAD'
-  - id: 6
-    type: internal
-    category: Misura 1.4.5 - Estensione Cronoprogramma
-    title: "Piattaforma notifiche digitale: novità per i Comuni"
-    description: "Il termine del cronoprogramma per la contrattualizzazione del fornitore è esteso di 4 mesi"
-    source: "Scarica il Decreto"
-    linkTo: 'https://areariservata.padigitale2026.gov.it/sfc/servlet.shepherd/document/download/0697Q00000EnuPvQAJ?operationContext=S1'
 support:
   tag: Supporto
   title: Consulta le domande frequenti o scrivici per ricevere assistenza
