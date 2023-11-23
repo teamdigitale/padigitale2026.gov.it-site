@@ -131,7 +131,7 @@ opportunity:
 heroCarouselNews:
   - id: 1
     type: internal
-    category: Misura 1.4.3 - app IO
+    category: Misura 1.4.3 app IO - Comuni
     title: "Nuovo Avviso da 30 milioni di euro"
     description: "Una nuova opportunità per i Comuni che ancora non hanno aderito agli Avvisi app IO. Introdotto il Catalogo dei servizi"
     source: "Vai all'Avviso"
@@ -158,7 +158,7 @@ heroCarouselNews:
     linkTo: 'https://areariservata.padigitale2026.gov.it/Pa_digitale2026_dettagli_avviso?id=a017Q00001MQRHgQAP'
   - id: 5
     type: internal
-    category: Misura 1.3.1 PDND - Avviso Comuni
+    category: Misura 1.3.1 PDND - Comuni
     title: "Estensione del cronoprogramma"
     description: "Il termine per la contrattualizzazione dei fornitori e per il completamento delle attività è differito di 90 giorni per tutti i Comuni finanziati."
     source: "Scarica il Decreto"
