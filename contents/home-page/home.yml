@@ -132,7 +132,7 @@ heroCarouselNews:
   - id: 1
     category: Nuove Linee guida per i Soggetti attuatori
     title: "Pubblicate indicazioni operative sulla documentazione di progetto"
-    description: "Oltre all'aggiornamento degli allegati 1 (misura 1.4.1), 4 (misura 1.4.3) e 5 (misura 1.4.5), viene infatti reso disponibile un nuovo documento (Allegato A), contenente indicazioni operative sulla documentazione oggetto dei controlli formali"
+    description: "Oltre all'aggiornamento degli Allegati 1 (misura 1.4.1), 4 (misura 1.4.3) e 5 (misura 1.4.5), viene reso disponibile un nuovo documento (Allegato A), contenente indicazioni operative sulla documentazione oggetto dei controlli formali"
     source: "Scarica le Linee guida"
     linkTo: 'https://assets.innovazione.gov.it/1701161473-231127_linee-guida-ls-v-5.zip'
   - id: 2
