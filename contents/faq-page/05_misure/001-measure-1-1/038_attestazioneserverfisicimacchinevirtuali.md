@@ -10,7 +10,8 @@ Si ricorda in ogni caso che, l’attestazione dei server fisici e delle macchine
 I template dei server fisici / macchine virtuali sono precompilati dalla piattaforma a partire dalle informazioni inserite in fase di adesione all’Avviso e al piano di migrazione secondo regolamento AGID.
 I file generati riportano nelle righe il numero di server fisici/macchine virtuali inseriti in fase di candidatura e una colonna per ogni servizio inserito nel piano di migrazione della PA.
 La compilazione del file richiede che:
-- Per ogni riga siano inserite le seguenti informazioni:
+
+Per ogni riga siano inserite le seguenti informazioni:
   - Server fisici:
     - “Identificativo Data Center” e “Comune”,
     - “Serial number”,
