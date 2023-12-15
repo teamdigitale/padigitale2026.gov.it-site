@@ -1,8 +1,8 @@
 ---
-  - title: Come deve essere implementato il servizio Pagamento IMU ai fini del superamento dei controlli tecnici in fase di asseverazione?
+  - title: Per quali servizi è obbligatorio avere la scheda servizio?
     tag:
       - comuni
-    anchorLink: 022_pagoimu
+    anchorLink: 024_schedaservizio
 ---
 
 La scheda servizio è il punto d’accesso dei cittadini a tutti i servizi comunali. Per questo motivo è importante che tutti i servizi, digitali e non digitali, abbiano una relativa scheda servizio nella pagina di primo livello "servizi", che deve contenere tutte le informazioni e tutti gli attributi obbligatori presenti nelle linee guida.
