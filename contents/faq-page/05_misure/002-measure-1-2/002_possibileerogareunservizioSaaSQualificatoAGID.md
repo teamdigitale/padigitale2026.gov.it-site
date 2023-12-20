@@ -1,7 +1,9 @@
 ---
   - title: È possibile erogare un servizio SaaS Qualificato ACN presso un CSP diverso da quello indicato nella scheda servizio pubblicata su marketplace?
     tag:
-      - comuni,scuole
+      - comuni
+      - scuole
+      - Asl/AO
     anchorLink: 002_possibileerogareunservizioSaaSQualificatoAGID
 ---
 

@@ -1,7 +1,9 @@
 ---
   - title: Quali sono gli scenari di migrazione ammissibili?
     tag:
-      - comuni,scuole -Asl/AO
+      - comuni
+      - scuole
+      - Asl/AO
     anchorLink: 001_Qualisonogliscenaridimigrazioneammissibili
 ---
 
