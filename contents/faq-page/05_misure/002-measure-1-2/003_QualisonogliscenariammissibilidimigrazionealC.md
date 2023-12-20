@@ -1,7 +1,9 @@
 ---
   - title: Quali sono gli scenari ammissibili di migrazione al Cloud con riferimento al passaggio da IaaS qualificato a SaaS?
     tag:
-      - comuni,scuole
+      - comuni
+      - scuole
+      - Asl/AO
     anchorLink: 003_QualisonogliscenariammissibilidimigrazionealC
 ---
 
