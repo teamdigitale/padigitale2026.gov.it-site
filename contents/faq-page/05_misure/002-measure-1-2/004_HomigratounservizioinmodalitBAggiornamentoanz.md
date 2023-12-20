@@ -1,7 +1,9 @@
 ---
   - title: Ho migrato un servizio in modalità B - Aggiornamento anziché in modalità A - Trasferimento, come inizialmente dichiarato in candidatura. Cosa dovrò fare in vista dell'asseverazione?
     tag:
-      - comuni,scuole
+      - comuni
+      - scuole
+      - Asl/AO
     anchorLink: 004_HomigratounservizioinmodalitBAggiornamentoanz
 ---
 
