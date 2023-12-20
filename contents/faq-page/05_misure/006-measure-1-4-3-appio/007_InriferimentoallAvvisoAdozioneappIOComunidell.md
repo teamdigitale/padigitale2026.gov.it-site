@@ -1,5 +1,5 @@
 ---
-  - title: In riferimento all'Avviso "Adozione appIO Comuni"della Misura 1.4.3, quali enti della PA possono presentare domanda?
+  - title: In riferimento all'Avviso "Adozione appIO Comuni"della Misura 1.4.3, quali comuni della PA possono presentare domanda?
     tag:
       - altri-enti
     anchorLink: 007_InriferimentoallAvvisoAdozioneappIOComunidell
