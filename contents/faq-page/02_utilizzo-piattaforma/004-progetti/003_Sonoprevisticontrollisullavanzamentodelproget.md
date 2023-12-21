@@ -1,5 +1,7 @@
 ---
   - title: Sono previsti controlli sull'avanzamento del progetto?
+    tag:
+      - controlli
     anchorLink: 003_Sonoprevisticontrollisullavanzamentodelproget
 ---
 
