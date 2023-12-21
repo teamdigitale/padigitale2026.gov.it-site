@@ -1,7 +1,8 @@
 ---
   - title: Cosa significa Integrare un servizio PagoPA?
     tag:
-      - altri-enti,comuni
+      - altri-enti
+      - comuni
     anchorLink: 016_CosasignificaIntegrareunservizioPagoPA
 ---
 
