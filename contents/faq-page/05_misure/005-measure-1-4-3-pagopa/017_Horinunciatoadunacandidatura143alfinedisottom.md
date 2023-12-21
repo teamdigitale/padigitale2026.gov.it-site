@@ -1,7 +1,8 @@
 ---
   - title: "Ho rinunciato ad una candidatura 1.4.3 al fine di sottometterne una nuova con i medesimi servizi: quando potrò inviare la nuova domanda?"
     tag:
-      - comuni,altri-enti
+      - comuni
+      - altri-enti
     anchorLink: 017_Horinunciatoadunacandidatura143alfinedisottom
 ---
 
