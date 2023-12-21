@@ -1,7 +1,8 @@
 ---
   - title: Quando può ritenersi completato il progetto oggetto dell’iniziativa proposta ai fini del finanziamento?
     tag:
-      - comuni,altri-enti
+      - comuni
+      - altri-enti
     anchorLink: 019_Quandopuritenersicompletatoilprogettooggettod
 ---
 

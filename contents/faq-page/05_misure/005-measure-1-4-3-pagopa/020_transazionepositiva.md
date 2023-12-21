@@ -1,7 +1,8 @@
 ---
   - title: Cosa si intende per transazione con esito positivo per pagoPA?
     tag:
-      - comuni,altri-enti
+      - comuni
+      - altri-enti
     anchorLink: 020_transazionepositiva
 ---
 

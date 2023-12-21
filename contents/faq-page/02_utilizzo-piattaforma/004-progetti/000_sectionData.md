@@ -17,4 +17,6 @@
         id: contratti_ordini
       - title: Modifiche ai Progetti
         id: modifiche_progetti
+      - title: Controlli
+        id: controlli
 ---
