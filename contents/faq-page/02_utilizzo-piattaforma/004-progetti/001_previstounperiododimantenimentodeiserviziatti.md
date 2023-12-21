@@ -1,5 +1,7 @@
 ---
   - title: È previsto un periodo di mantenimento dei servizi attivi?
+    tag:
+      - controlli
     anchorLink: 001_previstounperiododimantenimentodeiserviziatti
 ---
 
