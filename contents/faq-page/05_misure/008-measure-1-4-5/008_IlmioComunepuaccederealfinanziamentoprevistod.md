@@ -5,4 +5,4 @@
     anchorLink: 008_IlmioComunepuaccederealfinanziamentoprevistod
 ---
 
-Per accedere al finanziamento è necessario che il mittente dell’atto coincida con il Soggetto Attuatore, ovvero, il singolo Comune, anche se questo non è il soggetto che incassa.
+Ai fini della conformità del progetto, il Soggetto attuatore, titolare dell'atto, e il soggetto che invia la notifica devono coincidere, mentre il soggetto riscossore può essere anche un ente terzo, purché figurante nel portale delle adesioni come partner o intermediario tecnologico nel rispetto delle SANP (Specifiche Attuative del Nodo dei Pagamenti).
