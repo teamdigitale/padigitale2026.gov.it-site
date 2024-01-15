@@ -130,45 +130,44 @@ opportunity:
       id: centri-facili
 heroCarouselNews:
   - id: 1
+    category: Misura 1.4.5
+    title: "PNRR: superata la milestone europea sulle notifiche digitali"
+    description: "Tramite la piattaforma SEND, oltre 1.900 Comuni sono pronti a inviare in modo veloce, economico e sicuro comunicazioni a valore legale a cittadini e imprese"
+    source: "innovazione.gov.it"
+    linkTo: 'https://innovazione.gov.it/notizie/articoli/pnrr-superata-la-milestone-europea-sulle-notifiche-digitali/'
+  - id: 2
     category: Nuove Linee guida per i Soggetti attuatori
     title: "Pubblicate indicazioni operative sulla documentazione di progetto"
     description: "Oltre all'aggiornamento degli Allegati 1 (misura 1.4.1), 4 (misura 1.4.3) e 5 (misura 1.4.5), viene reso disponibile un nuovo documento (Allegato A), contenente indicazioni operative sulla documentazione oggetto dei controlli formali"
     source: "Scarica le Linee guida"
     linkTo: 'https://assets.innovazione.gov.it/1701161473-231127_linee-guida-ls-v-5.zip'
-  - id: 2
+  - id: 3
     type: internal
     category: Misura 1.2 - Comuni
     title: "Nuovo Avviso per il cloud"
     description: "Ulteriori 50 milioni di euro per favorire la migrazione in cloud dei Comuni grazie agli Avvisi PA digitale 2026"
     source: "Vai all'Avviso"
     linkTo: 'https://areariservata.padigitale2026.gov.it/Pa_digitale2026_dettagli_avviso?id=a017Q00001MQwNZQA1'
-  - id: 3
+  - id: 4
     type: internal
     category: Misura 1.4.3 app IO - Comuni
     title: "Nuovo Avviso da 30 milioni di euro"
     description: "Una nuova opportunità per i Comuni che ancora non hanno aderito agli Avvisi app IO. Introdotto il Catalogo dei servizi"
     source: "Vai all'Avviso"
     linkTo: 'https://areariservata.padigitale2026.gov.it/Pa_digitale2026_dettagli_avviso?id=a017Q00001MQwODQA1'
-  - id: 4
+  - id: 5
     type: internal
     category: Misura 1.4.3 pagoPA - Comuni
     title: "Aumento dotazione finanziaria ed estensione cronoprogramma"
     description: "La scadenza dell'Avviso è stata posticipata al 2 febbraio 2024, con un aumento della dotazione finanziaria di 10 milioni di euro"
     source: "Vai all'Avviso"
     linkTo: 'https://areariservata.padigitale2026.gov.it/Pa_digitale2026_dettagli_avviso?id=a017Q00001HAufCQAT'
-  - id: 5
+  - id: 6
     category: Misura 1.4.4
     title: "Open ID Connect, più semplice l’accesso ai servizi digitali con la Carta d’identità elettronica"
     description: "Gli enti che adotteranno il nuovo protocollo non dovranno erogare alcun piano formativo, indicato come alternativa all’integrazione con OIDC"
     source: "innovazione.gov.it"
     linkTo: 'https://innovazione.gov.it/notizie/articoli/open-id-connect-piu-semplice-l-accesso-ai-servizi-digitali-con-la-carta-d-identit/'
-  - id: 6
-    type: internal
-    category: Misura 1.2 - Scuole
-    title: "Nuovo Avviso da 5 milioni di euro"
-    description: "Ulteriori risorse per favorire la migrazione in cloud delle Scuole. L'Avviso scade il 1° marzo 2024"
-    source: "Vai all'Avviso"
-    linkTo: 'https://areariservata.padigitale2026.gov.it/Pa_digitale2026_dettagli_avviso?id=a017Q00001MQRHgQAP'
 support:
   tag: Supporto
   title: Consulta le domande frequenti o scrivici per ricevere assistenza
