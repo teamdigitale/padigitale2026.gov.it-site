@@ -10,7 +10,7 @@ Per il raggiungimento dell’obiettivo della misura 1.4.1 i sottodomini istituzi
 
  
 Tuttavia si consiglia fortemente di:
-- fornire all'interno dei sottodomini un'esperienza d'uso in continuità con il sito comunale usando gli strumenti e il modello messo a disposizione da Designers Italia ([Modello Comuni](https://designers.italia.it/modelli/comuni/)
+- fornire all'interno dei sottodomini un'esperienza d'uso in continuità con il sito comunale usando gli strumenti e il modello messo a disposizione da Designers Italia ([Modello Comuni](https://designers.italia.it/modelli/comuni/))
 
 - fornire una navigazione coerente e usabile nel passaggio tra sito comunale e sottodomini. Nel caso di siti di particolare rilevanza presenti in sottodomini si consiglia l'utilizzo del componente slim header fornito nella libreria Bootstrap Italia ([BOOTSTRAP ITALIA](https://italia.github.io/bootstrap-italia/docs/menu-di-navigazione/header/)) per permettere una facile navigazione tra questi. Laddove nel sottodominio siano presenti tematiche correlate a contenuti pubblicati nel sito del Comune, si suggerisce di introdurre il link al sottodominio a partire da questi contenuti (es: per rimandare al sottodominio dedicato di una biblioteca comunale, creare nel sito istituzionale la pagina "luogo" corrispondente e lì inserire il link alla biblioteca).
 
