@@ -1,5 +1,5 @@
 ---
-  - title: Ho generato il CUP per l'accettazione di un finanziamento senza utilizzare il template indicato nell'avviso: come posso sanare la situazione per evitare che il mio progetto venga scartato?
+  - title: Ho generato il CUP per l'accettazione di un finanziamento senza utilizzare il template indicato nell'avviso, come posso sanare la situazione per evitare che il mio progetto venga scartato?
     tag:
       - cup
     anchorLink: 041_accettazionefin
