@@ -2,7 +2,7 @@
   - title: In riferimento all'Avviso 1.4.3 "Adozione appIO Comuni" di novembre 2023, perché non tutti i servizi del catalogo sono selezionabili e quindi candidabili? 
     tag:
       - comuni
-    anchorLink: 013_Horilevatodatenoncorretterelativeallattivazio
+    anchorLink: 014_Horilevatodatenoncorretterelativeallattivazio
 ---
 
 Possono esserci tre motivazioni per le quali i servizi presentati nella fase di “Configurazione pacchetto” potrebbero risultare non selezionabili né come servizi nuovi né come servizi a rimborso:  
