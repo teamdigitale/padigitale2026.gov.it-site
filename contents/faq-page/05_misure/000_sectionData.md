@@ -32,4 +32,7 @@
         - sectionTitle: "Multimisura"
           sectionId: measure-multimisura
           sectionActive: false
+        - sectionTitle: "Tutte le Misure"
+          sectionId: measure-tutte-le-misure
+          sectionActive: false
 ---
