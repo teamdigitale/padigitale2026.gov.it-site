@@ -1,7 +1,5 @@
 ---
-  - title: É possibile stipulare, da parte dei Soggetti Attuatori, un unico contratto di affidamento con la società Polo Strategico Nazionale S.p.A. (PSN) per realizzare più progetti o attività afferenti a diverse misure o investimenti finanziate con fondi PNRR?<ul>
-      <li> In caso di risposta affermativa, quale procedura occorre seguire?</li>
-      <li> In caso di risposta negativa, quali sono le principali conseguenze sulle iniziative intraprese?</li> </ul>
+  - title: E' possibile stipulare, da parte dei Soggetti Attuatori, un unico contratto di affidamento con la società Polo Strategico Nazionale S.p.A. (PSN) per realizzare più progetti o attività afferenti a diverse misure o investimenti finanziate con fondi PNRR? In caso di risposta affermativa, quale procedura occorre seguire? In caso di risposta negativa, quali sono le principali conseguenze sulle iniziative intraprese?
     tag:
       - polo-strategico-nazionale
     anchorLink: 001_soggettiattuatori
