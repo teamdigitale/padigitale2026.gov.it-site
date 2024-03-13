@@ -1,8 +1,8 @@
 ---
-  - title: È obbligatorio usare tutte le voci presenti nelle tassonomie del modello Comuni?
+  - title: In che modo bisogna comunicare all'utente la necessità di un pagamento per l'invio di un'istanza?
     tag:
       - comuni
-    anchorLink: 030_modellocomuni
+    anchorLink: 030_pagamento
 ---
 
 Se nella compilazione dell'istanza è necessario che l'utente effettui pagamenti contestuali necessari all'invio della stessa (per esempio, per i pagamenti dovuti o per i diritti di segreteria), questi devono essere presentati e avvenire all'interno di un passaggio dedicato tra i passaggi del processo (criterio C.SE.1.8 - Verifica stato del servizio, progresso e navigazione).
