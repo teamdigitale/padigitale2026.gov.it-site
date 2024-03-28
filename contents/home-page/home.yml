@@ -130,44 +130,43 @@ opportunity:
       id: centri-facili
 heroCarouselNews:
   - id: 1
+    category: Novità
+    title: "Dal 3 aprile nuovo sistema di richiesta proroghe"
+    description: "Il Dipartimento a fianco agli enti per favorire una migliore programmazione degli interventi e qualità nella realizzazione dei progetti"
+    source: "innovazione.gov.it"
+    linkTo: 'https://innovazione.gov.it/notizie/articoli/nuovo-sistema-di-richiesta-proroghe-su-pa-digitale-2026/'
+  - id: 2
     category: Comunicazione
     title: "Obblighi di pubblicità, indicazioni operative per i soggetti attuatori"
     description: "Pagine pronte all'uso per realizzare la sezione Attuazione misure PNRR sul proprio sito istituzionale"
     source: "innovazione.gov.it"
     linkTo: 'https://innovazione.gov.it/notizie/articoli/pnrr-obblighi-di-pubblicita-indicazioni-operative-per-i-soggetti-attuatori/'
-  - id: 2
+  - id: 3
     type: internal
     category: Chiarimento
     title: "La Circolare 6/2023 dell'Unità di missione PNRR non si applica agli Avvisi di PA digitale 2026"
     description: "I soggetti attuatori degli Avvisi di PA digitale 2026 non devono alimentare il sistema informatico ReGiS in quanto sarà la Piattaforma stessa a comunicare con il suddetto sistema informatico."
     source: "Vai alle domande frequenti"
     linkTo: 'https://padigitale2026.gov.it/supporto/domande-frequenti#07_rendicontazione/006_AnchepergliavvisidiPAdigitale2026occorreregis'
-  - id: 3
+  - id: 4
     category: Misura 1.4.5
     title: "PNRR: superata la milestone europea sulle notifiche digitali"
     description: "Tramite la piattaforma SEND, oltre 1.900 Comuni sono pronti a inviare in modo veloce, economico e sicuro comunicazioni a valore legale a cittadini e imprese"
     source: "innovazione.gov.it"
     linkTo: 'https://innovazione.gov.it/notizie/articoli/pnrr-superata-la-milestone-europea-sulle-notifiche-digitali/'
-  - id: 4
+  - id: 5
     category: Nuove Linee guida per i Soggetti attuatori
     title: "Pubblicate indicazioni operative sulla documentazione di progetto"
     description: "Oltre all'aggiornamento degli Allegati 1 (misura 1.4.1), 4 (misura 1.4.3) e 5 (misura 1.4.5), viene reso disponibile un nuovo documento (Allegato A), contenente indicazioni operative sulla documentazione oggetto dei controlli formali"
     source: "Scarica le Linee guida"
     linkTo: 'https://assets.innovazione.gov.it/1708940180-padigitale2026-linee-guida-novembre-2023.zip'
-  - id: 5
+  - id: 6
     type: internal
     category: Misura 1.2 - Comuni
     title: "Nuovo Avviso per il cloud"
     description: "Ulteriori 50 milioni di euro per favorire la migrazione in cloud dei Comuni grazie agli Avvisi PA digitale 2026"
     source: "Vai all'Avviso"
     linkTo: 'https://areariservata.padigitale2026.gov.it/Pa_digitale2026_dettagli_avviso?id=a017Q00001MQwNZQA1'
-  - id: 6
-    type: internal
-    category: Misura 1.4.3 app IO - Comuni
-    title: "Nuovo Avviso da 30 milioni di euro"
-    description: "Una nuova opportunità per i Comuni che ancora non hanno aderito agli Avvisi app IO. Introdotto il Catalogo dei servizi"
-    source: "Vai all'Avviso"
-    linkTo: 'https://areariservata.padigitale2026.gov.it/Pa_digitale2026_dettagli_avviso?id=a017Q00001MQwODQA1'
 support:
   tag: Supporto
   title: Consulta le domande frequenti o scrivici per ricevere assistenza
