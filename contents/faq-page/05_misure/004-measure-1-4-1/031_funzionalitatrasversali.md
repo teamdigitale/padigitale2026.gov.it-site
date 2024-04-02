@@ -2,7 +2,7 @@
   - title: Le funzionalità trasversali possono essere ospitate esternamente al dominio del sito comunale?
     tag:
       - comuni
-    anchorLink: 031_Lefunzionalitatrasversalipossonoessereospitateesternamentealdominiodelsitocomunale
+    anchorLink: 031_funzionalitatrasversali
 ---
 
 No, le funzionalità "Prenotazione appuntamento" e "Segnalazione disservizio" devono sempre essere ospitate all'interno del dominio del sito comunale o in un suo sottodominio.
