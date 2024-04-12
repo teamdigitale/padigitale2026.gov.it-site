@@ -15,6 +15,9 @@ sidebar:
   - sectionTitle: Misura 1.4.1 - Esperienza del cittadino nei servizi pubblici
     sectionId: misura141
     sectionActive: false
+  - sectionTitle: Misura 1.4.3 - pagoPA e app IO
+    sectionId: misura143
+    sectionActive: false
   - sectionTitle: Misura 1.4.4 - Adozione identità digitale (SPID/CIE)
     sectionId: misura144
     sectionActive: false
@@ -121,6 +124,8 @@ questions:
       - title: Link utili
         content: 
         accordionContent: 
+          - linkLabel: Scheda servizio SUAP e ANPR
+            link: 'https://docs.italia.it/italia/designers-italia/design-comuni-docs/it/versione-corrente/modello-sito-comunale/architettura-informazione.html#schede-per-i-servizi-anpr-e-suap'        
           - linkLabel: App di valutazione per i siti
             link: 'https://github.com/italia/pa-website-validator/releases'
             ariaLabel: App di valutazione per i siti          
@@ -141,7 +146,29 @@ questions:
             ariaLabel: Altre norme e requisiti legali per i siti della PA - Comuni              
           - linkLabel: Altre norme e requisiti legali per i siti della PA - Scuole
             link: 'https://docs.italia.it/italia/designers-italia/design-scuole-docs/it/versione-corrente/norme-requisiti-legali.html'
-            ariaLabel: Altre norme e requisiti legali per i siti della PA - Scuole                 
+            ariaLabel: Altre norme e requisiti legali per i siti della PA - Scuole         
+  - title: Misura 1.4.3 - pagoPA e app IO   
+    description: Accelerare l'adozione di pagoPA, la piattaforma digitale per i pagamenti verso le Pubbliche Amministrazioni, e dell’app IO quale principale punto di contatto tra Enti e cittadini per la fruizione dei servizi pubblici digitali.
+    sectionId: misura143
+    accordions:
+      - title: Link utili
+        content: 
+        accordionContent: 
+          - linkLabel: Documentazione tecnica e tutorial IO
+            link: 'https://developer.pagopa.it/app-io/overview'
+            ariaLabel: Documentazione tecnica e tutorial IO (Si apre in un nuovo tab)    
+          - linkLabel: Guida e manuali app IO
+            link: 'https://developer.pagopa.it/app-io/guides'
+            ariaLabel: Guida e manuali app IO (Si apre in un nuovo tab)         
+          - linkLabel: Il Catalogo dei servizi dei Comuni
+            link: 'https://docs.pagopa.it/manuale-servizi/catalogo-dei-servizi-e-modelli/il-catalogo-dei-servizi-dei-comuni'
+            ariaLabel: Il Catalogo dei servizi dei Comuni (Si apre in un nuovo tab)    
+          - linkLabel: Documentazione tecnica e tutorial pagoPA
+            link: 'https://developer.pagopa.it/pago-pa/overview'
+            ariaLabel: Documentazione tecnica e tutorial pagoPA (Si apre in un nuovo tab)    
+          - linkLabel: Guide e manuali pagoPA
+            link: 'https://developer.pagopa.it/pago-pa/guides'
+            ariaLabel: Guide e manuali pagoPA (Si apre in un nuovo tab)             
   - title: Misura 1.4.4 - Adozione identità digitale (SPID/CIE)
     description: Le soluzioni di identità digitale SPID e CIE consentono alle amministrazioni di abbandonare i diversi sistemi di autenticazione gestiti localmente, permettendo di risparmiare risorse (in termini di lavoro e costo necessari per il rilascio e la manutenzione delle credenziali) ed offrire un accesso sicuro e veloce ed omogeneo ai servizi online su tutto il territorio nazionale.
     sectionId: misura144
