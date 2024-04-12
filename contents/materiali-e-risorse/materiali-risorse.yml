@@ -103,10 +103,10 @@ questions:
           - linkLabel: Direttiva PDND dicembre 2023
             link: 'https://www.governo.it/sites/governo.it/files/Decreto20231205_Direttiva_PDND.pdf'
             ariaLabel: Direttiva PDND dicembre 2023           
-          - linkLabel: "Decreto 22 settembre 2022: Obblighi e termini di accreditamento alla Piattaforma digitale nazionale dati"
+          - linkLabel: "Decreto 22 settembre 2022 Obblighi e termini di accreditamento alla Piattaforma digitale nazionale dati"
             link: 'https://www.gazzettaufficiale.it/eli/id/2022/11/22/22A06623/sg'
-            ariaLabel: Decreto 22 settembre 2022: Obblighi e termini di accreditamento alla Piattaforma digitale nazionale dati       
-          - linkLabel: Guida all'erogazione di e-service per WaaS
+            ariaLabel: Decreto 22 settembre 2022 Obblighi e termini di accreditamento alla Piattaforma digitale nazionale dati       
+          - linkLabel: "Guida all'erogazione di e-service per WaaS"
             link: 'https://github.com/INPS-it/WaaS.Comuni/blob/main/003%20-%20Guida%20Comuni/Guida.md'
             ariaLabel: Guida all'erogazione di e-service per WaaS               
           - linkLabel: Documentazione PDND
