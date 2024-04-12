@@ -219,6 +219,9 @@ questions:
       - title: Brochure informative e presentazioni
         content:
         accordionContent: 
+          - linkLabel: Guida pratica per superare con successo i controlli formali previsti dagli Avvisi PNRR (PDF)
+            link: 'https://assets.innovazione.gov.it/1712929148-superare-i-controlli-formali_webinar-16-gennaio-2024.pdf'
+            ariaLabel: Guida pratica per superare con successo i controlli formali previsti dagli Avvisi PNRR (scarica il PDF)        
           - linkLabel: Indicazioni pratiche e come prepararsi (PDF)
             link: 'https://assets.innovazione.gov.it/1670239169-linee-guida-avvisi-lump-sum-come-prepararsi-all-asseverazione.pdf'
             ariaLabel: Indicazioni pratiche e come prepararsi (scarica il PDF)
