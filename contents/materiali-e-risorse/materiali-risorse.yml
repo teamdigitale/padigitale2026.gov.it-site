@@ -100,6 +100,18 @@ questions:
       - title: Link utili
         content: 
         accordionContent: 
+          - linkLabel: Direttiva PDND dicembre 2023
+            link: 'https://www.governo.it/sites/governo.it/files/Decreto20231205_Direttiva_PDND.pdf'
+            ariaLabel: Direttiva PDND dicembre 2023           
+          - linkLabel: "Decreto 22 settembre 2022: Obblighi e termini di accreditamento alla Piattaforma digitale nazionale dati"
+            link: 'https://www.gazzettaufficiale.it/eli/id/2022/11/22/22A06623/sg'
+            ariaLabel: Decreto 22 settembre 2022: Obblighi e termini di accreditamento alla Piattaforma digitale nazionale dati       
+          - linkLabel: Guida all'erogazione di e-service per WaaS
+            link: 'https://github.com/INPS-it/WaaS.Comuni/blob/main/003%20-%20Guida%20Comuni/Guida.md'
+            ariaLabel: Guida all'erogazione di e-service per WaaS               
+          - linkLabel: Documentazione PDND
+            link: 'https://docs.pagopa.it/interoperabilita-1'
+            ariaLabel: Documentazione PDND        
           - linkLabel: Linee Guida sull’infrastruttura tecnologica della Piattaforma Digitale Nazionale Dati per l’interoperabilità dei sistemi informativi e delle basi di dati (PDF)
             link: 'https://www.agid.gov.it/sites/default/files/repository_files/lg_infrastruttura_interoperabilita_pdnd.pdf'
             ariaLabel: Linee Guida sull’infrastruttura tecnologica della Piattaforma Digitale Nazionale Dati per l’interoperabilità dei sistemi informativi e delle basi di dati (scarica il PDF)
@@ -153,7 +165,7 @@ questions:
     accordions:
       - title: Link utili
         content: 
-        accordionContent: 
+        accordionContent:         
           - linkLabel: Documentazione tecnica e tutorial IO
             link: 'https://developer.pagopa.it/app-io/overview'
             ariaLabel: Documentazione tecnica e tutorial IO (Si apre in un nuovo tab)    
