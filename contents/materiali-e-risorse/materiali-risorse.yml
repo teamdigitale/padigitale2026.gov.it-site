@@ -15,6 +15,9 @@ sidebar:
   - sectionTitle: Misura 1.4.1 - Esperienza del cittadino nei servizi pubblici
     sectionId: misura141
     sectionActive: false
+  - sectionTitle: Misura 1.4.3 - pagoPA e app IO
+    sectionId: misura143
+    sectionActive: false
   - sectionTitle: Misura 1.4.4 - Adozione identità digitale (SPID/CIE)
     sectionId: misura144
     sectionActive: false
@@ -85,6 +88,10 @@ questions:
       - title: Brochure informative e presentazioni
         content:
         accordionContent: 
+          - linkLabel: La PDND per i Comuni (PDF)
+            link: 'https://assets.innovazione.gov.it/1712929147-1-3-1-pdnd-avviso-comuni.pdf'     
+          - linkLabel: La PDND per i Università e Afam (PDF)
+            link: 'https://assets.innovazione.gov.it/1712929142-1-3-1-pdnd-avviso-uni-e-afam.pdf'               
           - linkLabel: Funzionamento della piattaforma e casi d'uso per i Comuni (PDF)
             link: 'https://assets.innovazione.gov.it/1675333598-misura-131_pdnd_avvisi-comuni_regioni_casi-d-uso.pdf'
             ariaLabel: Funzionamento della piattaforma e casi d'uso per i Comuni (scarica il PDF)
@@ -97,6 +104,18 @@ questions:
       - title: Link utili
         content: 
         accordionContent: 
+          - linkLabel: Direttiva PDND dicembre 2023
+            link: 'https://www.governo.it/sites/governo.it/files/Decreto20231205_Direttiva_PDND.pdf'
+            ariaLabel: Direttiva PDND dicembre 2023           
+          - linkLabel: "Decreto 22 settembre 2022 Obblighi e termini di accreditamento alla Piattaforma digitale nazionale dati"
+            link: 'https://www.gazzettaufficiale.it/eli/id/2022/11/22/22A06623/sg'
+            ariaLabel: Decreto 22 settembre 2022 Obblighi e termini di accreditamento alla Piattaforma digitale nazionale dati       
+          - linkLabel: "Guida all'erogazione di e-service per WaaS"
+            link: 'https://github.com/INPS-it/WaaS.Comuni/blob/main/003%20-%20Guida%20Comuni/Guida.md'
+            ariaLabel: Guida all'erogazione di e-service per WaaS               
+          - linkLabel: Documentazione PDND
+            link: 'https://docs.pagopa.it/interoperabilita-1'
+            ariaLabel: Documentazione PDND        
           - linkLabel: Linee Guida sull’infrastruttura tecnologica della Piattaforma Digitale Nazionale Dati per l’interoperabilità dei sistemi informativi e delle basi di dati (PDF)
             link: 'https://www.agid.gov.it/sites/default/files/repository_files/lg_infrastruttura_interoperabilita_pdnd.pdf'
             ariaLabel: Linee Guida sull’infrastruttura tecnologica della Piattaforma Digitale Nazionale Dati per l’interoperabilità dei sistemi informativi e delle basi di dati (scarica il PDF)
@@ -116,11 +135,17 @@ questions:
       - title: Brochure informative e presentazioni
         content:
         accordionContent: 
+          - linkLabel: "Presentazione su Cittadino informato (PDF)"
+            link: 'https://assets.innovazione.gov.it/1712929143-1-4-1-cittadino-informato-comuni_dal-progetto-alla-pratica.pdf'   
+          - linkLabel: "Presentazione su Cittadino attivo (PDF)"
+            link: 'https://assets.innovazione.gov.it/1712929134-1-4-1-cittadino-attivo_comuni_dal-progetto-alla-pratica.pdf'             
           - linkLabel: "Siti scolastici: le Buone Pratiche necessarie per superare l'asseverazione (PDF)"
-            link: 'https://assets.innovazione.gov.it/1689943534-focus-buone-pratiche-siti-scolastici.pdf'    
+            link: 'https://assets.innovazione.gov.it/1712929139-1-4-1-modello-scuole-esempi-pratici-per-superare-asseverazioni.pdf'    
       - title: Link utili
         content: 
         accordionContent: 
+          - linkLabel: Scheda servizio SUAP e ANPR
+            link: 'https://docs.italia.it/italia/designers-italia/design-comuni-docs/it/versione-corrente/modello-sito-comunale/architettura-informazione.html#schede-per-i-servizi-anpr-e-suap'        
           - linkLabel: App di valutazione per i siti
             link: 'https://github.com/italia/pa-website-validator/releases'
             ariaLabel: App di valutazione per i siti          
@@ -141,7 +166,29 @@ questions:
             ariaLabel: Altre norme e requisiti legali per i siti della PA - Comuni              
           - linkLabel: Altre norme e requisiti legali per i siti della PA - Scuole
             link: 'https://docs.italia.it/italia/designers-italia/design-scuole-docs/it/versione-corrente/norme-requisiti-legali.html'
-            ariaLabel: Altre norme e requisiti legali per i siti della PA - Scuole                 
+            ariaLabel: Altre norme e requisiti legali per i siti della PA - Scuole         
+  - title: Misura 1.4.3 - pagoPA e app IO   
+    description: Accelerare l'adozione di pagoPA, la piattaforma digitale per i pagamenti verso le Pubbliche Amministrazioni, e dell’app IO quale principale punto di contatto tra Enti e cittadini per la fruizione dei servizi pubblici digitali.
+    sectionId: misura143
+    accordions:
+      - title: Link utili
+        content: 
+        accordionContent:         
+          - linkLabel: Documentazione tecnica e tutorial IO
+            link: 'https://developer.pagopa.it/app-io/overview'
+            ariaLabel: Documentazione tecnica e tutorial IO (Si apre in un nuovo tab)    
+          - linkLabel: Guida e manuali app IO
+            link: 'https://developer.pagopa.it/app-io/guides'
+            ariaLabel: Guida e manuali app IO (Si apre in un nuovo tab)         
+          - linkLabel: Il Catalogo dei servizi dei Comuni
+            link: 'https://docs.pagopa.it/manuale-servizi/catalogo-dei-servizi-e-modelli/il-catalogo-dei-servizi-dei-comuni'
+            ariaLabel: Il Catalogo dei servizi dei Comuni (Si apre in un nuovo tab)    
+          - linkLabel: Documentazione tecnica e tutorial pagoPA
+            link: 'https://developer.pagopa.it/pago-pa/overview'
+            ariaLabel: Documentazione tecnica e tutorial pagoPA (Si apre in un nuovo tab)    
+          - linkLabel: Guide e manuali pagoPA
+            link: 'https://developer.pagopa.it/pago-pa/guides'
+            ariaLabel: Guide e manuali pagoPA (Si apre in un nuovo tab)             
   - title: Misura 1.4.4 - Adozione identità digitale (SPID/CIE)
     description: Le soluzioni di identità digitale SPID e CIE consentono alle amministrazioni di abbandonare i diversi sistemi di autenticazione gestiti localmente, permettendo di risparmiare risorse (in termini di lavoro e costo necessari per il rilascio e la manutenzione delle credenziali) ed offrire un accesso sicuro e veloce ed omogeneo ai servizi online su tutto il territorio nazionale.
     sectionId: misura144
@@ -172,6 +219,9 @@ questions:
       - title: Brochure informative e presentazioni
         content:
         accordionContent: 
+          - linkLabel: Guida pratica per superare con successo i controlli formali previsti dagli Avvisi PNRR (PDF)
+            link: 'https://assets.innovazione.gov.it/1712929148-superare-i-controlli-formali_webinar-16-gennaio-2024.pdf'
+            ariaLabel: Guida pratica per superare con successo i controlli formali previsti dagli Avvisi PNRR (scarica il PDF)        
           - linkLabel: Indicazioni pratiche e come prepararsi (PDF)
             link: 'https://assets.innovazione.gov.it/1670239169-linee-guida-avvisi-lump-sum-come-prepararsi-all-asseverazione.pdf'
             ariaLabel: Indicazioni pratiche e come prepararsi (scarica il PDF)
