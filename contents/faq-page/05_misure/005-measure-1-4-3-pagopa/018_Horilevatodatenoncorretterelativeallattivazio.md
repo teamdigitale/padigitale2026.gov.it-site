@@ -1,7 +1,8 @@
 ---
   - title: Ho rilevato date non corrette relative all'attivazione di servizi 1.4.3, come posso verificare?
     tag:
-      - comuni,altri-enti
+      - comuni
+      - altri-enti
     anchorLink: 018_Horilevatodatenoncorretterelativeallattivazio
 ---
 
