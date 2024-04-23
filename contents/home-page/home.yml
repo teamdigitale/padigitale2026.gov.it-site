@@ -130,6 +130,7 @@ opportunity:
       id: centri-facili
 heroCarouselNews:
   - id: 1
+    type: internal  
     category: Novità
     title: "Nuove Linee guida per i Soggetti attuatori (aprile 2024)"
     description: "Online i nuovi Allegati per Avviso 1.1 e Avviso multimisura 1.1/1.2. Aggiornate anche le indicazioni per Avvisi 1.4.1, 1.4.4 e 1.4.5."
