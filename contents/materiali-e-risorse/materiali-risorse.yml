@@ -62,7 +62,13 @@ questions:
             ariaLabel: Scuole, indicazioni per la migrazione e linee guide di asseverazione (scarica il PDF)
           - linkLabel: Avviso Multimisura 1.1-1.2 per Asl/AO (PDF)
             link: 'https://assets.innovazione.gov.it/1682512751-avviso_multimisura.pdf'
-            ariaLabel: Avviso Multimisura 1.1-1.2 per Asl/AO (scarica il PDF)            
+            ariaLabel: Avviso Multimisura 1.1-1.2 per Asl/AO (scarica il PDF)      
+          - linkLabel: Migrazione in cloud, ulteriori indicazioni per le Scuole (PDF)
+            link: 'https://assets.innovazione.gov.it/1714403053-migrazione-al-cloud-indicazioni-per-le-scuole.pdf'
+            ariaLabel: Migrazione in cloud, ulteriori indicazioni per le Scuole (PDF)  
+          - linkLabel: Indicazioni utili per prima e dopo l'asseverazione (PDF)
+            link: 'https://assets.innovazione.gov.it/1714403050-indicazioni-utili-prima-e-dopo-asseverazione.pdf'
+            ariaLabel: Indicazioni utili per prima e dopo l'asseverazione (PDF)             
       - title: Video
         content: 
         accordionContent: 
