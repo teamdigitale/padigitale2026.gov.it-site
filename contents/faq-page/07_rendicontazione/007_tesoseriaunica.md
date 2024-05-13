@@ -3,7 +3,7 @@
     anchorLink: 007_tesoseriaunica
 ---
 
-Nel caso di Enti non assoggettati a questo obbligo (es. Comuni del Friuli Venezia Giulia), sarà sufficiente produrre i seguenti documenti: 
+Nel caso di Enti non assoggettati a questo obbligo (es. Comuni del Friuli Venezia Giulia), sarà sufficiente produrre i seguenti documenti:
 
 - La dichiarazione di non assoggettabilità al regime del conto di tesoreria unica; 
 - La dichiarazione di tracciabilità dei flussi finanziari relativa all'IBAN fornito per il pagamento. 
