@@ -3,7 +3,6 @@
     tag:
       - comuni
       - scuole
-      - Asl/AO
     anchorLink: 001_Qualisonogliscenaridimigrazioneammissibili
 ---
 
