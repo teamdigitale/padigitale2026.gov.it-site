@@ -2,7 +2,7 @@
   - title: Per i servizi che prevedono pagamenti contestuali, è obbligatorio consentire all’utente di poter tornare agli step precedenti del flusso ed effettuare modifiche?
     tag:
       - comuni
-    anchorLink: 031_pagamenticontestuali
+    anchorLink: 032_pagamenticontestuali
 ---
 
 Il criterio C.SE.1.8 richiede di mostrare tutti gli step del servizio fino alla conferma di invio dell’istanza e di consentire all’utente di poter tornare agli step precedenti ed effettuare modifiche.
