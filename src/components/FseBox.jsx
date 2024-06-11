@@ -60,12 +60,13 @@ export function FseBox() {
         </div>
         <div className={classes.text}>
           <p className={classes.title}>
-            È disponibile il cruscotto di monitoraggio del Fascicolo Sanitario Elettronico
+            È disponibile il cruscotto di monitoraggio degli indicatori DM 08.08.2022 del Fascicolo Sanitario
+            Elettronico
           </p>
 
           <p className={classes.description}>
-            Controlla l’avanzamento degli obiettivi del PNRR legati all’ambito sanità e consulta gli indicatori
-            nazionali, regionali e per azienda sanitaria.
+            Gli utenti autorizzati possono controllare l’avanzamento degli obiettivi del PNRR legati all’ambito Sanità,
+            consultando il Cruscotto degli indicatori della loro Regione/Provincia autonoma.
           </p>
           <a className={classes.link} href="https://monitoring.fse.salute.gov.it" rel="noreferrer" target="_blank">
             Accedi al cruscotto
