@@ -7,17 +7,21 @@ const useStyles = createUseStyles({
     border: '1px solid #06C',
     background: '#FFF',
     display: 'flex',
+    gap: '24px',
     padding: '24px',
     marginBottom: '48px',
+    '@media screen and (max-width: 575px)': {
+      flexDirection: 'column',
+    },
   },
   text: {
     fontFamily: 'Titillium Web',
     lineHeight: '24px',
   },
   logo: {
-    backgroundColor: '#06c',
-    marginRight: '24px',
-    width: '200px',
+    '@media screen and (max-width: 575px)': {
+      width: '100%',
+    },
   },
   title: {
     color: '#1A1A1A',
@@ -51,7 +55,9 @@ export function FseBox() {
   return (
     <Container>
       <div className={classes.outerBox}>
-        <div className={classes.logo}></div>
+        <div>
+          <img className={classes.logo} src="/assets/fse.png"></img>
+        </div>
         <div className={classes.text}>
           <p className={classes.title}>
             È disponibile il cruscotto di monitoraggio del Fascicolo Sanitario Elettronico
