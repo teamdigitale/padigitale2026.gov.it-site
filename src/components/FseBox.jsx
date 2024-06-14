@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container } from 'design-react-kit';
 import { createUseStyles } from 'react-jss';
+import { ExternalLink } from './ExternalLink';
 
 const useStyles = createUseStyles({
   outerBox: {
@@ -67,9 +68,11 @@ export function FseBox() {
             Le persone autorizzate possono consultare l’avanzamento degli obiettivi PNRR per la sanità tramite gli
             indicatori DM 08/08/2022 per regione o provincia autonoma.
           </p>
-          <a className={classes.link} href="https://monitoring.fse.salute.gov.it" rel="noreferrer" target="_blank">
+          <ExternalLink className={classes.link} linkTo="https://monitoring.fse.salute.gov.it">
             Accedi al cruscotto
-          </a>
+            <img src={`/assets/external-link.svg`} alt="" />
+            <span className="sr-only">Collegamento esterno - Apre su nuova scheda</span>
+          </ExternalLink>
         </div>
       </div>
     </Container>
