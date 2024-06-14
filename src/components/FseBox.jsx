@@ -56,7 +56,7 @@ export function FseBox() {
     <Container>
       <div className={classes.outerBox}>
         <div>
-          <img className={classes.logo} src="/assets/fse.png"></img>
+          <img className={classes.logo} src="/assets/logo-fse.png"></img>
         </div>
         <div className={classes.text}>
           <p className={classes.title}>
