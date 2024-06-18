@@ -57,7 +57,7 @@ export function FseBox() {
   const classes = useStyles();
 
   return (
-    <Container>
+    <Container className="px-3">
       <div className={classes.outerBox}>
         <div>
           <img className={classes.logo} src="/assets/logo-fse.png"></img>
