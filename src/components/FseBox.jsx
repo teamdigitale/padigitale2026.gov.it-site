@@ -5,6 +5,7 @@ import { ExternalLink } from './ExternalLink';
 
 const useStyles = createUseStyles({
   outerBox: {
+    alignItems: 'center',
     border: '1px solid #06C',
     background: '#FFF',
     display: 'flex',
@@ -22,7 +23,9 @@ const useStyles = createUseStyles({
   logo: {
     '@media screen and (max-width: 575px)': {
       width: '100%',
+      height: '100%',
     },
+    height: 120,
   },
   title: {
     color: '#1A1A1A',
