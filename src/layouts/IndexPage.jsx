@@ -13,6 +13,7 @@ import { HeroCarousel } from '../components/carousel/Carousel';
 import { SEO } from '../components/SEO';
 import seo from '../../contents/seo.yml';
 import { NoticesCarousel } from '../components/carousel/NoticesCarousel';
+import { FseBox } from '../components/FseBox';
 import { SupportSection } from './faq/SupportSection';
 
 const { title: seoTitle, description: seoDescription } = seo.homePage;
@@ -75,6 +76,7 @@ export const IndexPage = () => {
       />
       <NoticesCarousel content={newsList} title={noticesCarouselTitle} />
       <HeroCarousel content={heroCarouselNews} title={heroCarouselNewsTitle} />
+      <FseBox />
       <HeroImage
         light={true}
         ctaContainer={true}
