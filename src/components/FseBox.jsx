@@ -46,9 +46,13 @@ const useStyles = createUseStyles({
     fontStyle: 'normal',
     fontWeight: '600',
     color: '#06c',
+    display: 'inline-flex',
     textDecoration: 'none',
     '&:hover': {
       color: '#06c',
+    },
+    '& img': {
+      marginLeft: '5px',
     },
   },
 });
