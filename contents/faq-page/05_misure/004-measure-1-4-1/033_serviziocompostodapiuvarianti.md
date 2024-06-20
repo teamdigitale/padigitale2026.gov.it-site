@@ -16,5 +16,5 @@ Occupazione suolo pubblico per l'installazione di tende parasole sporgenti
 
 Se ho creato due servizi separati, è obbligatorio creare due schede servizio.
 Se ho creato un unico servizio, posso fare due cose:
-1. creare una sola scheda, con un solo link e poi nel flusso separare le due varianti in base alle indicazione e alle scelte fatte dall’utente:
+1. creare una sola scheda, con un solo link e poi nel flusso separare le due varianti in base alle indicazioni e alle scelte fatte dall’utente:
 2. creare due schede diverse che rimandano allo stesso flusso di servizio. Tuttavia, in questo caso è importante che se accedo (per esempio) dalla scheda relativa allo scarico merci, una volta entrati nel flusso la breadcrumb risulti quella della scheda di provenienza e il flusso sia di default quello relativo a quel servizio, con l’eventuale possibilità di aggiungere anche l’opzione dell’installazione di tende parasole.
