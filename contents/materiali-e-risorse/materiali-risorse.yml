@@ -94,7 +94,7 @@ questions:
       - title: Brochure informative e presentazioni
         content:
         accordionContent: 
-          - linkLabel: La PDND per i Comuni: casi d'uso, buone pratiche e consigli per la fruizione (PDF)
+          - linkLabel: "La PDND per i Comuni: casi d'uso, buone pratiche e consigli per la fruizione (PDF)"
             link: 'https://assets.innovazione.gov.it/1719216305-misura-131_pdnd_avviso_comuni.pdf'     
           - linkLabel: La PDND per Università e Afam (PDF)
             link: 'https://assets.innovazione.gov.it/1712929142-1-3-1-pdnd-avviso-uni-e-afam.pdf'               
