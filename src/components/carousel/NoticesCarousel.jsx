@@ -19,6 +19,7 @@ const useStyles = createUseStyles({
       // boxShadow: '0px 0px 20px rgb(0 43 85 / 4%);',
       display: 'flex',
       flexDirection: 'column',
+      height: '100%',
       '& .category': {
         fontSize: '0.778rem',
         fontWeight: '600',
@@ -135,6 +136,7 @@ const useStyles = createUseStyles({
     },
   },
   cardWrapper: {
+    height: '100%',
     textDecoration: 'none',
     '&:hover': {
       textDecoration: 'none',
@@ -172,6 +174,7 @@ const useStyles = createUseStyles({
   },
   promoting: {
     color: '#33485C',
+    marginTop: 'auto',
     marginBottom: '0px',
   },
   bold: {
