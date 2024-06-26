@@ -170,6 +170,13 @@ const useStyles = createUseStyles({
   empty: {
     height: '40px',
   },
+  promoting: {
+    color: '#33485C',
+    marginBottom: '0px',
+  },
+  bold: {
+    fontWeight: 700,
+  },
 });
 
 export const NoticesCarousel = ({ content, title }) => {
@@ -208,6 +215,12 @@ export const NoticesCarousel = ({ content, title }) => {
               {element.nomeDellaMisura}
             </CardTitle>
             <p className={classes.noticeInfo}>{element.titolo}</p>
+            <p className={classes.promoting}>
+              ENTE PROMOTORE: {}
+              <span className={classes.bold}>
+                Dipartimento per la Trasformazione Digitale {/* {element.entePromotore} */}
+              </span>
+            </p>
           </CardBody>
         </Link>
       </Card>
