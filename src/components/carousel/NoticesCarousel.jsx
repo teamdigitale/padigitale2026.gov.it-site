@@ -19,6 +19,7 @@ const useStyles = createUseStyles({
       // boxShadow: '0px 0px 20px rgb(0 43 85 / 4%);',
       display: 'flex',
       flexDirection: 'column',
+      height: '100%',
       '& .category': {
         fontSize: '0.778rem',
         fontWeight: '600',
@@ -135,6 +136,7 @@ const useStyles = createUseStyles({
     },
   },
   cardWrapper: {
+    height: '100%',
     textDecoration: 'none',
     '&:hover': {
       textDecoration: 'none',
@@ -169,6 +171,14 @@ const useStyles = createUseStyles({
   },
   empty: {
     height: '40px',
+  },
+  promoting: {
+    color: '#33485C',
+    marginTop: 'auto',
+    marginBottom: '0px',
+  },
+  bold: {
+    fontWeight: 700,
   },
 });
 
@@ -208,6 +218,12 @@ export const NoticesCarousel = ({ content, title }) => {
               {element.nomeDellaMisura}
             </CardTitle>
             <p className={classes.noticeInfo}>{element.titolo}</p>
+            <p className={classes.promoting}>
+              ENTE PROMOTORE: {}
+              <span className={classes.bold}>
+                Dipartimento per la Trasformazione Digitale {/* {element.entePromotore} */}
+              </span>
+            </p>
           </CardBody>
         </Link>
       </Card>
