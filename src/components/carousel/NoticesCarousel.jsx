@@ -99,18 +99,23 @@ const useStyles = createUseStyles({
     },
   },
   noticeLabel: {
-    fontSize: '0.778rem',
+    fontSize: '0.875rem',
     fontWeight: '400',
-    lineHeight: '1.444rem',
-    marginBottom: '1.389rem',
+    lineHeight: '1.25rem',
+    marginBottom: '8px',
     color: '#5A768A',
+  },
+  top: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    marginBottom: '24px',
     '@media (max-width:991px)': {
-      fontSize: '0.875rem',
+      flexDirection: 'column-reverse',
     },
   },
   dueDate: {
     fontSize: '0.778rem',
-    fontWeight: '600',
+    fontWeight: '700',
     lineHeight: '1.444rem',
     color: '#33485C',
     '@media (max-width:991px)': {
@@ -127,13 +132,10 @@ const useStyles = createUseStyles({
   },
   noticeInfo: {
     composes: 'notice-info',
-    fontSize: '1.111',
+    fontSize: '1.25rem',
     fontWeight: '600',
-    lineHeight: '1.444rem',
+    lineHeight: '1.625rem',
     color: '#06c',
-    '@media (max-width:991px)': {
-      fontSize: '1.125rem',
-    },
   },
   cardWrapper: {
     height: '100%',
@@ -155,7 +157,6 @@ const useStyles = createUseStyles({
     width: 'fit-content',
     padding: '1.5px 11px',
     fontWeight: '700',
-    marginBottom: '15px',
   },
   badgeExp: {
     display: 'block',
@@ -174,6 +175,8 @@ const useStyles = createUseStyles({
   },
   promoting: {
     color: '#33485C',
+    fontSize: '0.875rem',
+    lineHeight: '1.25rem',
     marginTop: 'auto',
     marginBottom: '0px',
   },
@@ -190,18 +193,6 @@ export const NoticesCarousel = ({ content, title }) => {
     return date.toLocaleDateString('it-IT');
   };
 
-  const setLabel = (element) => {
-    if (element.new) {
-      return <span className={classes.badgeNew} dangerouslySetInnerHTML={{ __html: 'NUOVO' }}></span>;
-    } else {
-      if (element.expiring) {
-        return <span className={classes.badgeExp} dangerouslySetInnerHTML={{ __html: 'IN SCADENZA' }}></span>;
-      } else {
-        return <span className={classes.empty} dangerouslySetInnerHTML={{ __html: '' }}></span>;
-      }
-    }
-  };
-
   const slides = records.map((element) => (
     <>
       <Card key={element.codiceBando} className={classes.heroCards} spacing noWrapper>
@@ -210,10 +201,12 @@ export const NoticesCarousel = ({ content, title }) => {
           className={classes.cardWrapper}
         >
           <CardBody>
-            {setLabel(element)}
-            <span className={classes.dueDate}>
-              SCADENZA AVVISO <span className={classes.dueDateDigit}>{formatDate(element.dataFineBando)}</span>
-            </span>
+            <div className={classes.top}>
+              <span className={classes.dueDate}>
+                SCADENZA <span className={classes.dueDateDigit}> il {formatDate(element.dataFineBando)}</span>
+              </span>
+              {element.new ? <span className={classes.badgeNew}>NUOVO</span> : null}
+            </div>
             <CardTitle tag="h4" className={classes.noticeLabel}>
               {element.nomeDellaMisura}
             </CardTitle>
