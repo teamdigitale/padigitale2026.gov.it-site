@@ -1,5 +1,7 @@
 ---
   - title: In caso di fusione/acquisizione del Soggetto Realizzatore (fornitore), quale procedura bisogna attuare in piattaforma?
+    tag:
+      - contratti_ordini
     anchorLink: 043_contrattualizzazionefusionifornitori
 ---
 
