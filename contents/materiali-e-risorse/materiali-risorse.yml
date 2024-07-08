@@ -107,6 +107,12 @@ questions:
       - title: Link utili
         content: 
         accordionContent: 
+          - linkLabel: API OAS checker
+            link: 'https://italia.github.io/api-oas-checker/'
+            ariaLabel: API OAS checker     
+          - linkLabel: Regole per il controllo automatico di specifiche OpenAPI secondo il ModI
+            link: 'https://github.com/italia/api-oas-checker-rules/'
+            ariaLabel: Regole per il controllo automatico di specifiche OpenAPI secondo il ModI              
           - linkLabel: Direttiva PDND dicembre 2023
             link: 'https://www.governo.it/sites/governo.it/files/Decreto20231205_Direttiva_PDND.pdf'
             ariaLabel: Direttiva PDND dicembre 2023           
