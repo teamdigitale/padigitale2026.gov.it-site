@@ -213,9 +213,7 @@ export const NoticesCarousel = ({ content, title }) => {
             <p className={classes.noticeInfo}>{element.titolo}</p>
             <p className={classes.promoting}>
               ENTE PROMOTORE: {}
-              <span className={classes.bold}>
-                {element.entePromotore}
-              </span>
+              <span className={classes.bold}>{element.entePromotore}</span>
             </p>
           </CardBody>
         </Link>
