@@ -214,7 +214,7 @@ export const NoticesCarousel = ({ content, title }) => {
             <p className={classes.promoting}>
               ENTE PROMOTORE: {}
               <span className={classes.bold}>
-                {element.entePromotore || 'Dipartimento per la trasformazione digitale'}
+                {element.entePromotore}
               </span>
             </p>
           </CardBody>
