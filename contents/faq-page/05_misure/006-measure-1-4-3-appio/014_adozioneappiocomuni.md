@@ -11,4 +11,4 @@ Possono esserci tre motivazioni per le quali i servizi presentati nella fase di 
 
 - Il servizio ha un servizio già attivo riconducibile alla stessa voce di catalogo ma con il nome non conforme 
 
-- Il servizio non è finanziabile, perché è stato attivato prima del 31/03/2021 o è già finanziato attraverso il Fondo Innovazione. 
+- Il servizio non è finanziabile, perché è stato attivato prima del 01/04/2021 o è già finanziato attraverso il Fondo Innovazione. 
