@@ -12,7 +12,7 @@
     "deploy": "gh-pages -u 'Deploy Bot <no-reply@teamdigitale.governo.it>' -d public",
     "lint": "eslint src --ext .js,.jsx",
     "lint-autofix": "eslint src --ext .js,.jsx --fix",
-    "html-proofer": "docker-compose up --build",
+    "html-proofer": "docker compose up --build",
     "pa11y": "chmod +x pa11y.sh && ./pa11y.sh",
     "serve": "gatsby serve"
   },
