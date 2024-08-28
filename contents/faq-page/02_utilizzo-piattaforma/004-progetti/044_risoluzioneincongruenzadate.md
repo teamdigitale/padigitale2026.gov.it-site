@@ -12,5 +12,7 @@ Per risolvere le incongruenze, puoi effettuare tre verifiche nella fase 3 “Car
 
 Se i dati inseriti sono tutti corretti, ma sussistono delle incongruenze, dovrai produrre un atto ricognitivo (determina dirigenziale) che fornisca le motivazioni delle incongruenze.
 Il documento, firmato digitalmente, andrà caricato nella fase 4 “Completamento attività”.
-Leggi la FAQ dedicata alle buone pratiche di compilazione.
+Leggi la [FAQ][1] dedicata alle buone pratiche di compilazione.
 Ricorda che il documento sarà oggetto di verifica da parte del Dipartimento.
+
+[1]: https://padigitale2026.gov.it/supporto/domande-frequenti#07_rendicontazione/010_buonepraticheattoricognitivo
