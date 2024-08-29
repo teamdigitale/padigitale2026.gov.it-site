@@ -9,4 +9,5 @@ Il certificato di regolare esecuzione può essere redatto liberamente dall’ent
 - descrizione di tutte le attività e servizi completati, incluso il riferimento alla data di avvio dei singoli servizi/attività di progetto;
 - menzione di tutti i documenti contrattuali riferiti a ciascun servizio completato (contratti stipulati/determine di affidamento/ordini di servizio del personale/Ordine MEPA/buoni d’ordine ecc.)
 
-È, inoltre, disponibile un modello fac-simile di certificato di regolare esecuzione al seguente link: https://innovazione.gov.it/italia-digitale-2026/attuazione-misure-pnrr/ (Linee Guida Soggetti attuatori – Versioni in vigore - PA digitale 2026 file ZIP Linee guida per i soggetti attuatori individuati tramite Avvisi Pubblici a lump sum - Allegato A).
+Inoltre, nella fase 5 “Richiesta finanziamento” del progetto è possibile scaricare un modello parzialmente precompilato.
+Al seguente link, invece, è possibile scaricare e visionare un modello fac-simile: https://innovazione.gov.it/italia-digitale-2026/attuazione-misure-pnrr/ (Linee Guida Soggetti attuatori – Versioni in vigore - PA digitale 2026 file ZIP Linee guida per i soggetti attuatori individuati tramite Avvisi Pubblici a lump sum - Allegato A).
