@@ -149,7 +149,9 @@ questions:
           - linkLabel: "Presentazione su Cittadino attivo (PDF)"
             link: 'https://assets.innovazione.gov.it/1712929134-1-4-1-cittadino-attivo_comuni_dal-progetto-alla-pratica.pdf'             
           - linkLabel: "Siti scolastici: le Buone Pratiche necessarie per superare l'asseverazione (PDF)"
-            link: 'https://assets.innovazione.gov.it/1712929139-1-4-1-modello-scuole-esempi-pratici-per-superare-asseverazioni.pdf'    
+            link: 'https://assets.innovazione.gov.it/1712929139-1-4-1-modello-scuole-esempi-pratici-per-superare-asseverazioni.pdf'   
+          - linkLabel: "Siti comunali: i 5 errori più ricorrenti prima della consegna (PDF)"
+            link: 'https://assets.innovazione.gov.it/1727087089-1-4-1-comuni-i-5-errori-piu-frequenti-prima-della-consegna.pdf'             
       - title: Link utili
         content: 
         accordionContent: 
