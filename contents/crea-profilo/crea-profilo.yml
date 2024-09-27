@@ -6,7 +6,7 @@ sidebar:
   - sectionTitle: 1. Accedi tramite identità digitale
     sectionId: digital-identity
     sectionActive: true
-  - sectionTitle: 2. Seleziona l’amministrazione 
+  - sectionTitle: 2. Seleziona la PA
     sectionId: select-administration
     sectionActive: false
   - sectionTitle: 3. Verifica i dati della PA su IPA
