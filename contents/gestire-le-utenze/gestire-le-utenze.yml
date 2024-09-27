@@ -1,0 +1,89 @@
+name: Gestire le utenze della tua PA - PA digitale 2026
+breadCrumbName: Gestire le utenze della tua PA
+hero:
+  title: Gestire le utenze della tua PA
+  subtitle: Se la tua PA ha già un profilo attivo su PA digitale 2026, puoi, in base al tuo ruolo, invitare nuove persone, cambiare ruoli, eliminare le utenze e modificare i dati dei profili.
+  imgSource: /assets/come-partecipare/raggiungere-obiettivi/asseverazione.svg
+sidebar:
+  - sectionTitle: Utenze disponibili
+    sectionId: utenze
+    sectionActive: true
+  - sectionTitle: Dove gestire le utenze
+    sectionId: gestire
+    sectionActive: false
+  - sectionTitle: Invitare una persona nella tua PA
+    sectionId: invitare
+    sectionActive: false
+  - sectionTitle: Cambiare il Super admin della tua PA
+    sectionId: cambiare
+    sectionActive: false
+  - sectionTitle: Richiedere il ruolo di Super admin
+    sectionId: richiedere
+    sectionActive: false
+  - sectionTitle: Eliminare un’utenza
+    sectionId: eliminare
+    sectionActive: false
+  - sectionTitle: Modificare i dati della tua utenza
+    sectionId: modificare-dati-utenza
+    sectionActive: false
+  - sectionTitle: Modificare i dati della tua PA
+    sectionId: modificare-dati-utenza-pa
+    sectionActive: false
+section1:
+  title: Utenze disponibili
+  description: 'Su PA digitale 2026, esistono due tipi di utenze: <strong>Admin</strong> e <strong>Super admin</strong>.<br/><br/>Tutti i profili possono operare sulla piattaforma per inviare nuove candidature, gestire i progetti, la classificazione e i piani di migrazione di dati e servizi, inviare richieste di supporto.<br/><br/>L’utenza Super admin può anche gestire tutte le altre utenze della tua PA, invitarne di nuove, eliminarle o cambiare ruoli. Un’utenza Admin può soltanto gestire la propria utenza. '
+section2:
+  title: Dove gestire le utenze
+  description: 'Su PA digitale 2026, dopo aver fatto accesso con identità digitale (SPID o CIE), clicca sul tuo nome in alto a destra e seleziona:'
+  list:
+    - la voce “Utenze”, dove puoi vedere e gestire tutte le utenze della tua PA;
+    - la voce “Profilo”, dove puoi gestire i tuoi dati e le tue utenze personali.
+section3:
+  title: Invitare una persona nella tua PA
+  description: Per invitare una nuova persona nella tua PA, devi essere <strong>Super admin</strong>.
+  list:
+    - A fondo pagina “Le utenze della tua PA” clicca su “Nuovo invito”.
+    - 'Inserisci i dati obbligatori della persona che vuoi invitare: nome, cognome, codice fiscale ed email istituzionale personale.'
+  listSubDescription: Completato l’invio della richiesta, invieremo una mail alla persona che hai invitato. La persona dovrà accettare l’invito e accedere a PA digitale 2026 tramite identità digitale (SPID o CIE) per attivare la propria utenza.
+section4:
+  title: Cambiare il Super admin della tua PA
+  description: Se sei <strong>Super admin</strong>, puoi richiedere di passare il tuo ruolo a un’altra persona.
+  list:
+    - Sulla pagina “Le utenze della tua PA”, clicca su “Cambia Super admin”.
+    - Scegli se vuoi eliminare la tua utenza o modificare il tuo ruolo in Admin.
+    - Seleziona la nuova utenza Super Admin tra le persone già presenti nella tua PA oppure invita una nuova utenza. Puoi invitare una nuova utenza soltanto se la tua PA non ha già raggiunto il numero massimo di 4 utenze.
+  listSubDescription: Conclusa l’operazione, invieremo una PEC alla PA che dovrà approvare la richiesta. Dopo l’approvazione, la persona indicata potrà operare come Super admin.
+section5:
+  title: Richiedere il ruolo di Super admin
+  description: Puoi richiedere di <strong>diventare Super admin</strong> della tua PA, subentrando all’attuale, sia se sei già Admin della tua PA, sia se non hai ancora un’utenza su PA digitale 2026.
+  firstListTitle: 'Se <strong>sei Admin della tua PA</strong>:'
+  firstList:
+    - sulla pagina “Le utenze della tua PA”, clicca su "Diventa Super admin”;
+    - invia la richiesta e attendi l’approvazione della PA.
+  secondListTitle: 'Se <strong>non hai ancora un’utenza</strong>:'
+  secondList:
+    - accedi con SPID o CIE su PA digitale 2026;
+    - inserisci i tuoi dati personali e ricerca la tua PA;
+    - aggiungi una motivazione di subentro.
+  listSubDescription: Invieremo una PEC alla PA, che dovrà approvare la richiesta di subentro. Dopo l’approvazione, riceverai un invito tramite mail e potrai operare come Super admin. L’utenza dell’attuale Super admin verrà eliminata.
+section6:
+  title: Eliminare un’utenza
+  description: Se sei <strong>Admin</strong>, puoi soltanto <strong>eliminare la tua utenza</strong>. Se sei <strong>Super admin</strong>, puoi anche <strong>eliminare l’utenza di un’altra persona</strong>.
+  firstListTitle: 'Per <strong>eliminare la tua utenza</strong> puoi:'
+  firstList:
+    - andare sulla pagina “Le utenze della tua PA” e cliccare l’icona del cestino di fianco al tuo nome;
+    - oppure andare sulla pagina “Il tuo profilo” e cliccare su “Revoca utenza” nella lista delle PA di cui fai parte.
+  listSubDescription: Se sei <strong>Super admin</strong> e vuoi <strong>eliminare la tua utenza</strong>, dovrai prima <strong>indicare un’altra persona come Super admin</strong> della tua PA.
+  secondListTitle: 'Se sei <strong>Super admin</strong> e vuoi <strong>eliminare l’utenza di un’altra persona</strong>:'
+  secondList:
+    - vai sulla pagina “Le utenze della tua PA”,
+    - clicca l’icona del cestino di fianco il nome della persona di cui vuoi revocare l’utenza.
+section7:
+  title: Modificare i dati della tua utenza
+  description: 'Puoi modificare i <strong>tuoi dati personali</strong> dalla pagina “Il tuo profilo”.<br/><br/>Per ogni PA di cui fai parte, puoi aggiungere e modificare il tuo <strong>indirizzo email istituzionale</strong>, il tuo <strong>numero di telefono</strong> e la tua <strong>posizione lavorativa</strong>.'
+section8:
+  title: Modificare i dati della tua PA
+  description: 'Tutte le utenze (sia Admin che Super admin) possono modificare i <strong>dati del rappresentante legale</strong> e la <strong>PEC</strong> della PA.<br/><br/>I dati devono <strong>prima essere aggiornati sul portale IPA</strong>.<br/><br/>Una volta aggiornati i dati su IPA, accedi all’area privata di PA digitale 2026:'
+  list:
+    - per <strong>aggiornare i dati del rappresentante legale</strong>, vai sulla pagina “La mia PA”, dove puoi aggiungere la data di nascita, il luogo di nascita e il codice fiscale;
+    - per <strong>cambiare la PEC della PA</strong>, vai alla sezione “Supporto” e invia una nuova richiesta di assistenza con oggetto “Richiesta aggiornamento indirizzo PEC”, allegando una dichiarazione firmata dal rappresentante legale. La dichiarazione deve confermare che l’indirizzo è stato aggiornato su IPA e chiedere l’aggiornamento della PEC su PA digitale 2026, includendo il nuovo indirizzo.
