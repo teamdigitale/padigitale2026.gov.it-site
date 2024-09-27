@@ -39,17 +39,19 @@ listMenu:
   - sectionTitle: Attivare la tua PA
     sectionId: "keypoint-01"
   - sectionTitle: Ricevere assistenza
-    sectionId: "keypoint-04"
-  - sectionTitle: Raggiungere gli obiettivi
-    sectionId: "keypoint-03"
-  - sectionTitle: Candidare una PA agli avvisi
     sectionId: "keypoint-02"
-  - sectionTitle: Gestire un progetto
+  - sectionTitle: Ricevere assistenza
+    sectionId: "keypoint-03"
+  - sectionTitle: Raggiungere gli obiettivi
+    sectionId: "keypoint-04"
+  - sectionTitle: Candidare una PA agli avvisi
     sectionId: "keypoint-05"
-  - sectionTitle: Classificare dati e servizi
+  - sectionTitle: Gestire un progetto
     sectionId: "keypoint-06"
-  - sectionTitle: Inviare un piano di migrazione
+  - sectionTitle: Classificare dati e servizi
     sectionId: "keypoint-07"
+  - sectionTitle: Inviare un piano di migrazione
+    sectionId: "keypoint-08"
 sectionFirst:
   number: '01'
   title: 'Attivare la tua  PA'
