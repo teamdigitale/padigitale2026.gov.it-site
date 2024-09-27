@@ -227,9 +227,9 @@ export const CreaProfiloPage = () => {
                   .
                 </p>
               </Container>
-              <section id="watch-video">
+              {/* <section id="watch-video">
                 <HeroVideo src={video.src} description={video.description} videoText={video.videoText} />
-              </section>
+              </section> */}
               {/* <Container className="pl-lg-4">
                 <section id="to-read-more">
                   <h4 className={`${classes.contentTitle} mb-4`}>Per approfondire</h4>
