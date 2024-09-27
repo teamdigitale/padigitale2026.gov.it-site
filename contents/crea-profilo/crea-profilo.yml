@@ -22,12 +22,12 @@ verticalTimeline:
   - index: 0
     title: 'Accedi tramite identità digitale'
     icon: '/assets/pc-card.svg'
-    headerParagraph: "Se sei il rappresentante legale dell’amministrazione, o una persona incaricata, <strong>accedi tramite identità digitale SPID o CIE</strong> alla piattaforma."
+    headerParagraph: "Se rappresenti la tua PA, <strong>accedi tramite identità digitale SPID o CIE</strong> a PA digitale 2026."
     sectionId: 'digital-identity'
   - index: 1
-    title: 'Seleziona l’amministrazione '
+    title: 'Seleziona la PA'
     icon: '/assets/goals-card.svg'
-    headerParagraph: 'Dopo l’accesso ti verrà richiesto di inserire un’email istituzionale e di <strong>selezionare da una lista la tua amministrazione mediante il nome della PA o il codice IPA.</strong>'
+    headerParagraph: 'Dopo l’accesso ti verrà richiesto di inserire i tuoi dati personali e di <strong>selezionare da una lista la tua PA mediante il nome della PA o il codice IPA.</strong>'
     sectionId: 'select-administration'
   - index: 2
     title: 'Verifica i dati della PA su IPA'
@@ -37,9 +37,9 @@ verticalTimeline:
   - index: 3
     title: 'Conferma la registrazione'
     icon: '/assets/mail-card.svg'
-    headerParagraph: 'Una volta selezionato l’indirizzo PEC più appropriato a ricevere le comunicazioni da PA digitale 2026, dovrai <strong>confermare l’attivazione del profilo della PA e del suo rappresentante legale</strong> mediante un link di verifica ricevuto via PEC.'
+    headerParagraph: 'Una volta selezionato l’indirizzo PEC su cui ricevere le comunicazioni da PA digitale 2026, bisognerà <strong>confermare l’attivazione del profilo della PA e del tuo profilo</strong> mediante un link di verifica ricevuto via PEC.'
     sectionId: 'confirm-subscription'
-video:
-  src: https://www.youtube-nocookie.com/embed/QOMJvMSxKck
-  description: Scopri come attivare il profilo della tua amministrazione su PA digitale 2026.
-  videoText: "PA digitale 2026 è il punto di accesso alle risorse previste dal PNRR per la transizione digitale della PA. <br></br> Registrare la tua amministrazione è semplice:<br></br>● se sei un rappresentante legale di un Ente o un suo incaricato, puoi accedere alla piattaforma con identità digitale SPID o CIE.<br></br>● Inserisci la tua email istituzionale, e attiva il profilo dell’amministrazione indicando il nome della PA o il codice IPA. <br></br>● Verifica i dati del tuo Ente: se c’è qualche incongruenza nei dati, modificali direttamente su IPA.<br></br>● La conferma di registrazione avverrà cliccando sul link di verifica che riceverai alla PEC del tuo Ente.<br></br> Ora puoi candidare la tua amministrazione agli avvisi pubblici per renderla più digitale, sicura ed efficiente."
+# video:
+#   src: https://www.youtube-nocookie.com/embed/QOMJvMSxKck
+#   description: Scopri come attivare il profilo della tua amministrazione su PA digitale 2026.
+#   videoText: "PA digitale 2026 è il punto di accesso alle risorse previste dal PNRR per la transizione digitale della PA. <br></br> Registrare la tua amministrazione è semplice:<br></br>● se sei un rappresentante legale di un Ente o un suo incaricato, puoi accedere alla piattaforma con identità digitale SPID o CIE.<br></br>● Inserisci la tua email istituzionale, e attiva il profilo dell’amministrazione indicando il nome della PA o il codice IPA. <br></br>● Verifica i dati del tuo Ente: se c’è qualche incongruenza nei dati, modificali direttamente su IPA.<br></br>● La conferma di registrazione avverrà cliccando sul link di verifica che riceverai alla PEC del tuo Ente.<br></br> Ora puoi candidare la tua amministrazione agli avvisi pubblici per renderla più digitale, sicura ed efficiente."
