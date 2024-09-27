@@ -71,6 +71,8 @@ sectionSecond:
   button: true
   linkTo: "/come-partecipare/gestire-le-utenze"
   ariaLabel: "Scopri di più su come gestire le utenze della tua PA"
+  lBlue: true
+  reverse: true
 sectionThird:
   number: '03'
   title: 'Ricevere assistenza'
@@ -78,9 +80,7 @@ sectionThird:
   linkTo: '/come-partecipare/ricevi-assistenza'
   button: true
   image: 'assistenza.svg'
-  reverse: true
   ariaLabel: "Scopri di più su come ricevere assistenza"
-  lBlue: true
 sectionFourth:
   number: '04'
   title: 'Raggiungere gli obiettivi'
@@ -89,6 +89,8 @@ sectionFourth:
   button: true
   linkTo: "/come-partecipare/raggiungere-obiettivi"
   ariaLabel: "Scopri di più su come raggiungere gli obiettivi"
+  lBlue: true
+  reverse: true
 sectionFifth:
   number: '05'
   title: 'Candidare una PA agli avvisi'
@@ -102,8 +104,6 @@ sectionFifth:
   BottomLinkLabel1: Come funziona l'accesso con SPID/CIE
   BottomLinkLabel2: Cosa può fare il rappresentante legale
   ariaLabel: "Scopri di più su come candidare una PA agli avvisi"
-  reverse: true
-  lBlue: true
 sectionSixth:
   number: '06'
   title: 'Gestire un progetto'
@@ -112,6 +112,8 @@ sectionSixth:
   button: true
   image: 'Gestire_Progetti.svg'
   ariaLabel: "Scopri di più su come gestire un progetto"
+  lBlue: true
+  reverse: true
 sectionSeven:
   number: '07'
   title: 'Classificare dati e servizi'
@@ -119,9 +121,7 @@ sectionSeven:
   image: 'kp-section-3.svg'
   button: true
   linkTo: "/come-partecipare/classifica-pa"
-  lBlue: true
   ariaLabel: "Scopri di più su come classificare dati e servizi"
-  reverse: true
 sectionEight:
   number: '08'
   title: 'Inviare un piano di migrazione'
@@ -130,4 +130,6 @@ sectionEight:
   button: true
   linkTo: "/come-partecipare/inviare-piano-migrazione"
   ariaLabel: "Scopri di più su come inviare un piano di migrazione"
+  lBlue: true
+  reverse: true
 
