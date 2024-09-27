@@ -53,7 +53,7 @@ listMenu:
 sectionFirst:
   number: '01'
   title: 'Attivare la tua  PA'
-  text: 'L’attivazione del profilo della PA <strong>è il primo passaggio per partecipare agli avvisi pubblici</strong> e richiedere i finanziamenti per avviare il processo di transizione digitale.</br></br>Il rappresentante legale, o un suo incaricato, può accedere alla piattaforma grazie a SPID o CIE e, attraverso un percorso guidato, completare il processo di attivazione.'
+  text: 'L’attivazione del profilo della PA è <strong>il primo passo per partecipare agli avvisi pubblici</strong> e richiedere i finanziamenti per avviare il processo di transizione digitale.</br></br>Un rappresentante della PA può accedere alla piattaforma con SPID o CIE e, attraverso un percorso guidato, completare il processo di attivazione.'
   button: true
   linkTo: "/come-partecipare/crea-profilo"
   image: 'kp-section-1.svg'
