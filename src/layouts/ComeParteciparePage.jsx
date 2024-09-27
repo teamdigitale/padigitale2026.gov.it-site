@@ -21,11 +21,12 @@ export const ComeParteciparePage = () => (
       listMenu={content.listMenu}
     />
     <KeypointSection item={content.sectionFirst} />
-    <KeypointSection item={content.sectionFourth} />
-    <KeypointSection item={content.sectionThird} />
     <KeypointSection item={content.sectionSecond} />
+    <KeypointSection item={content.sectionThird} />
+    <KeypointSection item={content.sectionFourth} />
     <KeypointSection item={content.sectionFifth} />
     <KeypointSection item={content.sectionSixth} />
     <KeypointSection item={content.sectionSeven} />
+    <KeypointSection item={content.sectionEight} />
   </>
 );
