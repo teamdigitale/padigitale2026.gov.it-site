@@ -9,13 +9,12 @@ import { SEO } from '../components/SEO';
 import seo from '../../contents/seo.yml';
 import content from '../../contents/crea-profilo/crea-profilo.yml';
 import { TimelineVerticalCards } from '../components/TimelineVerticalCards';
-import { HeroVideo } from '../components/HeroVideo';
 /* import { Totop } from '../components/Totop'; */
 import { SideNavigationAccordion } from './sideNavigationAccordion';
 
 const { title: seoTitle, description: seoDescription } = seo.creaProfiloPage;
 
-const { sidebar, verticalTimeline, video } = content;
+const { sidebar, verticalTimeline } = content;
 
 const useStyles = createUseStyles({
   breadcrumb: {
@@ -187,8 +186,8 @@ export const CreaProfiloPage = () => {
             <Col xs={12} lg={7}>
               <h1 className={classes.titleUpdate}>Attivare il profilo della tua PA</h1>
               <div className={classes.subtitleUpdate}>
-                Per partecipare agli avvisi è necessario che un{' '}
-                rappresentante dell'amministrazione avvii la procedura di attivazione della PA sulla piattaforma.
+                Per partecipare agli avvisi è necessario che un rappresentante dell’amministrazione avvii la procedura
+                di attivazione della PA sulla piattaforma.
               </div>
             </Col>
             <Col xs={12} lg={4} className="offset-lg-1 mt-5 mt-lg-0 d-flex justify-content-center align-items-center">
