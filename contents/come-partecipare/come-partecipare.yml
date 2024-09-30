@@ -69,7 +69,7 @@ sectionSecond:
   number: '02'
   title: 'Gestire le utenze della tua PA'
   text: 'PA digitale 2026 permette di candidare le PA agli avvisi pubblici, di gestire i progetti, richiedere i finanziamenti e chiedere supporto.<br><br> La gestione delle utenze della tua PA ti permette di svolgere tutta l’operatività prevista su PA digitale 2026 con semplicità e autonomia.'
-  image: 'kp-section-1.svg'
+  image: 'gestire-utenze.svg'
   button: true
   linkTo: "/come-partecipare/gestire-le-utenze"
   ariaLabel: "Scopri di più su come gestire le utenze della tua PA"
