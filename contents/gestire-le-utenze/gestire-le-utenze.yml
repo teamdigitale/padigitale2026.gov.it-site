@@ -3,7 +3,7 @@ breadCrumbName: Gestire le utenze della tua PA
 hero:
   title: Gestire le utenze della tua PA
   subtitle: Se la tua PA ha già un profilo attivo su PA digitale 2026, puoi, in base al tuo ruolo, invitare nuove persone, cambiare ruoli, eliminare le utenze e modificare i dati dei profili.
-  imgSource: /assets/come-partecipare/raggiungere-obiettivi/asseverazione.svg
+  imgSource: /assets/come-fare/gestione-utenze.svg
 sidebar:
   - sectionTitle: Utenze disponibili
     sectionId: utenze
