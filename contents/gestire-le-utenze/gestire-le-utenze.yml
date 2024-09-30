@@ -73,7 +73,7 @@ section6:
   firstList:
     - andare sulla pagina “Le utenze della tua PA” e cliccare l’icona del cestino di fianco al tuo nome;
     - oppure andare sulla pagina “Il tuo profilo” e cliccare su “Revoca utenza” nella lista delle PA di cui fai parte.
-  listSubDescription: Se sei <strong>Super admin</strong> e vuoi <strong>eliminare la tua utenza</strong>, dovrai prima <strong>indicare un’altra persona come Super admin</strong> della tua PA.
+  listSubDescription: Se sei <strong>Super admin</strong> e vuoi <strong>eliminare la tua utenza</strong>, dovrai prima <a href="#cambiare"><strong>indicare un’altra persona come Super admin</strong></a> della tua PA.
   secondListTitle: 'Se sei <strong>Super admin</strong> e vuoi <strong>eliminare l’utenza di un’altra persona</strong>:'
   secondList:
     - vai sulla pagina “Le utenze della tua PA”,
