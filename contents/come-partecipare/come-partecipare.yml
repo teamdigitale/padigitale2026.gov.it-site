@@ -73,7 +73,7 @@ sectionSecond:
   number: '02'
   title: 'Gestire le utenze della tua PA'
   text: 'Su PA digitale 2026 puoi invitare <strong>fino a 4 persone a collaborare</strong> al profilo di ogni amministrazione con semplicità e autonomia.  .'
-  image: 'gestire-utenze.svg'
+  image: 'gestione-utenze.svg'
   button: true
   linkTo: "/come-partecipare/gestire-le-utenze"
   ariaLabel: "Scopri di più su come gestire le utenze della tua PA"
