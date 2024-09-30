@@ -11,27 +11,31 @@ keypoints:
       image: 'pc-card.svg'
       title: 'Attivare la tua PA'
       desc: 'Per partecipare agli avvisi pubblici e richiedere i finanziamenti'
-    - number: "04"
+    - number: "02"
+      image: 'icon-chat.svg'
+      title: 'Gestire le utenze'
+      desc: 'Per gestire gli utenti che accedono alla piattaforma'
+    - number: "03"
       image: 'icon-chat.svg'
       title: 'Ricevere assistenza'
       desc: 'Per risolvere dubbi o problemi riguardo la piattaforma e le candidature.'
-    - number: "03"
+    - number: "04"
       image: 'candida-pa-lens.svg'
       title: 'Raggiungere gli obiettivi'
       desc: 'L’erogazione delle risorse si basa sul raggiungimento di specifici obiettivi.'
-    - number: "02"
+    - number: "05"
       image: 'invia-candidatura.svg'
       title: 'Candidare una PA agli avvisi'
       desc: 'Attraverso la creazione e l’invio del documento di candidatura.'
-    - number: "05"
+    - number: "06"
       image: 'gest-prog-icon.svg'
       title: 'Gestire un progetto'
       desc: Per completare le attività previste e richiedere il finanziamento.
-    - number: "06"
+    - number: "07"
       image: 'candida-pa-lens.svg'
       title: 'Classificare dati e servizi'
       desc: 'Per abilitare il processo di migrazione delle PA al cloud.'
-    - number: "07"
+    - number: "08"
       image: 'invia-piano-migrazione-lens.svg'
       title: 'Inviare un piano di migrazione'
       desc: 'Per inviare un piano di migrazione.'
