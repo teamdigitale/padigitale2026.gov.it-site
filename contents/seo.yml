@@ -85,3 +85,6 @@ materialiRisorsePage:
 InviarePianoMigrazionePage:
   title: Inviare un piano di migrazione
   description: Le amministrazioni centrali e locali devono inviare un piano di migrazione. Per compilare un piano di migrazione è necessario aver inviato la classificazione dati e servizi. Se la tua PA ha già inviato una candidatura 1.2, il piano di migrazione si intende compilato e assolto.
+gestireLeUtenzePage:
+  title: Gestire le utenze della tua PA - PA digitale 2026
+  description: Gestire le utenze della tua PA

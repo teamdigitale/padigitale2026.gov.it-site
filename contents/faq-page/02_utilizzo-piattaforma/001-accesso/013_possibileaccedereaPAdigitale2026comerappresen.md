@@ -1,6 +1,8 @@
 ---
-  - title: É possibile accedere a PA digitale 2026 come rappresentante legale di più Scuole?
+  - title: È possibile accedere a PA digitale 2026 come rappresentante legale di più Scuole?
     anchorLink: 013_possibileaccedereaPAdigitale2026comerappresen
 ---
 
-Ti informiamo che potrai registrarti come Rappresentante Legale per un nuovo istituto accendendo in piattaforma nella sezione "La Mia PA", individuabile cliccando sul tasto relativo al tuo nome, presente in alto a destra nella schermata principale dell'area riservata in piattaforma. Quindi cliccare sul tasto "Associa nuova amministrazione" per avviare la procedura guidata di registrazione per l'ulteriore Istituto da gestire.
+Il Rappresentante Legale è un dato direttamente recepito da IPA in piattaforma.
+Per l’operatività su PA digitale 2026, potrai scegliere di registrarti come Super Admin (quindi con anche potere di gestione delle altre utenze) o come Admin.
+È consentito essere Super admin o Admin per uno o più PA.

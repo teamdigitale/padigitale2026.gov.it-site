@@ -1,6 +1,14 @@
 ---
-  - title: Come si modificano i dati di un utente di una PA? Come si revoca un'utenza?
+  - title: Come si modificano i dati di un utente di una PA? Come si revoca un’utenza?
     anchorLink: 006_ComesimodificanoidatidiunutentediunaPAComesir
 ---
 
-Il rappresentante legale o l'incaricato, dopo aver selezionato la PA per la quale intende operare, accede, attraverso il menù a tendina che si apre facendo click sul suo nome, alla sezione "Gli utenti della tua PA". In questa sezione visualizza la lista degli utenti collegati alla propria amministrazione e facendo click sull'icona: <br> - "Modifica" può modificare i dati di un utente attivo. <br> - "Revoca" può revocare l'utenza.
+Dopo aver selezionato la PA per la quale intende operare, la persona che opera col ruolo di Super Admin accede, attraverso il menù a tendina che si apre facendo click sul suo nome in alto a destra, alla sezione “Le utenze della tua PA”.
+In questa sezione, può visualizzare la lista delle utenze collegate alla propria PA e relativo stato (utente invitato, utente attivo).
+Facendo click sulle icone a disposizione, chi ha il ruolo di Super Admin può:
+
+- “Visualizzare” i dati di un’utenza attiva tramite l’icona Occhio;
+- “Eliminare” l’invito ad accedere in piattaforma all’utenza con stato “Invitato” tramite l’icona Cestino;
+- “Revocare” un’utenza attiva tramite l’icona Cestino.
+
+Inoltre, tutte le utenze profilate in piattaforma (Super Admin e Admin) possono visualizzare le altre utenze presenti e cambiare i propri dati personali precedentemente inseriti, ad eccezione di nome, cognome e indirizzo mail.

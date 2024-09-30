@@ -11,27 +11,31 @@ keypoints:
       image: 'pc-card.svg'
       title: 'Attivare la tua PA'
       desc: 'Per partecipare agli avvisi pubblici e richiedere i finanziamenti'
-    - number: "04"
+    - number: "02"
+      image: 'icon-chat.svg'
+      title: 'Gestire le utenze'
+      desc: 'Per gestire gli utenti che accedono alla piattaforma'
+    - number: "03"
       image: 'icon-chat.svg'
       title: 'Ricevere assistenza'
       desc: 'Per risolvere dubbi o problemi riguardo la piattaforma e le candidature.'
-    - number: "03"
+    - number: "04"
       image: 'candida-pa-lens.svg'
       title: 'Raggiungere gli obiettivi'
       desc: 'L’erogazione delle risorse si basa sul raggiungimento di specifici obiettivi.'
-    - number: "02"
+    - number: "05"
       image: 'invia-candidatura.svg'
       title: 'Candidare una PA agli avvisi'
       desc: 'Attraverso la creazione e l’invio del documento di candidatura.'
-    - number: "05"
+    - number: "06"
       image: 'gest-prog-icon.svg'
       title: 'Gestire un progetto'
       desc: Per completare le attività previste e richiedere il finanziamento.
-    - number: "06"
+    - number: "07"
       image: 'candida-pa-lens.svg'
       title: 'Classificare dati e servizi'
       desc: 'Per abilitare il processo di migrazione delle PA al cloud.'
-    - number: "07"
+    - number: "08"
       image: 'invia-piano-migrazione-lens.svg'
       title: 'Inviare un piano di migrazione'
       desc: 'Per inviare un piano di migrazione.'
@@ -39,21 +43,23 @@ listMenu:
   - sectionTitle: Attivare la tua PA
     sectionId: "keypoint-01"
   - sectionTitle: Ricevere assistenza
-    sectionId: "keypoint-04"
-  - sectionTitle: Raggiungere gli obiettivi
-    sectionId: "keypoint-03"
-  - sectionTitle: Candidare una PA agli avvisi
     sectionId: "keypoint-02"
-  - sectionTitle: Gestire un progetto
+  - sectionTitle: Ricevere assistenza
+    sectionId: "keypoint-03"
+  - sectionTitle: Raggiungere gli obiettivi
+    sectionId: "keypoint-04"
+  - sectionTitle: Candidare una PA agli avvisi
     sectionId: "keypoint-05"
-  - sectionTitle: Classificare dati e servizi
+  - sectionTitle: Gestire un progetto
     sectionId: "keypoint-06"
-  - sectionTitle: Inviare un piano di migrazione
+  - sectionTitle: Classificare dati e servizi
     sectionId: "keypoint-07"
+  - sectionTitle: Inviare un piano di migrazione
+    sectionId: "keypoint-08"
 sectionFirst:
   number: '01'
   title: 'Attivare la tua  PA'
-  text: 'L’attivazione del profilo della PA <strong>è il primo passaggio per partecipare agli avvisi pubblici</strong> e richiedere i finanziamenti per avviare il processo di transizione digitale.</br></br>Il rappresentante legale, o un suo incaricato, può accedere alla piattaforma grazie a SPID o CIE e, attraverso un percorso guidato, completare il processo di attivazione.'
+  text: 'L’attivazione del profilo della PA è <strong>il primo passo per partecipare agli avvisi pubblici</strong> e richiedere i finanziamenti per avviare il processo di transizione digitale.</br></br>Un rappresentante della PA può accedere alla piattaforma con SPID o CIE e, attraverso un percorso guidato, completare il processo di attivazione.'
   button: true
   linkTo: "/come-partecipare/crea-profilo"
   image: 'kp-section-1.svg'
@@ -65,6 +71,34 @@ sectionFirst:
   ariaLabel: "Scopri di più su come attivare la tua PA"
 sectionSecond:
   number: '02'
+  title: 'Gestire le utenze della tua PA'
+  text: 'Su PA digitale 2026 puoi invitare <strong>fino a 4 persone a collaborare</strong> al profilo di ogni amministrazione con semplicità e autonomia.'
+  image: 'gestione-utenze.svg'
+  button: true
+  linkTo: "/come-partecipare/gestire-le-utenze"
+  ariaLabel: "Scopri di più su come gestire le utenze della tua PA"
+  lBlue: true
+  reverse: true
+sectionThird:
+  number: '03'
+  title: 'Ricevere assistenza'
+  text: La piattaforma PA digitale 2026 permette di candidare le PA agli avvisi pubblici e di gestire le attività attraverso l’area riservata.<br><br> Qualsiasi dubbio o problema si possa riscontrare, è possibile <strong>trovare le risposte alle domande più comuni e chiedere assistenza dedicata</strong>.
+  linkTo: '/come-partecipare/ricevi-assistenza'
+  button: true
+  image: 'assistenza.svg'
+  ariaLabel: "Scopri di più su come ricevere assistenza"
+sectionFourth:
+  number: '04'
+  title: 'Raggiungere gli obiettivi'
+  text: "L’erogazione delle risorse si basa sul <strong>raggiungimento di specifici obiettivi</strong>: ecco come funzionano i controlli del Dipartimento per gli Avvisi di PA digitale 2026."
+  image: '../come-partecipare/raggiungere-obiettivi/asseverazione.svg'
+  button: true
+  linkTo: "/come-partecipare/raggiungere-obiettivi"
+  ariaLabel: "Scopri di più su come raggiungere gli obiettivi"
+  lBlue: true
+  reverse: true
+sectionFifth:
+  number: '05'
   title: 'Candidare una PA agli avvisi'
   text: In base alla tipologia e agli obiettivi della PA, è possibile identificare gli avvisi pubblici più idonei ad avviare il processo di transizione digitale.<br/><br/>Una volta identificato l'avviso, è possibile candidare una PA attraverso un processo guidato, che permette di <strong>comporre il documento di candidatura e inviarlo tramite la piattaforma.</strong>
   button: true
@@ -76,49 +110,32 @@ sectionSecond:
   BottomLinkLabel1: Come funziona l'accesso con SPID/CIE
   BottomLinkLabel2: Cosa può fare il rappresentante legale
   ariaLabel: "Scopri di più su come candidare una PA agli avvisi"
-  reverse: true
-  lBlue: true
-sectionThird:
-  number: '03'
-  title: 'Raggiungere gli obiettivi'
-  text: "L’erogazione delle risorse si basa sul <strong>raggiungimento di specifici obiettivi</strong>: ecco come funzionano i controlli del Dipartimento per gli Avvisi di PA digitale 2026."
-  image: '../come-partecipare/raggiungere-obiettivi/asseverazione.svg'
-  button: true
-  linkTo: "/come-partecipare/raggiungere-obiettivi"
-  ariaLabel: "Scopri di più su come raggiungere gli obiettivi"
-sectionFourth:
-  number: '04'
-  title: 'Ricevere assistenza'
-  text: La piattaforma PA digitale 2026 permette di candidare le PA agli avvisi pubblici e di gestire le attività attraverso l’area riservata.<br><br> Qualsiasi dubbio o problema si possa riscontrare, è possibile <strong>trovare le risposte alle domande più comuni e chiedere assistenza dedicata</strong>.
-  linkTo: '/come-partecipare/ricevi-assistenza'
-  button: true
-  image: 'assistenza.svg'
-  reverse: true
-  ariaLabel: "Scopri di più su come ricevere assistenza"
-  lBlue: true
-sectionFifth:
-  number: '05'
+sectionSixth:
+  number: '06'
   title: 'Gestire un progetto'
   text: PA digitale 2026 permette di gestire i progetti all’interno della piattaforma, così da <strong>completare le attività</strong> previste <strong>e richiedere il finanziamento</strong>.</br></br>Inserimento del CUP, ingaggio dei fornitori e completamento delle attività, questi sono i passaggi principali per ottenere il finanziamento e <strong>raggiungere gli obiettivi della candidatura</strong>.
   linkTo: '/come-partecipare/gestire-progetto'
   button: true
   image: 'Gestire_Progetti.svg'
   ariaLabel: "Scopri di più su come gestire un progetto"
-sectionSixth:
-  number: '06'
+  lBlue: true
+  reverse: true
+sectionSeven:
+  number: '07'
   title: 'Classificare dati e servizi'
   text: La classificazione dei dati e dei servizi è fondamentale per <strong>abilitare il processo di migrazione delle PA al cloud</strong>.</br></br>La classificazione deve essere inviata tramite PA digitale 2026 per identificare la tipologia del cloud di destinazione per i servizi della PA.
   image: 'kp-section-3.svg'
   button: true
   linkTo: "/come-partecipare/classifica-pa"
-  lBlue: true
   ariaLabel: "Scopri di più su come classificare dati e servizi"
-  reverse: true
-sectionSeven:
-  number: '07'
+sectionEight:
+  number: '08'
   title: 'Inviare un piano di migrazione'
   text: I piani di migrazione dei dati e dei servizi digitali delle amministrazioni sono previsti dall’articolo 10, comma 1, del regolamento adottato con determinazione AGID n. 628/2021 del 15 dicembre 2021. Le amministrazioni sono tenute a inviare un piano di migrazione e a completare le attività previste dal piano.
   image: 'kp-section-7.svg'
   button: true
   linkTo: "/come-partecipare/inviare-piano-migrazione"
   ariaLabel: "Scopri di più su come inviare un piano di migrazione"
+  lBlue: true
+  reverse: true
+

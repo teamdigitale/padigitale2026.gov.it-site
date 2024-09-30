@@ -1,6 +1,7 @@
 ---
-  - title: È possibile accedere alla piattaforma anche quando non si ricopre il ruolo di rappresentante legale dell'amministrazione?
+  - title: È possibile accedere alla piattaforma anche quando non si ricopre il ruolo di rappresentante legale della PA?
     anchorLink: 004_possibileaccedereallapiattaformaanchequandono
 ---
 
-Sì. Nel caso in cui a effettuare l'accesso non sia direttamente il rappresentante legale ma una persona da lui incaricata, è presente una casella da spuntare per dichiarare di stare agendo per conto del rappresentante legale dell'amministrazione. Alla fine della procedura di primo accesso, il rappresentante legale della PA riceve una PEC con cui viene a informato del fatto che la persona incaricata ha agito per suo conto su PA digitale 2026.
+Sì.
+Il Rappresentante Legale è un dato direttamente recepito da IPA in piattaforma. Per l’operatività su PA digitale 2026, qualunque persona può accedere in qualità di Admin previo invito della PA di riferimento o in qualità di Super admin effettuando una procedura di subentro al Super admin precedente.

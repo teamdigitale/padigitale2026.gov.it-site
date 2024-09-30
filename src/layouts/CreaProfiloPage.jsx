@@ -9,13 +9,12 @@ import { SEO } from '../components/SEO';
 import seo from '../../contents/seo.yml';
 import content from '../../contents/crea-profilo/crea-profilo.yml';
 import { TimelineVerticalCards } from '../components/TimelineVerticalCards';
-import { HeroVideo } from '../components/HeroVideo';
 /* import { Totop } from '../components/Totop'; */
 import { SideNavigationAccordion } from './sideNavigationAccordion';
 
 const { title: seoTitle, description: seoDescription } = seo.creaProfiloPage;
 
-const { sidebar, verticalTimeline, video } = content;
+const { sidebar, verticalTimeline } = content;
 
 const useStyles = createUseStyles({
   breadcrumb: {
@@ -178,19 +177,17 @@ export const CreaProfiloPage = () => {
                   <span className="separator"></span>
                 </BreadcrumbItem>
                 <BreadcrumbItem active className={classes.breadcrumbItemActive}>
-                  <a>Attiva il profilo della tua PA: identità digitale e dati IPA</a>
+                  <a>Attivare il profilo della tua PA</a>
                 </BreadcrumbItem>
               </Breadcrumb>
             </Col>
           </Row>
           <Row className="mb-5 mt-5">
             <Col xs={12} lg={7}>
-              <h1 className={classes.titleUpdate}>Attiva il profilo della tua PA: identità digitale e dati IPA</h1>
+              <h1 className={classes.titleUpdate}>Attivare il profilo della tua PA</h1>
               <div className={classes.subtitleUpdate}>
-                <strong>Per partecipare agli avvisi</strong> è necessario che il{' '}
-                <strong>rappresentante legale di un'amministrazione presente su IPA</strong> (Indice dei domicili
-                digitali della Pubblica Amministrazione), o una persona incaricata,{' '}
-                <strong>avvii la procedura di attivazione della PA sulla piattaforma</strong>.
+                Per partecipare agli avvisi è necessario che un rappresentante dell’amministrazione avvii la procedura
+                di attivazione della PA sulla piattaforma.
               </div>
             </Col>
             <Col xs={12} lg={4} className="offset-lg-1 mt-5 mt-lg-0 d-flex justify-content-center align-items-center">
@@ -208,7 +205,7 @@ export const CreaProfiloPage = () => {
               {/*  <Totop /> */}
               <Container className="pl-lg-4 mb-4">
                 <section>
-                  <h3 className={`${classes.contentTitle} mt-5`}>Attiva il profilo della tua amministrazione</h3>
+                  <h3 className={`${classes.contentTitle} mt-5`}>Attiva il profilo della tua PA</h3>
                   <p className={`${classes.contentParagraph} mb-0`}>
                     Il processo di attivazione della PA prevede <strong>quattro passaggi</strong>:
                   </p>
@@ -229,9 +226,9 @@ export const CreaProfiloPage = () => {
                   .
                 </p>
               </Container>
-              <section id="watch-video">
+              {/* <section id="watch-video">
                 <HeroVideo src={video.src} description={video.description} videoText={video.videoText} />
-              </section>
+              </section> */}
               {/* <Container className="pl-lg-4">
                 <section id="to-read-more">
                   <h4 className={`${classes.contentTitle} mb-4`}>Per approfondire</h4>
