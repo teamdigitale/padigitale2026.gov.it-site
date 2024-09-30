@@ -34,7 +34,7 @@ verticalTimeline:
   - index: 3
     title: 'Conferma la registrazione'
     icon: '/assets/mail-card.svg'
-    headerParagraph: 'Una volta selezionato l’indirizzo PEC su cui ricevere le comunicazioni da PA digitale 2026, bisognerà <strong>confermare l’attivazione del profilo della PA e del tuo profilo</strong> mediante un link di verifica ricevuto via PEC.'
+    headerParagraph: 'Una volta selezionato l’indirizzo PEC su cui ricevere le comunicazioni da PA digitale 2026, bisognerà <strong>confermare l’attivazione della PA e del tuo profilo</strong> mediante un link di verifica ricevuto via PEC.'
     sectionId: 'confirm-subscription'
 # video:
 #   src: https://www.youtube-nocookie.com/embed/QOMJvMSxKck
