@@ -42,7 +42,7 @@ keypoints:
 listMenu:
   - sectionTitle: Attivare la tua PA
     sectionId: "keypoint-01"
-  - sectionTitle: Ricevere assistenza
+  - sectionTitle: Gestire le utenze
     sectionId: "keypoint-02"
   - sectionTitle: Ricevere assistenza
     sectionId: "keypoint-03"
