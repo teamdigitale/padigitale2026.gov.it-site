@@ -44,7 +44,7 @@ listMenu:
     sectionId: "keypoint-01"
   - sectionTitle: Ricevere assistenza
     sectionId: "keypoint-02"
-  - sectionTitle: Ricevere assistenza
+  - sectionTitle: Gestire le utenze
     sectionId: "keypoint-03"
   - sectionTitle: Raggiungere gli obiettivi
     sectionId: "keypoint-04"
