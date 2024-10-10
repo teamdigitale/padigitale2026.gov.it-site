@@ -4,4 +4,4 @@
 ---
 
 Sì.
-All’interno della piattaforma l’utenza Super Admin e Admin possono associarsi a più PA.
+All’interno della piattaforma l’utenza Super admin e Admin possono associarsi a più PA.
