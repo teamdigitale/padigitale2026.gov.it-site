@@ -26,6 +26,9 @@
         - sectionTitle: "1.4.4"
           sectionId: measure-1-4-4
           sectionActive: false
+        - sectionTitle: "1.4.4 ANSC"
+          sectionId: measure-1-4-4-ansc
+          sectionActive: false
         - sectionTitle: "1.4.5"
           sectionId: measure-1-4-5
           sectionActive: false
