@@ -1,8 +1,22 @@
 ---
-  - title: Ho integrato dei servizi tramite una piattaforma regionale a titolo gratuito (es. My Pay). Posso richiedere il finanziamento sia per i servizi già integrati che per quelli da integrare nella stessa piattaforma?
+  - title: È possibile richiedere il finanziamento per servizi sviluppati in economia dal personale dell’ente o attivati a titolo gratuito, oppure oneroso, tramite piattaforme regionali e provinciali (es. MyPay, PiemontePay, MPay, SIRena ed altre)?
     tag:
       - comuni
     anchorLink: 009_Hointegratodeiservizitramiteunapiattaformareg
 ---
 
-Ti informiamo che è possibile accedere al finanziamento previsto dall'Avviso per l'integrazione dei servizi purché finanziati con fondi propri a partire dal 1° aprile 2021. L'integrazione dei servizi nelle piattaforme regionali a titolo gratuito (es. MyPay, PiemontePay ed altre)  è ammissibile esclusivamente laddove lo sviluppo non sia avvenuto a titolo gratuito: il progetto avrà quindi necessariamente una componente sviluppata o da un fornitore esterno autonomamente individuato dalla PA atto a integrare le funzionalità di pagamento nei gestionali dell'ente e per cui sarà necessario inserire un contratto/determina di affidamento oppure in economia dal personale dell'ente, per cui sarà necessario inserire un Ordine di Servizio.
+Ti informiamo che è possibile accedere al finanziamento previsto dall’Avviso per l’integrazione di servizi a rimborso o da avviare purché finanziati con fondi propri a partire dal 1° aprile 2021.
+
+Nel caso di sviluppo effettuato in economia dal personale dell’ente, sarà necessario inserire in piattaforma un ordine di servizio oppure un atto di ricognizione delle attività svolte, motivando l’assenza dell’ordine di servizio.
+Inoltre, sarà necessario dichiarare la corretta integrazione nei gestionali dell'ente per la funzionalità di riconciliazione contabile dei dovuti.
+
+Nel caso di integrazione dei servizi nelle piattaforme regionali e provinciali (es. MyPay, PiemontePay ed altre) deve in ogni caso essere garantita la corretta integrazione nei gestionali dell’ente per la funzionalità di riconciliazione contabile dei dovuti.
+Il progetto dovrà quindi necessariamente avere:
+
+A) una componente sviluppata da un fornitore esterno autonomamente individuato dalla PA atto a sviluppare la corretta integrazione nei gestionali dell’ente per la funzionalità di riconciliazione contabile dei dovuti.
+
+oppure
+
+B) uno sviluppo in economia dal personale dell’ente, nel cui caso sarà necessario inserire in piattaforma un Ordine di servizio che illustri l’attività svolta oppure un atto di ricognizione delle attività svolte, motivando l’assenza dell’ordine di servizio.
+
+Nell’ipotesi di utilizzo delle piattaforme regionali e provinciali, sia nel caso A) che B) sarà comunque necessario dichiarare la corretta integrazione nei gestionali dell’ente per la funzionalità di riconciliazione contabile dei dovuti.
