@@ -1,7 +1,5 @@
 ---
   - title: Ho riscontrato dei problemi di visualizzazione dei contenuti su PA digitale 2026. Come posso risolverli?
-    tag:
-      - supporto-tecnico
     anchorLink: 007_utilizzo-chrome
 ---
 
