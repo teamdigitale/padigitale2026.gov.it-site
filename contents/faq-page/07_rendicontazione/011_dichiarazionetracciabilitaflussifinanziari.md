@@ -3,6 +3,7 @@
     anchorLink: 011_dichiarazionetracciabilitaflussifinanziari
 ---
 
-Sì, puoi [scaricare un modello di dichiarazione][1]. Ricorda che, una volta compilata, è necessario far firmare la dichiarazione al rappresentante legale dell’ente.
+Sì, puoi scaricare [qui][1] un modello di dichiarazione che, una volta compilata, dovrà essere firmata dal rappresentante legale dell’ente.
+Ti ricordiamo, inoltre, che nella dichiarazione occorre specificare il CUP relativo alla candidatura.
 
 [1]: https://padigitale2026.my.salesforce.com/sfc/p/7Q000001NvsR/a/7Q000001BIsA/GcTcEts7dy5lLxSu86deyfgq1ni54D4yWnuJEMq3MVU "Modello dichiarazione di tracciabilità"
