@@ -9,13 +9,13 @@
 Il Soggetto Attuatore degli avvisi di PA digitale 2026 è il Comune che è tenuto a richiedere il CUP e assolvere a tutti gli obblighi connessi all’Avviso.
 È quindi il Rappresentante legale del Comune a definire tutti i parametri del finanziamento richiesto e a firmare la candidatura.
 
-## Il Comune non si avvale dell’Unione dei comuni
+### Il Comune non si avvale dell’Unione dei comuni
 
 **Scenario 0** (v. Tabella) - Il Comune, soggetto attuatore, fa parte di una Unione dei Comuni, la quale non è soggetto realizzatore e non ha alcun ruolo formalmente riconosciuto nell’implementazione del progetto.
 
 Se nell’esecuzione del progetto i Comuni non si avvalgono dell’Unione dei Comuni o lo fanno informalmente e procedono in autonomia nella selezione, affidamento dei contratti e completamento dei progetti PNRR, il soggetto attuatore non deve caricare alcuna documentazione/convenzione tra Comune e Unione e il Certificato di regolare esecuzione sarà firmato dal RUP del Comune.
 
-## Il Comune si avvale dell’Unione dei comuni
+### Il Comune si avvale dell’Unione dei comuni
 
 Tre scenari ammissibili:
 
@@ -43,7 +43,7 @@ Il Comune dovrà indicare nel fascicolo di progetto su PA digitale 2026:
 - la Convenzione o l’accordo tra enti comunque denominato, con cui il Comune ha dato mandato all’Unione di provvedere all’esecuzione delle attività oggetto del finanziamento;
 - oltre alla convezione/accordo, i contratti tra l’Unione e gli operatori economici (laddove presenti fornitori esterni).
 
-## Nello scenario 2 e 3, chi deve firmare il certificato di regolare esecuzione (CRE)?
+### Nello scenario 2 e 3, chi deve firmare il certificato di regolare esecuzione (CRE)?
 
 Se il RUP dell’Unione coincide con il Responsabile del Comune, è sufficiente la firma del RUP dell’Unione. Se il RUP dell'Unione è diverso dal Responsabile del Comune, sono necessarie 2 firme: quella del RUP dell’Unione e quella del Responsabile del Comune o, in assenza di quest’ultimo, del Segretario comunale.
 
