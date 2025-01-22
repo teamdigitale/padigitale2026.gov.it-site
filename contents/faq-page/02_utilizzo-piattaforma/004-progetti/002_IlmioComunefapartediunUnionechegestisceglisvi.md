@@ -26,7 +26,7 @@ Il Comune dovrà indicare nel fascicolo di progetto su PA digitale 2026:
 
 - Come “Soggetto Realizzatore” ciascun fornitore con cui il Comune intrattiene un rapporto di fornitura;
 - i contratti tra il Comune e gli operatori economici/fornitori;
-- accordo/convenzione Comuni/Unione;
+- accordo/convenzione Comuni/Unione.
  
 **Scenari 2 e 3** (v. tabella) - Il Comune e l’Unione stabiliscono nella convenzione le modalità di trasferimento dei fondi dal Comune all’Unione.
 Sulla base di ciò quest’ultima, in forza delle funzioni conferitele dai Comuni, iscrive sul proprio bilancio le relative somme e provvede, come stazione appaltante, a selezionare e stipulare i contratti con gli operatori economici (fornitori esterni).
@@ -51,6 +51,6 @@ Se il RUP dell’Unione coincide con il Responsabile del Comune, è sufficiente 
 | --------------------------- | ---------- | ---------- | ---------- | ---------- |
 | Soggetto Attuatore          | Comune     | Comune     | Comune     | Comune     |
 | Soggetto realizzatore       | Fornitori  | Fornitori  | Fornitori con cui l’Unione ha rapporto di fornitura Unione oppure Unione + fornitori con cui l’Unione ha rapporto di fornitura | Unione oppure Unione + fornitori con cui l’Unione ha rapporto di fornitura |
-| RUP (firma sul CRE)         | Il RUP indicato nella determina di affidamento |
-| RP (firma sul CRE)          | ---------- | ---------- | (se RUP Unione è diverso da Responsabile del comune) RP Comune o, in mancanza, Segretario comunale |
+| RUP (firma sul CRE)         | Il RUP indicato nella determina di affidamento ||||
+| RP (firma sul CRE)          | ---------- | ---------- | (se RUP Unione è diverso da Responsabile del comune) RP Comune o, in mancanza, Segretario comunale ||
 | Documentazione contrattuale | Determina e/o Contratto/i con i fornitori | Determina e/o Contratto/i con i fornitori | (in caso di fornitori esterni) Determina e/o Contratto/i Unione-fornitori | Determina e/o Contratto/i Unione-fornitori |
