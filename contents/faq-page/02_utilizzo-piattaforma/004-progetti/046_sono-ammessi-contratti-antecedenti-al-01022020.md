@@ -7,7 +7,7 @@
 
 Le attività finanziate dal PNRR per essere ammissibili devono essere realizzate a partire dal 1º febbraio 2020.
 
-L’esperienza ha evidenziato che molti soggetti attuatori hanno rapporti pluriennali con fornitori e che anche fornitori già contrattualizzati sono stati incaricati nell’ambito di un più ampio rapporto contrattuale - a svolgere le attività riconducibili al PNRR, successivamente alla predetta data.
+L’esperienza ha evidenziato che molti soggetti attuatori hanno rapporti pluriennali con fornitori e che anche fornitori già contrattualizzati sono stati incaricati nell’ambito di un più ampio rapporto contrattuale a svolgere le attività riconducibili al PNRR, successivamente alla predetta data.
 
 Pertanto, per evitare un aggravio di oneri amministrativi a carico degli enti destinatari dei contributi PNRR, si ritiene ammissibile che in tali casi la documentazione contrattuale prodotta possa essere antecedente al 1º febbraio 2020 purché, come detto sopra, si tratti di un rapporto pluriennale che va a coprire anche il periodo di ammissibilità PNRR oppure si tratti del caso in cui il fornitore /i fornitori già contrattualizzati per svolgere determinate attività, venga/vengano incaricati dell’esecuzione di ulteriori attività relative al progetto (finanziato con il PNRR) successivamente al 1º febbraio 2020.
 
