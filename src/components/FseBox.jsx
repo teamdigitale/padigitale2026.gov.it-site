@@ -64,7 +64,7 @@ export function FseBox() {
     <Container className="px-3">
       <div className={classes.outerBox}>
         <div>
-          <img className={classes.logo} src="/assets/logo-fse.png"></img>
+          <img className={classes.logo} alt="Logo Fascicolo Sanitario Elettronico" src="/assets/logo-fse.png"></img>
         </div>
         <div className={classes.text}>
           <p className={classes.title}>

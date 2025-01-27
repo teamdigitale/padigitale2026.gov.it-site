@@ -156,6 +156,14 @@ const useStyles = createUseStyles({
         marginLeft: '5px',
       },
     },
+    '& button': {
+      fontWeight: '700',
+      // display: 'flex',
+      alignItems: 'center',
+      '& svg': {
+        marginLeft: '5px',
+      },
+    },
   },
   externalLink: {
     fontWeight: '700',
@@ -257,9 +265,8 @@ export const OpendataPage = () => {
                       <td>Avvisi PA digitale 2026</td>
                       <td className="text-center">
                         <span className={`${classes.linkWrapper}`}>
-                          <a
+                          <button
                             className={`btn btn-outline-primary ${classes.customLinkFocus}`}
-                            href="#0"
                             title="Link al dato ( Link esterno - Esegue il download )"
                             aria-label="Avvisi PA digitale 2026, file csv( Link esterno - Esegue il download )"
                             rel="noreferrer"
@@ -291,7 +298,7 @@ export const OpendataPage = () => {
                               </defs>
                             </svg>
                             &nbsp; SCARICA IL .CSV
-                          </a>
+                          </button>
                         </span>
                       </td>
                       <td className="text-center">
@@ -327,9 +334,8 @@ export const OpendataPage = () => {
                       <td>Candidature finanziate Comuni</td>
                       <td className="text-center">
                         <span className={`${classes.linkWrapper}`}>
-                          <a
+                          <button
                             className={`btn btn-outline-primary ${classes.customLinkFocus}`}
-                            href="#0"
                             title="Link al dato ( Link esterno - Esegue il download )"
                             aria-label="Candidature finanziate Comuni, file csv( Link esterno - Esegue il download )"
                             rel="noreferrer"
@@ -344,7 +350,7 @@ export const OpendataPage = () => {
                               fill="none"
                               xmlns="http://www.w3.org/2000/svg"
                             >
-                              <g clipPath="url(#clip0_2574_113805)">
+                              <g clipPath="url(#clip0_2574_113806)">
                                 <path
                                   d="M20.3438 8.00586C20.1697 8.00586 20.0028 7.93672 19.8797 7.81365C19.7566 7.69058 19.6875 7.52366 19.6875 7.34961L19.6875 4.06836C19.6875 3.72026 19.5492 3.38642 19.3031 3.14028C19.0569 2.89414 18.7231 2.75586 18.375 2.75586L2.625 2.75586C2.2769 2.75586 1.94306 2.89414 1.69692 3.14028C1.45078 3.38642 1.3125 3.72026 1.3125 4.06836L1.3125 7.34961C1.3125 7.52366 1.24336 7.69057 1.12029 7.81365C0.997219 7.93672 0.830297 8.00586 0.65625 8.00586C0.482203 8.00586 0.315281 7.93672 0.192211 7.81365C0.0691395 7.69057 4.21554e-08 7.52366 5.73712e-08 7.34961L3.44227e-07 4.06836C4.0509e-07 3.37216 0.276562 2.70448 0.768845 2.2122C1.26113 1.71992 1.92881 1.44336 2.625 1.44336L18.375 1.44336C19.0712 1.44336 19.7389 1.71992 20.2312 2.2122C20.7234 2.70449 21 3.37217 21 4.06836L21 7.34961C21 7.52366 20.9309 7.69058 20.8078 7.81365C20.6847 7.93672 20.5178 8.00586 20.3438 8.00586Z"
                                   fill="#0073E6"
@@ -355,13 +361,13 @@ export const OpendataPage = () => {
                                 />
                               </g>
                               <defs>
-                                <clipPath id="clip0_2574_113805">
+                                <clipPath id="clip0_2574_113806">
                                   <rect width="21" height="21" fill="white" transform="translate(21 21) rotate(-180)" />
                                 </clipPath>
                               </defs>
                             </svg>
                             &nbsp; SCARICA IL .CSV
-                          </a>
+                          </button>
                         </span>
                       </td>
                       <td className="text-center">
@@ -397,9 +403,8 @@ export const OpendataPage = () => {
                       <td>Candidature finanziate Scuole</td>
                       <td className="text-center">
                         <span className={`${classes.linkWrapper}`}>
-                          <a
+                          <button
                             className={`btn btn-outline-primary ${classes.customLinkFocus}`}
-                            href="#0"
                             title="Link al dato ( Link esterno - Esegue il download )"
                             aria-label="Candidature finanziate Scuole, file csv( Link esterno - Esegue il download )"
                             rel="noreferrer"
@@ -414,7 +419,7 @@ export const OpendataPage = () => {
                               fill="none"
                               xmlns="http://www.w3.org/2000/svg"
                             >
-                              <g clipPath="url(#clip0_2574_113805)">
+                              <g clipPath="url(#clip0_2574_113807)">
                                 <path
                                   d="M20.3438 8.00586C20.1697 8.00586 20.0028 7.93672 19.8797 7.81365C19.7566 7.69058 19.6875 7.52366 19.6875 7.34961L19.6875 4.06836C19.6875 3.72026 19.5492 3.38642 19.3031 3.14028C19.0569 2.89414 18.7231 2.75586 18.375 2.75586L2.625 2.75586C2.2769 2.75586 1.94306 2.89414 1.69692 3.14028C1.45078 3.38642 1.3125 3.72026 1.3125 4.06836L1.3125 7.34961C1.3125 7.52366 1.24336 7.69057 1.12029 7.81365C0.997219 7.93672 0.830297 8.00586 0.65625 8.00586C0.482203 8.00586 0.315281 7.93672 0.192211 7.81365C0.0691395 7.69057 4.21554e-08 7.52366 5.73712e-08 7.34961L3.44227e-07 4.06836C4.0509e-07 3.37216 0.276562 2.70448 0.768845 2.2122C1.26113 1.71992 1.92881 1.44336 2.625 1.44336L18.375 1.44336C19.0712 1.44336 19.7389 1.71992 20.2312 2.2122C20.7234 2.70449 21 3.37217 21 4.06836L21 7.34961C21 7.52366 20.9309 7.69058 20.8078 7.81365C20.6847 7.93672 20.5178 8.00586 20.3438 8.00586Z"
                                   fill="#0073E6"
@@ -425,13 +430,13 @@ export const OpendataPage = () => {
                                 />
                               </g>
                               <defs>
-                                <clipPath id="clip0_2574_113805">
+                                <clipPath id="clip0_2574_113807">
                                   <rect width="21" height="21" fill="white" transform="translate(21 21) rotate(-180)" />
                                 </clipPath>
                               </defs>
                             </svg>
                             &nbsp; SCARICA IL .CSV
-                          </a>
+                          </button>
                         </span>
                       </td>
                       <td className="text-center">
@@ -467,9 +472,8 @@ export const OpendataPage = () => {
                       <td>Candidature finanziate Altri Enti</td>
                       <td className="text-center">
                         <span className={`${classes.linkWrapper}`}>
-                          <a
+                          <button
                             className={`btn btn-outline-primary ${classes.customLinkFocus}`}
-                            href="#0"
                             title="Link al dato ( Link esterno - Esegue il download )"
                             aria-label="Candidature finanziate Altri Enti, file csv( Link esterno - Esegue il download )"
                             rel="noreferrer"
@@ -484,7 +488,7 @@ export const OpendataPage = () => {
                               fill="none"
                               xmlns="http://www.w3.org/2000/svg"
                             >
-                              <g clipPath="url(#clip0_2574_113805)">
+                              <g clipPath="url(#clip0_2574_113808)">
                                 <path
                                   d="M20.3438 8.00586C20.1697 8.00586 20.0028 7.93672 19.8797 7.81365C19.7566 7.69058 19.6875 7.52366 19.6875 7.34961L19.6875 4.06836C19.6875 3.72026 19.5492 3.38642 19.3031 3.14028C19.0569 2.89414 18.7231 2.75586 18.375 2.75586L2.625 2.75586C2.2769 2.75586 1.94306 2.89414 1.69692 3.14028C1.45078 3.38642 1.3125 3.72026 1.3125 4.06836L1.3125 7.34961C1.3125 7.52366 1.24336 7.69057 1.12029 7.81365C0.997219 7.93672 0.830297 8.00586 0.65625 8.00586C0.482203 8.00586 0.315281 7.93672 0.192211 7.81365C0.0691395 7.69057 4.21554e-08 7.52366 5.73712e-08 7.34961L3.44227e-07 4.06836C4.0509e-07 3.37216 0.276562 2.70448 0.768845 2.2122C1.26113 1.71992 1.92881 1.44336 2.625 1.44336L18.375 1.44336C19.0712 1.44336 19.7389 1.71992 20.2312 2.2122C20.7234 2.70449 21 3.37217 21 4.06836L21 7.34961C21 7.52366 20.9309 7.69058 20.8078 7.81365C20.6847 7.93672 20.5178 8.00586 20.3438 8.00586Z"
                                   fill="#0073E6"
@@ -495,13 +499,13 @@ export const OpendataPage = () => {
                                 />
                               </g>
                               <defs>
-                                <clipPath id="clip0_2574_113805">
+                                <clipPath id="clip0_2574_113808">
                                   <rect width="21" height="21" fill="white" transform="translate(21 21) rotate(-180)" />
                                 </clipPath>
                               </defs>
                             </svg>
                             &nbsp; SCARICA IL .CSV
-                          </a>
+                          </button>
                         </span>
                       </td>
                       <td className="text-center">
