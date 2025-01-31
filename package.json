@@ -17,9 +17,8 @@
     "serve": "gatsby serve"
   },
   "engines": {
-    "npm": ">=8.0.0",
-    "node": ">=14.15.4 <=16.20.2"
-  },
+    "npm": ">=8.0.0"
+ },
   "dependencies": {
     "@fontsource/lora": "^4.5.0",
     "@fontsource/titillium-web": "^4.5.0",

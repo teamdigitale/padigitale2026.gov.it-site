@@ -39,6 +39,10 @@ keypoints:
       image: 'invia-piano-migrazione-lens.svg'
       title: 'Inviare un piano di migrazione'
       desc: 'Per inviare un piano di migrazione.'
+    - number: "09"
+      image: 'controlli-sostanziali-bianco.svg'
+      title: 'Rispondere ai controlli sostanziali'
+      desc: ''
 listMenu:
   - sectionTitle: Attivare la tua PA
     sectionId: "keypoint-01"
@@ -56,6 +60,8 @@ listMenu:
     sectionId: "keypoint-07"
   - sectionTitle: Inviare un piano di migrazione
     sectionId: "keypoint-08"
+  - sectionTitle: Rispondere ai controlli sostanziali
+    sectionId: "keypoint-09"
 sectionFirst:
   number: '01'
   title: 'Attivare la tua  PA'
@@ -138,4 +144,11 @@ sectionEight:
   ariaLabel: "Scopri di più su come inviare un piano di migrazione"
   lBlue: true
   reverse: true
-
+sectionNine:
+  number: '09'
+  title: 'Rispondere ai controlli sostanziali a campione'
+  text: I progetti finanziati possono essere sottoposti a verifiche documentali amministrative a campione a cui le amministrazioni devono rispondere entro 20 giorni lavorativi.</br></br>Scopri di più sulle modalità di svolgimento, la documentazione richiesta e come chiedere assistenza.
+  image: 'controlli-sostanziali-blu.svg'
+  button: true
+  linkTo: "/come-partecipare/rispondere-ai-controlli-sostanziali"
+  ariaLabel: "Scopri di più su come rispondere ai controlli sostanziali"

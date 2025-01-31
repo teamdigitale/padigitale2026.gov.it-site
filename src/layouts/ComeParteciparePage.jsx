@@ -28,5 +28,6 @@ export const ComeParteciparePage = () => (
     <KeypointSection item={content.sectionSixth} />
     <KeypointSection item={content.sectionSeven} />
     <KeypointSection item={content.sectionEight} />
+    <KeypointSection item={content.sectionNine} />
   </>
 );

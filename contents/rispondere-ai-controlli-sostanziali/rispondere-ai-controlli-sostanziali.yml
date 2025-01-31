@@ -1,0 +1,39 @@
+name: Rispondere ai controlli sostanziali a campione
+sidebar:
+  - sectionTitle: Cosa sono i controlli sostanziali a campione
+    sectionId: cosa-sono-i-controlli-sostanziali-a-campione
+  - sectionTitle: Come rispondere ai controlli sostanziali a campione
+    sectionId: come-rispondere-ai-controlli-sostanziali-a-campione
+    sectionActive: false
+  - sectionTitle: Documentazione richiesta
+    sectionId: documentazione-richiesta
+    sectionActive: false
+  - sectionTitle: Come compilare e procurarsi la documentazione
+    sectionId: come-compilare-e-pocurarsi-la-documentazione
+    sectionActive: false
+  - sectionTitle: Richiedi assistenza
+    sectionId: richiedi-assistenza
+    sectionActive: false
+  - sectionTitle: Esito dei controlli
+    sectionId: esito-dei-controlli
+    sectionActive: false
+  - sectionTitle: Riferimenti normativi
+    sectionId: riferimenti-normativi
+    sectionActive: false
+verticalTimeline:
+  - index: 0
+    title: Leggi attentamente la PEC ricevuta all’indirizzo dell’amministrazione
+    icon: '/assets/candida-pa-lens.svg'
+    headerParagraph: Contiene informazioni importanti sulle modalità di svolgimento dei controlli e sulla documentazione necessaria, inclusi alcuni template da utilizzare. In particolare, l’Allegato 1 presenta l’elenco dettagliato dei documenti da inviare.
+  - index: 1
+    title: Prepara la documentazione
+    icon: '/assets/goals-card.svg'
+    headerParagraph: Assicurati di preparare tutta la documentazione richiesta, nei <strong>formati specificati</strong> e, quando necessario, <strong>firmata digitalmente</strong>.</br></br><a href="#documentazione-richiesta">Approfondisci le specifiche della documentazione</a>
+  - index: 2
+    title: Carica la documentazione entro 20 giorni lavorativi
+    icon: '/assets/notifiche.svg'
+    headerParagraph: Vai all’area riservata su PA digitale 2026, nella sezione “Richieste chiarimenti”. Troverai una richiesta aperta per caricare e inviare la documentazione richiesta. Ricorda di usare questa funzionalità solo per inviare i documenti.
+  - index: 3
+    title: Invia una PEC di conferma
+    icon: '/assets/mail-card.svg'
+    headerParagraph: Completato il caricamento su PA digitale 2026, invia una PEC di conferma a <a href="mailto:dtd.pnrr@pec.governo.it">dtd.pnrr@pec.governo.it</a> con oggetto <strong>“Controllo a campione LS — CUP [codice CUP del progetto]”</strong> e allega anche tutta la documentazione che hai caricato su PA digitale 2026.
