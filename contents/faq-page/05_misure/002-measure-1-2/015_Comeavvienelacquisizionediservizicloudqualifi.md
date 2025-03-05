@@ -1,5 +1,5 @@
 ---
-  - title: Come avviene l'acquisizione di servizi cloud qualificati?
+  - title: Come avviene l’acquisizione di servizi cloud qualificati?
     tag:
       - comuni
     linkLabel: Ulteriori informazioni sono disponibili al seguente link
@@ -8,4 +8,4 @@
     anchorLink: 015_Comeavvienelacquisizionediservizicloudqualifi
 ---
 
-I fornitori cloud che intendono erogare servizi Infrastructure as a Service (IaaS), Platform as a Service (PaaS) e Software as a Service (SaaS) destinati alle pubbliche amministrazioni devono ottenere, per questi servizi, la qualificazione rilasciata dall’Agenzia per l’Italia digitale (AGID), utilizzando la piattaforma dedicata alla qualificazione dei cloud service provider e dei servizi cloud. Ti informiamo inoltre che dal 19 gennaio 2023 la qualificazione dei servizi cloud per la Pubblica Amministrazione diventa di competenza di ACN (Agenzia per la cybersicurezza nazionale), che subentra ad AGID. Ti invitiamo a prendere nota delle variazioni e aggiornamenti in materia al link: https://www.acn.gov.it/agenzia/cloud-pa
+I fornitori cloud che intendono erogare servizi Infrastructure as a Service (IaaS), Platform as a Service (PaaS) e Software as a Service (SaaS) destinati alle pubbliche amministrazioni devono ottenere, per questi servizi, la qualificazione rilasciata dall’Agenzia per l’Italia digitale (AGID), utilizzando la piattaforma dedicata alla qualificazione dei cloud service provider e dei servizi cloud. Ti informiamo inoltre che dal 19 gennaio 2023 la qualificazione dei servizi cloud per la Pubblica Amministrazione diventa di competenza di ACN (Agenzia per la cybersicurezza nazionale), che subentra ad AGID. Ti invitiamo a prendere nota delle variazioni e aggiornamenti in materia al link: <https://www.acn.gov.it/portale/w/qualificazione-del-cloud-della-pa-dal-19-gennaio-passa-ad-acn#:~:text=Dal%2019%20gennaio%20la%20qualificazione,'Italia%20Digitale%20(AgID)>.
