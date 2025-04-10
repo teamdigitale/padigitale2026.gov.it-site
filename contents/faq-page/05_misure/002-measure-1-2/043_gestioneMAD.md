@@ -1,7 +1,7 @@
 ---
   - title: Alla luce dell'ordinanza 88 del 16/05/2024 del Ministero dell'Istruzione e del Merito (https://www.mim.gov.it/-/ordinanza-ministeriale-n-88-del-16-maggio-2024), il servizio Gestione MAD è ammissibile per le candidature a valere sulla misura 1.2?
     tag:
-      - Scuole
+      - scuole
     anchorLink: 043_gestioneMAD
 ---
 
