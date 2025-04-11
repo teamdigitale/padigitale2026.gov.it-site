@@ -130,59 +130,58 @@ opportunity:
       id: centri-facili
 heroCarouselNews:
   - id: 1
+    category: Novità
+    title: "Pubblicata la Direttiva per la gestione dei residui PNRR"
+    description: "Butti: linee guida per massimizzare gli impatti dei progetti finanziati dal PNRR"
+    source: "innovazione.gov.it"
+    linkTo: 'https://innovazione.gov.it/notizie/comunicati-stampa/pa-digitale-2026-pubblicata-la-direttiva-per-la-gestione-dei-residui-pnrr/'
+  - id: 2
     type: internal
     category: Comunicazione
     title: "Nuovo termine fine progetti PA digitale 2026"
     description: "Con il Decreto n. 39/2025-PNRR del 14 febbraio 2025 è stato sancito che tutti i progetti PA digitale 2026 debbano finire entro il 31 marzo 2026"
     source: "Vai al Decreto"
     linkTo: 'https://padigitale2026.my.salesforce.com/sfc/p/#7Q000001NvsR/a/J7000000gV27/soznTMiSf9M131FYcO5qY7E8R.Pn6NEkXK95ARIe1OY'
-  - id: 2
+  - id: 3
     type: internal
     category: Novità
     title: Nuove modalità e funzionalità di gestione delle utenze
     description: Adesso le PA possono invitare nuove persone, cambiare ruoli, eliminare le utenze e modificare i dati dei profili in modo più semplice e autonomo.
     source: Gestire le utenze
     linkTo: 'https://padigitale2026.gov.it/come-partecipare/gestire-le-utenze'
-  - id: 3
+  - id: 4
     type: internal
     category: Misura 1.4.3 pagoPA - Comuni
     title: "Nuovo Avviso PNRR"
     description: "Ulteriori 15 milioni di euro per favorire l'implementazione della piattaforma pagoPA da parte dei Comuni"
     source: "Vai all'Avviso"
     linkTo: 'https://areariservata.padigitale2026.gov.it/Pa_digitale2026_dettagli_avviso?id=a017Q00001OImsDQAT'
-  - id: 4
+  - id: 5
     type: internal  
     category: Misura 1.2 - Scuole
     title: "Proroga dell'Avviso e ulteriori risorse stanziate "
     description: "La scadenza dell'Avviso è stata posticipata al 19 luglio 2024."
     source: "Vai all'Avviso"
     linkTo: 'https://areariservata.padigitale2026.gov.it/Pa_digitale2026_dettagli_avviso?id=a017Q00001MQRHgQAP'
-  - id: 5
+  - id: 6
     type: internal  
     category: Novità
     title: "Nuove Linee guida per i Soggetti attuatori (aprile 2024)"
     description: "Online i nuovi Allegati per Avviso 1.1 e Avviso multimisura 1.1/1.2. Aggiornate anche le indicazioni per Avvisi 1.4.1, 1.4.4 e 1.4.5."
     source: "Scarica le Linee guida"
     linkTo: 'https://assets.innovazione.gov.it/1713796642-linee-guida-ls-v_6_20240422.zip'
-  - id: 6
+  - id: 7
     category: Novità
     title: "Dal 3 aprile nuovo sistema di richiesta proroghe"
     description: "Il Dipartimento a fianco agli enti per favorire una migliore programmazione degli interventi e qualità nella realizzazione dei progetti"
     source: "innovazione.gov.it"
     linkTo: 'https://innovazione.gov.it/notizie/articoli/nuovo-sistema-di-richiesta-proroghe-su-pa-digitale-2026/'
-  - id: 7
+  - id: 8
     category: Comunicazione
     title: "Obblighi di pubblicità, indicazioni operative per i soggetti attuatori"
     description: "Pagine pronte all'uso per realizzare la sezione Attuazione misure PNRR sul proprio sito istituzionale"
     source: "innovazione.gov.it"
     linkTo: 'https://innovazione.gov.it/notizie/articoli/pnrr-obblighi-di-pubblicita-indicazioni-operative-per-i-soggetti-attuatori/'
-  - id: 8
-    type: internal
-    category: Chiarimento
-    title: "La Circolare 6/2023 dell'Unità di missione PNRR non si applica agli Avvisi di PA digitale 2026"
-    description: "I soggetti attuatori degli Avvisi di PA digitale 2026 non devono alimentare il sistema informatico ReGiS in quanto sarà la Piattaforma stessa a comunicare con il suddetto sistema informatico."
-    source: "Vai alle domande frequenti"
-    linkTo: 'https://padigitale2026.gov.it/supporto/domande-frequenti#07_rendicontazione/006_AnchepergliavvisidiPAdigitale2026occorreregis'
 support:
   tag: Supporto
   title: Consulta le domande frequenti o scrivici per ricevere assistenza
