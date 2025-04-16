@@ -12,7 +12,7 @@ import content from '../../contents/rispondere-ai-controlli-sostanziali/risponde
 import { TimelineVerticalCards } from '../components/TimelineVerticalCards';
 import { SideNavigationAccordion } from './sideNavigationAccordion';
 
-const { title: seoTitle, description: seoDescription } = seo.InviarePianoMigrazionePage;
+const { title: seoTitle, description: seoDescription } = seo.rispondereAiControlliSostanziali;
 
 const { sidebar, verticalTimeline } = content;
 

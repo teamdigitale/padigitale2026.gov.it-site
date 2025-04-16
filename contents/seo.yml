@@ -88,3 +88,6 @@ InviarePianoMigrazionePage:
 gestireLeUtenzePage:
   title: Gestire le utenze della tua PA - PA digitale 2026
   description: Gestire le utenze della tua PA
+rispondereAiControlliSostanziali:
+  title: Rispondere ai controlli sostanziali a campione - PA digitale 2026
+  description: Rispondere ai controlli sostanziali a campione
