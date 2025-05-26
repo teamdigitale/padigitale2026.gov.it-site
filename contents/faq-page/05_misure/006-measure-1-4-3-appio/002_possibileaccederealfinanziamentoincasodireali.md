@@ -5,4 +5,5 @@
     anchorLink: 002_possibileaccederealfinanziamentoincasodireali
 ---
 
-Si, è possibile accedere al finanziamento previsto dal presente Avviso nel caso in cui l'attuazione dei servizi digitali (app IO) sia stata realizzata a decorrere dal 01 Aprile 2021, con risorse finanziarie proprie.
+Per tutti gli avvisi pubblicati entro il 31 dicembre 2024, è possibile accedere al finanziamento previsto dal presente Avviso nel caso in cui l'attuazione dei servizi digitali (app IO) sia stata realizzata a decorrere dal 01 Aprile 2021, con risorse finanziarie proprie.
+Per gli avvisi pubblicati a partire dal 2025, l'attuazione dei servizi digitali (app IO) è ammissibile se realizzata a decorrere dal 01 Aprile 2022, con risorse finanziarie proprie.
