@@ -5,5 +5,5 @@
     anchorLink: 002_possibileaccederealfinanziamentoincasodireali
 ---
 
-Per tutti gli avvisi pubblicati entro il 31 dicembre 2024, è possibile accedere al finanziamento previsto dal presente Avviso nel caso in cui l'attuazione dei servizi digitali (app IO) sia stata realizzata a decorrere dal 01 Aprile 2021, con risorse finanziarie proprie.
-Per gli avvisi pubblicati a partire dal 2025, l'attuazione dei servizi digitali (app IO) è ammissibile se realizzata a decorrere dal 01 Aprile 2022, con risorse finanziarie proprie.
+Per l'avviso appIO Comuni di maggio 2025, l'attuazione dei servizi digitali (app IO) è ammissibile se realizzata a decorrere dal 04 aprile 2022, con risorse finanziarie proprie.
+Per tutti gli altri avvisi pubblicati precedentemente, è possibile accedere al finanziamento previsto dal presente Avviso nel caso in cui l'attuazione dei servizi digitali (app IO) sia stata realizzata a decorrere dal 01 aprile 2021, con risorse finanziarie proprie.
