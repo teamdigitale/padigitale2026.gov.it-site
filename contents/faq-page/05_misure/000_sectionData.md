@@ -14,6 +14,9 @@
         - sectionTitle: "1.3.1"
           sectionId: measure-1-3-1
           sectionActive: false
+        - sectionTitle: "1.3.1 ANNCSU"
+          sectionId: measure-1-3-1-anncsu
+          sectionActive: false
         - sectionTitle: "1.4.1"
           sectionId: measure-1-4-1
           sectionActive: false
