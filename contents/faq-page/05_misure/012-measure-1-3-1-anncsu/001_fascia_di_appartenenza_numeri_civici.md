@@ -1,7 +1,5 @@
 ---
-  - title: In fase di candidatura la piattaforma indica per il mio Comune una fascia di appartenenza dei numeri civici, e quindi di contributo, disallineata rispetto alla numerosità reale degli stessi per come risulta alla data odierna. Possiamo richiedere il cambio di fascia di appartenenza?
-    tag: 
-      - comuni
+  - title: In fase di candidatura la piattaforma indica per il mio Comune una fascia di appartenenza dei numeri civici - e quindi di contributo - disallineata rispetto alla numerosità reale degli stessi per come risulta alla data odierna. Possiamo richiedere il cambio di fascia di appartenenza?
     anchorLink: 001_fascia_di_appartenenza_numeri_civici
 ---
 
